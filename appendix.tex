@@ -1,0 +1,267 @@
+\appendix
+
+\chapter{Soluciones a los problemas}
+
+\section*{Cap\'\i tulo \ref{cha:campos-vectoriales}}
+
+\begin{itemize}
+\item[\ref{cha:campos-vectoriales}.\ref{item:pch2.1}.] De
+\begin{equation}
+  {a'}^\mu=\Lambda^{\mu}_{\ \nu}a^\nu
+\end{equation}
+tenemos que
+\begin{equation}
+  {a'}_\rho=g_{\mu\rho}{a'}^\rho=g_{\mu\rho}\Lambda^{\mu}_{\ \nu}g^{\nu\eta}a_\eta=\Lambda^{\ \eta}_{\rho}a_\eta
+\end{equation}
+
+De la definici\'on de transformaci\'on de Lorentz
+\begin{equation}
+  {a'}^{\mu}{b'}_\mu=a^{\mu}b_\mu
+\end{equation}
+tenemos
+\begin{equation}
+   {a'}^{\mu}{b'}_\mu=\Lambda^{\mu}_{\ \nu}\Lambda_{\mu}^{\ \rho}a^{\nu}b_\rho=a^\nu b_\nu=\delta^\rho_\nu a^\nu b_\rho
+\end{equation}
+de donde
+\begin{equation}
+  \Lambda^{\mu}_{\ \nu}\Lambda_{\mu}^{\ \rho}=\delta^\rho_\nu
+\end{equation}
+
+\item[\ref{cha:campos-vectoriales}.\ref{item:pch2.3}.] 
+\begin{equation}
+  r\sim\frac{1}{m}\approx\frac{1}{80\,\text{GeV}}\times\frac{1\;\text{GeV}}{1/(1.97\times10^{-16}\,\text{m}^{-1})}\approx2.5\times10^{-18}\;\text{m}
+\end{equation}
+
+\end{itemize}
+
+\section*{Cap\'\i tulo \ref{cha:princ-gauge-local}}
+
+\begin{itemize}
+\item[\ref{cha:princ-gauge-local}.\ref{item:pch3.3}] 
+Tenemos  
+\begin{equation}
+  \tilde\Phi=i\tau_2\Phi^*=\begin{pmatrix}
+    0&  1\\
+    -1& 0
+  \end{pmatrix}
+  \begin{pmatrix}
+\phi^-\\
+{\phi^0}^*    
+  \end{pmatrix}=
+  \begin{pmatrix}
+    {\phi^0}^*\\
+    -\phi^-
+  \end{pmatrix}
+\end{equation}
+Haremos la parte correspondiente al t\'ermino de masa. Para el t\'ermino cin\'etico es igual.
+\begin{align}
+  -m^2\tilde\Phi^\dagger \tilde\Phi
+&=-m^2
+\begin{pmatrix}
+  {\phi^0}&-\phi^+
+\end{pmatrix}
+\begin{pmatrix}
+  {\phi^0}^*\\
+  -\phi^-
+\end{pmatrix}\nonumber\\
+&=-m^2(\phi^0{\phi^0}^*+\phi^+\phi^-)\nonumber\\
+&=-m^2\Phi^\dagger \Phi
+\end{align}
+de modo que $\Phi$ y $\tilde \Phi$ son representaciones equivalentes de $SU(2)$.
+
+Adem\'as
+  \begin{align}
+   -m^2\epsilon_{ab}\tilde \Phi^a\Phi^b= -m^2(\epsilon_{12}\tilde\Phi^1\Phi^2+\epsilon_{21}\tilde\Phi^2\Phi^1)
+    &=-m^2({\phi^0}^*\phi^0+\phi^+\phi^-)\nonumber\\
+    &=-m^2\Phi^\dagger \Phi 
+  \end{align}
+\item[\ref{cha:princ-gauge-local}.\ref{item:pch3.4}] De las ecs.~\eqref{eq:177} y \eqref{eq:178}
+
+   \begin{align}
+\mathcal{L}=&
+      \partial^\mu{\boldsymbol{\phi}^*}\cdot\partial_\mu\boldsymbol{\phi}-g\left[{\boldsymbol{\phi}^*}\cdot\mathbf{W}_\mu\times\partial^\mu\boldsymbol{\phi}
+    -\left(\partial^\mu{\boldsymbol{\phi}^*}\right)\cdot\mathbf{W}_\mu\times\boldsymbol{\phi}\right]
+  \nonumber\\
+  &+g^2{\phi^*}^i (\delta_{kl}\delta_{im}-\delta_{km}\delta_{il})W^\mu_k W_\mu^l\phi_m-m^2{\boldsymbol{\phi}^*}\cdot \boldsymbol{\phi}-\tfrac{1}{4}W^{\mu\nu}_iW_{\mu\nu}^i\nonumber\\
+  =&\partial^\mu{\boldsymbol{\phi}^*}\cdot\partial_\mu\boldsymbol{\phi}-g\left[{\boldsymbol{\phi}^*}\cdot\mathbf{W}_\mu\times\partial^\mu\boldsymbol{\phi}
+    -\left(\partial^\mu{\boldsymbol{\phi}^*}\right)\cdot\mathbf{W}_\mu\times\boldsymbol{\phi}\right]
+  \nonumber\\
+  &+g^2{\phi^*}^i W^\mu_k W_\mu^k\phi_i-g^2{\phi^*}^i W^\mu_k W_\mu^i\phi_k-m^2{\boldsymbol{\phi}^*}\cdot \boldsymbol{\phi}-\tfrac{1}{4}W^{\mu\nu}_iW_{\mu\nu}^i\nonumber\\
+  =&\partial^\mu{\boldsymbol{\phi}^*}\cdot\partial_\mu\boldsymbol{\phi}-g\left[{\boldsymbol{\phi}^*}\cdot\mathbf{W}_\mu\times\partial^\mu\boldsymbol{\phi}
+    -\left(\partial^\mu{\boldsymbol{\phi}^*}\right)\cdot\mathbf{W}_\mu\times\boldsymbol{\phi}\right]
+  \nonumber\\
+  &+g^2\boldsymbol{\phi^*}\cdot\boldsymbol{\phi}\mathbf{W}^\mu\cdot \mathbf{W}_\mu-g^2\mathbf{\phi^*}\cdot\mathbf{W}^\mu \mathbf{W}_\mu\cdot\boldsymbol{\phi}-m^2{\boldsymbol{\phi}^*}\cdot  \boldsymbol{\phi}-\tfrac{1}{4}\mathbf{W}^{\mu\nu}\cdot\mathbf{W}_{\mu\nu}
+   \end{align}
+donde
+\begin{align}
+     \mathbf{W}^{\mu\nu}\cdot\mathbf{W}_{\mu\nu}=&(\partial^\mu \mathbf{W}^\nu -\partial^\nu \mathbf{W}^\mu)\cdot(\partial_\mu \mathbf{W}_\nu -\partial_\nu \mathbf{W}_\mu)
+    +2g(\partial^\mu \mathbf{W}^\nu -\partial^\nu \mathbf{W}^\mu)\cdot \mathbf{W}_\mu\times\mathbf{W}_\nu\nonumber\\
+    &+g^2(\delta_{jl}\delta_{km}-\delta_{jm}\delta_{kl})W^\mu_j W^\nu_k W_\mu^l W_\nu^m\nonumber\\
+    =&(\partial^\mu \mathbf{W}^\nu -\partial^\nu \mathbf{W}^\mu)\cdot(\partial_\mu \mathbf{W}_\nu -\partial_\nu \mathbf{W}_\mu)
+    +2g(\partial^\mu \mathbf{W}^\nu -\partial^\nu \mathbf{W}^\mu)\cdot \mathbf{W}_\mu\times\mathbf{W}_\nu\nonumber\\
+    &+g^2(W^\mu_j W^\nu_kW_\mu^j W_\nu^k-W^\mu_j W^\nu_k W_\mu^k W_\nu^j)\nonumber\\
+    =&(\partial^\mu \mathbf{W}^\nu -\partial^\nu \mathbf{W}^\mu)\cdot(\partial_\mu \mathbf{W}_\nu -\partial_\nu \mathbf{W}_\mu)
+    +2g(\partial^\mu \mathbf{W}^\nu -\partial^\nu \mathbf{W}^\mu)\cdot \mathbf{W}_\mu\times\mathbf{W}_\nu\nonumber\\
+    &+g^2(\mathbf{W}^\mu\cdot\mathbf{W}_\mu \mathbf{W}^\nu\cdot\mathbf{W}_\nu-\mathbf{W}^\mu\cdot\mathbf{W}_\nu  \mathbf{W}^\mu \cdot\mathbf{W}_\nu)\nonumber\\
+    =&(\partial^\mu \mathbf{W}^\nu -\partial^\nu \mathbf{W}^\mu)\cdot(\partial_\mu \mathbf{W}_\nu -\partial_\nu \mathbf{W}_\mu)
+    +2g(\partial^\mu \mathbf{W}^\nu -\partial^\nu \mathbf{W}^\mu)\cdot \mathbf{W}_\mu\times\mathbf{W}_\nu\nonumber\\
+    &+g^2(\mathbf{W}^\mu\cdot\mathbf{W}_\mu \mathbf{W}^\nu\cdot\mathbf{W}_\nu-\mathbf{W}^\mu\cdot\mathbf{W}_\nu  \mathbf{W}^\mu \cdot\mathbf{W}_\nu)
+\end{align} 
+
+%\item[\ref{cha:princ-gauge-local}.\ref{item:pch3.3}] 
+\item[\ref{cha:princ-gauge-local}.\ref{item:pch3.5}]
+\begin{equation*}
+  \begin{pmatrix}
+    W^3_\mu\\
+    B_\mu
+  \end{pmatrix}=
+  \begin{pmatrix}
+    \cos\theta_W&\sin\theta_W\\
+    -\sin\theta_W&\cos\theta_W
+  \end{pmatrix}
+  \begin{pmatrix}
+    Z_\mu\\
+    A_\mu
+  \end{pmatrix}\,.
+\end{equation*}
+
+\begin{align}
+  -\tfrac{1}{4}B^{\mu\nu}B_{\mu\nu}=&-\tfrac{1}{4}(\partial^\mu B^\nu-\partial^\nu B^\mu)(\partial_\mu B_\nu-\partial_\nu B_\mu)\nonumber\\
+=&-\tfrac{1}{4}[\partial^\mu (-s Z^\nu+ c A^\nu)-\partial^\nu (-s Z+ c A)^\mu][\partial_\mu (-s Z+ c A)_\nu-\partial_\nu (-s Z+ c A)_\mu]\nonumber\\
+=&-\tfrac{1}{4}[-s\partial^\mu Z^\nu +c\partial^\mu A^\nu+s\partial^\nu Z^\mu-c\partial^\nu A^\mu][-s\partial_\mu Z_\nu +c\partial_\mu A_\nu+s\partial_\nu Z_\mu-c\partial_\nu A_\mu]\nonumber\\
+=&-\tfrac{1}{4}[-s(\partial^\mu Z^\nu-\partial^\nu Z^\mu)+c(\partial^\mu A^\nu-\partial^\nu A^\mu)][-s(\partial_\mu Z_\nu-\partial_\nu Z_\mu)+c(\partial_\mu A_\nu-\partial_\nu A_\mu)]\nonumber\\
+  =&-\tfrac{1}{4}[-s(\partial^\mu Z^\nu-\partial^\nu Z^\mu)+c(\partial^\mu A^\nu-\partial^\nu A^\mu)][-s(\partial_\mu Z_\nu-\partial_\nu Z_\mu)+c(\partial_\mu A_\nu-\partial_\nu A_\mu)]\nonumber\\
+=&-\tfrac{1}{4}[s^2(\partial^\mu Z^\nu-\partial^\nu Z^\mu)(\partial_\mu Z_\nu-\partial_\nu Z_\mu)+c^2(\partial^\mu A^\nu-\partial^\nu A^\mu)(\partial_\mu A_\nu-\partial_\nu A_\mu)\nonumber\\
+&  -2s c(\partial^\mu Z^\nu-\partial^\nu Z^\mu)(\partial_\mu A_\nu-\partial_\nu A_\mu)]
+\end{align}
+Similarmente, reemplzando $s^2\leftrightarrow c^2$ y $s\to-s$
+\begin{align}
+-\tfrac{1}{4}W^{\mu\nu}_3W_{\mu\nu}^3\supset=&-\tfrac{1}{4}[c^2(\partial^\mu Z^\nu-\partial^\nu Z^\mu)(\partial_\mu Z_\nu-\partial_\nu Z_\mu)+s^2(\partial^\mu A^\nu-\partial^\nu A^\mu)(\partial_\mu A_\nu-\partial_\nu A_\mu)\nonumber\\
+&  +2s c(\partial^\mu Z^\nu-\partial^\nu Z^\mu)(\partial_\mu A_\nu-\partial_\nu A_\mu)]
+\end{align}
+\begin{align}
+  -\tfrac{1}{4}B^{\mu\nu}B_{\mu\nu}-\tfrac{1}{4}W^{\mu\nu}_3W_{\mu\nu}^3\supset=-\tfrac{1}{4}F^{\mu\nu}F_{\mu\nu}-\tfrac{1}{4}Z^{\mu\nu}Z_{\mu\nu}
+\end{align}
+De otro lado, teniendo en cuenta que
+\begin{align}
+  W_\mu^+=&\frac{W_\mu^1-i W_\mu^2}{\sqrt{2}}\nonumber\\
+  W_\mu^-=&\frac{W_\mu^1+i W_\mu^2}{\sqrt{2}}\nonumber\\
+W_\mu^++W_\mu^-=&\frac{2}{\sqrt{2}}W_\mu^1=\sqrt{2}W_\mu^1\nonumber\\
+W_\mu^--W_\mu^+=&\frac{2}{\sqrt{2}}W_\mu^2=\sqrt{2}i W_\mu^2
+\end{align}
+\begin{align}
+  W_\mu^1=&\frac{W_\mu^-+W_\mu^+}{\sqrt{2}}\nonumber\\
+  W_\mu^2=&\frac{W_\mu^--W_\mu^+}{\sqrt{2}i}\nonumber\\
+\end{align}
+\begin{align}
+  -\tfrac{1}{4}W^{\mu\nu}_1W_{\mu\nu}^1  -\tfrac{1}{4}W^{\mu\nu}_2W_{\mu\nu}^2\supset&
+-\tfrac{1}{4}[(\partial^\mu W^\nu_1-\partial^\nu W^\mu_1)(\partial_\mu W_\nu^1-\partial_\nu W_\mu^1)\nonumber\\
+&+(\partial^\mu W^\nu_2-\partial^\nu W^\mu_2)(\partial_\mu W_\nu^2-\partial_\nu W_\mu^2)
+]\nonumber\\
+ = &-\tfrac{1}{4}\{(\partial^\mu W^\nu_1\partial_\mu W_\nu^1-\partial^\mu W^\nu_1\partial_\nu W_\mu^1-\partial^\nu W^\mu_1\partial_\mu W_\nu^1+\partial^\nu W^\mu_1\partial_\nu W_\mu^1)
+\nonumber\\
+&+(1\to2)\}\nonumber\\
+ = &-\tfrac{1}{4}\{(\partial^\mu W^\nu_1\partial_\mu W_\nu^1-\partial^\mu W^\nu_1\partial_\nu W_\mu^1-\partial^\mu W^\nu_1\partial_\nu W_\mu^1+\partial^\mu W^\nu_1\partial_\mu W_\nu^1)
+\nonumber\\
+&+(1\to2)\}\nonumber\\
+ = &-\tfrac{1}{2}\{(\partial^\mu W^\nu_1\partial_\mu W_\nu^1-\partial^\mu W^\nu_1\partial_\nu W_\mu^1)
++(\partial^\mu W^\nu_2\partial_\mu W_\nu^2-\partial^\mu W^\nu_2\partial_\nu W_\mu^2)
+\}\nonumber\\
+ = &-\tfrac{1}{4}\{[ (\partial^\mu W^\nu_-+\partial^\mu W^\nu_+)(\partial_\mu W_\nu^-+\partial_\mu W_\nu^+)\nonumber\\
+&-(\partial^\mu W^\nu_-+\partial^\mu W^\nu_+)(\partial_\nu W_\mu^-+\partial_\nu W_\mu^+)]\nonumber\\
+&+i^2[(\partial^\mu W^\nu_--\partial^\mu W^\nu_+)(\partial_\mu W_\nu^--\partial_\mu W_\nu^+)\nonumber\\
+&-(\partial^\mu W^\nu_--\partial^\mu W^\nu_+)(\partial_\nu W_\mu^--\partial_\nu W_\mu^+)]\}\nonumber\\
+ = &-\tfrac{1}{4}\{[ (\partial^\mu W^\nu_-+\partial^\mu W^\nu_+)(\partial_\mu W_\nu^-+\partial_\mu W_\nu^+)\nonumber\\
+&-(\partial^\mu W^\nu_-+\partial^\mu W^\nu_+)(\partial_\nu W_\mu^-+\partial_\nu W_\mu^+)]\nonumber\\
+&-[(\partial^\mu W^\nu_--\partial^\mu W^\nu_+)(\partial_\mu W_\nu^--\partial_\mu W_\nu^+)\nonumber\\
+&-(\partial^\mu W^\nu_--\partial^\mu W^\nu_+)(\partial_\nu W_\mu^--\partial_\nu W_\mu^+)]
+\}
+\end{align}
+Teniendo en cuenta que los terminos cruzados son los \'unicos que no se cancelar\'an, tenemos
+\begin{align}
+ -\tfrac{1}{4}W^{\mu\nu}_1W_{\mu\nu}^1  -\tfrac{1}{4}W^{\mu\nu}_2W_{\mu\nu}^2\supset&
+ -\tfrac{1}{2}[ \partial^\mu W^\nu_-\partial_\mu W_\nu^++\partial^\mu W^\nu_+\partial_\mu W_\nu^-
+-\partial^\mu W^\nu_-\partial_\nu W_\mu^+-\partial^\mu W^\nu_+\partial_\nu W_\mu^-]\nonumber\\
+=& -\tfrac{1}{2}[ \partial^\mu W^\nu_-(\partial_\mu W_\nu^+-\partial_\nu W_\mu^+)+\partial_\mu W_\nu^+\partial^\mu W^\nu_-
+-\partial_\mu W_\nu^+\partial^\nu W^\mu_-]\nonumber\\
+=& -\tfrac{1}{2}[ \partial^\mu W^\nu_-(\partial_\mu W_\nu^+-\partial_\nu W_\mu^+)+\partial_\nu W_\mu^+\partial^\nu W^\mu_-
+-\partial_\mu W_\nu^+\partial^\nu W^\mu_-]\nonumber\\
+=& -\tfrac{1}{2}[ \partial^\mu W^\nu_-(\partial_\mu W_\nu^+-\partial_\nu W_\mu^+)
+-\partial^\nu W^\mu_-(\partial_\mu W_\nu^+-\partial_\nu W_\mu^+)]\nonumber\\
+=& -\tfrac{1}{2}[ (\partial^\mu W^\nu_--\partial^\nu W^\mu_-)(\partial_\mu W_\nu^+-\partial_\nu W_\mu^+)\nonumber\\
+=&-\frac{1}{2}(F^\dagger_W)^{\mu\nu}(F_W)_{\mu\nu}\,.
+\end{align}
+
+
+\end{itemize}
+
+\section*{Cap\'\i tulo \ref{cha:modelo-estandar}}
+
+\begin{itemize}
+\item[\ref{cha:modelo-estandar}.~\ref{item:chap6.1}.] 
+Haciendo un an\'alisis similar al de la secci\'on \ref{sec:invar-gauge-local-1}, tenemos de la ec.~\eqref{eq:125} que
+\begin{align}
+\mathcal{L}_{fWB}=&i\overline{L}\gamma^\mu\mathcal{D}_\mu L+i\,\overline{e_R}\gamma^\mu\mathcal{D}_\mu e_R  \nonumber\\
+=&\begin{pmatrix} 
+  i\overline{\nu_L}\gamma^\mu& i\overline{e_L}\gamma^\mu
+\end{pmatrix}\begin{pmatrix}
+    \partial_\mu-igT_3^\uparrow W^3_\mu-ig'Y_LB_\mu&-\frac{i}{\sqrt{2}}gW^+_\mu\\
+    -\frac{i}{\sqrt{2}}gW^-_\mu&\partial_\mu-igT_3^\downarrow W^3_\mu-ig'Y_LB_\mu
+  \end{pmatrix}
+  \begin{pmatrix}
+    \nu_L\\e_L    
+  \end{pmatrix}\nonumber\\
+&+i\overline{e_R}\gamma^\mu(\partial_\mu-ig'Y_R B_\mu)e_R\nonumber\\
+=&\begin{pmatrix} 
+  i\overline{\nu_L}\gamma^\mu& i\overline{e_L}\gamma^\mu
+\end{pmatrix} 
+  \begin{pmatrix}
+    (\partial_\mu-igT_3^\uparrow W^3_\mu-ig'Y_LB_\mu)\nu_L-\frac{i}{\sqrt{2}}ge_LW^+_\mu\\
+    -\frac{i}{\sqrt{2}}g\nu_LW^-_\mu+(\partial_\mu-igT_3^\downarrow W^3_\mu-ig'Y_LB_\mu)e_L
+  \end{pmatrix}+i\overline{e_R}\gamma^\mu(\partial_\mu-ig'Y_R B_\mu)e_R\nonumber\\
+=&i\overline{\nu_L}\gamma^\mu(\partial_\mu-igT_3^\nu W^3_\mu-ig'Y_LB_\mu)\nu_L+\frac{1}{\sqrt{2}}g\overline{\nu_L}\gamma^\mu e_LW^+_\mu\nonumber\\
+&+\frac{1}{\sqrt{2}}g\overline{e_L}\gamma^\mu\nu_LW^-_\mu+i\overline{e_L}\gamma^\mu(\partial_\mu-igT_3^eW^3_\mu-ig'Y_LB_\mu)e_L
++i\overline{e_R}\gamma^\mu(\partial_\mu-ig'Y_R B_\mu)e_R\nonumber\\
+=&i\overline{e_L}\gamma^\mu\partial_\mu e_L+i\overline{e_R}\gamma^\mu\partial_\mu e_R+i\overline{\nu_L}\gamma^\mu\partial_\mu\nu_L
++\frac{1}{\sqrt{2}}g\left(\overline{\nu_L}\gamma^\mu e_LW^+_\mu+\overline{e_L}\gamma^\mu\nu_LW^-_\mu\right)\nonumber\\
+&+i\overline{\nu_L}\gamma^\mu(-igT_3^\nu W^3_\mu-ig'Y_LB_\mu)\nu_L+i\overline{e_L}\gamma^\mu(-igT_3^eW^3_\mu-ig'Y_LB_\mu)e_L
++i\overline{e_R}\gamma^\mu(-ig'Y_R B_\mu)e_R
+\nonumber\\
+=&i\overline{\psi_e}\gamma^\mu\partial_\mu\psi_e+i\overline{\nu_L}\gamma^\mu\partial_\mu\nu_L
++\frac{1}{\sqrt{2}}g\left(\overline{\nu_L}\gamma^\mu e_LW^+_\mu+\text{h.c}\right)+\mathcal{L}_{fAZ}
+\end{align}
+donde
+\begin{align}
+\mathcal{L}_{fAZ}=&\overline{\nu_L}\gamma^\mu\nu_L(gT_3^\nu W^3_\mu+g'Y_LB_\mu)+\overline{e_L}\gamma^\mu e_L(gT_3^eW^3_\mu+g'Y_LB_\mu)
++g'\overline{e_R}\gamma^\mu e_R(Y_R B_\mu)
+\nonumber\\
+=&g\left[\overline{\nu_L}\gamma^\mu\nu_L(T_3^\nu W^3_\mu+\tan\theta_WY_LB_\mu)+\overline{e_L}\gamma^\mu e_L(T_3^eW^3_\mu+\tan\theta_WY_LB_\mu)
++Y_R\tan\theta_W\overline{e_R}\gamma^\mu e_RB_\mu\right]\nonumber\\
+=&g\left\{\overline{\nu_L}\gamma^\mu\nu_L[T_3^\nu(\cos\theta_WZ_\mu+\sin\theta_WA_\mu)+\tan\theta_WY_L(-\sin\theta_WZ_\mu+\cos\theta_WA_\mu)]\right.\nonumber\\
+&+\overline{e_L}\gamma^\mu e_L[T_3^e(\cos\theta_WZ_\mu+\sin\theta_WA_\mu)+\tan\theta_WY_L(-\sin\theta_WZ_\mu+\cos\theta_WA_\mu)]\nonumber\\
+&\left.+Y_R\tan\theta_W\overline{e_R}\gamma^\mu e_R(-\sin\theta_WZ_\mu+\cos\theta_WA_\mu)\right\} 
+\nonumber\\
+=&\frac{g}{\cos\theta_W}[(T_3^\nu\cos^2\theta_W-Y_L\sin^2\theta_W )\overline{\nu_L}\gamma^\mu\nu_L\nonumber\\
+&+(T^e_3\cos^2\theta_W-Y_L\sin^2\theta_W)\overline{e_L}\gamma^\mu e_L+(0\times\cos\theta_W-Y_R\sin^2\theta_W\overline{e_R}\gamma^\mu e_R]Z_\mu\nonumber\\
+&+g\sin\theta_W[(T^\nu_3+Y_L)\overline{\nu_L}\gamma^\mu\nu_L+(T_3^e+Y_L)\overline{e_L}\gamma^\mu e_L+(0+Y_R)\overline{e_R}\gamma^\mu e_R]A_\mu.
+\end{align}
+Como $T_3^f\cos^2\theta_W-Y_f\sin^2\theta_W=T_3-(T_3^f+Y_f)\sin^2\theta_W$, entonces usando $Q_f=T_3^f+Y_f$, y $e=g\sin\theta_W$ tenemos
+\begin{equation}
+\mathcal{L}_{fAZ}=\sum_{f=e_L,\nu_L,e_R}\left[\frac{e}{\sin\theta_W\cos\theta_W}(T_3^f-Q_f\sin^2\theta_W )Z_\mu+eQ_fA_\mu\right]\overline{f}\gamma^\mu f
+\end{equation}
+Como $Q_\nu=0$, claramente los neutrinos no se acoplan a los fotones como se esperaba y adem\'as se obtiene la corriente electromagn\'etica apropiada, ya que
+\begin{equation}
+  \sum_{f=e_L,\nu_L,e_R}eQ_fA_\mu\overline{f}\gamma^\mu f=eQ_e\overline{\psi_e}\gamma^\mu\psi_eA_\mu.
+\end{equation}
+ 
+\end{itemize}
+
+
+
+
+
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: "fullnotes"
+%%% End: 

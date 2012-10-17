@@ -1,0 +1,1365 @@
+%instiki:category: FisicaSubatomica
+%http://localhost:2500/wiki/show/Cap%C3%ADtulo+II
+\chapter{Campos vectoriales}
+\label{cha:campos-vectoriales} %noinstiki
+%instiki:
+%instiki:***
+%instiki:
+%instiki:[[NotasFS|Tabla de Contenidos]]
+%instiki:
+%instiki:***
+%generated with html2itexTOC instiki_source.html
+%instiki:
+%instiki:* [Unidades Naturales](#NU)
+%instiki:
+%instiki:* [Notaci\'on relativista](#srn)
+%instiki:
+%instiki:  * [Ejemplos de cuadrivectores](#ejemplos_de_cuadrivectores)
+%instiki:
+%instiki:  * [Ecuaciones covariantes](#ecuac-covar)
+%instiki:
+%instiki:* [Ecuaciones de Maxwell en notaci\'on covariante](#maxeqs)
+%instiki:
+%instiki:  * [Lagrangiano Electromagn\'etico](#lagr-electr)
+%instiki:
+%instiki:  * [Energ\'\i a del campo electromagn\'etico](#energa_del_campo_electromagntico)
+%instiki:
+%instiki:  * [Fijaci\'on del gauge](#fijacion-del-gauge)
+%instiki:
+%instiki:* [Ecuaciones de Proca](#ecuacion-de-proca)
+%instiki:
+%instiki:* [Problemas](#problemas2)
+%instiki:
+%instiki:***
+%instiki:
+
+
+\section{Unidades Naturales}
+\label{sec:NU}
+Las \emph{unidades naturales} son unidades f\'\i sicas de medida definidas en t\'erminos de constantes f\'\i sicas universales~\cite{NU}. El primer conjunto consiste de unidades naturales, las \emph{unidades de Planck}~\cite{PU},  fue formulado por el propio Planck despu\'es de establecer la \'ultima constante universal, que lleva su nombre.  En palabras de Planck
+\begin{quotation} %noinstiki
+
+  ...ihre Bedeutung f\"ur alle Zeiten und f\"ur alle, auch au\ss erirdische und au\ss ermenschliche Kulturen notwendig behalten und welche daher als \guillemotright nat\"urliche Ma\ss einheiten bezeichnet werden k\"onnen... %noinstiki
+
+...These necessarily retain their meaning for all times and for all civilizations, even extraterrestrial and non-human ones, and can therefore be designated as 
+``natural units''... %noinstiki
+%instiki: natural units
+\end{quotation} %noinstiki
+%instiki:
+De este modo, estas unidades son naturales debido a que el origen de su definici\'on proviene solo de propiedades de la naturaleza y no de alguna construcci\'on humana. A diferencia de otros conjuntos de unidades naturales las unidades de Planck donde
+\begin{equation}
+\label{eq:144}
+  G_N=1,\qquad \hbar=1,\qquad c=1,\qquad K=\frac{1}{4\pi\epsilon_0}=1,\qquad k=1,
+\end{equation}
+est\'an basadas s\'olo en las propiedades del espacio libre, y no en las propiedades (tales como carga, masa, tama\~no o radio) de alg\'un objeto o part\'\i cula elemental.
+
+Las constantes f\'\i sicas que suelen normalizarse se escogen del conjunto dado por la ec.~\eqref{eq:144} y
+\begin{equation}
+  \label{eq:145}
+  e,\qquad m_e,\qquad m_p.
+\end{equation}
+Teniendo en cuenta que $1\,\text{eV}=1.602\;176\;487(40)\times10^{-19}\,\text{J}$.
+\begin{align}
+  10^{-9}\,\text{GeV}=&1.602\;176\;487(40)\times10^{-19}\,\text{J}\nonumber\\
+  1\,\text{GeV}=&1.602\;176\;487(40)\times10^{-10}\,\text{J}\nonumber\\
+\end{align}
+
+\begin{example}
+  Calcule la energ\'\i a cinetica de un mosquito de $2\,$mg, moviendos a $1.6\,$Km/h
+\begin{verbatim}
+V = 1.6 x 10-19 Joules
+
+1 TeV = 1.6 x 10-19 x 1012 Joules = 1.6 x 10-7 Joules
+
+1/2 m v2 = 1.6 x 10-7 Joules,  m = 2 x 10-6 kg therefore v = 0.4 m/s  = 1.4 kph
+\end{verbatim}
+
+
+\end{example}
+
+Teniendo en cuenta que \cite{PDG}
+\begin{equation}
+    c=299\;792\;450\,\text{m}\,\text{s}^{-1}\qquad\text{(exact)}\,,
+\end{equation}
+podemos obtener la relaci\'on entre longitud y energ\'\i a a partir de
+\begin{align}
+  \hbar c=&1.054\;571\;68(53)\times10^{-34}\,\text{J}\,\text{s}\times299\;792\;450\,\text{m}\,\text{s}^{-1} \nonumber\\
+  \approx&3.161\;526\;28\times10^{-26}\,\text{J}\,\text{m}\nonumber\\
+  \approx&3.161\;526\;28\times10^{-26}\,{\text{J}}\frac{1\,\text{GeV}}{1.602\;176\;487\times10^{-10}\,\text{J}}\,\text{m}\nonumber\\
+  =&1.973\;269\;631(49)\times10^{-16}\,\text{GeV}\,\text{m}.
+\end{align}
+Entonces $\hbar c =0.1973\;269\;631(49)\,\text{GeV}\,\text{fm}$.
+\begin{example}
+  Calcule la energ\'\i a potencial de Coulomb para una par de protones (o electrones) separados una distancia $l=\hbar\,c/\text{GeV}$ $=0.1973\;269\;631\,\text{fm}$
+  \begin{align}
+    \label{eq:240}
+    V=\frac{k e^2}{l}=&\frac{e^2}{4\pi\epsilon_0(\hbar c)\,\text{GeV}^{-1}}\nonumber\\
+    =&\frac{e^2}{4\pi\epsilon_0\hbar c}\text{GeV}\,.
+  \end{align}
+\end{example}
+Como $V$ tiene unidades de energ\'\i a, de la ec.~(\ref{eq:240})  resulta entonces la constante adimensional 
+conocida como la constante de estructura fina
+\begin{equation}
+  \alpha=\frac{e^2}{4\pi\epsilon_0\hbar c},
+\end{equation}
+que no puede tomar un valor num\'erico diferente  sin importar el sistema de unidades que se use. De modo que no se puede tener un sistema de unidades que normalice todas las contanstes f\'\i sicas presentes en $\alpha$. S\'olo 3 de las cuatro constantes $e$, $\hbar$, $\epsilon_0$ y $c$ pueden ser normalizadas, y la otra queda dependiendo del valor de $\alpha$.
+
+El prop\'osito de las unidades naturales es simplificar las expresiones algebraicas que aparecen en las leyes f\'\i sicas. 
+
+El sistema de unidades naturales que usaremos es el de las Unidades de Planck Modificadas (MPU)
+\begin{equation}
+  G_N=1,\qquad \hbar=1 \qquad c=1,\qquad \epsilon_0=1,\qquad k=1,
+\end{equation}
+de modo que
+\begin{equation}
+  e=\sqrt{4\pi\alpha},\qquad\text{or}\qquad \alpha=\frac{e^2}{4\pi}.
+\end{equation}
+podemos obtener la relaci\'on entre el tiempo y la energ\'\i a de
+\begin{equation}
+  \hbar\equiv\frac{h}{2\pi}=1.054\;571\;68(53)\times10^{-34}\,\text{J}\,\text{s}
+  =6.582\;118\;99(16)\times10^{-25}\,\text{GeV}\,\text{s},
+\end{equation}
+Similarmente para la relaci\'on entre temperatura y energ\'\i a, tenemos de la constante de Boltzman
+\begin{equation}
+  k=1.380\;6504(24)\times10^{-23}\,\text{J}\,\text{K}^{-1}=8.617\;343(15)\times10^{-14}\,\text{GeV}\,\text{K}^{-1}.
+\end{equation}
+
+La relaci\'on ente masa y energ\'\i a se puede obtener a partir de 
+\begin{equation}
+  G_N=6.674\;28(67)\times10^{-11}\text{m}^3\text{kg}^{-1}\,\text{s}^{-2}=6.70881(65)\times10^{-39}\hbar c(\text{GeV}/c^2)^{-2}
+\end{equation}
+entonces\footnote{o de una masa bien medida, por ejemplo
+  $m_p=0.938\;272\;013(23)\,\text{GeV}/c^2=1.672\;621\;637(83)^{-27}\,\text{kg}.$
+}
+\begin{equation}
+  M_p\equiv\sqrt{\frac{\hbar c}{G_N}}=1.2209\times10^{19}\text{GeV}/c^2=2.1765\times10^{-8}\,\text{kg}\,
+\end{equation}
+y
+\begin{align}
+  \label{eq:242}
+  G_N=\frac{\hbar\,c}{M_p^2}\,.
+\end{align}
+
+La energ\'\i a de Planck es entonces $M_p c^2$, e igual a la masa en unidad naturales.
+Los factores de conversi\'on del sistema MKS a MPU est\'an dados en la Tabla~\ref{tab:mks2mpu} despu\'es de hacer $\hbar=c=k=1$
+
+\begin{table} %noinstiki
+  \centering %noinstiki
+  \begin{tabular}{c|c} %noinstiki
+%instiki:
+$6.582\;118\;99(16)\times10^{-25}\,\text{s}$ & $ {\hbar}\,\text{GeV}^{-1}$\\\hline
+%instiki:
+$1.973\;269\;631(49)\times10^{-16}\,\text{m}$ & $ {\hbar c}\,\text{GeV}^{-1} $\\ \hline
+%instiki:
+1\,kg& $5.609\;589\;12(42)\times10^{26}\,\text{GeV}/c^2$ \\ \hline
+%instiki:
+1\,K & $8.617\;343(15)\times10^{-14}/k\,\text{GeV}$\,\\ \hline
+$299\;792\;450\,\text{m}\,\text{s}^{-1}$&$c$\\ \hline
+%instiki:
+m\,kg&$2.842\;278\,859\times10^{-16}\hbar\,c^{-1}$\\ \hline
+%instiki:
+  \end{tabular} %noinstiki
+  \caption{MKS $\leftrightarrow$ MPU} %noinstiki
+  \label{tab:mks2mpu} %noinstiki
+\end{table} %noinstiki
+
+De los factores de conversi\'on de la tabla vemos que masa$\times$longitud tiene las mismas unidades que $\hbar/c$, de modo que podemos definir la longitud de Planck tal que
+\begin{align}
+  L_p\,M_p\equiv&\frac{\hbar}{c}\nonumber\\
+  L_p=&\frac{\hbar}{c\,M_p}=\frac{\hbar}{c}\sqrt{\frac{G_N}{\hbar c}}=\sqrt{\frac{\hbar\, G_N}{c^3}}\nonumber\\
+  &\approx8.1907\times10^{-20}\frac{\hbar}{c\,\text{GeV}} \approx1.6163\times10^{-35}\,\text{m}
+\end{align}
+
+Este an\'alisis dimensional muestra que la longitud de Planck corresponde a una escala a la cual los efectos gravitacionales llegan a ser importantes, es decir, que la intensidad del potencial gravitacional es del orden de la masa de la part\'\i cula que lo genera\footnote{This is shown using dimensional analysis, much in the same
+way as the Bohr radius, beyond which the full quantum mechanical
+description of the Hydrogen atom cannot be neglected. Note that the
+Bohr radius was derived before a modern quantum mechanical treatment
+of Hydrogen became available. A similar statement can be made about
+the Planck length \cite{andim}.}
+\begin{equation}
+  \label{eq:241}
+  V_{\text{gravity}}=G_N\frac{M_p^2}{L_p}=M_pc^2
+\end{equation}
+
+
+Finalmente, el tiempo de Planck es
+\begin{equation}
+  t_P\equiv\frac{L_p}{c}=\sqrt{\frac{\hbar\, G_N}{c^5}}\approx8.1907\times10^{-20}\frac{\hbar}{c^2\,\text{GeV}}\approx5.3912\times10^{-44}\,\text{s}\,,
+\end{equation}
+y la temperatura de Planck es
+\begin{equation}
+  T_p\equiv\frac{M_p c^2}{k}=\sqrt{\frac{\hbar c^5}{G_N\,k^2}}=1.4168\times10^{32}\,\text{K}\,.
+\end{equation}
+Teniendo en cuenta la condici\'on en (\ref{eq:241}), podemos tambi\'en definir la carga de Planck tal que la intensidad de Potencial de Coulomb para dos masas de Planck separadas por la longitud de Planck sea igual a la energ\'\i a de Planck
+\begin{align}
+  V_{\text{Coulomb}}=\frac{1}{4\pi\epsilon_0}\frac{Q_p^2}{L_p}=&M_pc^2\nonumber\\
+  \frac{1}{4\pi\epsilon_0}\frac{Q_p^2}{\hbar/(c\,M_p)}=&M_p\,c^2\nonumber\\
+  \frac{Q_p^2}{4\pi\epsilon_0\hbar c}=&1\nonumber\\
+  Q_p=&\frac{e}{\sqrt{\alpha}}\approx1.8756\times10^{-18}\,\text{C}.
+\end{align}
+Entonces la constante de estructura fina puede pensarse como el cuadrado del cociente de la carga elemental a la carga de Planck
+\begin{align}
+  \alpha=\left(\frac{e}{Q_p}\right)^2\,.
+\end{align}
+Estos resultados est\'an resumidos en la Tabla~\ref{tab:PU}
+\begin{table} %noinstiki
+  \centering %noinstiki
+  \begin{tabular}{c|c|c} %noinstiki
+%instiki:
+$M_p$&$\sqrt{\hbar c/G_N}$&$2.1765\times10^{-8}\,\text{kg}$\\
+%instiki:
+$L_p$&$\sqrt{{\hbar\, G_N}/{c^3}}$&$1.6163\times10^{-35}\,\text{m}$\\
+%instiki:
+$t_P$&$\sqrt{{\hbar\, G_N}/{c^5}}$&$5.3912\times10^{-44}\,\text{s}$\\
+%instiki:
+$T_p$&$\sqrt{{\hbar c^5}/(G_N\,k^2)}$&$1.4168\times10^{32}\,\text{K}$\\
+%instiki:
+$Q_p$&${e}/{\sqrt{\alpha}}$&$1.8756\times10^{-18}\,\text{C}$\\
+%instiki:
+  \end{tabular} %noinstiki
+  \caption{Unidades de Planck $G_N=\hbar=c=\epsilon_0=k=1$} %noinstiki
+  \label{tab:PU} %noinstiki
+\end{table} %noinstiki
+
+\begin{example}
+  C\'alcule el potencial gravitacional para un par de protones separados una distancia  $L_{\text{proton}}=\hbar/(c\, m_{\text{proton}})\approx2.1\times10^{-16}\,\text{m}$
+\begin{equation}
+    V_{\text{gravity}}=G_N\frac{m_p^2}{L_{\text{proton}}}=G_N m_p^3\frac{c}{\hbar}=\frac{G_N}{\hbar c}m_p^3c^2=\frac{m_p^2}{M_p^2}m_pc^2\approx10^{-38}m_pc^2
+\end{equation}
+En este caso la energ\'\i a potencial gravitacional es mucho menor que la escala de energ\'\i a correspondiente
+\end{example}
+\begin{example}
+Compare la intensidad gravitacional con la Coulomb para un prot\'on, y para una part\'\i cula de Planck.
+
+Usando la ec.~(\ref{eq:242})
+\begin{align}
+\frac{V_{\text{gravity}}}{V_{\text{Coulomb}}}=&\frac{G_N\,m_{\text{X}}^2}{(1/4\pi\epsilon_0)e^2}\nonumber\\
+=&(4\pi\epsilon_0\hbar\,c/e^2)\frac{m_{\text{X}}^2}{M_p^2}\nonumber\\
+=&\frac{1}{\alpha}\left(\frac{m_{\text{X}}}{M_p}\right)^2\nonumber\\
+\sim&
+\begin{cases}
+  10^{-36}&m_{\text{X}}=m_{\text{proton}}\\
+  10^{2}&m_{\text{X}}=M_{\text{p}}\\
+\end{cases}
+\end{align}
+\end{example}
+
+
+\begin{example}
+De la constante de Fuerza electrost\'atica $K=1/(4\pi\epsilon_0)$, podemos obtener el valor de la constante de estructura fina electromagn\'etica $\alpha=e^2/(4\pi\epsilon_0\hbar c)$
+
+\begin{align*}
+  K=\frac{1}{4\pi\epsilon_0}\approx&\frac{1}{4\pi\times8.854\times10^{-12}}\text{C}^{-2}\text{Nm}^2
+  =\frac{1}{4\pi\times8.854\times10^{-12}}\text{C}^{-2}\text{Kg}\,\text{m}^3\text{s}^{-2}\\
+  \approx&\frac{1}{4\pi\times8.854\times10^{-12}}\text{C}^{-2}\times5.6096\times10^{26}\text{GeV}
+  \times(5.068\times10^{15}\text{GeV}^{-1})^3\\
+  &\times(1.519\times10^{-24}\text{GeV}^{-1})^{-2}\times\frac{(\hbar c)^3\hbar^{-2}}{c^2}\\
+  \approx&2.84\times10^{35}\text{C}^{-2}\hbar c\\
+  \approx&2.84\times10^{35}\text{C}^{-2}\times
+  \left(
+    \frac{1.602\times10^{-19}}{e^2}
+  \right)^2\hbar c\\
+  =&\frac{7.296\times10^{-3}}{e^2}\hbar c
+\end{align*}
+Definimos la cantidad adimensional $\alpha$, como
+\begin{equation*}
+  \alpha\equiv\frac{e^2}{4\pi\epsilon_0\hbar c}
+\approx7.296\times10^{-3}\approx\frac{1}{137}
+\end{equation*}
+  
+\end{example}
+
+
+\section{Notaci\'on relativista}
+\label{sec:srn}
+Las transformaciones de Lorentz se definen como la transformaciones que dejan invariante al producto escalar en el espacio de Minkowski definido como
+\begin{equation}
+  \label{eq:146}
+  a^2=g_{\mu\nu}a^\mu a^\nu\equiv a_\nu a^\nu={a^0}^2-a^i a^i={a^0}^2-\mathbf{a}\cdot\mathbf{a}
+\end{equation}
+donde $\mu,\nu=0,1,2,3$, $i=1,2,3$ y se asume suma sobre \'\i ndices repetidos. Adem\'as
+\begin{equation}
+\label{eq:149}
+  a_\nu\equiv g_{\mu\nu}a^\mu
+\end{equation}
+ Finalmente la m\'etrica usada se define como
+\begin{equation}
+  \label{eq:gmunu}
+  \left\{ g_{\mu\nu} \right\}=
+  \begin{pmatrix}
+    1&0&0&0\\
+    0&-1&0&0\\
+    0&0&-1&0\\
+    0&0&0&-1
+  \end{pmatrix}
+\end{equation}
+donde $\left\{ g_{\mu\nu} \right\}$ denota la forma matricial del tensor $g_{\mu\nu}$.  
+
+El producto de dos cuadrivectores se define en forma similar como
+\begin{equation}
+\label{eq:157}
+  a_\nu b^\nu=g_{\mu\nu}a^\mu b^\nu=a^0b^0-\mathbf{a}\cdot\mathbf{b}
+\end{equation}
+El inverso de la m\'etrica es
+\begin{equation}
+  \left\{ g^{\mu\nu} \right\}\equiv\left\{ g_{\mu\nu} \right\}^{-1}=\left\{ g_{\mu\nu} \right\}
+\end{equation}
+tal que
+\begin{equation}
+  g^{\mu\alpha}g_{\alpha\nu}=\delta^\mu_\nu\qquad\text{and}\qquad a^\mu=g^{\mu\nu}a_\nu
+\end{equation}
+
+Bajo una transformaci\'on de Lorentz.
+\begin{equation}
+  a^\mu\to {a'}^\mu={\Lambda^\mu}_{\nu}a^\nu.
+\end{equation}
+La invarianza del producto escalar en ec.~\eqref{eq:157}
+\begin{equation}
+  {a'}^\mu{b'}_\mu=a^\mu b_\mu
+\end{equation}
+da lugar a
+\begin{equation}
+  \label{eq:148}
+  g_{\mu\nu}={\Lambda^\alpha}_{\mu}g_{\alpha\beta}{\Lambda^\beta}_{\nu}\qquad\text{or}\qquad 
+\left\{g_{\mu\nu}\right\}=\left\{{\Lambda_{\mu}}^{\alpha}\right\}^{\text{T}}\left\{g_{\alpha\beta}\right\}\left\{{\Lambda^\beta}_{\nu}\right\}.
+\end{equation}
+En notaci\'on matricial
+\begin{align}
+ g=\Lambda^T g \Lambda\,. 
+\end{align}
+
+Como un ejemplo de Transformaci\'on de Lorentz considere un desplazamiento a lo largo del eje $x$
+\begin{equation}
+\label{eq:147}
+  \left\{x^\mu\right\}=\begin{pmatrix}
+    t\\
+    x\\
+    y\\
+    z
+  \end{pmatrix}\to
+  \begin{pmatrix}
+    t'\\
+    x'\\
+    y'\\
+    z'
+  \end{pmatrix}=
+  \begin{pmatrix}
+    \frac{t+vx}{\sqrt{1-v^2}}\\
+    \frac{x+vt}{\sqrt{1-v^2}}\\
+    y\\
+    z
+  \end{pmatrix}=
+  \begin{pmatrix}
+    \cosh\xi&\sinh\xi&0&0\\
+    \sinh\xi&\cosh\xi&0&0\\
+    0     &  0  &1&0\\
+    0     &  0  &0&1
+  \end{pmatrix}
+  \begin{pmatrix}
+    t\\
+    x\\
+    y\\
+    z
+  \end{pmatrix}=\left\{{\Lambda^\mu}_{\nu}\right\}\left\{x^\nu\right\},
+\end{equation}
+donde
+\begin{equation}
+  \cosh\xi=\gamma\qquad\sinh\xi=v\gamma,\qquad\text{and}\qquad \gamma=\frac{1}{\sqrt{1-v^2}}.
+\end{equation}
+El ${\Lambda^\mu}_{\nu}$ definido en la ec.~\eqref{eq:147} satisface la condici\'on en ec.~\eqref{eq:148}, 
+\begin{align}
+  \Lambda^T g \Lambda=&\begin{pmatrix}
+    \cosh\xi&\sinh\xi&0&0\\
+    \sinh\xi&\cosh\xi&0&0\\
+    0     &  0  &1&0\\
+    0     &  0  &0&1
+  \end{pmatrix}
+  \begin{pmatrix}
+    1 & 0  & 0 &0\\
+    0 & -1 & 0 &0\\
+    0 & 0  & -1&0\\
+    0 & 0  & 0 &-1\\
+  \end{pmatrix}
+  \begin{pmatrix}
+    \cosh\xi&\sinh\xi&0&0\\
+    \sinh\xi&\cosh\xi&0&0\\
+    0     &  0  &1&0\\
+    0     &  0  &0&1
+  \end{pmatrix}\nonumber\\
+  =&\begin{pmatrix}
+       \cosh\xi&-\sinh\xi&0&0\\
+    \sinh\xi&-\cosh\xi&0&0\\
+    0     &  0  &-1&0\\
+    0     &  0  &0&-1
+  \end{pmatrix}
+ \begin{pmatrix}
+    \cosh\xi&\sinh\xi&0&0\\
+    \sinh\xi&\cosh\xi&0&0\\
+    0     &  0  &1&0\\
+    0     &  0  &0&1
+  \end{pmatrix}\nonumber\\
+  =&\begin{pmatrix}
+       \cosh^2\xi-\sinh^2\xi&\cosh\xi\sinh\xi-\cosh\xi\sinh\xi&0&0\\
+    \cosh\xi\sinh\xi-\cosh\xi\sinh\xi&\sinh^2\xi-\cosh^2\xi&0&0\\
+    0     &  0  &-1&0\\
+    0     &  0  &0&-1
+  \end{pmatrix}\nonumber\\
+=&g
+\end{align}
+
+Denotaremos los cuadrivectores con \'\i ndices arriba como
+\begin{equation}
+  \label{eq:upindx}
+  a^\mu=(a^0,a^1,a^2,a^3)=(a^0,\mathbf{a})
+\end{equation}
+Entonces el correspondiente cuadrivector con \'\i ndices abajo, usando la ec.~\eqref{eq:149}, es
+\begin{equation}
+  a_\mu=(a_0,a_1,a_2,a_3)=(a^0,-a^1,-a^2,-a^3)=(a^0,-\mathbf{a}).
+\end{equation}
+Con esta notaci\'on, el producto escalar de cuadrivectores puede expresarse como el producto escalar de los dos vectores de cuatro componente $a^\mu$ y $a_\mu$.
+\subsection{Ejemplos de cuadrivectores}
+%instiki:
+\begin{align}
+    x^\mu=&(x^0,x^1,x^2,x^3)=(t,x,y,z)=(t,\mathbf{x})\\
+  p^\mu=&(p^0,p^1,p^2,p^3)=(E,p_x,p_y,p_z)=(E,\mathbf{p})
+\end{align}
+De la relatividad especial tenemos que
+\begin{align}
+  E=&\gamma m \nonumber\\
+  \mathbf{p}=&\gamma m\mathbf{v}\,.
+\end{align}
+Por lo tanto, ya que $v^2=\mathbf{v}^2=|\mathbf{v}|^2$
+\begin{align}
+  E^2-\mathbf{p}^2=\gamma^2m^2(1-v^2)=m^2\,.
+\end{align}
+El invariante de Lorentz asociado a $p^\mu$ corresponde a la ecuaci\'on de momento energ\'\i a una vez se identifica la masa de una part\'\i cula con su cuadrimomentum
+\begin{equation}
+  p^2=p_\mu p^\mu=m^2=E^2-\mathbf{p}^2
+\end{equation}
+De \cite{uslhcblog}
+\begin{quote}
+  The intuitive understanding of this equation is that the energy of a particle is partially due to its motion and partially due to the intrinsic energy of its mass.  The application to particle detectors is that if you know the mass of a particular particle, or if it’s going so fast that its energy and momentum are both huge so that the mass can be roughly ignored, then knowing the energy tells you the momentum and vice versa
+\end{quote}
+
+Para $\mathbf{p}=0$, es decir cuando la part\'\i cula est\'a en reposo se reduce a la famosa ecuaci\'on.
+
+Del electromagnetismo tenemos
+\begin{equation}
+  \label{eq:cv_jmu}
+  J^\mu=(J^0,\mathbf{J})=(\rho,\mathbf{J})
+\end{equation}
+\begin{equation}
+  \label{eq:cv_phia}
+  A^\mu=(A^0,\mathbf{A})=(\phi,\mathbf{A})
+\end{equation}
+Del c\'alculo vectorial
+\begin{align}
+  \partial^\mu\equiv\frac{\partial}{\partial x_\mu}=&
+  \left(
+    \frac{\partial}{\partial x_0},\frac{\partial}{\partial x_1},\frac{\partial}{\partial x_2},\frac{\partial}{\partial x_3}
+  \right)=\left(
+    \frac{\partial}{\partial x^0},-\frac{\partial}{\partial x^1},-\frac{\partial}{\partial x^2},-\frac{\partial}{\partial x^3}
+  \right)\nonumber\\
+  =&\left(
+    \frac{\partial}{\partial t},-\frac{\partial}{\partial x},-\frac{\partial}{\partial y},-\frac{\partial}{\partial z}
+  \right)\nonumber\\
+  =&(\partial_0,-\boldsymbol{\nabla})=(\partial^0,-\boldsymbol{\nabla})\\
+  \partial_\mu=\frac{\partial}{\partial x^\mu}=&\left(
+    \frac{\partial}{\partial t},\frac{\partial}{\partial x},\frac{\partial}{\partial y},\frac{\partial}{\partial z}
+  \right)
+  =(\partial_0,\boldsymbol{\nabla})
+\end{align}
+Por consiguiente:
+\begin{equation}
+  \label{eq:nabla}
+  \boldsymbol{\nabla}=\frac{\partial}{\partial\mathbf{x}}
+\end{equation}
+Producto escalar:
+\begin{equation}
+  a_\mu b^\mu=g_{\mu\nu}a_\mu b^\nu=a^0b^0-a^1b^1-a^2b^2-a^3b^3=a^0b^0-a^i b^i=a^0b^0-\mathbf{a}\cdot \mathbf{b}
+\end{equation}
+Entonces
+\begin{equation}
+  \partial_\mu a^\mu=\frac{\partial a^0}{\partial t}+\boldsymbol{\nabla}\cdot\mathbf{a}
+\end{equation}
+La ecuaci\'on de continuidad $\partial_\mu J^\mu=0$ es un invariante de Lorentz.
+El operador cuadr\'atico es, usando la ec.~\eqref{eq:146}
+\begin{equation}
+  \label{eq:dalambertian}
+  \Box\equiv \partial_\mu\partial^\mu=\partial^0\partial^0-\nabla^2 =\frac{\partial^2}{\partial t^2}-\frac{\partial^2}{\partial x^2}-\frac{\partial^2}{\partial y^2}-\frac{\partial^2}{\partial z^2}=
+\end{equation}
+Por consiguiente la ecuaci\'on de onda en ec.~\eqref{eq:150} es invariante de Lorentz
+
+Los operadores de energ\'\i a y momentum de la mec\'anica cu\'antica tambi\'en forma un cuadrivector
+\begin{equation}
+  \hat p^\mu=({\hat p}^0,\hat{\mathbf{p}})=(\widehat H,\hat{\mathbf{p}})
+\end{equation}
+con $\widehat H$, y $\hat{\mathbf{p}}$ dados en la ec.~\eqref{eq:151}. Entonces
+\begin{equation}
+  \label{eq:cv_hatpmu}
+  \hat{p}^\mu=i\partial^\mu=i(\partial^0,\partial^i)=i(\frac{\partial}{\partial t},-\boldsymbol{\nabla})
+\end{equation}
+Del problema \ref{chap:tcc}.~\ref{item:pch1.3} se han definido las derivadas covariantes
+\begin{align}
+   \mathcal{D}_0=&\partial_0+i q A_0\nonumber\\
+  \boldsymbol{\mathcal{D}}=&\boldsymbol{\nabla}-i q \mathbf{A}\nonumber\\
+\end{align}
+Podemos definir el cuadrivector
+\begin{align}
+  \mathcal{D}_\mu=&(\mathcal{D}_0,\boldsymbol{\mathcal{D}})\nonumber\\
+=&(\partial_0,\boldsymbol{\nabla})+i q(A_0,-\mathbf{A})\nonumber\\
+=&(\partial_0,\partial_i)+i q(A_0,-A^i)\nonumber\\
+=&(\partial_0,\partial_i)+i q(A_0,A_i)\nonumber\\
+=&(\partial_0+i q A_0,\partial_i+i A_i)\nonumber\\
+=&(\mathcal{D}_0,\mathcal{D}_i)\nonumber\\
+=&(\mathcal{D}_0,\mathcal{D}_i)\,,
+\end{align}
+donde hemos definido
+\begin{align}
+  \mathcal{D}_i=\partial_i+i q A_i\,.
+\end{align}
+Adem\'as $A^\mu$ tiene la transformaci\'on gauge
+\begin{align}
+  \mathbf{A}&\to\mathbf{A}'=\mathbf{A}+\boldsymbol{\nabla}\chi&
+  A_0&\to A_0'=A_0-\frac{\partial\chi}{\partial t} 
+\end{align}
+En notaci\'on de cuadrivectores
+\begin{align}
+  A^\mu\to {A'}^\mu=&\left(A^0-\frac{\partial\chi}{\partial t},\mathbf{A}+\boldsymbol{\nabla}\chi
+  \right)\nonumber\\
+  =&\left(A^0-\frac{\partial\chi}{\partial t},A^{i}+\partial_i\chi
+  \right)\nonumber\\
+  =&\left(A^0-\partial^0\chi,A^{i}-\partial^{i}\chi
+  \right)\nonumber\\
+  =&\left(A^0,A^{i}
+  \right)-
+  \left(
+    \partial^0\chi,\partial^{i}\chi
+  \right)\nonumber\\
+  A^\mu\to {A'}^\mu=&A^\mu-\partial^\mu\chi\,.
+\end{align}
+
+
+
+\begin{example}
+  Calcule la fracci\'on de la velocidad a la que puede ser acelerado un prot\'on en el LHC
+Recuperando los factores de $c$
+  \begin{align*}
+  E=&\gamma m c^2&  \gamma=&\frac{1}{\sqrt{1-\beta^2}}
+\end{align*}
+\begin{align*}
+  \beta=\frac{v}{c}=\sqrt{1-\frac{m^2 c^4}{E^2}}
+\end{align*}
+$m_p=938.272013(23) {\text{MeV}}/{c^2}$, and $E=7\,$TeV
+\begin{align*}
+  v=0.999999991\,c
+\end{align*}
+La longitud de un objeto esta definida tal que $t'=0$, de modo que $t=v x/c^2$, entonces
+\begin{align}
+  x'=\gamma(x-v t)=\gamma(x-v^2 x/c^2)=\sqrt{1-v^2/c^2}x.
+\end{align}
+Similarmente para la dilataci\'on temporal $x=0$ y
+\begin{align}
+  t'=\gamma t\,.
+\end{align}
+Por lo tanto observamos al prot\'on contra\'\i do en un factor de $1\times10^{-8}$
+\end{example}
+
+\begin{example}
+  La amplitud de decaimiento del mu\'on es
+    \begin{align}
+      \Gamma_\mu=\left(\frac{G_F}{\sqrt{2}}\right)^2\frac{m_\mu^5}{96\pi^3}I\left(x\right)\,,
+    \end{align}
+    con $x=m_e/m_\mu$, e $I(x)=1-8x^2-24x^4\ln(x)+8x^6-x^8$.
+    Entonces
+    \begin{align}
+      \Gamma_\mu=3.00867837568648 \times 10^{- 19} \; \text{GeV}
+    \end{align}
+    El tiempo de vida media del mu\'on se define como
+    \begin{align}
+      \tau_\mu=\frac{1}{\Gamma_\mu}=&3.32371850737231\times10^{18}\,\text{GeV}^{-1}\nonumber\\
+      =&3.32371850737231\times10^{18}\times6.582\;118\;99\times10^{-25}\,\text{s}\nonumber\\
+      =&2.197\;03(4)\times10^{-6}\,\text{s}\,.
+    \end{align}
+La longitud de decaimiento se define como
+\begin{align}
+  L_\mu=\frac{1}{\Gamma_\mu}=c\,\tau_\mu\approx658.65\,\text{m}\,.
+\end{align}
+El tiempo de vida media se refiere al tiempo de decaimiento para una part\'\i cula en reposo. Si $v=0.86\,c$, entonces
+\begin{align}
+  \tau_\mu'=\gamma\tau_\mu=\frac{\tau_\mu}{\sqrt{1-v^2}}\approx4.31\times10^{-6}\,\text{s}
+\end{align}
+el doble de cuando est\'a en reposo. 
+\begin{align}
+  L_\mu'=c\tau_\mu'=1290.74\,\text{m}\,.
+\end{align}
+A medida que el mu\'on se acerca m\'as a la velocidad de la luz, $L_\mu'$ coincide m\'as con la distancia recorrida por el mu\'on antes de decaer. De hecho se estima que despu\'es de ser producidos en la atm\'osfera de rayos c\'osmicos, a la superficie de la Tierra llegan unos 10000 muones por metro cuadrado cada minuto~\cite{muon}.
+%examen: calcular la fracci\'on de la velocidad de la luz del muon para llegar a la superficie de la Tierra.
+\end{example}
+
+
+
+
+%\subsection{Transformaciones de Lorentz}
+%\label{sec:transf-de-lorentz}
+
+\subsection{Ecuaciones covariantes}
+\label{sec:ecuac-covar}
+Con el cuadrivector \eqref{eq:cv_hatpmu} podemos construir la
+siguiente ecuaci\'on
+\begin{align}
+  \hat{p}_\mu\hat{p}^\mu\phi&=m^2\phi\nonumber\\
+  i\partial_\mu i\partial^\mu\phi&=m^2\phi\nonumber\\
+  -\partial_\mu\partial^\mu\phi&=m^2\phi\nonumber\\
+  \label{eq:waveec}
+  \left(\frac{\partial^2}{\partial t^2}-\nabla^2+m^2\right)\phi&=0.
+\end{align}
+Que corresponde a la ecuaci\'on de Klein-Gordon \eqref{eq:152}. Una expresi\'on escrita en t\'erminos de productos escalares de Lorentz se dice que esta en \emph{forma covariante}. El Lagrangiano covariante que da lugar a
+\'esta ecuaci\'on es (ver ec. \eqref{eq:150}
+\eqref{eq:15}). %noinstiki[in Cap. I](/wiki/show/Cap%C3%ADtulo+I#eq:15)). 
+
+\begin{equation}
+  \label{eq:wavelagtrue}
+  \mathcal{L}=\frac{1}{2}\partial_\mu\phi\partial^\mu\phi-\frac{1}{2}m^2\phi^2
+\end{equation}
+El Lagrangiano m\'as general posible para el campo $\phi$ es
+\begin{equation}
+  \label{eq:wavelag}
+  \mathcal{L}=\frac{1}{2}\partial_\mu\phi\partial^\mu\phi-\frac{1}{2}m^2\phi^2+\frac{1}{4}\lambda\phi^4+a\phi+b\phi^3.
+\end{equation}
+Un t\'ermino de la forma $\partial_\mu\partial^\mu\phi$ puede reabsorverse en la
+ec.~\eqref{eq:wavelag} como una derivada total. Un posible t\'ermino
+$J_\mu\partial^\mu\phi$, con $J_\mu$ constante, tambi\'en puede reescribirse como una
+derivada total. Un t\'ermino constante
+no afecta las ecuaciones de movimiento. Imponer la simetr\'\i a $\phi\to-\phi$
+anula los dos \'ultimos t\'erminos. Potencias de $\phi$ mayores de cuatro
+dar\'\i a lugar a una Teor\'\i a Cu\'antica de Campos no renormalizable. 
+
+La dimensi\'on del campo $\phi$ puede obtenerse usando que la acci\'on es adimensional
+\begin{equation}
+  [S]\supset\left[\int d^4x\,m^2\phi^2\right]=E^{-4}E^2[\phi]^2\to [\phi]=E^1
+\end{equation}
+Diremos entonces que la dimensi\'on de $\phi$ es 1 (en unidades de energ\'\i a). Similarmente
+\begin{equation}
+  [S]\supset\left[\int d^4x\,\partial_\mu\phi\partial^\mu\phi\right]=E^{-4}[\partial_\mu]^2E^2\to [\partial_\mu]=E^1
+\end{equation}
+Como era de esperarse debido a que la derivada tiene unidades de longitud inversa.
+
+Si hacemos $\lambda=a=b=0$ en la ec.~\eqref{eq:wavelag}, y usando las
+ecuaciones de Euler-Lagrange \eqref{eq:eelcallfmu}, se obtiene
+\begin{align}
+  (\hat{p}_\mu\hat{p}^\mu-m^2)\phi&=0\nonumber\\
+  \label{eq:k-gpmu} %noinstiki
+(\hat{E}^2-\hat{\mathbf{P}}^2-m^2)\phi&=0\\
+\label{eq:kg} 
+  (\Box+m^2)\phi&=0,
+\end{align}
+donde
+\begin{equation}
+  \label{eq:dalambertiano}
+  \Box\equiv\partial_\mu\partial^\mu=\frac{\partial^2}{\partial t^2}-\nabla^2. 
+\end{equation}
+Es el D'Alembartiano~\cite{daelembertiano}. 
+Ec.~\eqref{eq:k-gpmu} %noinstikiEc.~\eqref{eq:kg}
+corresponde a la forma de operadores de la
+ecuaci\'on de energ\'\i a-momentum relativista. La
+ec.~\eqref{eq:kg} se conoce como la ecuaci\'on de Klein-Gordon, con
+Lagrangiano
+\begin{equation}
+  \label{eq:kglag}
+  \mathcal{L}=\frac{1}{2}\partial_\mu\phi\partial^\mu\phi-\frac{1}{2}m^2\phi^2,
+\end{equation}
+Una expresi\'on escrita en t\'erminos de productos escalares de Lorentz se dice que esta en \emph{forma covariante}. Por lo tanto la ecuaci\'on de Klein--Gordon y su correspondiente Lagrangiano est\'an en forma covariante. Tambi\'en tienen la simetr\'\i a $\phi\to-\phi$. A $\phi$ se le
+denomina \emph{campo escalar}.
+
+Definiendo
+\begin{align*}
+  F^{\mu\nu}&=\partial^\mu A^\nu-\partial^\nu A^\mu\\
+  G^{\mu\nu}&=\partial^\mu A^\nu+\partial^\nu A^\mu\\
+\end{align*}
+El Lagrangiano invariante de Lorentz para el cuadrivector $A^\mu$ en
+ec.~\eqref{eq:cv_phia} es, hasta derivadas totales
+\begin{align}
+  \mathcal{L}=&-\frac{1}{4}F^{\mu\nu}F_{\mu\nu}-\frac{1}{4}G^{\mu\nu}G_{\mu\nu}-J^\mu A_\mu+
+  \frac{1}{2}m^2A^\mu A_\mu+K_\nu A^\nu A_\mu A^\mu+\lambda A^\mu A_\mu A^\nu A_\nu\nonumber\\
+  \label{eq:lagAmu}
+  &+a_1\partial_\mu A^\mu A_\nu A^\nu+a_2F^{\mu\nu}A_\mu A_\nu+a_3G^{\mu\nu}A_\mu A_\nu
+\end{align}
+La derivada covariante definida
+\section{Ecuaciones de Maxwell en notaci\'on covariante }
+\label{sec:maxeqs}
+Ecuaciones homog\'eneas:
+\begin{align}
+  \label{eq:hom_m_eq}
+  \boldsymbol{\nabla}\cdot\mathbf{B}&=0,&\boldsymbol{\nabla}\times\mathbf{E}+\frac{\partial\mathbf{B}}{\partial t}&=0
+\end{align}
+Ecuaciones inhomog\'eneas:
+\begin{align}
+  \label{eq:inhom_m_eq}
+  \boldsymbol{\nabla}\cdot\mathbf{E}&=\rho,&\boldsymbol{\nabla}\times\mathbf{B}-\frac{\partial\mathbf{E}}{\partial t}&=\mathbf{J}.
+\end{align}
+La primera ecuaci\'on establece la ausencia de cargas magn\'eticas, la segunda corresponde a la Ley de Faraday y la tercera a la Ley de Gauss. La cuarta sin el t\'ermino de desplazamiento el\'ectrico introducido por Maxwell corresponde a la Ley de Amp\`ere
+\begin{equation}
+   \boldsymbol{\nabla}\times\mathbf{B}=\mathbf{J}.
+\end{equation}
+Tomando la divergencia en esta expresi\'on tenemos
+\begin{equation}
+  \boldsymbol{\nabla}\cdot\mathbf{J}=0,
+\end{equation}
+que corresponde a la ecuaci\'on de continuidad \eqref{eq:conti} para $\rho$ constante
+\begin{equation}
+  \label{eq:153}
+  \frac{\partial \rho}{\partial t}+\boldsymbol{\nabla}\cdot\mathbf{J}=0.
+\end{equation}
+De este modo la Ley de Amp\`ere da lugar a la conservaci\'on de carga el\'ectrica pero solo a nivel global:  una perdida de carga el\'ectrica en un punto del universo puede ser compensada por la aparici\'on instant\'anea de carga el\'ectrica en otro lugar del universo. La conservaci\'on global podr\'\i a necesitar la propagaci\'on instant\'anea de se\~nales, y esto est\'a en conflicto con la relatividad especial.
+
+
+Tomando la divergencia de la Ley de Amp\`ere modificada por Maxwell
+\begin{equation}
+   \boldsymbol{\nabla}\times\mathbf{B}-\frac{\partial\mathbf{E}}{\partial t}=\mathbf{J},
+\end{equation}
+obtenemos la ecuaci\'on de continuidad \eqref{eq:153}. Dicha ecuaci\'on establece que la raz\'on de decrecimiento de la carga en un volumen arbitrario $V$ es debido precisa y \'unicamente al flujo de la corriente fuera de su superficie; de modo que la carga no puede ser creada ni destruida dentro de $V$.  Ya que $V$ puede ser arbitrariamente peque\~no esto significa que la carga el\'ectrica debe conservarse localmente.   El t\'ermino extra introducido por Maxwell est\'a motivado por un requerimiento de conservaci\'on local. 
+
+A la luz del teorema de Noether la conservaci\'on local de la carga el\'ectrica debe provenir de una transformaci\'on continua y \emph{local} que deje invariante a la ecuaciones de Maxwell. Las invarianza gauge de la ecuaciones de Maxwell juegan este papel. Las cargas conservadas localmente pueden determinarse a partir de la din\'amica del sistema  \cite{Aitchison:2003tq}, adem\'as del uso de cargas conocidas que participen en alguna reacci\'on. Por ejemplo se puede estudiar la forma como responde una part\'\i cula de carga desconocida a campos electromagn\'eticos para determinar su carga. 
+
+El principio gauge local, que pretendemos formular, va m\'as all\'a del teorema de Noether estableciendo una relaci\'on entre las simetr\'\i as, las leyes de conservaci\'on y la din\'amica. Este se constituye en el paradigma para estudiar las interacciones relevantes en f\'\i sica de part\'\i culas.
+
+Para mostrar la invarianza gauge que exhiben las ecuaciones de Maxwell, es conveniente reescribirlas en forma covariante. Para ello es conveniente usar el potencial escalar el\'ectrico $\phi$ y el potencia vectorial magn\'etico $\mathbf{A}$.
+
+%to_en:The following equations are equivalent to the two homogenous Maxwell equations
+Las siguientes ecuaciones son equivalentes a las ecuaciones homog\'eneas de Maxwell
+\begin{align}
+  \label{eq:phia}
+  \mathbf{E}&=-\boldsymbol{\nabla}\phi-\frac{\partial\mathbf{A}}{\partial t}&
+  \mathbf{B}&=\boldsymbol{\nabla}\times\mathbf{A}.
+\end{align}
+Ya que
+\begin{align*}
+  \boldsymbol{\nabla}\times\mathbf{E}&=-\boldsymbol{\nabla}\times\boldsymbol{\nabla}\phi-\frac{\partial}{\partial t}\boldsymbol{\nabla}\times\mathbf{A}\\
+  &=-\frac{\partial\mathbf{B}}{\partial t},
+\end{align*}
+y
+\begin{align*}
+  \boldsymbol{\nabla}\cdot\mathbf{B}&=\boldsymbol{\nabla}\cdot(\boldsymbol{\nabla}\times\mathbf{A})\\
+  &=0
+\end{align*}
+Usando el cuadrivector en ec.~(\ref{eq:cv_phia}) y
+expandiendo la ec.~(\ref{eq:phia}), tenemos
+\begin{align}
+  E^i&=-(\frac{\partial A^0}{\partial x^{i}}+\frac{\partial A^{i}}{\partial x^0})\nonumber\\
+  &=(\frac{\partial A^0}{\partial x_i}-\frac{\partial A^{i}}{\partial x_0})\nonumber\\
+  &=\partial^{i}A^0-\partial^0 A^{i}\nonumber\\
+  \label{eq:Efmunu}
+  &=\partial^\mu A^\nu-\partial^\nu A^\mu,
+  \qquad 
+  \mu=i,\quad \nu=0\\
+  \label{eq:E_Fi0} %noinstiki
+  E^{i}&=F^{i0}
+\end{align}
+donde hemos definido el Tensor de intensidad electrom\'agnetica como:
+\begin{equation}
+  \label{eq:fmunu}
+    F^{\mu\nu}=\partial^\mu A^\nu-\partial^\nu A^\mu.
+\end{equation}
+A $A^\mu$ se le denomina \emph{campo vectorial}. Similarmente
+\begin{align}
+  B^k&=\epsilon_{ijk}\frac{\partial A^j}{\partial x^{i}}\nonumber\\
+  \epsilon_{lmk}B^k&=\epsilon_{lmk}\epsilon_{ijk}\frac{\partial A^j}{\partial x^{i}}\nonumber\\
+  &=(\delta_{li}\delta_{mj}-\delta_{lj}\delta_{mi})\frac{\partial A^j}{\partial x^{i}}\nonumber\\
+  &=\frac{\partial A^m}{\partial x^l}-\frac{\partial A^l}{\partial x^m}\nonumber\\
+  &=-\frac{\partial A^m}{\partial x_l}+\frac{\partial A^l}{\partial x_m}\nonumber\\
+  &=\partial^m A^l-\partial^l A^m\nonumber\\
+  \label{eq:Bfmunu}
+  &=\partial^\mu A^\nu-\partial^\nu A^\mu,
+  \qquad 
+  \mu=m,\quad \nu=l.\\
+  \label{eq:BFij}
+\epsilon_{lmk}B^k&=F^{ml}
+\end{align}
+Por consiguiente la ec.~(\ref{eq:fmunu}) es tambi\'en equivalente a las
+dos ecuaciones homog\'eneas de Maxwell. En forma matricial,
+\begin{align}
+  F^{\mu\nu}&=
+  \begin{pmatrix}
+    0       &\partial^0A^1-\partial^1A^0&\partial^0A^2-\partial^2A^0&\partial^0A^3-\partial^3A^0\\
+    \partial^1A^0-\partial^0A^1&0       &\partial^1A^2-\partial^2A^1&\partial^1A^3-\partial^3A^1\\
+    \partial^2A^0-\partial^0A^2&\partial^2A^1-\partial^1A^2&0       &\partial^2A^3-\partial^3A^2\\
+    \partial^3A^0-\partial^0A^3&\partial^3A^1-\partial^1A^3&\partial^3A^2-\partial^2A^3&0\\
+  \end{pmatrix}\nonumber\\
+  &=
+  \begin{pmatrix}
+    0 &-E^1   &-E^2   &-E^3   \\    
+    E^1&0     &\epsilon_{213}B^3&\epsilon_{312}B^2\\
+    E^2&\epsilon_{123}B^3&0     &\epsilon_{321}B^1\\
+    E^3&\epsilon_{132}B^2&\epsilon_{231}B^1&0\\
+  \end{pmatrix}\nonumber\\
+  &=
+\label{eq:matrixfmunu}
+  \begin{pmatrix}
+    0 &-E^1&-E^2&-E^3   \\    
+    E^1&0  &-B^3&B^2\\
+    E^2&B^3 &0  &-B^1\\
+    E^3&-B^2&B^1 &0\\
+  \end{pmatrix}.
+\end{align}
+
+La ec.~(\ref{eq:fmunu}) satisface la identidad,
+\begin{equation}
+  \label{eq:homME3}
+  \partial^\lambda F^{\mu\nu}+\partial^\mu F^{\nu\lambda}+\partial^\nu F^{\lambda\mu}=0
+\end{equation}
+Definiendo el tensor dual como
+\begin{equation*}
+  \tilde{F}^{\mu\nu}=\frac{1}{2}\epsilon^{\mu\nu\rho\sigma}F_{\rho\sigma},
+\end{equation*}
+la ec.~(\ref{eq:homME3}) puede escribirse como
+\begin{equation}
+  \label{eq:homEM4}
+  \partial_\mu\tilde{F}^{\mu\nu}=0.
+\end{equation}
+
+Para reescribir las ecuaciones de Maxwell inhomog\'enas en forma
+covariante usaremos adem\'as el cuadrivector $J^\mu$ de la
+ec.~\eqref{eq:cv_jmu}.  Usando la ec.~\eqref{eq:Efmunu}, la primera
+ecuaci\'on de Maxwell inhomog\'enea~\eqref{eq:inhom_m_eq} puede escribirse
+como
+\begin{align}
+  \label{nohomME21}
+    \frac{\partial E^{i}}{\partial x^{i}}&=J^0\nonumber\\
+    \frac{\partial}{\partial x^{i}}F^{i0}&=J^0\nonumber\\
+    \partial_iF^{i0}&=J^0\nonumber\\
+    \partial_\mu F^{\mu0}&=J^0\,.
+\end{align}
+Usando las ecs.~\eqref{eq:Efmunu}, \eqref{eq:Bfmunu}, la segunda
+ecuaci\'on de Maxwell inhomog\'enea~\eqref{eq:inhom_m_eq} puede escribirse
+como
+\begin{align}
+  \epsilon_{ijk}\frac{\partial B^j}{\partial x^{i}}-\frac{\partial E^k}{\partial t}&=J^k\nonumber\\
+  -\frac{\partial (\epsilon_{ikj}B^j)}{\partial x^{i}}-\frac{\partial E^k}{\partial t}&=J^k\nonumber\\
+-\partial_iF^{ki}-\partial_0F^{k0}&=J^k\nonumber\\
+\partial_iF^{ik}+\partial_0F^{0k}&=J^k\nonumber\\
+\label{nohomME22}
+\partial_\mu F^{\mu k}&=J^k
+\end{align}
+
+Las ecuaciones \eqref{nohomME21},
+\eqref{nohomME22} pueden escribirse en forma compacta como
+\begin{align}
+\label{eq:nohomME2}
+  \partial_\mu F^{\mu\nu}&=J^\nu\\
+&=
+\begin{cases}
+  \partial_\mu(\partial^\mu A^0-\partial^0A^{i})=J^0&\text{para $\nu=0$}\\
+  \partial_\mu(\partial^\mu A^{i}-\partial^{i}A^\mu)=J^{i}&\text{para $\nu=i$}
+\end{cases}\nonumber
+\end{align}
+
+
+Los resultados sobre la notaci\'on covariante de la ecuaciones de Maxwell est\'an resumidos en la Tabla~\ref{tab:eqmax} %noinstiki
+\begin{table} %noinstiki
+  \begin{center} %noinstiki
+  \begin{tabular}{l|l|l|l} %noinstiki
+            &$\mathbf{E}$, $\mathbf{B}$&$A^\mu$            &$F^{\mu\nu}$\\\hline %noinstiki
+Homog\'eneas  &Ec.~(\ref{eq:hom_m_eq})   &~(\ref{eq:phia})&~(\ref{eq:fmunu}) \'o (\ref{eq:homME3}) \'o (\ref{eq:homEM4})\\\hline %noinstiki
+Inhomog\'eneas& (\ref{eq:inhom_m_eq})    &                &~\eqref{eq:nohomME2} \\ %noinstiki
+  \end{tabular} %noinstiki
+  \end{center} %noinstiki
+  \caption{Ecuaciones de Maxwell} %noinstiki
+  \label{tab:eqmax} %noinstiki
+\end{table} %noinstiki
+De la parte izquierda de la ecuaci\'on \eqref{eq:nohomME2}, podemos ver que
+\begin{align*}
+  \partial_\nu\partial_\mu F^{\mu\nu}&=0
+\end{align*}
+Por consiguiente, la cuadricorriente $J^\mu$ es conservada:
+\begin{equation}
+  \label{eq:consvjmu}
+  \partial_\mu J^\mu=0
+\end{equation}
+
+
+\subsection{Lagrangiano Electromagn\'etico}
+\label{sec:lagr-electr}
+%to_en:Eq.~(\ref{eq:phia}) is invariant under the following transformations
+La ec.~(\ref{eq:phia}) es invariante bajo las siguientes transformaciones
+\begin{align}
+  \label{eq:phia_transf}
+  \mathbf{A}&\to\mathbf{A}'=\mathbf{A}+\boldsymbol{\nabla}\chi&
+  \phi&\to\phi'=\phi-\frac{\partial\chi}{\partial t} 
+\end{align}
+%to_en:Since
+Ya que
+\begin{equation}
+  \label{eq:Etrans}
+  \mathbf{E}\to\mathbf{E}'= -\boldsymbol{\nabla}\phi+\frac{\partial}{\partial t}\boldsymbol{\nabla}\chi
+  -\frac{\partial\mathbf{A}}{\partial t}-\frac{\partial}{\partial t}\boldsymbol{\nabla}\chi=\mathbf{E}
+\end{equation}
+\begin{equation}
+  \label{eq:btransf}
+  \mathbf{B}\to\mathbf{B}'= \boldsymbol{\nabla}\times\mathbf{A}+
+  \underbrace{\boldsymbol{\nabla}\times\boldsymbol{\nabla}\chi}_{\displaystyle =0}=\mathbf{B}
+\end{equation}
+%to_en:This imply that different observers in different space points, using different calibrations for their measures, get the same fields. 
+Esto implica que diferentes observadores en diferentes puntos del espacio, usando diferentes calibraciones para sus medidas, obtienen los mismos campos. Las  ecs.~\eqref{eq:phia_transf}, corresponden a \emph{transformaciones gauge locales}
+
+%to_en:In covariant notation
+En notaci\'on de cuadrivectores
+\begin{align}
+  A^\mu\to {A'}^\mu=&\left(\phi-\frac{\partial\chi}{\partial t},\mathbf{A}+\boldsymbol{\nabla}\chi
+  \right)\nonumber\\
+  =&\left(\phi-\frac{\partial\chi}{\partial t},A^{i}+\partial_i\chi
+  \right)\nonumber\\
+  =&\left(\phi-\partial^0\chi,A^{i}-\partial^{i}\chi
+  \right)\nonumber\\
+  =&\left(\phi,A^{i}
+  \right)-
+  \left(
+    \partial^0\chi,\partial^{i}\chi
+  \right)\nonumber\\
+  \label{eq:aphicov}
+  A^\mu\to {A'}^\mu=&A^\mu-\partial^\mu\chi
+\end{align}
+%to_en: Let $U$ an element of the Transformation Group $U(1)$:
+Sea  $U$ un elemento del Grupo de Transformaciones  $U(1)$:
+\begin{equation}
+  \label{eq:u1ele}
+  U=e^{i\theta(x)}\in U(1)
+\end{equation}
+%to_en: The Group is defined by the infinity set of elements $U_i=e^{i\theta(x_i)}$. Then
+El Grupo est\'a definido por el conjunto infinito de elementos $U_i=e^{i\theta(x_i)}$. Entonces
+\begin{itemize} %noinstiki
+%instiki:
+\item Producto de Grupo 
+  \begin{equation*}
+      U_1\cdot U_2=e^{i[\theta(x_1)+\theta(x_2)]}\equiv e^{i\theta(x_3)}\in U(1)
+  \end{equation*}
+\item Identidad: 
+  \begin{equation*}
+  \theta(x)=0\qquad \text{tal que}\qquad U_I=1  
+  \end{equation*}
+\item Inverso 
+  \begin{equation*}
+      \theta(-x)=-\theta(x)\qquad \text{tal que}\qquad U^{-1}=e^{-i\theta(x)}
+  \end{equation*}
+\end{itemize} %noinstiki
+Note que si
+\begin{equation}
+  \label{eq:amutransf}
+  A^\mu\to{A'}^\mu=A^\mu-\frac{i}{e}(\partial^\mu U)U^{-1}
+\end{equation}
+%to_en:(If $\theta(x)=$cte, $ A^\mu={A^\mu}'$, phase invariance). If $\theta$ is sufficiently small
+(Si $\theta=$cte, $ A^\mu={A'}^\mu$, invarianza de fase). Si $\theta$ es suficientemente peque\~no
+\begin{align}
+  \label{eq:Uinf}
+  U=e^{i\theta(x)}&\approx1+i\theta(x)+\mathcal{O}(\theta^2)&U^{-1}=e^{-i\theta(x)}&\approx1-i\theta(x)+\mathcal{O}(\theta^2)
+\end{align}
+Entonces
+\begin{align}
+  \label{eq:checkinft}
+  {A^\mu}'=&-\frac{1}{e}(i\partial^\mu\theta(8x))[1+i\theta(x)+\mathcal{O}(\theta^2)][1-i\theta(x)+\mathcal{O}(\theta^2)]
+  +A^\mu[1+i\theta(x)+\mathcal{O}(\theta^2)][1-i\theta(x)+\mathcal{O}(\theta^2)]\nonumber\\
+  =&A^\mu+\frac{1}{e}\partial^\mu\theta(x)+\mathcal{O}(\theta^2)
+\end{align}
+%to_en:Therefore, if $\chi(x)=-(1/e)\theta(x)$, then eq.~(\ref{eq:aphicov}) is the infinitesimal version of the $U(1)$ transformation in eq.~(\ref{eq:amutransf})
+Por consiguiente, si $\chi(x)=-(1/e)\theta(x)$, entonces la ec.~(\ref{eq:aphicov}) es la versi\'on infinitesimal de la transformaci\'on $U(1)$  en ec.~(\ref{eq:amutransf}). Del Teorema de Noether debe existir una carga conservada corresponde a la carga el\'ectrica, asociada la corriente $J^\mu$, de la cual a\'un no hemos especificado su origen. 
+
+%to_en:Under this transformation
+Bajo esta transformaci\'on
+\begin{align}
+  \label{eq:fmunutrans}
+  F^{\mu\nu}\to{F'}^{\mu\nu}=&(\partial^\mu{A'}^\nu-\partial^\nu{A'}^\mu)\nonumber\\
+  =&\partial^\mu A^\nu-\partial^\mu\partial^\nu\chi-\partial^\nu A^\mu+\partial^\nu\partial^\mu\chi\nonumber\\
+  =&\partial^\mu A^\nu-\partial^\nu A^\mu-\partial^\mu\partial^\nu\chi+\partial^\mu\partial^\nu\chi\nonumber\\
+  =&F^{\mu\nu}
+\end{align}
+%to_en:In this way the homogeneous part of Maxwell equations corresponds to a Gauge Theory!. This was a curiosity until 1950's. 
+De este modo las ecuaciones homog\'eneas de Maxwell \eqref{eq:fmunu} son invariantes gauge. Como la transformaci\'on gauge solo afecta al campo $A^\mu$, las ecuaciones inhomog\'eneas de Maxwell \eqref{eq:nohomME2} tambi\'en son invariantes gauge. 
+De esta forma las ecuaciones de Maxwell corresponde a una Teor\'\i a Gauge!. Esto fue una curiosidad hasta los 1950. 
+
+Para ilustrar la relaci\'on entre la conservaci\'on local de la carga el\'ectrica y la transformaci\'on gauge, que no es una conexi\'on simple, considere las ecuaciones de Maxwell
+\begin{equation}
+    \partial_\mu F^{\mu\nu}=J^\nu,
+\end{equation}
+que autom\'aticamente incluyen la conservaci\'on local de carga, expresada por la ecuaci\'on de continuidad
+\begin{equation}
+  \partial_\mu J^\mu=0.  
+\end{equation}
+Adem\'as las ecuaciones de Maxwell permanecen invariantes bajo la transformaci\'on gauge
+\begin{equation}
+   A^\mu\to {A'}^\mu=A^\mu-\partial^\mu\chi,
+\end{equation}
+ya que dicha transformaci\'on deja invariante a $F^{\mu\nu}$. De aqu\'\i{} la sugerencia de la invarianza gauge esta relacionada de alguna manera a la conservaci\'on de la carga. De hecho la acci\'on m\'as general posible para el campo $A^\mu$ compatible tanto con la invarianza de Lorentz y la invarianza gauge local corresponde a la acci\'on que da lugar a las ecuaciones de Maxwell.
+
+Si queremos que la Acci\'on refleja las simetr\'\i as de las ecuaciones de
+Maxwell debemos mantener s\'olo los t\'erminos del Lagrangiano para $A^\mu$
+en \eqref{eq:lagAmu} que sean invariantes hasta una derivada total. Bajo una transformaci\'on gauge, cada
+uno de los t\'erminos
+\begin{equation*}
+  -\frac{1}{4}G^{\mu\nu}G_{\mu\nu}+
+  \frac{1}{2}m^2A^\mu A_\mu+K_\nu A^\nu A_\mu A^\mu+\lambda A^\mu A_\mu A^\nu A_\nu+a_1\partial_\mu A^\mu A_\nu A^\nu+a_2F^{\mu\nu}A_\mu A_\nu+a_3G^{\mu\nu}A_\mu A_\nu
+\end{equation*}
+dan lugar a un $\delta\mathcal{L}\neq\partial_\mu(\text{algo})$ y la Acci\'on no es
+invariante bajo la transformaci\'on gauge. Para los otros
+t\'erminos, usando la ec.~\eqref{eq:consvjmu}, tenemos
+\begin{equation*}
+  \delta\mathcal{L}=\mathcal{L}'-\mathcal{L}=\partial^\mu(J_\mu\chi)
+\end{equation*}
+Por lo tanto, el Lagrangiano
+\begin{equation}
+  \label{eq:lagAmum}
+  \mathcal{L}=-\frac{1}{4}F^{\mu\nu}F_{\mu\nu}-J^\mu A_\mu
+\end{equation}
+es el m\'as general que da lugar a una Acci\'on invariante de Lorentz e invariante gauge
+local.
+
+Con miras a calcular  las ecuaciones de Euler-Lagrange para el Lagrangiano en
+ec.~\eqref{eq:lagAmum}, tenemos
+\begin{align}
+F^{\rho\sigma}F_{\rho\sigma}=&(\partial^\rho A^\sigma-\partial^\sigma A^\rho)(\partial_\rho A_\sigma-\partial_\sigma A_\rho)\nonumber\\
+=&\partial^\rho A^\sigma\partial_\rho A_\sigma-\partial^\rho A^\sigma\partial_\sigma A_\rho-\partial^\sigma A^\rho\partial_\rho A_\sigma+\partial^\sigma A^\rho\partial_\sigma
+A_\rho\nonumber\\
+=&g^{\rho\alpha}g^{\sigma\beta}(\partial_\alpha A_\beta\partial_\rho A_\sigma-\partial_\alpha A_\beta\partial_\sigma A_\rho-\partial_\beta A_\alpha\partial_\rho A_\sigma+\partial_\beta A_\alpha\partial_\sigma A_\rho).\nonumber
+\end{align}
+Entonces
+\begin{align}
+  \frac{\partial}{\partial(\partial_\mu A_\nu)}F^{\rho\sigma}F_{\rho\sigma}=&g^{\rho\alpha}g^{\sigma\beta}(\delta_{\alpha\mu}\delta_{\beta\nu}\partial_\rho
+  A_\sigma+\partial_\alpha A_\beta\delta_{\rho\mu} \delta_{\sigma\nu}-\delta_{\alpha\mu}\delta_{\beta\nu}\partial_\sigma A_\rho-\partial_\alpha A_\beta\delta_{\sigma\mu}\delta_{\rho\nu}\nonumber\\
+&-\delta_{\beta\mu}\delta_{\alpha\nu}\partial_\rho A_\sigma-\partial_\beta A_\alpha\delta_{\rho\mu}\delta_{\sigma\nu}+\delta_{\beta\mu}\delta_{\alpha\nu}\partial_\sigma A_\rho+\partial_\beta
+A_\alpha\delta_{\sigma\mu}\delta_{\rho\nu}).\nonumber\\
+=&  g^{\rho\mu}g^{\sigma\nu}\partial_\rho A_\sigma+g^{\mu\alpha}g^{\nu\beta}\partial_\alpha A_\beta-g^{\rho\mu}g^{\sigma\nu}\partial_\sigma A_\rho-g^{\nu\alpha}g^{\mu\beta}\partial_\alpha A_\beta\nonumber\\
+ &-g^{\rho\nu}g^{\sigma\mu}\partial_\rho A_\sigma-g^{\mu\alpha}g^{\nu\beta}\partial_\beta A_\alpha+g^{\rho\nu}g^{\sigma\mu}\partial_\sigma A_\rho+g^{\nu\alpha}g^{\mu\beta}\partial_\beta A_\alpha\nonumber\\
+=&  \partial^\mu A^\nu+\partial^\mu A^\nu-\partial^\nu A^\mu-\partial^\nu A^\mu-\partial^\nu A^\mu-\partial^\nu A^\mu+\partial^\mu A^\nu+\partial^\mu A^\nu\nonumber\\
+=&4(\partial^\mu A^\nu-\partial^\nu A^\mu) \nonumber\\
+\label{eq:dddmufmunu2}
+\frac{\partial}{\partial(\partial_\mu A_\nu)}F^{\rho\sigma}F_{\rho\sigma}&=4F^{\mu\nu}
+\end{align}
+
+Usando la ec.~\eqref{eq:dddmufmunu2}, tenemos
+\begin{align}
+  \partial_\mu\left[
+    \frac{\partial\mathcal{L}}{\partial(\partial_\mu A_\nu)}  
+  \right]-\frac{\partial\mathcal{L}}{\partial A_\nu}&=0\nonumber\\
+  -\frac{1}{4}\partial_\mu\left[
+    \frac{\partial}{\partial(\partial_\mu A_\nu)}(F^{\rho\sigma}F_{\rho\sigma})  
+  \right]+J^\rho\frac{\partial A_\rho}{\partial A_\nu}&=0\nonumber\\
+  -\partial_\mu F^{\mu\nu}+J^\rho\delta_{\rho\nu}&=0\nonumber\\
+  \partial_\mu F^{\mu\nu}&=J^\nu.
+\end{align}
+Como era de esperarse una Acci\'on invariante de Lorentz e invariante
+gauge local, expresada en t\'erminos del Lagrangiano \eqref{eq:lagAmum},
+da lugar a la Teor\'\i a Electromagn\'etica. 
+
+De este modo las ecuaciones de Maxwell se pueden derivar del requerimiento de que la teor\'\i a, adem\'as de ser invariante de Lorentz, pueda expresarse en t\'erminos de potenciales de una forma que sea invariante gauge en esos potenciales. Si un cuadrivector potencial $A^\mu$ es postulado, y se impone que la teor\'\i a involucre este solamente, de una forma que sea insensible a a cambios de la forma \eqref{eq:aphicov}, se es conducido naturalmente a la idea de que los campos f\'\i sicos entran \'unicamente v\'\i a la cantidad $F^{\mu\nu}$, que es invariante bajo la ec. \eqref{eq:aphicov}. De aqu\'\i{} se puede conjeturar la ecuaci\'on de campo en base a la covarianza de Lorentz. 
+
+Esto no corresponde ciertamente a una prueba de las ecuaciones de Maxwell. A pesar de eso, la idea que la din\'amica (en este caso la completa interconexi\'on entre los efectos el\'ectricos y magn\'eticos) pueda estar \'\i ntimamente relacionada a un requerimiento de invarianza local se ha convertido en algo muy fruct\'\i fero. 
+
+En t\'erminos de transformaciones globales, se puede mostrar \cite{Aitchison:2003tq} que el cambio por una constante del potencial escalar ($\chi=at$, $A_0\to A_0'=A_0-a$, $\mathbf{A}\to \mathbf{A}'=\mathbf{A}$ en ec.\eqref{eq:phia_transf}), m\'as la conservaci\'on de energ\'\i a, da lugar a la conservaci\'on local de la carga. La conservaci\'on local en este contexto requiere que el cambio por una funci\'on del potencial escalar en en \eqref{eq:phia_transf} sea compensado por el correspondiente cambio en el vector potencial magn\'etico $A$. En general, cuando una cierta invarianza global es generalizada a una local, se requiere la existencia de un nuevo campo que compensa, interactuando de una manera espec\'\i fica. La teor\'\i as que dan lugar al Modelo Est\'andar y que describen las interacciones fuertes, d\'ebiles y electromagn\'eticas, son ejemplos de teor\'\i as din\'amicas derivadas desde un requerimiento de invarianza local.
+
+Una de las principales razones
+de porque la f\'\i sica de part\'\i culas se formula en t\'erminos de
+lagrangianos, es que $\mathcal{L}$ debe ser escalar en cada espacio
+relevante, e invariante bajo las transformaciones (hasta derivadas
+totales), ya que la acci\'on es invariante. Haciendo el Lagrangiano
+covariante de Lorentz por ejemplo, garantiza que todas las
+predicciones son invariantes de Lorentz.
+
+
+
+\subsection{Energ\'\i a del campo electromagn\'etico}
+Necesitamos la expresi\'on para $F_{\mu\nu}$,
+\begin{equation}
+  \label{eq:16}
+  F_{\mu\nu}=g_{\mu\rho}g_{\nu\eta}F^{\rho\eta}\Rightarrow
+  \begin{cases}
+    F_{0i}=F_{0\nu}=g_{00}g_{ij}F^{0j}=-F^{0i} &\text{para $\mu=0$}\\
+    F_{ij}=F_{i\nu}=g_{ik}g_{jl}F^{kl}=F^{ij} &\text{para $\mu=i$}
+  \end{cases}
+\end{equation}
+De la ec.~\eqref{eq:tmunu}, se tiene
+\begin{align}
+  T^\mu_\nu&=\frac{\partial\mathcal{L}}{\partial(\partial_\mu A_\lambda)}(\partial_\nu A_\lambda)
+  -\delta^\mu_\nu\mathcal{L}\nonumber\\
+  &=-F^{\mu\lambda}(\partial_\nu A_\lambda)-\delta^\mu_\nu\mathcal{L}
+\end{align}
+La energ\'\i a del campo, corresponde a la componente $T^0_0$:
+\begin{align}
+\label{eq:17}
+  T^0_0&=-F^{0\lambda}(\partial_0A_\lambda)-\mathcal{L}\nonumber\\
+  &=-F^{0\lambda}(\partial_0A_\lambda)+\frac{1}{4}F^{\mu\nu}F_{\mu\nu}+J^\mu A_\mu\nonumber
+\end{align}
+Usando las ecuaciones 
+\eqref{eq:E_Fi0}, %noinstiki\eqref{eq:Efmunu},
+\eqref{eq:BFij}, \eqref{eq:16}
+
+\begin{align}
+T^0_0 &=-F^{0\lambda}(\partial_0A_\lambda)+\frac{1}{4}F^{\mu\nu}F_{\mu\nu}+J^\mu A_\mu\nonumber\\
+  &=-F^{0\mu}(\partial_0A_\mu)+\frac{1}{4}\overbrace{F^{\mu0}F_{\mu0}}^{\nu=0}+\frac{1}{4}\overbrace{F^{\mu i}F_{\mu i}}^{\nu=i}+J^\mu A_\mu\nonumber\\
+  &=-F^{0\mu}\partial_\mu A_0-F^{\mu0}F_{\mu0}+\frac{1}{4}F^{\mu0}F_{\mu0}+\frac{1}{4}F^{\mu i}F_{\mu i}+J^\mu A_\mu\,.
+\end{align}
+Tenemos dos partes
+\begin{align}
+  -F^{\mu0}F_{\mu0}+\frac{1}{4}F^{\mu0}F_{\mu0}+\frac{1}{4}F^{\mu i}F_{\mu i}
+  &=-F^{i0}F_{i0}+\frac{1}{4}F^{i0}F_{i0}+\frac{1}{4}\overbrace{F^{0i}F_{0i}}^{\mu=0}+\frac{1}{4}\overbrace{F^{ji}F_{ji}}^{\mu=j}\nonumber\\
+  &=-F^{i0}F_{i0}+\frac{1}{4}F^{i0}F_{i0}+\frac{1}{4}{F^{i0}F_{i0}}+\frac{1}{4}{F^{ji}F_{ji}}\nonumber\\
+  &=-\frac{1}{2}{F^{i0}F_{i0}}+\frac{1}{4}{F^{ji}F_{ji}}\,.
+\end{align}
+Adem\'as
+\begin{align}
+  -F^{0\mu}\partial_\mu A_0+J^\mu A_\mu=&-\partial_\mu(A_0 F^{0\mu})+A_0\partial_\mu F^{0\mu}+J^\mu A_\mu\nonumber\\
+  =&-\partial_\mu(A_0 F^{0\mu})-A_0\partial_\mu F^{\mu0}+J^\mu A_\mu\nonumber\\
+  =&-\partial_\mu(A_0 F^{0\mu})-A_0 J^0+J^\mu A_\mu\nonumber\\
+  =&-\partial_i(A_0 F^{0i})-\mathbf{J}\cdot\mathbf{A}\,.
+\end{align}
+Entonces
+\begin{align}
+  T^0_0&=-\partial_i(A_0F^{0i})-\frac{1}{2}F^{i0}F_{i0}+\frac{1}{4}F^{ji}F_{ji}-\mathbf{J}\cdot\mathbf{A}\nonumber\\
+ &=-\partial_i(A_0F^{0i})+\frac{1}{2}F^{i0}F^{i0}+\frac{1}{4}F^{ji}F^{ji}-\mathbf{J}\cdot\mathbf{A},\qquad\text{suma tambi\'en sobre $i,j$}\nonumber\\
+  &=\frac{1}{2}E^{i}E^{i}+\frac{1}{4}\epsilon_{ijk}B^k\epsilon_{ijl}B^l+\partial_i(A_0E^{i})-\mathbf{J}\cdot\mathbf{A},\qquad\text{suma tambi\'en sobre $i,j$}\nonumber\\
+  &=\frac{1}{2}\mathbf{E}^2+\frac{1}{2}\delta_{kl}B^k B^l+\boldsymbol{\nabla}\cdot(A^0\mathbf{E})-\mathbf{J}\cdot\mathbf{A}\nonumber\\
+  &=\frac{1}{2}\mathbf{E}^2+\frac{1}{2}\mathbf{B}^2+\boldsymbol{\nabla}\cdot(A^0\mathbf{E})-\mathbf{J}\cdot\mathbf{A}
+\end{align}
+
+Entonces, en ausencia de corrientes
+\begin{align}
+  \mathcal{H}=&\frac{1}{2}\mathbf{E}^2+\frac{1}{2}\mathbf{B}^2+\boldsymbol{\nabla}\cdot(A^0\mathbf{E})\,.
+\end{align}
+Similarmente la densidad Lagrangiano puede escribirse como
+\begin{align}
+   \mathcal{L}=-\frac{1}{4}F^{\mu\nu}F_{\mu\nu}=\frac{1}{2}\left(\mathbf{E}^2-\mathbf{B}^2\right)
+\end{align}
+En vista a la ec.~\eqref{eq:17}, ya que la densidad Lagrangiana est\'a definida hasta una derivada total, como $\boldsymbol{\nabla}\cdot(A^0\mathbf{E})=\partial_\mu(A_0F^{\mu0})$, la densidad Hamiltoniana tambi\'en estar\'a definida hasta una derivada total. De hecho,
+el Hamiltoniano es 
+\begin{align}
+  H&=\frac{1}{2}\int_Vd^3x\,(\mathbf{E}^2+\mathbf{B}^2)+ \int_Vd^3x\,\boldsymbol{\nabla}\cdot(A^0\mathbf{E})\nonumber\\
+  \label{eq:18}
+  &=\frac{1}{2}\int_Vd^3x\,(\mathbf{E}^2+\mathbf{B}^2),
+\end{align}
+y corresponde a la expresi\'on conocida para la energ\'\i a del campo electromagn\'etico. Hemos usado el hecho que en ausencia de corrientes todo lo que entra a un volum\'en debe salir y por consiguiente las integrales sobre el volumen de la divergencia de cualquier vector es cero.
+
+Similarmente el momentum total del
+campo, en ausencia de corrientes, corresponde al vector de Pointing:
+%examen
+\begin{align}
+  T^0_i=&\frac{\partial\mathcal{L}}{\partial(\partial_0 A_\nu)}\partial_i A_\nu\nonumber\\
+  =&-F^{0\nu}\partial_i A_\nu\nonumber\\
+  =&-F^{0j}(\partial_i A_j-\partial_j A_i)-F^{0j}\partial_j A_i\nonumber\\
+  =&-F^{0j}F_{ij}-F^{0j}\partial_j A_i\nonumber\\
+  =&-F^{0j}F^{ij}-\partial_j (F^{0j}A_i)+(\partial_jF^{0j}) A_i\nonumber\\
+  =&E^{j}\epsilon_{jik}B^k+\partial_j (E^jA_i)+(J^0) A_i\nonumber\\
+  =&-(\mathbf{E}\times\mathbf{B})^i-\boldsymbol{\nabla}\cdot(A^i\mathbf{E})-\rho A^i\,
+\end{align}
+En ausencia de cargas y corrientes
+
+\begin{align}
+ P^i=-\int_Vd^3x\,T_{i}^0&=\int_Vd^3x\,(\mathbf{E}\times\mathbf{B})^i+\int_Vd^3x\,\boldsymbol{\nabla}\cdot(A^i\mathbf{E})\nonumber\\
+ \label{eq:19}
+ \mathbf{P}&=\int_Vd^3x\,(\mathbf{E}\times\mathbf{B})\,.
+\end{align}
+
+\subsection{Fijaci\'on del gauge}
+\label{sec:fijacion-del-gauge}
+%ver secci\'on 4.4 de Cottingan
+Para obtener una soluci\'on definitiva a las ecuaciones del campo
+electromagn\'etico, se debe remover la arbitrariedad asociada con la
+libertad gauge de la ec.~\eqref{eq:aphicov}. De este modo los campos
+quedan especificados un\'\i vocamente en todas partes. De hecho, de las
+cuatro componentes del campo $A^\mu$, solo dos son independientes y
+corresponden a los estados de polarizaci\'on de las ondas
+electromagn\'eticas~\cite{Gross} (Cap\'\i tulo 2). A \'este proceso se le
+denomina fijar el gauge, y consiste en imponer restricciones sobre los
+campos que fijan la funci\'on  $\chi$ y remueven la libertad gauge. 
+
+Nosotros usaremos el Gauge de Lorentz, definido por la condici\'on
+\begin{equation}
+  \label{eq:20}
+  \partial_\mu A^\mu=0
+\end{equation}
+Si inicialmente $\partial_\mu A^\mu\neq0$, se realiza una transformaci\'on gauge tal
+que $\partial_\mu A'^\mu=0$. De acuerdo a la ec.~\eqref{eq:aphicov}, esto da lugar
+a la ecuaci\'on de onda inhomog\'enea
+\begin{equation*}
+\Box\chi=\partial_\mu A^\mu   
+\end{equation*}
+que puede solucionarse mediante las t\'ecnicas usuales. 
+
+Es importante resaltar que la f\'\i sica queda inafectada por la escogencia
+del gauge. El resultado final para cualquier observable f\'\i sico debe
+ser independiente del gauge usado para calcularlo.
+
+Las ecuaciones de Maxwell \eqref{eq:nohomME2} pueden escribirse como
+\begin{align}
+   \partial_\mu F^{\mu\nu}&=J^\nu\nonumber\\
+  \partial_\mu(\partial^\mu A^\nu-\partial^\nu A^\mu)&=J^\nu\nonumber\\
+  \partial_\mu\partial^\mu A^\nu-\partial_\mu\partial^\nu A^\mu&=J^\nu\nonumber\\
+\label{eq:21}
+  \partial_\mu\partial^\mu A^\nu-\partial^\nu(\partial_\mu A^\mu)&=J^\nu.
+ \end{align}
+
+Apliquemos ahora el gauge de Lorentz, ec.~(\ref{eq:20}) a las
+ecuaciones inhomog\'eneas de Maxwell \eqref{eq:21}
+\begin{equation}
+  \label{eq:22} 
+  \Box A^\nu=\partial_\mu\partial^\mu A^\nu=J^\nu.
+\end{equation}
+De este modo, cada componente del campo $A^\mu$ satisface la ecuaci\'on de
+onda (\ref{eq:waveec}), o la ecuaci\'on de Klein-Gordon (\ref{eq:kg})
+para masa cero. En ausencia de corrientes el campo $A^\mu$ puede ser
+expandido en ondas planas con dos grados independientes de
+polarizaci\'on~\cite{Gross}, de forma similar a como se hizo en la
+secci\'on~\ref{sec:aplicacion-la-cuerda} para el campo $\phi$. Una vez
+cuantizada la teor\'\i a, $A^\mu$ corresponde al fot\'on, y solo queda con dos
+grados de libertad independientes que corresponden a los modos
+transversales de la onda electromagn\'etica~\cite{Gross} (cap\'\i tulo 2).
+
+La ec.~(\ref{eq:lagAmum}), with $J^\mu=0$, en el Gauge de Lorentz puede escribirse como
+\begin{align}
+  \label{eq:laglorgauge}
+  \mathcal{L}=&-\frac{1}{4}F^{\mu\nu}F_{\mu\nu}\nonumber\\
+  =&-\frac{1}{4}(\partial^\mu A^\nu-\partial^\nu A^\mu)(\partial_\mu A_\nu-\partial_\nu A_\mu)\nonumber\\
+  =&-\frac{1}{4}(\partial^\mu A^\nu\partial_\mu A_\nu-\partial^\mu A^\nu\partial_\nu A_\mu-\partial^\nu A^\mu\partial_\mu A_\nu+\partial^\nu A^\mu\partial_\nu A_\mu)\nonumber\\
+  =&-\frac{1}{4}[\partial^\mu A^\nu\partial_\mu A_\nu-\partial^\mu(A^\nu\partial_\nu A_\mu)+A^\nu\partial_\nu(\partial^\mu A_\mu)-\partial^\nu(A^\mu\partial_\mu A_\nu)+A^\mu\partial_\mu(\partial^\nu A_\nu)+\underbrace{\partial^\nu A^\mu\partial_\nu A_\mu}_{\mu\leftrightarrow\nu}]\nonumber\\
+  =&-\frac{1}{4}[2\partial^\mu A^\nu\partial_\mu A_\nu-\partial^\mu(2A^\nu\partial_\nu A_\mu)]\nonumber\\
+  =&-\frac{1}{2}\partial^\mu A^\nu\partial_\mu A_\nu
+\end{align}
+Incluyendo el t\'ermino con corrientes, y usando el hecho de que un signo global no afecta las ecuaciones de movimiento, tenemos
+%to_en:Including the term with currents, and using the fact that a global sign will not affect the motion equations, we have
+\begin{align}
+  \label{eq:laglorgauugefin}
+  \mathcal{L}=&\frac{1}{2}\partial^\mu A^\nu\partial_\mu A_\nu+J_\mu A^\mu
+\end{align}
+
+\section{Ecuaciones de Proca}
+\label{sec:ecuacion-de-proca}
+Consideraremos ahora el efecto de adicionar un t\'ermino de masa a la teor\'\i a de
+Maxwell. Los campos vectoriales masivos juegan un papel importante en
+f\'\i sica. Campos como $W^\mu$, $Z^\mu$ que median las interacciones d\'ebiles
+son ejemplos de campos de este tipo. Las implicaciones de una masa
+finita para el fot\'on pueden inferirse de un conjunto de postulados que
+hacen de las ecuaciones de Proca la \'unica generalizaci\'on posible de
+las ecuaciones de Maxwell \cite{Goldhaber:1971mr}. 
+
+Teniendo en cuenta s\'olo el t\'ermino de masa en la ec.~(\ref{eq:lagAmum})
+\begin{equation}
+  \label{eq:23}
+  \mathcal{L}=-\frac{1}{4}F^{\mu\nu}F_{\mu\nu}+\frac{1}{2}m^2A^\mu A_\mu-J^\mu A_\mu.
+\end{equation}
+Usando las ecuaciones de Euler-Lagrange, tenemos
+\begin{align}
+-\frac{1}{4}\partial_\mu
+  \left[
+\frac{\partial}{\partial(\partial_\mu A_\nu)}F^{\rho\eta}F_{\rho\eta}
+  \right]-
+\frac{\partial}{\partial A_\nu}
+\left(
+\frac{1}{2}m^2A^\rho A_\rho-J^\rho A_\rho
+\right)&=0\nonumber\\
+\label{eq:24}
+\partial_\mu F^{\mu\nu}+m^2A^\nu&=J^\nu.
+\end{align}
+Tomando la cuadridivergencia a ambos lados de la ecuaci\'on y usando la
+ec.~(\ref{eq:21}), tenemos
+\begin{align}
+ &\partial_\nu\partial_\mu\partial^\mu A^\nu-\partial_\nu\partial^\nu\partial_\mu A^\mu+m^2\partial_\nu A^\nu=\partial_\nu J^\nu\nonumber\\
+ &\partial_\nu\partial_\mu\partial^\mu A^\nu-\partial_\mu\partial^\mu\partial_\nu A^\nu+m^2\partial_\nu A^\nu=\partial_\nu J^\nu\nonumber\\
+\label{eq:25}
+ &m^2\partial_\nu A^\nu=\partial_\nu J^\nu
+\end{align}
+De este modo, en ausencia de corrientes, la ecuaciones de Proca dan
+lugar a la condici\'on de Lorentz. De otro lado, si asumimos que la
+corriente se conserva, la condici\'on de Lorentz tambi\'en aparece. Por
+consiguiente, si la masa de campo vectorial es diferente de cero, la
+condici\'on de Lorentz, ec.~(\ref{eq:20}), emerge como una restricci\'on
+adicional que debe ser siempre tomada en cuenta. De este modo la
+libertad gauge de las ecuaciones de Maxwell se pierde completamente en
+la ecuaciones de Proca, que sin perdida de generalidad se pueden
+reescribir, usando $\partial_\mu A^\mu=0$ y las ecs.~(\ref{eq:21}),~(\ref{eq:24}),  como:
+\begin{equation}
+  \label{eq:26}
+   (\Box+m^2)A^\nu=J^\nu
+\end{equation}
+En ausencia de corrientes, cada una de las componentes del campo
+vectorial satisface la ecuaci\'on de Klein-Gordon~(\ref{eq:kg}). Por
+consiguiente $m$ corresponde a la masa del campo vectorial
+$A^\mu$. 
+
+Aplicando la condici\'on de Lorentz a la ec.~(\ref{eq:23}), obtenemos el
+Lagrangiano de la Ecuaci\'on de Proca (\ref{eq:26})
+\begin{equation}
+  \label{eq:27}
+  \mathcal{L}=\frac{1}{2}\partial_\mu A^\nu\partial_\mu A^\nu-\frac{1}{2} m^2A^\nu A_\nu+J^\nu A_\nu,
+\end{equation}
+donde hemos reabsorbido un signo global que no afecta las ecuaciones
+de movimiento. El primer t\'ermino que incluye s\'olo derivadas de los
+campos es llamado \emph{t\'ermino cin\'etico} y dependen s\'olo del esp\'\i n de
+las part\'\i culas. El t\'ermino cuadr\'atico en
+los campos corresponde al \emph{t\'ermino de masa}, y el \'ultimo
+corresponde a la interacci\'on del campo con una corriente. Cuando un
+Lagrangiano contiene s\'olo t\'erminos cin\'eticos y de masa diremos que el
+campo que da lugar al Lagrangiano es libre de interacciones, o
+simplemente que es un \emph{campo libre}. Las otras partes del
+Lagrangiano ser\'an llamadas \emph{Lagrangiano de Interacci\'on}. De este
+modo podemos reescribir el Lagrangiano \eqref{eq:27} como
+\begin{equation*}
+\mathcal{L}=\mathcal{L}_{\text{free}}+\mathcal{L}_{\text{int}},  
+\end{equation*}
+donde,
+\begin{align}
+\mathcal{L}_{\text{free}}&=\frac{1}{2}\partial_\mu A^\nu\partial_\mu A^\nu-\frac{1}{2} m^2A^\nu A_\nu\nonumber\\
+\label{eq:28}
+\mathcal{L}_{\text{int}}&=J^\nu A_\nu.
+\end{align}
+
+Debido a que la teor\'\i a masiva ya no es invariante gauge, la condici\'on
+de Lorentz aparece autom\'aticamente como la \'unica restricci\'on apropiada
+sobre el campo vectorial.
+
+Una vez se toma en cuenta la condici\'on de Lorentz el campo masivo
+libre puede expandirse en ondas planas con tres grados de libertad
+independientes de polarizaci\'on. Dos de estos corresponden a los dos
+estados transversos que aparecen en las ondas electromagn\'eticas
+($A^1$, $A^2$), y el tercero ($A^3$) corresponde a un estado
+longitudinal en la direcci\'on del momento de la part\'\i cula \cite{Gross}.
+
+Aunque hemos hecho el an\'alisis de la ecuaci\'on de Proca permitiendo un
+t\'ermino de masa para el fot\'on, las implicaciones experimentales de una
+teor\'\i a de este tipo dan lugar a restricciones muy fuertes sobre la
+masa del fot\'on\cite{Goldhaber:1971mr}. El l\'\i mite actual sobre la masa
+del fot\'on es $m\lt 6\times10^{-17}\,$eV ($1.1\times10^{-52}\,$Kg)
+\cite{Yao:2006px}. Debido al principio gauge local, desde el punto
+te\'orico se espera que la masa del fot\'on sea exactamente cero. En
+general, los campos vectoriales puede ser generados a partir de otras
+cargas no electromagn\'eticas y pueden ser masivos. El reto durante
+varias d\'ecadas fue entender como las masa de los campos vectoriales de
+la interacci\'on d\'ebil podr\'\i a hacerse compatible con el principio gauge
+local.  
+
+\section{Problemas}
+\label{sec:problemas2}
+\renewcommand{\labelenumi}{\thechapter.\theenumi} %noinstiki
+
+\begin{enumerate} %noinstiki
+\item Muestre que
+  \begin{equation*}
+    {\Lambda^{\mu}}_{\nu}{\Lambda_\mu}^{\rho}={\Lambda_{\mu}}^{\nu}{\Lambda^{\mu}}_{\rho}=\delta^\rho_\nu
+  \end{equation*}
+Compruebe esta identidad para la transformaci\'on de Lorentz de la ec.~\eqref{eq:147}
+\label{item:pch2.1} %noinstiki
+
+\item Muestre que el Lagrangiano electromagn\'etico en ausencia de corrientes
+  \begin{equation}
+    \mathcal{L}=-\frac{1}{4}F^{\mu\nu}F_{\mu\nu}=\frac{1}{2}\left(\mathbf{E}^2-\mathbf{B}^2\right)
+  \end{equation}
+\label{item:pch2.2} %noinstiki
+
+\item Calcule el rango de la interacci\'on d\'ebil mediada por la part\'\i cula $W^{-}$ de masa
+  \begin{equation}
+    m_W\approx80\;GeV
+  \end{equation}
+\label{item:pch2.3} %noinstiki
+\end{enumerate} %noinstiki
+\renewcommand{\labelenumi}{\theenumi} %noinstiki
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: "fullnotes"
+%%% End: 
+

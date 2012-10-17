@@ -1,0 +1,65 @@
+\documentclass[12pt]{book}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage[colorlinks=true]{hyperref}
+\usepackage{graphicx}
+\graphicspath{{figures/}}
+\usepackage[spanish]{babel}
+\spanishdecimal{.}
+\addto\captionsspanish{%
+\def\tablename{Tabla}%
+}
+
+\usepackage{bm}
+\setlength{\textheight}{235mm}
+\setlength{\textwidth}{180mm}
+\setlength{\oddsidemargin}{-1cm}
+\setlength{\evensidemargin}{-1cm}
+\setlength{\topmargin}{-40pt}
+\def\lt{<} % compatibility with instiki
+\def\gt{>} % compatibility with instiki
+\newtheoremstyle{example}{\topsep}{\topsep}%
+     {}%         Body font
+     {}%         Indent amount (empty = no indent, \parindent = para indent)
+     {\bfseries}% Thm head font
+     {}%        Punctuation after thm head
+     {\newline}%     Space after thm head (\newline = linebreak)
+     {\thmname{#1}\thmnumber{ #2}\thmnote{ #3}}%         Thm head spec
+
+   \theoremstyle{example}
+   \newtheorem{example}{Example}[subsection]
+%%comment the aproppiate line
+\newcommand{\tofc}[1]{#1} % if full
+%\renewcommand{\tofc}[1]{} %if  \includeonly{chapter1}
+%\includeonly{chapter6}
+\begin{document}
+\tofc{
+\renewcommand{\thepage}{\roman{page}}
+\tableofcontents{}
+
+\newpage{}
+}
+
+\renewcommand{\thepage}{\arabic{page}}
+\setcounter{page}{1}
+%\include{informeDE}
+\include{intro}
+%check x-symbol:
+%$x^2$
+\include{chapter1}
+\include{chapter2}
+\include{chapter3}
+\include{chapter4}
+\include{chapter5}
+\include{chapter6}
+\include{appendix}
+\include{bibliography}
+
+\end{document}
+
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: "fullnotes"
+%%% End: 
