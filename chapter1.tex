@@ -834,7 +834,12 @@ da lugar a las ecuaciones de continuidad (\ref{eq:122})(\ref{eq:235})
   \partial_\mu T^\mu_0&=0,\nonumber\\
 \partial_\mu{T}^\mu_i&=0
 \end{align}
-Las cargas conservadas corresponden entonces a $T^0_0$ y $T^0_i$.
+Las cargas conservadas se pueden obtener de las densidades de carga
+$T^0_0$ y $T^0_i$. 
+
+\subsection{Conservación del moméntum}
+Comencemos con las densidades de carga asociadas a
+la conservación del moméntum lineal.
 Usando  las ecs.~(\ref{eq:136}) en la ec.~(\ref{eq:138})
 \begin{align}
   T^0_i=&\frac{\partial\mathcal{L}}{\partial(\partial_0\psi)}(\partial_i\psi)
@@ -848,12 +853,13 @@ Entonces, definiendo
     \psi\boldsymbol{\nabla}\psi^*-\psi^*\boldsymbol{\nabla}\psi
   \right)
 \end{equation}
-Adem\'as
+Procedemos ahora a reemplazar $\psi\boldsymbol{\nabla}\psi^*$ por la
+derivada total
 \begin{align}
  \mathbf{T}^0&=\frac{i}{2}
-  \left(
-    \boldsymbol{\nabla}(\psi^*\psi)-\psi^*\boldsymbol{\nabla}\psi-\psi^*\boldsymbol{\nabla}\psi
-  \right)\nonumber\\
+  \left[\left( 
+    \boldsymbol{\nabla}(\psi^*\psi)-\psi^*\boldsymbol{\nabla}\psi \right)-\psi^*\boldsymbol{\nabla}\psi
+  \right]\nonumber\\
 &=-i\psi^*\boldsymbol{\nabla}\psi+\frac{i}{2}\boldsymbol{\nabla}(\psi^*\psi)\,.
 \end{align}
 Integrando en el volumen
@@ -870,6 +876,12 @@ De modo que $\langle\widehat{\mathbf{p}}\rangle$ son las cargas conservadas asoc
 \begin{equation}
   \widehat{\mathbf{p}}=-i\boldsymbol{\nabla}\,.
 \end{equation}
+En general, el valor esperado de un operador $ \widehat{\cal O}$, se define en mecánica cuántica como
+\begin{align*}
+  \langle\widehat{\cal O}\rangle=\int_V d^3x\,\psi^{*}\widehat{\cal O}\psi\,.
+\end{align*}
+
+\subsection{Conservación de la energía}
 De otro lado
 \begin{align}
   T^0_0&=\frac{\partial\mathcal{L}}{\partial(\partial_0\psi)}{\partial_0\psi}+{\partial_0\psi^*}\frac{\partial\mathcal{L}}{\partial(\partial_0\psi^*)}-\mathcal{L}\nonumber\\
