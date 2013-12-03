@@ -941,6 +941,191 @@ la condici\'on de normalizaci\'on en ec.~\eqref{eq:57} implica que $|A|^2=1/L^3$
 \item[\textbf{Ejercicio:}]  De la ec.~(\ref{eq:141}) obtenega la densidad Hamiltoniana, y usando la ec.~(\ref{eq:3}) encontrar la densidad Lagrangiana~\eqref{eq:5}.
 \end{itemize}
 
+\section{Ecuación de Scrödinger en presencia de un campo electromagnético}
+
+The expansion of the Lagrangian in terms of the field $\psi$, $\psi^*$, and $A_\mu$ is 
+\begin{align}
+\label{eq:178qft}
+   \mathcal{L}
+=&\frac{1}{2m}\sum_i\left(\partial_i\psi+i q A_i\psi\right)^*\left(\partial_i\psi+i q A_i\psi\right)-\frac{i}{2}
+  \left[\psi^*\left(\partial_0\psi+i q A_0\psi\right)-\left(\partial_0\psi+i q A_0\psi\right)^*\psi\right] 
+\nonumber\\
+=&\frac{1}{2m}\sum_i\left(\partial_i\psi^*-i q A_i\psi^*\right)\left(\partial_i\psi+i q A_i\psi\right)-\frac{i}{2}
+  \left[\psi^*\left(\partial_0\psi+i q A_0\psi\right)-\left(\partial_0\psi^*-i q A_0\psi^*\right)\psi\right]
+\nonumber\\
+ =&\frac{1}{2m}\sum_i\left(\partial_i\psi^*\partial_i\psi-i q \psi^*A_i\partial_i\psi+i q \partial_i\psi^*A_i\psi+q^2A_i A_i \psi^*\psi\right)\nonumber\\
+ &-\frac{i}{2}
+  \left[\psi^*\partial_0\psi+i q \psi^*A_0\psi-(\partial_0\psi^*)\psi+i q A_0\psi^*\psi\right]\nonumber\\
+ =&\frac{1}{2m}\sum_i\left(\partial_i\psi^*\partial_i\psi-i q \psi^*A_i\partial_i\psi+i q \partial_i\psi^*A_i\psi+q^2A_i A_i \psi^*\psi\right)\nonumber\\
+ &-\frac{i}{2}
+  \left[\psi^*\partial_0\psi-(\partial_0\psi^*)\psi+2 i q \psi^*A_0\psi\right]\,.
+ \end{align}
+
+By using the sum convention upon repeated indices we have
+\begin{align}
+  \mathcal{L}=&-\frac{1}{2m}\left(\partial_i\psi^*\partial^i\psi-i q \psi^*A^i\partial_i\psi+i q \partial_i\psi^*A^i\psi+q^2A_i A^i \psi^*\psi\right)\nonumber\\
+ &-\frac{i}{2}
+  \left[\psi^*\partial_0\psi-(\partial_0\psi^*)\psi+2 i q \psi^*A_0\psi\right].
+ \end{align}
+
+From this we can obtain the Euler-Lagrange equation for each field.
+\subsection{Euler-Lagrange equation for $\psi^*$}
+In particular for $\psi^*$ we have
+\begin{align}
+  \partial_\mu\left[\frac{\partial\mathcal{L}}{\partial(\partial_\mu\psi^*)}\right]-\frac{\partial\mathcal{L}}{\partial\psi^*}=&0\nonumber\\
+  \partial_0\left[\frac{\partial\mathcal{L}}{\partial(\partial_0\psi^*)}\right]+\partial_i\left[\frac{\partial\mathcal{L}}{\partial(\partial_i\psi^*)}\right]-\frac{\partial\mathcal{L}}{\partial\psi^*}=&0\nonumber\\
+  \frac{i}{2}\partial_0\psi-\frac{1}{2m}\partial_i\left[\partial^i\psi+i q A^i\psi\right]
+-\left[-\frac{1}{2m}\left(-i q A_i\partial^i\psi+q^2A_iA^i\psi\right)
+-\frac{i}{2}\left(\partial_0\psi+2 i q A_0\psi\right)\right]=&0\nonumber\\
+  i\partial_0\psi-q A_0\psi-\frac{1}{2m}\left[\partial_i\left(\partial^i\psi+i q A^i\psi\right)
++i q A_i\left(\partial^i\psi+i q A^i\psi\right)\right]
+=&0\nonumber\\
+  i(\partial_0+i q A_0)\psi-\frac{1}{2m}(\partial_i+i q A_i)(\partial^i\psi+i q A^i\psi)
+=&0\nonumber\\
+   i\mathcal{D}_0\psi
+  +\frac{1}{2m}\sum_i\mathcal{D}_i\mathcal{D}_i\psi=&0\,,
+\end{align}
+
+If we define
+\begin{align}
+  \boldsymbol{\mathcal{D}}\equiv\boldsymbol{\nabla}-i q \mathbf{A}\,.
+\end{align}
+we have in components:
+\begin{align}
+    \boldsymbol{\mathcal{D}}_i=\partial_i-i q A^i\nonumber\\
+    \boldsymbol{\mathcal{D}}_i=\partial_i+i q A_i\,.
+\end{align}
+
+Then we have the new wave equation:
+\begin{align}
+  i\mathcal{D}_0\psi=&-\frac{1}{2m}\boldsymbol{\mathcal{D}}\cdot\boldsymbol{\mathcal{D}}\psi\nonumber\\
+i\mathcal{D}_0\psi=&-\frac{1}{2m}\boldsymbol{\mathcal{D}}^2\psi\,,
+\end{align}
+
+que corresponde a la ecuación de Scrödinger con la derivada normal reemplazada por la derivada covariante.
+
+
+
+Expandiendo esta ecuación tenemos 
+\begin{align}
+\label{eq:175qft}
+   i\left(\frac{\partial}{\partial t}+iqA_0\right)\psi
+&=-\frac{1}{2m}\sum_i(\partial_i+i q A_i)^2\psi\nonumber\\
+   \left(i\frac{\partial}{\partial t}-qA_0\right)\psi
+ &=-\frac{1}{2m}\sum_i(\partial_i-i q A^i)^2\psi\nonumber\\
+   \left(i\frac{\partial}{\partial t}-q\phi\right)\psi
+&=-\frac{1}{2m}(\boldsymbol{\nabla}-i q \mathbf{A})^2\psi\nonumber\\
+   \left(\widehat{H}-q\phi\right)\psi
+&=-\frac{-i^2}{2m}(\boldsymbol{\nabla}-i q \mathbf{A})^2\psi\nonumber\\
+&=\frac{1}{2m}(i\boldsymbol{\nabla}+ q \mathbf{A})^2\psi\nonumber\\
+&=\frac{1}{2m}(-i\boldsymbol{\nabla}- q \mathbf{A})^2\psi\nonumber\\
+&=\frac{1}{2m}(\widehat{\mathbf{p}}- q \mathbf{A})^2\psi\,.
+\end{align}
+In this way, the Scrödinger equation in presence of the electromagnetic field, can be obtained from the original Scrödinger equation but with the \emph{minimum substitution}:
+\begin{align}
+  \widehat{H}\to& \widehat{H}-q\phi & \widehat{\mathbf{p}}\to&\widehat{\mathbf{p}}-q\mathbf{A}\,.
+\end{align}
+
+
+
+De la ecuación (\ref{eq:175qft}) podemos obtener la ecuación de Schödinger en presencia de un campo electromagnético
+\begin{align}
+\label{eq:176qft}
+ i\frac{\partial}{\partial t}\psi&=\left[\frac{1}{2m}(-i\mathbf{\nabla}-q\mathbf{A})^2+qA_0\right]\psi\,.
+\end{align}
+ Para que la mecánica cuántica sea consistente con las ecuaciones de Maxwell es necesario que las transformaciones gauge (\ref{eq:159qft}) de los potenciales de Maxwell estén acompañados por una transformación de la función de onda, $\psi\to\psi'$, donde $\psi'$ satisface la ecuación
+\begin{align}
+  \label{eq:160qft}
+   i{\mathcal{D}'}^0\psi'&=-\frac{1}{2m}{\boldsymbol{\mathcal{D}}'}^2\psi'\nonumber\\
+ i\frac{\partial}{\partial t}\psi'&=\left[\frac{1}{2m}(-i\mathbf{\nabla}-q\mathbf{A}')^2+q{A'}_0\right]\psi'\,.
+\end{align}
+Como la forma de la ecuación (\ref{eq:160qft}) es exactamente la misma que la forma de~\eqref{eq:176qft} entonces ambas describen la misma física. Se dice que  la ec.~\eqref{eq:176qft} es covariante gauge, lo que significa que mantiene la misma forma bajo una transformación gauge. 
+
+\begin{itemize}
+\item \textbf{Ejemplo:}\\ 
+Demuestre que la ec.~\eqref{eq:160qft} es covariante:
+
+
+
+Como 
+\begin{align}
+  \psi\to \psi'=e^{i\theta(x)}\psi
+\end{align}
+Entonces
+\begin{align}
+  \boldsymbol{\mathcal{D}}'\psi'&=\left[(\boldsymbol{\nabla}-iq\mathbf{A})-i\boldsymbol{\nabla}\theta\right]e^{i\theta(x)}\psi\nonumber\\
+  &=i(\boldsymbol{\nabla}\theta)e^{i\theta(x)}\psi+e^{i\theta(x)}\boldsymbol{\nabla}\psi-iq\mathbf{A}e^{i\theta(x)}\psi-i(\boldsymbol{\nabla}\theta) e^{i\theta(x)}\psi\nonumber\\
+  &=e^{i\theta(x)}(\boldsymbol{\nabla}-iq\mathbf{A})\psi\nonumber\\
+  &=e^{i\theta(x)}(\boldsymbol{\mathcal{D}}\psi)
+\end{align}
+y
+\begin{align}
+  {\boldsymbol{\mathcal{D}}'}^2\psi'&=\boldsymbol{\mathcal{D}}'(\boldsymbol{\mathcal{D}}'\psi')\nonumber\\
+  &=\left[(\boldsymbol{\nabla}-iq\mathbf{A})-i\boldsymbol{\nabla}\theta\right]e^{i\theta(x)}(\boldsymbol{\mathcal{D}}\psi)\nonumber\\
+  &=i(\boldsymbol{\nabla}\theta)e^{i\theta(x)}(\boldsymbol{\mathcal{D}}\psi)+e^{i\theta(x)}\boldsymbol{\nabla}(\boldsymbol{\mathcal{D}}\psi)
+  -iq\mathbf{A}e^{i\theta(x)}(\boldsymbol{\mathcal{D}}\psi)-i\boldsymbol{\nabla}\theta e^{i\theta(x)}(\boldsymbol{\mathcal{D}}\psi)\nonumber\\
+  &=e^{i\theta(x)}(\boldsymbol{\nabla}-iq\mathbf{A})(\boldsymbol{\mathcal{D}}\psi)\nonumber\\
+  &=e^{i\theta(x)}(\boldsymbol{\mathcal{D}}^2\psi)
+\end{align}
+
+De la misma manera
+\begin{equation}
+  {\mathcal{D}'}^0\psi'=e^{i\theta(x)}(\mathcal{D}^0\psi)
+\end{equation}
+De modo que
+\begin{equation}
+  \mathcal{D}^\mu\psi\to {\mathcal{D}'}^\mu\psi'=e^{i\theta(x)}(\mathcal{D}^\mu\psi)
+\end{equation}
+y la derivada covariante del campo transforma como el campo. Tenemos entonces que 
+\begin{align}
+  \label{eq:225qft}
+     i{\mathcal{D}'}^0\psi'&=-\frac{1}{2m}{\boldsymbol{\mathcal{D}}'}^2\psi'\nonumber\\
+     ie^{i\theta(x)}{\mathcal{D}}^0\psi&=-\frac{1}{2m}e^{i\theta(x)}{\boldsymbol{\mathcal{D}}}^2\psi\nonumber\\
+     i{\mathcal{D}}^0\psi&=-\frac{1}{2m}{\boldsymbol{\mathcal{D}}}^2\psi
+\end{align}
+\end{itemize}
+
+En resumen, para 
+\begin{equation}
+  \mathcal{D}^\mu=\partial^\mu+iqA^\mu
+\end{equation}
+y reemplazando $\theta\to q\theta$ tenemos
+\begin{align}
+   A^\mu&\to{A^\mu}'=A^\mu-\partial^\mu\theta(x)\nonumber\\
+   \psi&\to \psi'=e^{iq\theta(x)}\psi\nonumber\\
+  \mathcal{D}^\mu\psi&\to {\mathcal{D}'}^\mu\psi'=e^{iq\theta(x)}(\mathcal{D}^\mu\psi)\,.
+\end{align}
+En esta convención $q$ corresponde al \emph{generador} de la transformación y $\theta$ al parámetro de la transformación.
+%\left(\right)
+
+
+\subsection{Conserved currents}
+The 4-current can be obtained directly from the Noether's Theorem:
+
+\begin{align}
+  J^\mu=&\frac{\partial\mathcal{L}}{\partial_\mu\psi}\delta\psi+\delta\psi^*\frac{\partial\mathcal{L}}{\partial_\mu\psi^*}\nonumber\\
+=&\begin{cases}
+  \frac{\partial\mathcal{L}}{\partial_0\psi}\delta\psi+\delta\psi^*\frac{\partial\mathcal{L}}{\partial_0\psi^*}&\mu=0\\
+  \frac{\partial\mathcal{L}}{\partial_i\psi}\delta\psi+\delta\psi^*\frac{\partial\mathcal{L}}{\partial_i\psi^*}&\mu=i
+\end{cases}.
+\end{align}
+
+\begin{align}
+  J^0=&-\frac{i}{2}\psi^*(iq\theta)\psi-iq\theta\psi^*\frac{i}{2}\psi\nonumber\\
+  =&q\theta\psi^*\psi\,,
+\end{align}
+\begin{align}
+  J^i=&\frac{1}{2m}\left[\left(\partial_i-iqA_i\right)\psi^*iq\theta\psi-iq\theta\psi^*\left(\partial_i+iqA_i\right)\psi\right]\nonumber\\
+  J^i=&\frac{iq\theta}{2m}\left[\left(\mathcal{D}_i\psi\right)^*\psi-\psi^*\left(\mathcal{D}_i\psi\right)\right]\,.
+  \end{align}
+
+When $\theta$ is fixed to 1 as in ec.~\eqref{eq:135qft} to define the probability, we get eq.~\eqref{eq:85qft}.
+
+It is worth to notice that for $T^0_0$, and $T^0_i$ we should obtain
+\begin{align}
+  \widehat{H}=& i\frac{\partial}{\partial t}-q\phi & \widehat{\mathbf{p}}=&-i\boldsymbol{\nabla}-q\mathbf{A}\,.
+\end{align}
+
 
 
 \section{Invarianza de fase local del Lagrangiano de  Scrödinger's}
