@@ -941,6 +941,125 @@ la condici\'on de normalizaci\'on en ec.~\eqref{eq:57} implica que $|A|^2=1/L^3$
 \item[\textbf{Ejercicio:}]  De la ec.~(\ref{eq:141}) obtenega la densidad Hamiltoniana, y usando la ec.~(\ref{eq:3}) encontrar la densidad Lagrangiana~\eqref{eq:5}.
 \end{itemize}
 
+
+\section{Invarianza de fase local del Lagrangiano de  Scrödinger's}
+
+%Trasladar el material de sección 3.4 aquí. 
+
+When we discuss the wave function $\psi(x)$, $x$ represents the point in space at which we want to know the value of the wave function. Since complex numbers are, well, complex, you can't represent them by a position on a simple number line. Instead, the have to be represented by a point in a two--dimensional plot. 
+
+In addition the length of the arrow pointing to the complex number we also need an angle to specify exactly how to draw the arrow pointing to the complex number. The observable is encoded into the length of the arrow representing the value of the complex valued wave function at that point of the space--time. Its angle is unobservable.
+
+The complex number $\psi(x)$ in the Scrödinger equation is just the number whose square is the relative probability of finding the object at that point.
+
+Now, suppose that you arbitrarily decide to make a change of phase of the wave function --to change, at every point in space, the angle $\theta$ of the complex number $\psi$ makes with the real axis. Here is the critical point: Is this change phase is \emph{global}, if the phase that you change the phase angle $\theta$ is the same everywhere in space, the this change of phase will not destroy the delicate and essential balance between the kinetic and potential energy in the Scrödinger equation.
+
+However, in the view implemented by Einstein's relativity, the need to require that quantum--mechanical systems be unaltered only by global changes of phase seemed to be very unnatural. Once you choose the phase of the wave function at one space-time point, the requirement of global phase invariance fixes it at all other space-time points:
+
+
+  \begin{quote}
+\small
+    As usually conceived however, this arbitrariness is subject to the following  limitation: once one choose [the phase of the wave function] at one space--time point, one is then not free to make any choices at other space--time points.
+
+It seems that it is not consistent with the localized field concept that underlies the usual physical theories. In the present paper we wish to explore the possibility of requiring all the interactions to be invariant under independent [change of phases] at all space-time points.
+  \end{quote}
+  \begin{flushright}
+    Yang-Mills, \emph{Physical Review}, 1954
+  \end{flushright}
+
+This is similar to what happens in electromagnetic theory expressed in terms of scalar and vector potentials. The can be changed by arbitrary functions in a such way that the measured electric and magnetic fields remain invariant. As we will see, this feature is deeply connected with the local conservation of electric charge. 
+
+We start again with the Scrödinger Lagrangian as written in eq.~\eqref{eq:5qft}: but without the interaction term
+
+\begin{align}
+  \mathcal{L}(\psi,\psi^*,\partial_\mu\psi,\partial_\mu\psi^*)&=\frac{1}{2m}\boldsymbol{\nabla}\psi^*\cdot\boldsymbol{\nabla}\psi-\frac{i}{2}
+  \left(
+\psi^*\frac{\partial\psi}{\partial t}-\frac{\partial\psi^*}{\partial t}\psi
+  \right)+\cancel{\psi^*V\psi}\\
+\mathcal{L}_{\text{free}}&=\frac{1}{2m}\partial_i\psi^*\partial_i\psi-\frac{i}{2}
+  \left(\psi^*\partial_0\psi-\partial_0\psi^*\psi\right).\nonumber
+\end{align}
+This Lagrangian is not invariant under local phase changes of the wave function: 
+\begin{align}
+  \partial_\mu \psi\to\partial_\mu \psi'=&\partial_\mu \left(e^{i\theta(x)}\psi\right)\nonumber\\
+  =&\left(\partial_\mu e^{i\theta(x)}\right)\psi+e^{i\theta(x)}\partial_\mu\psi\nonumber\\
+  =&e^{i\theta(x)}\left(i\partial_\mu \theta(x)\right)\psi+e^{i\theta(x)}\partial_\mu\psi\nonumber\\
+  =&e^{i\theta(x)}\left[i\partial_\mu \theta(x)+\partial_\mu\right]\psi\,.
+\end{align}
+In order to have a new Lagrangian invariant under local phase changes, or local gauge transformations, we need to introduce a new term to compensate for the term arising from the derivate of $e^{i\theta(x)}$:
+\begin{align}
+\label{eq:165qft}
+   \mathcal{D}_\mu \psi\to\mathcal{D}_\mu' \psi'=&(\partial_\mu+X'_\mu) \left(e^{i\theta(x)}\psi\right)\nonumber\\
+   =&e^{i\theta(x)}\left[i\partial_\mu \theta(x)+\partial_\mu\right]\psi+X'_\mu \left(e^{i\theta(x)}\psi\right)\nonumber\\
+   =&e^{i\theta(x)}\left[i\partial_\mu \theta(x)+\partial_\mu+X'_\mu \right]\psi\,.
+\end{align}
+The transformation condition of the new term $X_\mu$, in order to compensate for the term arising from the derivative of the local phase, $i\partial_\mu\theta(x)$, is just that
+\begin{align}
+\label{eq:169qft}
+X_\mu\to  X'_\mu=X_\mu-i\partial_\mu\theta(x)\,.
+\end{align}
+Replacing back in Eq.~\eqref{eq:165qft} we have
+\begin{align}
+    \mathcal{D}_\mu \psi\to\left(\mathcal{D}_\mu \psi\right)'=\mathcal{D}_\mu' \psi'=&(\partial_\mu+X'_\mu) \left(e^{i\theta(x)}\psi\right)\nonumber\\
+=&e^{i\theta(x)}\left[i\partial_\mu \theta(x)+\partial_\mu+X_\mu-i\partial_\mu\theta(x) \right]\psi\nonumber\\
+=&e^{i\theta(x)}\left[\partial_\mu+X_\mu\right]\psi\nonumber\\
+=&e^{i\theta(x)}\left(\mathcal{D}_\mu\psi\right)\,.
+\end{align}
+Note that $\mathcal{D}_\mu\psi$ transforms like the field $\psi$, and because of this is called the \emph{covariant derivative} of $\psi$.
+Similarly
+\begin{align}
+    (\mathcal{D}_\mu \psi)^*\to{\left(\mathcal{D}_\mu \psi\right)'}^*=&(\partial_\mu+{X'_\mu}^*) \left(\psi^*e^{-i\theta(x)}\right)\nonumber\\
+=&\left[-i\partial_\mu \theta(x)+\partial_\mu+X_\mu^*+i\partial_\mu\theta(x) \right]\psi^*e^{-i\theta(x)}\nonumber\\
+=&\left[\partial_\mu+X_\mu^*\right]\psi^*e^{-i\theta(x)}\nonumber\\
+=&\left(\mathcal{D}_\mu\psi\right)^*e^{-i\theta(x)}\,.
+\end{align}
+
+It is convenient to redefine $X_\mu$ in terms of $A_\mu$:
+\begin{align}
+  A_\mu\equiv\frac{1}{i q}X_\mu\,,
+\end{align}
+such that the covariant derivative can be conveniently written as
+\begin{align}
+\label{eq:170qft}
+  \mathcal{D}_\mu=\partial_\mu+i q A_\mu\,.
+\end{align}
+The transformation properties of $A_\mu$ can be obtained from the $X_\mu$ transformation in eq.~\eqref{eq:169qft}: 
+\begin{align}
+\label{eq:159qft}
+ i q A_\mu\to& i q A_\mu'=i q A_\mu-i \partial_\mu\theta(x)\nonumber\\
+  A_\mu\to&  A_\mu'= A_\mu-\frac{1}{q} \partial_\mu\theta(x)\,.
+\end{align}
+
+
+We define \emph{local gauge invariance} as an arbitrary way of choosing the complex phase factor of a charged field\footnote{like the electron field as described by the usual Scrödinger equation.} at all space time points.
+
+In this way, we can change the original Lagrangian for a new one which is invariant under local phase transformations:
+\begin{align}
+   \mathcal{L}(\psi,\psi^*,\partial_\mu\psi,\partial_\mu\psi^*,A_\mu)
+=\frac{1}{2m}\left(\mathcal{D}_i\psi\right)^*\mathcal{D}_i\psi-\frac{i}{2}
+  \left[\psi^*\mathcal{D}_0\psi-\left(\mathcal{D}_0\psi\right)^*\psi\right].
+\end{align}
+where
+\begin{align}
+\label{eq:167qft}
+  A_\mu\to A'_\mu=A_\mu-\frac{1}{q}\partial_\mu\theta(x)\,.
+\end{align}
+This is just the gauge transformation which left the Electromagnetic fields invariant. In fact, the new Lagrangian is now invariant under the local phase transformations
+\begin{align}
+  \mathcal{L}\to \mathcal{L}'=&
+\frac{1}{2m}{\left(\mathcal{D}_i\psi\right)'}^*\left(\mathcal{D}_i\psi\right)'
+-\frac{i}{2}\left[{\psi'}^*\left(\mathcal{D}_0\psi\right)'-{\left(\mathcal{D}_0\psi\right)'}^*\psi'\right]\nonumber\\
+=&
+\frac{1}{2m}{\left(\mathcal{D}_i\psi\right)}^*e^{-i\theta(x)}e^{i\theta(x)}\left(\mathcal{D}_i\psi\right)\nonumber\\
+&-\frac{i}{2}\left[{\psi}^*e^{-i\theta(x)}e^{i\theta(x)}\left(\mathcal{D}_0\psi\right)
+-{\left(\mathcal{D}_0\psi\right)}^*e^{-i\theta(x)}e^{i\theta(x)}\psi\right].\nonumber\\
+=&\mathcal{L}\,.
+\end{align}
+
+To preserve invariance one notices that it is necessary to counteract the variation of $\theta$ with $x$, $y$, $z$, and $t$ by introducing the electromagnetic field $A_\mu$. In this way, the electromagnetic interaction is obtained as the result of impose local gauge invariance under $U(1)$ (local phase transformations). To fully implement the gauge principle, i.e, the paradigm to obtain the interactions as the result of the gauge invariance, we need to introduce some concepts of special relativity to be developed below.
+
+
+
 \section{Ecuación de Scrödinger en presencia de un campo electromagnético}
 
 The expansion of the Lagrangian in terms of the field $\psi$, $\psi^*$, and $A_\mu$ is 
@@ -961,9 +1080,9 @@ The expansion of the Lagrangian in terms of the field $\psi$, $\psi^*$, and $A_\
   \left[\psi^*\partial_0\psi-(\partial_0\psi^*)\psi+2 i q \psi^*A_0\psi\right]\,.
  \end{align}
 
-By using the sum convention upon repeated indices we have
+Then we have
 \begin{align}
-  \mathcal{L}=&-\frac{1}{2m}\left(\partial_i\psi^*\partial^i\psi-i q \psi^*A^i\partial_i\psi+i q \partial_i\psi^*A^i\psi+q^2A_i A^i \psi^*\psi\right)\nonumber\\
+  \mathcal{L}=&-\frac{1}{2m}\sum_i\left(\partial_i\psi^*\partial_i\psi-i q \psi^*A_i\partial_i\psi+i q \partial_i\psi^*A^i\psi+q^2A_i A_i \psi^*\psi\right)\nonumber\\
  &-\frac{i}{2}
   \left[\psi^*\partial_0\psi-(\partial_0\psi^*)\psi+2 i q \psi^*A_0\psi\right].
  \end{align}
@@ -1126,124 +1245,9 @@ It is worth to notice that for $T^0_0$, and $T^0_i$ we should obtain
   \widehat{H}=& i\frac{\partial}{\partial t}-q\phi & \widehat{\mathbf{p}}=&-i\boldsymbol{\nabla}-q\mathbf{A}\,.
 \end{align}
 
+The approach to change the Action for a new one invariant under local phase  transformations, is that the electron cannot be longer considered as an isolated \emph{naked} particle. The electron must be always surrounded by some cloud of virtual particles associated with the electromagnetic field in order to guarantee the conservation of the energy and momentum of the system. In general the wave function of the electron can be represented as the exponential of $iEt$ and $i \mathbf{p}\cdot \mathbf{x}$, so that a local phase transformation will change the energy $E$ and the momentum $\mathbf{p}$ of the electron. This changes must be compensated with the corresponding changes in $A_{\mu}$.
 
-
-\section{Invarianza de fase local del Lagrangiano de  Scrödinger's}
-
-%Trasladar el material de sección 3.4 aquí. 
-
-When we discuss the wave function $\psi(x)$, $x$ represents the point in space at which we want to know the value of the wave function. Since complex numbers are, well, complex, you can't represent them by a position on a simple number line. Instead, the have to be represented by a point in a two--dimensional plot. 
-
-In addition the length of the arrow pointing to the complex number we also need an angle to specify exactly how to draw the arrow pointing to the complex number. The observable is encoded into the length of the arrow representing the value of the complex valued wave function at that point of the space--time. Its angle is unobservable.
-
-The complex number $\psi(x)$ in the Scrödinger equation is just the number whose square is the relative probability of finding the object at that point.
-
-Now, suppose that you arbitrarily decide to make a change of phase of the wave function --to change, at every point in space, the angle $\theta$ of the complex number $\psi$ makes with the real axis. Here is the critical point: Is this change phase is \emph{global}, if the phase that you change the phase angle $\theta$ is the same everywhere in space, the this change of phase will not destroy the delicate and essential balance between the kinetic and potential energy in the Scrödinger equation.
-
-However, in the view implemented by Einstein's relativity, the need to require that quantum--mechanical systems be unaltered only by global changes of phase seemed to be very unnatural. Once you choose the phase of the wave function at one space-time point, the requirement of global phase invariance fixes it at all other space-time points:
-
-
-  \begin{quote}
-\small
-    As usually conceived however, this arbitrariness is subject to the following  limitation: once one choose [the phase of the wave function] at one space--time point, one is then not free to make any choices at other space--time points.
-
-It seems that it is not consistent with the localized field concept that underlies the usual physical theories. In the present paper we wish to explore the possibility of requiring all the interactions to be invariant under independent [change of phases] at all space-time points.
-  \end{quote}
-  \begin{flushright}
-    Yang-Mills, \emph{Physical Review}, 1954
-  \end{flushright}
-
-This is similar to what happens in electromagnetic theory expressed in terms of scalar and vector potentials. The can be changed by arbitrary functions in a such way that the measured electric and magnetic fields remain invariant. As we will see, this feature is deeply connected with the local conservation of electric charge. 
-
-We start again with the Scrödinger Lagrangian as written in eq.~\eqref{eq:5qft}:
-
-\begin{align}
-  \mathcal{L}(\psi,\psi^*,\partial_\mu\psi,\partial_\mu\psi^*)&=\frac{1}{2m}\boldsymbol{\nabla}\psi^*\cdot\boldsymbol{\nabla}\psi-\frac{i}{2}
-  \left(
-\psi^*\frac{\partial\psi}{\partial t}-\frac{\partial\psi^*}{\partial t}\psi
-  \right)+\psi^*V\psi\\
-&=\frac{1}{2m}\partial_i\psi^*\partial_i\psi-\frac{i}{2}
-  \left(\psi^*\partial_0\psi-\partial_0\psi^*\psi\right)+\psi^*V\psi.\nonumber
-\end{align}
-This Lagrangian is not invariant under local phase changes of the wave function: 
-\begin{align}
-  \partial_\mu \psi\to\partial_\mu \psi'=&\partial_\mu \left(e^{i\theta(x)}\psi\right)\nonumber\\
-  =&\left(\partial_\mu e^{i\theta(x)}\right)\psi+e^{i\theta(x)}\partial_\mu\psi\nonumber\\
-  =&e^{i\theta(x)}\left(i\partial_\mu \theta(x)\right)\psi+e^{i\theta(x)}\partial_\mu\psi\nonumber\\
-  =&e^{i\theta(x)}\left[i\partial_\mu \theta(x)+\partial_\mu\right]\psi\,.
-\end{align}
-In order to have a new Lagrangian invariant under local phase changes, or local gauge transformations, we need to introduce a new term to compensate for the term arising from the derivate of $e^{i\theta(x)}$:
-\begin{align}
-\label{eq:165qft}
-   \mathcal{D}_\mu \psi\to\mathcal{D}_\mu' \psi'=&(\partial_\mu+X'_\mu) \left(e^{i\theta(x)}\psi\right)\nonumber\\
-   =&e^{i\theta(x)}\left[i\partial_\mu \theta(x)+\partial_\mu\right]\psi+X'_\mu \left(e^{i\theta(x)}\psi\right)\nonumber\\
-   =&e^{i\theta(x)}\left[i\partial_\mu \theta(x)+\partial_\mu+X'_\mu \right]\psi\,.
-\end{align}
-The transformation condition of the new term $X_\mu$, in order to compensate for the term arising from the derivative of the local phase, $i\partial_\mu\theta(x)$, is just that
-\begin{align}
-\label{eq:169qft}
-X_\mu\to  X'_\mu=X_\mu-i\partial_\mu\theta(x)\,.
-\end{align}
-Replacing back in Eq.~\eqref{eq:165qft} we have
-\begin{align}
-    \mathcal{D}_\mu \psi\to\left(\mathcal{D}_\mu \psi\right)'=\mathcal{D}_\mu' \psi'=&(\partial_\mu+X'_\mu) \left(e^{i\theta(x)}\psi\right)\nonumber\\
-=&e^{i\theta(x)}\left[i\partial_\mu \theta(x)+\partial_\mu+X_\mu-i\partial_\mu\theta(x) \right]\psi\nonumber\\
-=&e^{i\theta(x)}\left[\partial_\mu+X_\mu\right]\psi\nonumber\\
-=&e^{i\theta(x)}\left(\mathcal{D}_\mu\psi\right)\,.
-\end{align}
-Note that $\mathcal{D}_\mu\psi$ transforms like the field $\psi$, and because of this is called the \emph{covariant derivative} of $\psi$.
-Similarly
-\begin{align}
-    (\mathcal{D}_\mu \psi)^*\to{\left(\mathcal{D}_\mu \psi\right)'}^*=&(\partial_\mu+{X'_\mu}^*) \left(\psi^*e^{-i\theta(x)}\right)\nonumber\\
-=&\left[-i\partial_\mu \theta(x)+\partial_\mu+X_\mu^*+i\partial_\mu\theta(x) \right]\psi^*e^{-i\theta(x)}\nonumber\\
-=&\left[\partial_\mu+X_\mu^*\right]\psi^*e^{-i\theta(x)}\nonumber\\
-=&\left(\mathcal{D}_\mu\psi\right)^*e^{-i\theta(x)}\,.
-\end{align}
-
-It is convenient to redefine $X_\mu$ in terms of $A_\mu$:
-\begin{align}
-  A_\mu\equiv\frac{1}{i q}X_\mu\,,
-\end{align}
-such that the covariant derivative can be conveniently written as
-\begin{align}
-\label{eq:170qft}
-  \mathcal{D}_\mu=\partial_\mu+i q A_\mu\,.
-\end{align}
-The transformation properties of $A_\mu$ can be obtained from the $X_\mu$ transformation in eq.~\eqref{eq:169qft}: 
-\begin{align}
-\label{eq:159qft}
- i q A_\mu\to& i q A_\mu'=i q A_\mu-i \partial_\mu\theta(x)\nonumber\\
-  A_\mu\to&  A_\mu'= A_\mu-\frac{1}{q} \partial_\mu\theta(x)\,.
-\end{align}
-
-
-We define \emph{local gauge invariance} as an arbitrary way of choosing the complex phase factor of a charged field\footnote{like the electron field as described by the usual Scrödinger equation.} at all space time points.
-
-In this way, we can change the original Lagrangian for a new one which is invariant under local phase transformations:
-\begin{align}
-   \mathcal{L}(\psi,\psi^*,\partial_\mu\psi,\partial_\mu\psi^*,A_\mu)
-=\frac{1}{2m}\left(\mathcal{D}_i\psi\right)^*\mathcal{D}_i\psi-\frac{i}{2}
-  \left[\psi^*\mathcal{D}_0\psi-\left(\mathcal{D}_0\psi\right)^*\psi\right]+\psi^*V(x)\psi.
-\end{align}
-where
-\begin{align}
-\label{eq:167qft}
-  A_\mu\to A'_\mu=A_\mu-\frac{1}{q}\partial_\mu\theta(x)\,.
-\end{align}
-This is just the gauge transformation which left the Electromagnetic fields invariant. In fact, the new Lagrangian is now invariant under the local phase transformations
-\begin{align}
-  \mathcal{L}\to \mathcal{L}'=&
-\frac{1}{2m}{\left(\mathcal{D}_i\psi\right)'}^*\left(\mathcal{D}_i\psi\right)'
--\frac{i}{2}\left[{\psi'}^*\left(\mathcal{D}_0\psi\right)'-{\left(\mathcal{D}_0\psi\right)'}^*\psi'\right]+{\psi'}^*V(x)\psi'\nonumber\\
-=&
-\frac{1}{2m}{\left(\mathcal{D}_i\psi\right)}^*e^{-i\theta(x)}e^{i\theta(x)}\left(\mathcal{D}_i\psi\right)\nonumber\\
-&-\frac{i}{2}\left[{\psi}^*e^{-i\theta(x)}e^{i\theta(x)}\left(\mathcal{D}_0\psi\right)
--{\left(\mathcal{D}_0\psi\right)}^*e^{-i\theta(x)}e^{i\theta(x)}\psi\right]+{\psi}^*e^{-i\theta(x)}e^{i\theta(x)}V(x)\psi.\nonumber\\
-=&\mathcal{L}\,.
-\end{align}
-
-To preserve invariance one notices that it is necessary to counteract the variation of $\theta$ with $x$, $y$, $z$, and $t$ by introducing the electromagnetic field $A_\mu$. In this way, the electromagnetic interaction is obtained as the result of impose local gauge invariance under $U(1)$ (local phase transformations). To fully implement the gauge principle, i.e, the paradigm to obtain the interactions as the result of the gauge invariance, we need to introduce some concepts of special relativity to be developed below.
-
+Moreover, to be consistent, we could start with the free Lagrangian before the change of the normal derivative by the covariant derivative. The interactions are not longer imposed by hand but a consequence of the improved Action. 
 
 
 
