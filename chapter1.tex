@@ -1082,12 +1082,20 @@ The expansion of the Lagrangian in terms of the field $\psi$, $\psi^*$, and $A_\
 
 Then we have
 \begin{align}
-  \mathcal{L}=&-\frac{1}{2m}\sum_i\left(\partial_i\psi^*\partial_i\psi-i q \psi^*A_i\partial_i\psi+i q \partial_i\psi^*A^i\psi+q^2A_i A_i \psi^*\psi\right)\nonumber\\
- &-\frac{i}{2}
-  \left[\psi^*\partial_0\psi-(\partial_0\psi^*)\psi+2 i q \psi^*A_0\psi\right].
+  \mathcal{L}=&\frac{1}{2m}\sum_i\partial_i\psi^*\partial_i\psi
+-\frac{i}{2}
+  \left[\psi^*\partial_0\psi-(\partial_0\psi^*)\psi\right] \nonumber\\
+&+\frac{1}{2m}\sum_i\left[ -i q \psi^*A_i\partial_i\psi+i q \left(\partial_i\psi^*\right) A^i\psi+q^2A_i A_i \psi^*\psi\right]\nonumber\\
+ &+ q \psi^*A_0\psi\,.
  \end{align}
 
 From this we can obtain the Euler-Lagrange equation for each field.
+
+In the following developments we will heavily the following notation for vectors, which is going to be explained in next section
+\begin{align*}
+  \mathbf{A}=\left( A^1,A^2,A^3\right)=-\left( A_1,A_2,A_3\right)\,.
+\end{align*}
+
 \subsection{Euler-Lagrange equation for $\psi^*$}
 In particular for $\psi^*$ we have
 \begin{align}

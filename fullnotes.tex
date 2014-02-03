@@ -14,6 +14,41 @@
 }
 
 \usepackage{bm}
+\usepackage{comment}
+\includecomment{inprogress}
+\specialcomment{inprogress}
+{\begingroup\itshape \textbf{Begin Draft:}}{\textbf{End Draft.} \medskip \endgroup}
+\excludecomment{inprogress}
+
+\includecomment{borrar}
+\specialcomment{borrar}
+{\begingroup\itshape \textbf{Begin Draft:}}{\textbf{End Draft.} \medskip \endgroup}
+\excludecomment{borrar}
+
+\includecomment{details}
+\specialcomment{details}
+{\begingroup}{\endgroup}
+%\excludecomment{details}
+%\PreviewEnvironment{details}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%Beamer compability layer
+%to compile beamer use beyond.beamer.tex
+\includecomment{frame}
+\specialcomment{frame}
+{\begingroup}{\endgroup}
+%\excludecomment{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\includecomment{english}
+\specialcomment{english}
+{\begingroup}{\endgroup}
+\excludecomment{english}
+%%%%%%%%%%%%%%%%%%%%%%%%
+\includecomment{spanish}
+\specialcomment{spanish}
+{\begingroup}{\endgroup}
+%\excludecomment{spanish}
+
 \setlength{\textheight}{235mm}
 \setlength{\textwidth}{180mm}
 \setlength{\oddsidemargin}{-1cm}

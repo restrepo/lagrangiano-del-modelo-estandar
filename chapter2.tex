@@ -1,6 +1,6 @@
 %instiki:category: FisicaSubatomica
 %http://localhost:2500/wiki/show/Cap%C3%ADtulo+II
-\chapter{Campos vectoriales}
+\chapter{Campos bosónicos}
 \label{cha:campos-vectoriales} %noinstiki
 %instiki:
 %instiki:***
@@ -32,6 +32,8 @@
 %instiki:
 %instiki:***
 %instiki:
+
+Se hará un repaso de las nociones de relatividad especial para mostrar como se transforman los campos escalares y vectoriales bajo transformaciones de Lorentz. Se mostrará como la invarianza de la Acción bajo este tipo de transformación es el punto de partida en la construcción de densidades Lagrangianas únicas.
 
 
 \section{Unidades Naturales}
@@ -319,7 +321,7 @@ La invarianza del producto escalar en ec.~\eqref{eq:157}
 \end{equation}
 da lugar a
 \begin{equation}
-  \label{eq:148}
+  \label{eq:lrinv}
   g_{\mu\nu}={\Lambda^\alpha}_{\mu}g_{\alpha\beta}{\Lambda^\beta}_{\nu}\qquad\text{or}\qquad 
 \left\{g_{\mu\nu}\right\}=\left\{{\Lambda_{\mu}}^{\alpha}\right\}^{\text{T}}\left\{g_{\alpha\beta}\right\}\left\{{\Lambda^\beta}_{\nu}\right\}.
 \end{equation}
@@ -327,6 +329,72 @@ En notaci\'on matricial
 \begin{align}
  g=\Lambda^T g \Lambda\,. 
 \end{align}
+
+\begin{english}
+From eq.~\eqref{eq:lrinv} we also have  
+\end{english}
+\begin{spanish}
+De la ec.~\eqref{eq:lrinv} tenemos que
+\end{spanish}
+
+\begin{align}
+  g^{\rho\mu}g_{\mu\nu}=&g^{\rho\mu}{\Lambda^\alpha}_{\mu}g_{\alpha\beta}{\Lambda^\beta}_{\nu}\nonumber\\
+  \delta^\rho_\nu=&{\Lambda_\beta}^\rho{\Lambda^\beta}_{\nu}\,,
+\end{align}
+\begin{english}
+or  
+\end{english}
+\begin{spanish}
+o
+\end{spanish}
+\begin{align}
+  {\Lambda_\alpha}^\mu{\Lambda^\alpha}_{\nu}=\delta^\mu_\nu\,.
+\end{align}
+\begin{english}
+Since
+\end{english}
+\begin{spanish}
+Ya que
+\end{spanish}
+\begin{align}
+  {\left(\Lambda^{-1}\right)^\mu}_\alpha{\Lambda^\alpha}_{\nu}=\delta^\mu_\nu\,
+\end{align}
+\begin{english}
+the inverse of $\Lambda$ is
+\end{english}
+\begin{spanish}
+el inverso de $\Lambda$ es
+\end{spanish}
+\begin{align}
+  {\left(\Lambda^{-1}\right)^\mu}_\alpha={\Lambda_\alpha}^\mu\,,
+\end{align}
+\begin{english}
+or  
+\end{english}
+\begin{spanish}
+o
+\end{spanish}
+\begin{align}
+\label{eq:lambdainv}
+  {\left(\Lambda^{-1}\right)^\mu}_\nu={\Lambda_\nu}^\mu\,,
+\end{align}
+\begin{itemize}
+\item
+\begin{english}
+\textbf{Example:} Lorentz invariance    
+\end{english}
+\begin{spanish}
+\textbf{Ejemplo:} Invarianza de Lorentz
+\end{spanish}
+  \begin{align}
+    a_\mu b^\mu\to a'_\mu{b'}^\mu=&{\Lambda_\mu}^\nu a_\nu{\Lambda^\mu}_\rho b^p \nonumber\\
+    =&{\Lambda_\mu}^\nu a_\nu{\Lambda^\mu}_\rho b^p \nonumber\\
+    =&{\left(\Lambda^{-1}\right)^\nu}_\mu{\Lambda^\mu}_\rho a_\nu b^p \nonumber\\
+    =&\delta^\nu_\rho a_\nu b^p \nonumber\\
+    =&a_\nu b^\nu \nonumber\,.
+  \end{align}
+
+\end{itemize}
 
 Como un ejemplo de Transformaci\'on de Lorentz considere un desplazamiento a lo largo del eje $x$
 \begin{equation}
@@ -366,7 +434,11 @@ donde
 \begin{equation}
   \cosh\xi=\gamma\qquad\sinh\xi=v\gamma,\qquad\text{and}\qquad \gamma=\frac{1}{\sqrt{1-v^2}}.
 \end{equation}
-El ${\Lambda^\mu}_{\nu}$ definido en la ec.~\eqref{eq:147} satisface la condici\'on en ec.~\eqref{eq:148}, 
+y, por ejemplo:
+\begin{align}
+  t\cosh{\xi}+x\sinh\xi=\gamma(t+v x)=\frac{t+v x}{\sqrt{1-v^2}}\,.
+\end{align}
+El ${\Lambda^\mu}_{\nu}$ definido en la ec.~\eqref{eq:147} satisface la condici\'on en ec.~\eqref{eq:lrinv}, 
 \begin{align}
   \Lambda^T g \Lambda=&\begin{pmatrix}
     \cosh\xi&\sinh\xi&0&0\\
@@ -525,6 +597,7 @@ Adem\'as $A^\mu$ tiene la transformaci\'on gauge
 \end{align}
 En notaci\'on de cuadrivectores
 \begin{align}
+\label{eq:166qft}
   A^\mu\to {A'}^\mu=&\left(A^0-\frac{\partial\chi}{\partial t},\mathbf{A}+\boldsymbol{\nabla}\chi
   \right)\nonumber\\
   =&\left(A^0-\frac{\partial\chi}{\partial t},A^{i}+\partial_i\chi
@@ -538,7 +611,22 @@ En notaci\'on de cuadrivectores
   \right)\nonumber\\
   A^\mu\to {A'}^\mu=&A^\mu-\partial^\mu\chi\,.
 \end{align}
-
+\begin{english}
+Note that the eq.~\eqref{eq:166qft} can be written as  
+\end{english}
+\begin{spanish}
+Note que la ec.~\eqref{eq:166qft} se puede escribir como
+\end{spanish}
+\begin{align}
+\label{eq:168qft}
+  A_\mu\to A'_\mu=A_\mu-\partial_\mu\chi(x)
+\end{align}
+\begin{english}
+which is just the transformation obtained in eq.~\eqref{eq:159qft}.  
+\end{english}
+\begin{spanish}
+qué es justamente la ecuación de transformación obtenida en la ec.~\eqref{eq:159qft}.  
+\end{spanish}
 
 
 \begin{example}
@@ -622,7 +710,11 @@ Que corresponde a la ecuaci\'on de Klein-Gordon \eqref{eq:152}. Una expresi\'on 
   \label{eq:wavelagtrue}
   \mathcal{L}=\frac{1}{2}\partial_\mu\phi\partial^\mu\phi-\frac{1}{2}m^2\phi^2
 \end{equation}
-El Lagrangiano m\'as general posible para el campo $\phi$ es
+El Lagrangiano m\'as general posible para el campo $\phi$ es en general bastante arbitrario:
+\begin{equation}
+  \mathcal{L}=\frac{1}{2}\partial_\mu\phi\partial^\mu\phi+f(\phi)\,,
+\end{equation}
+donde $f(\phi)$ es una función de campos escalar real $\phi$. Si $f(\phi)$ es una función polinómica del campo $\phi$, tenemos por ejemplo.
 \begin{equation}
   \label{eq:wavelag}
   \mathcal{L}=\frac{1}{2}\partial_\mu\phi\partial^\mu\phi-\frac{1}{2}m^2\phi^2+\frac{1}{4}\lambda\phi^4+a\phi+b\phi^3.
@@ -667,25 +759,155 @@ ec.~\eqref{eq:kg} se conoce como la ecuaci\'on de Klein-Gordon, con
 Lagrangiano
 \begin{equation}
   \label{eq:kglag}
-  \mathcal{L}=\frac{1}{2}\partial_\mu\phi\partial^\mu\phi-\frac{1}{2}m^2\phi^2,
+  \mathcal{L}=\frac{1}{2}\partial_\mu\phi\partial^\mu\phi-\frac{1}{2}m^2\phi^2, 
 \end{equation}
-Una expresi\'on escrita en t\'erminos de productos escalares de Lorentz se dice que esta en \emph{forma covariante}. Por lo tanto la ecuaci\'on de Klein--Gordon y su correspondiente Lagrangiano est\'an en forma covariante. Tambi\'en tienen la simetr\'\i a $\phi\to-\phi$. A $\phi$ se le
-denomina \emph{campo escalar}.
+Una expresi\'on escrita en t\'erminos de productos escalares de
+Lorentz se dice que esta en \emph{forma covariante}. Por lo tanto la
+ecuaci\'on de Klein--Gordon y su correspondiente Lagrangiano est\'an
+en forma covariante. Tambi\'en tienen la simetr\'\i a
+$\phi\to-\phi$. A $\phi$ se le denomina \emph{campo escalar}.
 
-Definiendo
-\begin{align*}
-  F^{\mu\nu}&=\partial^\mu A^\nu-\partial^\nu A^\mu\\
-  G^{\mu\nu}&=\partial^\mu A^\nu+\partial^\nu A^\mu\\
-\end{align*}
-El Lagrangiano invariante de Lorentz para el cuadrivector $A^\mu$ en
-ec.~\eqref{eq:cv_phia} es, hasta derivadas totales
+
+\subsection{Lorentz tranformation for fields}
+
+The scalar field is defined by their properties under Lorentz transformation. In section \ref{sec:teorema-de-noether} we study the behavior of one scalar field under a space--time translation. Under a general Lorentz transformation
 \begin{align}
-  \mathcal{L}=&-\frac{1}{4}F^{\mu\nu}F_{\mu\nu}-\frac{1}{4}G^{\mu\nu}G_{\mu\nu}-J^\mu A_\mu+
-  \frac{1}{2}m^2A^\mu A_\mu+K_\nu A^\nu A_\mu A^\mu+\lambda A^\mu A_\mu A^\nu A_\nu\nonumber\\
-  \label{eq:lagAmu}
-  &+a_1\partial_\mu A^\mu A_\nu A^\nu+a_2F^{\mu\nu}A_\mu A_\nu+a_3G^{\mu\nu}A_\mu A_\nu
+\label{eq:179qft}
+  x^\mu\to {x'}^\mu={\Lambda^\mu}_\nu x^\nu\,,
 \end{align}
-La derivada covariante definida
+Now we will study the effect of a Lorentz tranformation on the field $\phi(x)$, for example under a boost. By definition the scalar field does not change by the Lorentz transformation, the functional form is unaltered
+the scalar field still satisfy
+\begin{align}
+  \phi(x)\to \phi'(x')=\phi(x)\,.
+\end{align}
+By using eq.~\eqref{eq:179qft} we have
+\begin{align}
+    \phi'(x')=\phi(\Lambda^{-1}x')\,.
+\end{align}
+Therefore, for an arbitrary space-time point we have that the scalar field transforms under a Lorentz transformation as
+\begin{align}
+  \label{eq:scalarlorentz}
+   \phi(x)\to \phi'(x)=\phi(\Lambda^{-1}x)\,.
+\end{align}
+
+In order to check the Lorentz invariance of the scalar we need to obtain the Lorentz transformation properties for $\partial_\mu$. It is convinient to invert eq.~\eqref{eq:179qft}
+\begin{align}
+  {\left(\Lambda^{-1}\right)^\mu}_\alpha{x'}^\alpha=&{\left(\Lambda^{-1}\right)^\mu}_\alpha{\Lambda^\alpha}_\nu x^\nu\nonumber\\
+=&\delta^\mu_\nu x^\nu\nonumber\\
+=&x^\mu\,,
+\end{align}
+\begin{align}
+  \frac{1}{{x'}^\nu}= {\left(\Lambda^{-1}\right)^\mu}_\nu\frac{1}{x^\mu}\,,
+\end{align}
+or
+\begin{align}
+  \label{eq:183qft}
+    \frac{1}{{x'}^\mu}= {\left(\Lambda^{-1}\right)^\nu}_\mu\frac{1}{x^\nu}\,,
+\end{align}
+and the defintion of the Lorentz transformation itself:
+\begin{align}
+\label{eq:lrinvinv}
+  g^{\mu\nu}={\left(\Lambda^{-1}\right)^\mu}_\rho\,g^{\rho\sigma}{\left(\Lambda^{-1}\right)^\nu}_\sigma\,.
+\end{align}
+
+From eq.~\eqref{eq:183qft} we can obtain the Lorentz transformation for $\partial_\mu=\partial/\partial x^\mu$:
+\begin{align}
+  \label{dmulrtran}
+   \frac{\partial}{{\partial x'}^\mu}=& {\left(\Lambda^{-1}\right)^\nu}_\mu\frac{\partial}{\partial x^\nu}\nonumber\\
+   {\partial\,}'_\mu=& {\left(\Lambda^{-1}\right)^\nu}_\mu\partial_\nu\,,
+\end{align}
+Podemos ahora demostrar que la Acción obtenida del Lagrangiano en la ec.\eqref{eq:kglag} es invariante bajo transformaciones de Lorentz
+\begin{align}
+  \mathcal{L}(x)\to  \mathcal{L}'(x)=& \frac{1}{2}\partial'_\mu\phi'\partial^{'\mu}\phi-\frac{1}{2}m^2\phi^{'2}, \nonumber\\
+  =&{\left(\Lambda^{-1}\right)^\nu}_\mu g^{\mu \rho}{\left(\Lambda^{-1}\right)^\sigma}_\rho \partial_\nu\phi(\Lambda^{-1}x) \partial_\sigma \phi(\Lambda^{-1}x) -\frac{1}{2}m^2\phi^{2}(\Lambda^{-1}x)\nonumber\\
+  =& g^{\nu \sigma}\partial_\nu\phi(\Lambda^{-1}x) \partial_\sigma \phi(\Lambda^{-1}x) -\frac{1}{2}m^2\phi^{2}(\Lambda^{-1}x)\nonumber\\
+  =& \partial_\nu\phi(\Lambda^{-1}x) \partial^{\nu} \phi(\Lambda^{-1}x) -\frac{1}{2}m^2\phi^{2}(\Lambda^{-1}x)\nonumber\\
+  =&\mathcal{L}(\Lambda^{-1}x)\,.
+\end{align}
+Since the Action involves the integration over all the points, it is invariant under the Lorentz transformation.
+
+
+
+
+The field $A^\mu(x)$ transforms simultaneously as field and as vector under Lorentz transformation
+\begin{align}
+  A^\mu(x)\to {A'}^\mu(x')={\Lambda^\mu}_\nu A^\nu(\Lambda^{-1}x)\,.
+\end{align}
+
+\section{Campos escalares complejos}
+Entre más simetrías posea una Acción menos arbitraría es. Podemos
+ilustrar esta afirmación si consideramos una Acción para un campo escalar
+complejo que además de ser invariante de Lorentz, se además invariante
+bajo transformaciónes de fase.
+
+En ese caso la Acción, y la correspondiente densidad Lagrnagian son
+únicas y están dadas por una función polinómica de $\phi^{*}\phi$
+\begin{align}
+  \mathcal{L}=\partial_{\mu}\phi^{*} \partial^{\mu}\phi-m^2\phi^{*}\phi+\lambda \left(\phi^{*}\phi \right)^2\,.
+\end{align}
+Términos de orden superior se pueden obtener a partir de esa
+Lagrangiana única y por eso no se consideran. 
+
+
+De las ecuaciones de Euler-Lagrange para $\phi^*$, usando el Lagrangiano en ec.~(\ref{eq:41qft})
+\begin{align}
+  \partial_\mu\left[
+      \frac{\partial\mathcal{L}}{\partial(\partial_\mu\phi^*)}\right]-\frac{\partial\mathcal{L}}{\partial\phi^*}&=0\nonumber\\
+    \partial_\mu\partial^\mu\phi+m^2\phi&=0\nonumber\\
+    \label{eq:43qft}
+    (\Box+m^2)\phi&=0,
+\end{align}
+y de la ecuaciones de Euler-Lagrange para $\phi$,
+\begin{equation}
+  \label{eq:44qft}
+    (\Box+m^2)\phi^*=0.
+\end{equation}
+De este modo tanto $\phi$, como $\phi^*$, satisfacen la ecuación de Klein-Gordon. Cada campo además corresponde a una partícula de masa $m$ como en el caso de $\phi_1$ y $\phi_2$
+
+Estamos ahora interesado en las simetrías internas del Lagrangiano. Entonces la corriente conservada puede definida en la sección~\ref{sec:principio-de-minima-call}, eq.~\eqref{eq:jmuphi}
+\begin{align}
+  J^\mu=&\frac{\partial\mathcal{L}}{\partial(\partial_\mu\phi)}\delta\phi+\delta\phi^*\frac{\partial\mathcal{L}}{\partial(\partial_\mu\phi^*)}\nonumber\\
+  \label{eq:45qft}
+  J^\mu=&\partial^\mu\phi^*\delta\phi+\delta\phi^*\partial^\mu\phi.
+\end{align}
+Además de la invarianza de Lorentz, el Lagrangiano en ec,~(\ref{eq:41qft}) también es invariante bajo el grupo de transformaciones U(1) definido en las sección~\ref{sec:lagr-electr}, pero con una fase constante
+\begin{equation*}
+  U=e^{i\theta}\approx1+i\theta.
+\end{equation*}
+Entonces
+\begin{align}
+  \phi\overset{U}{\longrightarrow}\phi'&=e^{i\theta}\phi\approx(1+i\theta)\phi\nonumber\\
+  &=\phi+i\theta\phi.
+\end{align}
+Entonces,
+\begin{align}
+  \delta\phi&=i\theta\phi\\
+  \delta\phi^*&=-i\theta\phi^*.
+\end{align}
+Reemplazando en ec.~(\ref{eq:45qft})
+\begin{equation}
+\label{eq:46qft}
+  J^\mu\propto -i\theta(\phi\partial^\mu\phi^*-\phi^*\partial^\mu\phi),
+\end{equation}
+y
+\begin{equation}
+\label{eq:47qft}
+  \rho=J^0\propto-i\theta(\phi\frac{\partial\phi^*}{\partial t}-\phi^*\frac{\partial\phi}{\partial t}).
+\end{equation}
+Definimos $J^\mu$ como
+\begin{equation}
+  \label{eq:48qft}
+   J^\mu= i(\phi^*\partial^\mu\phi-\phi\partial^\mu\phi^*),
+\end{equation}
+Como $\rho$ puede ser negativo no puede interpretarse como una
+probalidad, como se hizo con la función de onda de la ecuación de
+Scrödinger. Esto presentó un obstaculo en la interpretación inicial de
+la ecuación de Klein-Gordon. Sin embargo una vez se cuantiza el
+campo escalar la probabilidad de los estados cuánticos queda bien
+definida \cite{Gross}. 
+
+
+
 \section{Ecuaciones de Maxwell en notaci\'on covariante }
 \label{sec:maxeqs}
 Ecuaciones homog\'eneas:
@@ -990,27 +1212,193 @@ Adem\'as las ecuaciones de Maxwell permanecen invariantes bajo la transformaci\'
 \end{equation}
 ya que dicha transformaci\'on deja invariante a $F^{\mu\nu}$. De aqu\'\i{} la sugerencia de la invarianza gauge esta relacionada de alguna manera a la conservaci\'on de la carga. De hecho la acci\'on m\'as general posible para el campo $A^\mu$ compatible tanto con la invarianza de Lorentz y la invarianza gauge local corresponde a la acci\'on que da lugar a las ecuaciones de Maxwell.
 
-Si queremos que la Acci\'on refleja las simetr\'\i as de las ecuaciones de
-Maxwell debemos mantener s\'olo los t\'erminos del Lagrangiano para $A^\mu$
-en \eqref{eq:lagAmu} que sean invariantes hasta una derivada total. Bajo una transformaci\'on gauge, cada
-uno de los t\'erminos
+
+
+\section{Vector field Lagrangian}
+
+We are now are in position to answer the following question: What is the most general Lagrangian for a the four--components field $A^\mu$ compatible with Lorentz invariance and the gauge transformation
+\begin{align}
+\label{eq:172qft}
+  A^\mu\to{A'}^\mu=A^\mu-\partial^\mu\chi(x)\;?
+\end{align}
+
+
+
+
+Definiendo
+\begin{align*}
+  F^{\mu\nu}&=\partial^\mu A^\nu-\partial^\nu A^\mu\\
+  G^{\mu\nu}&=\partial^\mu A^\nu+\partial^\nu A^\mu\\
+\end{align*}
+El Lagrangiano que da lugar a una Acción invariante de Lorentz para el cuadrivector $A^\mu$
+es, hasta derivadas totales y potencias en los campos de hasta dimensión 4:
+\begin{align}
+  \mathcal{L}=&-\frac{1}{4}F^{\mu\nu}F_{\mu\nu}-\frac{1}{4}G^{\mu\nu}G_{\mu\nu}-J^\mu A_\mu+
+ \frac{1}{2}m^2A^\mu A_\mu +\lambda_1\partial_\nu A^\nu(x) A_\mu(x) A^\mu(x)+\lambda_2 A^\mu A_\mu A^\nu A_\nu\nonumber\\
+&+\lambda_3 F^{\mu\nu}(x)A_\mu(x) A_\nu(x)+\lambda_4G^{\mu\nu}(x)A_\mu(x) A_\nu\,,\,.
+  \label{eq:lagAmu}
+\end{align}
+\begin{itemize}
+\item \textbf{Ejercicio:} Show that terms like $\partial^\mu A^\nu(x)\partial_\mu A_\nu(x)$, and hence $F^{\mu\nu}F_{\mu\nu}$, transforms as
+  \begin{align}
+    \partial^\mu A^\nu\left(\Lambda^{-1}x\right)\partial_\mu A_\nu\left(\Lambda^{-1}x\right)
+  \end{align}
+Hint: use the Lorentz transformation properties of $\partial_\mu$ in eq.~\eqref{dmulrtran}.
+\end{itemize}
+In the case of $J^\mu A_\mu$:
+\begin{align}
+  J^\mu(x)A_\mu(x)\to g_{\mu\nu}{J'}^\mu(x){A'}^\nu(x)=& g_{\mu\nu}{\Lambda^\mu}_\rho J^\rho\left(\Lambda^{-1}x\right){\Lambda^\nu}_\sigma A^\sigma\left(\Lambda^{-1}x\right)\nonumber\\
+=& {\Lambda^\mu}_\rho g_{\mu\nu}{\Lambda^\nu}_\sigma J^\rho\left(\Lambda^{-1}x\right)A^\sigma\left(\Lambda^{-1}x\right)\nonumber\\
+=& g_{\rho\sigma}J^\rho\left(\Lambda^{-1}x\right)A^\sigma\left(\Lambda^{-1}x\right)\,,
+\end{align}
+in the case $\partial_\nu A^\nu(x) A_\mu(x) A^\mu(x)$:
+\begin{align}
+   \partial_\nu A^\nu(x) A_\mu(x) A^\mu(x)\to {\partial'}_\nu{A'}^\nu(x') {A'}_\mu(x') {A'}^\mu(x')=& {\left(\Lambda^{-1}\right)^\sigma}_\nu{\Lambda^\nu}_\rho\partial_\sigma A^\rho\left(\Lambda^{-1}x\right) A_\mu\left(\Lambda^{-1}x\right) A^\mu\left(\Lambda^{-1}x\right)\nonumber\\
+=& \delta^\sigma_\rho\partial_\sigma A^\rho\left(\Lambda^{-1}x\right) A_\mu\left(\Lambda^{-1}x\right) A^\mu\left(\Lambda^{-1}x\right)\nonumber\\
+=& \partial_\rho A^\rho\left(\Lambda^{-1}x\right) A_\mu\left(\Lambda^{-1}x\right) A^\mu\left(\Lambda^{-1}x\right)\,,\nonumber\\
+\end{align}
+and similarly for the other terms. Under a Lorentz transformation the full Lagrangian transform as
+\begin{align}
+  \mathcal{L}(x)\to\mathcal{L}'(x)=\mathcal{L}(\Lambda^{-1}x) 
+\end{align}
+Since the Action involves the integration over all the points, it is invariant under the Lorentz transformation. The $J^\mu(x)$ does not involves the introduction a new vector field, because it will be identified later as the 4--current.
+
+
+Terms like
+\begin{align}
+  K_\nu A^\nu(x) A_\mu(x) A^\mu(x)\,,
+\end{align}
+(for $K_\nu$ constant) are not Lorentz invariant:
+\begin{align}
+  K_\nu A^\nu(x) A_\mu(x) A^\mu(x)\to K_\nu{A'}^\nu(x) {A'}_\mu(x) {A'}^\mu(x)=& K_\nu{\Lambda^\nu}_\rho A^\rho\left(\Lambda^{-1}x\right) A_\mu\left(\Lambda^{-1}x\right) A^\mu\left(\Lambda^{-1}x\right)\,.
+\end{align}
+$K_\nu(x)A^\nu(x)A_\mu(x)A^\mu(x)$ is Lorentz covariant but not gauge-invariant (see below).
+
+%to_en:Under this transformation
+Bajo la transformación gauge \eqref{eq:168qft}
+\begin{align}
+  \label{eq:fmunutrans}
+  F^{\mu\nu}\to{F'}^{\mu\nu}=&(\partial^\mu{A'}^\nu-\partial^\nu{A'}^\mu)\nonumber\\
+  =&\partial^\mu A^\nu-\partial^\mu\partial^\nu\chi-\partial^\nu A^\mu+\partial^\nu\partial^\mu\chi\nonumber\\
+  =&\partial^\mu A^\nu-\partial^\nu A^\mu-\partial^\mu\partial^\nu\chi+\partial^\mu\partial^\nu\chi\nonumber\\
+  =&F^{\mu\nu}
+\end{align}
+
+Si queremos que la Acción refleja las simetrías de las ecuaciones de
+Maxwell debemos mantener sólo los términos del Lagrangiano para $A^\mu$
+en \eqref{eq:lagAmu} que sean invariantes hasta una derivada total. Bajo una transformación gauge, cada
+uno de los términos
 \begin{equation*}
   -\frac{1}{4}G^{\mu\nu}G_{\mu\nu}+
-  \frac{1}{2}m^2A^\mu A_\mu+K_\nu A^\nu A_\mu A^\mu+\lambda A^\mu A_\mu A^\nu A_\nu+a_1\partial_\mu A^\mu A_\nu A^\nu+a_2F^{\mu\nu}A_\mu A_\nu+a_3G^{\mu\nu}A_\mu A_\nu
+  \frac{1}{2}m^2A^\mu A_\mu+\lambda_1\partial_\mu A^\mu A_\nu A^\nu+\lambda_2 A^\mu A_\mu A^\nu A_\nu+\lambda_3F^{\mu\nu}A_\mu A_\nu+\lambda_4G^{\mu\nu}A_\mu A_\nu
++K_\nu(x) A^\nu A_\mu A^\mu
 \end{equation*}
-dan lugar a un $\delta\mathcal{L}\neq\partial_\mu(\text{algo})$ y la Acci\'on no es
-invariante bajo la transformaci\'on gauge. Para los otros
-t\'erminos, usando la ec.~\eqref{eq:consvjmu}, tenemos
-\begin{equation*}
-  \delta\mathcal{L}=\mathcal{L}'-\mathcal{L}=\partial^\mu(J_\mu\chi)
-\end{equation*}
+dan lugar a un $\delta\mathcal{L}\neq\partial_\mu(\text{algo})$ y la Acción no es
+invariante bajo la transformación gauge. Para los 
+términos restantes
+\begin{align}
+    \mathcal{L}=-\frac{1}{4}F^{\mu\nu}F_{\mu\nu}-J^\mu A_\mu\,,
+\end{align}
+
+ usando la ec.~\eqref{eq:consvjmu}, tenemos
+\begin{align}
+  \delta\mathcal{L}=\mathcal{L}'-\mathcal{L}=&
+-\frac{1}{4}{F'}^{\mu\nu}F'_{\mu\nu}-J^\mu A'_\mu+\frac{1}{4}F^{\mu\nu}F_{\mu\nu}+J^\mu A_\mu\nonumber\\
+=&-J^\mu A_\mu+J^\mu\partial_\mu\theta(x)-J^\mu A_\mu\nonumber\\
+=&\partial_\mu(J^\mu\chi)-(\partial_\mu J^\mu)\theta(x)
+\end{align}
+For the action
+\begin{align}
+  \delta S=&\int d^4x \left[\partial_\mu(J^\mu\chi)-(\partial_\mu J^\mu)\theta(x)\right]\nonumber\\
+=&-\int d^4x (\partial_\mu J^\mu)\theta(x)\nonumber\\
+=&-\int d^3x\int_{-\infty}^\infty dt (\partial_\mu J^\mu)\theta(x)\,.
+\end{align}
+In order to have $\delta S=0$ we need to assume for the while that $\partial_\mu J^\mu=0$. However we will see that this is just a self-consistent condition.
+
+In summary, if the electromagnetic current is conserved, then the Lagrangian is invariant under the gauge transformation \eqref{eq:172qft}. Note that the Lagrangian density is not locally gauge invariant. However, the action (and hence the theory) is gauge invariant.
+
 Por lo tanto, el Lagrangiano
 \begin{equation}
   \label{eq:lagAmum}
   \mathcal{L}=-\frac{1}{4}F^{\mu\nu}F_{\mu\nu}-J^\mu A_\mu
 \end{equation}
-es el m\'as general que da lugar a una Acci\'on invariante de Lorentz e invariante gauge
-local.
+es el más general que da lugar a una Acción invariante de Lorentz e invariante gauge
+local. 
+
+
+
+The definition of $F^{\mu\nu}$ already includes the homogeneous Maxwell equations. To see this we note first that the only non-zero $F^{\mu\nu}$ components are
+\begin{align}
+  F^{\mu\nu}=  \begin{cases}
+    F^{\mu0}=F^{i0} & \text{$\nu=0$}\\
+    F^{\mu l}=F^{ml} & \text{$\nu=l$}\\
+  \end{cases}
+\end{align}
+For $\nu=0$ we have
+\begin{align}
+F^{i0}  &=\partial^{i}A^0-\partial^0 A^{i}\nonumber\\
+  &=(\frac{\partial A^0}{\partial x_i}-\frac{\partial A^{i}}{\partial x_0})\nonumber\\
+&=-(\frac{\partial A^0}{\partial x^{i}}+\frac{\partial A^{i}}{\partial x^0})\nonumber\\
+&=E^i
+\end{align}
+where
+\begin{align}
+\label{eq:173qft}
+   \mathbf{E}&=-\boldsymbol{\nabla}\phi-\frac{\partial\mathbf{A}}{\partial t}\,.
+\end{align}
+while for $\nu=l$ we have
+\begin{align}
+F^{ml}  &=\partial^m A^l-\partial^l A^m\nonumber\\
+  &=(\delta_{lj}\delta_{mi}-\delta_{li}\delta_{mj}){\partial^iA^j}\nonumber\\
+  &=-(\delta_{lj}\delta_{mi}-\delta_{li}\delta_{mj}){\partial_iA^j}\nonumber\\
+  &=(\delta_{li}\delta_{mj}-\delta_{lj}\delta_{mi}){\partial_iA^j}\nonumber\\
+  &=(\delta_{li}\delta_{mj}-\delta_{lj}\delta_{mi})\frac{\partial A^j}{\partial x^{i}}\nonumber\\
+    &=\epsilon_{lmk}\epsilon_{ijk}\frac{\partial A^j}{\partial x^{i}}\nonumber\\
+&=\epsilon_{lmk}\left(\boldsymbol{\nabla}\times  \mathbf{A}\right)^k\nonumber\\
+&=\epsilon_{lmk}B^k\,,
+\end{align}
+where
+\begin{align}
+\label{eq:174qft}
+  \mathbf{B}&=\boldsymbol{\nabla}\times \mathbf{A}\,.
+\end{align}
+Then we have
+\begin{align}
+  \{F^{\mu\nu}\}  &=
+  \begin{pmatrix}
+    0 &-E^1   &-E^2   &-E^3   \\    
+    E^1&0     &\epsilon_{213}B^3&\epsilon_{312}B^2\\
+    E^2&\epsilon_{123}B^3&0     &\epsilon_{321}B^1\\
+    E^3&\epsilon_{132}B^2&\epsilon_{231}B^1&0\\
+  \end{pmatrix}\nonumber\\
+  &=
+\label{eq:matrixfmunu}
+  \begin{pmatrix}
+    0 &-E^1&-E^2&-E^3   \\    
+    E^1&0  &-B^3&B^2\\
+    E^2&B^3 &0  &-B^1\\
+    E^3&-B^2&B^1 &0\\
+  \end{pmatrix}.
+\end{align}
+
+
+From eqs.~\eqref{eq:173qft}, and \eqref{eq:174qft}
+\begin{align*}
+  \boldsymbol{\nabla}\times \mathbf{E}&=-\boldsymbol{\nabla}\times \boldsymbol{\nabla}\phi-\frac{\partial}{\partial t}\boldsymbol{\nabla}\times \mathbf{A}\\
+  &=-\frac{\partial\mathbf{B}}{\partial t},
+\end{align*}
+and
+\begin{align*}
+  \boldsymbol{\nabla}\cdot\mathbf{B}&=\boldsymbol{\nabla}\cdot(\boldsymbol{\nabla}\times \mathbf{A})\\
+  &=0
+\end{align*}
+which are just the homogeneous Maxwell equations. Therefore the expression
+ \begin{equation}
+  \label{eq:fmunu}
+    F^{\mu\nu}=\partial^\mu A^\nu-\partial^\nu A^\mu.
+\end{equation}
+with the $\{F^{\mu\nu}\}$ given in \eqref{eq:matrixfmunu}, is just an equivalent form for the homogeneous Maxwell equations. The remaining Maxwell equations can be obtained from the Euler-Lagrange equations for $A^\nu$:
+
 
 Con miras a calcular  las ecuaciones de Euler-Lagrange para el Lagrangiano en
 ec.~\eqref{eq:lagAmum}, tenemos
@@ -1036,6 +1424,7 @@ A_\alpha\delta_{\sigma\mu}\delta_{\rho\nu}).\nonumber\\
 
 Usando la ec.~\eqref{eq:dddmufmunu2}, tenemos
 \begin{align}
+\label{eq:177qft}
   \partial_\mu\left[
     \frac{\partial\mathcal{L}}{\partial(\partial_\mu A_\nu)}  
   \right]-\frac{\partial\mathcal{L}}{\partial A_\nu}&=0\nonumber\\
@@ -1045,9 +1434,75 @@ Usando la ec.~\eqref{eq:dddmufmunu2}, tenemos
   -\partial_\mu F^{\mu\nu}+J^\rho\delta_{\rho\nu}&=0\nonumber\\
   \partial_\mu F^{\mu\nu}&=J^\nu.
 \end{align}
-Como era de esperarse una Acci\'on invariante de Lorentz e invariante
-gauge local, expresada en t\'erminos del Lagrangiano \eqref{eq:lagAmum},
-da lugar a la Teor\'\i a Electromagn\'etica. 
+Como era de esperarse una Acción invariante de Lorentz e invariante
+gauge local, expresada en términos del Lagrangiano \eqref{eq:lagAmum},
+da lugar a la Teoría Electromagnética. 
+ 
+Tomando la derivada con respecto a $\nu$ en ambos lados tenemos
+\begin{align}
+   \partial_\nu\partial_\mu F^{\mu\nu}&=\partial_\nu J^\nu.
+\end{align}
+De la parte izquierda de ésta ecuación tenemos
+\begin{align*}
+  \partial_\nu\partial_\mu F^{\mu\nu}&=\tfrac{1}{2}\left(\partial_\nu\partial_\mu F^{\mu\nu}+\partial_\nu\partial_\mu F^{\mu\nu}  \right)\nonumber\\
+&=\tfrac{1}{2}\left(\partial_\nu\partial_\mu F^{\mu\nu}+\partial_\mu\partial_\nu F^{\nu\mu}  \right)
+&&\text{intercambiando índices mudos}\nonumber\\
+&=\tfrac{1}{2}\left(\partial_\nu\partial_\mu F^{\mu\nu}+\partial_\nu\partial_\mu F^{\nu\mu}  \right)
+&&\text{conmutando derivadas}\nonumber\\
+&=\tfrac{1}{2}\left(\partial_\nu\partial_\mu F^{\mu\nu}-\partial_\nu\partial_\mu F^{\mu\nu}  \right)
+&&\text{usando antisimetría de $F^{\mu\nu}$}\nonumber\\
+&=0\,,
+\end{align*}
+Por consiguiente, la cuadricorriente $J^\mu$ es conservada:
+\begin{equation}
+  \label{eq:consvjmu}
+  \partial_\mu J^\mu=0\,.
+\end{equation}
+
+
+Again, for $\nu=0$, we have
+\begin{align}
+  \label{nohomME21}
+    \partial_\mu F^{\mu0}&=J^0\nonumber\\
+    \partial_iF^{i0}&=J^0\nonumber\\
+    \frac{\partial}{\partial x^{i}}F^{i0}&=J^0\nonumber\\
+    \frac{\partial E^{i}}{\partial x^{i}}&=J^0\,,
+\end{align}
+and therefore
+\begin{align}
+   \boldsymbol{\nabla}\cdot\mathbf{E}&=\rho\,.
+\end{align}
+while for $\nu=k$ we have
+
+\begin{align}
+\partial_\mu F^{\mu k}&=J^k\nonumber\\
+\partial_iF^{ik}+\partial_0F^{0k}&=J^k\nonumber\\
+-\partial_iF^{ki}-\partial_0F^{k0}&=J^k\nonumber\\
+  -\frac{\partial (\epsilon_{ikj}B^j)}{\partial x^{i}}-\frac{\partial E^k}{\partial t}&=J^k\nonumber\\
+\epsilon_{ijk}\frac{\partial B^j}{\partial x^{i}}-\frac{\partial E^k}{\partial t}&=J^k\nonumber\\
+(\boldsymbol{\nabla}\times \mathbf{B})^k-\frac{\partial E^k}{\partial t}&=J^k.\,.
+\end{align}
+and therefore
+\begin{align}
+  \boldsymbol{\nabla}\times \mathbf{B}-\frac{\partial\mathbf{E}}{\partial t}&=\mathbf{J}\,.
+\end{align}
+In this way the expression
+\begin{align}
+   \partial_\mu F^{\mu\nu}&=J^\nu& \text{where}\quad    F^{\mu\nu}=\partial^\mu A^\nu-\partial^\nu A^\mu\,,
+\end{align}
+is completely equivalent to the full set of Maxwell equations:
+\begin{align}
+  \label{eq:hom_m_eq}
+  \boldsymbol{\nabla}\cdot\mathbf{B}&=0,&\boldsymbol{\nabla}\times \mathbf{E}+\frac{\partial\mathbf{B}}{\partial t}&=0\\
+  \label{eq:inhom_m_eq}
+  \boldsymbol{\nabla}\cdot\mathbf{E}&=\rho,&\boldsymbol{\nabla}\times \mathbf{B}-\frac{\partial\mathbf{E}}{\partial t}&=\mathbf{J}\,.
+\end{align}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
 
 De este modo las ecuaciones de Maxwell se pueden derivar del requerimiento de que la teor\'\i a, adem\'as de ser invariante de Lorentz, pueda expresarse en t\'erminos de potenciales de una forma que sea invariante gauge en esos potenciales. Si un cuadrivector potencial $A^\mu$ es postulado, y se impone que la teor\'\i a involucre este solamente, de una forma que sea insensible a a cambios de la forma \eqref{eq:aphicov}, se es conducido naturalmente a la idea de que los campos f\'\i sicos entran \'unicamente v\'\i a la cantidad $F^{\mu\nu}$, que es invariante bajo la ec. \eqref{eq:aphicov}. De aqu\'\i{} se puede conjeturar la ecuaci\'on de campo en base a la covarianza de Lorentz. 
 
@@ -1332,6 +1787,832 @@ cargas no electromagn\'eticas y pueden ser masivos. El reto durante
 varias d\'ecadas fue entender como las masa de los campos vectoriales de
 la interacci\'on d\'ebil podr\'\i a hacerse compatible con el principio gauge
 local.  
+
+
+
+
+
+
+\section{Lorentz transformation of the fields}
+
+Note again, that a term like
+\begin{align}
+\label{eq:nolor}
+  \phi^*(x)a^\mu\partial_\mu\phi(x)\,,
+\end{align}
+does not left the Action invariant. To have a proper formulation of the quantum mechanics through the general equation
+\begin{align}
+  i\frac{\partial}{\partial t}\psi=\hat{H} \psi\,,  
+\end{align}
+with some, to be determined, relativistic Hamiltonian operator $\widehat{H}$, we should be able to build a Lagrangian with temporal derivatives of order one. Therefore, the Lorentz invariant requires all the derivatives of order one.  
+
+Consider spinor fields, which transforms as
+\begin{align}
+\label{eq:184qft}
+  \psi_a(x)\to\psi'_a(x)=S_{ab}(\Lambda)\psi_b(\Lambda^{-1}x)\,, 
+\end{align}
+where $S(\Lambda)$ is some spinorial representation of the Lorentz Group. We will check in next section if a Action with a term like
+\begin{align}
+  \psi^*_a(x)a^\mu_{ab}\partial_\mu\psi_b(x)
+\end{align}
+could be invariant under Lorentz transformations, for some internal representation of the Lorentz Group.
+
+In summary we have the following Lorentz's transformation properties for the fields
+\begin{align}
+   \phi(x)\to \phi'(x')=&\phi(x) && \text{Scalar field,}\nonumber\\
+   A^\mu(x)\to {A'}^\mu=&{\Lambda^\mu}_\nu A^\nu(\Lambda^{-1}x)&&\text{Vector field,}\nonumber\\
+   \psi(x)\to\psi'(x)=&S(\Lambda)\psi(\Lambda^{-1}x)&&\text{Spinor field.}
+\end{align}
+
+\section{Dirac's Action}
+\label{sec:dirac-equation}
+The Scrodinger equation can be written as
+\begin{align}
+    i\frac{\partial}{\partial t}\psi=\hat{H}_{S} \psi\,,  
+\end{align}
+where
+\begin{align}
+  \hat{H}_{S}=
+\end{align}
+
+
+In order to have a well defined probabilty in relativistic quantum mechanics it is necessary that Lagrangian be linear in the time derivative, in order to obtain the general Sccödinger equation:
+\begin{align}
+  i\frac{\partial}{\partial t}\psi=\hat{H} \psi\,,  
+\end{align}
+like the Scrödinger Lagrangian. However, this automatically imply that the Lagrangian will be also linear in the spacial derivatives. A pure scalar field cannot involve a Lorentz invariant term of only first derivatives (see eq.~\eqref{eq:nolor}). Therefore the proposed field must have some internal structure associated with some representation of the Lorentz Group. Therefore we build the Lagrangian for a field of several components
+\begin{align}
+  \psi=  \begin{pmatrix}
+\psi_1\\
+\psi_2\\
+\vdots\\
+\psi_n    
+  \end{pmatrix}
+\end{align}
+
+\subsection{Lorentz transformation}
+
+If the field is to describe the electron. it must have spin and in this way it must transform under some spin representation of the Lorentz Group
+\begin{align}
+  \psi(x)\to \psi'(x)=S(\Lambda)\psi\left(\Lambda^{-1}x\right)\,.
+\end{align}
+One possible invariant could be the term $\psi^\dagger(x)\psi(x)$. However, under a Lorentz transformation we should have $\psi^\dagger S^\dagger S\psi$. As we cannot assume that $S(\Lambda)$ is unitary, the solution is to define the \emph{adjoint} spinor
+\begin{align}
+  \overline{\psi}=\psi^\dagger b\,.
+\end{align}
+which transforms as
+\begin{align}
+  \overline{\psi}(x)\to  \overline{\psi}'(x)&=
+{\psi'}^\dagger(x)b=
+\psi^\dagger\left(\Lambda^{-1}x\right)S^\dagger(\Lambda)b\,,
+\end{align}
+and,
+
+\begin{align}
+  \overline{\psi}(x)\psi(x)\to  \overline{\psi}'(x)\psi'(x)&=
+\psi^\dagger\left(\Lambda^{-1}x\right)S^\dagger(\Lambda)b S(\Lambda)\psi\left(\Lambda^{-1}x\right)
+\end{align}
+The condition that must be fulfilled for Lorentz invariance of the Action is 
+\begin{align}
+  \label{eq:ltrinscal}
+  S^\dagger(\Lambda)bS(\Lambda)=&b\,,
+\end{align}
+and therefore, 
+\begin{align}
+  \overline{\psi}(x)\psi(x)\to  \overline{\psi}'(x)\psi'(x)&=
+\overline{\psi}\left(\Lambda^{-1}x\right)\psi\left(\Lambda^{-1}x\right)\,,
+\end{align}
+and:
+\begin{align}
+  \overline{\psi}(x)\to  \overline{\psi}'(x)&=
+\psi^\dagger\left(\Lambda^{-1}x\right)b S^{-1}(\Lambda)\nonumber\\
+&=\overline{\psi}\left(\Lambda^{-1}x\right)S^{-1}(\Lambda)\,.
+\end{align}
+
+
+A Action with a Lagrangian term linear in the derivatives, could be Lorentz invariant if, taking into account:
+ \begin{align}
+   \overline{\psi}(x)\gamma^\mu\partial_\mu\psi(x)\to  \overline{\psi'}(x)\gamma^\mu\partial_\mu\psi'(x)&=
+ \overline{\psi}_a\left(\Lambda^{-1}x\right)S^{-1}_{ab}(\Lambda)\gamma^\mu_{bc}{\left(\Lambda^{-1}\right)^\rho}_\mu\partial_\rho S_{cd}(\Lambda)\psi_d\left(\Lambda^{-1}x\right)\nonumber\\
+   &=
+\overline{\psi} \psi\left(\Lambda^{-1}x\right){\left(\Lambda^{-1}\right)^\rho}_\mu \left(S^{-1}(\Lambda)\gamma^\mu S(\Lambda)\right)\partial_\rho\psi\left(\Lambda^{-1}x\right)\nonumber\\
+&=\overline{\psi}(x)\gamma^\mu\partial_\mu\psi(x)\,,
+ \end{align}
+if the following condition is satisfied:
+\begin{align}
+\label{eq:ltrincond}
+  S^{-1}(\Lambda)\gamma^\mu S(\Lambda)={\Lambda^\mu}_\sigma\gamma^\sigma\,.
+\end{align}
+
+
+
+
+the most general Lagrangian for this field is
+\begin{align}
+   \mathcal{L}&=i \overline{\psi} \gamma^\mu\partial_\mu\psi-m\overline{\psi} \psi\,,
+\end{align}
+Where the coefficients have been already fixed by convenience. Since the Action is real, it is convenient to rewrite this as
+\begin{align}
+   \mathcal{L}&=i \overline{\psi} \gamma^\mu\partial_\mu\psi-m\overline{\psi} \psi\nonumber\\
+&=-\frac{1}{2}\partial_\mu\left(i \overline{\psi} \gamma^\mu\psi\right)+i \overline{\psi} \gamma^\mu\partial_\mu\psi-m\overline{\psi} \psi\nonumber\\
+  &=-\frac{i}{2}(\partial_\mu \overline{\psi}) \gamma^\mu\psi-\frac{i}{2} \overline{\psi} \gamma^\mu\partial_\mu\psi+i \overline{\psi} \gamma^\mu\partial_\mu\psi-m\overline{\psi} \psi\nonumber\\
+  &=\frac{i}{2} \overline{\psi} \gamma^\mu\partial_\mu\psi-\frac{i}{2}(\partial_\mu \overline{\psi}) \gamma^\mu\psi-m\overline{\psi} \psi\,.
+\end{align}
+ 
+Para que este nuevo Lagrangiano sea real se requiere que,
+\begin{align}
+  \label{eq:185qft}
+  b^\dagger&=b\nonumber\\
+  b^2&=I\nonumber\\
+  b \gamma_\mu^\dagger b&=\gamma_\mu
+\end{align}
+ya que
+\begin{align*}
+  \mathcal{L}^\dagger&=\left(\frac{i}{2}\psi^\dagger \gamma_\mu^\dagger b \partial_\mu\psi-\frac{i}{2}\partial_\mu\psi^\dagger \gamma_\mu^\dagger b\psi\right)-m\psi^\dagger  b \psi\\
+  &=\left(\frac{i}{2}\psi^\dagger b^2 \gamma_\mu^\dagger b \partial_\mu\psi-\frac{i}{2}\partial_\mu\psi^\dagger b^2 \gamma_\mu^\dagger b\psi\right)-m\psi^\dagger b \psi\\
+  &=\left(\frac{i}{2}\bar{\psi} b \gamma_\mu^\dagger b \partial_\mu\psi-\frac{i}{2}\partial_\mu\bar{\psi}b \gamma_\mu^\dagger b\psi\right)-m\bar{\psi} \psi\\
+  &=\left(\frac{i}{2}\bar{\psi} \gamma_\mu \partial_\mu\psi-\frac{i}{2}\partial_\mu\bar{\psi}\gamma_\mu \psi\right)-m\bar{\psi} \psi
+\end{align*}
+
+\subsection{Corriente conservada y Lagrangiano de Dirac}
+\label{sec:corriente-conservada}
+De la ec.~\eqref{eq:197qft}
+\begin{align}
+  J^0&=\left[\frac{\partial\mathcal{L}}{\partial\left(\partial_0\psi\right)}\right]\delta\psi+\delta\overline{\psi}\left[\frac{\partial\mathcal{L}}{\partial\left(\partial_0\overline{\psi}\right)}\right]\nonumber\\
+  &=i\overline{\psi} \gamma^0 \delta\psi
+\end{align}
+El Lagrangiano es invariante bajo transformaciones de fase globales, $U(1)$
+\begin{equation}
+  \psi\to\psi'=e^{-i\alpha}\psi\approx\psi-i\alpha\psi,
+\end{equation}
+de modo que
+\begin{equation}
+  \delta\psi=-i\alpha\psi.
+\end{equation}
+Por consiguiente
+\begin{equation}
+  J^0=\alpha\overline{\psi} \gamma^0 \psi 
+\end{equation}
+Para que $J^0$ pueda interpretarse como una densidad de probabilidad, se debe cumplir
+\begin{equation}
+  \label{eq:bgamma0}
+  b \gamma^0=I
+\end{equation}
+
+
+La  densidad de corriente es
+\begin{align}
+  J^0&\propto \psi^\dagger\psi\,.
+\end{align}
+Que podemos interpretar como una densidad de probabilidad.
+
+De la ec.~\eqref{eq:bgamma0}, ya que la inversa de es única:
+\begin{align}
+  b=\gamma^0\,.
+\end{align}
+ 
+$\overline{\psi}$ se define como la \emph{adjunta} de $\psi$:
+ \begin{align}
+   \overline{\psi}=\psi^\dagger\gamma^0\,.
+ \end{align}
+
+It is convenient at this point to summarize the properties for $\gamma^0$:
+\begin{align}
+  \label{eq:cft77}
+  {\gamma^0}^\dagger=&\gamma^0 & \left(\gamma^0\right)^2=&1 & \gamma^0{\gamma^\mu}^\dagger\gamma^0=&\gamma^\mu\nonumber\\
+ &&   S^\dagger(\Lambda)\gamma^0S(\Lambda)=&\gamma^0\,. &&
+\end{align}
+
+
+
+En general
+\begin{align}
+   J^\mu&\propto\left[\frac{\partial\mathcal{L}}{\partial\left(\partial_\mu\psi\right)}\right]\delta\psi+\delta\bar{\psi}\left[\frac{\partial\mathcal{L}}{\partial\left(\partial_\mu\bar{\psi}\right)}\right]\nonumber\\
+   &\propto i\bar{\psi}\gamma^\mu(-i\alpha\psi)\nonumber\\
+   &\propto i\bar{\psi}\gamma^\mu(-i\alpha\psi)\nonumber\\
+   &=\bar{\psi}\gamma^\mu\psi
+\end{align}
+y
+\begin{equation}
+     J^\mu=\psi^\dagger b \gamma^\mu\psi\,.
+\end{equation}
+
+\subsection{Tensor momento-energía}
+\label{sec:tens-momento-energi}
+\begin{align}
+  T^0_0&=\frac{\partial\mathcal{L}}{\partial\left(\partial_0\psi\right)}\partial_0\psi+\partial_0\bar{\psi}\frac{\partial\mathcal{L}}{\partial\left(\partial_0\bar{\psi}\right)}-\mathcal{L}\nonumber\\
+  &=i\bar{\psi}\gamma^0\partial_0\psi-\mathcal{L}\nonumber\\
+  &=-i\bar{\psi}\gamma^i\partial_i\psi+m\bar{\psi} \psi,\nonumber\\
+  &=\bar{\psi}(\boldsymbol{\gamma}\cdot\mathbf{p}+m)\psi,\nonumber\\
+  &=\psi^\dagger \gamma^0(\boldsymbol{\gamma}\cdot\mathbf{p}+m)\psi,\nonumber\\
+  \label{eq:118qft}
+  &=\psi^\dagger\hat{H} \psi,
+\end{align}
+donde
+\begin{equation}
+  \label{eq:denshal}
+  \hat{H}= \gamma^0(\boldsymbol{\gamma}\cdot\mathbf{p}+m)
+\end{equation}
+la ecuación de Scröndinger de validez general es entonces:
+\begin{equation}
+  i\frac{\partial}{\partial t}\psi=\hat{H} \psi
+\end{equation}
+y, como en mecánica clásica usual
+\begin{equation}
+  \label{eq:99qft}
+  \langle\hat{H}\rangle=\int \psi^\dagger\hat{H} \psi\,d^3x.
+\end{equation}
+
+
+Además
+\begin{align}
+    T^0_i&=\frac{\partial\mathcal{L}}{\partial\left(\partial_0\psi\right)}\partial_i\psi+\partial_i\bar{\psi}\frac{\partial\mathcal{L}}{\partial\left(\partial_0\bar{\psi}\right)}\nonumber\\
+    &=i\bar{\psi}\gamma^0 \partial_i\psi\nonumber\\
+    &=-\psi^\dagger(-i\partial_i)\psi
+\end{align}
+de modo que
+\begin{equation}
+  \langle\hat{\mathbf{p}}\rangle=\int\psi^\dagger\hat{\mathbf{p}}\psi\,d^3 x
+\end{equation}
+\subsection{Ecuaciones de Euler-Lagrange}
+\label{sec:ecuaciones-de-euler}
+Queremos que el Lagrangiano de lugar a la ecuación de Scröndinger de validez general
+\begin{equation}
+  \label{eq:grlsch}
+  i\frac{\partial}{\partial t}\psi=\hat{H} \psi
+\end{equation}
+con el Hamiltoniano dado en la ec.~(\ref{eq:99qft}), que corresponde a un Lagrangiano de sólo derivadas de primer orden y covariante, en lugar del Hamiltoniano para el caso no relativista. 
+
+De hecho, aplicando las ecuaciones de Euler-Lagrange para el campo $\bar{\psi}$ al Lagrangiano en ec.~(\ref{eq:100qft}) ,tenemos
+\begin{align}
+  \partial_\mu\left[\frac{\partial\mathcal{L}}{\partial\left(\partial_\mu\bar{\psi}\right)}\right]-\frac{\partial\mathcal{L}}{\partial\bar{\psi}}&=0\nonumber\\
+  \frac{\partial\mathcal{L}}{\partial\bar{\psi}}&=0\nonumber\\
+  \label{eq:114qftm}
+  i\gamma^\mu\partial_\mu\psi-m\psi&=0.
+\end{align}
+Expandiendo
+\begin{align*}
+  i\gamma^0\partial_0\psi+i\gamma^i\partial_i\psi-m\psi&=0\\
+  i\gamma^0\partial_0\psi-\boldsymbol{\gamma}\cdot(-i\boldsymbol{\nabla})\psi-m\psi&=0,\\
+  i\gamma^0\partial_0\psi&=(\boldsymbol{\gamma}\cdot\hat{\mathbf{p}}+m)\psi,
+\end{align*}
+de donde
+\begin{equation}
+    i{\gamma^0}^2\frac{\partial}{\partial t}\psi=\gamma^0(\boldsymbol{\gamma}\cdot\mathbf{p}+m)\psi.
+\end{equation}
+ tenemos que
+\begin{align}
+  \label{eq:gamma02}
+  \left(\gamma^0\right)^2=1.
+\end{align}
+De la ec.~(\ref{eq:denshal})
+\begin{equation}
+  \label{eq:186qft}
+  \hat{H}= \gamma^0(\boldsymbol{\gamma}\cdot\mathbf{p}+m),
+\end{equation}
+A este punto, sólo nos queda por determinar los parámetros $\gamma^\mu$. 
+
+La ec.~(\ref{eq:grlsch}) puede escribirse como
+\begin{equation}
+  \left(i\frac{\partial}{\partial t}-\hat{H}\right)\psi=0.
+\end{equation}
+El campo $\psi$ también debe satisfacer la ecuación de Klein-Gordon. Podemos derivar dicha ecuación aplicando el operador
+\begin{equation*}
+  \left(-i\frac{\partial}{\partial t}-\hat{H}\right)
+\end{equation*}
+De modo que, teniendo en cuenta que $\partial\hat H/\partial t=0$,
+\begin{align}
+  \label{eq:105qft}
+ \left(-i\frac{\partial}{\partial t}-\hat{H}\right)\left(i\frac{\partial}{\partial t}-\hat{H}\right)\psi&=0\nonumber\\
+ \left(-i\frac{\partial}{\partial t}-\hat{H}\right)\left(i\frac{\partial\psi}{\partial t}-\hat{H}\psi\right)&=0\nonumber\\
+ \frac{\partial^2\psi}{\partial t^2}+i\left(\frac{\partial\hat{H}}{\partial t}\right)\psi
+ +i\hat{H}\frac{\partial\psi}{\partial t}-i\hat{H}\frac{\partial\psi}{\partial t}+\hat{H}^2\psi&=0\nonumber\\
+ \left(\frac{\partial^2}{\partial t^2}+\hat{H}^2\right)\psi&=0.
+\end{align}
+% 
+De la ec.~(\ref{eq:186qft}), y usando la condición en ec.~(\ref{eq:gamma02}), tenemos
+\begin{align}
+\label{eq:106qft}
+\hat{H}^2&=(\gamma_0\boldsymbol{\gamma}\cdot\mathbf{p}+\gamma_0\,m)(\gamma_0\boldsymbol{\gamma}\cdot\mathbf{p}+\gamma_0\,m)\nonumber\\
+&=(\gamma_0\boldsymbol{\gamma}\cdot\mathbf{p})(\gamma_0\boldsymbol{\gamma}\cdot\mathbf{p})+m\gamma_0\boldsymbol{\gamma}\cdot\mathbf{p}\gamma_0+m\gamma_0^2\boldsymbol{\gamma}\cdot\mathbf{p}+m^2
+\end{align}
+Sea
+\begin{align}
+  \beta&=\gamma^0\nonumber\\
+  \alpha^i&=\beta\gamma^i\nonumber\\
+  \gamma^i&=\beta\alpha^i
+\end{align}
+\begin{align}
+  \hat{H}^2&=(\boldsymbol{\alpha}\cdot\mathbf{p})(\boldsymbol{\alpha}\cdot\mathbf{p})
+  +m\boldsymbol{\alpha}\cdot\mathbf{p}\beta+m\beta\boldsymbol{\alpha}\cdot\mathbf{p}+m^2\nonumber\\
+  &=(\boldsymbol{\alpha}\cdot\mathbf{p})(\boldsymbol{\alpha}\cdot\mathbf{p})
+  +m(\boldsymbol{\alpha}\beta+\beta\boldsymbol{\alpha})\cdot\mathbf{p}+m^2
+\end{align}
+Sea $A$ una matriz y $\theta$ en un escalar. Entonces tenemos la identidad
+\begin{align}
+  \label{eq:206qft}
+  (\mathbf{A}\cdot\boldsymbol{\theta})^2=\sum_i {A^i}^2 {\theta^i}^2+\sum_{i\lt j}\left\{A^i,A^j  \right\}\theta^i \theta^j 
+\end{align}
+\begin{itemize}
+\item \textbf{Demostración}
+  \begin{align}
+    \left[\left(\mathbf{A}\cdot\boldsymbol{\theta}\right)\right]_{\alpha\beta}
+    =&\sum_{i j}\sum_\gamma A^i_{\alpha\gamma}\theta^iA^j_{\gamma\beta}\theta^j\nonumber\\    
+    =&\sum_{i j}\theta^i\theta^j\sum_\gamma A^i_{\alpha\gamma}A^j_{\gamma\beta}\nonumber\\    
+    =&\sum_\gamma \sum_{i j}\theta^i\theta^jA^i_{\alpha\gamma}A^j_{\gamma\beta}\nonumber\\    
+    =&\sum_\gamma \left(\sum_{i}{\theta^i}^2A^i_{\alpha\gamma}A^i_{\gamma\beta}+\sum_{i<j}\theta^i\theta^jA^i_{\alpha\gamma}A^j_{\gamma\beta}+\sum_{i>j}\theta^i\theta^jA^i_{\alpha\gamma}A^j_{\gamma\beta}\right)\nonumber\\    
+    =&\sum_\gamma \left(\sum_{i}{\theta^i}^2A^i_{\alpha\gamma}A^i_{\gamma\beta}+\sum_{i<j}\theta^i\theta^jA^i_{\alpha\gamma}A^j_{\gamma\beta}+\sum_{j>i}\theta^j\theta^iA^j_{\alpha\gamma}A^i_{\gamma\beta}\right)\nonumber\\    
+    =&\sum_\gamma \left[\sum_{i}{\theta^i}^2A^i_{\alpha\gamma}A^i_{\gamma\beta}+\sum_{i<j}\theta^i\theta^j\left(A^i_{\alpha\gamma}A^j_{\gamma\beta}+A^j_{\alpha\gamma}A^i_{\gamma\beta}\right)\right]\nonumber\\    
+    =&\left[\sum_{i}{\theta^i}^2\left(A^iA^i\right)_{\alpha\beta}+\sum_{i<j}\theta^i\theta^j\left\{ A^i,A^j\right\}_{\alpha\beta}\right]\nonumber\\    
+    =&\left[\sum_{i}{\theta^i}^2{A^i}^2+\sum_{i<j}\theta^i\theta^j\left\{ A^i,A^j\right\}\right]_{\alpha\beta}\,.
+  \end{align}
+
+\end{itemize}
+Entonces
+\begin{align}
+  \hat{H}^2=&\alpha_i^2p_i^2+\sum_{i\lt j}\left\{\alpha_i,\alpha_j\right\}p_i p_j+m(\alpha_i \beta+\beta\alpha_i)p_i+m^2
+\end{align}
+(suma sobre índices repetidos). Si
+\begin{align}
+  \label{eq:107qft}
+  \alpha_i^2&=1\nonumber\\
+  \left\{\alpha_i,\alpha_j\right\}&=0\qquad i\neq j\nonumber\\
+  \alpha_i \beta+\beta\alpha_i&=0
+\end{align}
+\begin{equation}
+  \hat{H}^2=-\boldsymbol{\nabla}^2+m^2
+\end{equation}
+y reemplazando en la ec.~\eqref{eq:105qft} llegamos a la ecuación de Klein-Gordon para $\psi$
+\begin{align}
+   \left(\frac{\partial^2}{\partial t^2}-\boldsymbol{\nabla}^2+m^2\right)\psi&=0\nonumber\\
+   \left(\Box+m^2\right)\psi&=0
+\end{align}
+En términos de las matrices $\gamma^\mu$ las condiciones en ec.~\eqref{eq:107qft} son
+\begin{align}
+  \label{eq:108qft}
+  \left({\gamma^0}\right)^2&=1\nonumber\\
+  \left({\alpha^i}\right)^2=1\to\gamma^0\gamma^i \gamma^0\gamma^i=-\left({\gamma^i}\right)^2=1\to\left({\gamma^i}\right)^2&=-1\nonumber\\
+  \gamma^i \gamma^0+\gamma^0\gamma^i=\left\{\gamma^i,\gamma^0\right\}&=0
+\end{align}
+De modo que
+\begin{align}
+  \label{eq:198qft}
+\left\{\alpha^i,\alpha^j\right\}=\gamma^0\gamma^i \gamma^0\gamma^j+\gamma^0\gamma^j \gamma^0\gamma^i&=0\qquad i\neq j\nonumber\\
+-\gamma^0\gamma^0\gamma^i \gamma^j-\gamma^0\gamma^0\gamma^j \gamma^i&=0\qquad i\neq j\nonumber\\
+\gamma^i \gamma^j+\gamma^j \gamma^i&=0\qquad i\neq j\nonumber\\
+\left\{\gamma^i,\gamma^j\right\}&=0\qquad i\neq j
+\end{align}
+Las ecuaciones \eqref{eq:108qft}\eqref{eq:198qft} pueden escribirse como
+\begin{equation}
+  \label{eq:109qft}
+  \left\{\gamma^\mu,\gamma^\nu\right\}\equiv\gamma^\mu\gamma^\nu+\gamma^\nu\gamma^\mu=2g^{\mu\nu}\mathbf{1}
+\end{equation}
+donde
+\begin{align}
+  \gamma^\mu=(\gamma^0,\gamma^i)
+\end{align}
+Además, de la ec.~\eqref{eq:cft77}
+\begin{equation}
+  \label{eq:112qft}
+   \gamma^0{\gamma^\mu}^\dagger \gamma^0=\gamma^\mu.
+\end{equation}
+Cualquier conjunto de matrices que satisfagan el álgebra en ec.~\eqref{eq:109qft} y la condición en ec.~\eqref{eq:112qft}, se conocen como matrices de Dirac. A $\psi$ se le llama espinor de Dirac.
+
+En términos de la matrices $\gamma^\mu$, el Lagrangiano de Dirac y la ecuación de Dirac, son respectivamente de las ecs.~(\ref{eq:100qft}) y (\ref{eq:114qft})
+\begin{equation}
+  \label{eq:115qft}
+  \mathcal{L}=\bar{\psi}\left(i\gamma^\mu\partial_\mu-m\right)\psi,
+\end{equation}
+\begin{equation}
+  \label{eq:116qft}
+  i\gamma^\mu\partial_\mu\psi-m\psi=0,
+\end{equation}
+donde
+\begin{equation}
+  \bar{\psi}=\psi^\dagger\gamma^0.
+\end{equation}
+
+
+
+
+
+\subsection{Propiedades de las matrices de Dirac}
+\label{sec:propiedades-de-las}
+De la ec.~(\ref{eq:112qft})
+\begin{equation}
+  {\gamma^\mu}^\dagger=\gamma^0\gamma^\mu\gamma^0\Rightarrow  
+  \begin{cases}
+    {\gamma^0}^\dagger=\gamma^0&\mu=0\\
+    {\gamma^i}^\dagger=-{\gamma^0}^2\gamma^i=-\gamma^i&\mu=i
+  \end{cases}.
+\end{equation}
+Definiendo
+\begin{equation}
+\label{eq:117qft}
+  \gamma_5=i\gamma_0\gamma_1\gamma_2\gamma_3,
+\end{equation}
+entonces,
+\begin{align}
+  \gamma_5^2=&-\gamma_0\gamma_1\gamma_2\gamma_3\gamma_0\gamma_1\gamma_2\gamma_3\nonumber\\
+  \gamma_5^2=&+\gamma_0^2\gamma_1\gamma_2\gamma_3\gamma_1\gamma_2\gamma_3\nonumber\\
+  \gamma_5^2=&+\gamma_1\gamma_2\gamma_3\gamma_1\gamma_2\gamma_3\nonumber\\
+  \gamma_5^2=&-\gamma_2\gamma_3\gamma_2\gamma_3\nonumber\\
+  \gamma_5^2=&\gamma_2\gamma_2\gamma_3\gamma_3\nonumber\\
+  \gamma_5^2=&\mathbf{1}\,.
+\end{align}
+
+\begin{equation}
+  \gamma_5^2=\mathbf{1},
+\end{equation}
+Teniendo en cuenta que $\gamma_\mu^2\propto\mathbf{1}$ y conmuta con las demás matrices, tenemos por ejemplo
+\begin{align}
+  \gamma_5\gamma_3=&i\gamma_0\gamma_1\gamma_2\gamma_3^2=\gamma_3^2i\gamma_0\gamma_1\gamma_2=-\gamma_3i\gamma_0\gamma_1\gamma_2\gamma_3=-\gamma_3\gamma_5\nonumber\\
+  \gamma_5\gamma_2=&-i\gamma_0\gamma_1\gamma_2^2\gamma_3=-\gamma_2^2i\gamma_0\gamma_1\gamma_3=-\gamma_2i\gamma_0\gamma_1\gamma_2\gamma_3=-\gamma_2\gamma_5\nonumber\\
+  \gamma_5\gamma_1=&i\gamma_0\gamma_1^2\gamma_2\gamma_3=\gamma_1^2i\gamma_0\gamma_2\gamma_3=-\gamma_1i\gamma_0\gamma_1\gamma_2\gamma_3=-\gamma_1\gamma_5\nonumber\\
+  \gamma_5\gamma_0=&i\gamma_0\gamma_1\gamma_2\gamma_3\gamma_0=-\gamma_0^2i\gamma_1\gamma_2\gamma_3=-\gamma_0\gamma_5\,.
+\end{align}
+De modo que
+\begin{equation}
+  \label{eq:218qft}
+  \left\{\gamma_\mu,\gamma_5\right\}=0. 
+\end{equation}
+Expandiendo el anticonmutador tenemos
+\begin{align}
+  \gamma_\mu\gamma_5=-\gamma_5\gamma_\mu\nonumber\\
+  \gamma_5\gamma_\mu\gamma_5=-\gamma_\mu\nonumber\\
+\operatorname{Tr}\left(\gamma_5\gamma_\mu\gamma_5\right)=-\operatorname{Tr}\gamma_\mu\nonumber\\
+\operatorname{Tr}\left(\gamma_5\gamma_5\gamma_\mu\right)=-\operatorname{Tr}\gamma_\mu\nonumber\\
+\operatorname{Tr}\gamma_\mu=-\operatorname{Tr}\gamma_\mu,
+\end{align}
+y por consiguiente
+\begin{equation}
+  \operatorname{Tr}\gamma_\mu=0.
+\end{equation}
+
+
+De otro lado, si
+\begin{equation}
+  \tilde{\gamma_\mu}\equiv U\gamma_\mu U^\dagger,
+\end{equation}
+para alguna matriz unitaria $U$, entonces $\tilde{\gamma_\mu}$ corresponde a otra representación de álgebra de Dirac en ec.~(\ref{eq:109qft}), ya que
+\begin{align}
+  \left\{\tilde\gamma^\mu,\tilde\gamma^\nu\right\}&=\left\{U\gamma^\mu U^\dagger,U\gamma^\nu U^\dagger\right\}\nonumber\\
+  &=U\left\{\gamma^\mu,\gamma^\nu\right\}U^\dagger\nonumber\\
+  &=2g^{\mu\nu}UU^\dagger\nonumber\\
+  &=2g^{\mu\nu}\mathbf{1}.
+\end{align}
+Claramente, la condición en ec.~(\ref{eq:112qft}) se mantiene para la nueva representación. Como $\gamma_0$ es hermítica, siempre es posible escoger una representación tal que $\tilde{\gamma_0}\equiv U\gamma_0U^\dagger$ sea diagonal. Como $\gamma_0^2=1$, sus entradas en la diagonal deben ser $\pm1$, y como $\operatorname{Tr}\tilde\gamma_0=0$, debe existir igual número de $+1$ que de $-1$. Por lo tanto la dimensión de $\gamma_0$ (y de $\gamma_\mu$) debe ser par: $2,4,\ldots$. Para un fermion sin masa
+\begin{align}
+  \mathcal{L}=i\psi^\dagger\gamma^0\gamma^0\partial_0\psi+i\psi^\dagger\gamma^0\gamma^i\partial_i\psi=i\psi^\dagger\partial_0\psi+i\psi^\dagger\alpha^i\partial_i\psi\,,
+\end{align}
+solo se requieren tres matrices $2\times 2$ que satisfacen
+\begin{align}
+  \left\{\alpha^i,\alpha^j\right\} =2\delta^{ij}\,,
+\end{align}
+y por lo tanto pueden identificarse con las tres matrices de Pauli. 
+Como en general tenemos 4 matrices independientes, su dimensión mínima debe ser 4.
+
+Como $\tilde\gamma^i=\gamma^0\gamma^i\gamma^0={\gamma^i}^\dagger=-\gamma^i$, podemos definir la \emph{representación de paridad}
+\begin{align}
+\label{eq:parityrep}
+\tilde\gamma^0=&\gamma^0,\qquad\tilde\gamma^i=-\gamma^i\,,&\text{para}\qquad U=&\gamma^0   
+\end{align}
+
+
+
+
+\begin{inprogress}
+  \subsection{Dirac representation}
+The set of $4\times 4$ matrices
+\begin{align}
+  S^{\mu\nu}=\frac{i}{4}\left[\gamma^\mu,\gamma^\nu\right]\,,
+\end{align}
+also satisfy the commutations relations \eqref{eq:lrtalg}, and constitute a new matrix representation of the Lorentz Group. The subgroup of rotation group has the generators $S^{ij}$. We define the spin matrices:
+\begin{align}
+  \Sigma^i=\epsilon^{ijk}S_{jk}\,,
+\end{align}
+taking into account that
+\begin{align}
+  \gamma_0\gamma_i\gamma_5=-\epsilon_{0ijk}S^{jk}\,,
+\end{align}
+Taking th convention $\epsilon_{0ijk}=\epsilon_{ijk}$, we have
+\begin{align}
+  \Sigma_{i}=-\gamma_0\gamma_i\gamma_5\,.
+\end{align}
+With this form, it is easy to show that
+\begin{align}
+  \left\{\Sigma_i,\Sigma_j\right\}=2\delta_{ij}\,, 
+\end{align}
+so that 
+\begin{align}
+  \left[\frac{\Sigma^i}{2},\frac{\Sigma^j}{2} \right]=i\,\epsilon_{ijk}\frac{\Sigma^k}{2}
+\end{align}
+\end{inprogress}
+
+
+\subsection{Lorentz Group}
+We must build a representation of the Lorentz Group in the Dirac space of $n$ dimensions. First, let us consider a simpler group, corresponding to the rotation group in tree dimensions. The generators are the angular momentum operators $J^i$, which satisfy the commutation relations
+\begin{align}
+\label{eq:rotgr}
+  \left[J^i,J^j\right]=i\epsilon^{ijk}J^k\,.
+\end{align}
+The Pauli matrices are set of matrices satisfying this commutation relations:
+\begin{equation}
+  \label{eq:paulialg}
+  \left[\frac{\tau^i}{2},\frac{\tau^j}{2} \right]=i\,\epsilon_{ijk}\frac{\tau^k}{2}
+\end{equation}
+donde $\tau^i$ 
+\begin{equation}
+  \label{eq:paulimatr}
+  \tau_1=
+  \begin{pmatrix}
+    0&1\\
+    1&0
+  \end{pmatrix} \qquad
+ \tau_2=
+  \begin{pmatrix}
+    0&-i\\
+    i&0
+  \end{pmatrix}\qquad 
+ \tau_3=
+  \begin{pmatrix}
+    1&0\\
+    0&-1
+  \end{pmatrix}
+ \end{equation}
+dividas por dos, corresponden a los generadores del Grupo. Las constantes de estructura del Grupo corresponden a $\epsilon_{ijk}$. Como los generadores no conmutan, $SU(2)$ es un Grupo de Lie no Abeliano. Definiendo los generadores de $SU(2)$ como
+\begin{equation}
+  T^i=\frac{\tau_i}{2},
+\end{equation}
+un elemento del Grupo puede escribirse como
+\begin{equation}
+  \label{eq:63qft}
+  U=e^{iT^i \theta_i }\approx1+iT^i\theta_i=1+i\frac{\tau^i}{2}\theta_i\,.
+\end{equation}
+Como antes, $\theta_i$ es el parámetro de la transformación. 
+
+Las matrices de Pauli y por consiguiente $T_i$ satisfacen 
+\begin{align}
+  \tau_i^\dagger&=\tau_i\nonumber\\
+  \operatorname{Tr}  \left(
+    \tau_i
+  \right)&=0
+\end{align}
+Además
+\begin{align}
+  \label{eq:64qft}
+  \det
+  \left(
+    \tau_i
+  \right)&=-1\nonumber\\
+  \left\{ 
+    \tau_i,\tau_j
+  \right\}&=2\delta_{ij}\cdot I\Rightarrow\tau_i^2=I\nonumber \\
+\operatorname{Tr} \left(\tau^i\tau^j\right)&=2\delta^{ij}\nonumber\\
+\tau_i\tau_j&=i\epsilon_{ijk}\tau_k+\delta_{ij}
+\end{align}
+In \cite{Peskin}:
+\begin{quote}
+  It is generally true that one can find matrix representations of a continuous group by finding matrix representations of the generators of the group (which must satisfy the proper commutation relations), then exponentiating these infinitesimal representations. 
+
+For our present problem, we need to know the commutation relations of the generators of the group of Lorentz transformations. For the rotation group, one can work the commutation relations by writing the generators as differential operators; from the expression
+\begin{align}
+  \mathbf{J}=\mathbf{x}\times \mathbf{p}=\mathbf{x}\times (-i\boldsymbol{\nabla})\,,
+\end{align}
+the angular momentum commutation relations \eqref{eq:rotgr} follow straightforwardly. 
+\end{quote}
+The last equation can be written as (summation of repeated indices)
+\begin{align}
+  J^k=\left[\mathbf{x}\times (-i\boldsymbol{\nabla})\right]^k=&
+-i\epsilon_{ijk}x^i\partial_j=i\epsilon_{ijk}x^i\partial^j
+\end{align}
+\begin{align}
+  J^{l m}\equiv\epsilon_{lmk}J^k=&i\epsilon_{lmk}\epsilon_{ijk}x^i\partial^j\nonumber\\
+=&i(\delta_{li}\delta_{mj}-\delta_{lj}\delta_{mi})x^i\partial^j\nonumber\\
+=&i(x^l\partial^m-x^m\partial^l)\,.
+\end{align}
+Involving three generators. The generalization to four-dimensions give to arise three further generators $J^{0i}$:
+\begin{align}
+  J^{\mu\nu}=i(x^\mu\partial^\nu-x^\nu\partial^\mu)\,.
+\end{align}
+The six generators $J^{\mu\nu}$ satisfy the algebra
+\begin{align}
+\label{eq:lrtalg}
+  \left[J^{\mu\nu},J^{\rho\sigma}\right]=&
+i(g^{\nu\rho}J^{\mu\sigma}-g^{\mu\rho}J^{\nu\sigma}-g^{\nu\sigma}J^{\mu\rho}+g^{\mu\sigma}J^{\nu\rho})\,.
+\end{align}
+From \cite{Peskin}:
+\begin{quote}
+  Any matrices that are to represent this algebra must obey these same commutation rules. 
+\end{quote}
+
+The exponentiation of the generators give to arise to group elements
+\begin{align}
+  \Lambda=\exp\left(-i\omega_{\mu\nu}\frac{J^{\mu\nu}}{2}\right)
+\end{align}
+
+
+To find a representation of the usual boosts and rotations, 
+consider a boost
+\begin{equation}
+  \left\{x^\mu\right\}=\begin{pmatrix}
+    t\\
+    x\\
+    y\\
+    z
+  \end{pmatrix}\to
+  \begin{pmatrix}
+    t'\\
+    x'\\
+    y'\\
+    z'
+  \end{pmatrix}=
+  \begin{pmatrix}
+    \frac{t+vx}{\sqrt{1-v^2}}\\
+    \frac{x+vt}{\sqrt{1-v^2}}\\
+    y\\
+    z
+  \end{pmatrix}=
+  \begin{pmatrix}
+    \cosh\xi&\sinh\xi&0&0\\
+    \sinh\xi&\cosh\xi&0&0\\
+    0     &  0  &1&0\\
+    0     &  0  &0&1
+  \end{pmatrix}
+  \begin{pmatrix}
+    t\\
+    x\\
+    y\\
+    z
+  \end{pmatrix}=\left\{{\Lambda^\mu}_{\nu}\right\}\left\{x^\nu\right\},
+\end{equation}
+Since
+\begin{align}
+  \cosh\xi=&\sum_{n=0}^{\infty}\frac{\xi^{2n}}{2n!}\approx 1+\mathcal{O}(\xi^2)\nonumber\\
+  \sinh\xi=&\sum_{n=0}^{\infty}\frac{\xi^{2n+1}}{(2n+1)!}\approx \xi+\mathcal{O}(\xi^2)\,,
+\end{align}
+one infinitesimal boost along $x$ is
+\begin{align}
+  \left\{{\Lambda^\mu}_{\nu}\right\}_{x-\text{boost }}\approx
+  \begin{pmatrix}
+    1&\xi&0&0\\
+    \xi&1&0&0\\
+    0&0&1&0\\
+    0&0&0&1
+  \end{pmatrix}.
+\end{align}
+Similarly a rotation by an infinitesimal angle $\theta=\theta_3$ along $xy$--plane (or about the $z$--axis)
+\begin{align}
+  \left\{{\Lambda^\mu}_{\nu}\right\}_{xy-\text{rotation }}\approx
+  \begin{pmatrix}
+    1&0&0&0\\
+    0&1&\theta&0\\
+    0&-\theta&1&0\\
+    0&0&0&1
+  \end{pmatrix}.
+\end{align}
+In general we define the six independent Lorentz--Group parameters:
+\begin{align}
+  \omega_{0i}=-\omega_{i0}\equiv&\xi_i \nonumber\\
+  \omega_{12}=-\omega_{21}\equiv&\theta_3 &   \omega_{32}=-\omega_{23}\equiv&-\theta_2 &   \omega_{13}=-\omega_{31}\equiv&\theta_1\,.
+\end{align}
+The $4\times 4$ matrices
+\begin{align}
+  \left(J^{\mu\nu}\right)_{\alpha\beta}=i\left({\delta^\mu}_\alpha{\delta^\nu}_\beta-{\delta^\nu}_\beta{\delta^\mu}_\alpha\right)\,,
+\end{align}
+where $\mu$ and $\nu$ label which of the six matrices we want, while $\alpha$ and $\beta$ label components of the matrices. These matrices satisfy the commutations relations \eqref{eq:lrtalg}, and generate the three boosts and three rotations of the ordinary Lorentz 4-vectors:
+\begin{align}
+  {\Lambda^\alpha}_\beta\approx{\delta^\alpha}_\beta-\frac{i}{2}\omega_{\mu\nu}{\left(J^{\mu\nu}\right)^\alpha}_\beta
+\end{align}
+%ver programa mathematica
+\begin{align}
+\label{eq:lorentzrep}
+  \Lambda=1+\xi_ib^i+\frac{1}{2}\theta_i\epsilon_{i j k}r^{jk}\,,
+\end{align}
+\begin{align}
+ b^i=&-i J^{i0} & r^{jk}=-i J^{j k}\,.
+\end{align}
+
+\subsection{Lorentz invariance of the Dirac Action}
+We need to satisfy the following conditions
+\begin{align}
+  S^{-1}(\Lambda) \gamma^\mu S(\Lambda)=&{\Lambda^\mu}_\nu\gamma^\nu\nonumber\\
+  S^\dagger(\Lambda) \gamma^0 S(\Lambda)=&\gamma^0\qquad\text{or}\quad S^\dagger(\Lambda) \gamma^0= \gamma^0S^{-1}(\Lambda)\, .
+\end{align}
+
+In order to find a representation of the Lorentz Group in terms of the Dirac matrices we propose
+  \begin{align}
+    \label{eq:diraclorentzrep}
+  S(\Lambda)=1+\xi_iB^i+\frac{1}{2}\theta_i\epsilon_{i j k}R^{jk}\,.
+\end{align}
+Instead of show the Lorentz invariance of the Dirac Action, we use the conditions derived from the invariance, to find a representation in terms of the Dirac matrices for $B^i$ and $R^{jk}$. As a consistency check, the resulting representation would satisfy the Lorentz algebra. In this way, by using eq.~\eqref{eq:lorentzrep} and \eqref{eq:diraclorentzrep}, we obtain from 
+\begin{align}
+  S^{-1}(\Lambda)\gamma^\mu S(\Lambda)={\Lambda^\mu}_\nu\gamma^\nu\,,
+\end{align}
+that
+\begin{align}
+  B^i=\frac{1}{2}\gamma^0\gamma^i\nonumber\\
+  R^{jk}=&\frac{1}{2}\gamma^j\gamma^k\,,
+\end{align}
+which can be written in covariant form if we define
+\begin{align}
+  \mathcal{S}^{\mu\nu}=\frac{i}{4}\left[\gamma^\mu,\gamma^\nu\right]\,.
+\end{align}
+In fact, the six set of non-zero independently generators are
+\begin{align}
+  \mathcal{S}^{0i}=&\frac{i}{4}\left(\gamma^0\gamma^i-\gamma^i\gamma^0\right)=\frac{i}{2}\gamma^0\gamma^i= i B^i\nonumber\\
+  \mathcal{S}^{i j}=&\frac{i}{4}\left(\gamma^i\gamma^j-\gamma^j\gamma^i\right)=\frac{i}{2}\gamma^i\gamma^j= i R^{i j}\,.
+\end{align}
+It is worth notices that in fact $\mathcal{S}^{\mu\nu}$ satisfy the Lorentz algebra, and therefore are the generators of the Lorentz group elements:
+\begin{align}
+  S(\Lambda)=&\exp\left(-i \omega_{\mu\nu}\frac{\mathcal{S}^{\mu\nu}}{2}\right)\nonumber\\
+  \approx&1-\frac{i}{2} \omega_{\mu\nu}{\mathcal{S}^{\mu\nu}}\,.
+\end{align}
+Another consistency check is
+\begin{align}
+  S^\dagger(\Lambda)\gamma^0S(\Lambda)=&\gamma^0\,,
+\end{align}
+or equivalently
+\begin{align}
+S^\dagger(\Lambda)\gamma^0=&\gamma^0S^{-1}(\Lambda)\nonumber\\
+\left(1+\frac{i}{2} \omega_{\mu\nu}{\mathcal{S}^{\mu\nu}}^\dagger \right)\gamma^0=&\gamma^0\left(1+\frac{i}{2} \omega_{\mu\nu}{\mathcal{S}^{\mu\nu}}\right)\nonumber\\
+{\mathcal{S}^{\mu\nu}}^\dagger \gamma^0=&\gamma^0{\mathcal{S}^{\mu\nu}}\,.
+\end{align}
+Taking into account that
+\begin{align}
+  {\gamma^\mu}^\dagger{\gamma^\nu}^\dagger\gamma^0=\left(\gamma^0\right)^2{\gamma^\mu}^\dagger\left(\gamma^0\right)^2{\gamma^\nu}^\dagger\gamma^0=\gamma^0\gamma^\mu\gamma^\nu\,,
+\end{align}
+we have
+\begin{align}
+  {\mathcal{S}^{\mu\nu}}^\dagger \gamma^0=&-\frac{i}{4}\left[\gamma^\mu,\gamma^\nu\right]^\dagger\gamma^0\nonumber\\
+=&-\frac{i}{4}\left[{\gamma^\nu}^\dagger,{\gamma^\mu}^\dagger\right]\gamma^0\nonumber\\
+=&\frac{i}{4}\left[{\gamma^\mu}^\dagger,{\gamma^\nu}^\dagger\right]\gamma^0\nonumber\\
+=&\frac{i}{4}\left[{\gamma^\mu},{\gamma^\nu}\right]\gamma^0\nonumber\\
+=&\gamma^0\mathcal{S}^{\mu\nu}\nonumber\\
+\end{align}
+
+
+\subsection{Dirac's Lagrangian}
+\label{sec:diracs-lagrangian}
+
+Para una matriz de $n$ dimensiones existen $n^2$ matrices hermíticas (o anti--hermíticas) independientes. Si se sustrae la identidad quedan $n^2-1$ matrices hermíticas (o anti--hermíticas) independientes de traza nula. En el caso $n=2$ corresponden a las 3 matrices de Pauli. En el caso de la ecuación de Dirac se requieren 4 matrices independientes, por lo tanto deben ser matrices $4\times 4$. En efecto para $n=4$ existen 15 matrices independientes de traza nula dentro de las cuales podemos acomodar sin problemas las 4 $\gamma^\mu$. 
+
+De \cite{Gross:1993}:
+\begin{quote}
+  All Dirac matrix elements will now be written in the form
+  \begin{align}
+    \overline{\psi}(x)\Gamma\psi(x)\,,
+  \end{align}
+where $\Gamma$ is a $4\times 4$ complex matrix. The most general such matrix can always be expanded in terms of 16 independent $4\times 4$ matrices multiplied by complex coefficients. In short the matrices $\Gamma$ can be regarded as a \emph{16--dimensional complex vector space} spanned by 16 matrices.
+
+It is convenient to choose the 16 matrices, $\Gamma_i$, so that they have well defined transformation properties under the Lorentz Transformations. Since the $\gamma^\mu$'s have such properties, we are lead to choose the following 16 matrices for this basis:
+\end{quote}
+
+
+En la Tabla~\ref{tab:Gamma} se muestran las matrices de traza nula con sus propiedades de transformación bajo el Grupo de Lorentz. En la última se muestra el correspondiente escalar en el espacio de Dirac $\bar\psi\Gamma\psi$.
+%instiki:
+\begin{table} %noinstiki
+  \centering %noinstiki
+  \begin{tabular}{l|l|l|l} %noinstiki
+Matriz $\Gamma$&Transformación&Número&Escalar en Dirac\\\hline{}
+%instiki:
+$\mathbf{1}$&Escalar (S)&1&$\bar\psi\psi$\\
+%instiki:
+$\gamma_5$&Pseudoescalar (P)&1&$\bar\psi\gamma_5\psi$\\
+%instiki:
+$\gamma_\mu$&Vector (V)&4&$\bar\psi\gamma_\mu\psi$\\
+%instiki:
+$\gamma_\mu\gamma_5$ &Vector axial (A)&4&$\bar\psi\gamma_\mu\gamma_5\psi$\\
+%instiki:
+$\sigma_{\mu\nu}=\frac{i}{2}\left[\gamma_\mu,\gamma_\nu\right]$&Tensor antisimétrico (T)&6&$\bar\psi\sigma_{\mu\nu}\psi$\\\hline{}
+%instiki:
+&&16&\\
+  \end{tabular} %noinstiki
+  \caption{Matrices $\Gamma_i$.} %noinstiki
+\label{tab:Gamma} %noinstiki
+\end{table} %noinstiki
+%instiki:
+Demostración
+\begin{align}
+J^\mu(x)\equiv  \bar\psi(x)\gamma^\mu\psi(x)\to&\bar\psi(\Lambda^{-1}x)S^{-1}(\Lambda)\gamma^\mu S(\Lambda)\psi(\Lambda^{-1}x) \nonumber\\
+=&{\Lambda^\mu}_\nu\bar\psi(\Lambda^{-1}x) \gamma^\nu\psi(\Lambda^{-1}x) \nonumber\\
+=&{\Lambda^\mu}_\nu J^\nu(\Lambda^{-1}x)\,.
+\end{align}
+In \cite{Gross:1993}: Problem 5.4: 
+\begin{align}
+  \overline{\psi}\gamma_5\psi\to\overline{\psi}S^{-1}(\Lambda)\gamma^5S(\Lambda)\psi =(\det\Lambda)\overline{\psi}\gamma_5\psi
+\end{align}
+The solution is in Appendix C. of Burgess book, by using
+\begin{align}
+  \gamma^5=\frac{i}{24}\epsilon_{\mu\nu\alpha\beta}\gamma^\mu\gamma^\nu\gamma^\alpha\gamma^\beta
+\end{align}
+and
+\begin{align}
+  \det \Lambda=\epsilon_{\mu\nu\alpha\beta}{\Lambda^\mu}_1{\Lambda^\nu}_2{\Lambda^\alpha}_3{\Lambda^\beta}_4\,.
+\end{align}
+
+
+
 
 \section{Problemas}
 \label{sec:problemas2}
