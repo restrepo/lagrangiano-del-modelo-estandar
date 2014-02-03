@@ -71,12 +71,40 @@
 %\renewcommand{\tofc}[1]{} %if  \includeonly{chapter1}
 %\includeonly{chapter6}
 \begin{document}
+
+
+\renewcommand{\thepage}{\roman{page}}
+\begin{titlepage}
+  \begin{center}
+
+    
+\textbf{\huge   El Lagrangiano del Modelo Estándar}
+
+    
+
+\vspace{4cm}
+ Diego Restrepo\\
+Instituto de Física\\
+Universidad de Antioquia\\
+2012
+    
+  \end{center}
+\end{titlepage}
+
+\include{license}
+
+
+
 \tofc{
 \renewcommand{\thepage}{\roman{page}}
 \tableofcontents{}
 
 \newpage{}
 }
+
+
+
+
 
 \renewcommand{\thepage}{\arabic{page}}
 \setcounter{page}{1}
