@@ -480,7 +480,7 @@ Note que tanto para la Electrodinámica Cuántica como para la Cromodinámica Cu
 \label{sec:ferm-quir-de}
 En general un fermion puede descomponerse en sus partes izquierdas y derechas
 \begin{align}
-  \mathcal{L}  =&i\overline{\psi_R}\gamma^\mu\partial_\mu\psi_R+i\overline{\psi_L}\gamma^\mu\partial_\mu\psi_L-m(\overline{\psi_R}\psi_L+\overline{\psi_L}\psi_R)\,.
+  \mathcal{L}  =&i \left(\overline{\psi_R}+\overline{\psi_L}  \right)\gamma^\mu\partial_\mu \left(\psi_R+\psi_L\right)-m\left(\overline{\psi_R}+\overline{\psi_L}  \right)\left(\psi_R+\psi_L\right)\,.
 \end{align}
 
 
@@ -520,9 +520,12 @@ Si para alguna partícula, como es el caso del neutrino, no existe la componente
 
 Definiendo un espinor de  Weyl de dos componentes como
 \begin{align*}
-  \psi_L=  \begin{pmatrix}
+  \psi_L=&  \begin{pmatrix}
     \widetilde{\psi}_L\\
     0 
+  \end{pmatrix}&  \psi_R=&  \begin{pmatrix}
+    0\\
+    \widetilde{\psi}_R
   \end{pmatrix}
 \end{align*}
 Usando la representación de Weyl para las matrices de Dirac
@@ -541,13 +544,11 @@ tenemos que
 \begin{align*}
   \gamma_5=
   \begin{pmatrix}
-    1 &0\\
-    0&-1\\
+    -1 &0\\
+    0&1\\
   \end{pmatrix}
 \end{align*}
-Entonces
-
-Sea
+Entonces, podemos definir
 \begin{align}
   P_L\equiv&\frac{1-\gamma_5}{2}\nonumber\\
   P_R\equiv&\frac{1+\gamma_5}{2}\,.
@@ -588,7 +589,7 @@ Se puede demostrar como se hace en detalle en \ref{sec:lagrangiano-de-weyl} que 
 \begin{align*}
    \boldsymbol{\sigma}\cdot \mathbf{p}\widetilde{\psi}_{L(R)}=\mp \widetilde{\psi}_{L(R)}
 \end{align*}
-
+que justifica porque el proyector de helicidad actua sobre las partes izquierdas y derechas de los campos.
 
 De otro lado, si una determinada interacción, como es el caso de la interacción débil, solo participa la componente izquierda de la ec.~\eqref{eq:224qft}, está corresponde a una interacción del tipo
 \begin{align}
@@ -597,6 +598,593 @@ De otro lado, si una determinada interacción, como es el caso de la interacció
   &=\tfrac{1}{2}\overline{\psi}\left(\gamma^\mu-\gamma^\mu\gamma_5\right)\psi\,,
 \end{align}
 que de acuerdo a la asignación en la Tabla corresponde a una corriente V--A.
+
+
+
+
+\section{Soluciones a la ecuaci\'on de Dirac}
+\label{sec:soluc-la-ecuac}
+
+\subsection{Lagrangiano de Weyl}
+\label{sec:lagrangiano-de-weyl}
+
+
+En la ec.~\eqref{eq:118}, obtuvimos el Hamiltoniano en ec.~\eqref{eq:103}
+\begin{equation}
+  \hat{H}= \gamma_0(\boldsymbol{\gamma}\cdot\mathbf{p}+m)=\boldsymbol{\alpha}\cdot\mathbf{p}+\beta m\,.
+\end{equation}
+Una escogencia particular de las cuatro matrices $\gamma^\mu$, conocida como la representaci\'on de Weyl, o representaci\'on quiral, puede escribirse en t\'erminos de la matrices de Pauli. Escritas en bloques $2\times2$, tenemos
+\begin{equation}
+  \gamma^0=
+  \begin{pmatrix}
+    0&\sigma_0\\
+    \sigma_0&0
+  \end{pmatrix}\qquad
+  \gamma_i=\begin{pmatrix}
+    0&\sigma_i\\
+    -\sigma_i&0
+  \end{pmatrix}.
+\end{equation}
+Con $\sigma^0=1$. Con la matriz de tranformaci\'on
+\begin{equation}
+  U=\frac{1}{\sqrt{2}}
+  \begin{pmatrix}
+    1&1\\
+    -1&1    
+  \end{pmatrix}
+\end{equation}
+podemos obtener la representaci\'on de Dirac, tal que $U$ diagonaliza $\gamma^0$,
+\begin{equation}
+  \gamma^0=
+  \begin{pmatrix}
+    \sigma^0&0\\
+    0&-\sigma^0
+  \end{pmatrix}\qquad
+  \gamma_i=\begin{pmatrix}
+    0&\sigma_i\\
+    -\sigma_i&0
+  \end{pmatrix}.
+\end{equation}
+En adelante trabajaremos en la representaci\'on de Weyl que en forma compacta es
+\begin{equation}
+  \gamma^\mu=\begin{pmatrix}
+    0&\sigma^\mu\\
+    \bar{\sigma}^\mu & 0
+  \end{pmatrix}
+\end{equation}
+donde
+\begin{align}
+  \sigma^\mu&=(\sigma^0,\sigma^1,\sigma^2,\sigma^3)\nonumber\\
+  \bar{\sigma}^\mu&=(\sigma^0,-\sigma^1,-\sigma^2,-\sigma^3)\nonumber\\
+\end{align}
+Hemos escrito las matrices de Dirac en bloques $2\times2$, y es natural escribir similarmente las cuatro componentes del campo de Dirac como un par de campos de dos componentes
+\begin{align}
+  \psi=  \begin{pmatrix}
+    \psi_L\\
+    \psi_R    
+  \end{pmatrix}=\begin{pmatrix}
+    \psi_L\\
+    0   
+  \end{pmatrix}+\begin{pmatrix}
+    0\\
+    \psi_R    
+  \end{pmatrix}
+\end{align}
+Donde $\psi_{L,R}$ son espinores de Weyl de dos componentes. En la representaci\'on de Weyl el Lagrangiano se puede escribir como
+\begin{align}
+\label{eq:200}
+  \mathcal{L}=&i\bar{\psi}\gamma^\mu\partial_\mu\psi-m\bar{\psi}\psi\nonumber\\
+  =&i\psi^\dagger \gamma^0\gamma^\mu\partial_\mu\psi-m\psi^\dagger \gamma^0 \psi\nonumber\\
+  =&i\psi^\dagger  \begin{pmatrix}
+    0 & 1\\
+    1&0
+  \end{pmatrix}
+  \begin{pmatrix}
+    0 &\sigma^\mu \\
+    \bar{\sigma}^\mu&0
+  \end{pmatrix}\partial_\mu\psi-m\psi^\dagger
+  \begin{pmatrix}
+    0 & 1\\
+    1&0
+  \end{pmatrix}\psi\nonumber\\
+=&i\begin{pmatrix}
+ \psi_L^\dagger & \psi_R^\dagger
+\end{pmatrix}
+ \begin{pmatrix}
+   \bar{\sigma}^\mu &0\\
+   0&\sigma^\mu
+ \end{pmatrix} \begin{pmatrix}
+   \partial_\mu\psi_L\\
+   \partial_\mu\psi_R
+ \end{pmatrix}-m
+ \begin{pmatrix}
+   \psi_L^\dagger&\psi_R^\dagger
+ \end{pmatrix}
+ \begin{pmatrix}
+   0&1\\
+   1&0
+ \end{pmatrix}
+ \begin{pmatrix}
+   \psi_L\\ \psi_R
+ \end{pmatrix}\nonumber\\
+ =& i\psi_L^\dagger \bar{\sigma}^\mu\partial_\mu\psi_L+i\psi_R^\dagger \sigma^\mu\partial_\mu\psi_R
+  -m(\psi_L^\dagger \psi_R+\psi_R^\dagger \psi_L)
+\end{align}
+
+\subsection{Ecuaciones de Weyl}
+\label{sec:ecuaciones-de-weyl}
+Las ecuaciones de Euler-Lagrango para el Lagrangiano en ec.\eqref{eq:200}, dan como resultado
+\begin{align}
+  i\bar{\sigma}^\mu\partial_\mu\psi_L -m\psi_R &=0\nonumber\\
+  i{\sigma}^\mu\partial_\mu\psi_R -m\psi_L &=0
+\end{align}
+Expandiendo
+\begin{align}
+  \label{eq:209}
+   i{\sigma}^0\partial_0\psi_L-i{\sigma}^i\partial_i\psi_L -m\psi_R &=0\nonumber\\
+   i{\sigma}^0\partial_0\psi_R+i{\sigma}^i\partial_i\psi_R -m\psi_L &=0
+\end{align}
+que pueden escribirse como
+\begin{align}
+  \label{eq:207}
+   i\partial_0\psi_L-i\boldsymbol{\sigma}\cdot\boldsymbol{\nabla}\psi_L -m\psi_R &=0\nonumber\\
+   i\partial_0\psi_R+i\boldsymbol{\sigma}\cdot\boldsymbol{\nabla}\psi_R -m\psi_L &=0
+\end{align}
+Para el Lagrangiano invariante gauge local $U(1)$ en ec.\eqref{eq:201}, tendr\'\i amos
+\begin{align}
+  i\bar{\sigma}^\mu\mathcal{D}_\mu\psi_L -m\psi_R &=0\nonumber\\
+  i{\sigma}^\mu\mathcal{D}_\mu\psi_R -m\psi_L &=0
+\end{align}
+Expandiendo, para $\mathcal{D}^\mu$ dado en la ec.\eqref{eq:202}, con $q=-e$
+\begin{equation}
+  \mathcal{D}_\mu=\partial_\mu+i q A_\mu
+\end{equation}
+Tenemos
+\begin{align}
+     i(\partial_0+i q A_0)\psi_L-i{\sigma}^i(\partial_i+i q A_i)\psi_L -m\psi_R &=0\nonumber\\
+   i(\partial_0+i q A_0)\psi_R+i{\sigma}^i(\partial_i+i q A_i)\psi_R -m\psi_L &=0
+\end{align}
+de donde
+\begin{align}
+\label{eq:203}
+     (i\partial_0- q A_0)\psi_L-{\sigma}^i(i\partial_i-q A_i)\psi_L -m\psi_R &=0\nonumber\\
+   (i\partial_0-q A_0)\psi_R+{\sigma}^i(i\partial_i-q A_i)\psi_R -m\psi_L &=0
+\end{align}
+\section{Esp\'\i n}
+\label{sec:espin}
+El momento angular est\'a descrito por el \'algebra
+\begin{equation}
+  [\hat L_i,\hat L_j]=i\epsilon_{ijk}\hat L_k
+\end{equation}
+Si dos operadores no conmutan no es posible conocer sus autovalores simult\'aneamente. Sin embargo
+\begin{equation}
+  [\hat L_i,\hat{L}^2]=0
+\end{equation}
+y por convenci\'on podemos escoger $\langle\hat L_z\rangle$ y $\hat{L}^2$ como los dos observables de momento \'angular. 
+
+Las matrices de Pauli forman una representaci\'on del \'algebra de momento angular
+\begin{equation}
+  [\hat S_i,\hat S_j]=i\epsilon_{ijk}\hat S_k
+\end{equation}
+donde el \emph{operador de esp\'\i n} se define como
+\begin{equation}
+  \hat S_i=\frac{\sigma_i}{2}
+\end{equation}
+Los autovalores del operador de esp\'\i n son entonces
+\begin{equation}
+  \hat S_z
+  \begin{pmatrix}
+    a\\
+    b
+  \end{pmatrix}=\lambda
+  \begin{pmatrix}
+    a\\
+    b
+  \end{pmatrix}
+\end{equation}
+que corresponde a autovalores $\lambda=\pm1/2$ con autovectores 
+\begin{equation}
+  |\uparrow\rangle=\begin{pmatrix}
+    1\\
+    0
+  \end{pmatrix}\qquad
+  |\downarrow\rangle=\begin{pmatrix}
+    0\\
+    1
+  \end{pmatrix}
+\end{equation}
+que son autoestados de esp\'\i n up y esp\'\i n down respectivamente. Una funci\'on de onda de esp\'\i n ha de poder expandir en t\'erminos de estos autoestados
+\begin{equation}
+  |\psi\rangle=c_1|\uparrow\rangle+c_2|\downarrow\rangle
+\end{equation}
+donde $|c_1|^2$ y $|c_2|^2$ corresponden a las probabilidades de encontrar el estado con esp\'\i n up o esp\'\i n down respectivamente. Adem\'as
+\begin{equation}
+  |c_1|^2+|c_2|^2=1
+\end{equation}
+y $\psi$ es un espinor. La ecuaci\'on de Scr\"odinger para un espinor es, por ejemplo
+\begin{align}
+  i\frac{\partial\psi_R}{\partial t}=\widehat{H}\psi_R
+\end{align}
+donde
+\begin{equation}
+  \psi_R=
+  \begin{pmatrix}
+    \psi_1\\
+    \psi_2
+  \end{pmatrix}
+\end{equation}
+con $\psi_i$ las funciones de onda convencionales. Dicha ecuaci\'on debe ser invariante bajo rotaciones en el espacio de esp\'\i n
+\begin{equation}
+  \psi_R\to\psi'_R=\exp(i\frac{\sigma^i}{2}\theta_i)\psi_R\,.
+\end{equation}
+Esta es justo las ecuaciones que aparecen cuando se hace $m=0$ en la ec.\eqref{eq:207}. Para $\psi_R$
+\begin{equation}
+  \widehat{H}=i\boldsymbol{\sigma}\cdot\boldsymbol{\nabla}=-\boldsymbol{\sigma}\cdot\mathbf{p}
+\end{equation}
+con
+\begin{align}
+\label{eq:208}
+\mathcal{L}&= i\psi_R^\dagger {\sigma}^\mu\partial_\mu\psi_R  \nonumber\\
+&=i\psi_R^\dagger \partial_0\psi_R+i\psi_R^\dagger {\sigma}^i\partial_i\psi_R\nonumber\\
+&=i\psi_R^\dagger \partial_0\psi_R-i\psi_R^\dagger\boldsymbol{\sigma}\cdot\mathbf{p} \psi_R
+\end{align}
+Como el Lagrangiano debe ser escalar entonces $\psi_R^\dagger\boldsymbol{\sigma} \psi_R$ debe ser un vector en el espacio de esp\'\i n. En efecto, escogiendo los coeficientes como
+\begin{align}
+  c_1&=e^{-i \phi/2}\cos(\theta/2)\nonumber\\
+  c_2&=e^{i \phi/2}\sin(\theta/2)
+\end{align}
+entonces
+\begin{equation}
+  |c_1|^2+|c_2|^2=c_1 c_1^*+c_2 c_2^*=\cos^2(\theta/2)+\sin^2(\theta/2)=1\,.
+\end{equation}
+Para
+\begin{align}
+  \psi_R=e^{-i p\cdot x}(c_1|\uparrow\rangle+c_2|\downarrow\rangle)&=e^{-i p\cdot x}\left[c_1\begin{pmatrix}
+    1\\
+    0
+  \end{pmatrix}+c_2
+  \begin{pmatrix}
+    0\\
+    1
+  \end{pmatrix}\right]=
+  e^{-i p\cdot x}\begin{pmatrix}
+    c_1\\
+    c_2
+  \end{pmatrix}\,\nonumber\\
+  &=e^{-i p\cdot x}
+  \begin{pmatrix}
+  e^{-i \phi/2}\cos(\theta/2)\\
+  e^{i \phi/2}\sin(\theta/2)
+  \end{pmatrix}=e^{-i p\cdot x}|+\rangle
+\end{align}
+donde
+\begin{equation}
+|+\rangle=  \begin{pmatrix}
+  e^{-i \phi/2}\cos(\theta/2)\\
+  e^{i \phi/2}\sin(\theta/2)
+  \end{pmatrix}\,.
+\end{equation}
+Tenemos
+\begin{align}
+  \psi^\dagger_R \sigma_1 \psi_R=&
+  \begin{pmatrix}
+   c_1^\dagger & c_2^\dagger 
+  \end{pmatrix}
+  \begin{pmatrix}
+    0 & 1\\
+    1&0
+  \end{pmatrix}
+  \begin{pmatrix}
+    c_1\\
+    c_2
+  \end{pmatrix}\nonumber\\
+  =&  \begin{pmatrix}
+    c_2^\dagger & c_1^\dagger
+  \end{pmatrix}
+  \begin{pmatrix}
+    c_1\\
+    c_2
+  \end{pmatrix}\nonumber\\
+  =&  c_2^\dagger c_1 + c_1^\dagger c_2\nonumber\\
+  =&  \sin(\theta/2)\cos(\theta/2)e^{-i\phi}+\cos(\theta/2)\sin(\theta/2)e^{i\phi}\nonumber\\
+  =&  (e^{-i\phi}+e^{i\phi})\cos(\theta/2)\sin(\theta/2)\nonumber\\
+  =&  (2\cos\phi)\frac{1}{2}\sin\theta\nonumber\\
+  =&  \cos\phi\sin\theta
+\end{align}
+Similarmente
+\begin{align}
+  \psi^\dagger_R \sigma_2\psi_R&=\sin\phi\sin\theta\nonumber\\
+  \psi^\dagger_R \sigma_3\psi_R&=\cos\theta
+\end{align}
+Por consiguiente $\psi^\dagger \sigma_i\psi$ son las componentes de un vector unitario $\psi^\dagger \boldsymbol{\sigma}\psi$ con \'angulo polar $\theta$ y \'angulo azimutal $\phi$. Posibles escalares se pueden construir con otros vectores disponibles, por ejemplo $\mathbf{p}$, como en la ec.~\eqref{eq:208}.
+\begin{align}
+  \boldsymbol{\sigma}\cdot\hat{\mathbf{p}}=&\sigma^i \frac{p^i}{|\mathbf{p}|}\nonumber\\
+  =&\sigma^1\cos\phi\sin\theta+\sigma^2\sin\phi\sin\theta+\sigma^3\cos\theta\nonumber\\
+  =&\begin{pmatrix}
+    \cos\theta&\sin\theta(\cos\phi-i\sin\phi)\\
+    \sin\theta(\cos\phi-i\sin\phi)&-\cos\theta
+  \end{pmatrix}\nonumber\\
+  =&\begin{pmatrix}
+    \cos\theta&e^{-i\phi}\sin\theta\\
+    e^{i\phi}\sin\theta&-\cos\theta
+  \end{pmatrix}
+\end{align}
+\begin{align}
+\boldsymbol{\sigma}\cdot\hat{\mathbf{p}}|+\rangle=&\begin{pmatrix}
+    \cos\theta&e^{-i\phi}\sin\theta\\
+    e^{i\phi}\sin\theta&-\cos\theta
+  \end{pmatrix}\begin{pmatrix}
+  e^{-i \phi/2}\cos(\theta/2)\\
+  e^{i \phi/2}\sin(\theta/2)
+  \end{pmatrix}\nonumber\\
+  =&e^{-i\phi/2}\begin{pmatrix}
+    \cos\theta&e^{-i\phi}\sin\theta\\
+    e^{i\phi}\sin\theta&-\cos\theta
+  \end{pmatrix}\begin{pmatrix}
+  \cos(\theta/2)\\
+  e^{i \phi}\sin(\theta/2)
+  \end{pmatrix}\nonumber\\
+  =&e^{-i\phi/2}
+  \begin{pmatrix}
+    \cos\theta\cos(\theta/2)+\sin\theta\sin(\theta/2)\\
+    e^{i\phi}[\sin\theta\cos(\theta/2)- \cos\theta\sin(\theta/2)]
+  \end{pmatrix}\nonumber\\
+  =&e^{-i\phi/2}
+  \begin{pmatrix}
+    \cos(\theta-\theta/2)\\
+    e^{i\phi}\sin(\theta-\theta/2)
+  \end{pmatrix}\nonumber\\
+  =&e^{-i\phi/2}
+  \begin{pmatrix}
+    \cos(\theta/2)\\
+    e^{i\phi}\sin(\theta/2)
+  \end{pmatrix}\nonumber\\
+  =&+|+\rangle
+\end{align}
+(El gorro en este caso, significa vector unitario). Decimos entonces que
+\begin{align}
+\label{eq:214}
+\boldsymbol{\sigma}\cdot\hat{\mathbf{p}}\psi_R=+e^{-i p\cdot x}|+\rangle=+\psi_R
+\end{align}
+es un estado de helicidad positiva o derecha. Como $\boldsymbol{\sigma}\cdot\mathbf{p}$ denota la proyecci\'on de esp\'\i n sobre la direcci\'on de moviento, para la helicidad derecha, dicha proyecci\'on es positiva.
+
+
+Si definimos ademas
+\begin{equation}
+  \psi_L=e^{-i p\cdot x}|-\rangle
+\end{equation}
+donde
+\begin{equation}
+|-\rangle=  \begin{pmatrix}
+  -e^{-i \phi/2}\sin(\theta/2)\\ 
+  e^{i \phi/2}\cos(\theta/2)
+  \end{pmatrix}\,,
+\end{equation}
+entonces
+\begin{align}
+  \psi^\dagger\boldsymbol{\sigma}\cdot\hat{\mathbf{p}}\psi=-(\cos\phi\sin\theta,\sin\phi\sin\phi,\cos\theta)
+\end{align}
+y
+\begin{equation}
+  \label{eq:215}
+  \boldsymbol{\sigma}\cdot\hat{\mathbf{p}}\psi_L=-e^{-i p\cdot x}|-\rangle=-\psi_L
+\end{equation}
+$\psi$ es un estado de helicidad negativa o izquierda. Adem\'as
+\begin{align}
+  \langle-|-\rangle=\langle+|+\rangle=1\qquad \langle+|-\rangle=\langle-|+\rangle=0
+\end{align}
+donde $\langle-|=|-\rangle^\dagger$, etc.
+%\left(\right)
+\section{Soluci\'on de part\'\i cula libre}
+\label{sec:solucion-de-parti}
+Consideraremos incialmente dos casos $m^2\gg\mathbf{p}^2$ y $m^2\ll\mathbf{p}^2$.
+
+De la ecuaci\'on relativista
+\begin{equation}
+  \label{eq:213}
+  E^2=\mathbf{p}^2+m^2\,,
+\end{equation}
+tenemos que para elcaso no relativista $m^2\gg\mathbf{p}^2$, podemos tomar $\mathbf{p}=0$, de modo que
+\begin{equation}
+  E^2=m^2\Rightarrow E=\pm m
+\end{equation}
+La aparici\'on de soluciones de Energ\'\i a negativa. . .
+
+A $\mathbf{p}=0$ proponemos las soluciones de energ\'\i a positiva $E=+m$
+\begin{align}
+  \label{eq:210}
+  \psi_L&=u_L e^{-i E t}=\psi_L=u_L e^{-i m t} & \psi_R&=u_R e^{-i E t}=u_R e^{-i m t}
+\end{align}
+
+En este caso las ecs.~\eqref{eq:207} se reducen a
+\begin{align}
+  i\partial_0\psi_L -m\psi_R &=0\nonumber\\
+  i\partial_0\psi_R -m\psi_L &=0
+\end{align}
+de modo que para que \eqref{eq:210} sea soluci\'on, se debe satisfacer que 
+\begin{equation}
+  u_L=u_R=u
+\end{equation}
+con
+\begin{align}
+  u=  \begin{pmatrix}
+    u_1\\
+    u_2    
+  \end{pmatrix}=|+\rangle\,.
+\end{align}
+El espinor completo es
+\begin{align}
+  \psi=\begin{pmatrix}
+    \psi_L\\
+    \psi_R
+  \end{pmatrix}=e^{-i m t}\begin{pmatrix}
+    |+\rangle\\
+    |+\rangle
+  \end{pmatrix}
+\end{align}
+Con norma
+\begin{align}
+  \bar{\psi}\psi=\psi^\dagger\gamma^0\gamma^0\psi=\psi^\dagger\psi=|+\rangle^\dagger|+\rangle+|+\rangle^\dagger|+\rangle=1
+\end{align}
+Para el caso relativista $m^2\ll\mathbf{p}^2$, podemos hacer $m=0$ y las ecuaciones \eqref{eq:207} se desacoplan
+\begin{align}
+  \label{eq:211}
+   i\partial_0\psi_L-i\boldsymbol{\sigma}\cdot\boldsymbol{\nabla}\psi_L &=0\nonumber\\
+   i\partial_0\psi_R+i\boldsymbol{\sigma}\cdot\boldsymbol{\nabla}\psi_R&=0
+\end{align}
+Proponemos como soluciones de energ\'\i a positiva
+\begin{align}
+  \label{eq:212}
+    \psi_L&=u_L e^{-i p\cdot x}=\psi_L=u_L e^{i(\mathbf{p}\cdot \mathbf{x}-E t)} & \psi_R&=u_R e^{-i p\cdot x}=u_R e^{i(\mathbf{p}\cdot \mathbf{x}-E t)}
+\end{align}
+reemplazando en las ecs.~\eqref{eq:211} tenemos
+\begin{align}
+  \label{eq:217}
+     E\psi_L+\boldsymbol{\sigma}\cdot\mathbf{p}\psi_L &=0\nonumber\\
+   E\psi_R-\boldsymbol{\sigma}\cdot\mathbf{p}\psi_R&=0
+\end{align}
+De modo que para que las ecs.~\eqref{eq:212} sean soluci\'on se debe satisfacer que
+\begin{align}
+     \boldsymbol{\sigma}\cdot\frac{\mathbf{p}}{E}\psi_L &=-\psi_L\nonumber\\
+   \boldsymbol{\sigma}\cdot\frac{\mathbf{p}}{E}\psi_R&=\psi_R
+\end{align}
+pero de la ec.~\eqref{eq:213}, tenemos que para $m=0$, $E=|\mathbf{p}|$, y $\mathbf{p}/E=\mathbf{p}/|\mathbf{p}|=\hat{\mathbf{p}}$. Entonces
+\begin{align}
+  \boldsymbol{\sigma}\cdot\hat{\mathbf{p}}\psi_L &=-\psi_L\nonumber\\
+  \boldsymbol{\sigma}\cdot\hat{\mathbf{p}}\psi_R&=\psi_R
+\end{align}
+Comparando con las ecuaciones \eqref{eq:214} y \eqref{eq:215} vemos que para las soluciones de energ\'\i a positiva $\psi_{R,L}$ corresponden en efecto a estado de helicidad derecha e izquierda respectivamente. Explicitamente
+\begin{equation}
+  \boldsymbol{\sigma}\cdot\hat{\mathbf{p}}\psi_L=e^{-i p\cdot x}\boldsymbol{\sigma}\cdot\hat{\mathbf{p}}|-\rangle=-e^{-i p\cdot x}|-\rangle=-\psi_L
+\end{equation}
+El espinor de cuatro componentes para la soluci\'on de energ\'\i a positiva es
+\begin{equation}
+  \psi=\begin{pmatrix}
+    \psi_L\\
+    \psi_R
+  \end{pmatrix}=e^{-i p\cdot x}\begin{pmatrix}
+    |-\rangle\\
+    |+\rangle
+  \end{pmatrix}
+\end{equation}
+
+\begin{align}
+  \bar{\psi}\psi=&\bar{u}{u}=\psi^\dagger \gamma^0 \psi\nonumber\\
+  =&\begin{pmatrix}
+    |-\rangle^\dagger & |+\rangle^\dagger
+  \end{pmatrix}
+  \begin{pmatrix}
+    0&1\\
+    1&0    
+  \end{pmatrix}
+  \begin{pmatrix}
+    |-\rangle\\
+    |+\rangle
+  \end{pmatrix}\nonumber\\
+  =&\begin{pmatrix}
+    \langle-| & \langle+|
+  \end{pmatrix}
+  \begin{pmatrix}
+    0&1\\
+    1&0    
+  \end{pmatrix}
+  \begin{pmatrix}
+    |-\rangle\\
+    |+\rangle
+  \end{pmatrix}\nonumber\\
+  =&\begin{pmatrix}
+    \langle+| & \langle-| 
+  \end{pmatrix}
+  \begin{pmatrix}
+    |-\rangle\\
+    |+\rangle
+  \end{pmatrix}\nonumber\\
+  =&\langle+|-\rangle+\langle-|+\rangle=0
+\end{align}
+
+Es convenci\'on escoger la normalizaci\'on del espinor de Dirac tal que
+\begin{equation}
+  \bar{u}{u}=2m
+\end{equation}
+que de hecho es cero cuando $m=0$.
+
+Para las soluciones de energ\'\i a negativa tenemos
+
+\begin{align}
+    \hat{\psi}_L&=u_L e^{i(\mathbf{p}\cdot \mathbf{x}+E t)} & \hat{\psi}_R&=u_R e^{i(\mathbf{p}\cdot \mathbf{x}+E t)}
+\end{align}
+Para explorar las caracter\'\i sticas de esta soluci\'on podemos reemplazar en la ec.~(\ref{eq:217}) $E\to-E$, $\mathbf{p}\to\mathbf{p}$, de modo que
+\begin{align}
+  \boldsymbol{\sigma}\cdot\hat{\mathbf{p}}\hat{\psi}_L &=+\hat{\psi}_L\nonumber\\
+  \boldsymbol{\sigma}\cdot\hat{\mathbf{p}}\hat{\psi}_R&=-\hat{\psi}_R
+\end{align}
+De modo que la antipart\'\i cula de una part\'\i cula de helicidad izquierda tiene helicidad derecha. Dentro de los errores experimentales actuales se puede afirmar que en la naturaleza solo se ha observado el neutrino izquierdo y su correspondiente antineutrino derecho.
+
+Para $m\neq0$, tenemos de la ecs.~\eqref{eq:207} y \eqref{eq:212} (ver ec.~\eqref{eq:217})
+\begin{align}
+  E\psi_L+\boldsymbol{\sigma}\cdot\mathbf{p}\psi_L &=m\psi_R\nonumber\\
+  E\psi_R-\boldsymbol{\sigma}\cdot\mathbf{p}\psi_R&=m\psi_L
+\end{align}
+Entonces
+\begin{align}
+  \label{eq:219}
+  \left(\frac{E+\boldsymbol{\sigma}\cdot\mathbf{p}}{m}\right)\psi_L&=\psi_R\nonumber\\
+  \left(\frac{E-\boldsymbol{\sigma}\cdot\mathbf{p}}{m}\right)\psi_R&=\psi_L\,.
+\end{align}
+En este caso sin embargo, la helicidad no esta bien definida y s\'olo podemos afirmar que $\psi_L$ corresponde a la soluci\'on que tiene mayor probabilidad de ser izquierda que derecha. Para calcular dicha probabilidad es necesario especificar los espinores $u_{L,R}$ (ver \cite{cottingham}, Cap\'\i tulo 6). El resultado es que la probabilidad de que $\psi_{R}$ sea derecho se obtiene de
+\begin{align}
+  \boldsymbol{\sigma}\cdot\mathbf{p}|\psi_{R}\rangle&=+\frac{1}{2}\left(1+\frac{v}{c}\right)|\psi_{R}\rangle\to 
+  \begin{cases}
+    +|\psi_{R}\rangle & v\to c\quad\text{(relativistic)}\\
+    +\frac{1}{2}|\psi_{R}\rangle & v\to 0 \quad\text{(non-relativistic)}
+  \end{cases}\nonumber\\
+  \boldsymbol{\sigma}\cdot\mathbf{p}|\psi_{L}\rangle&=-\frac{1}{2}\left(1-\frac{v}{c}\right)|\psi_{R}\rangle
+\end{align}
+mientras que la probabilidad de que sea izquierdo se obtiene de
+\begin{align}
+\label{eq:259}
+  \boldsymbol{\sigma}\cdot\mathbf{p}|\psi_{R}\rangle&=+\frac{1}{2}\left(1-\frac{v}{c}\right)|\psi_{R}\rangle\nonumber\\
+  \boldsymbol{\sigma}\cdot\mathbf{p}|\psi_{L}\rangle&=-\frac{1}{2}\left(1+\frac{v}{c}\right)|\psi_{R}\rangle
+\end{align}
+
+Si en un decaimiento $\beta$ solo se emiten electrones izquierdos, el grado de polarizaci\'on del electr\'on emitido es, usando la ec.~\eqref{eq:259}
+\begin{align}
+   \langle \psi_R|\boldsymbol{\sigma}\cdot\mathbf{p}|\psi_R\rangle+ \langle \psi_L|\boldsymbol{\sigma}\cdot\mathbf{p}|\psi_L\rangle
+=&+\frac{1}{2}\left(1-\frac{v}{c}\right)-\frac{1}{2}\left(1+\frac{v}{c}\right)=-\frac{v}{c}
+\end{align}
+El grafico de polarizaci\'on versus $-v/c$, \cite{cottingham} (\S9.1), debe corresponder a una l\'\i nea recta de pendiente $45^\text{o}$. Si s\'olo se emiten electrones derechos ser\'\i a
+\begin{align}
+  +\frac{1}{2}\left(1+\frac{v}{c}\right)-\frac{1}{2}\left(1-\frac{v}{c}\right)=\frac{v}{c}
+\end{align}
+Mientras que si se emiten por igual electrones derechos e izquierdos la polarizaci\'on total ser\'\i a cero.
+
+Las soluciones en ec.~\eqref{eq:219} puden ser intercambiadas por $\psi_L\to -\psi_R$. Esto se puede ver como una transformaci\'on de paridad definida por
+\begin{align}
+  \mathbf{r}&\to-\mathbf{r}& t&\to t& \psi_L\leftrightarrow \psi_R\,.
+\end{align}
+De aqu\'\i{} el nombre de la transformaci\'on. Como $\hat{\mathbf{p}}=-i\boldsymbol{\nabla}$ y $\mathbf{L}=\mathbf{r}\times\mathbf{p}$, entonces
+\begin{align}
+  \mathbf{p}&\to-\mathbf{p}& \mathbf{L}\to\mathbf{L}\,,
+\end{align}
+Entonces es de esperarse que el momentum angular intr\'\i nseco, transforme como el momentum angular, y
+\begin{align}
+  \mathbf{S}&\to \mathbf{S}\Rightarrow& \boldsymbol{\sigma}\to\boldsymbol{\sigma}\,.
+\end{align}
+Bajo la transformaci\'on de paridad
+\begin{align}
+   \mathbf{p}&\to-\mathbf{p}& \boldsymbol{\sigma}&\to \boldsymbol{\sigma}& \psi_L\leftrightarrow &\psi_R\,,
+\end{align}
+Las ecuaciones \eqref{eq:219} quedan invariantes. Adem\'as bajo dicha transformaci\'on
+\begin{align}
+  \sigma^\mu\partial_\mu=\sigma^0\partial_0+\boldsymbol{\sigma}\cdot\boldsymbol{\nabla}\to \sigma^0\partial_0-\boldsymbol{\sigma}\cdot\boldsymbol{\nabla}=\bar{\sigma}^\mu\partial_\mu
+\end{align}
+de modo que el Lagrangiano correspondiente, dado en la ec.~\eqref{eq:200} tambi\'en es invariante bajo la transformaci\'on de paridad
+\begin{align}
+  \sigma^\mu\partial_\mu\to& \bar{\sigma}^\mu\partial_\mu &\psi_L\leftrightarrow &\psi_R
+\end{align}
+
+
+
 
 
 \subsection{Ecuaciones de Euler--Lagrange}
