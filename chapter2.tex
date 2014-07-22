@@ -60,22 +60,37 @@ Las constantes f\'\i sicas que suelen normalizarse se escogen del conjunto dado 
   \label{eq:145}
   e,\qquad m_e,\qquad m_p.
 \end{equation}
-Teniendo en cuenta que $1\,\text{eV}=1.602\;176\;487(40)\times10^{-19}\,\text{J}$.
+Teniendo en cuenta que $1\,\text{eV}=1.602\;176\;565(35)\times10^{-19}\,\text{J}$,
 \begin{align}
-  10^{-9}\,\text{GeV}=&1.602\;176\;487(40)\times10^{-19}\,\text{J}\nonumber\\
-  1\,\text{GeV}=&1.602\;176\;487(40)\times10^{-10}\,\text{J}\nonumber\\
+  10^{-9}\,\text{GeV}=&1.602\;176\;565(35)\times10^{-19}\,\text{J}\nonumber\\
+  1\,\text{GeV}=&1.602\;176\;565(35)\times10^{-10}\,\text{J}
+\end{align}
+De la masa en reposo del protón, por ejemplo, 
+\begin{align*}
+  m_pc^2=&\SI{1.672621777 +- 0.000000074E-27}{kg}\times (\SI{299792458}{ms^{-1}})^2\nonumber\\
+  =&\SI{1.5032775e-10}{J}\frac{\SI{1}{GeV}}{\SI{1.602176565 +- .000000035E-10}{J}}\nonumber\\
+  =&\SI{938.272046+-21}{MeV}/c^2\,,
+\end{align*}
+podemos obtener la equivalencia entre masa y energía en unidades naturales: $c=1$
+\begin{align}
+m_p=&\SI{938.272046+-0.000021}{MeV}\nonumber\\
+  \approx& \SI{1}{GeV}\,.
+\end{align}
+de modo que
+\begin{align}
+  \SI{1}{kg}=\SI{5.60958912 +- 0.00000042E26}{GeV}\,.
 \end{align}
 
 \begin{example}
-  Calcule la energ\'\i a cinetica de un mosquito de $2\,$mg, moviendos a $1.6\,$Km/h
-\begin{verbatim}
-V = 1.6 x 10-19 Joules
-
-1 TeV = 1.6 x 10-19 x 1012 Joules = 1.6 x 10-7 Joules
-
-1/2 m v2 = 1.6 x 10-7 Joules,  m = 2 x 10-6 kg therefore v = 0.4 m/s  = 1.4 kph
-\end{verbatim}
-
+  Calcule la energ\'\i a cinetica de un mosquito de $2\,$mg, moviendose a $1.45\,$Km/h
+  \begin{align}
+    v= \SI{1.45}{km/h}\frac{\SI{1}{h}}{\SI{3600}{s}}\frac{\SI{1000}{m}}{\SI{1}{km}}=\SI{0.4}{m/s}  
+\end{align}
+\begin{align}
+  K=\frac{1}{2}mv^2=&0.5\times \SI{2E-6}{kg}(\SI{0.4}{m/s})^2 \nonumber\\
+                   =&\SI{1.6E-7}{J}\nonumber\\
+                   =&\SI{1}{TeV}\,.
+\end{align}
 
 \end{example}
 
@@ -91,31 +106,7 @@ podemos obtener la relaci\'on entre longitud y energ\'\i a a partir de
   =&1.973\;269\;631(49)\times10^{-16}\,\text{GeV}\,\text{m}.
 \end{align}
 Entonces $\hbar c =0.1973\;269\;631(49)\,\text{GeV}\,\text{fm}$.
-\begin{example}
-  Calcule la energ\'\i a potencial de Coulomb para una par de protones (o electrones) separados una distancia $l=\hbar\,c/\text{GeV}$ $=0.1973\;269\;631\,\text{fm}$
-  \begin{align}
-    \label{eq:240}
-    V=\frac{k e^2}{l}=&\frac{e^2}{4\pi\epsilon_0(\hbar c)\,\text{GeV}^{-1}}\nonumber\\
-    =&\frac{e^2}{4\pi\epsilon_0\hbar c}\text{GeV}\,.
-  \end{align}
-\end{example}
-Como $V$ tiene unidades de energ\'\i a, de la ec.~(\ref{eq:240})  resulta entonces la constante adimensional 
-conocida como la constante de estructura fina
-\begin{equation}
-  \alpha=\frac{e^2}{4\pi\epsilon_0\hbar c},
-\end{equation}
-que no puede tomar un valor num\'erico diferente  sin importar el sistema de unidades que se use. De modo que no se puede tener un sistema de unidades que normalice todas las contanstes f\'\i sicas presentes en $\alpha$. S\'olo 3 de las cuatro constantes $e$, $\hbar$, $\epsilon_0$ y $c$ pueden ser normalizadas, y la otra queda dependiendo del valor de $\alpha$.
 
-El prop\'osito de las unidades naturales es simplificar las expresiones algebraicas que aparecen en las leyes f\'\i sicas. 
-
-El sistema de unidades naturales que usaremos es el de las Unidades de Planck Modificadas (MPU)
-\begin{equation}
-  G_N=1,\qquad \hbar=1 \qquad c=1,\qquad \epsilon_0=1,\qquad k=1,
-\end{equation}
-de modo que
-\begin{equation}
-  e=\sqrt{4\pi\alpha},\qquad\text{or}\qquad \alpha=\frac{e^2}{4\pi}.
-\end{equation}
 podemos obtener la relaci\'on entre el tiempo y la energ\'\i a de
 \begin{equation}
   \hbar\equiv\frac{h}{2\pi}=1.054\;571\;68(53)\times10^{-34}\,\text{J}\,\text{s}
@@ -126,23 +117,7 @@ Similarmente para la relaci\'on entre temperatura y energ\'\i a, tenemos de la c
   k=1.380\;6504(24)\times10^{-23}\,\text{J}\,\text{K}^{-1}=8.617\;343(15)\times10^{-14}\,\text{GeV}\,\text{K}^{-1}.
 \end{equation}
 
-La relaci\'on ente masa y energ\'\i a se puede obtener a partir de 
-\begin{equation}
-  G_N=6.674\;28(67)\times10^{-11}\text{m}^3\text{kg}^{-1}\,\text{s}^{-2}=6.70881(65)\times10^{-39}\hbar c(\text{GeV}/c^2)^{-2}
-\end{equation}
-entonces\footnote{o de una masa bien medida, por ejemplo
-  $m_p=0.938\;272\;013(23)\,\text{GeV}/c^2=1.672\;621\;637(83)^{-27}\,\text{kg}.$
-}
-\begin{equation}
-  M_p\equiv\sqrt{\frac{\hbar c}{G_N}}=1.2209\times10^{19}\text{GeV}/c^2=2.1765\times10^{-8}\,\text{kg}\,
-\end{equation}
-y
-\begin{align}
-  \label{eq:242}
-  G_N=\frac{\hbar\,c}{M_p^2}\,.
-\end{align}
 
-La energ\'\i a de Planck es entonces $M_p c^2$, e igual a la masa en unidad naturales.
 Los factores de conversi\'on del sistema MKS a MPU est\'an dados en la Tabla~\ref{tab:mks2mpu} despu\'es de hacer $\hbar=c=k=1$
 
 \begin{table} %noinstiki
@@ -164,6 +139,78 @@ m\,kg&$2.842\;278\,859\times10^{-16}\hbar\,c^{-1}$\\ \hline
   \caption{MKS $\leftrightarrow$ MPU} %noinstiki
   \label{tab:mks2mpu} %noinstiki
 \end{table} %noinstiki
+
+De la constante de Fuerza electrost\'atica $K=1/(4\pi\epsilon_0)$, podemos obtener el valor de la constante de estructura fina electromagn\'etica $\alpha=e^2/(4\pi\epsilon_0\hbar c)$
+
+\begin{align*}
+  K=\frac{1}{4\pi\epsilon_0}\approx&\frac{1}{4\pi\times8.854\times10^{-12}}\text{C}^{-2}\text{Nm}^2
+  =\frac{1}{4\pi\times8.854\times10^{-12}}\text{C}^{-2}\text{Kg}\,\text{m}^3\text{s}^{-2}\\
+  \approx&\frac{1}{4\pi\times8.854\times10^{-12}}\text{C}^{-2}\times5.6096\times10^{26}\text{GeV}
+  \times(5.068\times10^{15}\text{GeV}^{-1})^3\\
+  &\times(1.519\times10^{-24}\text{GeV}^{-1})^{-2}\times\frac{(\hbar c)^3\hbar^{-2}}{c^2}\\
+  \approx&2.84\times10^{35}\text{C}^{-2}\hbar c\\
+  \approx&2.84\times10^{35}\text{C}^{-2}\times
+  \left(
+    \frac{1.602\times10^{-19}}{e^2}
+  \right)^2\hbar c\\
+  =&\frac{7.296\times10^{-3}}{e^2}\hbar c
+\end{align*}
+Definimos la cantidad adimensional $\alpha$, como
+\begin{equation*}
+  \alpha\equiv\frac{e^2}{4\pi\epsilon_0\hbar c}
+\approx7.296\times10^{-3}\approx\frac{1}{137}
+\end{equation*}
+conocida como la constante de estructura fina, que no puede tomar un
+valor num\'erico diferente sin importar el sistema de unidades que se
+use. De modo que no se puede tener un sistema de unidades que
+normalice todas las contanstes f\'\i sicas presentes en
+$\alpha$. S\'olo 3 de las cuatro constantes $e$, $\hbar$, $\epsilon_0$
+y $c$ pueden ser normalizadas, y la otra queda dependiendo del valor
+de $\alpha$.
+
+El prop\'osito de las unidades naturales es simplificar las expresiones algebraicas que aparecen en las leyes f\'\i sicas. 
+
+El sistema de unidades naturales que usaremos es el de las Unidades de Planck Modificadas (MPU)
+\begin{equation}
+  G_N=1,\qquad \hbar=1 \qquad c=1,\qquad \epsilon_0=1,\qquad k=1,
+\end{equation}
+de modo que
+\begin{equation}
+  e=\sqrt{4\pi\alpha},\qquad\text{or}\qquad \alpha=\frac{e^2}{4\pi}.
+\end{equation}
+  
+
+\begin{example}
+  Calcule la energ\'\i a potencial de Coulomb para una par de protones (o electrones) separados una distancia $l=\hbar\,c/\text{GeV}$ $=0.1973\;269\;631\,\text{fm}$
+  \begin{align}
+    \label{eq:240}
+    V=\frac{K e^2}{l}=&\frac{e^2}{4\pi\epsilon_0(\hbar c)\,\text{GeV}^{-1}}\nonumber\\
+    =&\frac{e^2}{4\pi\epsilon_0\hbar c}\text{GeV}\,.
+  \end{align}
+\end{example}
+Como $V$ tiene unidades de energ\'\i a, de la ec.~(\ref{eq:240})  resulta de nuevo $\alpha$.
+
+\subsection{Dimensiones de Planck}
+
+
+La relaci\'on ente masa y energ\'\i a se puede obtener también a partir de 
+\begin{equation}
+  G_N=6.674\;28(67)\times10^{-11}\text{m}^3\text{kg}^{-1}\,\text{s}^{-2}=6.70881(65)\times10^{-39}\hbar c(\text{GeV}/c^2)^{-2}
+\end{equation}
+entonces\footnote{o de una masa bien medida, por ejemplo
+  $m_p=0.938\;272\;013(23)\,\text{GeV}/c^2=1.672\;621\;637(83)^{-27}\,\text{kg}.$
+}
+\begin{equation}
+  M_p\equiv\sqrt{\frac{\hbar c}{G_N}}=1.2209\times10^{19}\text{GeV}/c^2=2.1765\times10^{-8}\,\text{kg}\,
+\end{equation}
+y
+\begin{align}
+  \label{eq:242}
+  G_N=\frac{\hbar\,c}{M_p^2}\,.
+\end{align}
+
+La energ\'\i a de Planck es entonces $M_p c^2$, e igual a la masa en unidad naturales.
+
 
 De los factores de conversi\'on de la tabla vemos que masa$\times$longitud tiene las mismas unidades que $\hbar/c$, de modo que podemos definir la longitud de Planck tal que
 \begin{align}
@@ -247,30 +294,6 @@ Usando la ec.~(\ref{eq:242})
 \end{example}
 
 
-\begin{example}
-De la constante de Fuerza electrost\'atica $K=1/(4\pi\epsilon_0)$, podemos obtener el valor de la constante de estructura fina electromagn\'etica $\alpha=e^2/(4\pi\epsilon_0\hbar c)$
-
-\begin{align*}
-  K=\frac{1}{4\pi\epsilon_0}\approx&\frac{1}{4\pi\times8.854\times10^{-12}}\text{C}^{-2}\text{Nm}^2
-  =\frac{1}{4\pi\times8.854\times10^{-12}}\text{C}^{-2}\text{Kg}\,\text{m}^3\text{s}^{-2}\\
-  \approx&\frac{1}{4\pi\times8.854\times10^{-12}}\text{C}^{-2}\times5.6096\times10^{26}\text{GeV}
-  \times(5.068\times10^{15}\text{GeV}^{-1})^3\\
-  &\times(1.519\times10^{-24}\text{GeV}^{-1})^{-2}\times\frac{(\hbar c)^3\hbar^{-2}}{c^2}\\
-  \approx&2.84\times10^{35}\text{C}^{-2}\hbar c\\
-  \approx&2.84\times10^{35}\text{C}^{-2}\times
-  \left(
-    \frac{1.602\times10^{-19}}{e^2}
-  \right)^2\hbar c\\
-  =&\frac{7.296\times10^{-3}}{e^2}\hbar c
-\end{align*}
-Definimos la cantidad adimensional $\alpha$, como
-\begin{equation*}
-  \alpha\equiv\frac{e^2}{4\pi\epsilon_0\hbar c}
-\approx7.296\times10^{-3}\approx\frac{1}{137}
-\end{equation*}
-  
-\end{example}
-
 
 \section{Notaci\'on relativista}
 \label{sec:srn}
@@ -319,7 +342,23 @@ La invarianza del producto escalar en ec.~\eqref{eq:157}
 \begin{equation}
   {a'}^\mu{b'}_\mu=a^\mu b_\mu
 \end{equation}
-da lugar a
+implica que
+\begin{align}
+\label{eq:Lambdasteps}
+  {a'}^\mu{b'}_\mu&=g_{\mu\nu}{a'}^\mu{b'}^{\nu}\nonumber\\
+  &=g_{\mu\nu}{\Lambda^{\mu}}_{\alpha}a^{\alpha}{\Lambda^{\nu}}_{\beta}b^{\beta}\nonumber\\
+ &={\Lambda^{\mu}}_{\alpha}g_{\mu\nu}{\Lambda^{\nu}}_{\beta}a^{\alpha}b^{\beta}\,.
+\end{align}
+Por consiguiente, la condición para que el producto escalar  en el espacio de Minkowski definido por la métrica $g_{\mu\nu}$, sea invariante bajo transformaciones de Lorentz es
+\begin{align}
+  {\Lambda^{\mu}}_{\alpha}g_{\mu\nu}{\Lambda^{\nu}}_{\beta}a^{\alpha}b^{\beta}=
+  g_{\alpha\beta}a^{\alpha}b^{\beta}\,,
+\end{align}
+y por consiguiente
+\begin{align}
+  g_{\alpha\beta}={\Lambda^{\mu}}_{\alpha}g_{\mu\nu}{\Lambda^{\nu}}_{\beta}\,,
+\end{align}
+o, reorganizando los índices mudos
 \begin{equation}
   \label{eq:lrinv}
   g_{\mu\nu}={\Lambda^\alpha}_{\mu}g_{\alpha\beta}{\Lambda^\beta}_{\nu}\qquad\text{or}\qquad 
@@ -378,6 +417,17 @@ o
 \label{eq:lambdainv}
   {\left(\Lambda^{-1}\right)^\mu}_\nu={\Lambda_\nu}^\mu\,,
 \end{align}
+
+Repitiendo los pasos que dieron lugar a la ec.~(\ref{eq:Lambdasteps})
+pero para la métrica contravariante (TAREA), y usando la
+ec.~\eqref{eq:lambdainv}, tenemos que
+\begin{align}
+  \label{eq:Lambdacontra}
+  g^{\mu\nu}=&{\Lambda_{\alpha}}^{\mu}g^{\alpha\beta}{\Lambda_{\beta}}^{\nu}\nonumber\\
+           =&{\left( \Lambda^{-1} \right)^{\mu}}_{\alpha}g^{\alpha\beta} {\left( \Lambda^{-1} \right)^{\nu}}_{\beta}\,.
+\end{align}
+
+
 \begin{itemize}
 \item
 \begin{english}
@@ -395,6 +445,8 @@ o
   \end{align}
 
 \end{itemize}
+
+
 
 Como un ejemplo de Transformaci\'on de Lorentz considere un desplazamiento a lo largo del eje $x$
 \begin{equation}
@@ -513,7 +565,7 @@ De \cite{uslhcblog}
   The intuitive understanding of this equation is that the energy of a particle is partially due to its motion and partially due to the intrinsic energy of its mass.  The application to particle detectors is that if you know the mass of a particular particle, or if it’s going so fast that its energy and momentum are both huge so that the mass can be roughly ignored, then knowing the energy tells you the momentum and vice versa
 \end{quote}
 
-Para $\mathbf{p}=0$, es decir cuando la part\'\i cula est\'a en reposo se reduce a la famosa ecuaci\'on.
+Para $\mathbf{p}=0$, es decir cuando la part\'\i cula est\'a en reposo se reduce a la famosa ecuaci\'on $E=m$, (con $c^2=1$).
 
 Del electromagnetismo tenemos
 \begin{equation}
@@ -558,7 +610,7 @@ La ecuaci\'on de continuidad $\partial_\mu J^\mu=0$ es un invariante de Lorentz.
 El operador cuadr\'atico es, usando la ec.~\eqref{eq:146}
 \begin{equation}
   \label{eq:dalambertian}
-  \Box\equiv \partial_\mu\partial^\mu=\partial^0\partial^0-\nabla^2 =\frac{\partial^2}{\partial t^2}-\frac{\partial^2}{\partial x^2}-\frac{\partial^2}{\partial y^2}-\frac{\partial^2}{\partial z^2}=
+  \Box\equiv \partial_\mu\partial^\mu=\partial^0\partial^0-\nabla^2 =\frac{\partial^2}{\partial t^2}-\frac{\partial^2}{\partial x^2}-\frac{\partial^2}{\partial y^2}-\frac{\partial^2}{\partial z^2}\,.
 \end{equation}
 Por consiguiente la ecuaci\'on de onda en ec.~\eqref{eq:150} es invariante de Lorentz
 
@@ -693,8 +745,34 @@ A medida que el mu\'on se acerca m\'as a la velocidad de la luz, $L_\mu'$ coinci
 %\subsection{Transformaciones de Lorentz}
 %\label{sec:transf-de-lorentz}
 
+\section{Construción de Lagrangianos covariantes}
+
+En está sección vamos a conectar la discusión sobre el Lagrangiano de las vibraciones de la cuerda con el Lagrangiano de Scr\"odinger en presencia de un campo electromagnético. Dicho Lagrangiano tiene hasta ahora la siguiente dependencia funcional
+\begin{align*}
+  \mathcal{L}_{\text{Scrödinger-local}}(\psi,\partial_{\mu}\psi,\psi^{*},\partial_{\mu}\psi^{*},A_{\mu})
+\end{align*}
+Un segundo ingrediente del principio gauge local es que debemos asegurarnos de todos los términos posibles asociados a un campo esten presente en el Lagrangiano. De inmediato surge la pregunta: ¿Qué posibles términos de la forma $\partial_{\mu}A_{\nu}$ podrían estar presentes en Lagrangiano?. Antes de responder está pregunta general, abordemos el problema más simple
+\begin{align*}
+  \mathcal{L}(A_0,\partial_\mu A_0)=  \mathcal{L}(\phi,\partial_\mu \phi)\,.
+\end{align*}
+En la ecuación~\eqref{eq:ls3d}, teníamos un Lagragiano en función de $\partial_{\mu}\phi$, y haciendo $v\to c=1$, tenemos
+\begin{align*}
+  \mathcal{L}(\partial_{\mu}\phi)
+    =&\frac{1}{2}\left[
+      {\partial_0\phi}\,{\partial_0\phi}-\sum_i{\partial_i\phi}\,{\partial_i\phi}
+   \right]\nonumber\\
+    =&\frac{1}{2}\left[
+      {\partial_0\phi}\,{\partial^0\phi}+{\partial_i\phi}\,{\partial^i\phi}
+   \right]\nonumber\\
+   =&\frac{1}{2}{\partial_\mu\phi}\,{\partial^\mu\phi}\,.
+\end{align*}
+
+
+
 \subsection{Ecuaciones covariantes}
 \label{sec:ecuac-covar}
+
+
 Con el cuadrivector \eqref{eq:cv_hatpmu} podemos construir la
 siguiente ecuaci\'on
 \begin{align}
@@ -786,11 +864,19 @@ By using eq.~\eqref{eq:179qft} we have
 \begin{align}
     \phi'(x')=\phi(\Lambda^{-1}x')\,.
 \end{align}
-Therefore, for an arbitrary space-time point we have that the scalar field transforms under a Lorentz transformation as
+That is, the transformed field, evaluated at the boosted point, gives the same
+value as the original field evaluated at the point before boosting.
+
+\begin{frame}[fragile,allowframebreaks]
+
+%Therefore, for an arbitrary space-time point we have that the scalar field transforms under a Lorentz transformation as
+Por consiguiente, para un punto del espacio tiempo arbitrario tenemos
+que el campo escalar transforma bajo una transformación de Lorentz como
 \begin{align}
   \label{eq:scalarlorentz}
-   \phi(x)\to \phi'(x)=\phi(\Lambda^{-1}x)\,.
+ \phi(x)\to  \phi'(x)=\phi(\Lambda^{-1}x)\,.
 \end{align}
+\end{frame}
 
 In order to check the Lorentz invariance of the scalar we need to obtain the Lorentz transformation properties for $\partial_\mu$. It is convinient to invert eq.~\eqref{eq:179qft}
 \begin{align}
@@ -806,7 +892,7 @@ or
   \label{eq:183qft}
     \frac{1}{{x'}^\mu}= {\left(\Lambda^{-1}\right)^\nu}_\mu\frac{1}{x^\nu}\,,
 \end{align}
-and the defintion of the Lorentz transformation itself:
+and the defintion of the Lorentz transformation for the contravariant metric in eq.~(\ref{eq:Lambdacontra}):
 \begin{align}
 \label{eq:lrinvinv}
   g^{\mu\nu}={\left(\Lambda^{-1}\right)^\mu}_\rho\,g^{\rho\sigma}{\left(\Lambda^{-1}\right)^\nu}_\sigma\,.
@@ -820,21 +906,24 @@ From eq.~\eqref{eq:183qft} we can obtain the Lorentz transformation for $\partia
 \end{align}
 Podemos ahora demostrar que la Acción obtenida del Lagrangiano en la ec.\eqref{eq:kglag} es invariante bajo transformaciones de Lorentz
 \begin{align}
-  \mathcal{L}(x)\to  \mathcal{L}'(x)=& \frac{1}{2}\partial'_\mu\phi'\partial^{'\mu}\phi-\frac{1}{2}m^2\phi^{'2}, \nonumber\\
+  \mathcal{L}(x)\to  \mathcal{L}'(x)=& \frac{1}{2}\partial'_\mu\phi'(x)\partial^{'\mu}\phi'(x)-\frac{1}{2}m^2{\phi'}^{2}(x), \nonumber\\
   =&{\left(\Lambda^{-1}\right)^\nu}_\mu g^{\mu \rho}{\left(\Lambda^{-1}\right)^\sigma}_\rho \partial_\nu\phi(\Lambda^{-1}x) \partial_\sigma \phi(\Lambda^{-1}x) -\frac{1}{2}m^2\phi^{2}(\Lambda^{-1}x)\nonumber\\
   =& g^{\nu \sigma}\partial_\nu\phi(\Lambda^{-1}x) \partial_\sigma \phi(\Lambda^{-1}x) -\frac{1}{2}m^2\phi^{2}(\Lambda^{-1}x)\nonumber\\
   =& \partial_\nu\phi(\Lambda^{-1}x) \partial^{\nu} \phi(\Lambda^{-1}x) -\frac{1}{2}m^2\phi^{2}(\Lambda^{-1}x)\nonumber\\
   =&\mathcal{L}(\Lambda^{-1}x)\,.
 \end{align}
-Since the Action involves the integration over all the points, it is invariant under the Lorentz transformation.
+Since the Action involves the integration over all the points, it is invariant under the Lorentz transformation. Explicitly
+\begin{align}
+  S\to S'=\int d^4x\, \mathcal{L}
+\end{align}
 
 
-
-
+%\begin{frame}[fragile,allowframebreaks]
 The field $A^\mu(x)$ transforms simultaneously as field and as vector under Lorentz transformation
 \begin{align}
   A^\mu(x)\to {A'}^\mu(x')={\Lambda^\mu}_\nu A^\nu(\Lambda^{-1}x)\,.
 \end{align}
+%\end{frame}
 
 \section{Campos escalares complejos}
 Entre más simetrías posea una Acción menos arbitraría es. Podemos
@@ -842,14 +931,17 @@ ilustrar esta afirmación si consideramos una Acción para un campo escalar
 complejo que además de ser invariante de Lorentz, se además invariante
 bajo transformaciónes de fase.
 
-En ese caso la Acción, y la correspondiente densidad Lagrnagian son
+\begin{frame}[fragile,allowframebreaks]
+
+
+En ese caso la Acción, y la correspondiente densidad Lagrangiana son
 únicas y están dadas por una función polinómica de $\phi^{*}\phi$
 \begin{align}
   \mathcal{L}=\partial_{\mu}\phi^{*} \partial^{\mu}\phi-m^2\phi^{*}\phi+\lambda \left(\phi^{*}\phi \right)^2\,.
 \end{align}
 Términos de orden superior se pueden obtener a partir de esa
 Lagrangiana única y por eso no se consideran. 
-
+\end{frame}
 
 De las ecuaciones de Euler-Lagrange para $\phi^*$, usando el Lagrangiano en ec.~(\ref{eq:41qft})
 \begin{align}
@@ -1217,8 +1309,16 @@ ya que dicha transformaci\'on deja invariante a $F^{\mu\nu}$. De aqu\'\i{} la su
 
 
 \section{Vector field Lagrangian}
+\begin{frame}[fragile,allowframebreaks]
+Ya estamos en capacidad de responder la siguiente pregunta: ¿Cual es el Lagrangiano más general posible para el campo de cuatro componentes $A^{\mu}(x)$ compatible con la invarianza de Lorentz y la invarianza bajo transformaciones gauge?
 
-We are now are in position to answer the following question: What is the most general Lagrangian for a the four--components field $A^\mu$ compatible with Lorentz invariance and the gauge transformation
+Las correspondientes transformaciones son
+
+\begin{align}
+  A^\mu(x)\to {A'}^\mu(x')={\Lambda^\mu}_\nu A^\nu(\Lambda^{-1}x)\,.
+\end{align}
+
+
 \begin{align}
 \label{eq:172qft}
   A^\mu\to{A'}^\mu=A^\mu-\partial^\mu\chi(x)\;?
@@ -1235,11 +1335,14 @@ Definiendo
 El Lagrangiano que da lugar a una Acción invariante de Lorentz para el cuadrivector $A^\mu$
 es, hasta derivadas totales y potencias en los campos de hasta dimensión 4:
 \begin{align}
-  \mathcal{L}=&-\frac{1}{4}F^{\mu\nu}F_{\mu\nu}-\frac{1}{4}G^{\mu\nu}G_{\mu\nu}-J^\mu A_\mu+
+  \mathcal{L}=&-\frac{1}{4}F^{\mu\nu}F_{\mu\nu}-\frac{1}{4}G^{\mu\nu}G_{\mu\nu}-\frac{1}{2}F^{\mu\nu}G_{\mu\nu}\nonumber\\
+&-J^\mu A_\mu+
  \frac{1}{2}m^2A^\mu A_\mu +\lambda_1\partial_\nu A^\nu(x) A_\mu(x) A^\mu(x)+\lambda_2 A^\mu A_\mu A^\nu A_\nu\nonumber\\
-&+\lambda_3 F^{\mu\nu}(x)A_\mu(x) A_\nu(x)+\lambda_4G^{\mu\nu}(x)A_\mu(x) A_\nu\,,\,.
+&+\lambda_3 F^{\mu\nu}(x)A_\mu(x) A_\nu(x)+\lambda_4G^{\mu\nu}(x)A_\mu(x) A_\nu+\cdots
   \label{eq:lagAmu}
 \end{align}
+\end{frame}
+
 \begin{itemize}
 \item \textbf{Ejercicio:} Show that terms like $\partial^\mu A^\nu(x)\partial_\mu A_\nu(x)$, and hence $F^{\mu\nu}F_{\mu\nu}$, transforms as
   \begin{align}
@@ -1277,7 +1380,8 @@ Terms like
 $K_\nu(x)A^\nu(x)A_\mu(x)A^\mu(x)$ is Lorentz covariant but not gauge-invariant (see below).
 
 %to_en:Under this transformation
-Bajo la transformación gauge \eqref{eq:168qft}
+\begin{frame}[fragile,allowframebreaks]
+Bajo la transformación gauge \eqref{eq:172qft}
 \begin{align}
   \label{eq:fmunutrans}
   F^{\mu\nu}\to{F'}^{\mu\nu}=&(\partial^\mu{A'}^\nu-\partial^\nu{A'}^\mu)\nonumber\\
@@ -1286,7 +1390,7 @@ Bajo la transformación gauge \eqref{eq:168qft}
   =&F^{\mu\nu}
 \end{align}
 
-Si queremos que la Acción refleja las simetrías de las ecuaciones de
+Si queremos que la Acción refleje las simetrías de las ecuaciones de
 Maxwell debemos mantener sólo los términos del Lagrangiano para $A^\mu$
 en \eqref{eq:lagAmu} que sean invariantes hasta una derivada total. Bajo una transformación gauge, cada
 uno de los términos
@@ -1306,19 +1410,24 @@ términos restantes
 \begin{align}
   \delta\mathcal{L}=\mathcal{L}'-\mathcal{L}=&
 -\frac{1}{4}{F'}^{\mu\nu}F'_{\mu\nu}-J^\mu A'_\mu+\frac{1}{4}F^{\mu\nu}F_{\mu\nu}+J^\mu A_\mu\nonumber\\
-=&-J^\mu A_\mu+J^\mu\partial_\mu\theta(x)-J^\mu A_\mu\nonumber\\
-=&\partial_\mu(J^\mu\chi)-(\partial_\mu J^\mu)\theta(x)
+=&-J^\mu A_\mu+J^\mu\partial_\mu\chi(x)-J^\mu A_\mu\nonumber\\
+=&\partial_\mu(J^\mu\chi)-(\partial_\mu J^\mu)\chi(x)
 \end{align}
-For the action
+Para la Acción
 \begin{align}
-  \delta S=&\int d^4x \left[\partial_\mu(J^\mu\chi)-(\partial_\mu J^\mu)\theta(x)\right]\nonumber\\
-=&-\int d^4x (\partial_\mu J^\mu)\theta(x)\nonumber\\
-=&-\int d^3x\int_{-\infty}^\infty dt (\partial_\mu J^\mu)\theta(x)\,.
+  \delta S=&\int d^4x \left[\partial_\mu(J^\mu\chi)-(\partial_\mu J^\mu)\chi(x)\right]\nonumber\\
+=&-\int d^4x (\partial_\mu J^\mu)\chi(x)\nonumber\\
+=&-\int d^3x\int_{-\infty}^\infty dt (\partial_\mu J^\mu)\chi(x)\,.
 \end{align}
-In order to have $\delta S=0$ we need to assume for the while that $\partial_\mu J^\mu=0$. However we will see that this is just a self-consistent condition.
+Para tener $\delta S=0$ necesitamos asumir de momento que
+$\partial_\mu J^\mu=0$. Sin embargo, veremos que esta es una condición
+auto consistente.
+
+\end{frame}
 
 In summary, if the electromagnetic current is conserved, then the Lagrangian is invariant under the gauge transformation \eqref{eq:172qft}. Note that the Lagrangian density is not locally gauge invariant. However, the action (and hence the theory) is gauge invariant.
 
+\begin{frame}[fragile,allowframebreaks]
 Por lo tanto, el Lagrangiano
 \begin{equation}
   \label{eq:lagAmum}
@@ -1327,28 +1436,33 @@ Por lo tanto, el Lagrangiano
 es el más general que da lugar a una Acción invariante de Lorentz e invariante gauge
 local. 
 
+\end{frame}
+
+\begin{frame}[fragile,allowframebreaks]
 
 
-The definition of $F^{\mu\nu}$ already includes the homogeneous Maxwell equations. To see this we note first that the only non-zero $F^{\mu\nu}$ components are
+La  definición of $F^{\mu\nu}$ incluye de entrada las ecuaciones
+homogéneas de Maxwell. Para ver esto, note en primer lugar que las
+únicas componentes diferentes de  cero son
 \begin{align}
   F^{\mu\nu}=  \begin{cases}
     F^{\mu0}=F^{i0} & \text{$\nu=0$}\\
     F^{\mu l}=F^{ml} & \text{$\nu=l$}\\
   \end{cases}
 \end{align}
-For $\nu=0$ we have
+Para $\nu=0$ tenemos
 \begin{align}
 F^{i0}  &=\partial^{i}A^0-\partial^0 A^{i}\nonumber\\
   &=(\frac{\partial A^0}{\partial x_i}-\frac{\partial A^{i}}{\partial x_0})\nonumber\\
 &=-(\frac{\partial A^0}{\partial x^{i}}+\frac{\partial A^{i}}{\partial x^0})\nonumber\\
 &=E^i
 \end{align}
-where
+donde
 \begin{align}
 \label{eq:173qft}
    \mathbf{E}&=-\boldsymbol{\nabla}\phi-\frac{\partial\mathbf{A}}{\partial t}\,.
 \end{align}
-while for $\nu=l$ we have
+mientras que para $\nu=l$ tenemos
 \begin{align}
 F^{ml}  &=\partial^m A^l-\partial^l A^m\nonumber\\
   &=(\delta_{lj}\delta_{mi}-\delta_{li}\delta_{mj}){\partial^iA^j}\nonumber\\
@@ -1359,12 +1473,12 @@ F^{ml}  &=\partial^m A^l-\partial^l A^m\nonumber\\
 &=\epsilon_{lmk}\left(\boldsymbol{\nabla}\times  \mathbf{A}\right)^k\nonumber\\
 &=\epsilon_{lmk}B^k\,,
 \end{align}
-where
+donde
 \begin{align}
 \label{eq:174qft}
   \mathbf{B}&=\boldsymbol{\nabla}\times \mathbf{A}\,.
 \end{align}
-Then we have
+Entonces tenemos
 \begin{align}
   \{F^{\mu\nu}\}  &=
   \begin{pmatrix}
@@ -1384,22 +1498,26 @@ Then we have
 \end{align}
 
 
-From eqs.~\eqref{eq:173qft}, and \eqref{eq:174qft}
+De las ecuaciones.~\eqref{eq:173qft}, y \eqref{eq:174qft}
 \begin{align*}
   \boldsymbol{\nabla}\times \mathbf{E}&=-\boldsymbol{\nabla}\times \boldsymbol{\nabla}\phi-\frac{\partial}{\partial t}\boldsymbol{\nabla}\times \mathbf{A}\\
   &=-\frac{\partial\mathbf{B}}{\partial t},
 \end{align*}
-and
+y
 \begin{align*}
   \boldsymbol{\nabla}\cdot\mathbf{B}&=\boldsymbol{\nabla}\cdot(\boldsymbol{\nabla}\times \mathbf{A})\\
   &=0
 \end{align*}
-which are just the homogeneous Maxwell equations. Therefore the expression
+que son justamente las ecuaciones homogéneas de  Maxwell. Por
+consiguiente la expresión  
  \begin{equation}
   \label{eq:fmunu}
     F^{\mu\nu}=\partial^\mu A^\nu-\partial^\nu A^\mu.
 \end{equation}
-with the $\{F^{\mu\nu}\}$ given in \eqref{eq:matrixfmunu}, is just an equivalent form for the homogeneous Maxwell equations. The remaining Maxwell equations can be obtained from the Euler-Lagrange equations for $A^\nu$:
+con los $\{F^{\mu\nu}\}$ dada en \eqref{eq:matrixfmunu}, no es más que
+una forma equivalente de las ecuaciones homogéneas de Maxwell. Las
+ecuaciones de Maxwell restante se pueden obtener a partir de las
+ecuaciones de Euler-Lagrange para $A^\nu$:
 
 
 Con miras a calcular  las ecuaciones de Euler-Lagrange para el Lagrangiano en
@@ -1439,7 +1557,9 @@ Usando la ec.~\eqref{eq:dddmufmunu2}, tenemos
 Como era de esperarse una Acción invariante de Lorentz e invariante
 gauge local, expresada en términos del Lagrangiano \eqref{eq:lagAmum},
 da lugar a la Teoría Electromagnética. 
+\end{frame}
  
+\begin{frame}[fragile,allowframebreaks]
 Tomando la derivada con respecto a $\nu$ en ambos lados tenemos
 \begin{align}
    \partial_\nu\partial_\mu F^{\mu\nu}&=\partial_\nu J^\nu.
@@ -1462,7 +1582,7 @@ Por consiguiente, la cuadricorriente $J^\mu$ es conservada:
 \end{equation}
 
 
-Again, for $\nu=0$, we have
+De nuevo, para $\nu=0$, tenemos
 \begin{align}
   \label{nohomME21}
     \partial_\mu F^{\mu0}&=J^0\nonumber\\
@@ -1470,12 +1590,11 @@ Again, for $\nu=0$, we have
     \frac{\partial}{\partial x^{i}}F^{i0}&=J^0\nonumber\\
     \frac{\partial E^{i}}{\partial x^{i}}&=J^0\,,
 \end{align}
-and therefore
+y por consiguiente
 \begin{align}
    \boldsymbol{\nabla}\cdot\mathbf{E}&=\rho\,.
 \end{align}
-while for $\nu=k$ we have
-
+mientras que para $\nu=k$ tenemos
 \begin{align}
 \partial_\mu F^{\mu k}&=J^k\nonumber\\
 \partial_iF^{ik}+\partial_0F^{0k}&=J^k\nonumber\\
@@ -1484,15 +1603,15 @@ while for $\nu=k$ we have
 \epsilon_{ijk}\frac{\partial B^j}{\partial x^{i}}-\frac{\partial E^k}{\partial t}&=J^k\nonumber\\
 (\boldsymbol{\nabla}\times \mathbf{B})^k-\frac{\partial E^k}{\partial t}&=J^k.\,.
 \end{align}
-and therefore
+y por consiguiente
 \begin{align}
   \boldsymbol{\nabla}\times \mathbf{B}-\frac{\partial\mathbf{E}}{\partial t}&=\mathbf{J}\,.
 \end{align}
-In this way the expression
+De esta forma, la expresión
 \begin{align}
    \partial_\mu F^{\mu\nu}&=J^\nu& \text{where}\quad    F^{\mu\nu}=\partial^\mu A^\nu-\partial^\nu A^\mu\,,
 \end{align}
-is completely equivalent to the full set of Maxwell equations:
+es completamente equivalente al conjunto completo de ecuaciones de Maxwell:
 \begin{align}
   \label{eq:hom_m_eq}
   \boldsymbol{\nabla}\cdot\mathbf{B}&=0,&\boldsymbol{\nabla}\times \mathbf{E}+\frac{\partial\mathbf{B}}{\partial t}&=0\\
@@ -1500,7 +1619,7 @@ is completely equivalent to the full set of Maxwell equations:
   \boldsymbol{\nabla}\cdot\mathbf{E}&=\rho,&\boldsymbol{\nabla}\times \mathbf{B}-\frac{\partial\mathbf{E}}{\partial t}&=\mathbf{J}\,.
 \end{align}
 
-
+\end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
@@ -1523,6 +1642,9 @@ predicciones son invariantes de Lorentz.
 
 
 \subsection{Energ\'\i a del campo electromagn\'etico}
+\begin{frame}[fragile,allowframebreaks]
+
+
 Necesitamos la expresi\'on para $F_{\mu\nu}$,
 \begin{equation}
   \label{eq:16}
@@ -1612,10 +1734,11 @@ En ausencia de cargas y corrientes
  \label{eq:19}
  \mathbf{P}&=\int_Vd^3x\,(\mathbf{E}\times\mathbf{B})\,.
 \end{align}
-
+\end{frame}
 \subsection{Fijaci\'on del gauge}
 \label{sec:fijacion-del-gauge}
 %ver secci\'on 4.4 de Cottingan
+\begin{frame}[fragile,allowframebreaks]
 Para obtener una soluci\'on definitiva a las ecuaciones del campo
 electromagn\'etico, se debe remover la arbitrariedad asociada con la
 libertad gauge de la ec.~\eqref{eq:aphicov}. De este modo los campos
@@ -1684,9 +1807,12 @@ Incluyendo el t\'ermino con corrientes, y usando el hecho de que un signo global
   \label{eq:laglorgauugefin}
   \mathcal{L}=&\frac{1}{2}\partial^\mu A^\nu\partial_\mu A_\nu+J_\mu A^\mu
 \end{align}
-
+\end{frame}
 \section{Ecuaciones de Proca}
 \label{sec:ecuacion-de-proca}
+\begin{frame}[fragile,allowframebreaks]
+
+
 Consideraremos ahora el efecto de adicionar un t\'ermino de masa a la teor\'\i a de
 Maxwell. Los campos vectoriales masivos juegan un papel importante en
 f\'\i sica. Campos como $W^\mu$, $Z^\mu$ que median las interacciones d\'ebiles
@@ -1789,7 +1915,7 @@ cargas no electromagn\'eticas y pueden ser masivos. El reto durante
 varias d\'ecadas fue entender como las masa de los campos vectoriales de
 la interacci\'on d\'ebil podr\'\i a hacerse compatible con el principio gauge
 local.  
-
+\end{frame}
 
 
 
@@ -2641,8 +2767,17 @@ Compruebe esta identidad para la transformaci\'on de Lorentz de la ec.~\eqref{eq
 \label{item:pch2.3} %noinstiki
 \end{enumerate} %noinstiki
 \renewcommand{\labelenumi}{\theenumi} %noinstiki
+
+
+
+
+%\begin{frame}[fragile,allowframebreaks]
+%\end{frame}
+
+
 %%% Local Variables: 
 %%% mode: latex
 %%% TeX-master: "fullnotes"
+%%% ispell-local-dictionary: "castellano8"
 %%% End: 
 
