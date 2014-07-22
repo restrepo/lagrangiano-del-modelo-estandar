@@ -406,8 +406,8 @@ las coordenadas generalizadas  $\partial\phi/\partial x^\mu$ y $\phi$, es
       (\partial\phi/\partial x^\mu)}
   \right]-\frac{\partial\mathcal{L}}{\partial\phi}=0.
 \end{equation}
-\'Esta \'ultima ecuaci\'on de deducir\'a usando m\'etodos variacionales en la
-siguiente secci\'on
+\'Esta \'ultima ecuaci\'on se deducir\'a usando m\'etodos variacionales en la
+siguiente secci\'on.
 
 \section{Principio de M\'\i nima Acci\'on para $\mathcal{L}$}
 \label{sec:principio-de-minima-call}
@@ -527,12 +527,13 @@ Generalizando a tres dimensiones vemos que la ecuaci\'on para una onda propagand
 \end{equation}
 proviene de una densidad Lagrangiana (hasta derivadas totales)
 \begin{align}
+    \label{eq:ls3d}
     \mathcal{L}=&\frac{1}{2}\left[
   \left(
 \frac{1}{v^2}\frac{\partial\phi}{\partial t}
   \right)^2-\boldsymbol{\nabla}\phi\cdot\boldsymbol{\nabla}\phi \right]\nonumber\\
     =&\frac{1}{2}\left[
-      \frac{1}{v^2}{\partial_0\phi}\,{\partial_0\phi}-{\partial_i\phi}\,{\partial_i\phi}
+      \frac{1}{v^2}{\partial_0\phi}\,{\partial_0\phi}-\sum_i{\partial_i\phi}\,{\partial_i\phi}
    \right]\,.
 \end{align}
 \subsection{Teorema de Noether para simetr\'\i as internas}
@@ -1282,13 +1283,13 @@ si
 De este modo $m$ puede interpretarse como la masa de la part\'\i cula. 
 
 Generalizando a 3 dimensiones tenemos el Lagrangiano de Klein-Gordon
-\begin{equation}
+\begin{align}
   \label{eq:15}
-  \mathcal{L}=\frac{1}{2}
+  \mathcal{L}=&\frac{1}{2}
   \left(
 \frac{\partial\phi}{\partial t}
   \right)^2-\tfrac{1}{2}\boldsymbol{\nabla}\phi\cdot\boldsymbol{\nabla}\phi-\tfrac{1}{2}m^2\phi^2,
-\end{equation}
+\end{align}
 que dan lugar a la ecuaci\'on de Klein-Gordon
 
 \begin{equation}
@@ -1333,4 +1334,5 @@ De modo que $T^0_i\neq T^i_0$.
 %%% Local Variables: 
 %%% mode: latex
 %%% TeX-master: "fullnotes"
+%%% ispell-local-dictionary: "castellano8"
 %%% End: 
