@@ -75,7 +75,6 @@ De confirmarse que la partícula recientemente descubierta en el Gran Acelerador
 
 
 \section{Campo escalar real}
-\begin{frame}[fragile,allowframebreaks]
 Escribamos el Lagrangiano para una part\'\i cula escalar real de masa $m$ como
 \begin{equation}
 \label{eq:83qft}
@@ -266,6 +265,11 @@ En el caso de la Acción invariante gauge local bajo el Grupo $U(1)$, tenemos el
   \qquad 
   \mu^2\lt 0\text{ and } \lambda\gt 0\,.
 \end{equation}
+donde
+\begin{align}
+  \mathcal{D}_{\mu}=\partial_{\mu}+iq A_{\mu}\,.
+\end{align}
+
 Este es el Lagrangiano más general posible para un campo escalar complejo y el campo $A_\mu$ que deja la Acción invariante de Lorentz e invariante bajo la transformación gauge $U(1)$
 \begin{align}
 \label{eq:sqedgu}
@@ -290,14 +294,16 @@ La libertad gauge nos permite en un momento determinado escoger la fase $\theta(
      \phi\to\phi'=e^{i\theta(x)}e^{i\eta(x)}\left(\frac{H(x)+v}{\sqrt{2}}\right)
 \end{align*}
 Haciendo $\theta(x)=-\eta(x)$,
-\begin{equation}
+\begin{align}
 \label{eq:87qft}
-   \phi\to\phi'=e^{-i\eta(x)+i\eta(x)}\left(\frac{H(x)+v}{\sqrt{2}}\right)=\frac{H(x)+v}{\sqrt{2}}
-\end{equation}
+   \phi\to\phi'=&e^{-i\eta(x)+i\eta(x)}\left(\frac{H(x)+v}{\sqrt{2}}\right)=\frac{H(x)+v}{\sqrt{2}} \nonumber\\
+   A_{\mu}\to A_{\mu}'=&A_{\mu}-\frac{1}{q}\partial_{\mu}\theta(x)\,.
+\end{align}
 \begin{align}
   \mathcal{L}\to\mathcal{L}' &=\left[\left(\mathcal{D}^\mu\right)'\phi'\right]^*\left(\mathcal{D}_\mu\right)'\phi'-\mu^2\left(\phi^*\right)'\phi'-\lambda\left[\left(\phi^*\right)'\phi'\right]^2-\tfrac{1}{4}\left(F^{\mu\nu}F_{\mu\nu}\right)'\nonumber\\
  &=\tfrac{1}{2}\left[\partial^\mu H+ig{A'}^\mu(H+v)\right]\left[\partial_\mu H-ig{A'}_\mu(H+v)\right]-\tfrac{1}{2}\mu^2(H+v)^2-\tfrac{1}{4}\lambda(H+v)^4-\tfrac{1}{4}\left(F^{\mu\nu}F_{\mu\nu}\right)'\,.
 \end{align}
+
 En adelante omitiremos las primas, aunque debe estar claro que se esta trabajando en el gauge específico de la ec.~\eqref{eq:87qft}. Entonces
 \begin{align}
   \mathcal{L}&=\tfrac{1}{2}\partial^\mu H\partial_\mu H-\tfrac{1}{2}\mu^2(H+v)^2-
@@ -318,11 +324,11 @@ Teniendo en cuenta la ec.~\eqref{eq:23qft} para el Lagrangiano de Proca, vemos q
   m_{A^\mu}=gv.
 \end{equation}
 
-El mecanismo completo mediante el cual, a partir de un Lagrangiano invariante gauge local, los bosones gauge adquieren masa se llama \emph{mecanismo de Higgs} \cite{Higgs:1964pj}. La partícula escalar que adquiere masa se llama Higgs, mientras que el bosón de Goldstone es absorbido por campo gauge como modo longitudinal. 
+El mecanismo completo mediante el cual, a partir de un Lagrangiano invariante gauge local, los bosones gauge adquieren masa se llama \emph{mecanismo de Brout–Englert–Higgs} \cite{Englert:1964et,Higgs:1964pj}. La partícula escalar que adquiere masa se llama Higgs, mientras que el bosón de Goldstone es absorbido por campo gauge como modo longitudinal. 
 
 El número de grados de libertad independientes en el Lagrangiano original en la ec.~\eqref{eq:89qft} es cuatro. Correspondientes a los dos grados de libertad del bosón gauge no masivo y los dos del campo escalar complejo. En el Lagrangiano final en la ec.~\eqref{eq:94qft} no aparece el bosón de Goldstone. Sin embargo esto no es un problema porque dicho Lagrangiano también tiene cuatro grados de libertad correspondientes a  los tres grados de libertad del bosón gauge masivo y al grado de libertad del bosón de Higgs. 
 
-\end{frame}
+
 
 \subsection{Superconductivity}
 
