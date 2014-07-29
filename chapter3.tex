@@ -36,8 +36,35 @@
 First, let us consider a simpler group, corresponding to the rotation group in tree dimensions. The generators are the angular momentum operators $J^i$, which satisfy the commutation relations
 \end{english}
 \begin{spanish}
-Consideremos primero un grupo más simple, el correspondiente a las rotaciones en tres dimensiones. Los generadores osn los operadores de momento angular $ J^i$, que satisfacen las relaciones de conmutación
+Consideremos primero un grupo más simple, el correspondiente a las rotaciones en tres dimensiones. 
 \end{spanish}
+Para conocer las relaciones de conmutación de los generadores del grupo de rotaciones, podemos escribir los generadores como operadores diferenciales; de la expresión 
+\begin{align}
+  \mathbf{J}=&\mathbf{r}\times \mathbf{p}=\mathbf{r}\times (-i\boldsymbol{\nabla})\nonumber\\
+J^{i}=&-i\epsilon_{ijk}x^{j}\partial_k&\,,
+\end{align}
+las relaciones de conmutación del momento angular \eqref{eq:rotgr} se obtienen de forma directa
+\begin{align*}
+  \left[ J^i,J^j \right]\psi=&-\left[ \epsilon_{ilm}x^{l}\partial_m ,\epsilon_{jpq}x^{p}\partial_q \right]\psi \nonumber\\
+=&-\epsilon_{ilm}\epsilon_{jpq}\left[ x^{l}\partial_m ,x^{p}\partial_q \right]\psi \nonumber\\
+=&-\epsilon_{ilm}\epsilon_{jpq}\left[ x^{l}\partial_m \left(x^{p}\partial_q\psi  \right)-x^{p}\partial_q \left( x^{l}\partial_m\psi \right) \right] \nonumber\\
+   =&-\epsilon_{ilm}\epsilon_{jpq}\left( x^{l}\delta_{mp}\partial_q\psi +x^{l}x^{p}\partial_m \partial_q\psi  -x^{p}\delta_{ql}\partial_m\psi-x^{p}  x^{l}\partial_q\partial_m\psi \right) \nonumber\\
+   =&-\epsilon_{ilm}\epsilon_{jpq}\left( x^{l}\delta_{mp}\partial_q\psi   -x^{p}\delta_{ql}\partial_m\psi \right) \nonumber\\
+   =&-\epsilon_{ilm}\epsilon_{jpq} x^{l}\delta_{mp}\partial_q\psi +i\epsilon_{ilm}\epsilon_{jpq}x^{p}\delta_{ql}\partial_m\psi \nonumber\\
+   =&-\epsilon_{ilm}\epsilon_{jmq} x^{l}\partial_q\psi +i\epsilon_{ilm}\epsilon_{jpl}x^{p}\partial_m\psi \nonumber\\
+   =&-\epsilon_{ilm}\epsilon_{jmq} x^{l}\partial_q\psi +i\epsilon_{iml}\epsilon_{jqm}x^{q}\partial_l\psi \qquad (l\leftrightarrow m)\ \text{in 2nd term}\nonumber\\
+   =&-\epsilon_{ilm}\epsilon_{jmq} x^{l}\partial_q\psi +i\epsilon_{imq}\epsilon_{jlm}x^{l}\partial_q\psi  \qquad (l\leftrightarrow q)\ \text{in 2nd term}\nonumber\\
+   =& \left(-\epsilon_{ilm}\epsilon_{jmq}+\epsilon_{imq}\epsilon_{jlm}  \right) x^{l}\partial_q\psi \nonumber\\
+   =& \left(\epsilon_{ilm}\epsilon_{jqm}-\epsilon_{iqm}\epsilon_{jlm}  \right) x^{l}\partial_q\psi \nonumber\\
+   =& \left(\cancel{\delta_{ij}\delta_{lq}}-\delta_{iq}\delta_{lj}-\cancel{\delta_{ij}\delta_{ql}}+\delta_{il}\delta_{qj}  \right) x^{l}\partial_q\psi \nonumber\\
+  =& \left(\delta_{il}\delta_{qj}-\delta_{iq}\delta_{lj}  \right) x^{l}\partial_q\psi \nonumber\\
+  =& \epsilon_{kij}\epsilon_{klq} x^{l}\partial_q\psi \nonumber\\
+  =&i \epsilon_{kij}\left(-i\epsilon_{klq} x^{l}\partial_q  \right)\psi \nonumber\\
+  =&i \epsilon_{kij}J^{k}\psi \,.
+\end{align*}
+
+Por consiguiente, Los generadores son los operadores de momento angular $ J^i$, que satisfacen las relaciones de conmutación
+
 \begin{align}
 \label{eq:rotgr}
   \left[J^i,J^j\right]=i\epsilon^{ijk}J^k\,.
@@ -129,20 +156,37 @@ entonces las matrices $N\times N$
 \begin{align}
   U(\boldsymbol{\theta})=\exp\left( i \Lambda_{a}\theta_{a} \right)
 \end{align}
-son unitarias y de determinante 1, y constituyen la representación fundamental de $SU(N)$
+son unitarias y de determinante 1, y constituyen la representación fundamental de $SU(N)$.
 
-\subsection{Lorentz Group}
-We must build a representation of the Lorentz Group in  $n$ dimensions. In \cite{Peskin}:
-\begin{quote}
-  It is generally true that one can find matrix representations of a continuous group by finding matrix representations of the generators of the group (which must satisfy the proper commutation relations), then exponentiating these infinitesimal representations. 
-
-For our present problem, we need to know the commutation relations of the generators of the group of Lorentz transformations. For the rotation group, one can work the commutation relations by writing the generators as differential operators; from the expression
+En el caso de $U(1)$, el único generador conmutativo satisface trivialmente el álgebra y da lugar al elementos de grupo
 \begin{align}
-  \mathbf{J}=\mathbf{x}\times \mathbf{p}=\mathbf{x}\times (-i\boldsymbol{\nabla})\,,
+  U(\theta)=e^{i\Lambda \theta}
 \end{align}
-the angular momentum commutation relations \eqref{eq:rotgr} follow straightforwardly. 
-\end{quote}
-The last equation can be written as (summation of repeated indices)
+que automáticamente tienen norma 1
+\begin{align*}
+|U(\theta)|^2= U^{*}(\theta)U(\theta)=1\,.
+\end{align*}
+
+
+\subsubsection{Lorentz Group}
+Para estudiar otros posibles tipos de campos además de los escalares y vectorial, debemos estudiar las representaciones del Grupo de Lorentz en $n$ dimensiones. 
+We must build a representation of the Lorentz Group in  $n$ dimensions. 
+
+Seguiremos el mismo método de encontrar representaciones matriciales a partir de representaciones matriciales de generadores del Grupo (los cuales deben satisfacer la relaciones de conmutación apropiadas) para luego exponenciar estas representaciones infinitesimales.
+
+Para el presente problema, necesitamos conocer las relaciones de conmutación de los generadores del grupo de transformaciones de Lorentz. Hemos mostrado en la ec.~ \eqref{eq:rotgr}  que, a partir de la relación
+\begin{align}
+\label{eq:rxp}
+  \mathbf{J}=&\mathbf{r}\times \mathbf{p}=\mathbf{r}\times (-i\boldsymbol{\nabla})
+\end{align}
+la parte correspondiente al grupo de rotaciones es
+\begin{align*}
+  \left[J^i,J^j\right]=i\epsilon_{ijk}J^k\,.
+\end{align*}
+
+
+
+The equation \eqref{eq:rxp} can be written as (summation of repeated indices)
 \begin{align}
   J^k=\left[\mathbf{x}\times (-i\boldsymbol{\nabla})\right]^k=&
 -i\epsilon_{ijk}x^i\partial_j=i\epsilon_{ijk}x^i\partial^j
