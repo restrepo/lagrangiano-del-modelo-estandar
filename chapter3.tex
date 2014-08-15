@@ -623,7 +623,7 @@ and similarly
 To construct Lorentz invariant Lagrangians, one needs to first combine products of spinors to make objects that transforms as Lorentz tensors.
 When constructing Lorentz  tensors from fermion fields the lowered indices must only be contracted with raised indices following the same convention established in eq.~(\ref{eq:conven}). A contravariant  Lorentz tensor of rank $(n\times n)$  in this space must have an index structure with $n$ undotted (dotted) indices follow by $n$ dotted (undotted) indices, as for example,   $\alpha_1\alpha_2\ldots\alpha_n\dot{\alpha}_1\dot{\alpha}_2\ldots\dot{\alpha}_n$.
 
-\section{Lagrangiano}
+\section{Lagrangian}
 \label{sec:dirac-equation}
 The Scrodinger equation can be written as
 \begin{align}
@@ -738,78 +738,23 @@ and dropping out the total derivative, we have finally the most general Action f
   \mathcal{L}=&i{\psi}^{\dagger}a^\mu\partial_\mu\psi+
 m \left( \psi\psi+\psi^{\dagger}\psi^{\dagger} \right)\,.
 \end{align}
+If in addition we impose that the Lagrangian be invariant under changes of phase of $\psi$ then the mass of the field must be zero and
+\begin{align}
+   \mathcal{L}=&i{\psi}^{\dagger}a^\mu\partial_\mu\psi.
+\end{align}
+The previos Lagrangian which is invariant under
+\begin{align}
+  \psi\to \psi'=e^{i\alpha}\psi\,,
+\end{align}
+is the most general one if $\psi$ have any conserved charge, and will be the one the will use in the subsequent discussions.
 
 
-One possible invariant could be the term $\psi^\dagger(x)\psi(x)$. However, under a Lorentz transformation we should have $\psi^\dagger S^\dagger S\psi$. As we cannot assume that $S(\Lambda)$ is unitary, the solution is to define the \emph{adjoint} spinor
-\begin{align}
-  \overline{\psi}=\psi^\dagger b\,.
-\end{align}
-which transforms as
-\begin{align}
-  \overline{\psi}(x)\to  \overline{\psi}'(x)&=
-{\psi'}^\dagger(x)b=
-\psi^\dagger\left(\Lambda^{-1}x\right)S^\dagger(\Lambda)b\,,
-\end{align}
-and,
-
-\begin{align}
-  \overline{\psi}(x)\psi(x)\to  \overline{\psi}'(x)\psi'(x)&=
-\psi^\dagger\left(\Lambda^{-1}x\right)S^\dagger(\Lambda)b S(\Lambda)\psi\left(\Lambda^{-1}x\right)
-\end{align}
-The condition that must be fulfilled for Lorentz invariance of the Action is 
-\begin{align}
-  \label{eq:ltrinscal}
-  S^\dagger(\Lambda)bS(\Lambda)=&b\,,
-\end{align}
-and therefore, 
-\begin{align}
-  \overline{\psi}(x)\psi(x)\to  \overline{\psi}'(x)\psi'(x)&=
-\overline{\psi}\left(\Lambda^{-1}x\right)\psi\left(\Lambda^{-1}x\right)\,,
-\end{align}
-and:
-\begin{align}
-  \overline{\psi}(x)\to  \overline{\psi}'(x)&=
-\psi^\dagger\left(\Lambda^{-1}x\right)b S^{-1}(\Lambda)\nonumber\\
-&=\overline{\psi}\left(\Lambda^{-1}x\right)S^{-1}(\Lambda)\,.
-\end{align}
-
-
-
-
-
-the most general Lagrangian for this field is
-\begin{align}
-   \mathcal{L}&=i \overline{\psi} \gamma^\mu\partial_\mu\psi-m\overline{\psi} \psi\,,
-\end{align}
-Where the coefficients have been already fixed by convenience. Since the Action is real, it is convenient to rewrite this as
-\begin{align}
-   \mathcal{L}&=i \overline{\psi} \gamma^\mu\partial_\mu\psi-m\overline{\psi} \psi\nonumber\\
-&=-\frac{1}{2}\partial_\mu\left(i \overline{\psi} \gamma^\mu\psi\right)+i \overline{\psi} \gamma^\mu\partial_\mu\psi-m\overline{\psi} \psi\nonumber\\
-  &=-\frac{i}{2}(\partial_\mu \overline{\psi}) \gamma^\mu\psi-\frac{i}{2} \overline{\psi} \gamma^\mu\partial_\mu\psi+i \overline{\psi} \gamma^\mu\partial_\mu\psi-m\overline{\psi} \psi\nonumber\\
-  &=\frac{i}{2} \overline{\psi} \gamma^\mu\partial_\mu\psi-\frac{i}{2}(\partial_\mu \overline{\psi}) \gamma^\mu\psi-m\overline{\psi} \psi\,.
-\end{align}
- 
-Para que este nuevo Lagrangiano sea real se requiere que,
-\begin{align}
-  \label{eq:185qft}
-  b^\dagger&=b\nonumber\\
-  b^2&=I\nonumber\\
-  b \gamma_\mu^\dagger b&=\gamma_\mu
-\end{align}
-ya que
-\begin{align*}
-  \mathcal{L}^\dagger&=\left(\frac{i}{2}\psi^\dagger \gamma_\mu^\dagger b \partial_\mu\psi-\frac{i}{2}\partial_\mu\psi^\dagger \gamma_\mu^\dagger b\psi\right)-m\psi^\dagger  b \psi\\
-  &=\left(\frac{i}{2}\psi^\dagger b^2 \gamma_\mu^\dagger b \partial_\mu\psi-\frac{i}{2}\partial_\mu\psi^\dagger b^2 \gamma_\mu^\dagger b\psi\right)-m\psi^\dagger b \psi\\
-  &=\left(\frac{i}{2}\bar{\psi} b \gamma_\mu^\dagger b \partial_\mu\psi-\frac{i}{2}\partial_\mu\bar{\psi}b \gamma_\mu^\dagger b\psi\right)-m\bar{\psi} \psi\\
-  &=\left(\frac{i}{2}\bar{\psi} \gamma_\mu \partial_\mu\psi-\frac{i}{2}\partial_\mu\bar{\psi}\gamma_\mu \psi\right)-m\bar{\psi} \psi
-\end{align*}
 
 \subsection{Corriente conservada y Lagrangiano de Dirac}
 \label{sec:corriente-conservada}
 De la ec.~\eqref{eq:197qft}
 \begin{align}
-  J^0&=\left[\frac{\partial\mathcal{L}}{\partial\left(\partial_0\psi\right)}\right]\delta\psi+\delta\overline{\psi}\left[\frac{\partial\mathcal{L}}{\partial\left(\partial_0\overline{\psi}\right)}\right]\nonumber\\
-  &=i\overline{\psi} \gamma^0 \delta\psi
+  J^0&=\left[\frac{\partial\mathcal{L}}{\partial\left(\partial_0\psi\right)}\right]\delta\psi+\delta{\psi}^{\dagger}\left[\frac{\partial\mathcal{L}}{\partial\left(\partial_0{\psi}^\dagger\right)}\right]
 \end{align}
 El Lagrangiano es invariante bajo transformaciones de fase globales, $U(1)$
 \begin{equation}
@@ -820,68 +765,51 @@ de modo que
   \delta\psi=-i\alpha\psi.
 \end{equation}
 Por consiguiente
-\begin{equation}
-  J^0=\alpha\overline{\psi} \gamma^0 \psi 
-\end{equation}
-Para que $J^0$ pueda interpretarse como una densidad de probabilidad, se debe cumplir
-\begin{equation}
-  \label{eq:bgamma0}
-  b \gamma^0=I
-\end{equation}
-
-
+\begin{align}
+  J^0=&i\psi^{\dagger}a^0 (-i\alpha\psi)+0 \nonumber\\
+     =&\alpha{\psi}^{\dagger}a^0\psi 
+\end{align}
 La  densidad de corriente es
 \begin{align}
-  J^0&\propto \psi^\dagger\psi\,.
+  J^0&\propto \psi^\dagger a^0\psi\,.
 \end{align}
-Que podemos interpretar como una densidad de probabilidad.
-
-De la ec.~\eqref{eq:bgamma0}, ya que la inversa de es única:
+Que podemos interpretar como una densidad de probabilidad $\psi^{\dagger}\psi$ si
 \begin{align}
-  b=\gamma^0\,.
+  a^0=\mathbf{1}_{2\times2}\,.
 \end{align}
- 
-$\overline{\psi}$ se define como la \emph{adjunta} de $\psi$:
- \begin{align}
-   \overline{\psi}=\psi^\dagger\gamma^0\,.
- \end{align}
-
-It is convenient at this point to summarize the properties for $\gamma^0$:
-\begin{align}
-  \label{eq:cft77}
-  {\gamma^0}^\dagger=&\gamma^0 & \left(\gamma^0\right)^2=&1 & \gamma^0{\gamma^\mu}^\dagger\gamma^0=&\gamma^\mu\nonumber\\
- &&   S^\dagger(\Lambda)\gamma^0S(\Lambda)=&\gamma^0\,. &&
-\end{align}
-
-
 
 En general
 \begin{align}
-   J^\mu&\propto\left[\frac{\partial\mathcal{L}}{\partial\left(\partial_\mu\psi\right)}\right]\delta\psi+\delta\bar{\psi}\left[\frac{\partial\mathcal{L}}{\partial\left(\partial_\mu\bar{\psi}\right)}\right]\nonumber\\
-   &\propto i\bar{\psi}\gamma^\mu(-i\alpha\psi)\nonumber\\
-   &\propto i\bar{\psi}\gamma^\mu(-i\alpha\psi)\nonumber\\
-   &=\bar{\psi}\gamma^\mu\psi
+   J^\mu&\propto\left[\frac{\partial\mathcal{L}}{\partial\left(\partial_\mu\psi\right)}\right]\delta\psi+\delta\psi^\dagger\left[\frac{\partial\mathcal{L}}{\partial\left(\partial_\mu\psi^\dagger\right)}\right]\nonumber\\
+   &\propto i\psi^\dagger a^\mu(-i\alpha\psi)\nonumber\\
+   &\propto i\psi^\dagger a^\mu(-i\alpha\psi)\nonumber\\
+   &=\psi^\dagger a^\mu\psi
 \end{align}
 y
 \begin{equation}
-     J^\mu=\psi^\dagger b \gamma^\mu\psi\,.
+     J^\mu=\psi^\dagger  a^\mu\psi\,.
 \end{equation}
-
+donde $a^{\mu}$ es el cuadrivector de matrices
+\begin{align}
+  a^{\mu}=\left(\mathbf{1},a^{1},a^{2},a^{3}\right)\,,
+\end{align}
+y $a^i$ están aún por determinar
 \subsection{Tensor momento-energía}
 \label{sec:tens-momento-energi}
+Usando $a^{0}=\mathbf{1}$,
 \begin{align}
-  T^0_0&=\frac{\partial\mathcal{L}}{\partial\left(\partial_0\psi\right)}\partial_0\psi+\partial_0\bar{\psi}\frac{\partial\mathcal{L}}{\partial\left(\partial_0\bar{\psi}\right)}-\mathcal{L}\nonumber\\
-  &=i\bar{\psi}\gamma^0\partial_0\psi-\mathcal{L}\nonumber\\
-  &=-i\bar{\psi}\gamma^i\partial_i\psi+m\bar{\psi} \psi,\nonumber\\
-  &=\bar{\psi}(\boldsymbol{\gamma}\cdot\mathbf{p}+m)\psi,\nonumber\\
-  &=\psi^\dagger \gamma^0(\boldsymbol{\gamma}\cdot\mathbf{p}+m)\psi,\nonumber\\
+  T^0_0&=\frac{\partial\mathcal{L}}{\partial\left(\partial_0\psi\right)}\partial_0\psi+\partial_0\psi^\dagger\frac{\partial\mathcal{L}}{\partial\left(\partial_0\psi^\dagger\right)}-\mathcal{L}\nonumber\\
+  &=i\psi^\dagger\partial_0\psi-\mathcal{L}\nonumber\\
+  &=-i\psi^\dagger a^i\partial_i\psi\nonumber\\
+  &=\psi^\dagger a^i \left( -i \partial_i\right)\psi\nonumber\\
+  &=\psi^\dagger(\mathbf{a}\cdot\mathbf{p})\psi,\nonumber\\
   \label{eq:118qft}
   &=\psi^\dagger\hat{H} \psi,
 \end{align}
 donde
 \begin{equation}
   \label{eq:denshal}
-  \hat{H}= \gamma^0(\boldsymbol{\gamma}\cdot\mathbf{p}+m)
+  \hat{H}= \mathbf{a}\cdot\mathbf{p}
 \end{equation}
 la ecuación de Scröndinger de validez general es entonces:
 \begin{equation}
@@ -896,8 +824,8 @@ y, como en mecánica clásica usual
 
 Además
 \begin{align}
-    T^0_i&=\frac{\partial\mathcal{L}}{\partial\left(\partial_0\psi\right)}\partial_i\psi+\partial_i\bar{\psi}\frac{\partial\mathcal{L}}{\partial\left(\partial_0\bar{\psi}\right)}\nonumber\\
-    &=i\bar{\psi}\gamma^0 \partial_i\psi\nonumber\\
+    T^0_i&=\frac{\partial\mathcal{L}}{\partial\left(\partial_0\psi\right)}\partial_i\psi+\partial_i\psi^\dagger\frac{\partial\mathcal{L}}{\partial\left(\partial_0\psi^\dagger\right)}\nonumber\\
+    &=i\psi^\dagger\partial_i\psi\nonumber\\
     &=-\psi^\dagger(-i\partial_i)\psi
 \end{align}
 de modo que
@@ -913,34 +841,29 @@ Queremos que el Lagrangiano de lugar a la ecuación de Scröndinger de validez g
 \end{equation}
 con el Hamiltoniano dado en la ec.~(\ref{eq:99qft}), que corresponde a un Lagrangiano de sólo derivadas de primer orden y covariante, en lugar del Hamiltoniano para el caso no relativista. 
 
-De hecho, aplicando las ecuaciones de Euler-Lagrange para el campo $\bar{\psi}$ al Lagrangiano en ec.~(\ref{eq:100qft}) ,tenemos
+De hecho, aplicando las ecuaciones de Euler-Lagrange para el campo $\psi^\dagger$ al Lagrangiano en ec.~(\ref{eq:100qft}) ,tenemos
 \begin{align}
-  \partial_\mu\left[\frac{\partial\mathcal{L}}{\partial\left(\partial_\mu\bar{\psi}\right)}\right]-\frac{\partial\mathcal{L}}{\partial\bar{\psi}}&=0\nonumber\\
-  \frac{\partial\mathcal{L}}{\partial\bar{\psi}}&=0\nonumber\\
+  \partial_\mu\left[\frac{\partial\mathcal{L}}{\partial\left(\partial_\mu\psi^\dagger\right)}\right]-\frac{\partial\mathcal{L}}{\partial\psi^\dagger}&=0\nonumber\\
+  \frac{\partial\mathcal{L}}{\partial\psi^\dagger}&=0\nonumber\\
   \label{eq:114qftm}
-  i\gamma^\mu\partial_\mu\psi-m\psi&=0.
+  i a^\mu\partial_\mu\psi&=0.
 \end{align}
 Expandiendo
 \begin{align*}
-  i\gamma^0\partial_0\psi+i\gamma^i\partial_i\psi-m\psi&=0\\
-  i\gamma^0\partial_0\psi-\boldsymbol{\gamma}\cdot(-i\boldsymbol{\nabla})\psi-m\psi&=0,\\
-  i\gamma^0\partial_0\psi&=(\boldsymbol{\gamma}\cdot\hat{\mathbf{p}}+m)\psi,
+  i a^0\partial_0\psi+i a^i\partial_i\psi&=0\\
+  i a^0\partial_0\psi-\boldsymbol{a}\cdot(-i\boldsymbol{\nabla})\psi&=0,\\
+  i a^0\partial_0\psi&=(\boldsymbol{a}\cdot\hat{\mathbf{p}})\psi,
 \end{align*}
-de donde
+Como $a^{0}=\mathbf{1}$,
 \begin{equation}
-    i{\gamma^0}^2\frac{\partial}{\partial t}\psi=\gamma^0(\boldsymbol{\gamma}\cdot\mathbf{p}+m)\psi.
+    i\frac{\partial}{\partial t}\psi=(\boldsymbol{a}\cdot\mathbf{p}+m)\psi.
 \end{equation}
- tenemos que
-\begin{align}
-  \label{eq:gamma02}
-  \left(\gamma^0\right)^2=1.
-\end{align}
 De la ec.~(\ref{eq:denshal})
 \begin{equation}
   \label{eq:186qft}
-  \hat{H}= \gamma^0(\boldsymbol{\gamma}\cdot\mathbf{p}+m),
+  \hat{H}= \boldsymbol{a}\cdot\mathbf{p},
 \end{equation}
-A este punto, sólo nos queda por determinar los parámetros $\gamma^\mu$. 
+A este punto, sólo nos queda por determinar los parámetros $a^\mu$. 
 
 La ec.~(\ref{eq:grlsch}) puede escribirse como
 \begin{equation}
@@ -963,21 +886,9 @@ De modo que, teniendo en cuenta que $\partial\hat H/\partial t=0$,
 De la ec.~(\ref{eq:186qft}), y usando la condición en ec.~(\ref{eq:gamma02}), tenemos
 \begin{align}
 \label{eq:106qft}
-\hat{H}^2&=(\gamma_0\boldsymbol{\gamma}\cdot\mathbf{p}+\gamma_0\,m)(\gamma_0\boldsymbol{\gamma}\cdot\mathbf{p}+\gamma_0\,m)\nonumber\\
-&=(\gamma_0\boldsymbol{\gamma}\cdot\mathbf{p})(\gamma_0\boldsymbol{\gamma}\cdot\mathbf{p})+m\gamma_0\boldsymbol{\gamma}\cdot\mathbf{p}\gamma_0+m\gamma_0^2\boldsymbol{\gamma}\cdot\mathbf{p}+m^2
+\hat{H}^2&=(\boldsymbol{a}\cdot\mathbf{p})(\boldsymbol{a}\cdot\mathbf{p})\,.
 \end{align}
-Sea
-\begin{align}
-  \beta&=\gamma^0\nonumber\\
-  \alpha^i&=\beta\gamma^i\nonumber\\
-  \gamma^i&=\beta\alpha^i
-\end{align}
-\begin{align}
-  \hat{H}^2&=(\boldsymbol{\alpha}\cdot\mathbf{p})(\boldsymbol{\alpha}\cdot\mathbf{p})
-  +m\boldsymbol{\alpha}\cdot\mathbf{p}\beta+m\beta\boldsymbol{\alpha}\cdot\mathbf{p}+m^2\nonumber\\
-  &=(\boldsymbol{\alpha}\cdot\mathbf{p})(\boldsymbol{\alpha}\cdot\mathbf{p})
-  +m(\boldsymbol{\alpha}\beta+\beta\boldsymbol{\alpha})\cdot\mathbf{p}+m^2
-\end{align}
+
 Sea $A$ una matriz y $\theta$ en un escalar. Entonces tenemos la identidad
 \begin{align}
   \label{eq:206qft}
@@ -1000,58 +911,38 @@ Sea $A$ una matriz y $\theta$ en un escalar. Entonces tenemos la identidad
 \end{itemize}
 Entonces
 \begin{align}
-  \hat{H}^2=&\alpha_i^2p_i^2+\sum_{i\lt j}\left\{\alpha_i,\alpha_j\right\}p_i p_j+m(\alpha_i \beta+\beta\alpha_i)p_i+m^2
+  \hat{H}^2=& a_i^2p_i^2+\sum_{i\lt j}\left\{ a_i, a_j\right\}p_i p_j
 \end{align}
 (suma sobre índices repetidos). Si
 \begin{align}
   \label{eq:107qft}
-  \alpha_i^2&=1\nonumber\\
-  \left\{\alpha_i,\alpha_j\right\}&=0\qquad i\neq j\nonumber\\
-  \alpha_i \beta+\beta\alpha_i&=0
+   a_i^2&=\mathbf{1}\nonumber\\
+  \left\{ a_i, a_j\right\}&=0\qquad i\ne j\,.
 \end{align}
+que se puede resumir en
+\begin{align}
+  \left\{ a^i,a^j \right\}=&2\delta_{ij} \mathbf{1}\,.
+\end{align}
+una de las propiedas de las matrices de Pauli en  \eqref{eq:64qft}. De esta forma, podemos identificar
+\begin{align}
+  a^{i}=\pm \sigma^{i}\,.
+\end{align}
+
 \begin{equation}
-  \hat{H}^2=-\boldsymbol{\nabla}^2+m^2
+  \hat{H}^2=-\boldsymbol{\nabla}^2\,,
 \end{equation}
 y reemplazando en la ec.~\eqref{eq:105qft} llegamos a la ecuación de Klein-Gordon para $\psi$
 \begin{align}
-   \left(\frac{\partial^2}{\partial t^2}-\boldsymbol{\nabla}^2+m^2\right)\psi&=0\nonumber\\
-   \left(\Box+m^2\right)\psi&=0
+   \left(\frac{\partial^2}{\partial t^2}-\boldsymbol{\nabla}^2\right)\psi&=0\nonumber\\
+   \Box\psi&=0
 \end{align}
-En términos de las matrices $\gamma^\mu$ las condiciones en ec.~\eqref{eq:107qft} son
-\begin{align}
-  \label{eq:108qft}
-  \left({\gamma^0}\right)^2&=1\nonumber\\
-  \left({\alpha^i}\right)^2=1\to\gamma^0\gamma^i \gamma^0\gamma^i=-\left({\gamma^i}\right)^2=1\to\left({\gamma^i}\right)^2&=-1\nonumber\\
-  \gamma^i \gamma^0+\gamma^0\gamma^i=\left\{\gamma^i,\gamma^0\right\}&=0
-\end{align}
-De modo que
-\begin{align}
-  \label{eq:198qft}
-\left\{\alpha^i,\alpha^j\right\}=\gamma^0\gamma^i \gamma^0\gamma^j+\gamma^0\gamma^j \gamma^0\gamma^i&=0\qquad i\neq j\nonumber\\
--\gamma^0\gamma^0\gamma^i \gamma^j-\gamma^0\gamma^0\gamma^j \gamma^i&=0\qquad i\neq j\nonumber\\
-\gamma^i \gamma^j+\gamma^j \gamma^i&=0\qquad i\neq j\nonumber\\
-\left\{\gamma^i,\gamma^j\right\}&=0\qquad i\neq j
-\end{align}
-Las ecuaciones \eqref{eq:108qft}\eqref{eq:198qft} pueden escribirse como
-\begin{equation}
-  \label{eq:109qft}
-  \left\{\gamma^\mu,\gamma^\nu\right\}\equiv\gamma^\mu\gamma^\nu+\gamma^\nu\gamma^\mu=2g^{\mu\nu}\mathbf{1}
-\end{equation}
-donde
-\begin{align}
-  \gamma^\mu=(\gamma^0,\gamma^i)
-\end{align}
-Además, de la ec.~\eqref{eq:cft77}
-\begin{equation}
-  \label{eq:112qft}
-   \gamma^0{\gamma^\mu}^\dagger \gamma^0=\gamma^\mu.
-\end{equation}
-Cualquier conjunto de matrices que satisfagan el álgebra en ec.~\eqref{eq:109qft} y la condición en ec.~\eqref{eq:112qft}, se conocen como matrices de Dirac. A $\psi$ se le llama espinor de Dirac.
 
-En términos de la matrices $\gamma^\mu$, el Lagrangiano de Dirac y la ecuación de Dirac, son respectivamente de las ecs.~(\ref{eq:100qft}) y (\ref{eq:114qft})
+En términos de la matrices $\gamma^\mu$, el Lagrangiano de Weyl y la ecuación de Weyl, son respectivamente de las ecs.~(\ref{eq:100qft}) y (\ref{eq:114qft})
+
+%Aclar que es sigma mu
 \begin{equation}
   \label{eq:115qft}
-  \mathcal{L}=\bar{\psi}\left(i\gamma^\mu\partial_\mu-m\right)\psi,
+  \mathcal{L}=\psi^\dagger\left(i\gamma^\mu\partial_\mu\right)\psi,
 \end{equation}
 \begin{equation}
   \label{eq:116qft}
@@ -1059,7 +950,7 @@ En términos de la matrices $\gamma^\mu$, el Lagrangiano de Dirac y la ecuación
 \end{equation}
 donde
 \begin{equation}
-  \bar{\psi}=\psi^\dagger\gamma^0.
+  \psi^\dagger=\psi^\dagger\gamma^0.
 \end{equation}
 
 
