@@ -538,20 +538,84 @@ with some, to be determined, relativistic Hamiltonian operator $\widehat{H}$, we
 Consider spinor fields, which transforms as
 \begin{align}
 \label{eq:184qft}
-  \psi_a(x)\to\psi'_a(x)=S_{ab}(\Lambda)\psi_b(\Lambda^{-1}x)\,, 
+  \psi_\alpha(x)\to\psi'_\alpha(x)={\left[ S(\Lambda) \right]_\alpha}^\beta\psi_\beta(\Lambda^{-1}x)\,, 
 \end{align}
-where $S(\Lambda)$ is some spinorial representation of the Lorentz Group. We will check in next section if a Action with a term like
+where $S(\Lambda)$ is some spinorial representation of the Lorentz Group. In matricial form, if $\Psi(x)$ is a two-component column vector, 
+\begin{align*}
+  \Psi=
+  \begin{pmatrix}
+   \psi_1\\
+   \psi_2\\
+  \end{pmatrix}
+\end{align*}
+then, one representation $2\times2$ of the Lorentz Group, denoted with $(\frac{1}{2},0)$, can be written as
 \begin{align}
-  \psi^*_a(x)a^\mu_{ab}\partial_\mu\psi_b(x)
+  \Psi(x)\to \Psi'(x)=S\Psi \left(\Lambda^{-1}x  \right).
 \end{align}
-could be invariant under Lorentz transformations, for some internal representation of the Lorentz Group.
+In such a case, $S^{*}$ is another independent $2\times2$ representation of the Lorentz Group. It is denoted by $\left( 0,\frac{1}{2}\right)$, and, in order to emphasize the difference, it is convenient to denote their components with dotted indices $\dot{\alpha},\dot{\beta},\cdots$. We can get $S^{*}$ from $S^{\dagger}$. In fact, writing out the fields without arguments to avoid clutter, 
+\begin{align}
+    \Psi^{\dagger}\to \Psi'^{\dagger}=\Psi^{\dagger}S^{\dagger}.
+\end{align}
+In components, and anticipating the dotted indices for $S^{*}$, we have
+\begin{align}
+  \left( \psi'_\alpha \right)^{\dagger}=&\left( \psi_\beta \right)^{\dagger}{\left( S^\dagger\right)^{\dot{\beta}}}_{\dot{\alpha}}\nonumber\\
+=&\left( \psi_\beta \right)^{\dagger}{\left( S^*\right)_{\dot{\alpha}}}^{\dot{\beta}}\nonumber\\
+=&\left( \psi_\beta \right)^{\dagger}{\left( S^*\right)_{\dot{\alpha}}}^{\dot{\beta}}\,,
+\end{align}
+If we interpret $\left( \psi_\beta \right)^{\dagger}$ as the components of a new column vector transforming under $S^{*}(\Lambda)$, with dotted components
+\begin{align}
+ \psi_{\dot{\alpha}}^{\dagger}\equiv \left( \psi_\beta \right)^{\dagger}
+\end{align}
+then we have
+\begin{align}
+  {\psi'}_{\dot{\alpha}}^{\dagger}=&{\left[ S^*(\Lambda)\right]_{\dot{\alpha}}}^{\dot{\beta}} \psi_{\dot{\beta}}^{\dagger}\,,
+\end{align}
+or in matricial form
+\begin{align}
+{{\Psi'}^{\dagger}}^{T}=S^{*}{{\Psi}^{\dagger}}^{T}
+\end{align}
+
+
 
 In summary we have the following Lorentz's transformation properties for the fields
 \begin{align}
    \phi(x)\to \phi'(x')=&\phi(x) && \text{Scalar field,}\nonumber\\
    A^\mu(x)\to {A'}^\mu=&{\Lambda^\mu}_\nu A^\nu(\Lambda^{-1}x)&&\text{Vector field,}\nonumber\\
-   \psi(x)\to\psi'(x)=&S(\Lambda)\psi(\Lambda^{-1}x)&&\text{Spinor field.}
+   \Psi(x)\to\Psi'(x)=&S(\Lambda)\Psi(\Lambda^{-1}x)&&\text{Spinor field.}\nonumber\\
+   \Psi^{\dagger T}(x)\to{\Psi'}^{\dagger T}(x)=&S^{*}(\Lambda)\Psi^{\dagger T}(\Lambda^{-1}x)&&\text{Conjugate spinor field.}
 \end{align}
+
+In the following we use only the dotted and undotted components for
+spinors but not the matricial form. There are two additional spin-1/2
+irreducible representations of the Lorentz group. $\left( S^{-1}
+\right)^T$ and $\left( S^{-1} \right)^{\dagger}$, but these are
+equivalent to the $\left( \frac{1}{2},0 \right)$ and the $\left(
+  0,\frac{1}{2}\right)$ representations repectively. The spinors that
+  transform under these representations have raised spinor indices,
+  $\psi^{\alpha}$ and $\psi^{\dagger\dot{\alpha}}$, with
+  transformation laws
+\begin{align}
+  \psi^{\alpha}\to {\psi'}^{\alpha}=&{\left[ \left( S^{-1} \right)^T \right]^{\alpha}}_{\beta}\psi^{\beta}\nonumber\\
+  \psi^{\dagger\dot{\alpha}}\to {\psi'}^{\dagger\dot{\alpha}}=&{\left[ \left( S^{-1} \right)^\dagger \right]^{\dot{\alpha}}}_{\dot{\beta}}\psi^{\dagger\dot{\beta}}\nonumber\\
+\end{align}
+where
+\begin{align}
+  \psi^{\dagger\dot{\alpha}}\equiv \left( \psi^\alpha \right)^{\dagger}
+\end{align}
+To construct Lorentz invariant Lagrangians, one needs to first combine products of spinors to make objects that transforms as Lorentz tensors.
+When constructing Lorentz  tensors from fermion fields 
+\begin{align}
+  {{}^{\alpha}}\,{}_{\alpha}\qquad \text{and}\qquad {{}_{\dot{\alpha}}}\,{}^{\dot{\alpha}}
+\end{align}
+
+
+\begin{align}
+\psi\psi\equiv  \psi^{\alpha}\psi_{\alpha}\to {\psi'}^{\alpha}{\psi'}_{\alpha}=& {\left[ \left( S^{-1} \right)^T \right]^{\alpha}}_{\beta}\psi^{\beta} {S_\alpha}^\gamma\psi_\gamma \nonumber\\
+ =& {\left( S^{-1} \right)_{\beta}}^{\alpha}{S_\alpha}^\gamma\psi^{\beta}\psi_\gamma \nonumber\\
+  =& \delta_{\beta}^{\gamma}\psi^{\beta}\psi_\gamma \nonumber\\
+  =& \psi^{\beta}\psi_\beta\,.
+\end{align}
+
 
 \section{Lagrangiano}
 \label{sec:dirac-equation}
