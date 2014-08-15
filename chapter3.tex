@@ -602,20 +602,26 @@ where
 \begin{align}
   \psi^{\dagger\dot{\alpha}}\equiv \left( \psi^\alpha \right)^{\dagger}
 \end{align}
-To construct Lorentz invariant Lagrangians, one needs to first combine products of spinors to make objects that transforms as Lorentz tensors.
-When constructing Lorentz  tensors from fermion fields 
+If we interpret $\psi$ and $\psi^{\dagger}$ as two-component vectors in this internal space, we can define the scalar product by using the convention of \emph{descending} contracted indices and \emph{ascending} contracted dotted indices
 \begin{align}
-  {{}^{\alpha}}\,{}_{\alpha}\qquad \text{and}\qquad {{}_{\dot{\alpha}}}\,{}^{\dot{\alpha}}
+\label{eq:conven}
+  {{}^{\alpha}}\,{}_{\alpha}\qquad \text{and}\qquad {{}_{\dot{\alpha}}}\,{}^{\dot{\alpha}}\,.
 \end{align}
-
-
+In this way the we can define the scalar product between two spinors as
 \begin{align}
 \psi\psi\equiv  \psi^{\alpha}\psi_{\alpha}\to {\psi'}^{\alpha}{\psi'}_{\alpha}=& {\left[ \left( S^{-1} \right)^T \right]^{\alpha}}_{\beta}\psi^{\beta} {S_\alpha}^\gamma\psi_\gamma \nonumber\\
  =& {\left( S^{-1} \right)_{\beta}}^{\alpha}{S_\alpha}^\gamma\psi^{\beta}\psi_\gamma \nonumber\\
   =& \delta_{\beta}^{\gamma}\psi^{\beta}\psi_\gamma \nonumber\\
   =& \psi^{\beta}\psi_\beta\,.
 \end{align}
-
+and similarly
+\begin{align}
+  \psi^{\dagger}\psi^{\dagger}\equiv {\psi}^{\dagger}_{\dot{\alpha}}{\psi}^{\dagger\dot{\alpha}}
+\to &{\psi'}^{\dagger}_{\dot{\alpha}}{\psi'}^{\dagger\dot{\alpha}}\nonumber\\
+=&\psi^{\dagger}\psi^{\dagger}\,.
+\end{align}
+To construct Lorentz invariant Lagrangians, one needs to first combine products of spinors to make objects that transforms as Lorentz tensors.
+When constructing Lorentz  tensors from fermion fields the lowered indices must only be contracted with raised indices following the same convention established in eq.~(\ref{eq:conven}). A contravariant  Lorentz tensor of rank $(n\times n)$  in this space must have an index structure with $n$ undotted (dotted) indices follow by $n$ dotted (undotted) indices, as for example,   $\alpha_1\alpha_2\ldots\alpha_n\dot{\alpha}_1\dot{\alpha}_2\ldots\dot{\alpha}_n$.
 
 \section{Lagrangiano}
 \label{sec:dirac-equation}
@@ -664,30 +670,73 @@ Returning back to the space-time Lorentz transformation
 Here we focus on the simplest non-trivial irreducible representations of the Lorentz algebra. These are the two-dimensional (inequivalent) representations: $(\frac{1}{2},0)$ and $(0,\frac{1}{2})$. In the $(\frac{1}{2},0)$ representation, $\mathbf{L}=\boldsymbol{\sigma}/2$ and $\mathbf{K}=-i\boldsymbol{\sigma}/2$ in
 Eq. \eqref{eq:4lt}, which yields
 \begin{align}
+\label{eq:SLet}
   S(\Lambda)_{\left( \frac{1}{2},0 \right)}\equiv S(\Lambda)=
 \exp\left( \boldsymbol{\xi}\cdot \frac{\boldsymbol{\sigma}}{2}+i\boldsymbol{\theta}\cdot \frac{\boldsymbol{\sigma}}{2} \right)\,,
 \end{align}
 donde $\boldsymbol{\sigma}=(\sigma_1,\sigma_2,\sigma_3)$ are the Pauli matrices \eqref{eq:paulimatr}.
 
 we could need a new representation acting in and internal space upon a
-two-component field $\psi_a$ ($a=1,2$).  Two component fermions
-transform in either
-
-\begin{align}
-  \psi(x)\to \psi'(x)=S(\Lambda)\psi\left(\Lambda^{-1}x\right)\,.
-\end{align}
-A Action with a Lagrangian term linear in the derivatives, could be Lorentz invariant if, taking into account:
+two-component field $\psi_a$ ($a=1,2$). A Action with a Lagrangian term linear in the derivatives, could be Lorentz invariant if, taking into account the convention in eq.~(\ref{eq:conven}) and the dotted-undotted structure of the tensor in this internal space, we have that if $a^{\mu}$ is to be a 2th rank tensor of the internal space, it must have components, e.g, $\left( a^{\mu} \right)^{\dot{\alpha}\beta}$. Therefore, a posible Lorentz invariant with a single derivative could be 
  \begin{align}
-   \overline{\psi}(x)\gamma^\mu\partial_\mu\psi(x)\to  \overline{\psi'}(x)\gamma^\mu\partial_\mu\psi'(x)&=
- \overline{\psi}_a\left(\Lambda^{-1}x\right)S^{-1}_{ab}(\Lambda)\gamma^\mu_{bc}{\left(\Lambda^{-1}\right)^\rho}_\mu\partial_\rho S_{cd}(\Lambda)\psi_d\left(\Lambda^{-1}x\right)\nonumber\\
-   &=
-\overline{\psi} \psi\left(\Lambda^{-1}x\right){\left(\Lambda^{-1}\right)^\rho}_\mu \left(S^{-1}(\Lambda)\gamma^\mu S(\Lambda)\right)\partial_\rho\psi\left(\Lambda^{-1}x\right)\nonumber\\
-&=\overline{\psi}(x)\gamma^\mu\partial_\mu\psi(x)\,,
- \end{align}
+   {\psi}^{\dagger}a^\mu\partial_\mu\psi\to  {\psi'}^{\dagger}(x)a^\mu\partial'_\mu\psi'
+&={\psi'}^{\dagger}_{\dot{\alpha}}a^{\mu\dot{\alpha}\gamma}{\left(\Lambda^{-1}\right)^\rho}_\mu\partial_\rho \psi'_{\gamma}\,,
+\end{align}
+with the first letters of the Greek alphabet are used to denote the indices of the internal Lorentz space, and the others the external one. 
+\begin{align}
+{\psi}^{\dagger}a^\mu\partial_\mu\psi\to  {\psi'}^{\dagger}(x)a^\mu\partial_\mu\psi'
+&=
+ {S^*_{\dot{\alpha}}}^{\dot{\beta}}{\psi}^{\dagger}_{\dot{\beta}}a^{\mu\dot{\alpha\gamma}}{\left(\Lambda^{-1}\right)^\rho}_\mu\partial_\rho \left( {S_{\gamma}}^{\delta}\psi_\delta \right)\,.
+ \end{align} 
+As the coordinates $\eta_i$ and $\theta_i$ in eq.~\eqref{eq:SLet} are in the internal Lorentz space, the corresponding Lorentz transformation is constant in the external Lorentz space and
+\begin{align}
+  {\psi}^{\dagger}a^\mu\partial_\mu\psi\to  {\psi'}^{\dagger}(x)a^\mu\partial_\mu\psi'&=
+{\psi}^{\dagger}_{\dot{\beta}}{\left(\Lambda^{-1}\right)^\rho}_\mu {S^{\dagger\dot{\beta}}}_{\dot{\alpha}}a^{\mu\dot{\alpha\gamma}}{S_{\gamma}}^{\delta} \partial_\rho  \psi_\delta \nonumber\\
+&=\psi^\dagger {\left(\Lambda^{-1}\right)^\rho}_\mu \left(S^\dagger a^\mu S\right)\partial_\rho\psi\nonumber\\
+&=\psi^{\dagger}a^\rho\partial_\rho\psi\,,
+\end{align}
 if the following condition is satisfied:
 \begin{align}
+ {\left(\Lambda^{-1}\right)^\rho}_\mu  S^{\dagger}a^\mu S=a^\rho\,,
+\end{align}
+or
+\begin{align}
 \label{eq:ltrincond}
-  S^{-1}(\Lambda)\gamma^\mu S(\Lambda)={\Lambda^\mu}_\sigma\gamma^\sigma\,.
+{\left(\Lambda\right)^\nu}_\rho{\left(\Lambda^{-1}\right)^\rho}_\mu   S^{\dagger}a^\mu S=&
+{\left(\Lambda\right)^\nu}_\rho a^\rho\,,\nonumber\\
+\delta^{\nu}_{\mu}   S^{\dagger}a^\mu S=&
+{\left(\Lambda\right)^\nu}_\rho a^\rho \nonumber\\
+S^{\dagger}a^\nu S=&{\left(\Lambda\right)^\nu}_\rho a^\rho\,,
+\end{align}
+At this point we could show that $2\times2$ matrices $a^{\mu}$ are in fact the Pauli matrices plus the identity by using the internal Lorentz transformation. However we will postpone this demonstration and, as a self consistency check, we will obtain the structure of $a^{\mu}$ from the consequences of the Noether's theorem. 
+
+The other possibility to have a Lorentz  vector  is the combination ${\psi}b^\mu\partial_\mu\psi^{\dagger}$, but it can be shown to be equivalent to the original $\psi^{\dagger}a^\mu\partial_\mu\psi$ with some specific relation between $a^{\mu}$ and $b^{\mu}$. 
+
+Other possible combinations like $\psi^{\dagger}\psi$ or $\psi a^\mu\partial_\mu\psi$ or $\psi^{\dagger} a^\mu\partial_\mu\psi^{\dagger}$ do not have the proper internal Lorentz index structure. 
+
+Therefore  the most general Lagrangian for two-component spinors is
+\begin{align*}
+  \mathcal{L}=\frac{i}{2}{\psi}^{\dagger}a^\mu\partial_\mu\psi+m\psi\psi+
+\left(\frac{i}{2} {\psi}^{\dagger}a^\mu\partial_\mu\psi \right)^{\dagger}+m \left(\psi\psi  \right)^{\dagger}\,,
+\end{align*}
+where the last two terms guarantee that $\mathcal{L}^{\dagger}=\mathcal{L}$ so that the Action be real, and the coefficients have been choosing before hand to give the proper equations of motion. Then,
+\begin{align*}
+  \mathcal{L}=&\frac{i}{2}{\psi}^{\dagger}a^\mu\partial_\mu\psi-\frac{i}{2} \partial_\mu\psi^{\dagger}{a^\mu}^{\dagger}\psi+m \left( \psi\psi+\psi^{\dagger}\psi^{\dagger} \right)
+\end{align*}
+If
+\begin{align}
+{a^{\mu}}^{\dagger}=a^{\mu}  
+\end{align}
+as expected to the going to be Pauli matrices, then
+\begin{align}
+\mathcal{L}=&\frac{i}{2}{\psi}^{\dagger}a^\mu\partial_\mu\psi-\frac{i}{2} \partial_\mu \left(  \psi^{\dagger} a^\mu\psi\right)
++\frac{i}{2}{\psi}^{\dagger}a^\mu\partial_\mu\psi
++m \left( \psi\psi+\psi^{\dagger}\psi^{\dagger} \right)\,,
+\end{align}
+and dropping out the total derivative, we have finally the most general Action for two-component spinors:
+\begin{align}
+  \mathcal{L}=&i{\psi}^{\dagger}a^\mu\partial_\mu\psi+
+m \left( \psi\psi+\psi^{\dagger}\psi^{\dagger} \right)\,.
 \end{align}
 
 
