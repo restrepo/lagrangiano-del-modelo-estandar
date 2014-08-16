@@ -856,7 +856,7 @@ Expandiendo
 \end{align*}
 Como $a^{0}=\mathbf{1}$,
 \begin{equation}
-    i\frac{\partial}{\partial t}\psi=(\boldsymbol{a}\cdot\mathbf{p}+m)\psi.
+    i\frac{\partial}{\partial t}\psi=\boldsymbol{a}\cdot\mathbf{p}\psi.
 \end{equation}
 De la ec.~(\ref{eq:denshal})
 \begin{equation}
@@ -927,7 +927,7 @@ una de las propiedas de las matrices de Pauli en  \eqref{eq:64qft}. De esta form
 \begin{align}
   a^{i}=\pm \sigma^{i}\,.
 \end{align}
-
+de modo que
 \begin{equation}
   \hat{H}^2=-\boldsymbol{\nabla}^2\,,
 \end{equation}
@@ -936,23 +936,52 @@ y reemplazando en la ec.~\eqref{eq:105qft} llegamos a la ecuación de Klein-Gord
    \left(\frac{\partial^2}{\partial t^2}-\boldsymbol{\nabla}^2\right)\psi&=0\nonumber\\
    \Box\psi&=0
 \end{align}
-
-En términos de la matrices $\gamma^\mu$, el Lagrangiano de Weyl y la ecuación de Weyl, son respectivamente de las ecs.~(\ref{eq:100qft}) y (\ref{eq:114qft})
-
-%Aclar que es sigma mu
-\begin{equation}
+Debido a la ambigüedad  en el signo, podemos construir dos cuadrivectores independientes
+\begin{align}
+ \sigma^{\mu}=& \left( \mathbf{1}_{2\times2},\boldsymbol{\sigma} \right)&
+ \overline{\sigma}^{\mu}=& \left( \mathbf{1}_{2\times2},\overline{\boldsymbol{\sigma}} \right)
+\end{align}
+donde
+\begin{align}
+  \overline{\boldsymbol{\sigma}}=-\boldsymbol{\sigma}=\left(-\sigma^1,-\sigma^2,-\sigma^3\right)\,.
+\end{align}
+Como veremos luego, las componentes en el espacio interno son
+$\sigma^{\mu}_{\alpha\dot{\alpha}}$ y $\overline{\sigma}^{\mu\;\alpha\dot{\alpha}}$, de modo que  las matrices apropiadas son $\overline{\sigma}^\mu$, y el Lagrangiano  y la ecuación de Weyl, son respectivamente de las ecs.~(\ref{eq:100qft}) y (\ref{eq:114qft})
+\begin{align}
   \label{eq:115qft}
-  \mathcal{L}=\psi^\dagger\left(i\gamma^\mu\partial_\mu\right)\psi,
-\end{equation}
+  \mathcal{L}=&i\psi^\dagger\overline{\sigma}^\mu\partial_\mu\psi \nonumber\\
+      =&i\psi^\dagger_{\dot{\alpha}}\overline{\sigma}^{\mu\; \alpha\dot{\alpha}}\partial_\mu\psi_{\alpha}\,,
+\end{align}
 \begin{equation}
   \label{eq:116qft}
-  i\gamma^\mu\partial_\mu\psi-m\psi=0,
-\end{equation}
-donde
-\begin{equation}
-  \psi^\dagger=\psi^\dagger\gamma^0.
+  i\overline{\sigma}^\mu\partial_\mu\psi=0,
 \end{equation}
 
+\subsection{Lorentz invariance of the Dirac Action}
+We need to satisfy the following condition
+\begin{align}
+  S^\dagger\overline{\sigma}^\mu S=&{\Lambda^\mu}_\nu\overline{\sigma}^\nu
+\end{align}
+Now 
+\begin{align}
+\label{eq:SLet}
+  S(\Lambda)_{\left( \frac{1}{2},0 \right)}\equiv S(\Lambda)=
+\exp\left( \boldsymbol{\xi}\cdot \frac{\boldsymbol{\sigma}}{2}+i\boldsymbol{\theta}\cdot \frac{\boldsymbol{\sigma}}{2} \right)\,,
+\end{align}
+which can be written in covariant form if we define
+\begin{align}
+  \mathcal{S}^{\mu\nu}=\frac{i}{4}\left[\sigma^\mu,\sigma^\nu\right]\,.
+\end{align}
+% In fact, the six set of non-zero independently generators are
+% \begin{align}
+%   \mathcal{S}^{0i}=&\frac{i}{4}\left(\gamma^0\gamma^i-\gamma^i\gamma^0\right)=\frac{i}{2}\gamma^0\gamma^i= i B^i\nonumber\\
+%   \mathcal{S}^{i j}=&\frac{i}{4}\left(\gamma^i\gamma^j-\gamma^j\gamma^i\right)=\frac{i}{2}\gamma^i\gamma^j= i R^{i j}\,.
+% \end{align}
+It is worth notices that in fact $\mathcal{S}^{\mu\nu}$ satisfy the Lorentz algebra, and therefore are the generators of the Lorentz group elements:
+\begin{align}
+  S(\Lambda)=&\exp\left(-i \omega_{\mu\nu}\frac{\mathcal{S}^{\mu\nu}}{2}\right)\nonumber\\
+  \approx&1-\frac{i}{2} \omega_{\mu\nu}{\mathcal{S}^{\mu\nu}}\,.
+\end{align}
 
 
 \section{Dirac's Action}
