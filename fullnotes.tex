@@ -5,6 +5,15 @@
 \usepackage{amsthm}
 \usepackage[colorlinks=true]{hyperref}
 \usepackage{graphicx}
+\usepackage{appendix}
+\usepackage{chngcntr}
+\usepackage{etoolbox}
+\AtBeginEnvironment{subappendices}{%
+\chapter*{Appendix}
+\addcontentsline{toc}{chapter}{Appendices}
+\counterwithin{figure}{section}
+\counterwithin{table}{section}
+}
 \usepackage{cancel}
 \graphicspath{{figures/}}
 \usepackage[spanish]{babel}
