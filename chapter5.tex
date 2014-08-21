@@ -2,17 +2,50 @@
 
 \section{Espinores de Dirac}
 
-Para ir de un cuadrivector de spín a otro:
+Para ir de un cuadrivector de spín barrado al sin barrar
    \begin{align}
- \sigma^{\mu}=& \left( \mathbf{1}_{2\times2},\boldsymbol{\sigma} \right)&
- \overline{\sigma}^{\mu}=& \left( \mathbf{1}_{2\times2},\overline{\boldsymbol{\sigma}} \right)
+ \overline{\sigma}^{\mu}=\left( \mathbf{1}_{2\times2},-{\boldsymbol{\sigma}} \right) \rightarrow
+\sigma^{\mu}= \left( \mathbf{1}_{2\times2},\boldsymbol{\sigma} \right)
 \end{align}
 podemos usar la \emph{métrica de Weyl}
 \begin{align}
   \left( \sigma^{\mu} \right)_{\alpha\dot{\alpha}}=&\epsilon_{\alpha\beta}\epsilon_{\dot{\alpha}\dot{\beta}}\overline{\sigma}^{\mu\ \dot{\beta}\beta} \nonumber\\
   \left( \overline{\sigma}^{\mu} \right)^{\mu\;\dot{\alpha}\alpha}=&\epsilon^{\alpha\beta}\epsilon^{\dot{\alpha}\dot{\beta}}{\sigma}^{\mu}_{\beta\dot{\beta}} \,,
 \end{align}
-%comprobar explicitamente las anteriores expresiones
+Estas expresiones se pueden comprobar explicitamente. Por ejemplo, en el caso de la primera matriz de Pauli
+\begin{align*}
+  \overline{\sigma}^{1}=
+  \begin{pmatrix}
+   0 & 1\\
+   1 & 0 
+  \end{pmatrix}=
+  \begin{pmatrix}
+   0                                         &\left[\overline{\sigma}^1 \right]^{\dot{1}2}\\
+ \left[\overline{\sigma}^1 \right]^{\dot{2}1}&0
+  \end{pmatrix}=&
+  \begin{pmatrix}
+   0                                         &\left[\overline{\sigma}^1 \right]^{\dot{1}2}\\
+ \left[\overline{\sigma}^1 \right]^{\dot{2}1}&0
+  \end{pmatrix}\nonumber\\
+=&\begin{pmatrix}
+   0                                         &\epsilon^{2\beta}\epsilon^{\dot{1}\dot{\beta}}\left[\sigma^1 \right]_{\beta\dot{\beta}}\\
+\epsilon^{1\beta}\epsilon^{\dot{2}\dot{\beta}} \left[\sigma^1 \right]_{\beta\dot{\beta}}&0
+  \end{pmatrix}\nonumber\\
+=&\begin{pmatrix}
+   0                                         &\epsilon^{21}\epsilon^{\dot{1}\dot{2}}\left[\sigma^1 \right]_{1\dot{2}}\\
+\epsilon^{12}\epsilon^{\dot{2}\dot{1}} \left[\sigma^1 \right]_{2\dot{1}}&0
+  \end{pmatrix}\nonumber\\
+=&\begin{pmatrix}
+   0                                         &-\left[\sigma^1 \right]_{1\dot{2}}\\
+-\left[\sigma^1 \right]_{2\dot{1}}&0
+  \end{pmatrix}\nonumber\\
+=&\begin{pmatrix}
+   0                                         &-1\\
+-1&0
+  \end{pmatrix}\nonumber\\
+=&-\sigma^1\,.
+\end{align*}
+
 Con esto podemos reescribir el siguiente producto de espinores  de Weyl que transforma como vector en el espacio externo de Lorentz, como
 \begin{align}
 \label{eq:exxe}
@@ -148,12 +181,13 @@ Definiendo finalmente el \emph{espinor de Dirac adjunto}
 \begin{align}
   \overline{\Psi}=\Psi^{\dagger}\gamma^{0}\,,
 \end{align}
-podemos escribir finalmente el Lagrangiano para espinores de Dirac que debe contener Lagrangiano de Sch\"odinger en el límite no relativista como
+podemos escribir finalmente el Lagrangiano para espinores de Dirac que debe contener Lagrangiano de Sch\"odinger en el límite no relativista (ver Apéndice \ref{sec:limite-no-relat}) como
 \begin{align}
   \mathcal{L}=&\overline{\Psi}\gamma^{\mu}\partial_{\mu}\Psi+m\overline{\Psi}\Psi\,.
 \end{align}
 En adelante para simplificar la notación nos referiremos al electrón de Dirac simplemente como $\psi$.
 
+Un tratamiento de la invarianza de Lorentz para la Acción de Dirac esta dado en el Apéndice~\ref{cha:dirac-action}. 
 
 
 \section{Electrodinámica Cuántica}
