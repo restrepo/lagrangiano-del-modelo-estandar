@@ -46,7 +46,7 @@ Estas expresiones se pueden comprobar explicitamente. Por ejemplo, en el caso de
 =&-\sigma^1\,.
 \end{align*}
 
-Con esto podemos reescribir el siguiente producto de espinores  de Weyl que transforma como vector en el espacio externo de Lorentz, como
+Con esto podemos reescribir el siguiente producto de espinores  de Weyl que transforma como un vector en el espacio externo de Lorentz
 \begin{align}
 \label{eq:exxe}
   \xi^{\dagger}\overline{\sigma}^{\mu}\eta=& \xi^{\dagger}_{\dot{\alpha}}\overline{\sigma}^{\mu\;\dot{\alpha}\alpha}\eta_{\alpha}\nonumber\\
@@ -64,8 +64,8 @@ Para describir completamente un electrón, que conserva carga eléctrica bajo $U
   \begin{tabular}{llll}
     Nombre & Símbolo & Lorentz & $U(1)$\\\hline
    $e_L$: electrón izquierdo & $\xi_{\alpha}$ & ${S_{\alpha}}^{\beta}$ & $e^{i\theta}$\\
-   $e_L^{\dagger}$: positrón derecho   & $\xi^{\dagger}_{\dot{\alpha}}$ & ${S_{\dot{\alpha}}}^{\dot{\beta}}$ & $e^{-i\theta}$\\
-   $e_R$: electrón derecho   & $\eta^{\dagger\;\dot{\alpha}}$ & ${\left[ \left( S^{-1} \right)^\dagger \right]^{\dot{\alpha}}}_{\dot{\beta}}$& $e^{i\theta}$\\
+   $e_L^{\dagger}$: positrón derecho   & $\left( \xi_{\alpha} \right)^{\dagger}=\xi^{\dagger}_{\dot{\alpha}}$ & ${{S^{*}}_{\dot{\alpha}}}^{\dot{\beta}}$ & $e^{-i\theta}$\\
+   $e_R$: electrón derecho   & $\left( \eta^{\alpha} \right)^{\dagger}=\eta^{\dagger\;\dot{\alpha}}$ & ${\left[ \left( S^{-1} \right)^\dagger \right]^{\dot{\alpha}}}_{\dot{\beta}}$& $e^{i\theta}$\\
    $e_R^{\dagger}$: positrón izquierdo&$\eta^{\alpha}$& ${\left[ \left( S^{-1} \right)^T \right]^{\alpha}}_{\beta}$ & $e^{-i\theta}$\\\hline
   \end{tabular}
   \caption{Componentes del electrón}
@@ -275,6 +275,13 @@ La repulsión electromagnética esta representada por la figura \ref{fig:qedrepu
 \end{figure}
 
 
+\subsection{Paridad}
+\begin{align}
+  \overline{\psi}\gamma^{\mu}\psi A_{\mu}=&
+\xi^{\dagger}\overline{\sigma}^{\mu}\xi A_{\mu}+\eta\sigma^{\mu}\eta^{\dagger} A_{\mu}\nonumber\\
+=&e_L^{\dagger}\overline{\sigma}^{\mu}e_L A_{\mu}+e_R^{\dagger}\sigma^{\mu}e_{R} A_{\mu}\,,
+\end{align}
+de modo que el fotón se acopla por igual a los campos izquierdos que a los derechos. Se dice entonces que la corriente  electromagnética conserva paridad, es decir es invariante bajo el cambio $L\leftrightarrow R$. Una demostración de esta invarianza se muestra en el Apéndice \ref{sec:ferm-quir-de}
 %Intentando obtener el operador Hamiltoniano y demás:
 %  \begin{align}
 %   T^\mu_\nu=&\frac{\partial\mathcal{L}}{\partial\left(\partial_\mu\psi\right)}\partial_\nu\psi+\partial_\nu\bar{\psi}\frac{\partial\mathcal{L}}{\partial\left(\partial_\mu\bar{\psi}\right)}-\mathcal{L}\delta^\mu_\nu\nonumber\\
@@ -289,7 +296,34 @@ La repulsión electromagnética esta representada por la figura \ref{fig:qedrepu
 
 \section{Cromodinámica Cuántica}
 \label{sec:inter-fuert}
-Los protones, neutrones, piones, kaones y demás hadrones, son partículas compuestas de constituyentes elementales llamados quarks. Por ejemplo los protones, neutrones y piones están constituidos de quarks up y down. Los hadrones están dividos en  bariones, $B$, constituidos de tres quarks, y los mesones, $M$, de dos. Para satisfacer el principio de exclusión de Pauli, y justificar el confinamiento de los hadrones, se requiere que cada quark contenga $N_c$ cargas diferentes, llamadas cargas de color, de manera que la carga de color de un hadrón sea cero. Muchos resultados experimentales respaldan la existencia de tres cargas de color para cada quark, $N_c=3$. De este modo cada quark $q=u,d,c,s,t,b$ viene en tres colores
+
+Como se ilustra en la figura~\ref{fig:crosssection}, en cromodinámica cuántica existe la posibilidad que un electrón y un positrón se aniquilen mutuamente en pura energía llevada por un fotón virtual el cual se debe materializar en un par partícula-antipartícula de acuerdo a la energía disponible. Este es el principio de funcionamiento de los aceleradores electrón-positrón donde se generan dos rayos muy energéticos de electrones y positrones los cuales se hacen colisionar en un punto alrededor de un detector de partículas. El detector esta diseñado para reconstruir los productos de la aniquilación del par electrón positrón. Por ejemplo, si el par electrón-positrón colisiona con una energía superior a $\SI{212}{MeV}$, existe la probabilidad que se cree un par muón ($\mu^-$) antimuón $\mu^{+}$. En teoría cuántica de campos de campos a dicho proceso se le llama sección eficaz y se denota como
+\begin{align}
+  \sigma(e^+\;e^-\rightarrow \mu^+\;\mu^-)
+\end{align}
+
+\begin{figure}
+  \centering
+  \includegraphics{crosssection}
+  \caption{Diagrama de Feynman para la aniquilación electrón-positron y la subsecuente creación de un par partícula-antipartícula de acuerdo a la energía disponible}
+  \label{fig:crosssection}
+\end{figure}
+
+Aunque el cálculo de dicho proceso está fuera del alcance de una descripción clásica de los campos, dicha probabilidad debe ser proporcional al cuadrado de la carga eléctrica de la partícula producida, en este caso $Q_{\mu}^2=1$, en unidades de la carga del electrón. El conjunto fermiones elementales que interaccionan sólo de forma electrodébil se conoce como \emph{leptones} y esta especificado en la tabla~\ref{tab:leptons}
+\begin{frame}
+\begin{figure}
+  \centering
+  \includegraphics[scale=0.85]{leptons}
+  \caption{Leptones de: \url{http://en.wikipedia.org/wiki/List_of_particles}}
+  \label{tab:leptons}
+\end{figure}
+\end{frame}
+
+Con el avance de la tecnología de aceleradores, en la década de los 50 y 60 del siglo pasado se logró establecer la existencia de un zoológico de nuevas partículas, la mayoría de ellas correspondientes a \emph{hadrónes} en el proceso:
+\begin{align}
+  \sigma(e^+\;e^-\rightarrow \text{hadrónes})\,.
+\end{align}
+Los protones, neutrones, piones, kaones y demás hadrones, son partículas compuestas de constituyentes elementales llamados quarks. Por ejemplo los protones, neutrones y piones están constituidos de quarks up y down. Los hadrones están dividos en  bariones, $B$, constituidos de tres quarks, y los mesones, $M$, de dos. Para satisfacer el principio de exclusión de Pauli, y justificar el confinamiento de los hadrones, se requiere que cada quark contenga $N_c$ cargas diferentes, llamadas cargas de color, de manera que la carga de color de un hadrón sea cero, de forma similar a como la carga eléctrica de un átomo es cero a pesar de que sus constituyentes poseen carga eléctrica. Muchos resultados experimentales respaldan la existencia de tres cargas de color para cada quark, $N_c=3$. De este modo cada quark $q=u,d,c,s,t,b$, con las propiedades mostradas en la tabla~\ref{tab:quarks}, viene en tres colores
 \begin{equation}
   q_\alpha=q_1,q_2,q_3=q_r,q_b,q_g,
 \end{equation}
@@ -300,6 +334,17 @@ donde los últimos subíndices hacen referencia a los colores red, blue, green. 
   \left|q_\alpha q_\beta q_\gamma\right\rangle \qquad M=\frac{1}{\sqrt{3}}\delta^{\alpha\beta}\left|\bar{q}_{\alpha}q_\beta\right\rangle
 \end{equation}
 Estos estados son singletes de color.
+
+\begin{frame}
+\begin{figure}
+  \centering
+  \includegraphics[scale=0.85]{quarks}
+  \caption{Quarks de: \url{http://en.wikipedia.org/wiki/List_of_particles}}
+  \label{tab:quarks}
+\end{figure}
+\end{frame}
+
+
 Una de las determinaciones de $N_c$ proviene del observable
 \begin{align}
   R\approx&\frac{\sigma(e^+e^-\to\text{hadrones})}{\sigma(e^+e^-\to\mu^+\mu^-)}
@@ -330,13 +375,14 @@ R\approx&N_c\frac{\sum_f Q_f^2}{Q_\mu^2}\nonumber\\
 \end{align}
 %\left(\right)
 En la figura, tomada de \cite{a}, se muestra el gráfico de $R$ con respecto a $\sqrt{s}$ (la energía de centro de masa de la colisión). Se observan dos escalones, uno que va hasta una energía $\sqrt{s}\approx4\,$GeV que corresponden a $f=u,d,s$, con un $R\approx2$,  y otro hasta $\sqrt{s}\approx40\,$GeV que corresponde a $f=u,d,s,c,b$, con un $R\approx3.7\approx11/3$. Los dos valores de $R$ son compatibles con los esperados de la ec.~\eqref{eq:254qft}. Como referencia también se señalan los valores para $N_c=4$ (en rojo). 
+\begin{frame}
 \begin{figure}
   \centering
-  \includegraphics[scale=0.9]{r}
+  \includegraphics[scale=0.65]{r}
   \caption{Datos para $R$}
   \label{fig:r}
 \end{figure}
-
+\end{frame}
 Si queremos que el color sea una carga conservada como la carga eléctrica, ésta debe ser la consecuencia de una simetría gauge local. Para tener tres cargas diferentes la posibilidad más simple es imponer la simetría $SU(3)_c$, tal que tengamos un vector compuesto de 3 espinores de Dirac en el espacio de color:
 \begin{equation}
   \Psi=
@@ -612,20 +658,23 @@ From \cite{Feynman:1986er} (pag 136):
 %33+11+22=0
 
 El primer término da lugar a interacciones de cambio de color de quarks como la que se ilustra en la Figura \ref{fig:qcd}
+\begin{frame}  
 \begin{figure}
   \centering
   \includegraphics{qcd} % In qcd.svg as a layer
   \caption{Quark--gluon interaction}
   \label{fig:qcd}
 \end{figure}
-
+\end{frame}
 Mientras que el segundo y tercer término dan lugar a autointeracciones de los gluones como se muestra en la Figura \ref{fig:qcd3gluon}
+\begin{frame}
 \begin{figure}
   \centering
   \includegraphics{qcd3gluon}% In qcd.svg as a layer
   \caption{Triple--gluon self--interaction. The anticolors are the colors running back in time.}
   \label{fig:qcd3gluon}
 \end{figure}
+\end{frame}
 
 
 Todas las interacciones están determinadas en términos de una única constante de acoplamiento $g_s$. Las autointeracciones gauge pueden explicar aspectos de la interacción fuerte como la libertada asintótica, que consiste en que las interacciones fuertes se vuelven más débiles a distancias cortas. 
@@ -638,129 +687,6 @@ En términos de índices de color la corriente, y las otras partes del Lagrangia
 Note que tanto para la Electrodinámica Cuántica como para la Cromodinámica Cuántica la corriente $\bar{\psi}\Gamma\psi$ es vectorial. Para las interacciones débiles la estructura es más complicada y requiere un conocimiento más profundo de la ecuación de Dirac y sus soluciones.
 
 
-\section{Fermiones quirales de cuatro componentes}
-\label{sec:ferm-quir-de}
-En general un fermion puede descomponerse en sus partes izquierdas y derechas
-\begin{align}
-  \mathcal{L}  =&i \left(\overline{\psi_R}+\overline{\psi_L}  \right)\gamma^\mu\partial_\mu \left(\psi_R+\psi_L\right)-m\left(\overline{\psi_R}+\overline{\psi_L}  \right)\left(\psi_R+\psi_L\right)\,.
-\end{align}
-
-
-
-En términos de espinores izquierdos y derechos de cuatro componentes la transformación de paridad 
-\begin{align}
-  \label{eq:220qft}
-  t&\to t&\mathbf{x}&\to -\mathbf{x}&\psi_L(t,\mathbf{x})\to&\psi_R(t,-\mathbf{x}),& \psi_R(t,\mathbf{x})&\to\psi_L(t,-\mathbf{x})\nonumber\\
-  \partial_0&\to \partial_0&\boldsymbol{\nabla}&\to -\boldsymbol{\nabla}&\psi_L(t,\mathbf{x})\to&\psi_R(t,-\mathbf{x}),& \psi_R(t,\mathbf{x})&\to\psi_L(t,-\mathbf{x})\,.
-\end{align}
-Además $\mathbf{L}=\mathbf{r}\times \mathbf{p}\to(-\mathbf{r})\times (-\mathbf{p})=\mathbf{L}$, y como $\gamma^\mu$ esta asociado al momento angular intrínsico, entonces también $\gamma^\mu\to\gamma^\mu$
-
-
-Entonces la transformación de paridad da lugar a (sin tener en cuenta el cambio de argumento en los campos que desaparece en la integral de la Acción)
-\begin{align}
-  \overline{\psi_R}\gamma^\mu\partial_\mu\psi_R=\overline{\psi_R}\gamma^0\partial_0\psi_R+\overline{\psi_R}\boldsymbol{\gamma}\cdot\boldsymbol{\nabla}\psi_R 
-\to&\overline{\psi_L}\gamma^0\partial_0\psi_L-\overline{\psi_L}\boldsymbol{\gamma}\cdot\boldsymbol{\nabla}\psi_L\nonumber\\
-=&\overline{\psi_L}\gamma^0\partial_0\psi_L+\overline{\psi_L}\boldsymbol{\gamma}^\dagger\cdot\boldsymbol{\nabla}\psi_L\nonumber\\
-=&\overline{\psi_L}\gamma^0\gamma^0\gamma^0\partial_0\psi_L+\overline{\psi_L}\gamma^0\boldsymbol{\gamma}\gamma^0\cdot\boldsymbol{\nabla}\psi_L\nonumber\\
-=&\overline{\psi_L}\tilde\gamma^0\partial_0\psi_L+\overline{\psi_L}\tilde{\boldsymbol{\gamma}}\cdot\boldsymbol{\nabla}\psi_L\nonumber\\
-=&\overline{\psi_L}\tilde\gamma^\mu\partial_\mu\psi_L\,.
-\end{align}
-Entonces
-\begin{align}
-   \mathcal{L}\to\mathcal{L}'=&i\overline{\psi_R}\tilde\gamma^\mu\partial_\mu\psi_R+i\overline{\psi_L}\tilde\gamma^\mu\partial_\mu\psi_L-m(\overline{\psi_R}\psi_L+\overline{\psi_L}\psi_R)\,,
-\end{align}
-donde $\tilde\gamma^\mu=U\gamma^\mu U^\dagger$, con $U=\gamma^0$. Como las dos representaciones dan lugar a la misma física, podemos decir que la Acción en términos de espinores $L,R$ de cuatro componentes es invariante bajo la transformación de paridad.
-
-La existencia de ambos espinores $\psi_{L,R}$ garantizan que el Lagrangiano de Dirac es invariante bajo la transformación de paridad. 
-
-La corriente de la electrodinámica cuántica en ec.~\eqref{eq:222qft} (o la de la cromodinámica cuántica, ec.~\eqref{eq:223qft}) conservan paridad ya que, siguiendo los mismos pasos que en la ec.~\eqref{eq:221qft}
-\begin{align}
-  \label{eq:224qft}
-  \overline{\psi}\gamma^\mu\psi=\overline{\psi_L}\gamma^\mu\psi_L+\overline{\psi_R}\gamma^\mu\psi_R\to\overline{\psi_L}\tilde{\gamma}^\mu\psi_L+\overline{\psi_R}\tilde{\gamma}^\mu\psi_R\,.
-\end{align}
-Si para alguna partícula, como es el caso del neutrino, no existe la componente derecha, entonces la correspondiente interacción vectorial viola paridad y no puede tener ni interacciones electromagnéticas ni fuertes, es decir, no se acopla con el fotón o los gluones. Además dicha partícula no puede tener masa de Dirac. En el caso del neutrino esto se entiende pues al no tener carga eléctrica sólo requiere dos grados de libertad independientes.
-
-Definiendo un espinor de  Weyl de dos componentes como
-\begin{align*}
-  \psi_L=&  \begin{pmatrix}
-    \widetilde{\psi}_L\\
-    0 
-  \end{pmatrix}&  \psi_R=&  \begin{pmatrix}
-    0\\
-    \widetilde{\psi}_R
-  \end{pmatrix}
-\end{align*}
-Usando la representación de Weyl para las matrices de Dirac
-\begin{equation}
-  \gamma^\mu=\begin{pmatrix}
-    0&\sigma^\mu\\
-    \bar{\sigma}^\mu & 0
-  \end{pmatrix}
-\end{equation}
-donde
-\begin{align}
-  \sigma^\mu&=(\sigma^0,\sigma^1,\sigma^2,\sigma^3)\nonumber\\
-  \bar{\sigma}^\mu&=(\sigma^0,-\sigma^1,-\sigma^2,-\sigma^3)\,,
-\end{align}
-tenemos que
-\begin{align*}
-  \gamma_5=
-  \begin{pmatrix}
-    -1 &0\\
-    0&1\\
-  \end{pmatrix}
-\end{align*}
-Entonces, podemos definir
-\begin{align}
-  P_L\equiv&\frac{1-\gamma_5}{2}\nonumber\\
-  P_R\equiv&\frac{1+\gamma_5}{2}\,.
-\end{align}
-Además
-\begin{align}
-  \psi_L\equiv P_L\psi\nonumber\\
-  \psi_R\equiv P_R\psi\,.
-\end{align}
-Entonces
-\begin{align}
-  \psi=\psi_L+\psi_R\,.
-\end{align}
-
-Las matrices $P_{L,R}$ tienen las propiedades
-\begin{align}
-  P_L+P_R&=1 & P_{L,R}^2&=P_{L,R}P_{L,R}=P_{L,R}\nonumber\\
-  P_L P_R&=0& P_{L,R}^\dagger&=P_{L,R}\,.
-\end{align}
-Usando la ec.~(\ref{eq:218qft})
-\begin{align}
-  P_{L,R}\gamma^\mu=\frac{1\mp\gamma_5}{2}\gamma^\mu=\gamma^\mu\frac{1\pm\gamma_5}{2}=\gamma^\mu P_{R,L}
-\end{align}
-Para escribir el Lagrangiano en término de los nuevos $\psi_{L,R}$ debemos tener en cuenta que
-\begin{align}
-  \overline{\psi_{L,R}}=(P_{L,R}\psi)^\dagger\gamma^0=\psi^\dagger P_{L,R}\gamma^0=\psi^\dagger\gamma^0P_{R,L}=\overline{\psi}P_{R,L}
-\end{align}
-\begin{align}
-  \label{eq:221qft}
-  \mathcal{L}=&i\overline{\psi}\gamma^\mu\partial_\mu\psi-m\overline{\psi}\psi\nonumber\\
-  =&i\overline{\psi}(P_L+P_R)\gamma^\mu\partial_\mu\psi-m\overline{\psi}(P_L+P_R)\psi\nonumber\\
-  =&i\overline{\psi}P_L\gamma^\mu\partial_\mu\psi+i\overline{\psi}P_R\gamma^\mu\partial_\mu\psi-m\overline{\psi}P_L\psi-m\overline{\psi}P_R\psi\nonumber\\
-  =&i\overline{\psi}P_L P_L\gamma^\mu\partial_\mu\psi+i\overline{\psi}P_R P_R\gamma^\mu\partial_\mu\psi-m\overline{\psi}P_L P_L\psi-m\overline{\psi}P_R P_R\psi\nonumber\\
-  =&i\overline{\psi}P_L\gamma^\mu\partial_\mu P_R\psi+i\overline{\psi}P_R\gamma^\mu\partial_\mu P_L\psi-m\overline{\psi}P_L P_L\psi-m\overline{\psi}P_R P_R\psi\nonumber\\
-  =&i\overline{\psi_R}\gamma^\mu\partial_\mu\psi_R+i\overline{\psi_L}\gamma^\mu\partial_\mu\psi_L-m(\overline{\psi_R}\psi_L+\overline{\psi_L}\psi_R)\,.
-\end{align}
-Se puede demostrar como se hace en detalle en \ref{sec:lagrangiano-de-weyl} que en ese caso
-\begin{align*}
-   \boldsymbol{\sigma}\cdot \mathbf{p}\widetilde{\psi}_{L(R)}=\mp \widetilde{\psi}_{L(R)}
-\end{align*}
-que justifica porque el proyector de helicidad actua sobre las partes izquierdas y derechas de los campos.
-
-De otro lado, si una determinada interacción, como es el caso de la interacción débil, solo participa la componente izquierda de la ec.~\eqref{eq:224qft}, está corresponde a una interacción del tipo
-\begin{align}
-  \overline{\psi}_L\gamma^\mu\psi_L&=\overline{\psi}P_R\gamma^\mu P_L\psi=\overline{\psi}\gamma^\mu P_L\psi\nonumber\\
-  &=\overline{\psi}\gamma^\mu\left(\frac{1-\gamma_5}{2}\right)\psi\nonumber\\
-  &=\tfrac{1}{2}\overline{\psi}\left(\gamma^\mu-\gamma^\mu\gamma_5\right)\psi\,,
-\end{align}
-que de acuerdo a la asignación en la Tabla corresponde a una corriente V--A.
-
 
 
 
@@ -769,8 +695,7 @@ que de acuerdo a la asignación en la Tabla corresponde a una corriente V--A.
 
 \subsection{Lagrangiano de Weyl}
 \label{sec:lagrangiano-de-weyl}
-
-
+\begin{borrar}
 En la ec.~\eqref{eq:118}, obtuvimos el Hamiltoniano en ec.~\eqref{eq:103}
 \begin{equation}
   \hat{H}= \gamma_0(\boldsymbol{\gamma}\cdot\mathbf{p}+m)=\boldsymbol{\alpha}\cdot\mathbf{p}+\beta m\,.
@@ -807,6 +732,7 @@ podemos obtener la representaci\'on de Dirac, tal que $U$ diagonaliza $\gamma^0$
     -\sigma_i&0
   \end{pmatrix}.
 \end{equation}
+\end{borrar}
 En adelante trabajaremos en la representaci\'on de Weyl que en forma compacta es
 \begin{equation}
   \gamma^\mu=\begin{pmatrix}

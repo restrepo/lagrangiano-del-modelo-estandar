@@ -678,7 +678,7 @@ Eq. \eqref{eq:4lt}, which yields
 donde $\boldsymbol{\sigma}=(\sigma_1,\sigma_2,\sigma_3)$ are the Pauli matrices \eqref{eq:paulimatr}.
 
 we could need a new representation acting in and internal space upon a
-two-component field $\psi_a$ ($a=1,2$). A Action with a Lagrangian term linear in the derivatives, could be Lorentz invariant if, taking into account the convention in eq.~(\ref{eq:conven}) and the dotted-undotted structure of the tensor in this internal space, we have that if $a^{\mu}$ is to be a 2th rank tensor of the internal space, it must have components, e.g, $\left( a^{\mu} \right)^{\dot{\alpha}\beta}$. Therefore, a posible Lorentz invariant with a single derivative could be 
+two-component field $\psi_a$ ($a=1,2$). An Action with a Lagrangian term linear in the derivatives, could be Lorentz invariant if, taking into account the convention in eq.~(\ref{eq:conven}) and the dotted-undotted structure of the tensor in this internal space, we have that if $a^{\mu}$ is to be a 2th rank tensor of the internal space, it must have components, e.g, $\left( a^{\mu} \right)^{\dot{\alpha}\beta}$. Therefore, a posible Lorentz invariant with a single derivative could be 
  \begin{align}
    {\psi}^{\dagger}a^\mu\partial_\mu\psi\to  {\psi'}^{\dagger}(x)a^\mu\partial'_\mu\psi'
 &={\psi'}^{\dagger}_{\dot{\alpha}}a^{\mu\dot{\alpha}\gamma}{\left(\Lambda^{-1}\right)^\rho}_\mu\partial_\rho \psi'_{\gamma}\,,
@@ -739,7 +739,11 @@ and dropping out the total derivative, we have finally the most general Action f
   \mathcal{L}=&i{\psi}^{\dagger}a^\mu\partial_\mu\psi+
 m \left( \psi\psi+\psi^{\dagger}\psi^{\dagger} \right)\,.
 \end{align}
-If in addition we impose that the Lagrangian be invariant under changes of phase of $\psi$ then the mass of the field must be zero and
+If $\psi$ have a continuos charge such that
+\begin{align}
+  \psi\to\psi'=e^{i\alpha}\psi
+\end{align}
+we can impose that the Lagrangian be invariant under changes of phase of $\psi$. In such a case the mass of the field must be zero and
 \begin{align}
    \mathcal{L}=&i{\psi}^{\dagger}a^\mu\partial_\mu\psi.
 \end{align}
@@ -751,7 +755,7 @@ is the most general one if $\psi$ have any conserved charge, and will be the one
 
 
 
-\subsection{Corriente conservada y Lagrangiano de Dirac}
+\subsection{Corriente conservada y Lagrangiano de Weyl}
 \label{sec:corriente-conservada}
 De la ec.~\eqref{eq:jmuphi}
 \begin{align}
@@ -953,12 +957,47 @@ $\sigma^{\mu}_{\alpha\dot{\alpha}}$ y $\overline{\sigma}^{\mu\;\alpha\dot{\alpha
   \mathcal{L}=&i\psi^\dagger\overline{\sigma}^\mu\partial_\mu\psi \nonumber\\
       =&i\psi^\dagger_{\dot{\alpha}}\overline{\sigma}^{\mu\; \alpha\dot{\alpha}}\partial_\mu\psi_{\alpha}\,,
 \end{align}
+que da lugar a la ecuación de movimiento
 \begin{equation}
   \label{eq:116qft}
   i\overline{\sigma}^\mu\partial_\mu\psi=0,
 \end{equation}
+Si $\psi$ no tiene ninguna carga continua se puede adicionar un término de masa (con su correspondiente hermítico conjugado)
+\begin{align}
+  i\psi^\dagger\overline{\sigma}^\mu\partial_\mu\psi +m \left( \psi\psi+\psi^{\dagger}\psi^{\dagger} \right)
+\end{align}
 
-\subsection{Lorentz invariance of the Dirac Action}
+\subsection*{Ejercicio}
+
+Considere un espinor de Weyl que además tiene una carga continua $U(1)$
+  \begin{align}
+    \psi\to \psi'=e^{i\alpha}\psi\,,
+  \end{align}
+de modo que su término de masa esta prohíbido.
+
+Escriba el Lagrangiano más general posible para el campo $\psi$ y un campo escalar complejo $\phi$ que transforma como
+\begin{align}
+  \phi\to \phi'=e^{-2i\alpha}\phi\,.
+\end{align}
+con un potencial escalar $V(\phi)$ con ruptura espontánea de la simetría continua $U(1)$. Especifique explícitamente las dimensiones y el carácter positivo o negativo de cada uno de los coeficientes. 
+
+Ayuda: sólo hay un término de interacción posible entre los campos fermiónicos y el campo escalar (más el correspondiente hermítico conjugado).
+
+\hrulefill{}$\blacksquare$
+
+\subsection{Ejercicio}
+
+Para el Lagrangiano del punto anterior, encuentre el espectro de partículas cuando la parte real del campo escalar complejo adquiera un valor esperado de vacío, $v$:
+  \begin{align*}
+    \phi=\frac{H(x)+v+i J(x)}{\sqrt{2}}
+  \end{align*}
+y especifique cuales son los campos masivos y cuales quedan sin masas. Note entonces que un fermión sin masa también puede adquirir una masa después de la ruptura espontánea de la simetría, como consecuencia de su interacción con un campo escalar.
+\label{item:ssb}
+
+\hrulefill{}$\blacksquare$
+
+
+\subsection{Lorentz invariance of the Weyl Action}
 To show that $S(\Lambda)$ is in fact a Lorentz transformation, it is convinient to write this in covariant form. If we define
 \begin{align}
   \sigma^{\mu\nu}=\frac{i}{4}\left[\sigma^\mu,\overline{\sigma}^\nu\right]\,.
@@ -1069,7 +1108,7 @@ Para $\mu=l$
 
 
 
-% \left(\right)
+
 %
 %%% Local Variables: 
 %%% mode: latex
