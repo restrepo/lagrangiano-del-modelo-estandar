@@ -64,9 +64,9 @@ Para describir completamente un electrón, que conserva carga eléctrica bajo $U
   \begin{tabular}{llll}
     Nombre & Símbolo & Lorentz & $U(1)$\\\hline
    $e_L$: electrón izquierdo & $\xi_{\alpha}$ & ${S_{\alpha}}^{\beta}$ & $e^{i\theta}$\\
-   $e_L^{\dagger}$: positrón derecho   & $\left( \xi_{\alpha} \right)^{\dagger}=\xi^{\dagger}_{\dot{\alpha}}$ & ${{S^{*}}_{\dot{\alpha}}}^{\dot{\beta}}$ & $e^{-i\theta}$\\
+   $\left( e_L \right)^{\dagger}$: positrón derecho   & $\left( \xi_{\alpha} \right)^{\dagger}=\xi^{\dagger}_{\dot{\alpha}}$ & ${{S^{*}}_{\dot{\alpha}}}^{\dot{\beta}}$ & $e^{-i\theta}$\\
    $e_R$: electrón derecho   & $\left( \eta^{\alpha} \right)^{\dagger}=\eta^{\dagger\;\dot{\alpha}}$ & ${\left[ \left( S^{-1} \right)^\dagger \right]^{\dot{\alpha}}}_{\dot{\beta}}$& $e^{i\theta}$\\
-   $e_R^{\dagger}$: positrón izquierdo&$\eta^{\alpha}$& ${\left[ \left( S^{-1} \right)^T \right]^{\alpha}}_{\beta}$ & $e^{-i\theta}$\\\hline
+   $\left( e_R \right)^{\dagger}$: positrón izquierdo&$\eta^{\alpha}$& ${\left[ \left( S^{-1} \right)^T \right]^{\alpha}}_{\beta}$ & $e^{-i\theta}$\\\hline
   \end{tabular}
   \caption{Componentes del electrón}
   \label{tab:electron}
@@ -79,6 +79,7 @@ Podemos especificar el Lagrangiano completo para el electrón invariante bajo $U
 \end{align}
 como
 \begin{align}
+\label{eq:dwlag}
   \mathcal{L}=&\xi^{\dagger}_{\dot{\alpha}}\overline{\sigma}^{\mu\;\dot{\alpha}\alpha}\partial_{\mu}\xi_{\alpha}+\eta^{\alpha}\sigma^{\mu}_{\alpha\dot{\alpha}}\partial_{\mu}\eta^{\dagger\;\dot{\alpha}}
 +m \left(\eta^{\alpha} \xi_{\alpha}+\xi^{\dagger}_{\dot{\alpha}} \eta^{\dagger\;\dot{\alpha}}\right)\nonumber\\
 =&\xi^{\dagger}\overline{\sigma}^{\mu}\partial_{\mu}\xi+\eta\sigma^{\mu}\partial_{\mu}\eta^{\dagger}
@@ -186,6 +187,13 @@ podemos escribir finalmente el Lagrangiano para espinores de Dirac que debe cont
   \mathcal{L}=&\overline{\Psi}\gamma^{\mu}\partial_{\mu}\Psi+m\overline{\Psi}\Psi\,.
 \end{align}
 En adelante para simplificar la notación nos referiremos al electrón de Dirac simplemente como $\psi$.
+
+En términos de los campos de Weyl tenemos explicitamente para el término de masa que
+\begin{align}
+\label{eq:mwd}
+  m\overline{\Psi}\Psi=m \left[ \left( e_R \right)^\dagger e_L+\left( e_L \right)^{\dagger}e_R \right]\,.
+\end{align}
+
 
 Un tratamiento de la invarianza de Lorentz para la Acción de Dirac esta dado en el Apéndice~\ref{cha:dirac-action}. 
 
