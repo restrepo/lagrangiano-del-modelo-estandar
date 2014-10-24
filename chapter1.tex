@@ -85,14 +85,17 @@ Una forma m\'as rigurosa de escribir la ec.~\eqref{eq:fma} puede encontrarse en~
 
 El Hamiltoniano del sistema se obtiene definiendo la variable can\'onica conjugada de $x$
 \begin{align}
-  p=\frac{\partial\mathcal{L}}{\partial\dot{x}}=m \dot{x},
+  p=\frac{\partial L}{\partial\dot{x}}=m \dot{x},
 \end{align}
 y usando la transformada de Legendre
 \begin{align}
   H=p \dot{x}-L=\frac{\partial\mathcal{L}}{\partial\dot{x}}\dot{x}-L=\frac{1}{2}m\dot{x}^2+V=T+V
 \end{align}
 
-Para visualizar el principio de m\'\i nimo de acci\'on se recomienda seguir las actividades del programa interactivo en \texttt{Java} disponible online en \cite{JavaAP}. All\'\i{} se considera el problema de un objeto de 0.2Kg lanzado hacia arriba y retornado al punto de partida 3 segundos despues. Si dividimos la trayectoria en tres intervalos como se muestra en la Fig.~\ref{fig:apple1}, teniendo en cuenta que la velocidad es la pendiente del segmento, para $\Delta t=0.75\,$s $x_1=11.13\,$m, $t_1=0.75\,$s, $x_2=0\,$m, $t_2=1.5\,$s, tenemos que para la trayectoria mostrada
+Para visualizar el principio de m\'\i nimo de acci\'on se recomienda seguir las actividades del programa interactivo en \texttt{Java} disponible online en \cite{JavaAP}. 
+Una versión implementada como Notebook de IPython puede encontrarse aqui: \url{http://nbviewer.ipython.org/gist/rescolo/2259833f5ad640f6aeef}.
+
+All\'\i{} se considera el problema de un objeto de 0.2Kg lanzado hacia arriba y retornado al punto de partida 3 segundos despues. Si dividimos la trayectoria en tres intervalos como se muestra en la Fig.~\ref{fig:apple1}, teniendo en cuenta que la velocidad es la pendiente del segmento, para $\Delta t=0.75\,$s $x_1=11.13\,$m, $t_1=0.75\,$s, $x_2=0\,$m, $t_2=1.5\,$s, tenemos que para la trayectoria mostrada
 \begin{align}
   S=\int_{t_1}^{t_2}(T-V)dt\approx&\sum_i(T-V)_i\Delta t\nonumber\\
   \approx&\sum_{i=1}^2\left[\frac{1}{2}m\left(\frac{x_i-x_{i-1}}{t_i-t_{i-1}}\right)^2-m g x_i\right]\Delta t\nonumber\\
