@@ -64,9 +64,9 @@ Para describir completamente un electrón, que conserva carga eléctrica bajo $U
   \begin{tabular}{llll}
     Nombre & Símbolo & Lorentz & $U(1)$\\\hline
    $e_L$: electrón izquierdo & $\xi_{\alpha}$ & ${S_{\alpha}}^{\beta}$ & $e^{i\theta}$\\
-   $\left( e_L \right)^{\dagger}$: positrón derecho   & $\left( \xi_{\alpha} \right)^{\dagger}=\xi^{\dagger}_{\dot{\alpha}}$ & ${{S^{*}}_{\dot{\alpha}}}^{\dot{\beta}}$ & $e^{-i\theta}$\\
+   $\left( e_L \right)^{\dagger}=e^{\dagger}_R$: positrón derecho   & $\left( \xi_{\alpha} \right)^{\dagger}=\xi^{\dagger}_{\dot{\alpha}}$ & ${{S^{*}}_{\dot{\alpha}}}^{\dot{\beta}}$ & $e^{-i\theta}$\\
    $e_R$: electrón derecho   & $\left( \eta^{\alpha} \right)^{\dagger}=\eta^{\dagger\;\dot{\alpha}}$ & ${\left[ \left( S^{-1} \right)^\dagger \right]^{\dot{\alpha}}}_{\dot{\beta}}$& $e^{i\theta}$\\
-   $\left( e_R \right)^{\dagger}$: positrón izquierdo&$\eta^{\alpha}$& ${\left[ \left( S^{-1} \right)^T \right]^{\alpha}}_{\beta}$ & $e^{-i\theta}$\\\hline
+   $\left( e_R \right)^{\dagger}=e^{\dagger}_L$: positrón izquierdo&$\eta^{\alpha}$& ${\left[ \left( S^{-1} \right)^T \right]^{\alpha}}_{\beta}$ & $e^{-i\theta}$\\\hline
   \end{tabular}
   \caption{Componentes del electrón}
   \label{tab:electron}
@@ -80,10 +80,10 @@ Podemos especificar el Lagrangiano completo para el electrón invariante bajo $U
 como
 \begin{align}
 \label{eq:dwlag}
-  \mathcal{L}=&\xi^{\dagger}_{\dot{\alpha}}\overline{\sigma}^{\mu\;\dot{\alpha}\alpha}\partial_{\mu}\xi_{\alpha}+\eta^{\alpha}\sigma^{\mu}_{\alpha\dot{\alpha}}\partial_{\mu}\eta^{\dagger\;\dot{\alpha}}
-+m \left(\eta^{\alpha} \xi_{\alpha}+\xi^{\dagger}_{\dot{\alpha}} \eta^{\dagger\;\dot{\alpha}}\right)\nonumber\\
-=&\xi^{\dagger}\overline{\sigma}^{\mu}\partial_{\mu}\xi+\eta\sigma^{\mu}\partial_{\mu}\eta^{\dagger}
-+m \left(\eta\xi+\xi^{\dagger}\eta^{\dagger} \right)\,.
+  \mathcal{L}=&i\xi^{\dagger}_{\dot{\alpha}}\overline{\sigma}^{\mu\;\dot{\alpha}\alpha}\partial_{\mu}\xi_{\alpha}+i\eta^{\alpha}\sigma^{\mu}_{\alpha\dot{\alpha}}\partial_{\mu}\eta^{\dagger\;\dot{\alpha}}
+-m \left(\eta^{\alpha} \xi_{\alpha}+\xi^{\dagger}_{\dot{\alpha}} \eta^{\dagger\;\dot{\alpha}}\right)\nonumber\\
+=&i\xi^{\dagger}\overline{\sigma}^{\mu}\partial_{\mu}\xi+i\eta\sigma^{\mu}\partial_{\mu}\eta^{\dagger}
+-m \left(\eta\xi+\xi^{\dagger}\eta^{\dagger} \right)\,.
 \end{align}
 Definiendo el \emph{espinor de Dirac}  y su hermítico conjugado como
 \begin{align}
@@ -174,9 +174,9 @@ tememos en particular que,
 \end{align}
 de modo que usando (\ref{eq:psid}), (\ref{eq:psidm}) y (\ref{eq:psidd})
 \begin{align}
-  \mathcal{L}=&\xi^{\dagger}\overline{\sigma}^{\mu}\partial_{\mu}\xi+\eta\sigma^{\mu}\partial_{\mu}\eta^{\dagger}
-+m \left(\eta\xi+\xi^{\dagger}\eta^{\dagger} \right)\nonumber\\
-=&\Psi^{\dagger}\gamma^{0}\gamma^{\mu}\partial_{\mu}\Psi+m\Psi^{\dagger}\gamma^{0}\Psi\,.
+  \mathcal{L}=&i\xi^{\dagger}\overline{\sigma}^{\mu}\partial_{\mu}\xi+i\eta\sigma^{\mu}\partial_{\mu}\eta^{\dagger}
+-m \left(\eta\xi+\xi^{\dagger}\eta^{\dagger} \right)\nonumber\\
+=&i\Psi^{\dagger}\gamma^{0}\gamma^{\mu}\partial_{\mu}\Psi-m\Psi^{\dagger}\gamma^{0}\Psi\,.
 \end{align}
 Definiendo finalmente el \emph{espinor de Dirac adjunto}
 \begin{align}
@@ -184,7 +184,7 @@ Definiendo finalmente el \emph{espinor de Dirac adjunto}
 \end{align}
 podemos escribir finalmente el Lagrangiano para espinores de Dirac que debe contener Lagrangiano de Sch\"odinger en el límite no relativista (ver Apéndice \ref{sec:limite-no-relat}) como
 \begin{align}
-  \mathcal{L}=&\overline{\Psi}\gamma^{\mu}\partial_{\mu}\Psi+m\overline{\Psi}\Psi\,.
+  \mathcal{L}=&i\overline{\Psi}\gamma^{\mu}\partial_{\mu}\Psi-m\overline{\Psi}\Psi\,.
 \end{align}
 En adelante para simplificar la notación nos referiremos al electrón de Dirac simplemente como $\psi$.
 
@@ -192,7 +192,7 @@ En términos de los campos de Weyl un escalar y un vector de espinores Dirac se 
 \begin{align}
 \label{eq:mwd}
   \overline{\Psi}\Psi =& \left( e_R \right)^\dagger e_L+\left( e_L \right)^{\dagger}e_R \nonumber\\
-  \overline{\Psi}\gamma^{\mu}\Psi=& e_L^{\dagger}\overline{\sigma}^{\mu}e_L+e_R^{\dagger}\sigma^{\mu}e_{R}\,,
+  \overline{\Psi}\gamma^{\mu}\Psi=& (e_L)^{\dagger}\overline{\sigma}^{\mu}e_L+(e_R)^{\dagger}\sigma^{\mu}e_{R}\,,
 \end{align}
 
 
@@ -263,7 +263,7 @@ De esta manera podemos reescribir el Lagrangiano en términos de un Lagrangiano 
   \mathcal{L}=\mathcal{L}_{\text{free}}+\mathcal{L}_{\text{int}}\,,
 \end{align}
 \begin{align}
-  \mathcal{L}_{free}=&\bar{\psi}\left(i\gamma^\mu\partial_\mu-m\right)\psi-\tfrac{1}{4}F^{\mu\nu}F_{\mu\nu}\nonumber\\
+  \mathcal{L}_{free}=i&\bar{\psi}\left(i\gamma^\mu\partial_\mu-m\right)\psi-\tfrac{1}{4}F^{\mu\nu}F_{\mu\nu}\nonumber\\
   \mathcal{L}_{\text{int}}=&eQ\bar{\psi}\gamma^\mu\psi A_\mu\,.
 \end{align}
 Para la QED sólo hay un término de interacción que es suficiente para explicar todos los fenoménos electromagnéticos y su interacción con la materia. Este esta representado por el diagrama de Feynman mostrado en la Figura \ref{fig:feynmanruleqed}
@@ -288,9 +288,16 @@ La repulsión electromagnética esta representada por la figura \ref{fig:qedrepu
 \begin{align}
   \overline{\psi}\gamma^{\mu}\psi A_{\mu}=&
 \xi^{\dagger}\overline{\sigma}^{\mu}\xi A_{\mu}+\eta\sigma^{\mu}\eta^{\dagger} A_{\mu}\nonumber\\
-=&e_L^{\dagger}\overline{\sigma}^{\mu}e_L A_{\mu}+e_R^{\dagger}\sigma^{\mu}e_{R} A_{\mu}\,,
+=&(e_L)^{\dagger}\overline{\sigma}^{\mu}e_L A_{\mu}+(e_R)^{\dagger}\sigma^{\mu}e_{R} A_{\mu}\,,
 \end{align}
-de modo que el fotón se acopla por igual a los campos izquierdos que a los derechos. Se dice entonces que la corriente  electromagnética conserva paridad, es decir es invariante bajo el cambio $L\leftrightarrow R$. Una demostración de esta invarianza se muestra en el Apéndice \ref{sec:ferm-quir-de}
+de modo que el fotón se acopla por igual a los campos izquierdos que a los derechos. El Lagrangiano de la QED en términos de espinores de Weyl es:
+\begin{align}
+  \mathcal{L}_{free}=&i(e_L)^{\dagger}\overline{\sigma}^{\mu}\partial_{\mu}e_L A_{\mu}+i(e_R)^{\dagger}\sigma^{\mu}\partial_{\mu}e_{R}
+-m \left[ \left( e_R \right)^\dagger e_L+\left( e_L \right)^{\dagger}e_R \right] -\tfrac{1}{4}F^{\mu\nu}F_{\mu\nu}\nonumber\\
+   &+eQ \left[(e_L)^{\dagger}\overline{\sigma}^{\mu}e_L+(e_R)^{\dagger}\sigma^{\mu}e_{R}  \right] A_{\mu}
+\end{align}
+Se dice entonces que la corriente  electromagnética conserva paridad, es decir es invariante bajo el cambio $L\leftrightarrow R$. 
+Una demostración de esta invarianza se muestra en el Apéndice \ref{sec:ferm-quir-de}
 %Intentando obtener el operador Hamiltoniano y demás:
 %  \begin{align}
 %   T^\mu_\nu=&\frac{\partial\mathcal{L}}{\partial\left(\partial_\mu\psi\right)}\partial_\nu\psi+\partial_\nu\bar{\psi}\frac{\partial\mathcal{L}}{\partial\left(\partial_\mu\bar{\psi}\right)}-\mathcal{L}\delta^\mu_\nu\nonumber\\
@@ -301,7 +308,7 @@ de modo que el fotón se acopla por igual a los campos izquierdos que a los dere
 %   T^0_0=i\psi^\dagger\partial_0\psi-i\psi^\dagger\partial_0\psi-i\psi^\dagger\gamma^0\gamma^i\partial_i\psi+m\psi^\dagger\psi-eQ\bar{\psi}\gamma^\mu\psi A_\mu +\tfrac{1}{4}F^{\mu\nu}F_{\mu\nu}.
 % \end{align}
 
-
+En adelante escribiremos el término sólo para el fermión izquierdo $\psi$ (y el correspondiente antifermion derecho $\psi^{\dagger}$
 
 \section{Cromodinámica Cuántica}
 \label{sec:inter-fuert}
@@ -412,6 +419,11 @@ El Lagrangiano de Dirac con invarianza gauge global $SU(3)$, para un quark, se p
   \label{eq:128qft}
   \mathcal{L}_{\text{global}}=i\bar{\Psi}\gamma^\mu\partial_\mu\Psi-m\bar{\Psi}\Psi,
 \end{equation}
+El análisis es completamente simiar si se usa el Lagrangiano sólo para los fermiones de Weyl izquierdos
+\begin{align}
+    \mathcal{L}_{\text{global}}=i\bar{\Psi}\overline{\sigma}^\mu\partial_\mu\Psi
+\end{align}
+
 donde
 \begin{equation}
   \Psi\to \Psi'=\exp\left(i\theta_a\frac{\lambda^a}{2}\right)\Psi.
@@ -592,6 +604,23 @@ tenemos (suma sobre indices repetidos de $SU(3)$)
   =&\frac{1}{2}\delta^{a b}{G}^{\mu\nu}_a {G}_{\mu\nu}^b\nonumber\\
   =&\frac{1}{2}{G}^{\mu\nu}_a {G}_{\mu\nu}^a\,.
 \end{align}
+Haciendo explícitamente la traza tenemos (suma sobre índices $a,b,c,\cdots$ repetidos aunque no estén contraidos)
+\begin{align}
+  {G}^{\mu\nu}_a {G}_{\mu\nu}^a=&
+\left( \widetilde{G}^{\mu\nu}_a+g_s f^{abc}G^\mu_b G^\nu_c, \right)
+\left( \widetilde{G}_{\mu\nu}^a+g_s f_{ade}G_\mu^d G_\nu^e, \right) \nonumber\\
+=&\widetilde{G}^{\mu\nu}_a\widetilde{G}_{\mu\nu}^a+g_s f_{ade}\widetilde{G}^{\mu\nu}_aG_\mu^d G_\nu^e
++g_s f^{abc}\widetilde{G}_{\mu\nu}^a G^\mu_b G^\nu_c +g_s^2 f^{abc}f_{ade}G^\mu_b G^\nu_c G_\mu^d G_\nu^e 
+\nonumber\\
+=&\widetilde{G}^{\mu\nu}_a\widetilde{G}_{\mu\nu}^a+g_s f^{abc}\widetilde{G}^{\mu\nu}_aG_\mu^b G_\nu^c
++g_s f^{abc}\widetilde{G}_{\mu\nu}^a G^\mu_b G^\nu_c +g_s^2 f^{abc}f_{ade}G^\mu_b G^\nu_c G_\mu^d G_\nu^e 
+\nonumber\\
+=&\widetilde{G}^{\mu\nu}_a\widetilde{G}_{\mu\nu}^a+g_s f^{abc}\widetilde{G}^{\mu\nu}_aG_\mu^b G_\nu^c
++g_s f^{abc}\widetilde{G}^{\mu\nu}_aG_\mu^b G_\nu^c +g_s^2 f^{abc}f_{ade}G^\mu_b G^\nu_c G_\mu^d G_\nu^e 
+\nonumber\\
+=&\widetilde{G}^{\mu\nu}_a\widetilde{G}_{\mu\nu}^a+2g_s f^{abc}\widetilde{G}^{\mu\nu}_aG_\mu^b G_\nu^c
++g_s^2 f^{abc}f_{ade}G^\mu_b G^\nu_c G_\mu^d G_\nu^e 
+\end{align}
 
 Expandiendo el Lagrangiano en ec.~(\ref{eq:127qft}), tenemos
 \begin{align}
@@ -604,7 +633,7 @@ Expandiendo el Lagrangiano en ec.~(\ref{eq:127qft}), tenemos
 =&i\bar{\Psi}\gamma^\mu\partial_\mu\Psi-m\bar{\Psi}\Psi+g_s\bar{\Psi}\gamma^\mu\frac{\lambda_a}{2}\Psi G_\mu^a
   - \frac{1}{4}\widetilde{G}^{\mu\nu}_a \widetilde{G}_{\mu\nu}^a\nonumber\\
   &- \frac{1}{4}\left(g_s\widetilde{G}^{\mu\nu}_af_{a d e}G^d_\mu G^e_\nu
-    +g_sf^{a b c}G_b^\mu G_c^\nu\widetilde{G}_{\mu\nu}^a
+    +2g_sf^{a b c}G_b^\mu G_c^\nu\widetilde{G}_{\mu\nu}^a
     +g_s^2f^{a b c}f_{a d e}G_b^\mu G_c^\nu G^d_\mu G^e_\nu\right)\nonumber\\
 =&\mathcal{L}_{\text{free}}+\mathcal{L}_{\text{gauge}}+\mathcal{L}_{\text{SI}}\,,
 \end{align}
@@ -616,7 +645,7 @@ donde
   \mathcal{L}_{\text{gauge}}=&g_s\bar{\Psi}\gamma^\mu\frac{\lambda_a}{2}\Psi G_\mu^a
   - \frac{1}{4}\widetilde{G}^{\mu\nu}_a \widetilde{G}_{\mu\nu}^a\nonumber\\
   \mathcal{L}_{\text{SI}}=&- \frac{1}{4}\left(g_s\widetilde{G}^{\mu\nu}_af_{a d e}G^d_\mu G^e_\nu
-    +g_sf^{a b c}G_b^\mu G_c^\nu\widetilde{G}_{\mu\nu}^a
+    +2 g_sf^{a b c}G_b^\mu G_c^\nu\widetilde{G}_{\mu\nu}^a
     +g_s^2f^{a b c}f_{a d e}G_b^\mu G_c^\nu G^d_\mu G^e_\nu\right)\,.
 \end{align}
 
@@ -635,7 +664,7 @@ es la nueva corriente conservada de interacción fuerte que surge como consecuen
 \item Una parte de auto-interacciones gauge:
   \begin{align}
     \mathcal{L}_{\text{SI}}  &=- \frac{g_s}{2}f^{a b c}\widetilde{G}_{\mu\nu}^aG_b^\mu G_c^\nu
-    +\frac{g_s^2}{4}f^{a b c}f_{a d e}G_b^\mu G_c^\nu G^d_\mu G^e_\nu\nonumber\\
+    -\frac{g_s^2}{4}f^{a b c}f_{a d e}G_b^\mu G_c^\nu G^d_\mu G^e_\nu\nonumber\\
   &=-\frac{g_s}{2}f^{abc}\left(\partial^\mu G^\nu_a-\partial^\nu G^\mu_a\right)G^b_\mu G^c_\nu-\frac{g_s^2}{4}f^{abc}f_{ade}G^\mu_bG^\nu_cG^d_\mu G^e_\nu.
   \end{align}
 que se desaparecen en el caso Abeliano.
@@ -650,7 +679,23 @@ El Lagrangiano de interacción es:
 
 From \cite{Feynman:1986er} (pag 136):
 \begin{quote}
-  The quarks have an additional type of polarization that is not related to geometry. The idiot physicists, unable to come up with any wonderful Greek words anymore, call this type of polarization by the unfortunate name of ``color'', which has nothing to do with color in the nornal sense. At a particular time, a quark can be in one of three conditions, or ``colors''--R, G, or B (can you guess what they stand for?). A quark's ``color'' can be changed when the quark emits or absorbs a gluon. The gluons come in eigth diffent types, according to the ``colors'' they can couple with. For example, if a red quark changes to green, it emits a red-antigreen gluon--a gluon that takes the red from quark and gives it green (``antigreen'' means the gluon is carrying green in the opposite direction). This gluon could be absorved by a green quark, which changes to red (see Fig.~\ref{fig:qcd}). There are eigth different possible gluons, such as red-antired, red-antiblue, red-antigreen, and so on (you'd think there'd be nine, but for technical reasons, onw is missing)\footnote{
+  The quarks have an additional type of polarization that is not
+  related to geometry. The idiot physicists, unable to come up with
+  any wonderful Greek words anymore, call this type of polarization by
+  the unfortunate name of ``color'', which has nothing to do with
+  color in the nornal sense. At a particular time, a quark can be in
+  one of three conditions, or ``colors''--R, G, or B (can you guess
+  what they stand for?). A quark's ``color'' can be changed when the
+  quark emits or absorbs a gluon. The gluons come in eigth diffent
+  types, according to the ``colors'' they can couple with. For
+  example, if a red quark changes to green, it emits a red-antigreen
+  gluon--a gluon that takes the red from quark and gives it green
+  (``antigreen'' means the gluon is carrying green in the opposite
+  direction). This gluon could be absorved by a green quark, which
+  changes to red (see Fig.~\ref{fig:qcd}). There are eigth different
+  possible gluons, such as red-antired, red-antiblue, red-antigreen,
+  and so on (you'd think there'd be nine, but for technical reasons,
+  one is missing)\footnote{
     \begin{align*}
       \begin{pmatrix}
         r\bar{r} & r\bar{b} &r\bar{g}\\ 

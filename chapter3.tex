@@ -96,7 +96,6 @@ Este grupo es Abeliano, ya que
 \begin{align}
   R(\theta_1)R(\theta_2)=R(\theta_2)R(\theta_1)
 \end{align}
-
 De otro lado el Grupo $U(1)$ corresponde a las rotaciones de un eje complejo y tiene elementos
 \begin{align}
   U(\theta)=e^{i \theta Y}\,,
@@ -104,7 +103,7 @@ De otro lado el Grupo $U(1)$ corresponde a las rotaciones de un eje complejo y t
 donde $Y$ es el generador de los elementos del Grupo y su representación es un número real. 
 
 Estos dos grupos son isomorfos: para un elemento complejo $U(\theta)$ el correspondiente elemento en $SO(2)$ es la rotación por el ángulo el cual es el argumento de $U(\theta)$
-\subsubsection{$SU(N)$}
+\subsubsection{$S0(3)$ y $SU(2)$}
 \begin{english}
 First, let us consider a simpler group, corresponding to the rotation group in tree dimensions. The generators are the angular momentum operators $J^i$, which satisfy the commutation relations
 \end{english}
@@ -119,7 +118,7 @@ o en componentes
 \begin{align}
 \label{eq:rxpi}
   J^k=\left[\mathbf{x}\times (-i\boldsymbol{\nabla})\right]^k=&
--i\epsilon_{ijk}x^i\partial_j=i\epsilon_{ijk}x^i\partial^j\,.
+-i\sum_j\epsilon_{ijk}x^i\partial_j=i\epsilon_{ijk}x^i\partial^j\,.
 \end{align}
 
 Las relaciones de conmutación del momento angular \eqref{eq:rotgr} se obtienen de forma directa
@@ -159,6 +158,28 @@ Una representación matricial de esta álgebra se puede obtener con la llamada r
 \begin{align}
   (L^i)_{jk}=-i\epsilon_{ijk}\,.
 \end{align}
+Explícitamente
+\begin{align*}
+  L^1=&
+  \begin{pmatrix}
+   0 & 0 & 0\\
+   0 & 0 & -i\\
+   0 & i & 0 \\
+  \end{pmatrix}&
+ L^2=&
+ \begin{pmatrix}
+  0 & 0  & i \\ 
+  0 & 0  & 0 \\
+ -i & 0  & 0 \\
+ \end{pmatrix}&
+ L^3=&
+ \begin{pmatrix}
+   0 & -i & 0\\
+   i & 0  & 0\\
+   0 & 0 & 0\\
+ \end{pmatrix}
+\end{align*}
+
 Estos generan los elementos de $SO(3)$
 \begin{align}
   R(\boldsymbol{\theta})=&\exp(i \theta_j L^{j})\nonumber\\
@@ -190,7 +211,7 @@ Claramente, el Grupo $SO(3)$ es no Abeliano, es decir
 \end{align*}
 
 
-
+La representación matricial isomorfa a $SO(3)$ pero con matrices $2\times$ corresponde al Grupo $SU(2)$ de rotaciones de dos ejes complejos.
 \begin{english}
   The Pauli matrices are set of matrices satisfying this commutation relations:
 \end{english}
@@ -272,6 +293,9 @@ De esta manera $T_i$ genera el grupo de matrices $2\times 2$ unitarias y de dete
 
 El grupo $SU(2)$ de rotaciones de dos ejes complejos, es isomorfo al Grupo $SO(3)$ de rotaciones sobre tres ejes reales.
 
+\subsubsection{$SU(N)$}
+
+
 En general, si $N^{2}-1$ generadores $\Lambda_i$, satisfacen el álgebra
 \begin{align}
   \left[ \Lambda_a,\Lambda_b \right]=f_{abc}\Lambda_{c}\,,
@@ -296,10 +320,10 @@ que automáticamente tienen norma 1
 \end{align*}
 
 
-\subsubsection{Grupo de Lorentz }
+\section{Grupo de Lorentz }
 Para estudiar otros posibles tipos de campos además de los escalares y vectoriales, debemos explorar las representaciones del Grupo de Lorentz en $n$ dimensiones. 
 
-Seguiremos el mismo método de encontrar representaciones matriciales a partir de representaciones matriciales de generadores del Grupo (los cuales deben satisfacer la relaciones de conmutación apropiadas) para luego exponenciar estas representaciones infinitesimales.
+Seguiremos el mismo método de encontrar representaciones matriciales a partir del algebra  de los generadores del Grupo (los cuales deben satisfacer la relaciones de conmutación apropiadas) para luego exponenciar estas representaciones infinitesimales.
 
 Para el presente problema, necesitamos conocer las relaciones de conmutación de los generadores del grupo de transformaciones de Lorentz. Hemos mostrado en la ec.~ \eqref{eq:rotgr}  que, a partir de la relación (haciendo expícito el caracter de operadores)
 \begin{align}
@@ -417,11 +441,22 @@ consider a boost
     \xi&1&0&0\\
     0&0&1&0\\
     0&0&0&1
+  \end{pmatrix}=\exp \left( i\xi  K \right),
+\end{align}
+donde el generador de boost es
+\begin{align}
+ K= \begin{pmatrix}
+    0 & -i & 0 & 0\\
+   -i & 0  & 0 & 0\\
+   0 & 0 &  0 & 0\\
+    0 & 0 &  0 & 0\\ 
   \end{pmatrix}.
 \end{align}
+
 \begin{spanish}
   Similarmente una rotación por un ángulo infinitesimal $\theta=\theta_3$ alrededor del plano $xy$ (o sobre el eje $z$)
 \end{spanish}
+The corresponding gene
 \begin{english}
   Similarly a rotation by an infinitesimal angle $\theta=\theta_3$ along $xy$--plane (or about the $z$--axis)
 \end{english}
@@ -457,8 +492,11 @@ Por lo tanto
 
 The $4\times 4$ matrices
 \begin{align}
-  \left(J^{\mu\nu}\right)_{\alpha\beta}=&i\epsilon^{\mu\nu\rho\sigma}\epsilon_{\rho\sigma\alpha\beta}\nonumber\\
-=&i\left({\delta^\mu}_\alpha{\delta^\nu}_\beta-{\delta^\mu}_\beta{\delta^\nu}_\alpha\right)\nonumber\\
+   \left(J^{\mu\nu}\right)_{\alpha\beta}=&i\epsilon^{\mu\nu\rho\sigma}\epsilon_{\rho\sigma\alpha\beta}\nonumber\\
+   \left(J^{\mu\nu}\right)^{\alpha}_{\beta}=g^{\gamma\alpha}\left(J^{\mu\nu}\right)_{\gamma\beta}= &i\epsilon^{\mu\nu\rho\sigma}\epsilon_{\rho\sigma\gamma\beta}g^{\gamma\alpha}\nonumber\\
+\end{align}
+\begin{align}
+  \left(J^{\mu\nu}\right)_{\alpha\beta}  =&i\left({\delta^\mu}_\alpha{\delta^\nu}_\beta-{\delta^\mu}_\beta{\delta^\nu}_\alpha\right)\nonumber\\
  {\left(J^{\mu\nu}\right)^{\alpha}}_{\beta}=&ig^{\gamma\alpha}\left({\delta^{\mu}}_{\gamma}{\delta^\nu}_\beta-{\delta^\mu}_\beta{\delta^{\nu}}_\gamma\right) \nonumber\\
  =&i\left(g^{\mu\alpha}{\delta^\nu}_\beta-{\delta^\mu}_\beta g^{\nu\alpha}\right)\nonumber\\
 {\left(J^{\mu\nu}\right)^{\alpha\beta}}=&i \left( g^{\mu\alpha}g^{\nu\beta}-g^{\mu\beta}g^{\nu\alpha} \right)
@@ -575,7 +613,15 @@ or in matricial form
 \begin{align}
 {{\Psi'}^{\dagger}}^{T}=S^{*}{{\Psi}^{\dagger}}^{T}
 \end{align}
-
+\begin{align}
+  K=&\begin{pmatrix}
+    0 & 1\\
+    1 & 0\\
+  \end{pmatrix}& K^2=&  K=&\begin{pmatrix}
+    1 & 0\\
+    0 & 1\\
+  \end{pmatrix}
+\end{align}
 
 
 In summary we have the following Lorentz's transformation properties for the fields

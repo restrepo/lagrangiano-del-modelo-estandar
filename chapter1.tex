@@ -381,7 +381,8 @@ Definiendo
   \label{eq:xmu}
   x^\mu=(x^0,x^i)=(x^0,x^1,x^2,x^3)=(t,x,y,z) \qquad \mu=0,1,2,3,\quad i=1,2,3\,,
 \end{equation}
-podemos expresar las ecuaciones de Euler-Lagrange que satisface
+en un sistema de unidades donde $x^0$ tenga las mismas unidades que
+$x^i$, podemos expresar las ecuaciones de Euler-Lagrange que satisface
 $\mathcal{L}(\partial\phi/\partial x^\mu)$, como
 \begin{align*}
  \sum_\mu\frac{\partial}{\partial x^\mu}
@@ -539,6 +540,47 @@ proviene de una densidad Lagrangiana (hasta derivadas totales)
       \frac{1}{v^2}{\partial_0\phi}\,{\partial_0\phi}-\sum_i{\partial_i\phi}\,{\partial_i\phi}
    \right]\,.
 \end{align}
+Definiendo $x^0=vt$, podemos escribir la densidad Lagrangiana como
+\begin{align}
+   \mathcal{L}=&\frac{1}{2}\sum_{\mu,\nu}g_{\mu\nu}\frac{\partial\phi}{\partial x^{\mu}}\frac{\partial\phi}{\partial x^{\nu}}
+\end{align}
+donde
+\begin{align}
+  g_{\mu\nu}=
+  \begin{cases}
+    1, & \mu=0,\nu=0\\
+    -1, & \mu=i,\nu=i\\
+    0, & \mu\ne\nu\\
+  \end{cases}
+\end{align}
+Que corresponde a un nuevo producto escalar entre $\partial\phi/\partial x^{\mu}$ y $\partial\phi/\partial x^{\nu}$ con la métrica $g_{\mu\nu}$. En general si tenemos dos cuadrivectores \emph{covariantes} (en términos de superíndices)
+\begin{align}
+\label{eq:covariante}
+  A^{\mu}\to &\left(A^0,A^1,A^2,A^3  \right) & B^{\mu}\to &\left(B^0,B^1,B^2,B^3  \right)
+\end{align}
+su producto escalar bajo la métrica $g^{\mu\nu}$ es
+\begin{align}
+  A\cdot B\equiv &A^0 B^0-A^1B^1-A^2B^2-A^3B^3 \nonumber\\
+ =&\sum_{\mu\nu} g_{\mu\nu}A^{\mu} B^{\nu}\,.
+\end{align}
+Si definimos el cuadrivector \emph{contravariante} (en términos de subíndices)
+\begin{align}
+  B_{\mu}\to \left( B_0,B_1,B_2,B_3 \right)\,,
+\end{align}
+como
+\begin{align}
+  \label{eq:contravariante}
+  B_{\mu}=&\sum_{\nu} g_{\mu\nu}B^{\nu}\nonumber\\
+  B_{\mu}\to& \left(B^0,-B^1,-B^2,-B^3\right)\,,
+\end{align}
+entonces, podemos escribir el nuevo producto escalar como
+\begin{align}
+  A\cdot B==&\sum_{\mu} A^{\mu}\left( \sum_{\nu} g_{\mu\nu} B^{\nu} \right)\nonumber\\
+\sum_{\mu} A^{\mu}B_{\mu}\,.
+\end{align}
+En el próximo capítulo estudiaremos las propiedades de este nuevo producto escalar.
+ 
+
 \subsection{Teorema de Noether para simetr\'\i as internas}
 Para un campo complejo la ec.~(\ref{eq:Scall3d}) se generaliza a
 \begin{equation}
@@ -1033,6 +1075,44 @@ The transformation properties of $A_\mu$ can be obtained from the $X_\mu$ transf
  i q A_\mu\to& i q A_\mu'=i q A_\mu-i \partial_\mu\theta(x)\nonumber\\
   A_\mu\to&  A_\mu'= A_\mu-\frac{1}{q} \partial_\mu\theta(x)\,.
 \end{align}
+To obtain the transformation properties of the covariant derivative itself we can start from the definition
+\begin{align}
+    \mathcal{D}_\mu \psi\to\left(\mathcal{D}_\mu \psi\right)'=&U\left(\mathcal{D}_\mu \psi\right)\,,
+\end{align}
+where $U(x)=e^{i\theta(x)}$. It is worth notice that the set of
+transfromations $U_j(x)=e^{i\theta_j(x)}$ form a group which is
+closed, i.e, with $U_3(x)=U_1(x)U_2(x)$ also in the group, identity
+$U_{\text{identity}}=e^{0}$, inverse $U_{j}^{-1}(x)=U_{j}^{*}(x)$, and the associativity property $\left( U_1(x)U_2(x) \right)U_3(x)=U_1(x)\left( U_2(x)U_3(x) \right)$. In addtion $U_1(x)U_2(x)=U_2(x)U_1(x)$. This Abelian continous group is called $U(1)$, and is isomorphic to the group of rotations in two dimensions by an angle $\theta_i$. 
+
+We have in general
+\begin{align}
+     \mathcal{D}_\mu \psi\to\left(\mathcal{D}_\mu \psi\right)'=&U\left(\mathcal{D}_\mu \psi\right)\nonumber\\
+    \mathcal{D}'_\mu \psi'=&U\left(\mathcal{D}_\mu \psi\right)\nonumber\\
+    \mathcal{D}'_\mu \left( U\psi \right)=&U\left(\mathcal{D}_\mu \psi\right)\,.
+\end{align}
+If we keep in mind that $\mathcal{D}'_\mu U$ is still an operator, we can have
+\begin{align}
+    \mathcal{D}'_\mu U=&U\mathcal{D}_\mu \nonumber\\
+    \mathcal{D}'_\mu UU^{-1}=&U\mathcal{D}_\mu U^{-1} \nonumber\\
+    \mathcal{D}'_\mu =&U\mathcal{D}_\mu U^{-1} \,.
+\end{align}
+To check this identity we must to apply to some field
+\begin{align*}
+    \mathcal{D}'_\mu \psi =&U\mathcal{D}_\mu \left(U^{-1}\psi  \right) \nonumber\\
+    \partial_{\mu}\psi+iq A'_{\mu} \psi =&U \left(\partial_{\mu}+iq A_{\mu}  \right) \left(U^{-1}\psi  \right) \nonumber\\
+    \partial_{\mu}\psi+iq A'_{\mu} \psi =&U \left[U^{-1}\partial_{\mu}\psi+\left( \partial_{\mu}U^{-1} \right)\psi+iq  A_{\mu}U^{-1}\psi\right] \nonumber\\
+    \partial_{\mu}\psi+iq A'_{\mu} \psi =&\partial_{\mu}\psi+U\left( \partial_{\mu}U^{-1} \right)\psi+iq  U A_{\mu}U^{-1}\psi\,.
+\end{align*}
+Afeter cancel out the $\partial_{\mu}\psi$ term in both sides, and factoring out the field $\psi$ we have
+\begin{align}
+      iq A'_{\mu} =&iq  U A_{\mu}U^{-1}+ U\left( \partial_{\mu}U^{-1} \right)\nonumber\\
+      A_{\mu}\to A'_{\mu} =&U A_{\mu}U^{-1}-\frac{i}{q}U\left( \partial_{\mu}U^{-1} \right)\,.
+\end{align}
+This expression is completely general and be useful later. In the particular case of the Abelian Group $U(1)$ we simply have
+\begin{align}
+  A'_{\mu}=&A_{\mu}-\frac{i}{q}\left[ -i\partial_{\mu}\alpha(x) \right]UU^{*}\nonumber\\
+ A_{\mu}\to  A'_{\mu}=&A_{\mu}-\frac{1}{q}\partial_{\mu}\alpha(x)\,.
+\end{align}
 
 
 We define \emph{local gauge invariance} as an arbitrary way of choosing the complex phase factor of a charged field\footnote{like the electron field as described by the usual Scrödinger equation.} at all space time points.
@@ -1095,7 +1175,7 @@ Then we have
 
 From this we can obtain the Euler-Lagrange equation for each field.
 
-In the following developments we will heavily the following notation for vectors, which is going to be explained in next section
+In the following developments we will heavily the covariant and contravariant form of the four-vector $A_{\mu}$ defined in eqs:\eqref{eq:covariante}, \eqref{eq:contravariante}, such that the tridimensional vector is defined in term od the spacial covariant components
 \begin{align*}
   \mathbf{A}=\left( A^1,A^2,A^3\right)=-\left( A_1,A_2,A_3\right)\,.
 \end{align*}
@@ -1262,6 +1342,21 @@ The approach to change the Action for a new one invariant under local phase  tra
 Moreover, to be consistent, we could start with the free Lagrangian before the change of the normal derivative by the covariant derivative. The interactions are not longer imposed by hand but a consequence of the improved Action. 
 
 
+\subsection{Interpretación física}
+Al ser una función compleja, la función de onda del electrón puede escribirse en coordenadas polares como
+\begin{align}
+  \psi=|\psi|e^{i\theta(x)}
+\end{align}
+donde $\theta(x)$ suele ser una expansión en ondas planas en términos de frecuencias angular $\omega$ y números de onda $\mathbf{k}$, que interpretadas en el contexto de la mecánica cuántica corresponden con los factores adecuados a la energía $E$ y a la cantidad de movimiento $\mathbf{p}$ del electrón. Por lo tanto una transformación gauge local sobre el electrón
+\begin{align}
+  \psi\to \psi'=\psi e^{i\alpha(x)}=|\psi|e^{i[\theta(x)+\alpha(x)]}\,,
+\end{align}
+equivale a un cambio en la energía y la cantidad de movimiento del electrón. Por consiguiente el papel de los cuatros campos $A_{\mu}(x)$ es muy importante porque están permanente compensando los cambios en la energía y las tres cantidades de movimiento del electrón de manera que la Acción invariante gauge local, con la densidad Lagrangiana modificada con derivadas covariantes, pueda conservar la energía y la cantidad de movimiento en cualquier punto del espacio tiempo. En la práctica esto implica que el electrón desnudo no es un observable físico. Lo que llamamos electrón es realmente al combinación del electrón como tal y su propio campo electromagnético que garantiza la conservación apropiada de la energía y cantidad de movimiento. 
+
+
+\section{Ecuación de Klein-Gordon}
+
+
 Si modificamos el Lagrangiano en ec.~\eqref{eq:call2}, para incluir un
 t\'ermino adicional ($v=c=1$)
 \begin{equation}
@@ -1301,6 +1396,12 @@ que dan lugar a la ecuaci\'on de Klein-Gordon
 \frac{\partial^2}{\partial t^2}-\nabla^2+m^2
   \right)\phi=0.
 \end{equation}
+Usando los mismos métodos que antes podemos mostrar que
+\begin{align}
+  T^0_i=&\frac{\partial \mathcal{L}}{\partial_0 \phi}\partial_i \phi \nonumber\\
+       =&\frac{\partial \mathcal{L}}{\partial_0 \phi}\partial_i \phi \nonumber\\
+\end{align}
+
 
 \section{Problemas}
 \label{sec:problemas-2}
