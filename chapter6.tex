@@ -15,6 +15,17 @@
 %instiki:***
 %instiki:
 
+\includegraphics[scale=0.7]{fundamental_forces}
+
+\begin{quote}
+  \begin{itemize}
+  \item[--]  Of these four forces, there's one we don't really understand.
+  \item[--] Is it the weak force or the strong?
+  \item[--]It's gravity.
+  \end{itemize}
+\end{quote}
+\url{http://xkcd.com/1489/}
+
 \section{Contenido de partículas}
 
 \begin{frame}[fragile,allowframebreaks]
@@ -125,57 +136,163 @@ donde
 \end{align}
 y $\tau^i$ son las matrices de Pauli dadas en la ec.~\eqref{eq:paulimatr}.
 
+
+\subsection{Productos $SU(2)$}
+Sean $A$ y $B$ $C$, dobletes $SU(2)$. En el Lagrangiano \eqref{eq:L0}, hemos construido invariantes $SU(2)$ de la forma $C^{\dagger}B$, por ejemplo. Pero hay otra forma de construir el producto invariante
+
+Para los dobletes  $SU(2)_L$ 
+\begin{align}
+  A=&
+  \begin{pmatrix}
+    A^1\\
+    A^2\\
+  \end{pmatrix},&
+  B=&
+  \begin{pmatrix}
+    B^1\\
+    B^2\\
+  \end{pmatrix},&
+  C=&
+  \begin{pmatrix}
+    C^1\\
+    C^2\\
+  \end{pmatrix},
+\end{align}
+podemos definir un producto que es invariante bajo $SU(2)$ como el producto escalar bajo la ``métrica'' de $SU(2)$
+\begin{align}
+\epsilon^{ab}A_a B_b\to \epsilon_{ab}A'_a B'_b=&\epsilon_{ab}U_{ac}U_{bd}A_c B_d\nonumber\\
+  =&\left( U_{11}U_{22}-U_{12}U_{21} \right)\left(A_1B_2-A_2B_1  \right)\nonumber\\
+  =&\epsilon^{ab}\det\mathbf{U} A_a B_b\nonumber\\
+  =&\epsilon^{ab} A_a B_b\,.
+\end{align}
+Teniendo en cuenta que
+\begin{align}
+  \epsilon^{ab}A_a B_b=&A_1 B_2-A_2 B_1 \,.
+ \end{align}
+Con el contenido de campos de $A$, siempre es posible definir un nuevo doblete adjunto de $SU(2)$, definido como 
+\begin{align}
+\label{eq:conjA}
+ \widetilde{A}=& \begin{pmatrix}
+                  A_2^{*}\\
+                 -A_1^{*}\\
+                \end{pmatrix}
+\end{align}
+En tal caso es posible escribir el producto escalar $SU(2)$ es una forma matricial, la cual muestra una invarianza más evidente
+\begin{align}
+\widetilde{A}\cdot B\equiv \epsilon^{ab}\widetilde{A}_a B_b=&\widetilde{A}_1 B_2-\widetilde{A}_2 B_1 \nonumber\\
+                     =&A_2^{*}B_2 -(-A_1^{*}) B_1 \nonumber\\
+                     =&A_2^{*}B_2 +A_1^{*} B_1 \nonumber\\
+                     =&A_2^{*}B_2 +A_1^{*} B_1 \nonumber\\
+                     =&\delta^{ac}A_a^{*}B_c \nonumber\\
+                     =&A^{\dagger} B\,.
+ \end{align}
+
+
+Usando la correspondiente identidad para los delta de Kronecker
+\begin{align}
+   \epsilon^{ab}\widetilde{A}_{a} B_{b} =&\delta^{ac}A_a^{*}B_c \nonumber\\
+                                     =&\epsilon^{ad}\epsilon^{cd}A_a^{*}B_c \,,
+ \end{align}
+y con el intercambio $a\leftrightarrow d$, tenemos que
+\begin{align}
+  \widetilde{A}_{a} \left( \epsilon^{ab}B_{b}\right)=&\epsilon^{da}\epsilon^{ca}A_d^{*}B_c \nonumber\\
+=&\epsilon^{ad}\epsilon^{ac}A_d^{*}B_c \nonumber\\
+=&\epsilon^{ad}A_d^{*}\left( \epsilon^{ac}B_c \right)\,.
+\end{align}
+Por consiguiente
+\begin{align}
+\widetilde{A}_a=& \epsilon^{ad}A_d^{*} \,.
+\end{align}
+En forma matricial, tenemos
+\begin{align}
+     \widetilde{A}=&\begin{pmatrix} 
+                  \epsilon_{11} & \epsilon_{12}\\
+                 \epsilon_{21} & \epsilon_{22}
+               \end{pmatrix}
+               \begin{pmatrix}
+                 A_1^{*}\\
+                 A_2^{*}\\
+               \end{pmatrix}\nonumber\\
+               =&i\begin{pmatrix}
+                 0 & -i\\
+                 i & 0
+               \end{pmatrix}
+               \begin{pmatrix}
+                 A_1^{*}\\
+                 A_2^{*}\\
+               \end{pmatrix}\nonumber\\
+             =&i \tau_2 A^{*}\,.
+\end{align}
+
+
+En el caso de un doblete fermiónes $\Xi$, el símbolo  $\dagger$ se usa para denotar el conjugado de fermiones de Weyl. El doblete adjunto en ese caso se puede definir como\begin{align}
+\label{eq:Xiadj}
+ \widetilde{\Xi}=i\tau_2 \begin{pmatrix}
+                  \Xi_1^{\dagger}\\
+                  \Xi_2^{\dagger}\\
+                \end{pmatrix}
+=& \begin{pmatrix}
+                  \Xi_2^{*}\\
+                 -\Xi_1^{*}\\
+                \end{pmatrix}
+\end{align}
+Para evitar confusiones con los invariantes $SU(2)$, usaremos entonces la definición de producto escalar en el espacio $SU(2)$ para escribir los correspondientes invariantes, por ejemplo
+\begin{align}
+  \widetilde{\Xi}\cdot \overline{\sigma}^{\mu}\Xi=\epsilon_{ab}\,\widetilde{\Xi}^{a}\overline{\sigma}^{\mu}\Xi^{b}\,.
+\end{align}
+
+Para evitar confusón con el conjugado de spinores de Weyl, usaremas el producto escalar con la métrica $SU(2)$ para escribir los correspondientes invariantes.
+
+\subsection*{Simetría gauge local $SU(3)_c\times  SU(2)_L\times  U(1)_Y$}
 Los términos de masa de Dirac, usando las convenciones de la
 Tabla\ref{tab:fgw} no son invariante bajo la simetría $SU(2)_L$ porque
 no hay forma de escribir términos escalares usando combinaciones los
-campos $\Xi$ y $\eta$. De la ec.~\eqref{eq:dwlag}, el Lagrangiano más
+campos $\Xi$ y $\eta$.  De la ec.~\eqref{eq:dwlag}, y usando la definición para los dobletes adjuntos de $SU(2)_L$ en la ec.\eqref{eq:Xiadj}, el Lagrangiano más
 general posible para los campos de la Tabla~\ref{tab:fgw} compatibles
 con las simetría de Lorentz y el grupo global $SU(3)_c\times
 SU(2)_L\times U(1)_Y$ es
 \begin{align}
-  \mathcal{L}=&\sum_{i=1}^2i\Xi_i^+\overline{\sigma}^{\mu}\partial_{\mu}\Xi_i
+  \mathcal{L}=&\sum_{i=1}^2i\epsilon_{ab}\widetilde{\Xi}_i^{a}\overline{\sigma}^{\mu}\partial_{\mu}\Xi_i^{b}
 +\sum_{i=1}^3i\eta_{i}\sigma^{\mu}\partial_{\mu} \eta^{\dagger}\nonumber\\
-=&iL^{\dagger}\overline{\sigma}^{\mu}\partial_{\mu}L+iQ^{\dagger}\overline{\sigma}^{\mu}\partial_{\mu}Q
-+ie_R^{\dagger}\sigma^{\mu}\partial_{\mu} e_R+iu_R^{\dagger}\sigma^{\mu}\partial_{\mu} u_R+i
-d_R^{\dagger}\sigma^{\mu}\partial_{\mu} d_R \nonumber\\
-=&i\nu_L^{\dagger}\overline{\sigma}^{\mu}\partial_{\mu}\nu_L+i
-e_L^{\dagger}\overline{\sigma}^{\mu}\partial_{\mu}e_L+i
-u_L^{\dagger}\overline{\sigma}^{\mu}\partial_{\mu}u_L+i
-d_L^{\dagger}\overline{\sigma}^{\mu}\partial_{\mu}d_L
-+ie_R^{\dagger}\sigma^{\mu}\partial_{\mu} e_R+iu_R^{\dagger}\sigma^{\mu}\partial_{\mu} u_R+i
-d_R^{\dagger}\sigma^{\mu}\partial_{\mu} d_R \,,
+  =&\sum_{i=1}^2i\widetilde{\Xi}_i\cdot\overline{\sigma}^{\mu}\partial_{\mu}\Xi_i
++\sum_{i=1}^3i\eta_{i}\sigma^{\mu}\partial_{\mu} \eta^{\dagger}\nonumber\\
+=&i\widetilde{L}\cdot\overline{\sigma}^{\mu}\partial_{\mu}L+i\widetilde{Q}\cdot\overline{\sigma}^{\mu}\partial_{\mu}Q
++i(e_R)^{\dagger}\sigma^{\mu}\partial_{\mu} e_R+i(u_R)^{\dagger}\sigma^{\mu}\partial_{\mu} u_R+i
+(d_R)^{\dagger}\sigma^{\mu}\partial_{\mu} d_R \nonumber\\
+=&i(\nu_L)^{\dagger}\overline{\sigma}^{\mu}\partial_{\mu}\nu_L+i(e_L)^{\dagger}\overline{\sigma}^{\mu}\partial_{\mu}e_L
++i (u_L)^{\dagger}\overline{\sigma}^{\mu}\partial_{\mu}u_L+i(d_L)^{\dagger}\overline{\sigma}^{\mu}\partial_{\mu}d_L \nonumber\\
+&+i(e_R)^{\dagger}\sigma^{\mu}\partial_{\mu}e_R+i(u_R)^{\dagger}\sigma^{\mu}\partial_{\mu} u_R+i(d_R)^{\dagger}\sigma^{\mu}\partial_{\mu} d_R \,,
 \end{align}
-donde hemos usado que
+donde
+\begin{align}
+  \widetilde{L}=&
+  \begin{pmatrix}
+   \left(e_L\right)^{\dagger}\\
+  - \left(\nu_L  \right)^{\dagger}\\
+  \end{pmatrix},&
+  \widetilde{Q}=&
+  \begin{pmatrix}
+   \left(d_L\right)^{\dagger}\\
+  - \left(u_L  \right)^{\dagger}\\
+  \end{pmatrix},&
+\end{align}
+de modo que
 \begin{align*}
-  iL^{\dagger}\overline{\sigma}^{\mu}\partial_{\mu}L=&
-  i\begin{pmatrix}
-    \nu_L^{\dagger} & e_L^{\dagger}
-  \end{pmatrix}\overline{\sigma}^{\mu}\partial_{\mu}
-    \begin{pmatrix}
-      \nu_L\\
-       e_L
-    \end{pmatrix}\nonumber\\
-=&
-  i\begin{pmatrix}
-    \nu_L^{\dagger} & e_L^{\dagger}
-  \end{pmatrix}
-    \begin{pmatrix}
-      \overline{\sigma}^{\mu}\partial_{\mu}\nu_L\\
-       \overline{\sigma}^{\mu}\partial_{\mu}e_L
-    \end{pmatrix}\nonumber\\
-=&i\nu_L^{\dagger}\overline{\sigma}^{\mu}\partial_{\mu}\nu_L+i
-e_L^{\dagger}\overline{\sigma}^{\mu}\partial_{\mu}e_L\,,
+  i\widetilde{L}\cdot\overline{\sigma}^{\mu}\partial_{\mu}L=&
+  i\,\epsilon_{ab}\widetilde{L}\cdot\overline{\sigma}^{\mu}\partial_{\mu}L \nonumber\\
+ =&i\,\widetilde{L}^1\overline{\sigma}^{\mu}\partial_{\mu}L^2-i\,\left( -\widetilde{L}^2 \right)\overline{\sigma}^{\mu}\partial_{\mu}L^1    \nonumber\\
+ =&i\,\left( e_L \right)^{\dagger}\overline{\sigma}^{\mu}\partial_{\mu}e_L+i\,\left( \nu_L \right)^{\dagger}\overline{\sigma}^{\mu}\partial_{\mu}\nu_L    \nonumber\\
 \end{align*}
 y lo mismo para $Q$.
 
-\subsection*{Simetría gauge local $SU(3)_c\times  SU(2)_L\times  U(1)_Y$}
+
 
 Para obtener la interacciones del modelo estándar, reemplazamos las derivadas normales por derivadas covariantes.
 
 Proponemos entonces el Lagrangiano
 \begin{align}
 \label{eq:L0}
-     \mathcal{L}=&i{Q}^{\dagger}\overline{\sigma}^\mu\mathcal{D}_\mu Q+i{L}^{\dagger}\overline{\sigma}^\mu\mathcal{D}_\mu L+
+     \mathcal{L}=&i\widetilde{Q}\cdot \overline{\sigma}^\mu\mathcal{D}_\mu Q+i\widetilde{L}\cdot \overline{\sigma}^\mu\mathcal{D}_\mu L+
 i{e_R}^{\dagger}\sigma^\mu\mathcal{D}_\mu {e_R}+i{d_R}^{\dagger}\sigma^\mu\mathcal{D}_\mu {d_R}+i{u_R}^{\dagger}\sigma^\mu\mathcal{D}_\mu {u_R}
 \nonumber\\
      &-\tfrac{1}{4}G^{\mu\nu}_a G_{\mu\nu}^a-\tfrac{1}{4}W^{\mu\nu}_i W_{\mu\nu}^i-\tfrac{1}{4}B^{\mu\nu} B_{\mu\nu}\,,
@@ -190,94 +307,54 @@ y además
   T^i\equiv\frac{\tau^i}{2},\ i=1,2,3 &\qquad\text{3 generadores de $SU(2)_L$}\\
   Y &\qquad\text{generador de $U(1)_Y$}
 \end{align*}
+A este nivel, tanto los 15 fermiones de Weyl (cada quark iquierdo y derecho viene en tres colores), como los 12 bosones gauge, \emph{tienen masa nula}. Necesitamos entonces un mecanismo de ruptura espontánea de simetría para generar por lo menos masa para los tres bosones gauge asociados a la interacción débil.
 
 
-\subsection{Productos $SU(2)$}
-Sean $A$ y $B$ $C$, dobletes $SU(2)$. En el Lagrangiano \eqref{eq:L0}, hemos construido invariantes $SU(2)$ de la forma $C^{\dagger}B$, por ejemplo. Pero hay otra forma de construir el producto invariante
 
-Para los los dobletes  $SU(2)_L$ 
-\begin{align}
-  A=&
-  \begin{pmatrix}
-    A^1\\
-    A^2\\
-  \end{pmatrix},&
-  B=&
-  \begin{pmatrix}
-    B^1\\
-    B^2\\
-  \end{pmatrix},
-\end{align}
-podemos definir un producto que es invariante bajo $SU(2)$
-\begin{align}
-\epsilon^{ab}A_a B_b\to \epsilon_{ab}A'_a B'_b=&\epsilon_{ab}U_{ac}U_{bd}A_c B_d\nonumber\\
-  =&\left( U_{11}U_{22}-U_{12}U_{21} \right)\left(A_1B_2-A_2B_1  \right)\nonumber\\
-  =&\epsilon^{ab}\det\mathbf{U} A_a B_b\nonumber\\
-  =&\epsilon^{ab} A_a B_b\,.
-\end{align}
-Teniendo en cuenta que
-\begin{align}
-  \epsilon^{ab}A_a B_b=&A_1 B_2-A_2 B_1 \nonumber\\
- \end{align}
-En el caso en el cual
-\begin{align}
- \widetilde{C}\,,
-\end{align}
-\begin{align}
-  \epsilon^{ab}A_a B_b=&C_2^{*}B_2 -(-C_1^{*}) B_1 \nonumber\\
-                     =&C_2^{*}B_2 +C_1^{*} B_1 \nonumber\\
-                     =&C_2^{*}B_2 +C_1^{*} B_1 \,,
- \end{align}
-Por consiguiente
-\begin{align}
-   \epsilon^{ab}\widetilde{C}_{a} B_{b} =&C^{\dagger} B \nonumber\\
- \end{align}
-y por consiguiente
-\begin{align}
-\widetilde{C}= i\tau_2 C^{*}
-\end{align}
-
-
-Dicho producto es equivalente al producto matricial entre dos dobletes
 
 \subsection{Ruptura espontánea de simetría}
 
 
-All the particles in this Lagrangian are massless. It is only good for the gluons and the Abelian gauge boson, but is no realist for the fermions of the weak gauge bosons $W_\mu^i$. To solve this problem, we postulate a new complex scalar doublet with four degree of freedom:
-\begin{equation}
-  \Phi=
+All the particles in this Lagrangian are massless. It is only good for
+the gluons and the Abelian gauge boson, but is no realist for the
+fermions of the weak gauge bosons $W_\mu^i$. To solve this problem, we
+postulate a new complex scalar doublet, con su correspondiente adjunto de $SU(2)$ with four degree of freedom:
+\begin{align}
+  \Phi=&
   \begin{pmatrix}
-    \phi^+\\
-    \phi^0
+    \phi^0\\
+    \phi^-
   \end{pmatrix}=
   \begin{pmatrix}
     \phi_1+i\phi_2\\
 \phi_3+i\phi_4
+  \end{pmatrix},&
+\widetilde{\Phi}=&
+  \begin{pmatrix}
+    \phi^+\\
+    -\left( \phi^0 \right)^{*}
   \end{pmatrix}\,.
-\end{equation}
-The ``+'' and 0 superindexes are just for later convenience.
-
-
-
-
-
-Es posible ahora construir escalares con las siguientes combinaciones de campos similares al del término de masa de Dirac en~\eqref{eq:dwlag}
-\begin{align}
- \epsilon_{ab} \Xi_1^{a}\Phi\eta^{\dagger b}_1+\text{h.c}=&\epsilon_{ab}L^a\Phi^b e_R+\text{h.c} \nonumber\\
-   =&\begin{pmatrix}
-     \nu_L^{\dagger} & e_L^{\dagger}
-   \end{pmatrix}
-   \begin{pmatrix}
-     \phi^+\\
-     \phi^0
-   \end{pmatrix}
- e_R +\text{h.c}\nonumber\\
-=&\nu_L^{\dagger} \phi^+ e_R^- +\left( e_L^- \right)^{\dagger}\phi^0 e_R^-+\text{h.c}\,,
 \end{align}
-donde hemos puesto la carga del electrón para hacer explícita la conservación de la carga eléctrica. 
+The ``$\mp$'' and 0 superindexes are just for later convenience, with $\left( \phi^- \right)^{*}=\phi^+$
 
 
-Para los campos del Lagrangiano, debemos asegurarnos de que todos los términos invariantes gauge locales y renormalizables sean considerados. De hecho un término de interacción entre fermiones y el campo escalar, correspondiente a una interacción de Yukawa: $ L^{\dagger}\Phi e_R$ y $ Q^{\dagger}\Phi d_R$ son invariantes bajo transformaciones $SU(3)_c\times  SU(2)_L\times  U(1)_Y$ si
+
+
+
+Es posible ahora construir invariantes $SU(2)$ con las siguientes combinaciones de campos similares al del término de masa de Dirac en~\eqref{eq:dwlag}
+\begin{align}
+ \eta_1\,\Xi_1^{a}\cdot\Phi+\left(\eta_1\,\Xi_1^{a}\cdot\Phi  \right)^{\dagger}
+ =& \eta_1\,\Xi_1^{a}\cdot\Phi+\text{h.c}\nonumber\\
+ =& \eta^{b}_1\,\epsilon_{ab}\,\Xi_1^{a}\cdot\Phi^{b}+\text{h.c} \nonumber\\
+   =&\left( e_R \right)^{\dagger}\epsilon_{ab}L^a\Phi^b +\text{h.c} \nonumber\\
+   =&\left( e_R \right)^{\dagger}L^1\Phi^2-\left( e_R \right)^{\dagger}L^1\Phi^2 +\text{h.c} \nonumber\\
+   =&\left( e_R^{-} \right)^{\dagger}\nu_L\phi^- -\left( e_R^{-} \right)^{\dagger}e_L^-\phi^0 +\text{h.c} \,,
+ \end{align}
+donde $\text{h.c}$, denota el hermítico conjugado de cada término (para garantizar que el Lagrangiano sea real)
+y hemos puesto la carga del electrón para hacer explícita la conservación de la carga eléctrica. 
+
+
+Para los campos del Lagrangiano, debemos asegurarnos de que todos los términos invariantes gauge locales y renormalizables sean considerados. De hecho un término de interacción entre fermiones y el campo escalar, correspondiente a una interacción de Yukawa: $\left( e_R \right)^{\dagger} {L}\cdot\Phi $ y $ \left( d_R \right)^{\dagger} {Q}\cdot\Phi$, son invariantes bajo transformaciones $SU(3)_c\times  SU(2)_L\times  U(1)_Y$ si
 \begin{align*}
   -Y_L+Y_\Phi+Q_{e_R}=&0\\
   -Y_Q+Y_\Phi+Q_{d_R}=&0\\
@@ -292,12 +369,14 @@ En el análisis anterior hemos fijado $Y_{\widetilde{\Phi}}=-Y_\Phi$.
 
 El Lagrangiano completo involucrando estos campos son
 \begin{align}
-     \mathcal{L}=&i{Q}^{\dagger}\overline{\sigma}^\mu\mathcal{D}_\mu Q+i{L}^{\dagger}\overline{\sigma}^\mu\mathcal{D}_\mu L+
+     \mathcal{L}=&i\widetilde{Q}\cdot \overline{\sigma}^\mu\mathcal{D}_\mu Q+i\widetilde{L}\cdot \overline{\sigma}^\mu\mathcal{D}_\mu L+
 i{e_R}^{\dagger}\sigma^\mu\mathcal{D}_\mu {e_R}+i{d_R}^{\dagger}\sigma^\mu\mathcal{D}_\mu {d_R}+i{u_R}^{\dagger}\sigma^\mu\mathcal{D}_\mu {u_R}
 \nonumber\\
      &-\tfrac{1}{4}G^{\mu\nu}_a G_{\mu\nu}^a-\tfrac{1}{4}W^{\mu\nu}_i W_{\mu\nu}^i-\tfrac{1}{4}B^{\mu\nu} B_{\mu\nu}\nonumber\\
-     &+(\mathcal{D}_\mu\Phi)^\dagger\mathcal{D}^\mu\Phi-\mu^2\Phi^\dagger\Phi-\lambda(\Phi^\dagger\Phi)^2\nonumber\\
-     &-(h_e \epsilon^{ab}L_a\Phi_b e_R+h_d \epsilon^{ab}Q_a\Phi_b d_R+h_u \epsilon_{ab}Q_a\widetilde{\Phi}_{b}u_R+\text{h.c})\nonumber\\
+     &+\left( \mathcal{D}_\mu\widetilde{\Phi} \right)\cdot\mathcal{D}^\mu\Phi-\mu^2\widetilde{\Phi}\cdot\Phi-\lambda \left( \widetilde{\Phi}\cdot\Phi \right)^2\nonumber\\
+     &- \left[  h_e \left( e_R \right)^{\dagger}\,\epsilon^{ab}L_a\Phi_b +
+      h_d \left( d_R \right)^{\dagger}\,\epsilon^{ab}Q_a\Phi_b +
+      h_u \left( u_R \right)^{\dagger}\,\epsilon_{ab}Q_a\widetilde{\Phi}_{b}+\text{h.c}\right]\nonumber\\
      =&\mathcal{L}_{\text{fermion}}+\mathcal{L}_{\text{gauge}}
      +\mathcal{L}_{WBH}
      -\mathcal{L}_{\text{Yukawa}}\,.
@@ -306,48 +385,22 @@ donde $\mu^2<0$, y $\lambda>0$,
 \begin{align}
   \widetilde{\Phi}=i\tau_2\Phi^*\,,
 \end{align}
-% si
-% $ Q^{\dagger}\Phi$ es un invariante $SU(2)_L$, el término ${\tilde \Phi}^\dagger Q$ también es un invariante de $SU(2)$. Explícitamente
-% \begin{align}
-%   \widetilde{\Phi}^\dagger Q=&(i\tau_2\Phi^*)^\dagger Q\nonumber\\
-%   =& \begin{pmatrix}
-%     {\phi^0}^*\\
-%     -\phi^-    
-%   \end{pmatrix}^\dagger Q\nonumber\\
-%   =&\begin{pmatrix}
-%     \phi^0 & -\phi^+
-%   \end{pmatrix}\begin{pmatrix}
-%     u_L\\
-%     d_L
-%   \end{pmatrix}\nonumber\\
-%   =&\phi^0 u_L - \phi^+ d_L\nonumber\\
-%   =&\epsilon_{12}Q_1\Phi_2+\epsilon_{21}Q_2\Phi_1\nonumber\\
-%   =&\epsilon_{ab}Q_a \Phi_b\,.
-% \end{align}
-Bajo una transformación $SU(2)_L$
-\begin{align}
-\epsilon^{ab}Q_a \Phi_b\to \epsilon_{ab}Q'_a \Phi'_b=&\epsilon_{ab}U_{ac}U_{bd}Q_c \Phi_d\nonumber\\
-  =&\left( U_{11}U_{22}-U_{12}U_{21} \right)\left(Q_1\Phi_2-Q_2\Phi_1  \right)\nonumber\\
-  =&\epsilon^{ab}\det\mathbf{U} Q_a \Phi_b\nonumber\\
-  =&\epsilon^{ab} Q_a \Phi_b\,.
-\end{align}
-Imponiendo además la conservación de Hipercarga
-\begin{align}
-  Y_{\phi}=Y_{\phi}
-\end{align}
-
 
 Resumiendo
 
 \begin{align}
   \label{eq:smscalar}
-\mathcal{L}_{\text{fermion}}=&i{Q}^{\dagger}\overline{\sigma}^\mu\mathcal{D}_\mu Q+i{L}^{\dagger}\overline{\sigma}^\mu\mathcal{D}_\mu L+
+\mathcal{L}_{\text{fermion}}=&i\widetilde{Q}\cdot \overline{\sigma}^\mu\mathcal{D}_\mu Q+i\widetilde{L}\cdot \overline{\sigma}^\mu\mathcal{D}_\mu L+
 i{e_R}^{\dagger}\sigma^\mu\mathcal{D}_\mu {e_R}+i{d_R}^{\dagger}\sigma^\mu\mathcal{D}_\mu {d_R}+i{u_R}^{\dagger}\sigma^\mu\mathcal{D}_\mu {u_R}\nonumber\\
 \mathcal{L}_{\text{gauge}}=& -\tfrac{1}{4}G^{\mu\nu}_a G_{\mu\nu}^a-\tfrac{1}{4}W^{\mu\nu}_i W_{\mu\nu}^i-\tfrac{1}{4}B^{\mu\nu} B_{\mu\nu}\nonumber\\
-  \mathcal{L}_{WBH}=&(\mathcal{D}_\mu\Phi)^\dagger\mathcal{D}^\mu\Phi-\mu^2\Phi^\dagger\Phi-\lambda(\Phi^\dagger\Phi)^2\nonumber\\
-\mathcal{L}_{\text{Yukawa}}=&h_e \epsilon^{ab}L_a\Phi_b e_R+h_d \epsilon^{ab}Q_a\Phi_b d_R+h_u \epsilon_{ab}Q_a\widetilde{\Phi}_{b}u_R+\text{h.c}
+  \mathcal{L}_{WBH}=&\left( \mathcal{D}_\mu\widetilde{\Phi} \right)\cdot\mathcal{D}^\mu\Phi-\mu^2\widetilde{\Phi}\cdot\Phi-\lambda \left( \widetilde{\Phi}\cdot\Phi \right)^2 \nonumber\\
+=&(\mathcal{D}_\mu\Phi)^\dagger\mathcal{D}^\mu\Phi-\mu^2\Phi^\dagger\Phi-\lambda(\Phi^\dagger\Phi)^2\nonumber\\
+=&(\mathcal{D}_\mu\widetilde{\Phi})^\dagger\mathcal{D}^\mu\widetilde{\Phi}-\mu^2\widetilde{\Phi}^\dagger\widetilde{\Phi}-\lambda(\widetilde{\Phi}^\dagger\widetilde{\Phi})^2\nonumber\\
+\mathcal{L}_{\text{Yukawa}}=&- \left[  h_e \left( e_R \right)^{\dagger}\,\epsilon^{ab}L_a\Phi_b +
+      h_d \left( d_R \right)^{\dagger}\,\epsilon^{ab}Q_a\Phi_b +
+      h_u \left( u_R \right)^{\dagger}\,\epsilon_{ab}Q_a\widetilde{\Phi}_{b}+\text{h.c}\right]
 \end{align}
-
+Para el potencial escalar usaremos la forma más conveniente del producto matricial para el invariante de $SU(2)_L$ por que no hay ambiguedad con el conjugado de un campo escalar. 
 
 Bajo una transformación gauge local las derivadas covariantes de los campos (y por consiguiente los campos) transforman como:
 \begin{align}
@@ -364,7 +417,7 @@ donde $Q_{e_R}=-1$, etc, son las cargas eléctricas asociadas a los campos.
 Sin perdida de generalidad los cuatro grados de libertad de $\Phi$, pueden escribirse en la forma
 \begin{align}
 \label{eq:polarhiggs}
-  \Phi=&e^{i\eta_j(x)T^j}
+  \widetilde{\Phi}=&e^{i\eta_j(x)T^j}
   \begin{pmatrix}
     0\\
     \frac{1}{\sqrt{2}}[H(x)+v]
@@ -372,7 +425,7 @@ Sin perdida de generalidad los cuatro grados de libertad de $\Phi$, pueden escri
 \end{align}
 El potencial escalar, definido por
 \begin{align}
-  V(\Phi)=\mu^2\Phi^\dagger\Phi+\lambda(\Phi^\dagger\Phi)^2
+  V(\Phi)=-\mu^2\widetilde{\Phi}^\dagger\widetilde{\Phi}-\lambda(\widetilde{\Phi}^\dagger\widetilde{\Phi})^2
 \end{align}
 se reduce a
 \begin{align}
@@ -386,7 +439,7 @@ se reduce a
 Retornando al doblete de Higgs del modelo estándar en la ec.~\eqref{eq:polarhiggs}, los cuatro grados de libertad de $\Phi$, pueden escribirse en forma polar con la parte real neutra desplazada para generar la ruptura espontánea de la simetría $SU(2)_L\times  U(1)_Y$
 \begin{align}
 \label{eq:92qft}
-  \Phi=&e^{i\eta_jT^j}
+  \widetilde{\Phi}=&e^{i\eta_jT^j}
   \begin{pmatrix}
     0\\
     \frac{1}{\sqrt{2}}(H(x)+v)
@@ -410,23 +463,23 @@ Retornando al doblete de Higgs del modelo estándar en la ec.~\eqref{eq:polarhig
 \end{align}
 Para $SU(2)_L\times  U(1)_Y$ tenemos cuatro generadores y cuatro bosones gauge. De acuerdo a la parametrización en ec.~\eqref{eq:92qft} esperamos que aparezcan tres bosones de Goldstone y un campo de Higgs con masa, de manera que quedará un generador no roto correspondiente a una simetría remanente del vacío $U(1)_Q$
 \begin{equation}
-  SU(2)_L\times  U(1)_Y\overset{\langle\Phi\rangle}{\longrightarrow}U(1)_Q.
+  SU(2)_L\times  U(1)_Y\overset{\langle\widetilde{\Phi}\rangle}{\longrightarrow}U(1)_Q.
 \end{equation}
 
 Se espera entonces que el espectro consista de un bosón de Higgs, tres bosones gauge masivos, y un bosón gauge sin masa.
 
 Podemos hacer una transformación gauge similar a la de la 
 %DEBUG: corregir
-ec.~\eqref{eq:93qft} sobre el campo $\Phi$, tal que
+ec.~\eqref{eq:93qft} sobre el campo $\widetilde{\Phi}$, tal que
 \begin{equation}
   \label{eq:123qft}
-    \Phi\to\Phi'=
+    \widetilde{\Phi}\to\widetilde{\Phi}'=
   \begin{pmatrix}
     0\\
     \frac{1}{\sqrt{2}}(H(x)+v)
   \end{pmatrix},
 \end{equation}
-que define el \emph{gauge unitario}. En adelante sin embargo omitiremos las primas sobre los campos transformados $\Phi'$ y $W'_{\mu\nu}$.
+que define el \emph{gauge unitario}. En adelante sin embargo omitiremos las primas sobre los campos transformados $\widetilde{\Phi}'$ y $W'_{\mu\nu}$.
 
 Comenzaremos analizando la parte escalar del Lagrangiano del Modelo dada en la ec.~\eqref{eq:smscalar}
 \begin{equation}
@@ -482,9 +535,9 @@ $\mathcal{D}_\mu$ corresponde a la matrix $2\times  2$
 
 Entonces
 \begin{align}
-\mathcal{D}_\mu\Phi=\begin{pmatrix}
+\mathcal{D}_\mu\widetilde{\Phi}=\begin{pmatrix}
     -\frac{i}{\sqrt{2}}gW_\mu^+(H+v)\\
-    \partial_\mu H-i\left(-\frac{1}{2}gW^3_\mu+g'Y_\Phi B_\mu\right)(H+v)
+    \partial_\mu H-i\left(-\frac{1}{2}gW^3_\mu+g'Y_{\widetilde{\Phi}} B_\mu\right)(H+v)
   \end{pmatrix}.
 \end{align}
 
@@ -493,31 +546,31 @@ De modo que
 \begin{align}
   \mathcal{L}_{WBH}=&\frac{1}{2}\left[\begin{pmatrix}
     -\frac{i}{\sqrt{2}}g{W^\mu}^+(H+v)\\
-    \partial^\mu H-i\left(-\frac{1}{2}gW_3^\mu+g'Y_\Phi B^\mu\right)(H+v)
+    \partial^\mu H-i\left(-\frac{1}{2}gW_3^\mu+g'Y_{\widetilde{\Phi}} B^\mu\right)(H+v)
   \end{pmatrix}\right]^\dagger\cdot\nonumber\\
    &\begin{pmatrix}
     -\frac{i}{\sqrt{2}}gW_\mu^+(H+v)\\
-    \partial_\mu H-i\left(-\frac{1}{2}gW^3_\mu+g'Y_\Phi B_\mu\right)(H+v)
+    \partial_\mu H-i\left(-\frac{1}{2}gW^3_\mu+g'Y_{\widetilde{\Phi}} B_\mu\right)(H+v)
   \end{pmatrix}-V(H)\nonumber\\
 =&\frac{1}{2}\begin{pmatrix}
     \frac{i}{\sqrt{2}}g{W^\mu}^-(H+v)&
-    \partial^\mu H+i\left(-\frac{1}{2}gW_3^\mu+g'Y_\Phi B^\mu\right)(H+v)
+    \partial^\mu H+i\left(-\frac{1}{2}gW_3^\mu+g'Y_{\widetilde{\Phi}} B^\mu\right)(H+v)
   \end{pmatrix}\cdot\nonumber\\
   &\begin{pmatrix}
     -\frac{i}{\sqrt{2}}gW_\mu^+(H+v)\\
-    \partial_\mu H-i\left(-\frac{1}{2}gW^3_\mu+g'Y_\Phi B_\mu\right)(H+v)
+    \partial_\mu H-i\left(-\frac{1}{2}gW^3_\mu+g'Y_{\widetilde{\Phi}} B_\mu\right)(H+v)
   \end{pmatrix}-V(H)\nonumber\\
   =&\frac{1}{4}g^2{W^\mu}^-W_\mu^+(H+v)^2-V(H)\nonumber\\
-  &+\frac{1}{2}\left[\partial^\mu H+i\left(-\tfrac{1}{2}gW_3^\mu+g'Y_\Phi B^\mu\right)(H+v)\right]
+  &+\frac{1}{2}\left[\partial^\mu H+i\left(-\tfrac{1}{2}gW_3^\mu+g'Y_{\widetilde{\Phi}} B^\mu\right)(H+v)\right]
   \times\nonumber\\
-  &\qquad\left[\partial_\mu H-i\left(-\tfrac{1}{2}gW^3_\mu+g'Y_\Phi B_\mu\right)(H+v)\right]\nonumber\\
+  &\qquad\left[\partial_\mu H-i\left(-\tfrac{1}{2}gW^3_\mu+g'Y_{\widetilde{\Phi}} B_\mu\right)(H+v)\right]\nonumber\\
  =&-V(H)
   +\frac{1}{4}g^2{W^\mu}^-W_\mu^+(H+v)^2+\nonumber\\
-  &+\frac{1}{2}\partial^\mu H\partial_\mu H+\frac{1}{2}\left(-\tfrac{1}{2}gW_3^\mu+g'Y_\Phi B^\mu\right)^2(H+v)^2
+  &+\frac{1}{2}\partial^\mu H\partial_\mu H+\frac{1}{2}\left(-\tfrac{1}{2}gW_3^\mu+g'Y_{\widetilde{\Phi}} B^\mu\right)^2(H+v)^2
 \end{align}
 donde la última línea corresponde a la magnitud del ``número'' complejo: 
 \begin{align}
-\left[\partial_\mu H-i\left(-\tfrac{1}{2}gW^3_\mu+g'Y_\Phi B_\mu\right)(H+v)\right]
+\left[\partial_\mu H-i\left(-\tfrac{1}{2}gW^3_\mu+g'Y_{\widetilde{\Phi}} B_\mu\right)(H+v)\right]
 \end{align}
 
 \end{frame}
@@ -531,10 +584,10 @@ Entonces
 \end{align}
 donde
 \begin{align}
-  \mathcal{L}_{ZAH}=\frac{1}{2}&\left(\tfrac{1}{4}g^2W_3^\mu W^3_\mu-\tfrac{1}{2}gg'Y_\Phi W_3^\mu B_\mu-\tfrac{1}{2}gg'Y_\Phi W_3^\mu B_\mu+{g'}^2Y_\Phi ^2B^\mu B_\mu\right)\times\nonumber\\
+  \mathcal{L}_{ZAH}=\frac{1}{2}&\left(\tfrac{1}{4}g^2W_3^\mu W^3_\mu-\tfrac{1}{2}gg'Y_{\widetilde{\Phi}} W_3^\mu B_\mu-\tfrac{1}{2}gg'Y_{\widetilde{\Phi}} W_3^\mu B_\mu+{g'}^2Y_{\widetilde{\Phi}} ^2B^\mu B_\mu\right)\times\nonumber\\
 &\left(H^2+2vH+v^2\right)
 \end{align}
-Haciendo $Y_\Phi =1/2$ como en la ec.~\eqref{eq:lhyp},
+Haciendo $Y_{\widetilde{\Phi}} =1/2$ como en la ec.~\eqref{eq:lhyp},
 \begin{align}
   \mathcal{L}_{ZAH}=\frac{1}{8}
   \begin{pmatrix}
@@ -656,7 +709,7 @@ Retornando a la ec.~(\ref{eq:96qft}), tenemos
 tenemos
 \begin{align}
   \label{eq:lwbhfin}
-  \mathcal{L}_{W B H}=&\left(\mathcal{D}^\mu\Phi\right)^\dagger\mathcal{D}_\mu\Phi-\mu^2\Phi^\dagger \Phi-\lambda\left(\Phi^\dagger\Phi\right)^2\nonumber\\
+  \mathcal{L}_{W B H}=&\left(\mathcal{D}^\mu\widetilde{\Phi}\right)^\dagger\mathcal{D}_\mu\widetilde{\Phi}-\mu^2\widetilde{\Phi}^\dagger \widetilde{\Phi}-\lambda\left(\widetilde{\Phi}^\dagger\widetilde{\Phi}\right)^2\nonumber\\
   =&\frac{1}{2}\partial^\mu H\partial_\mu H-V(H)\nonumber\\
 &+\frac{1}{4}g^2{W^\mu}^-W_\mu^+H^2+\frac{1}{2}vg^2{W^\mu}^-W_\mu^+H\nonumber\\
   &+\frac{1}{2}\left(\frac{g}{2\cos\theta_W}\right)^2Z^\mu Z_\mu H^2+\left(\frac{g}{2\cos\theta_W}\right)^2v\,Z^\mu Z_\mu H\nonumber\\
