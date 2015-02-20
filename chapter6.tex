@@ -174,6 +174,7 @@ Para obtener la interacciones del modelo estándar, reemplazamos las derivadas n
 
 Proponemos entonces el Lagrangiano
 \begin{align}
+\label{eq:L0}
      \mathcal{L}=&i{Q}^{\dagger}\overline{\sigma}^\mu\mathcal{D}_\mu Q+i{L}^{\dagger}\overline{\sigma}^\mu\mathcal{D}_\mu L+
 i{e_R}^{\dagger}\sigma^\mu\mathcal{D}_\mu {e_R}+i{d_R}^{\dagger}\sigma^\mu\mathcal{D}_\mu {d_R}+i{u_R}^{\dagger}\sigma^\mu\mathcal{D}_\mu {u_R}
 \nonumber\\
@@ -189,6 +190,58 @@ y además
   T^i\equiv\frac{\tau^i}{2},\ i=1,2,3 &\qquad\text{3 generadores de $SU(2)_L$}\\
   Y &\qquad\text{generador de $U(1)_Y$}
 \end{align*}
+
+
+\subsection{Productos $SU(2)$}
+Sean $A$ y $B$ $C$, dobletes $SU(2)$. En el Lagrangiano \eqref{eq:L0}, hemos construido invariantes $SU(2)$ de la forma $C^{\dagger}B$, por ejemplo. Pero hay otra forma de construir el producto invariante
+
+Para los los dobletes  $SU(2)_L$ 
+\begin{align}
+  A=&
+  \begin{pmatrix}
+    A^1\\
+    A^2\\
+  \end{pmatrix},&
+  B=&
+  \begin{pmatrix}
+    B^1\\
+    B^2\\
+  \end{pmatrix},
+\end{align}
+podemos definir un producto que es invariante bajo $SU(2)$
+\begin{align}
+\epsilon^{ab}A_a B_b\to \epsilon_{ab}A'_a B'_b=&\epsilon_{ab}U_{ac}U_{bd}A_c B_d\nonumber\\
+  =&\left( U_{11}U_{22}-U_{12}U_{21} \right)\left(A_1B_2-A_2B_1  \right)\nonumber\\
+  =&\epsilon^{ab}\det\mathbf{U} A_a B_b\nonumber\\
+  =&\epsilon^{ab} A_a B_b\,.
+\end{align}
+Teniendo en cuenta que
+\begin{align}
+  \epsilon^{ab}A_a B_b=&A_1 B_2-A_2 B_1 \nonumber\\
+ \end{align}
+En el caso en el cual
+\begin{align}
+ \widetilde{C}\,,
+\end{align}
+\begin{align}
+  \epsilon^{ab}A_a B_b=&C_2^{*}B_2 -(-C_1^{*}) B_1 \nonumber\\
+                     =&C_2^{*}B_2 +C_1^{*} B_1 \nonumber\\
+                     =&C_2^{*}B_2 +C_1^{*} B_1 \,,
+ \end{align}
+Por consiguiente
+\begin{align}
+   \epsilon^{ab}\widetilde{C}_{a} B_{b} =&C^{\dagger} B \nonumber\\
+ \end{align}
+y por consiguiente
+\begin{align}
+\widetilde{C}= i\tau_2 C^{*}
+\end{align}
+
+
+Dicho producto es equivalente al producto matricial entre dos dobletes
+
+\subsection{Ruptura espontánea de simetría}
+
 
 All the particles in this Lagrangian are massless. It is only good for the gluons and the Abelian gauge boson, but is no realist for the fermions of the weak gauge bosons $W_\mu^i$. To solve this problem, we postulate a new complex scalar doublet with four degree of freedom:
 \begin{equation}
@@ -206,9 +259,11 @@ The ``+'' and 0 superindexes are just for later convenience.
 
 
 
+
+
 Es posible ahora construir escalares con las siguientes combinaciones de campos similares al del término de masa de Dirac en~\eqref{eq:dwlag}
 \begin{align}
-  \Xi_1^{\dagger}\Phi\eta^{\dagger}_1+\text{h.c}=&L^{\dagger}\Phi e_R+\text{h.c} \nonumber\\
+ \epsilon_{ab} \Xi_1^{a}\Phi\eta^{\dagger b}_1+\text{h.c}=&\epsilon_{ab}L^a\Phi^b e_R+\text{h.c} \nonumber\\
    =&\begin{pmatrix}
      \nu_L^{\dagger} & e_L^{\dagger}
    \end{pmatrix}
@@ -221,14 +276,28 @@ Es posible ahora construir escalares con las siguientes combinaciones de campos 
 \end{align}
 donde hemos puesto la carga del electrón para hacer explícita la conservación de la carga eléctrica. 
 
-The full Lagrangian involving those fields are 
+
+Para los campos del Lagrangiano, debemos asegurarnos de que todos los términos invariantes gauge locales y renormalizables sean considerados. De hecho un término de interacción entre fermiones y el campo escalar, correspondiente a una interacción de Yukawa: $ L^{\dagger}\Phi e_R$ y $ Q^{\dagger}\Phi d_R$ son invariantes bajo transformaciones $SU(3)_c\times  SU(2)_L\times  U(1)_Y$ si
+\begin{align*}
+  -Y_L+Y_\Phi+Q_{e_R}=&0\\
+  -Y_Q+Y_\Phi+Q_{d_R}=&0\\
+  -Y_Q+Y_{\widetilde{\Phi}}+Y_{u_R}=-Y_Q-Y_{\Phi}+Q_{u_R}=&0\,,
+\end{align*}
+From this set of three equations we obtain the three doublet hypercharges:
+\begin{align}
+\label{eq:lhyp}
+Y_L=-\frac{1}{2}\,,\qquad Y_\Phi=\frac{1}{2}\,,\qquad Y_Q=\frac{1}{6}\,.
+\end{align}
+En el análisis anterior hemos fijado $Y_{\widetilde{\Phi}}=-Y_\Phi$. 
+
+El Lagrangiano completo involucrando estos campos son
 \begin{align}
      \mathcal{L}=&i{Q}^{\dagger}\overline{\sigma}^\mu\mathcal{D}_\mu Q+i{L}^{\dagger}\overline{\sigma}^\mu\mathcal{D}_\mu L+
 i{e_R}^{\dagger}\sigma^\mu\mathcal{D}_\mu {e_R}+i{d_R}^{\dagger}\sigma^\mu\mathcal{D}_\mu {d_R}+i{u_R}^{\dagger}\sigma^\mu\mathcal{D}_\mu {u_R}
 \nonumber\\
      &-\tfrac{1}{4}G^{\mu\nu}_a G_{\mu\nu}^a-\tfrac{1}{4}W^{\mu\nu}_i W_{\mu\nu}^i-\tfrac{1}{4}B^{\mu\nu} B_{\mu\nu}\nonumber\\
      &+(\mathcal{D}_\mu\Phi)^\dagger\mathcal{D}^\mu\Phi-\mu^2\Phi^\dagger\Phi-\lambda(\Phi^\dagger\Phi)^2\nonumber\\
-     &-(h_e L^{\dagger}\Phi e_R+h_d Q^{\dagger}\Phi d_R+h_u Q^{\dagger}\widetilde{\Phi}u_R+\text{h.c})\nonumber\\
+     &-(h_e \epsilon^{ab}L_a\Phi_b e_R+h_d \epsilon^{ab}Q_a\Phi_b d_R+h_u \epsilon_{ab}Q_a\widetilde{\Phi}_{b}u_R+\text{h.c})\nonumber\\
      =&\mathcal{L}_{\text{fermion}}+\mathcal{L}_{\text{gauge}}
      +\mathcal{L}_{WBH}
      -\mathcal{L}_{\text{Yukawa}}\,.
@@ -237,31 +306,36 @@ donde $\mu^2<0$, y $\lambda>0$,
 \begin{align}
   \widetilde{\Phi}=i\tau_2\Phi^*\,,
 \end{align}
-si
-$ Q^{\dagger}\Phi$ es un invariante $SU(2)_L$, el término ${\tilde \Phi}^\dagger Q$ también es un invariante de $SU(2)$. Explícitamente
-\begin{align}
-  \widetilde{\Phi}^\dagger Q=&(i\tau_2\Phi^*)^\dagger Q\nonumber\\
-  =& \begin{pmatrix}
-    {\phi^0}^*\\
-    -\phi^-    
-  \end{pmatrix}^\dagger Q\nonumber\\
-  =&\begin{pmatrix}
-    \phi^0 & -\phi^+
-  \end{pmatrix}\begin{pmatrix}
-    u_L\\
-    d_L
-  \end{pmatrix}\nonumber\\
-  =&\phi^0 u_L - \phi^+ d_L\nonumber\\
-  =&\epsilon_{12}Q_1\Phi_2+\epsilon_{21}Q_2\Phi_1\nonumber\\
-  =&\epsilon_{ab}Q_a \Phi_b\,.
-\end{align}
+% si
+% $ Q^{\dagger}\Phi$ es un invariante $SU(2)_L$, el término ${\tilde \Phi}^\dagger Q$ también es un invariante de $SU(2)$. Explícitamente
+% \begin{align}
+%   \widetilde{\Phi}^\dagger Q=&(i\tau_2\Phi^*)^\dagger Q\nonumber\\
+%   =& \begin{pmatrix}
+%     {\phi^0}^*\\
+%     -\phi^-    
+%   \end{pmatrix}^\dagger Q\nonumber\\
+%   =&\begin{pmatrix}
+%     \phi^0 & -\phi^+
+%   \end{pmatrix}\begin{pmatrix}
+%     u_L\\
+%     d_L
+%   \end{pmatrix}\nonumber\\
+%   =&\phi^0 u_L - \phi^+ d_L\nonumber\\
+%   =&\epsilon_{12}Q_1\Phi_2+\epsilon_{21}Q_2\Phi_1\nonumber\\
+%   =&\epsilon_{ab}Q_a \Phi_b\,.
+% \end{align}
 Bajo una transformación $SU(2)_L$
 \begin{align}
-\widetilde{\Phi}^\dagger Q\to {\widetilde{\Phi'}}^\dagger Q'=\epsilon_{ab}Q'_a \Phi'_b=&\epsilon_{ab}U_{ac}U_{bd}Q_c \Phi_d\nonumber\\
-  =&\epsilon_{cd}\det\mathbf{U} Q_c \Phi_d\nonumber\\
-  =&\epsilon_{cd} Q_c \Phi_d\nonumber\\
-  =&\widetilde{\Phi}^\dagger Q\,.
+\epsilon^{ab}Q_a \Phi_b\to \epsilon_{ab}Q'_a \Phi'_b=&\epsilon_{ab}U_{ac}U_{bd}Q_c \Phi_d\nonumber\\
+  =&\left( U_{11}U_{22}-U_{12}U_{21} \right)\left(Q_1\Phi_2-Q_2\Phi_1  \right)\nonumber\\
+  =&\epsilon^{ab}\det\mathbf{U} Q_a \Phi_b\nonumber\\
+  =&\epsilon^{ab} Q_a \Phi_b\,.
 \end{align}
+Imponiendo además la conservación de Hipercarga
+\begin{align}
+  Y_{\phi}=Y_{\phi}
+\end{align}
+
 
 Resumiendo
 
@@ -271,7 +345,7 @@ Resumiendo
 i{e_R}^{\dagger}\sigma^\mu\mathcal{D}_\mu {e_R}+i{d_R}^{\dagger}\sigma^\mu\mathcal{D}_\mu {d_R}+i{u_R}^{\dagger}\sigma^\mu\mathcal{D}_\mu {u_R}\nonumber\\
 \mathcal{L}_{\text{gauge}}=& -\tfrac{1}{4}G^{\mu\nu}_a G_{\mu\nu}^a-\tfrac{1}{4}W^{\mu\nu}_i W_{\mu\nu}^i-\tfrac{1}{4}B^{\mu\nu} B_{\mu\nu}\nonumber\\
   \mathcal{L}_{WBH}=&(\mathcal{D}_\mu\Phi)^\dagger\mathcal{D}^\mu\Phi-\mu^2\Phi^\dagger\Phi-\lambda(\Phi^\dagger\Phi)^2\nonumber\\
-\mathcal{L}_{\text{Yukawa}}=&h_e L^{\dagger}\Phi e_R+h_d Q^{\dagger}\Phi d_R+h_u Q^{\dagger}\widetilde{\Phi}u_R+\text{h.c}
+\mathcal{L}_{\text{Yukawa}}=&h_e \epsilon^{ab}L_a\Phi_b e_R+h_d \epsilon^{ab}Q_a\Phi_b d_R+h_u \epsilon_{ab}Q_a\widetilde{\Phi}_{b}u_R+\text{h.c}
 \end{align}
 
 
@@ -286,18 +360,7 @@ Bajo una transformación gauge local las derivadas covariantes de los campos (y 
 \end{align}
 donde $Q_{e_R}=-1$, etc, son las cargas eléctricas asociadas a los campos.
 
-Para los campos del Lagrangiano, debemos asegurarnos de que todos los términos invariantes gauge locales y renormalizables sean considerados. De hecho un término de interacción entre fermiones y el campo escalar, correspondiente a una interacción de Yukawa: $ L^{\dagger}\Phi e_R$ y $ Q^{\dagger}\Phi d_R$ son invariantes bajo transformaciones $SU(3)_c\times  SU(2)_L\times  U(1)_Y$ si
-\begin{align*}
-  -Y_L+Y_\Phi+Q_{e_R}=&0\\
-  -Y_Q+Y_\Phi+Q_{d_R}=&0\\
-  -Y_Q+Y_{\widetilde{\Phi}}+Y_{u_R}=-Y_Q-Y_{\Phi}+Q_{u_R}=&0\,,
-\end{align*}
-From this set of three equations we obtain the three doublet hypercharges:
-\begin{align}
-\label{eq:lhyp}
-Y_L=-\frac{1}{2}\,,\qquad Y_\Phi=\frac{1}{2}\,,\qquad Y_Q=\frac{1}{6}\,.
-\end{align}
-En el análisis anterior hemos fijado $Y_{\widetilde{\Phi}}=-Y_\Phi$. 
+
 Sin perdida de generalidad los cuatro grados de libertad de $\Phi$, pueden escribirse en la forma
 \begin{align}
 \label{eq:polarhiggs}
