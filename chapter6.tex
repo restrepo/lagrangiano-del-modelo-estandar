@@ -265,6 +265,7 @@ SU(2)_L\times U(1)_Y$ es
 \end{align}
 donde
 \begin{align}
+\label{eq:widetildeLQ}
   \widetilde{L}=&
   \begin{pmatrix}
    \left(e_L\right)^{\dagger}\\
@@ -373,7 +374,7 @@ El Lagrangiano completo involucrando estos campos son
 i{e_R}^{\dagger}\sigma^\mu\mathcal{D}_\mu {e_R}+i{d_R}^{\dagger}\sigma^\mu\mathcal{D}_\mu {d_R}+i{u_R}^{\dagger}\sigma^\mu\mathcal{D}_\mu {u_R}
 \nonumber\\
      &-\tfrac{1}{4}G^{\mu\nu}_a G_{\mu\nu}^a-\tfrac{1}{4}W^{\mu\nu}_i W_{\mu\nu}^i-\tfrac{1}{4}B^{\mu\nu} B_{\mu\nu}\nonumber\\
-     &+\left( \mathcal{D}_\mu\widetilde{\Phi} \right)\cdot\mathcal{D}^\mu\Phi-\mu^2\widetilde{\Phi}\cdot\Phi-\lambda \left( \widetilde{\Phi}\cdot\Phi \right)^2\nonumber\\
+     &+\widetilde{\left( \mathcal{D}_\mu{\Phi} \right)}\cdot\mathcal{D}^\mu\Phi-\mu^2\widetilde{\Phi}\cdot\Phi-\lambda \left( \widetilde{\Phi}\cdot\Phi \right)^2\nonumber\\
      &- \left[  h_e \left( e_R \right)^{\dagger}\,\epsilon^{ab}L_a\Phi_b +
       h_d \left( d_R \right)^{\dagger}\,\epsilon^{ab}Q_a\Phi_b +
       h_u \left( u_R \right)^{\dagger}\,\epsilon_{ab}Q_a\widetilde{\Phi}_{b}+\text{h.c}\right]\nonumber\\
@@ -768,10 +769,10 @@ tal que
 \begin{frame}[fragile,allowframebreaks]
 In the Unitary gauge
 \begin{align}
-  \mathcal{L}_{\text{Yukawa}}=&h_e L^{\dagger}\Phi e_R+h_d Q^{\dagger}\Phi d_R+h_u Q^{\dagger}\widetilde{\Phi}u_R+\text{h.c}\nonumber\\
-=&\frac{1}{\sqrt{2}}\left[h_e({e_L}^{\dagger}e_R+{e_R}^{\dagger}e_L)+
-h_d({d_L}^{\dagger}d_R+{d_R}^{\dagger}d_L)
-+h_u({u_L}^{\dagger}u_R+{u_R}^{\dagger}u_L)\right]\times\nonumber\\
+  \mathcal{L}_{\text{Yukawa}}=&h_e \widetilde{L}\cdot\Phi e_R+h_d \widetilde{Q}\cdot \Phi d_R+h_u Q^{\dagger}\cdot\widetilde{\Phi}u_R+\text{h.c}\nonumber\\
+=&\frac{1}{\sqrt{2}}\left[h_e((e_L)^{\dagger}e_R+(e_R)^{\dagger}e_L)+
+h_d((d_L)^{\dagger}d_R+(d_R)^{\dagger}d_L)
++h_u((u_L)^{\dagger}u_R+(u_R)^{\dagger}u_L)\right]\times\nonumber\\
 &\qquad\left[H(x)+v\right]\,.
 \end{align}
 Definiendo los fermiones de Dirac, términos de espinores de Weyl como
@@ -820,37 +821,70 @@ entre fermiones y el Higgs!
 De la ec.~\eqref{eq:smscalar} tenemos
 \begin{align}
   \label{eq:lfermion}
-  \mathcal{L}_{\text{fermion}}=&i Q^{\dagger}\overline{\sigma}^\mu\mathcal{D}_\mu Q+i L^{\dagger}\overline{\sigma}^\mu\mathcal{D}_\mu L+
+  \mathcal{L}_{\text{fermion}}=&i \widetilde{Q}\cdot\overline{\sigma}^\mu\mathcal{D}_\mu Q+i \widetilde{L}\cdot\overline{\sigma}^\mu\mathcal{D}_\mu L+
 i{e_R}^{\dagger}\sigma^\mu\mathcal{D}_\mu {e_R}+i{d_R}^{\dagger}\sigma^\mu\mathcal{D}_\mu {d_R}+i{u_R}^{\dagger}\sigma^\mu\mathcal{D}_\mu {u_R}\,.
 \end{align}
-
+Donde, 
+\begin{align}
+  \widetilde{Q}\cdot\overline{\sigma}^\mu\mathcal{D}_\mu Q=&
+  \epsilon_{ab}\widetilde{Q}^a\overline{\sigma}^\mu \left( \mathcal{D}_\mu Q \right)^b \nonumber\\
+  \widetilde{L}\cdot\overline{\sigma}^\mu\mathcal{D}_\mu L=&
+  \epsilon_{ab}\widetilde{L}^a\overline{\sigma}^\mu \left( \mathcal{D}_\mu L \right)^b\,.
+\end{align}
 Los términos de interacción generados por la simetría gauge para el campo $L$ son:
 \begin{align}
-  i L^{\dagger}\overline{\sigma}^\mu\mathcal{D}_\mu L-i L^{\dagger}\overline{\sigma}^\mu\partial_\mu L
-=&i L^{\dagger}\overline{\sigma}^\mu(-i g T_iW_\mu^i-i g'\,Y_LB_\mu) L\nonumber\\
-=& L^{\dagger}\overline{\sigma}^\mu(g T_1W_\mu^1+ g T_2W_\mu^2+g T_3W_\mu^3+g'\,Y_LB_\mu) L\nonumber\\
-=& L^{\dagger}\overline{\sigma}^\mu\left[\frac{g}{\sqrt{2}}
+\label{eq:devLW}
+  i \widetilde{L}\cdot\overline{\sigma}^\mu\mathcal{D}_\mu L-i \widetilde{L}\cdot\overline{\sigma}^\mu\partial_\mu L
+=&i \widetilde{L}\cdot\overline{\sigma}^\mu(-i g T_iW_\mu^i-i g'\,Y_LB_\mu) L\nonumber\\
+=& \widetilde{L}\cdot\overline{\sigma}^\mu(g T_1W_\mu^1+ g T_2W_\mu^2+g T_3W_\mu^3+g'\,Y_LB_\mu) L\nonumber\\
+=& \widetilde{L}\cdot\overline{\sigma}^\mu\left[\frac{g}{\sqrt{2}}
   \begin{pmatrix}
 0 & W_\mu^+\\
 W_\mu^- & 0\\    
   \end{pmatrix}
 +g T_3W_\mu^3+g'\,Y_LB_\mu
 \right]L\nonumber\\
-=&i L^{\dagger}\overline{\sigma}^\mu\frac{g}{\sqrt{2}}
+=&i \widetilde{L}\cdot\overline{\sigma}^\mu\frac{g}{\sqrt{2}}
   \begin{pmatrix}
 0 & W_\mu^+\\
 W_\mu^- & 0\\    
   \end{pmatrix}L+
- L^{\dagger}\overline{\sigma}^\mu\left[g T_3W_\mu^3+g'\,Y_LB_\mu
+ \widetilde{L}\cdot\overline{\sigma}^\mu\left[g T_3W_\mu^3+g'\,Y_LB_\mu
 \right]L\nonumber\\
-  =& L^{\dagger}\overline{\sigma}^\mu\frac{g}{\sqrt{2}}
+  =& \frac{g}{\sqrt{2}}\widetilde{L}\cdot\overline{\sigma}^\mu
   \begin{pmatrix}
 e_LW_\mu^+\\
 \nu_L W_\mu^-\\    
-  \end{pmatrix}+\mathcal{L}_{A Z L}\nonumber\\
+  \end{pmatrix}+\mathcal{L}_{A Z L}\,,
+\end{align}
+donde
+\begin{align}
+  \mathcal{L}_{A Z L}=& \widetilde{L}\cdot\overline{\sigma}^\mu\left[g T_3W_\mu^3+g'\,Y_LB_\mu\right]L\,.
+\end{align}
+Teniendo en cuenta que 
+\begin{align}
+  \frac{g}{\sqrt{2}}\widetilde{L}\cdot\overline{\sigma}^\mu
+  \begin{pmatrix}
+e_LW_\mu^+\\
+\nu_L W_\mu^-\\    
+  \end{pmatrix}=\frac{g}{\sqrt{2}} \left[ \epsilon^{12} \widetilde{L}_1 \overline{\sigma}^{\mu} \nu_L W_{\mu}^-
++\epsilon^{21}  \widetilde{L}_2 \overline{\sigma}^{\mu} e_L W_{\mu}^+ \right],
+\end{align}
+y usando \eqref{eq:widetildeLQ}
+\begin{align}
+  \frac{g}{\sqrt{2}}\widetilde{L}\cdot\overline{\sigma}^\mu
+  \begin{pmatrix}
+e_LW_\mu^+\\
+\nu_L W_\mu^-\\    
+  \end{pmatrix}=\frac{g}{\sqrt{2}} \left[\left( e_L \right)^{\dagger} \overline{\sigma}^{\mu} \nu_L W_{\mu}^-
++ \left( \nu_L \right)^{\dagger} \overline{\sigma}^{\mu} e_L W_{\mu}^+ \right].
+\end{align}
+Reemplazando en \eqref{eq:devLW}
+\begin{align}
+    i \widetilde{L}\cdot\overline{\sigma}^\mu\mathcal{D}_\mu L-i \widetilde{L}\cdot\overline{\sigma}^\mu\partial_\mu L
   =&
-\frac{g}{\sqrt{2}}\left[{\nu_L}^{\dagger}\overline{\sigma}^\mu e_LW_\mu^++
-{e_L}^{\dagger}\overline{\sigma}^\mu\nu_L W_\mu^-\right]    
+\frac{g}{\sqrt{2}}\left[\left( \nu_L \right)^{\dagger}\overline{\sigma}^\mu e_LW_\mu^++
+\left( e_L \right)^{\dagger}\overline{\sigma}^\mu\nu_L W_\mu^-\right]    
 +\mathcal{L}_{A Z L}\nonumber\\
   =&
 \mathcal{L}_{W L}    
@@ -858,9 +892,8 @@ e_LW_\mu^+\\
 \end{align}
 donde
 \begin{align}
-  \mathcal{L}_{W L}=&\frac{g}{\sqrt{2}}\left[{\nu_L}^{\dagger}\overline{\sigma}^\mu e_LW_\mu^++
-{e_L}^{\dagger}\overline{\sigma}^\mu\nu_L W_\mu^-\right]\nonumber\\    
-  \mathcal{L}_{A Z L}=& L^{\dagger}\overline{\sigma}^\mu\left[g T_3W_\mu^3+g'\,Y_LB_\mu\right]L
+  \mathcal{L}_{W L}=&\frac{g}{\sqrt{2}}\left[\left( \nu_L \right)^{\dagger}\overline{\sigma}^\mu e_LW_\mu^++
+\left( e_L \right)^{\dagger}\overline{\sigma}^\mu\nu_L W_\mu^-\right].
 \end{align}
 Generalizando para todos los campos:
 \begin{align}
@@ -872,16 +905,16 @@ Generalizando para todos los campos:
 
 Usando la ec.~\eqref{eq:azmix}
 \begin{align}
-   \mathcal{L}_{A Z L}=& L^{\dagger}\overline{\sigma}^\mu\left[g T_3(c_W Z_\mu+s_W A_\mu)+g'\,Y_L(-s_W Z_\mu+c_W A_\mu)\right]L\nonumber\\
-     =& L^{\dagger}\overline{\sigma}^\mu\left[g T_3c_W Z_\mu+g T_3s_W A_\mu-g'\,Y_Ls_W Z_\mu+g'\,Y_Lc_W A_\mu\right]L\nonumber\\
-    =& L^{\dagger}\overline{\sigma}^\mu\left[\left(g c_WT_3-g's_W\,Y_L\right)Z_\mu
+   \mathcal{L}_{A Z L}=& \widetilde{L}\cdot\overline{\sigma}^\mu\left[g T_3(c_W Z_\mu+s_W A_\mu)+g'\,Y_L(-s_W Z_\mu+c_W A_\mu)\right]L\nonumber\\
+     =& \widetilde{L}\cdot\overline{\sigma}^\mu\left[g T_3c_W Z_\mu+g T_3s_W A_\mu-g'\,Y_Ls_W Z_\mu+g'\,Y_Lc_W A_\mu\right]L\nonumber\\
+    =& \widetilde{L}\cdot\overline{\sigma}^\mu\left[\left(g c_WT_3-g's_W\,Y_L\right)Z_\mu
        +\left(g s_W T_3+g'c_W\,Y_L\right) A_\mu\right]L\,,
 \end{align}
 donde $c_W=\cos\theta_W$, $s_W=\sin\theta_W$. Usando la relación entre $g$ y $g'$~\eqref{eq:tw}:
 \begin{align}
-    \mathcal{L}_{A Z L}=& L^{\dagger}\overline{\sigma}^\mu\left[\left(g c_WT_3-g \frac{s_W^2}{c_W}\,Y_L\right)Z_\mu
+    \mathcal{L}_{A Z L}=& \widetilde{L}\cdot\overline{\sigma}^\mu\left[\left(g c_WT_3-g \frac{s_W^2}{c_W}\,Y_L\right)Z_\mu
        +\left(g s_W T_3+g s_W\,Y_L\right) A_\mu\right]L\nonumber\\
-=&g s_W L^{\dagger}\overline{\sigma}^\mu\left[\left(\cot\theta_WT_3- \tan\theta_W\,Y_L\right)Z_\mu
+=&g s_W \widetilde{L}\cdot\overline{\sigma}^\mu\left[\left(\cot\theta_WT_3- \tan\theta_W\,Y_L\right)Z_\mu
        +\left(T_3+Y_L\right) A_\mu\right]L\,.
 \end{align}
 Como el generador asociado a $A_\mu$ debe ser el generador de carga eléctrica, tenemos que
@@ -909,24 +942,28 @@ La ec. \eqref{eq:gn}, se conoce como la relación Gell-Mann--Nishijima, y establ
 De esta forma
 \begin{align}
     \mathcal{L}_{A Z L}
-=&e L^{\dagger}\overline{\sigma}^\mu\left(\cot\theta_W T_3-\tan\theta_W\,Y_L\right)L Z_\mu
-       +e L^{\dagger}\gamma^\mu \widehat{Q}_L L A_\mu\nonumber\\
-=&e L^{\dagger}\overline{\sigma}^\mu\left[\cot\theta_W T_3-\tan\theta_W\left(\widehat{Q}_L-T_3\right)\right]L Z_\mu
-       +e L^{\dagger}\overline{\sigma}^\mu \widehat{Q}_L L A_\mu\nonumber\\
-=&\frac{e}{2c_W s_W} L^{\dagger}\overline{\sigma}^\mu\left[ \tau_3-2s_W^2\widehat{Q}_L\right]L Z_\mu
-       +e L^{\dagger}\overline{\sigma}^\mu \widehat{Q}_L L A_\mu\,.
+=&e \widetilde{L}\cdot\overline{\sigma}^\mu\left(\cot\theta_W T_3-\tan\theta_W\,Y_L\right)L Z_\mu
+       +e \widetilde{L}\cdot\gamma^\mu \widehat{Q}_L L A_\mu\nonumber\\
+=&e \widetilde{L}\cdot\overline{\sigma}^\mu\left[\cot\theta_W T_3-\tan\theta_W\left(\widehat{Q}_L-T_3\right)\right]L Z_\mu
+       +e \widetilde{L}\cdot\overline{\sigma}^\mu \widehat{Q}_L L A_\mu\nonumber\\
+=&\frac{e}{2c_W s_W} \widetilde{L}\cdot\overline{\sigma}^\mu\left[ \tau_3-2s_W^2\widehat{Q}_L\right]L Z_\mu
+       +e \widetilde{L}\cdot\overline{\sigma}^\mu \widehat{Q}_L L A_\mu\,.
 \end{align}
 Generalizando para los otros campos, tenemos
 \begin{align}
   \label{eq:azl}
-      \mathcal{L}_{A Z L}\to\sum_{F=Q,L,e_R^{\dagger},d_R^{\dagger},u_R^{\dagger}}\frac{e}{2c_W s_W}{F}^{\dagger}\overline{\sigma}^\mu\left[ \tau_3-2s_W^2\widehat{Q}_L\right]F Z_\mu
-       +e{F}^{\dagger}\overline{\sigma}^\mu \widehat{Q}_L F A_\mu\,.
+      \mathcal{L}_{A Z L}\to\sum_{F=Q,L,e_R^{\dagger},d_R^{\dagger},u_R^{\dagger}}\frac{e}{2c_W s_W}\widetilde{F}\cdot\overline{\sigma}^\mu\left[ \tau_3-2s_W^2\widehat{Q}_L\right]F Z_\mu
+       +e\widetilde{F}\cdot\overline{\sigma}^\mu \widehat{Q}_L F A_\mu\,.
+\end{align}
+con
+\begin{align}
+  \widetilde{F}\cdot \to F^{\dagger} \qquad \text{for}\quad F=(e_R)^{\dagger},(d_R)^{\dagger},(u_R)^{\dagger}\,.
 \end{align}
 
 Usando los acoplamientos gauge de los quarks con los gluones \eqref{eq:qcdgauge}, de los fermiones con el $W_\mu^\pm$  \eqref{eq:wl} y  con $Z_\mu$ y $A_\mu$ \eqref{eq:azl} para expandir $\mathcal{L}_{\text{fermion}}$ en \eqref{eq:lfermion}, tenemos
 \begin{align}
 \label{eq:sm1g2}
- \mathcal{L}_{\text{fermion}}=&i Q^{\dagger}\overline{\sigma}^\mu\mathcal{D}_\mu Q+i L^{\dagger}\overline{\sigma}^\mu\mathcal{D}_\mu L+
+ \mathcal{L}_{\text{fermion}}=&i Q^{\dagger}\overline{\sigma}^\mu\mathcal{D}_\mu Q+i \widetilde{L}\cdot\overline{\sigma}^\mu\mathcal{D}_\mu L+
 i{e_R}^{\dagger}\gamma^\mu\mathcal{D}_\mu {e_R}+i{d_R}^{\dagger}\gamma^\mu\mathcal{D}_\mu {d_R}+i{u_R}^{\dagger}\gamma^\mu\mathcal{D}_\mu {u_R}\nonumber\\
   =&i{u_L}^{\dagger}\overline{\sigma}^\mu\partial_\mu u_L+i{u_R}^{\dagger}\gamma^\mu{\partial}_\mu {u_R}+i{d_L}^{\dagger}\overline{\sigma}^\mu\partial_\mu d_L+i{d_R}^{\dagger}\gamma^\mu{\partial}_\mu {d_R}\nonumber\\
 &+i{e_L}^{\dagger}\overline{\sigma}^\mu{\partial}_\mu e_L
@@ -940,290 +977,8 @@ i{e_R}^{\dagger}\gamma^\mu\mathcal{D}_\mu {e_R}+i{d_R}^{\dagger}\gamma^\mu\mathc
   &\qquad\left.+{u_L}^{\dagger}\overline{\sigma}^\mu \widehat{Q}_u u_L+{u_R}^{\dagger}\overline{\sigma}^\mu \widehat{Q}_u u_R
 +{d_L}^{\dagger}\overline{\sigma}^\mu \widehat{Q}_d d_L+{d_R}^{\dagger}\sigma^\mu \widehat{Q}_d d_R\right) A_\mu\,.
 \end{align}
-Para escribir los campos de Weyl en términos de espinores de Dirac, debemos definir
-\begin{align}
-  \gamma_5=&i\gamma_0\gamma_1\gamma_2\gamma_3 \nonumber\\
-=&i
-\begin{pmatrix}
-0 & 1\\
-1 & 0  
-\end{pmatrix}
-\begin{pmatrix}
-0 & \sigma^1\\
--\sigma^1 & 0  
-\end{pmatrix}
-\begin{pmatrix}
-0 & \sigma^2\\
--\sigma^2 & 0  
-\end{pmatrix}
-\begin{pmatrix}
-0 & \sigma^3\\
--\sigma^3 & 0  
-\end{pmatrix}\nonumber\\
-=&-i\begin{pmatrix}
-0 & 1\\
-1 & 0  
-\end{pmatrix}
-\begin{pmatrix}
-0 & \sigma^1\\
--\sigma^1 & 0  
-\end{pmatrix}
-\begin{pmatrix}
-\sigma_2\sigma_3 & 0\\
-0 & \sigma_2\sigma_3
-\end{pmatrix}\nonumber\\
-=&-i\begin{pmatrix}
-0 & 1\\
-1 & 0  
-\end{pmatrix}
-\begin{pmatrix}
-0 & \sigma_1\sigma_2\sigma_3 \\
--\sigma_1\sigma_2\sigma_3 & 0
-\end{pmatrix}\nonumber\\
-=&-i\begin{pmatrix}
--\sigma_1\sigma_2\sigma_3 & 0 \\
-0 &\sigma_1\sigma_2\sigma_3\\
-\end{pmatrix}\nonumber\\
-=&\begin{pmatrix}
-\sigma_4 & 0 \\
-0 &-\sigma_4\\
-\end{pmatrix}
-\end{align}
-donde
-\begin{align}
-  \sigma_4=i\sigma_1\sigma_2\sigma_3\,,
-\end{align}
-
-Teniendo en cuenta que
-\begin{align}
-  \sigma_4=i\sigma_1\sigma_2\sigma_3=&
-  i\begin{pmatrix}
-    0 & 1 \\
-    1 & 0 
-  \end{pmatrix}
-  \begin{pmatrix}
-    0 & -i \\
-    i & 0
-  \end{pmatrix}
-  \begin{pmatrix}
-    1 & 0 \\
-    0 & -1
-  \end{pmatrix}\nonumber\\
-  =&
-  i\begin{pmatrix}
-    i & 0 \\
-    0 & -i 
-  \end{pmatrix}
-  \begin{pmatrix}
-    1 & 0 \\
-    0 & -1
-  \end{pmatrix}\nonumber\\
-  =&i\begin{pmatrix}
-    i & 0 \\
-    0 & i
-  \end{pmatrix}\nonumber\\
-  =&-\mathbf{1}\,.
-\end{align}
-Entonces
-\begin{align}
-  \gamma_5=&
-  \begin{pmatrix}
-    -\mathbf{1} & 0\\
-    0  & \mathbf{1}\\
-  \end{pmatrix}& 
-\end{align}
-
-Con esto podemos definir los proyectores
-\begin{align}
-  P_L&=\frac{\mathbf{1}_{4\times4}-\gamma_5}{2} & P_R&=\frac{\mathbf{1}_{4\times4}+\gamma_5}{2}\,.
-\end{align}
-En adelante se dejará implicito el caracter $4\times4$ de la indentidad. 
-
-Sea $\Psi$ un espinor de Dirac construido a partir de dos espinores de Weyl
-\begin{align}
-  \Psi=
-  \begin{pmatrix}
-   \psi_L\\
-    \psi_R
-  \end{pmatrix}.
-\end{align}
-Tenemos las sigientes propiedades
-\begin{align}
-   P_L \Psi=& \frac{1-\gamma_5}{2}\Psi & P_R \Psi=& \frac{1+\gamma_5}{2}\Psi \nonumber\\
-   =&
-   \begin{pmatrix}
-    \mathbf{1} & 0 \\
-     0 & 0
-   \end{pmatrix} \begin{pmatrix}
-   \psi_L\\
-    \psi_R
-  \end{pmatrix} & =&\begin{pmatrix}
-    0 & 0 \\
-     0 & \mathbf{1}
-   \end{pmatrix} \begin{pmatrix}
-   \psi_L\\
-    \psi_R
-  \end{pmatrix}\nonumber\\
-  =& \begin{pmatrix}
-   \psi_L\\
-    0
-  \end{pmatrix} & =& \begin{pmatrix}
-   0\\
-    \psi_R
-  \end{pmatrix}\,,
-\end{align}
-Además de las siguientes propiedades:
-Las matrices $P_{L,R}$ tienen las propiedades
-\begin{align}
-  P_L+P_R&=1 & P_{L,R}^2&=P_{L,R}P_{L,R}=P_{L,R}\nonumber\\
-  P_L P_R&=0& P_{L,R}^\dagger&=P_{L,R}\,.
-\end{align}
-Usando la ec.~(\ref{eq:218qft})
-\begin{align}
-  P_{L,R}\gamma^\mu=\frac{1\mp\gamma_5}{2}\gamma^\mu=\gamma^\mu\frac{1\pm\gamma_5}{2}=\gamma^\mu P_{R,L}
-\end{align}
-
-De modo que
-\begin{align}
-  \overline{\Psi}\gamma^{\mu}P_{L}\Psi=&\Psi^{\dagger}\gamma^0\gamma^{\mu}P_L \Psi \nonumber\\
-=&  \begin{pmatrix}
-     \psi_L^{\dagger} & \psi_R^{\dagger}  
-  \end{pmatrix}
-  \begin{pmatrix}
-    0 & \mathbf{1} \\
-    \mathbf{1} & 0 \\
-  \end{pmatrix}
-  \begin{pmatrix}
-   0 & \sigma^{\mu}\\
-   \overline{\sigma}^{\mu} & 0     
-  \end{pmatrix}
-  \begin{pmatrix}
-   \psi_L\\
-     0      
-  \end{pmatrix}\nonumber\\
-=&  \begin{pmatrix}
-     \psi_L^{\dagger} & \psi_R^{\dagger}  
-  \end{pmatrix}
-  \begin{pmatrix}
-    0 & \mathbf{1} \\
-    \mathbf{1} & 0 \\
-  \end{pmatrix}
-  \begin{pmatrix}
-     0\\
-   \overline{\sigma}^{\mu}\psi_L\\
-  \end{pmatrix}\nonumber\\
-=&  \begin{pmatrix}
-     \psi_L^{\dagger} & \psi_R^{\dagger}  
-  \end{pmatrix}
-  \begin{pmatrix}
-   \overline{\sigma}^{\mu}\psi_L\\
-     0\\
-  \end{pmatrix}\nonumber\\
-=&   \psi_L^{\dagger} \overline{\sigma}^{\mu}\psi_L\,.
-\end{align}
-Similarmente
-\begin{align}
-\overline{\Psi}\gamma^{\mu}P_{R}\Psi=&   \psi_R^{\dagger} {\sigma}^{\mu}\psi_R\,.
-\end{align}
-
-
-
-Extendiendo la ec.~\eqref{eq:mwd}, en términos de los campos de Weyl una corriente escalar,  vectorial y V-A de espinores Dirac se escriben como
-\begin{align}
-\label{eq:8}
-  \overline{\Psi}\Psi =& \left( \psi_R \right)^\dagger \psi_L+\left( \psi_L \right)^{\dagger}\psi_R \nonumber\\
-  \overline{\Psi}\gamma^{\mu}\Psi=& \psi_L^{\dagger}\overline{\sigma}^{\mu}\psi_L+\psi_R^{\dagger}\sigma^{\mu}\psi_{R}\nonumber\\
-  \tfrac{1}{2}\overline{\Psi}\gamma^{\mu}(1-\gamma_5)\Psi=& \psi_L^{\dagger}\overline{\sigma}^{\mu}\psi_L\nonumber\\
-  \tfrac{1}{2}\overline{\Psi}\gamma^{\mu}(1+\gamma_5)\Psi=& \psi_R^{\dagger}{\sigma}^{\mu}\psi_L\nonumber\\
-\end{align}
-
-Para escribir este Lagrangiano en terminos de espinores de 4 componentes, tomemos algunos casos específicos:
-\begin{itemize}
-\item 
-\begin{align}
-\label{eq:wf4}
-  \overline{\nu_L}\gamma^\mu e_LW_\mu^+&=\overline{\nu}P_R\gamma^\mu P_LeW_\mu^+\nonumber\\
-&=\overline{\nu}\gamma^\mu P_L^2eW_\mu^+\nonumber\\
-&=\overline{\nu}\gamma^\mu P_LeW_\mu^+\nonumber\\
-&=\frac{1}{2}\overline{\nu}\gamma^\mu(1-\gamma_5)eW_\mu^+\,,
-\end{align}
-
-\item
-  \begin{align}
-\label{eq:zf4}
-    &\left[ Q^{\dagger}\overline{\sigma}^\mu\left( \tau_3-2s_W^2\widehat{Q}_Q\right)Q
-      -2s_W^2{u_R}^{\dagger}\sigma^\mu\widehat{Q}_u u_R-2s_W^2{d_R}^{\dagger}\sigma^\mu\widehat{Q}_d d_R\right]Z_\mu\nonumber\\
-=&\left[\begin{pmatrix}
-      {u_L}^{\dagger} &{d_L}^{\dagger}
-    \end{pmatrix}\overline{\sigma}^\mu
-    \begin{pmatrix}
-      1-2s_W^2\widehat{Q}_u & 0\\
-      0 &-1-2s_W^2\widehat{Q}_d
-    \end{pmatrix}
-    \begin{pmatrix}
-      u_L\\
-      d_L\\
-    \end{pmatrix}\right.\nonumber\\
-    &\left.-2s_W^2{u_R}^{\dagger}\sigma^\mu\widehat{Q}_u u_R-2s_W^2{d_R}^{\dagger}\sigma^\mu\widehat{Q}_d d_R
-  \right]Z_\mu\nonumber\\
-    =&\left\{{u_L}^{\dagger}\overline{\sigma}^\mu u_L-{d_L}^{\dagger}\overline{\sigma}^\mu d_L
--2s_W^2\left[{u_L}^{\dagger}\overline{\sigma}^{\mu}Q_u u_L+{u_R}^{\dagger}\sigma^\mu Q_uu_R
-+{d_L}^{\dagger}\overline{\sigma}^{\mu}Q_d d_L+{d_R}^{\dagger}\sigma^\mu Q_dd_R
-\right]\right\}Z_\mu \nonumber\\
-          =&\left[\frac{1}{2}\overline{u}\gamma^\mu(1-\gamma_5)u-\frac{1}{2}\overline{d}\gamma^\mu(1-\gamma_5)d
--2s_W^2\left(\overline{u}\gamma^\mu Q_u u
-+\overline{d}\gamma^\mu Q_d d
-\right)\right]Z_\mu\nonumber\\
-        =&\left\{\overline{u}\gamma^\mu\left[\left(\frac{1}{2}-2s_W^2Q_u\right)-\frac{1}{2}\gamma_5\right]u+
-\overline{d}\gamma^\mu\left[\left(-\frac{1}{2}-2s_W^2Q_d\right)+\frac{1}{2}\gamma_5\right]d
-\right\}Z_\mu\nonumber\\
-  =&\left[\overline{u}\gamma^\mu\left(v_u-a_u\gamma_5\right)u+\overline{d}\gamma^\mu\left(v_d-a_d\gamma_5\right)d\right]Z_\mu\,,
-\end{align}
-
-donde
-\begin{align}
-  v_f=&T_3^f-2 \sin^2\theta_WQ_f & a_f=&T_3^f \gamma_5
-\end{align}
-Los valores explícitos para  $v_f$ y $a_f$ en el modelo estándar, están dados en la Tabla~\ref{tab:zcoup}. 
-\end{itemize}
-
-
-%noinstiki
-\begin{table}  %noinstiki
-  \centering %noinstiki
-  \begin{tabular}{l|c|c|c|c} %noinstiki
-   &$u$&$d$&$\nu_e$&$e$\\\hline{}
-$2v_f$&$1-\frac{8}{3}\sin^2\theta_W$&$-1+\frac{4}{3}\sin^2\theta_W$&$1$&$-1+4\sin^2\theta_W$\\
-$2a_f$&$1$&$-1$&$1$&$-1$\\
-  \end{tabular} %noinstiki
-  \caption{Acoplamientos de corrientes neutras} %noinstiki
-\label{tab:zcoup}
-\end{table} %noinstiki
-%noinstiki
-
-
-Usando las expresiones para pasar de fermiones $L,R$ a los fermiones de Dirac de cuatro compomentes, y las ecuaciones~\eqref{eq:wf4}, \eqref{eq:zf4} tenemos
-\begin{align}
-\label{eq:lfermionfin}
-   \mathcal{L}_{\text{fermion}}
-  =&i\overline{u}\gamma^\mu\partial_\mu u+i\overline{d}\gamma^\mu\partial_\mu d+i\overline{e}\gamma^\mu{\partial}_\mu e
-+i\overline{\nu_L}\gamma^\mu{\partial}_\mu \nu_L\nonumber\\
-&+g_s \left(\overline{u}\gamma_\mu\frac{\lambda^a}{2}u
-+\overline{d}\gamma_\mu\frac{\lambda^a}{2}d+ \right)G^\mu_a\nonumber\\
-&+\frac{g}{2\sqrt{2}}\left[\overline{\nu}\gamma^\mu(1-\gamma_5)eW_\mu^++
-\overline{u}\gamma^\mu(1-\gamma_5)d W_\mu^++\text{h.c}\right]
-+\sum_{f=u,d,\nu,e}\frac{e}{2c_W s_W}\overline{f}\gamma^\mu\left(v_f-a_f\gamma_5\right)f\nonumber\\
-&+e\left(\overline{e}\gamma^\mu \widehat{Q}_e e+
-\overline{u}\gamma^\mu {Q}_u u+
-\overline{d}\gamma^\mu {Q}_d d\right) A_\mu\nonumber\\
-    =&\sum_{f=u,d,\nu,e}i\overline{f}\gamma^\mu\partial_\mu f+\sum_{q=u,d}g_s\overline{q}\gamma_\mu\frac{\lambda^a}{2}qG^\mu_a\nonumber\\
-&+\frac{g}{2\sqrt{2}}\left[\overline{\nu}\gamma^\mu(1-\gamma_5)eW_\mu^++
-\overline{u}\gamma^\mu(1-\gamma_5)d W_\mu^++\text{h.c}\right]\nonumber\\
-&+\sum_{f=u,d,\nu,e}\frac{e}{2c_W s_W}\overline{f}\gamma^\mu\left(v_f-a_f\gamma_5\right)f\nonumber\\
-&+e\sum_{f=u,d,\nu,e}\overline{f}\gamma^\mu \widehat{Q}_f f A_\mu\,,
-\end{align}
-donde $Q_f$ están dadas en la Tabla~\ref{tab:ef} y $v_f$, $a_f$ en la Tabla \ref{tab:zcoup}.
 \end{frame}
+
 \subsection{Self-interactions}
 
 \begin{frame}[fragile,allowframebreaks]
@@ -1238,8 +993,8 @@ se puede escribir como
 - \tfrac{1}{4}\widetilde{G}^{\mu\nu}_a \widetilde{G}_{\mu\nu}^a\nonumber\\
 &-ie\cot\theta_W\left[(F_W^\dagger)^{\mu\nu}W_\mu^+ Z_\nu-(F_W)^{\mu\nu}W_\mu^- Z_\nu+W_\mu^-W_\nu^+Z^{\mu\nu}\right]\nonumber\\
 &-ie\left[(F_W^\dagger)^{\mu\nu}W_\mu^+ A_\nu-(F_W)^{\mu\nu}W_\mu^- A_\nu+W_\mu^-W_\nu^+F^{\mu\nu}\right]\nonumber\\
-&-\frac{e^2}{2\sin^2\theta_W}\left[\left(W_\mu^+{W^\mu}^-\right)^2-W_\mu^+{W^\mu}^+W_\nu^-{W^\nu}^-\right]
--e^2\cot^2\theta_W\left(W_\mu^+{W^\mu}^-Z_\nu Z^\nu-W_\mu^+Z^\mu W_\nu^-Z^\nu\right)\nonumber\\
+&-\frac{e^2}{2\sin^2\theta_W}\left[\left(W_\mu^+{W^\mu}^-\right)^2-W_\mu^+{W^\mu}^+W_\nu^-{W^\nu}^-\right] \nonumber\\
+&-e^2\cot^2\theta_W\left(W_\mu^+{W^\mu}^-Z_\nu Z^\nu-W_\mu^+Z^\mu W_\nu^-Z^\nu\right)\nonumber\\
 &-e^2\cot^2\theta_W\left(2W_\mu^+{W^\mu}^-A_\nu Z^\nu-W_\mu^+A^\mu W_\nu^-Z^\nu-W_\mu^+Z^\mu W_\nu^-A^\nu\right)\nonumber\\
 &-e^2\left(W_\mu^+{W^\mu}^-A_\nu A^\nu-W_\mu^+A^\mu W_\nu^-A^\nu\right)\nonumber\\
 &- \frac{1}{4}\left(g_s\widetilde{G}^{\mu\nu}_af_{a d e}G^d_\mu G^e_\nu
@@ -1258,8 +1013,9 @@ donde
 
 \begin{frame}[fragile,allowframebreaks]
 Recopilando los resultados para $\mathcal{L}_{WBH}$ \eqref{eq:lwbhfin}, $\mathcal{L}_{\text{Yukawa}}$ \eqref{eq:lyukfin}, $\mathcal{L}_{\text{fermion}}$ \eqref{eq:lfermionfin}, y $\mathcal{L}_{\text{gauge}}$ \eqref{eq:lgaguefin}, tenemos  para $f=\nu_e,e,u,d$; $q=u,d$ [con $f'=e$ ($d$) para $f=\nu_e$ ($u$) ]
+%%arrglar
 \begin{align}
-  \mathcal{L}_{\text{1 gen}}=&\sum_f i\bar{f}\left(\gamma^\mu\partial_\mu-m_f\right)f\nonumber\\
+  \mathcal{L}_{\text{1 gen}}=&\sum_f i{f}^{\dagger}\left(\overline{\sigma}^\mu\partial_\mu-m_f\right)f\nonumber\\
 &-\tfrac{1}{4}F^{\mu\nu} F_{\mu\nu}-\tfrac{1}{4}Z^{\mu\nu} Z_{\mu\nu}-\tfrac{1}{2}(F_W^\dagger)^{\mu\nu} (F_W)_{\mu\nu}
 - \tfrac{1}{4}\widetilde{G}^{\mu\nu}_a \widetilde{G}_{\mu\nu}^a\nonumber\\
 &+\tfrac{1}{2}\partial^\mu H\partial_\mu H
