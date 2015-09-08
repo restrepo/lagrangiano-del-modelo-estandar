@@ -63,8 +63,8 @@ Para describir completamente un electrón, que conserva carga eléctrica bajo $U
   \centering
   \begin{tabular}{llll}
     Nombre & Símbolo & Lorentz & $U(1)$\\\hline
-   $e_L$: electrón izquierdo & $\xi_{\alpha}$ & ${S_{\alpha}}^{\beta}$ & $e^{i\theta}$\\
-   $\left( e_L \right)^{\dagger}=e^{\dagger}_R$: positrón derecho   & $\left( \xi_{\alpha} \right)^{\dagger}=\xi^{\dagger}_{\dot{\alpha}}$ & ${{S^{*}}_{\dot{\alpha}}}^{\dot{\beta}}$ & $e^{-i\theta}$\\
+    $e_L$: electrón izquierdo & $\xi_{\alpha}$ & ${\left[ S \right]_{\alpha}}^{\beta}$ & $e^{i\theta}$\\
+   $\left( e_L \right)^{\dagger}=e^{\dagger}_R$: positrón derecho   & $\left( \xi_{\alpha} \right)^{\dagger}=\xi^{\dagger}_{\dot{\alpha}}$ & ${\left[{S^{*}}\right]_{\dot{\alpha}}}^{\dot{\beta}}$ & $e^{-i\theta}$\\
    $e_R$: electrón derecho   & $\left( \eta^{\alpha} \right)^{\dagger}=\eta^{\dagger\;\dot{\alpha}}$ & ${\left[ \left( S^{-1} \right)^\dagger \right]^{\dot{\alpha}}}_{\dot{\beta}}$& $e^{i\theta}$\\
    $\left( e_R \right)^{\dagger}=e^{\dagger}_L$: positrón izquierdo&$\eta^{\alpha}$& ${\left[ \left( S^{-1} \right)^T \right]^{\alpha}}_{\beta}$ & $e^{-i\theta}$\\\hline
   \end{tabular}
@@ -165,6 +165,11 @@ Definiendo las matrices de Dirac (en la representación quiral) como
     \overline{\sigma}^{\mu} &0\\
   \end{pmatrix},
 \end{align}
+las cuales satifcen el algebra
+\begin{align}
+  \left\{ \gamma^{\mu},\gamma^{\nu} \right\}=2 g^{\mu\nu}\mathbf{1}\,.
+\end{align}
+
 tememos en particular que, 
 \begin{align}
   \gamma^0= \begin{pmatrix}
@@ -172,7 +177,11 @@ tememos en particular que,
     \mathbf{1} &0\\
   \end{pmatrix}
 \end{align}
-de modo que usando (\ref{eq:psid}), (\ref{eq:psidm}) y (\ref{eq:psidd})
+tal que
+\begin{align}
+  \left( \gamma^{0} \right)^2=\mathbf{1}_{\text{4$\times 4$}}\,.
+\end{align}
+Usando (\ref{eq:psid}), (\ref{eq:psidm}) y (\ref{eq:psidd})
 \begin{align}
   \mathcal{L}=&i\xi^{\dagger}\overline{\sigma}^{\mu}\partial_{\mu}\xi+i\eta\sigma^{\mu}\partial_{\mu}\eta^{\dagger}
 -m \left(\eta\xi+\xi^{\dagger}\eta^{\dagger} \right)\nonumber\\
@@ -182,7 +191,7 @@ Definiendo finalmente el \emph{espinor de Dirac adjunto}
 \begin{align}
   \overline{\Psi}=\Psi^{\dagger}\gamma^{0}\,,
 \end{align}
-podemos escribir finalmente el Lagrangiano para espinores de Dirac que debe contener Lagrangiano de Sch\"odinger en el límite no relativista (ver Apéndice \ref{sec:limite-no-relat}) como
+podemos escribir finalmente el Lagrangiano para espinores de Dirac  como
 \begin{align}
   \mathcal{L}=&i\overline{\Psi}\gamma^{\mu}\partial_{\mu}\Psi-m\overline{\Psi}\Psi\,.
 \end{align}
@@ -197,6 +206,25 @@ En términos de los campos de Weyl un escalar y un vector de espinores Dirac se 
 
 
 Un tratamiento de la invarianza de Lorentz para la Acción de Dirac esta dado en el Apéndice~\ref{cha:dirac-action}. 
+
+La ecuación de Dirac se obtiene facilmente de la ecuación de Euler Lagrange para el espinor adjunto $\overline{\Psi}$
+\begin{align}
+  \partial_{\mu}\left[ \frac{\partial\mathcal{L}}{\partial \left( \partial_{\mu} \overline{\Psi} \right)} \right]-\frac{\partial \mathcal{L}}{\partial \overline{\Psi}}=&0 \nonumber\\
+-\frac{\partial \mathcal{L}}{\partial \overline{\Psi}}=&0 \nonumber\\
+\left( i\gamma^{\mu}\partial_{\mu}-m \right)\Psi=0\,.
+\end{align}
+Escrito en la forma de la ecuación de Scrodinger general, da lugar al Hamiltoniando de Dirac
+\begin{align}
+  i\gamma^0 \partial_{0}\Psi=&\left[ \gamma^{i} \left( -i \partial_{i}\right)+m \right]\Psi \nonumber\\
+  i \left( \gamma^0 \right)^2 \partial_{0}\Psi=&\gamma^0\left( \sum_i\gamma^{i} \widehat{p}\;^i +m \right)\Psi \nonumber\\
+  i \frac{\partial}{\partial t}\Psi=&\gamma^0\left( \boldsymbol{\gamma}\cdot \widehat{\mathbf{p}} +m \right)\Psi \nonumber\\
+  i \frac{\partial}{\partial t}\Psi=&\widehat{H}_D\Psi\,,
+\end{align}
+donde
+\begin{align}
+  \widehat{H}_D=\gamma^0\left( \boldsymbol{\gamma}\cdot \widehat{\mathbf{p}} +m \right)
+\end{align}
+Antes de intentar tomar el límite no relativista, y para ser consistentes con relatividad espacial, anse debe cambiar el Lagangiano por uno que tenga la invarianza de fase local. En tal caso el Hamiltoniano resultando se debe reducir al Hamiltoniano de  Sch\"odinger en presencia de un campo electrómagnético (ver Apéndice \ref{sec:limite-no-relat}).
 
 
 \section{Electrodinámica Cuántica}
