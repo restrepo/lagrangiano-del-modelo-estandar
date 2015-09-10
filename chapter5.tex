@@ -1,232 +1,5 @@
 \chapter{Principio gauge local}
 
-\section{Espinores de Dirac}
-
-Para ir de un cuadrivector de spín barrado al sin barrar
-   \begin{align}
- \overline{\sigma}^{\mu}=\left( \mathbf{1}_{2\times2},-{\boldsymbol{\sigma}} \right) \rightarrow
-\sigma^{\mu}= \left( \mathbf{1}_{2\times2},\boldsymbol{\sigma} \right)
-\end{align}
-podemos usar la \emph{métrica de Weyl}
-\begin{align}
-  \left( \sigma^{\mu} \right)_{\alpha\dot{\alpha}}=&\epsilon_{\alpha\beta}\epsilon_{\dot{\alpha}\dot{\beta}}\overline{\sigma}^{\mu\ \dot{\beta}\beta} \nonumber\\
-  \left( \overline{\sigma}^{\mu} \right)^{\mu\;\dot{\alpha}\alpha}=&\epsilon^{\alpha\beta}\epsilon^{\dot{\alpha}\dot{\beta}}{\sigma}^{\mu}_{\beta\dot{\beta}} \,,
-\end{align}
-Estas expresiones se pueden comprobar explicitamente. Por ejemplo, en el caso de la primera matriz de Pauli
-\begin{align*}
-  \overline{\sigma}^{1}=
-  \begin{pmatrix}
-   0 & 1\\
-   1 & 0 
-  \end{pmatrix}=
-  \begin{pmatrix}
-   0                                         &\left[\overline{\sigma}^1 \right]^{\dot{1}2}\\
- \left[\overline{\sigma}^1 \right]^{\dot{2}1}&0
-  \end{pmatrix}=&
-  \begin{pmatrix}
-   0                                         &\left[\overline{\sigma}^1 \right]^{\dot{1}2}\\
- \left[\overline{\sigma}^1 \right]^{\dot{2}1}&0
-  \end{pmatrix}\nonumber\\
-=&\begin{pmatrix}
-   0                                         &\epsilon^{2\beta}\epsilon^{\dot{1}\dot{\beta}}\left[\sigma^1 \right]_{\beta\dot{\beta}}\\
-\epsilon^{1\beta}\epsilon^{\dot{2}\dot{\beta}} \left[\sigma^1 \right]_{\beta\dot{\beta}}&0
-  \end{pmatrix}\nonumber\\
-=&\begin{pmatrix}
-   0                                         &\epsilon^{21}\epsilon^{\dot{1}\dot{2}}\left[\sigma^1 \right]_{1\dot{2}}\\
-\epsilon^{12}\epsilon^{\dot{2}\dot{1}} \left[\sigma^1 \right]_{2\dot{1}}&0
-  \end{pmatrix}\nonumber\\
-=&\begin{pmatrix}
-   0                                         &-\left[\sigma^1 \right]_{1\dot{2}}\\
--\left[\sigma^1 \right]_{2\dot{1}}&0
-  \end{pmatrix}\nonumber\\
-=&\begin{pmatrix}
-   0                                         &-1\\
--1&0
-  \end{pmatrix}\nonumber\\
-=&-\sigma^1\,.
-\end{align*}
-
-Con esto podemos reescribir el siguiente producto de espinores  de Weyl que transforma como un vector en el espacio externo de Lorentz
-\begin{align}
-\label{eq:exxe}
-  \xi^{\dagger}\overline{\sigma}^{\mu}\eta=& \xi^{\dagger}_{\dot{\alpha}}\overline{\sigma}^{\mu\;\dot{\alpha}\alpha}\eta_{\alpha}\nonumber\\
-=&\xi^{\dagger}_{\dot{\alpha}}\epsilon^{\alpha\beta}\epsilon^{\dot{\alpha}\dot{\beta}}{\sigma}^{\mu}_{\beta\dot{\beta}} \eta_{\alpha}\nonumber\\
-  =&\epsilon^{\dot{\alpha}\dot{\beta}}\xi^{\dagger}_{\dot{\alpha}}{\sigma}^{\mu}_{\beta\dot{\beta}} \epsilon^{\alpha\beta}\eta_{\alpha}\nonumber\\
-  =&\xi^{\dagger\;\dot{\beta}}{\sigma}^{\mu}_{\beta\dot{\beta}} \eta^{\beta}\nonumber\\
-  =&\pm\eta^{\beta}{\sigma}^{\mu}_{\beta\dot{\beta}}\xi^{\dagger\;\dot{\beta}} \nonumber\\
-  =&\pm\eta\,{\sigma}^{\mu}\,\xi^{\dagger} \,,
-\end{align}
-donde el signo $+$ ($-$) es para campos clásicos (anticonmutantes).
-
-Para describir completamente un electrón, que conserva carga eléctrica bajo $U(1)$, necesitamos todas las componentes detalladas en la Tabla~\ref{tab:electron}
-\begin{table}
-  \centering
-  \begin{tabular}{llll}
-    Nombre & Símbolo & Lorentz & $U(1)$\\\hline
-    $e_L$: electrón izquierdo & $\xi_{\alpha}$ & ${\left[ S \right]_{\alpha}}^{\beta}$ & $e^{i\theta}$\\
-   $\left( e_L \right)^{\dagger}=e^{\dagger}_R$: positrón derecho   & $\left( \xi_{\alpha} \right)^{\dagger}=\xi^{\dagger}_{\dot{\alpha}}$ & ${\left[{S^{*}}\right]_{\dot{\alpha}}}^{\dot{\beta}}$ & $e^{-i\theta}$\\
-   $e_R$: electrón derecho   & $\left( \eta^{\alpha} \right)^{\dagger}=\eta^{\dagger\;\dot{\alpha}}$ & ${\left[ \left( S^{-1} \right)^\dagger \right]^{\dot{\alpha}}}_{\dot{\beta}}$& $e^{i\theta}$\\
-   $\left( e_R \right)^{\dagger}=e^{\dagger}_L$: positrón izquierdo&$\eta^{\alpha}$& ${\left[ \left( S^{-1} \right)^T \right]^{\alpha}}_{\beta}$ & $e^{-i\theta}$\\\hline
-  \end{tabular}
-  \caption{Componentes del electrón}
-  \label{tab:electron}
-\end{table}
-
-
-Podemos especificar el Lagrangiano completo para el electrón invariante bajo $U(1)$ sin perdidad de generalidad, usando los dos fermiones izquierdos de cargas opuestas, $\xi_{\alpha}$ y $\eta^{\alpha}$:
-\begin{align}
-  \xi\to\xi'=&e^{i\theta}\xi &   \eta\to\eta'=&e^{-i\theta}\eta &
-\end{align}
-como
-\begin{align}
-\label{eq:dwlag}
-  \mathcal{L}=&i\xi^{\dagger}_{\dot{\alpha}}\overline{\sigma}^{\mu\;\dot{\alpha}\alpha}\partial_{\mu}\xi_{\alpha}+i\eta^{\alpha}\sigma^{\mu}_{\alpha\dot{\alpha}}\partial_{\mu}\eta^{\dagger\;\dot{\alpha}}
--m \left(\eta^{\alpha} \xi_{\alpha}+\xi^{\dagger}_{\dot{\alpha}} \eta^{\dagger\;\dot{\alpha}}\right)\nonumber\\
-=&i\xi^{\dagger}\overline{\sigma}^{\mu}\partial_{\mu}\xi+i\eta\sigma^{\mu}\partial_{\mu}\eta^{\dagger}
--m \left(\eta\xi+\xi^{\dagger}\eta^{\dagger} \right)\,.
-\end{align}
-Definiendo el \emph{espinor de Dirac}  y su hermítico conjugado como
-\begin{align}
-\label{eq:psid}
-  \Psi\equiv&  \begin{pmatrix}
-   e_L\\
-   e_R\\    
-  \end{pmatrix}=
-  \begin{pmatrix}
-   \xi_{\alpha}\\
-   \eta^{\dagger\;\dot{\alpha}}    
-  \end{pmatrix}&  \Psi^{\dagger}=&
-  \begin{pmatrix}
-   \left( \xi_{\alpha} \right)^{\dagger} & \left( \eta^{\dagger\;\dot{\alpha}} \right)^{\dagger}    
-  \end{pmatrix}=  \begin{pmatrix}
-  \xi^{\dagger}_{\dot{\alpha}}& \eta^{\alpha}
-  \end{pmatrix}
-\end{align}
-y usando \eqref{eq:exxe}, tenemos en primer lugar que
-\begin{align}
-\label{eq:psidm}
-  \begin{pmatrix}
-  \xi^{\dagger}_{\dot{\alpha}}& \eta^{\alpha}
-  \end{pmatrix}
-  \begin{pmatrix}
-    0           &\mathbf{1}\\
-    \mathbf{1} &0\\
-  \end{pmatrix} \begin{pmatrix}
-   \xi_{\alpha}\\
-   \eta^{\dagger\;\dot{\alpha}}    
-  \end{pmatrix}
-=&
-\begin{pmatrix}
-  \eta^{\alpha} & \xi^{\dagger}_{\dot{\alpha}}
-\end{pmatrix}
-\begin{pmatrix}
-   \xi_{\alpha}\\
-   \eta^{\dagger\;\dot{\alpha}}    
-  \end{pmatrix}
-\nonumber\\
-=&\eta^{\alpha}\xi_{\alpha} +\xi^{\dagger}_{\dot{\alpha}}\eta^{\dagger\;\dot{\alpha}}\nonumber\\
-=&\eta\xi+\xi^{\dagger}\eta^{\dagger}\,,
-\end{align}
-mientras que para los términos cinéticos
-\begin{align}
-\label{eq:psidd}
-  \begin{pmatrix}
-  \xi^{\dagger}_{\dot{\alpha}}& \eta^{\alpha}
-  \end{pmatrix}
- \begin{pmatrix}
-    0           &\mathbf{1}\\
-    \mathbf{1} &0\\
-  \end{pmatrix}
-  \begin{pmatrix}
-    0           &\sigma^{\mu}_{\alpha\dot{\alpha}}\\
-    \overline{\sigma}^{\mu\;\dot{\alpha}\alpha} &0\\
-  \end{pmatrix} \begin{pmatrix}
-   \partial_{\mu}\xi_{\alpha}\\
-   \partial_{\mu}\eta^{\dagger\;\dot{\alpha}}    
-  \end{pmatrix}
-=&
- \begin{pmatrix}
-  \xi^{\dagger}_{\dot{\alpha}}& \eta^{\alpha}
-  \end{pmatrix}
-  \begin{pmatrix}
-    \overline{\sigma}^{\mu\;\dot{\alpha}\alpha}&0\\
-     0                    &\sigma^{\mu}_{\alpha\dot{\alpha}}\\
-  \end{pmatrix} \begin{pmatrix}
-   \partial_{\mu}\xi_{\alpha}\\
-   \partial_{\mu}\eta^{\dagger\;\dot{\alpha}}    
-  \end{pmatrix}\nonumber\\
-=&\xi^{\dagger}_{\dot{\alpha}}\overline{\sigma}^{\mu\;\dot{\alpha}\alpha}\partial_{\mu}\xi_{\alpha}+\eta^{\alpha}\sigma^{\mu}_{\alpha\dot{\alpha}}\partial_{\mu}\eta^{\dagger\;\dot{\alpha}}\nonumber\\
-=&\xi^{\dagger}\overline{\sigma}^{\mu}\partial_{\mu}\xi+\eta\sigma^{\mu}\partial_{\mu}\eta^{\dagger}\,.
-\end{align}
-Definiendo las matrices de Dirac (en la representación quiral) como
-\begin{align}
-  \gamma^\mu= \begin{pmatrix}
-    0           &\sigma^{\mu}\\
-    \overline{\sigma}^{\mu} &0\\
-  \end{pmatrix},
-\end{align}
-las cuales satifcen el algebra
-\begin{align}
-  \left\{ \gamma^{\mu},\gamma^{\nu} \right\}=2 g^{\mu\nu}\mathbf{1}\,.
-\end{align}
-
-tememos en particular que, 
-\begin{align}
-  \gamma^0= \begin{pmatrix}
-    0           &\mathbf{1}\\
-    \mathbf{1} &0\\
-  \end{pmatrix}
-\end{align}
-tal que
-\begin{align}
-  \left( \gamma^{0} \right)^2=\mathbf{1}_{\text{4$\times 4$}}\,.
-\end{align}
-Usando (\ref{eq:psid}), (\ref{eq:psidm}) y (\ref{eq:psidd})
-\begin{align}
-  \mathcal{L}=&i\xi^{\dagger}\overline{\sigma}^{\mu}\partial_{\mu}\xi+i\eta\sigma^{\mu}\partial_{\mu}\eta^{\dagger}
--m \left(\eta\xi+\xi^{\dagger}\eta^{\dagger} \right)\nonumber\\
-=&i\Psi^{\dagger}\gamma^{0}\gamma^{\mu}\partial_{\mu}\Psi-m\Psi^{\dagger}\gamma^{0}\Psi\,.
-\end{align}
-Definiendo finalmente el \emph{espinor de Dirac adjunto}
-\begin{align}
-  \overline{\Psi}=\Psi^{\dagger}\gamma^{0}\,,
-\end{align}
-podemos escribir finalmente el Lagrangiano para espinores de Dirac  como
-\begin{align}
-  \mathcal{L}=&i\overline{\Psi}\gamma^{\mu}\partial_{\mu}\Psi-m\overline{\Psi}\Psi\,.
-\end{align}
-En adelante para simplificar la notación nos referiremos al electrón de Dirac simplemente como $\psi$.
-
-En términos de los campos de Weyl un escalar y un vector de espinores Dirac se escriben como
-\begin{align}
-\label{eq:mwd}
-  \overline{\Psi}\Psi =& \left( e_R \right)^\dagger e_L+\left( e_L \right)^{\dagger}e_R \nonumber\\
-  \overline{\Psi}\gamma^{\mu}\Psi=& (e_L)^{\dagger}\overline{\sigma}^{\mu}e_L+(e_R)^{\dagger}\sigma^{\mu}e_{R}\,,
-\end{align}
-
-
-Un tratamiento de la invarianza de Lorentz para la Acción de Dirac esta dado en el Apéndice~\ref{cha:dirac-action}. 
-
-La ecuación de Dirac se obtiene facilmente de la ecuación de Euler Lagrange para el espinor adjunto $\overline{\Psi}$
-\begin{align}
-  \partial_{\mu}\left[ \frac{\partial\mathcal{L}}{\partial \left( \partial_{\mu} \overline{\Psi} \right)} \right]-\frac{\partial \mathcal{L}}{\partial \overline{\Psi}}=&0 \nonumber\\
--\frac{\partial \mathcal{L}}{\partial \overline{\Psi}}=&0 \nonumber\\
-\left( i\gamma^{\mu}\partial_{\mu}-m \right)\Psi=0\,.
-\end{align}
-Escrito en la forma de la ecuación de Scrodinger general, da lugar al Hamiltoniando de Dirac
-\begin{align}
-  i\gamma^0 \partial_{0}\Psi=&\left[ \gamma^{i} \left( -i \partial_{i}\right)+m \right]\Psi \nonumber\\
-  i \left( \gamma^0 \right)^2 \partial_{0}\Psi=&\gamma^0\left( \sum_i\gamma^{i} \widehat{p}\;^i +m \right)\Psi \nonumber\\
-  i \frac{\partial}{\partial t}\Psi=&\gamma^0\left( \boldsymbol{\gamma}\cdot \widehat{\mathbf{p}} +m \right)\Psi \nonumber\\
-  i \frac{\partial}{\partial t}\Psi=&\widehat{H}_D\Psi\,,
-\end{align}
-donde
-\begin{align}
-  \widehat{H}_D=\gamma^0\left( \boldsymbol{\gamma}\cdot \widehat{\mathbf{p}} +m \right)
-\end{align}
-Antes de intentar tomar el límite no relativista, y para ser consistentes con relatividad espacial, anse debe cambiar el Lagangiano por uno que tenga la invarianza de fase local. En tal caso el Hamiltoniano resultando se debe reducir al Hamiltoniano de  Sch\"odinger en presencia de un campo electrómagnético (ver Apéndice \ref{sec:limite-no-relat}).
-
-
 \section{Electrodinámica Cuántica}
 \label{sec:electr-cuant}
 
@@ -257,7 +30,12 @@ y es invariante bajo transformaciones locales $U(1)_Q$. Desarrollando la expresi
     \mathcal{L}&=\bar{\psi}\left[i\gamma^\mu\left(\partial_\mu-ieQA_\mu\right)-m\right]\psi -\tfrac{1}{4}F^{\mu\nu}F_{\mu\nu}\nonumber\\
     &=\bar{\psi}\left(i\gamma^\mu\partial_\mu-m\right)\psi+eQ\bar{\psi}\gamma^\mu\psi A_\mu -\tfrac{1}{4}F^{\mu\nu}F_{\mu\nu}.
 \end{align}
-Este Lagrangiano da lugar a la Acción de la teoría conocida como Electrodinámica Cuántica (QED de sus siglas en inglés).
+Este Lagrangiano da lugar a la Acción de la teoría conocida como Electrodinámica Cuántica (QED de sus siglas en inglés). Para el Lagrangiano de un espinor Weyl izquierdo $\xi_{\alpha}$, el término de masa esta prohibido por la invarianza gaige, y cambiando $\overline{\psi}\gamma^{\mu}\to \xi^{\dagger}\overline{\sigma}^{\mu}$, siguiendo los mismos pasos  llegaríamos a
+\begin{align}
+     \mathcal{L}=&i\xi^{\dagger}\overline{\sigma}^\mu\mathcal{D}_\mu\xi -\tfrac{1}{4}F^{\mu\nu}F_{\mu\nu} \nonumber\\
+=&i\xi^{\dagger}\overline{\sigma}^\mu\partial_\mu\xi+eQ\xi^{\dagger}\overline{\sigma}^\mu\xi A_\mu -\tfrac{1}{4}F^{\mu\nu}F_{\mu\nu}.
+\end{align}
+
 
 Aplicando las ecuaciones de Euler-Lagrange para $\bar{\psi}$, tenemos
 \begin{align}
@@ -285,6 +63,7 @@ El cálculo directo de la  corriente
   &= \theta(x) Q\overline{\psi}\gamma^\mu \psi\,,
 \end{align}
 y para la ecuación de Dirac, a diferencia de la ecuación de Schrödinger, la corriente de probabilidad tiene la misma forma que la corriente electromagnética.
+
 
 De esta manera podemos reescribir el Lagrangiano en términos de un Lagrangiano libre y otro de interacción
 \begin{align}
