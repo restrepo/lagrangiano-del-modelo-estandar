@@ -15,7 +15,7 @@
 %instiki:***
 %instiki:
 
-\includegraphics[scale=0.7]{fundamental_forces}
+\includegraphics[scale=0.5]{fundamental_forces}
 
 \begin{quote}
   \begin{itemize}
@@ -970,9 +970,9 @@ i{e_R}^{\dagger}\gamma^\mu\mathcal{D}_\mu {e_R}+i{d_R}^{\dagger}\gamma^\mu\mathc
 +i{e_R}^{\dagger}\gamma^\mu{\partial}_\mu {e_R}+i{\nu_L}^{\dagger}\overline{\sigma}^\mu{\partial}_\mu \nu_L\nonumber\\
 &+g_s \left({u_L}^{\dagger}\overline{\sigma}^\mu\frac{\lambda^a}{2}u_L+{u_R}^{\dagger}\overline{\sigma}^{\mu}\frac{\lambda^a}{2}u_R
 +{d_L}^{\dagger}\overline{\sigma}^{\mu}\frac{\lambda^a}{2}d_L+ {d_R}^{\dagger}\sigma^{\mu}\frac{\lambda^a}{2}d_R\right)G_{\mu}^a\nonumber\\
-&+\frac{g}{\sqrt{2}}\left[\overline{\nu_L}\overline{\sigma}^\mu e_LW_\mu^++
+&+\frac{g}{\sqrt{2}}\left[{\nu_L}^{\dagger}\overline{\sigma}^\mu e_LW_\mu^++
 {u_L}^{\dagger}\overline{\sigma}^\mu d_LW_\mu^++\text{h.c}\right]\nonumber\\
-&+\sum_{F=Q,L,e_R^{\dagger},d_R^\dagger,u_R^{\dagger}}\frac{e}{2c_W s_W}\overline{F}\overline{\sigma}^\mu\left[ \tau_3-2s_W^2\widehat{Q}_L\right]F Z_\mu\nonumber\\
+&+\sum_{F=Q,L,e_R,d_R,u_R}\frac{e}{2c_W s_W}F^{\dagger}\overline{\sigma}^\mu\left[ \tau_3-2s_W^2\widehat{Q}_L\right]F Z_\mu\nonumber\\
 &+e\left({e_L}^{\dagger}\overline{\sigma}^\mu \widehat{Q}_e e_L+{e_R}^{\dagger}\sigma^\mu \widehat{Q}_e e_R\right.\nonumber\\
   &\qquad\left.+{u_L}^{\dagger}\overline{\sigma}^\mu \widehat{Q}_u u_L+{u_R}^{\dagger}\overline{\sigma}^\mu \widehat{Q}_u u_R
 +{d_L}^{\dagger}\overline{\sigma}^\mu \widehat{Q}_d d_L+{d_R}^{\dagger}\sigma^\mu \widehat{Q}_d d_R\right) A_\mu\,.
@@ -1008,6 +1008,7 @@ donde
 \end{align}
 
 \end{frame}
+
 
 \subsection{Lagrangiano del modelo estándar para la primera generación}
 
@@ -1050,6 +1051,29 @@ Recopilando los resultados para $\mathcal{L}_{WBH}$ \eqref{eq:lwbhfin}, $\mathca
      
      
 \end{frame}
+
+
+donde
+\begin{align}
+  v_f=&T_3^f-2 \sin^2\theta_WQ_f & a_f=&T_3^f \gamma_5
+\end{align}
+Los valores explícitos para  $v_f$ y $a_f$ en el modelo estándar, están dados en la Tabla~\ref{tab:zcoup}. 
+
+
+
+%noinstiki
+\begin{table}  %noinstiki
+  \centering %noinstiki
+  \begin{tabular}{l|c|c|c|c} %noinstiki
+   &$u$&$d$&$\nu_e$&$e$\\\hline{}
+$2v_f$&$1-\frac{8}{3}\sin^2\theta_W$&$-1+\frac{4}{3}\sin^2\theta_W$&$1$&$-1+4\sin^2\theta_W$\\
+$2a_f$&$1$&$-1$&$1$&$-1$\\
+  \end{tabular} %noinstiki
+  \caption{Acoplamientos de corrientes neutras} %noinstiki
+\label{tab:zcoup}
+\end{table} %noinstiki
+%noinstiki
+
 
 %Dinámica de sabor
 \subsection{Dinámica de sabor}
