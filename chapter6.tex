@@ -394,9 +394,9 @@ Resumiendo
 \mathcal{L}_{\text{fermion}}=&i\widetilde{Q}\cdot \overline{\sigma}^\mu\mathcal{D}_\mu Q+i\widetilde{L}\cdot \overline{\sigma}^\mu\mathcal{D}_\mu L+
 i{e_R}^{\dagger}\sigma^\mu\mathcal{D}_\mu {e_R}+i{d_R}^{\dagger}\sigma^\mu\mathcal{D}_\mu {d_R}+i{u_R}^{\dagger}\sigma^\mu\mathcal{D}_\mu {u_R}\nonumber\\
 \mathcal{L}_{\text{gauge}}=& -\tfrac{1}{4}G^{\mu\nu}_a G_{\mu\nu}^a-\tfrac{1}{4}W^{\mu\nu}_i W_{\mu\nu}^i-\tfrac{1}{4}B^{\mu\nu} B_{\mu\nu}\nonumber\\
-  \mathcal{L}_{WBH}=&\left( \mathcal{D}_\mu\widetilde{\Phi} \right)\cdot\mathcal{D}^\mu\Phi-\mu^2\widetilde{\Phi}\cdot\Phi-\lambda \left( \widetilde{\Phi}\cdot\Phi \right)^2 \nonumber\\
-=&(\mathcal{D}_\mu\Phi)^\dagger\mathcal{D}^\mu\Phi-\mu^2\Phi^\dagger\Phi-\lambda(\Phi^\dagger\Phi)^2\nonumber\\
-=&(\mathcal{D}_\mu\widetilde{\Phi})^\dagger\mathcal{D}^\mu\widetilde{\Phi}-\mu^2\widetilde{\Phi}^\dagger\widetilde{\Phi}-\lambda(\widetilde{\Phi}^\dagger\widetilde{\Phi})^2\nonumber\\
+  \mathcal{L}_{WBH}=&\widetilde{\left( \mathcal{D}_\mu{\Phi} \right)}\cdot\mathcal{D}^\mu\Phi-\mu^2\widetilde{\Phi}\cdot\Phi-\lambda \left( \widetilde{\Phi}\cdot\Phi \right)^2 \nonumber\\
+%=&(\mathcal{D}_\mu\Phi)^\dagger\mathcal{D}^\mu\Phi-\mu^2\Phi^\dagger\Phi-\lambda(\Phi^\dagger\Phi)^2\nonumber\\
+%=&(\mathcal{D}_\mu\widetilde{\Phi})^\dagger\mathcal{D}^\mu\widetilde{\Phi}-\mu^2\widetilde{\Phi}^\dagger\widetilde{\Phi}-\lambda(\widetilde{\Phi}^\dagger\widetilde{\Phi})^2\nonumber\\
 \mathcal{L}_{\text{Yukawa}}=&- \left[  h_e \left( e_R \right)^{\dagger}\,\epsilon^{ab}L_a\Phi_b +
       h_d \left( d_R \right)^{\dagger}\,\epsilon^{ab}Q_a\Phi_b +
       h_u \left( u_R \right)^{\dagger}\,\epsilon_{ab}Q_a\widetilde{\Phi}_{b}+\text{h.c}\right]
@@ -426,9 +426,9 @@ Sin perdida de generalidad los cuatro grados de libertad de $\Phi$, pueden escri
 \end{align}
 El potencial escalar, definido por
 \begin{align}
-  V(\Phi)=-\mu^2\widetilde{\Phi}^\dagger\widetilde{\Phi}-\lambda(\widetilde{\Phi}^\dagger\widetilde{\Phi})^2
+  V(\Phi)=\mu^2\widetilde{\Phi}\cdot\Phi+\lambda \left( \widetilde{\Phi}\cdot\Phi \right)^2 
 \end{align}
-se reduce a
+con $\mu^2<0$ y $\lambda>0$, se reduce a
 \begin{align}
   V(H)=\frac{1}{2}\mu^2(H+v)^2+\frac{1}{4}\lambda (H+v)^4\,.
 \end{align}
@@ -484,10 +484,10 @@ que define el \emph{gauge unitario}. En adelante sin embargo omitiremos las prim
 
 Comenzaremos analizando la parte escalar del Lagrangiano del Modelo dada en la ec.~\eqref{eq:smscalar}
 \begin{equation}
-  \mathcal{L}_{WBH}=\frac{1}{2}\left[\mathcal{D}^\mu \begin{pmatrix}
+  \mathcal{L}_{WBH}=\frac{1}{2}\widetilde{\left[\mathcal{D}^\mu \begin{pmatrix}
     0\\
     H(x)+v
-  \end{pmatrix}\right]^\dagger\mathcal{D}_\mu\begin{pmatrix}
+  \end{pmatrix}\right]}\cdot \mathcal{D}_\mu\begin{pmatrix}
     0\\
     H(x)+v
   \end{pmatrix}-V(H)\,,
@@ -536,7 +536,10 @@ $\mathcal{D}_\mu$ corresponde a la matrix $2\times  2$
 
 Entonces
 \begin{align}
-\mathcal{D}_\mu\widetilde{\Phi}=\begin{pmatrix}
+\mathcal{D}_\mu \begin{pmatrix}
+    0\\
+    H(x)+v
+  \end{pmatrix}=\begin{pmatrix}
     -\frac{i}{\sqrt{2}}gW_\mu^+(H+v)\\
     \partial_\mu H-i\left(-\frac{1}{2}gW^3_\mu+g'Y_{\widetilde{\Phi}} B_\mu\right)(H+v)
   \end{pmatrix}.
@@ -545,19 +548,19 @@ Entonces
 De modo que
 
 \begin{align}
-  \mathcal{L}_{WBH}=&\frac{1}{2}\left[\begin{pmatrix}
+  \mathcal{L}_{WBH}=&\frac{1}{2}\widetilde{\begin{pmatrix}
     -\frac{i}{\sqrt{2}}g{W^\mu}^+(H+v)\\
     \partial^\mu H-i\left(-\frac{1}{2}gW_3^\mu+g'Y_{\widetilde{\Phi}} B^\mu\right)(H+v)
-  \end{pmatrix}\right]^\dagger\cdot\nonumber\\
-   &\begin{pmatrix}
+  \end{pmatrix}}\cdot
+   \begin{pmatrix}
     -\frac{i}{\sqrt{2}}gW_\mu^+(H+v)\\
     \partial_\mu H-i\left(-\frac{1}{2}gW^3_\mu+g'Y_{\widetilde{\Phi}} B_\mu\right)(H+v)
   \end{pmatrix}-V(H)\nonumber\\
 =&\frac{1}{2}\begin{pmatrix}
-    \frac{i}{\sqrt{2}}g{W^\mu}^-(H+v)&
-    \partial^\mu H+i\left(-\frac{1}{2}gW_3^\mu+g'Y_{\widetilde{\Phi}} B^\mu\right)(H+v)
-  \end{pmatrix}\cdot\nonumber\\
-  &\begin{pmatrix}
+    \partial^\mu H+i\left(-\frac{1}{2}gW_3^\mu+g'Y_{\widetilde{\Phi}} B^\mu\right)(H+v)\\
+    -\frac{i}{\sqrt{2}}g{W^\mu}^+(H+v)\\
+  \end{pmatrix}\cdot
+  \begin{pmatrix}
     -\frac{i}{\sqrt{2}}gW_\mu^+(H+v)\\
     \partial_\mu H-i\left(-\frac{1}{2}gW^3_\mu+g'Y_{\widetilde{\Phi}} B_\mu\right)(H+v)
   \end{pmatrix}-V(H)\nonumber\\
@@ -710,7 +713,7 @@ Retornando a la ec.~(\ref{eq:96qft}), tenemos
 tenemos
 \begin{align}
   \label{eq:lwbhfin}
-  \mathcal{L}_{W B H}=&\left(\mathcal{D}^\mu\widetilde{\Phi}\right)^\dagger\mathcal{D}_\mu\widetilde{\Phi}-\mu^2\widetilde{\Phi}^\dagger \widetilde{\Phi}-\lambda\left(\widetilde{\Phi}^\dagger\widetilde{\Phi}\right)^2\nonumber\\
+  \mathcal{L}_{W B H}=&\widetilde{\left( \mathcal{D}_\mu{\Phi} \right)}\cdot\mathcal{D}^\mu\Phi-\mu^2\widetilde{\Phi}\cdot\Phi-\lambda \left( \widetilde{\Phi}\cdot\Phi \right)^2 \nonumber\\
   =&\frac{1}{2}\partial^\mu H\partial_\mu H-V(H)\nonumber\\
 &+\frac{1}{4}g^2{W^\mu}^-W_\mu^+H^2+\frac{1}{2}vg^2{W^\mu}^-W_\mu^+H\nonumber\\
   &+\frac{1}{2}\left(\frac{g}{2\cos\theta_W}\right)^2Z^\mu Z_\mu H^2+\left(\frac{g}{2\cos\theta_W}\right)^2v\,Z^\mu Z_\mu H\nonumber\\
@@ -764,10 +767,10 @@ tal que
 %instiki:
 
 \end{frame}
-\subsection{Yukawa Lagrangian}
+\subsection{Lagrangiano  de Yukawa }
 
 \begin{frame}[fragile,allowframebreaks]
-In the Unitary gauge
+En el gauge unitario
 \begin{align}
   \mathcal{L}_{\text{Yukawa}}=&h_e \widetilde{L}\cdot\Phi e_R+h_d \widetilde{Q}\cdot \Phi d_R+h_u Q^{\dagger}\cdot\widetilde{\Phi}u_R+\text{h.c}\nonumber\\
 =&\frac{1}{\sqrt{2}}\left[h_e((e_L)^{\dagger}e_R+(e_R)^{\dagger}e_L)+
@@ -815,7 +818,7 @@ emergente, necesariamente se predice la existencia de interacciones
 entre fermiones y el Higgs!
 
 \end{frame}
-\subsection{Fermion-gauge interactions}
+\subsection{interacciones Fermión-gauge }
 
 \begin{frame}[fragile,allowframebreaks]
 De la ec.~\eqref{eq:smscalar} tenemos
@@ -952,29 +955,29 @@ De esta forma
 Generalizando para los otros campos, tenemos
 \begin{align}
   \label{eq:azl}
-      \mathcal{L}_{A Z L}\to\sum_{F=Q,L,e_R^{\dagger},d_R^{\dagger},u_R^{\dagger}}\frac{e}{2c_W s_W}\widetilde{F}\cdot\overline{\sigma}^\mu\left[ \tau_3-2s_W^2\widehat{Q}_L\right]F Z_\mu
+      \mathcal{L}_{A Z L}\to\sum_{F=Q,L,e_R,d_R,u_R}\frac{e}{2c_W s_W}\widetilde{F}\cdot\overline{\sigma}^{\mu}\left[ \tau_3-2s_W^2\widehat{Q}_L\right]F Z_\mu
        +e\widetilde{F}\cdot\overline{\sigma}^\mu \widehat{Q}_L F A_\mu\,.
 \end{align}
 con
 \begin{align}
-  \widetilde{F}\cdot \to F^{\dagger} \qquad \text{for}\quad F=(e_R)^{\dagger},(d_R)^{\dagger},(u_R)^{\dagger}\,.
+  \widetilde{F}\cdot\overline{\sigma}^{\mu} \to F^{\dagger}\sigma^{\mu} \qquad \text{for}\quad F=e_R,d_R,u_R\,.
 \end{align}
 
 Usando los acoplamientos gauge de los quarks con los gluones \eqref{eq:qcdgauge}, de los fermiones con el $W_\mu^\pm$  \eqref{eq:wl} y  con $Z_\mu$ y $A_\mu$ \eqref{eq:azl} para expandir $\mathcal{L}_{\text{fermion}}$ en \eqref{eq:lfermion}, tenemos
 \begin{align}
 \label{eq:sm1g2}
- \mathcal{L}_{\text{fermion}}=&i Q^{\dagger}\overline{\sigma}^\mu\mathcal{D}_\mu Q+i \widetilde{L}\cdot\overline{\sigma}^\mu\mathcal{D}_\mu L+
-i{e_R}^{\dagger}\gamma^\mu\mathcal{D}_\mu {e_R}+i{d_R}^{\dagger}\gamma^\mu\mathcal{D}_\mu {d_R}+i{u_R}^{\dagger}\gamma^\mu\mathcal{D}_\mu {u_R}\nonumber\\
-  =&i{u_L}^{\dagger}\overline{\sigma}^\mu\partial_\mu u_L+i{u_R}^{\dagger}\gamma^\mu{\partial}_\mu {u_R}+i{d_L}^{\dagger}\overline{\sigma}^\mu\partial_\mu d_L+i{d_R}^{\dagger}\gamma^\mu{\partial}_\mu {d_R}\nonumber\\
+ \mathcal{L}_{\text{fermion}}=&i \widetilde{Q}\cdot \overline{\sigma}^\mu\mathcal{D}_\mu Q+i \widetilde{L}\cdot\overline{\sigma}^\mu\mathcal{D}_\mu L+
+i{e_R}^{\dagger}\sigma^\mu\mathcal{D}_\mu {e_R}+i{d_R}^{\dagger}\sigma^\mu\mathcal{D}_\mu {d_R}+i{u_R}^{\dagger}\sigma^\mu\mathcal{D}_\mu {u_R}\nonumber\\
+  =&i{u_L}^{\dagger}\overline{\sigma}^\mu\partial_\mu u_L+i{u_R}^{\dagger}\sigma^\mu{\partial}_\mu {u_R}+i{d_L}^{\dagger}\overline{\sigma}^\mu\partial_\mu d_L+i{d_R}^{\dagger}\sigma^\mu{\partial}_\mu {d_R}\nonumber\\
 &+i{e_L}^{\dagger}\overline{\sigma}^\mu{\partial}_\mu e_L
-+i{e_R}^{\dagger}\gamma^\mu{\partial}_\mu {e_R}+i{\nu_L}^{\dagger}\overline{\sigma}^\mu{\partial}_\mu \nu_L\nonumber\\
-&+g_s \left({u_L}^{\dagger}\overline{\sigma}^\mu\frac{\lambda^a}{2}u_L+{u_R}^{\dagger}\overline{\sigma}^{\mu}\frac{\lambda^a}{2}u_R
++i{e_R}^{\dagger}\sigma^\mu{\partial}_\mu {e_R}+i{\nu_L}^{\dagger}\overline{\sigma}^\mu{\partial}_\mu \nu_L\nonumber\\
+&+g_s \left({u_L}^{\dagger}\overline{\sigma}^\mu\frac{\lambda^a}{2}u_L+{u_R}^{\dagger}{\sigma}^{\mu}\frac{\lambda^a}{2}u_R
 +{d_L}^{\dagger}\overline{\sigma}^{\mu}\frac{\lambda^a}{2}d_L+ {d_R}^{\dagger}\sigma^{\mu}\frac{\lambda^a}{2}d_R\right)G_{\mu}^a\nonumber\\
 &+\frac{g}{\sqrt{2}}\left[{\nu_L}^{\dagger}\overline{\sigma}^\mu e_LW_\mu^++
 {u_L}^{\dagger}\overline{\sigma}^\mu d_LW_\mu^++\text{h.c}\right]\nonumber\\
-&+\sum_{F=Q,L,e_R,d_R,u_R}\frac{e}{2c_W s_W}F^{\dagger}\overline{\sigma}^\mu\left[ \tau_3-2s_W^2\widehat{Q}_L\right]F Z_\mu\nonumber\\
+&+\sum_{F=Q,L,e_R,d_R,u_R}\frac{e}{2c_W s_W}\widetilde{F}\cdot\overline{\sigma}^\mu\left[ \tau_3-2s_W^2\widehat{Q}_L\right]F Z_\mu\nonumber\\
 &+e\left({e_L}^{\dagger}\overline{\sigma}^\mu \widehat{Q}_e e_L+{e_R}^{\dagger}\sigma^\mu \widehat{Q}_e e_R\right.\nonumber\\
-  &\qquad\left.+{u_L}^{\dagger}\overline{\sigma}^\mu \widehat{Q}_u u_L+{u_R}^{\dagger}\overline{\sigma}^\mu \widehat{Q}_u u_R
+  &\qquad\left.+{u_L}^{\dagger}\overline{\sigma}^\mu \widehat{Q}_u u_L+{u_R}^{\dagger}{\sigma}^\mu \widehat{Q}_u u_R
 +{d_L}^{\dagger}\overline{\sigma}^\mu \widehat{Q}_d d_L+{d_R}^{\dagger}\sigma^\mu \widehat{Q}_d d_R\right) A_\mu\,.
 \end{align}
 \end{frame}
