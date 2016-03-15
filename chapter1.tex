@@ -1174,6 +1174,54 @@ Por definición, el campo escalar no cambia bajo la transformación de Lorentz, 
    \phi'(x')=\phi(x)\,,
 \end{align}
 como se ilustra en la Fig.~\ref{fig:trasla}.
+
+
+
+Una transformación de Lorentz infinitesimal,
+puede parametrizarse sin perdida de generalidad como
+\begin{align}
+  x^\mu\to{x'}^\mu=&x^\mu+\delta x^{\mu}\nonumber\\
+\end{align}
+
+Para visualizar más fácilmente la situación para un campo escalar, supongamos de momento que $\delta x^{\mu}$ corresponde  traslaci\'on espacio--temporal.
+
+Tenemos
+\begin{align}
+  \phi'(x')&=\phi'(x+\delta x)\\
+  &\approx\phi'(x)+\frac{\partial\phi'(x)}{\partial x^\mu}\delta x^\mu\\
+  &=[\phi(x)+\delta\phi(x)]+\frac{\partial}{\partial x^\mu}[\phi(x)+\delta\phi(x)]\delta x^\mu\\
+  &\approx\phi(x)+\delta\phi(x)+\frac{\partial\phi(x)}{\partial x^\mu}\delta x^\mu,
+\end{align}
+donde, por simplicidad, $\phi$ es de nuevo un campo real. Entonces,
+\begin{equation}
+  \label{eq:Deltaf}
+  \Delta\phi(x)\equiv\phi'(x')-\phi(x)=\delta\phi(x)+\frac{\partial\phi(x)}{\partial x^\mu}\delta x^\mu.
+\end{equation}
+Para una traslaci\'on, $\Delta\phi(x)=0$, ver figura 
+\ref{fig:trasla}. %noinstiki([trasla](#fig:trasla)).
+De modo que
+\begin{equation}
+  \label{eq:dmuxmu}
+  \delta\phi=-(\partial_\mu\phi)\delta x^\mu,
+\end{equation}
+y la transformaci\'on del campo $\phi$ como consecuencia de la traslaci\'on es
+\begin{align}
+  \phi(x)\to\phi'(x)=\phi(x)-\delta\phi(x)=\phi(x)+(\partial_\mu\phi(x))\delta x^\mu\,.
+\end{align}
+%noinstiki
+
+\begin{figure} %noinstiki
+  \centering %noinstiki
+  \includegraphics{trasla} %noinstiki
+  \caption{Traslaci\'on de funci\'on y coordenadas en una dimensi\'on: $\phi(x)=\phi'(x')$ } %noinstiki
+  \label{fig:trasla} %noinstiki
+\end{figure} %noinstiki<div id="fig:trasla">Figura trasla:Traslaci\'on de funci\'on y coordenadas $\phi(x)=\phi(x')$ </div>
+%noinstiki![trasla](http://gfif.udea.edu.co/figfs/trasla.png)
+%noinstiki
+
+
+
+
 Usando la ec.~\eqref{eq:179qft}, tenemos que
 \begin{align}
     \phi'(x')=\phi(\Lambda^{-1}x')\,.
@@ -1230,6 +1278,18 @@ Para un campo complejo con invarianza de fase, el potencial $V(\phi,\phi^{*})$ e
 \label{eq:cef}
   \mathcal{L}=\partial_{\mu}\phi^{*} \partial^{\mu}\phi-m^2\phi^{*}\phi+\lambda \left(\phi^{*}\phi \right)^2\,.
 \end{align}
+En efecto, la densidad Lagrangiana y por consiguiente la Acción, son invariante bajo la transformación
+\begin{align}
+  \phi\to \phi'=\operatorname{e}^{i\alpha}\phi\,,\qquad \text{$\alpha$ constante}\,.
+\end{align}
+Para $\alpha$ infinitesimal
+\begin{align}
+\label{eq:deltaphi}
+  \delta\phi=\phi'-\phi=i\alpha\phi
+\end{align}
+
+
+
 Note que en unidades naturales
 \begin{align}
   [S]=[\hbar]=1,
@@ -1252,24 +1312,101 @@ Más adelente justificaremos por qué no hay potencias con dimensiones mayor a $
 \begin{align}
   \partial_{\mu}\partial^{\mu}\phi,\qquad \phi^{*}\partial_{\mu}\partial^{\mu}\phi\,.
 \end{align}
-Una densidad Lagrangiana incluyendo estos términos se puede reescribir en términos de la densidad Lagranginan en la ec.~\eqref{eq:cef}, hasta una deriva totoal. Por ejemplo
+Una densidad Lagrangiana incluyendo estos términos se puede reescribir en términos de la densidad Lagranginan en la ec.~\eqref{eq:cef}, hasta una deriva total. Por ejemplo
 \begin{align}
   \mathcal{L}_{\text{new}}=&-\phi^{*}\partial_{\mu}\partial^{\mu}\phi-m^2\phi^{*}\phi+\lambda \left(\phi^{*}\phi \right)^2\,\nonumber\\
 =&\partial_{\mu}\phi^{*}\partial^{\mu}\phi\,-\partial_{\mu}\left(\phi^{*}\partial^{\mu}\phi\right)-m^2\phi^{*}\phi+\lambda \left(\phi^{*}\phi \right)^2\,\nonumber\\
 =&\mathcal{L}-\partial_{\mu}\left(\phi^{*}\partial^{\mu}\phi\right)\,.
 \end{align}
-En general, si comparamos dos acciónes que difieran en la derivada total de algún $X^{\mu}$ (en el caso anterior $X^{\mu}=-\phi^{*}\partial^{\mu}\phi$)
+En general, si comparamos dos acciones que difieran en la derivada total de algún $X^{\mu}$ (en el caso anterior $X^{\mu}=-\phi^{*}\partial^{\mu}\phi$)
 \begin{align}
   S_{\text{new}}=S+\int \partial_{\mu}\left(\phi^{*}\partial^{\mu}\phi\right)d^4x\,.
 \end{align}
-La última integrañ
+Veremos más adelante que la integral de una derivada total, con las condiciones de frontera adecuadas, no contribuye a la Acción.
 
 
 
 
 \section{Principio de M\'\i nima Acci\'on para $\mathcal{L}$}
 \label{sec:principio-de-minima-call}
+
+\subsection{Problema variacional de Noether}
+
+Seguiremos la discusión basada en \cite{Brading:2000hc,Brading:2003nv,Sundermeyer:2014kha}.
+
+Un campo escalar complejo es equivalente a dos campos escalares independientes de la misa masa. Para $N$ campos, la dependencia explicita e implicita de la densidad Lagrangiana da lugar al funcional de Acción
+\begin{equation}
+  S[\phi_i,\partial_\mu\phi_i;x]=\int_{R}d^4x\,\mathcal{L}(\phi_i,\partial_\mu\phi_i;x)
+\end{equation}
+El problema variacional de Noether puede ser establecido en los siguientes términos
+
+¿Cuales son las condiciones generales que se deben satisfacer para que una dada variación en la variables explícitas e implicitas dejen a la Acción invariante, y de aquí $\delta S=0$, donde $\delta S$ puede o no contener un término de frontera?
+
+Usaremos la expansión de Taylor a primer orden.
+Para  $\delta x=x'-x$, la expansi\'on de Taylor para $f(x+\delta x)$ es
+\begin{equation}
+  f(x+\delta x)=f(x)+\frac{\partial f}{\partial x}\delta x+\cdots 
+\end{equation}
+
+
+Definiendo el cambio interno en el campo como en \eqref{eq:deltaphi}
+\begin{align}
+  \delta\phi_i(x)=\phi'(x)-\phi(x)\,,
+\end{align}
+y el cambio en $x$ bajo una transformación de Lorentz infinitesimal como
+
+
+\begin{align}
+   \delta S=&\int_{R}d^4x'\,\mathcal{L} \left( \phi_{i}',\partial_{\mu}\phi'_i;x' \right)- \int_{R}d^4x\,\mathcal{L} \left( \phi_{i}(x),\partial_{\mu}\phi_i(x);x \right) \nonumber\\
+     =&\int_{R}\frac{\partial x'}{\partial x}d^4x\,\mathcal{L} \left( \phi_{i}+\delta\phi_i,\partial_{\mu}(\phi_i+\delta\phi_i);x+\delta x \right)- \int_{R}d^4x\,\mathcal{L} \left( \phi_{i},\partial_{\mu}\phi_i;x \right) \nonumber\\
+     =&\int_{R} \left[ 1+\partial_{\mu} \left( \delta x^{\mu}  \right)\right]  d^4x\,\left\{ \mathcal{L}(\phi_i,\partial_{\mu}\phi_i;x)+\sum_i \left[ \frac{\partial\mathcal{L}}{\partial\phi_i}\delta\phi_{i} +\frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}\partial_{\mu}(\delta\phi_{i}) \right]+\left( \partial_{\mu}\mathcal{L} \right)\delta x^{\mu} \right\}\nonumber\\
+      &- \int_{R}d^4x\,\mathcal{L} \left( \phi_{i},\partial_{\mu}\phi_i;x \right) \nonumber\\
+     =&\int_{R} d^4x\,\left[ \partial_{\mu} \left( \delta x^{\mu}  \right)\right] \mathcal{L} + \int_{R}d^4x\,\left\{\sum_i \left[ \frac{\partial\mathcal{L}}{\partial\phi_i}\delta\phi_{i} +\frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}\partial_{\mu}(\delta\phi_{i}) \right]+\left( \partial_{\mu}\mathcal{L} \right)\delta x^{\mu} \right\}\nonumber\\
+     =&\int_{R} d^4x\,\partial_{\mu} \left(\mathcal{L} \delta x^{\mu}  \right)  + \int_{R}d^4x\,\sum_i \left\{ \frac{\partial\mathcal{L}}{\partial\phi_i}\delta\phi_{i} +\partial_{\mu} \left[ \frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}\delta\phi_{i} \right]-\partial_{\mu} \left[ \frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}\right]\delta\phi_{i}  \right\}\nonumber\\
+\end{align}
+La condición $\delta S=0$ implica que
+\begin{align}
+  \sum_i \mathcal{E}_i \delta\phi_i = \sum_i \partial_{\mu} B^{\mu}_{i}\,,
+\end{align}
+donde
+\begin{align}
+  \mathcal{E}_i=&\partial_{\mu} \left[ \frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}\right]-\frac{\partial\mathcal{L}}{\partial\phi_i} & B^{\mu}_i=\mathcal{L} \delta x^{\mu} + \frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}\delta\phi_{i} 
+\end{align}
+Para $\delta\phi_i$ un cambio interno de la función, entonces $\delta x=0$ y
+\begin{align}
+ J^{\mu}\equiv \sum_{i}B^{\mu}_i=\sum_{i}  \frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}\delta\phi_{i} 
+\end{align}
+tal que se satisface la ecuación de continuidad
+\begin{align}
+  \partial_{\mu}J^{\mu}=0\,.
+\end{align}
+
+Mientras que si $\delta\phi_{i}=-\left( \partial_{\nu}\phi \right)\delta x^{\nu}$,
+\begin{align}
+   \sum_i    B^{\mu}_i= - T^{\mu}_{\nu} \delta x^{\nu}\,,
+\end{align}
+donde
+\begin{align}
+  T^{\mu}_{\nu}=\sum_i \frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}\partial_{\nu}\phi_i-\delta^{\mu}_{\nu}\mathcal{L}
+\end{align}
+tal que se satisface la ecuación de continuidad
+\begin{align}
+  \partial_{\mu} T^{\mu}_{\nu}=0\,.
+\end{align}
+\subsection{Primer teorema de Noether}
+
+\subsection{Simetrías internas}
+
+
+
 \subsection{Ecuaciones de Euler-Lagrange}
+
+Las ecuaciones de Euler-Lagrange surgen del Problema variacional de Noether cuando se impone la parte inversa del primer teorema de Noether, es decir, aparecen cuando se imponen que las cargas se conserven como consecuencia de la condición
+\begin{align}
+   \sum_i \partial_{\mu} B^{\mu}_{i}\,,
+\end{align}
+
+
 
 Definamos
 \begin{equation}
@@ -1429,170 +1566,50 @@ como
 \end{align}
 entonces, podemos escribir el nuevo producto escalar como
 \begin{align}
-  A\cdot B==&\sum_{\mu} A^{\mu}\left( \sum_{\nu} g_{\mu\nu} B^{\nu} \right)\nonumber\\
+  A\cdot B=&\sum_{\mu} A^{\mu}\left( \sum_{\nu} g_{\mu\nu} B^{\nu} \right)\nonumber\\
 \sum_{\mu} A^{\mu}B_{\mu}\,.
 \end{align}
-En el próximo capítulo estudiaremos las propiedades de este nuevo producto escalar.
+El producto de Lorentez definido anteriormente si $v$ es independiente del sistema de referencia inercial.
  
-
-\subsection{Teorema de Noether para simetr\'\i as internas}
-\begin{frame}[fragile,allowframebreaks]
-Para un campo complejo la ec.~(\ref{eq:Scall3d}) se generaliza a
-\begin{equation}
-  S[\phi,\phi^*,\partial_\mu\phi,\partial_\mu\phi^*]=\int_{R}d^4x\,\mathcal{L}(\phi,\phi^*,\partial_\mu\phi,\partial_\mu\phi^*)
-\end{equation}
-Usando el mismo procedimiento, se obtiene
-\begin{align}
-  \label{eq:130}
-   \delta S=&\int_{R}d^4x\,
-  \left\{ 
-    \frac{\partial\mathcal{L}}{\partial\phi}-
-  \left[\partial_\mu\left(
-      \frac{\partial\mathcal{L}}{\partial(\partial_\mu\phi)}
-    \right)\right]
-  \right\}\delta\phi \nonumber\\
-&+\int_{R}d^4x\,
-  \left\{ 
-    \frac{\partial\mathcal{L}}{\partial\phi^*}-
-  \left[\partial_\mu\left(
-      \frac{\partial\mathcal{L}}{\partial(\partial_\mu\phi^*)}
-    \right)\right]
-  \right\}\delta\phi^*\nonumber\\
-&+\int_{R}d^4x\,
-    \partial_\mu\left[
-      \frac{\partial\mathcal{L}}{\partial(\partial_\mu\phi)}\delta\phi+
-      \delta\phi^*\frac{\partial\mathcal{L}}{\partial(\partial_\mu\phi^*)}
-    \right]=0.
-\end{align}
-Usando de nuevo el Teorema de Gauss resultan las ecuaciones de Euler Lagrange para $\phi$ y $\phi^*$
-\begin{equation}
-\label{eq:132}
-  \partial_\mu
-  \left[
-    \frac{\partial\mathcal{L}}{\partial
-      (\partial_\mu\phi)}
-  \right]-\frac{\partial\mathcal{L}}{\partial\phi}=0, \qquad
-  \partial_\mu
-  \left[
-    \frac{\partial\mathcal{L}}{\partial
-      (\partial_\mu\phi^*)}
-  \right]-\frac{\partial\mathcal{L}}{\partial\phi^*}=0.
-\end{equation}
-De otro lado, si asumimos que $\phi$ y $\phi^*$ satisfacen las ecuaciones de Euler--Lagrange, en lugar de asumir que $\delta\phi$ y $\delta\phi^*$ se anulan sobre la hipersuperficie, los dos primeros t\'erminos de la ec.~(\ref{eq:130}) se anulan y tendremos que para que $\delta S=0$:
-\begin{equation}
-  \label{eq:jmu}
-  \int_{R}d^4x\,(\partial_\mu J^\mu)=0,
-\end{equation}
-donde,
-\begin{equation}
-  \label{eq:jmuphi}
- J^\mu= \left[
-      \frac{\partial\mathcal{L}}{\partial(\partial_\mu\phi)}
-    \right]\delta\phi+\delta\phi^*\left[
-      \frac{\partial\mathcal{L}}{\partial(\partial_\mu\phi^*)}
-    \right]
-\end{equation}
-Entonces $J^\mu$ satisface la ecuaci\'on de continuidad:
-\begin{align}
-  \label{eq:conti}
-  \partial_\mu J^\mu&=0\\
-\frac{\partial J^0}{\partial t}+\boldsymbol{\nabla}\cdot\mathbf{J}&=0
-\end{align}
-Integrando con respecto al volumen
-\begin{align}
-  &\int_V\frac{\partial J^0}{\partial t}\,d^3x+\int_V\boldsymbol{\nabla}\cdot\mathbf{J}\,d^3x=0,\nonumber\\
-  &\int_V\frac{\partial J^0}{\partial t}\,d^3x+\int_S\mathbf{J}\cdot d\mathbf{S}=0,
-\end{align}
-Escogiendo una superficie suficientemente grande que abarque toda la fuente de densidad $\rho=J^0$, de la corriente $\mathbf{J}$, el segundo integrando es cero y
-\begin{equation}
-  \frac{d}{dt}\int_V\rho\,d^3x=0.
-\end{equation}
-Este resultado es conocido como Teorema de Noether. \'Este establece que para
-toda transformaci\'on continua del tipo \eqref{eq:deltaphi}, debe
-existir una cantidad conservada, $dQ/dt=0$, que en este caso corresponde a
-\begin{equation}
-  \label{eq:qcons}
-  Q=\int_V \rho\,d^3x.
-\end{equation}
-\end{frame}
 \subsection{Teorema de Noether para simetr\'\i as externas}
 \begin{frame}[fragile,allowframebreaks]
-Para el caso de una simetr\'\i a externas, por ejemplo la correspondiente a una traslaci\'on espacio--temporal
-\begin{align}
-  x^\mu\to{x'}^\mu=&x^\mu+\delta a^\mu\nonumber\\
-  \delta x^\mu=&\delta a^\mu
-\end{align}
-
-tenemos
-\begin{align}
-  \phi'(x')&=\phi'(x+\delta a)\\
-  &\approx\phi'(x)+\frac{\partial\phi'(x)}{\partial x^\mu}\delta a^\mu\\
-  &=[\phi(x)+\delta\phi(x)]+\frac{\partial}{\partial x^\mu}[\phi(x)+\delta\phi(x)]\delta a^\mu\\
-  &\approx\phi(x)+\delta\phi(x)+\frac{\partial\phi(x)}{\partial x^\mu}\delta a^\mu,
-\end{align}
-donde, por simplicidad, $\phi$ es de nuevo un campo real. Entonces,
-\begin{equation}
-  \label{eq:Deltaf}
-  \Delta\phi(x)\equiv\phi'(x')-\phi(x)=\delta\phi(x)+\frac{\partial\phi(x)}{\partial x^\mu}\delta a^\mu.
-\end{equation}
-Para una traslaci\'on, $\Delta\phi(x)=0$, ver figura 
-\ref{fig:trasla}. %noinstiki([trasla](#fig:trasla)).
-De modo que
-\begin{equation}
-  \label{eq:dmuxmu}
-  \delta\phi=-(\partial_\mu\phi)\delta a^\mu,
-\end{equation}
-y la transformaci\'on del campo $\phi$ como consecuencia de la traslaci\'on es
-\begin{align}
-  \phi(x)\to\phi'(x)=\phi(x)-\delta\phi(x)=\phi(x)+(\partial_\mu\phi(x))\delta a^\mu\,.
-\end{align}
-%noinstiki
-
-\begin{figure} %noinstiki
-  \centering %noinstiki
-  \includegraphics{trasla} %noinstiki
-  \caption{Traslaci\'on de funci\'on y coordenadas en una dimensi\'on: $\phi(x)=\phi'(x')$ } %noinstiki
-  \label{fig:trasla} %noinstiki
-\end{figure} %noinstiki<div id="fig:trasla">Figura trasla:Traslaci\'on de funci\'on y coordenadas $\phi(x)=\phi(x')$ </div>
-%noinstiki![trasla](http://gfif.udea.edu.co/figfs/trasla.png)
-%noinstiki
-Si $a^\mu$ es constante (un an\'alisis m\'as general es hecho en \cite{r})
-\begin{equation}
-  d^4x'=d^4x
-\end{equation}
-En este caso, asumiendo que el campo satisface las ecuaciones de
-Euler-Lagrange y usando la ec.~\eqref{eq:dmuxmu} y (\ref{eq:eelcallfmu}) tenemos
-\begin{align}
-  \delta S&=\int_{R}d^4x\,\mathcal{L}(\phi',\partial_\mu\phi',x')-\int_{R}d^4x\,\mathcal{L}(\phi(x),\partial_\mu\phi(x),x)\nonumber\\
-  &=\int_{R}d^4x\,\mathcal{L}(\phi+\delta\phi,\partial_\mu\phi+\partial_\mu(\delta\phi),x+\delta a)-\int_{R}d^4x\,\mathcal{L}\nonumber\\
-  &\approx\int_{R}d^4x\,
-  \left[\mathcal{L}+
-    \frac{\partial\mathcal{L}}{\partial\phi}\delta\phi+\frac{\partial\mathcal{L}}{\partial(\partial_\mu\phi)}\partial_\mu(\delta\phi)+
-    (\partial_\mu\mathcal{L})\delta a^\mu\right]-\int_{R}d^4x\,\mathcal{L}\nonumber\\
-  &=\int_{R}d^4x\,
-  \left[
-    \frac{\partial\mathcal{L}}{\partial\phi}\delta\phi+\frac{\partial\mathcal{L}}{\partial(\partial_\mu\phi)}\partial_\mu(\delta\phi)+
-    (\partial_\mu\mathcal{L})\delta a^\mu\right]\nonumber\\
-  &=\int_{R}d^4x\,
-  \left\{ 
-    \left[\partial_\mu\left(\frac{\partial\mathcal{L}}{\partial(\partial_\mu\phi)}
-    \right)\right]\delta\phi+\frac{\partial\mathcal{L}}{\partial(\partial_\mu\phi)}\partial_\mu(\delta\phi)+
-    (\partial_\mu\mathcal{L})\delta a^\mu\right\}\nonumber\\
-  &=\int_{R}d^4x\left\{ 
-    \partial_\mu\left[\frac{\partial\mathcal{L}}{\partial(\partial_\mu\phi)}\delta\phi\right]
-  +(\partial_\mu\mathcal{L})\delta a^\mu\right\}\nonumber\\
-  &=\int_{R}d^4x\,
-    \partial_\mu\left[
-      -\frac{\partial\mathcal{L}}{\partial(\partial_\mu\phi)}(\partial_\nu\phi)
-      +\delta^\mu_\nu\mathcal{L}
-    \right]\delta a^\nu\nonumber\\
-    \label{eq:2}
-  &=\int_{R}d^4x\,
-  \left(
-    \partial_\mu T^\mu_\nu
-  \right)\delta a^\nu=0.
-\end{align}
-Y por consiguiente
+% Si $a^\mu$ es constante (un an\'alisis m\'as general es hecho en \cite{r})
+% \begin{equation}
+%   d^4x'=d^4x
+% \end{equation}
+% En este caso, asumiendo que el campo satisface las ecuaciones de
+% Euler-Lagrange y usando la ec.~\eqref{eq:dmuxmu} y (\ref{eq:eelcallfmu}) tenemos
+% \begin{align}
+%   \delta S&=\int_{R}d^4x\,\mathcal{L}(\phi',\partial_\mu\phi',x')-\int_{R}d^4x\,\mathcal{L}(\phi(x),\partial_\mu\phi(x),x)\nonumber\\
+%   &=\int_{R}d^4x\,\mathcal{L}(\phi+\delta\phi,\partial_\mu\phi+\partial_\mu(\delta\phi),x+\delta a)-\int_{R}d^4x\,\mathcal{L}\nonumber\\
+%   &\approx\int_{R}d^4x\,
+%   \left[\mathcal{L}+
+%     \frac{\partial\mathcal{L}}{\partial\phi}\delta\phi+\frac{\partial\mathcal{L}}{\partial(\partial_\mu\phi)}\partial_\mu(\delta\phi)+
+%     (\partial_\mu\mathcal{L})\delta a^\mu\right]-\int_{R}d^4x\,\mathcal{L}\nonumber\\
+%   &=\int_{R}d^4x\,
+%   \left[
+%     \frac{\partial\mathcal{L}}{\partial\phi}\delta\phi+\frac{\partial\mathcal{L}}{\partial(\partial_\mu\phi)}\partial_\mu(\delta\phi)+
+%     (\partial_\mu\mathcal{L})\delta a^\mu\right]\nonumber\\
+%   &=\int_{R}d^4x\,
+%   \left\{ 
+%     \left[\partial_\mu\left(\frac{\partial\mathcal{L}}{\partial(\partial_\mu\phi)}
+%     \right)\right]\delta\phi+\frac{\partial\mathcal{L}}{\partial(\partial_\mu\phi)}\partial_\mu(\delta\phi)+
+%     (\partial_\mu\mathcal{L})\delta a^\mu\right\}\nonumber\\
+%   &=\int_{R}d^4x\left\{ 
+%     \partial_\mu\left[\frac{\partial\mathcal{L}}{\partial(\partial_\mu\phi)}\delta\phi\right]
+%   +(\partial_\mu\mathcal{L})\delta a^\mu\right\}\nonumber\\
+%   &=\int_{R}d^4x\,
+%     \partial_\mu\left[
+%       -\frac{\partial\mathcal{L}}{\partial(\partial_\mu\phi)}(\partial_\nu\phi)
+%       +\delta^\mu_\nu\mathcal{L}
+%     \right]\delta a^\nu\nonumber\\
+%     \label{eq:2}
+%   &=\int_{R}d^4x\,
+%   \left(
+%     \partial_\mu T^\mu_\nu
+%   \right)\delta a^\nu=0.
+% \end{align}
+Hemos visto que
 \begin{equation}
   \label{eq:131}
   \partial_\mu T^\mu_\nu=0,
@@ -1644,6 +1661,139 @@ Generalizando a un campo complejo
       -\delta^\mu_\nu\mathcal{L}
 \end{equation}
 \end{frame}
+
+
+% \subsection{Teorema de Noether para simetr\'\i as externas}
+% \begin{frame}[fragile,allowframebreaks]
+% Para el caso de una simetr\'\i a externas, por ejemplo la correspondiente a una traslaci\'on espacio--temporal
+% \begin{align}
+%   x^\mu\to{x'}^\mu=&x^\mu+\delta a^\mu\nonumber\\
+%   \delta x^\mu=&\delta a^\mu
+% \end{align}
+
+% tenemos
+% \begin{align}
+%   \phi'(x')&=\phi'(x+\delta a)\\
+%   &\approx\phi'(x)+\frac{\partial\phi'(x)}{\partial x^\mu}\delta a^\mu\\
+%   &=[\phi(x)+\delta\phi(x)]+\frac{\partial}{\partial x^\mu}[\phi(x)+\delta\phi(x)]\delta a^\mu\\
+%   &\approx\phi(x)+\delta\phi(x)+\frac{\partial\phi(x)}{\partial x^\mu}\delta a^\mu,
+% \end{align}
+% donde, por simplicidad, $\phi$ es de nuevo un campo real. Entonces,
+% \begin{equation}
+%   \label{eq:Deltaf}
+%   \Delta\phi(x)\equiv\phi'(x')-\phi(x)=\delta\phi(x)+\frac{\partial\phi(x)}{\partial x^\mu}\delta a^\mu.
+% \end{equation}
+% Para una traslaci\'on, $\Delta\phi(x)=0$, ver figura 
+% \ref{fig:trasla}. %noinstiki([trasla](#fig:trasla)).
+% De modo que
+% \begin{equation}
+%   \label{eq:dmuxmu}
+%   \delta\phi=-(\partial_\mu\phi)\delta a^\mu,
+% \end{equation}
+% y la transformaci\'on del campo $\phi$ como consecuencia de la traslaci\'on es
+% \begin{align}
+%   \phi(x)\to\phi'(x)=\phi(x)-\delta\phi(x)=\phi(x)+(\partial_\mu\phi(x))\delta a^\mu\,.
+% \end{align}
+% %noinstiki
+
+% \begin{figure} %noinstiki
+%   \centering %noinstiki
+%   \includegraphics{trasla} %noinstiki
+%   \caption{Traslaci\'on de funci\'on y coordenadas en una dimensi\'on: $\phi(x)=\phi'(x')$ } %noinstiki
+%   \label{fig:trasla} %noinstiki
+% \end{figure} %noinstiki<div id="fig:trasla">Figura trasla:Traslaci\'on de funci\'on y coordenadas $\phi(x)=\phi(x')$ </div>
+% %noinstiki![trasla](http://gfif.udea.edu.co/figfs/trasla.png)
+% %noinstiki
+% Si $a^\mu$ es constante (un an\'alisis m\'as general es hecho en \cite{r})
+% \begin{equation}
+%   d^4x'=d^4x
+% \end{equation}
+% En este caso, asumiendo que el campo satisface las ecuaciones de
+% Euler-Lagrange y usando la ec.~\eqref{eq:dmuxmu} y (\ref{eq:eelcallfmu}) tenemos
+% \begin{align}
+%   \delta S&=\int_{R}d^4x\,\mathcal{L}(\phi',\partial_\mu\phi',x')-\int_{R}d^4x\,\mathcal{L}(\phi(x),\partial_\mu\phi(x),x)\nonumber\\
+%   &=\int_{R}d^4x\,\mathcal{L}(\phi+\delta\phi,\partial_\mu\phi+\partial_\mu(\delta\phi),x+\delta a)-\int_{R}d^4x\,\mathcal{L}\nonumber\\
+%   &\approx\int_{R}d^4x\,
+%   \left[\mathcal{L}+
+%     \frac{\partial\mathcal{L}}{\partial\phi}\delta\phi+\frac{\partial\mathcal{L}}{\partial(\partial_\mu\phi)}\partial_\mu(\delta\phi)+
+%     (\partial_\mu\mathcal{L})\delta a^\mu\right]-\int_{R}d^4x\,\mathcal{L}\nonumber\\
+%   &=\int_{R}d^4x\,
+%   \left[
+%     \frac{\partial\mathcal{L}}{\partial\phi}\delta\phi+\frac{\partial\mathcal{L}}{\partial(\partial_\mu\phi)}\partial_\mu(\delta\phi)+
+%     (\partial_\mu\mathcal{L})\delta a^\mu\right]\nonumber\\
+%   &=\int_{R}d^4x\,
+%   \left\{ 
+%     \left[\partial_\mu\left(\frac{\partial\mathcal{L}}{\partial(\partial_\mu\phi)}
+%     \right)\right]\delta\phi+\frac{\partial\mathcal{L}}{\partial(\partial_\mu\phi)}\partial_\mu(\delta\phi)+
+%     (\partial_\mu\mathcal{L})\delta a^\mu\right\}\nonumber\\
+%   &=\int_{R}d^4x\left\{ 
+%     \partial_\mu\left[\frac{\partial\mathcal{L}}{\partial(\partial_\mu\phi)}\delta\phi\right]
+%   +(\partial_\mu\mathcal{L})\delta a^\mu\right\}\nonumber\\
+%   &=\int_{R}d^4x\,
+%     \partial_\mu\left[
+%       -\frac{\partial\mathcal{L}}{\partial(\partial_\mu\phi)}(\partial_\nu\phi)
+%       +\delta^\mu_\nu\mathcal{L}
+%     \right]\delta a^\nu\nonumber\\
+%     \label{eq:2}
+%   &=\int_{R}d^4x\,
+%   \left(
+%     \partial_\mu T^\mu_\nu
+%   \right)\delta a^\nu=0.
+% \end{align}
+% Y por consiguiente
+% \begin{equation}
+%   \label{eq:131}
+%   \partial_\mu T^\mu_\nu=0,
+% \end{equation}
+% donde
+% \begin{equation}
+%   \label{eq:tmunu}
+%     T^\mu_\nu=\frac{\partial\mathcal{L}}{\partial(\partial_\mu\phi)}(\partial_\nu\phi)
+%       -\delta^\mu_\nu\mathcal{L}
+% \end{equation}
+% El tensor $T^\mu_\nu$ proviene de asumir la homogeneidad del espacio y el tiempo y es llamado el tensor de momentum--energ\'\i a. 
+% La densidad Hamiltonina se obtiene de $T^0_0$
+% \begin{align}
+%   \label{eq:3}
+% \mathcal{H}&=T^0_0=\frac{\partial\mathcal{L}}{\partial\dot{\phi}}\dot{\phi}
+%       -\mathcal{L}\\
+%       &=\pi(x)\frac{\partial\phi(x)}{\partial t}-\mathcal{L}.
+% \end{align}
+% Comparando con la expresi\'on correspondiente en la formulaci\'on
+% Lagrangiana de la Mec\'anica Cl\'asica, tenemos que si $\phi(x)$ es la
+% variable can\'onica, la variable can\'onica conjugada es $\pi(x)$
+% \begin{equation}
+%   \label{eq:4}
+%   \pi(x)=\frac{\partial\mathcal{L}}{\partial(\partial\phi(x)/\partial t)}.
+% \end{equation}
+% El teorema de Noether en este caso establece que la invarianza de la Acci\'on bajo traslaciones temporales da lugar a la ecuaci\'on de continuidad (\ref{eq:131}) para $\nu=0$
+% \begin{align}
+% \label{eq:122}
+%   \partial_\mu T^\mu_0=0
+% \end{align}
+% cuya carga conservada corresponde a la energ\'\i a
+% \begin{align}
+%   H=\int_V d^3x\, T^0_0=\int_V d^3x\,\mathcal{H}.
+% \end{align}
+% De igual forma la invarianza bajo traslaciones espaciales de lugar a ecuaciones de continuidad para cada componente $\nu=i$
+%  ($i=1,2,3$)
+%  \begin{align}
+%    \label{eq:235}
+%    \partial_\mu T^\mu_i=0,
+%  \end{align}
+% cuyas densidad de cargas conservadas, $T^0_i$, que en forma vectorial escribiremos como $\mathbf{T}^0$, dan lugar a la conservaci\'on del momentum
+% \begin{align}
+%   \mathbf{P}=\int_V d^3x\,\mathbf{T}^0\,.
+% \end{align}
+% Generalizando a un campo complejo
+% \begin{equation}
+%   \label{eq:138}
+%      T^\mu_\nu=\frac{\partial\mathcal{L}}{\partial(\partial_\mu\phi)}(\partial_\nu\phi)+(\partial_\nu\phi^*)\frac{\partial\mathcal{L}}{\partial(\partial_\mu\phi^*)}
+%       -\delta^\mu_\nu\mathcal{L}
+% \end{equation}
+% \end{frame}
+
+
 \section{Aplicaci\'on a Mec\'anica Cu\'antica}
 \label{sec:aplic-mecan-cuant}
 
@@ -1863,6 +2013,49 @@ De esta manera, asumiendo una normalización adecuada,
 \begin{align}
   \left( \widehat{p}^{\mu} \right)=&\int d^{3}x\,. \psi^{*}\widehat{p}^{\mu}\psi=p^{\mu}\,.
 \end{align}
+
+\section{Segundo teorema de Noether}
+
+Sólo para simetría internas. La invarianza de la Acción de Scrhödinger bajo una transformación de fase global, da lugar a una conservación global de la probabilidad: la probabilidad se conserva en todos los puntos del espacio simultáneamente. Esto no es incompatible con relatividad especial por que no involucra intercambio de información, pero si permite, en particular, que por ejemplo la teletransportación cuántica sea instantánea.
+
+Si imponemos que el cambio de fase sea local, es decir, dependiente de cada punto de cada punto del espacio tiempo, tendremos que para un campo $\phi_{i}=\phi,\phi^{*}$,
+\begin{align}
+  \phi_i\to \phi'_i=\operatorname{e}^{i \alpha(x)}\phi_i\approx (1+i\alpha(x))\phi_i \,,
+\end{align}
+de modo que infinitesimalmente
+\begin{align}
+  \delta\phi_i=i \alpha(x) \phi_i\,.
+\end{align}
+
+En el caso en el que el parámetro de la transformación, $\alpha(x)$ sea constante, recuperamos el caso de la invarianza global, que en mecánica cuántica da lugar a la conservación global de la probabilidad. Note que la carga conservada con una transofrmación local de fase aún no se ha analizado.
+
+Una transformación local interesante es la que ocurre en el caso electromagnético. La siguientes transformaciones locales del potencial eléctrico y el vector de potencial electromagnético, dejan invariante las ecuaciones de Maxwell\footnote{La demostración se hará en el siguiente capítulo.}
+\begin{align}
+  \phi \to \phi'=\phi+\frac{\partial}{\partial t}\eta(x)\,,\nonumber\\
+  \mathbf{A} \to \mathbf{A}'=\mathbf{A}- \boldsymbol{\nabla}\eta(x)\,,
+\end{align}
+o, si definimos el cuadrivector de potencial electromagnético
+\begin{align}
+  A^{\mu}=(A^0,\mathbf{A})=(\phi,\mathbf{A}),
+\end{align}
+entonces
+\begin{align}
+  \delta A^{\mu}=\partial_\mu \eta(x)\,.
+\end{align}
+
+
+Ambos caso se pueden escribir en términos de una transformación en términos del parámetro infinitesimal local $\theta(x)$ como
+\begin{align}
+  \delta\phi_i= a_{i}\left( \phi_{i},\partial_{\mu}\phi_{i} \right) \theta(x)+b^{\nu}_i \left( \phi_{i},\partial_{\mu}\phi_{i} \right) \partial_{\nu}\theta(x),\qquad \text{para $\phi_{i}=\phi,\phi^{*},A^{\mu}$}\,.
+\end{align}
+
+\textbf{Ejercicio:} Encontrar los $a_i$, $b_i$ y  $\theta(x)$ para cada $\phi_i$.
+
+\textbf{Teorema 2} Si la acción $S$ es invariante bajo un Grupo gauge continuo, entonces existen $\rho$ relaciones
+\begin{align}
+  \sum_{i}\mathcal{E}_{i} a_{\alpha i}=\sum_{i} \partial_{\mu} \left( \mathcal{E}_{i} b^{\mu}_{\alpha i} \right)
+\end{align}
+
 
 \section{Invarianza de fase local del Lagrangiano de  Scrödinger's}
 
