@@ -1616,9 +1616,9 @@ Cuando las condiciones de Euler-Lagrange se satisfacen para cada campo $\phi_i$,
 \label{eq:alltn}
   \partial_{\mu}J^{\mu}=0\,.
 \end{align}
-Este resultada es a veces llamado Teoreama de Noether. Sin embargo, en la forma \eqref{eq:alltn} puede dar lugar a confusión cuando se interpretar para transformaciones que dependan del punto del espacio-tiempo. La virtud del trabajo de Noether~\cite{Noether} fue separar los resultados en los casos de grupos de simetrías globales en los cuales el parámetro de transformación no depende del punto del espacio tiempo (como es el caso de las transformaciones a velocidad constante la relatividad especial: $v=\text{cte}$) del caso en los grupos de simetría dependan del punto del espacio-tiempo (como los sistemas acelerados de la relatividad general donde la velocidad depende el punto del espacio-tiempo: $v(x)$).
+Este resultada es a veces llamado Teoreama de Noether. Sin embargo, en la forma \eqref{eq:alltn} puede dar lugar a confusión cuando se interpretar para transformaciones que dependan del punto del espacio-tiempo. La virtud del trabajo de Noether~\cite{Noether} fue separar los resultados en los casos de grupos de simetrías globales en los cuales el parámetro de transformación no depende del punto del espacio tiempo (como es el caso de las transformaciones a velocidad constante la relatividad especial: $v=\text{cte}$) del caso en que los grupos de simetría dependan del punto del espacio-tiempo (como los sistemas acelerados de la relatividad general donde la velocidad depende el punto del espacio-tiempo: $v(x)$).
 
-En el caso de teorías de campos estamos más interesados en simetría de espacios internos como puede ser el cambio de fase de la función de onda en la ecuación de Schrödinger. Un cambio de fase, $\theta$, es un caso particular del parámetro de la transformación. En general el parámetro de una transformación interna puede ser constante, $\theta=\text{cte}$, que corresponde a una transformación \emph{global}, o depender del punto del espacio tiempo, $\theta(x)$, que corresponde a una transformación \emph{local}.
+En el caso de teorías de campos estamos más interesados en simetría de espacios internos como puede ser el cambio de fase de la función de onda en la ecuación de Schrödinger. Un cambio de fase, $\theta$, es un caso particular del parámetro de la transformación. En general el parámetro de una transformación interna puede ser constante, $\theta=\text{cte}$, que corresponde a una transformación de fase  \emph{global}, o depender del punto del espacio tiempo, $\theta(x)$, que corresponde a una transformación  de fase \emph{local}.
 
  Nos enfocaremos en la formulación de los dos teoremas de Noether para el caso de simetrías internas globales y locales.   
 
@@ -2141,13 +2141,27 @@ En el caso del campo complejo, $a_1=-a_2$ y $b_1=b_2=0$. Entonces
 \end{align}
 \begin{align}
 \sum_i \left\{ \partial_{\mu} \left[ \frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}\right]a_i-\frac{\partial\mathcal{L}}{\partial\phi_i}a_i \right\}=&0 \nonumber\\
-\sum_i \left\{ \partial_{\mu} \left[ \frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}a_i\right]-\frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}\partial_{\mu}a_i-\frac{\partial\mathcal{L}}{\partial\phi_i}a_i \right\}=&0 \nonumber\\
-\sum_i \partial_{\mu} \left[ \frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}a_i\right]=&0
+\sum_i \left\{ \partial_{\mu} \left[ \frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}a_i\right]-\frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}\partial_{\mu}a_i-\frac{\partial\mathcal{L}}{\partial\phi_i}a_i \right\}=&0 \,.
 \end{align}
-Este resultado particular se manitiene en gener, ver Teorema 3 de \cite{}.
+
+
+Teniendo en cuenta que como veremos más adelante, para un campo complejo
+\begin{align}
+\sum_i \left[\frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}\partial_{\mu}a_i-\frac{\partial\mathcal{L}}{\partial\phi_i}a_i \right]=0
+\end{align}
+Entonces, 
+\begin{align}
+\sum_i \partial_{\mu} \left[ \frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}a_i\right]=&0\,.
+\end{align}
+Este resultado particular para campos comlejos se manitiene en general para el conjunto de campos que dependan sólo del parámetro y no de la derivada del parámetro, es decir, el conjunto de campos con $b_i^\mu=0$: ver Teorema 3 de \cite{}. En tal caso, las $\rho$ corrientes conservadas son
+\begin{align}
+\label{eq:tnoeth2}
+j^\mu_\alpha=\frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}a_{\rho i}\,.
+\end{align}
 \section{Invarianza de fase local del Lagrangiano de  Scrödinger's}
 
 %Trasladar el material de sección 3.4 aquí. 
+
 
 When we discuss the wave function $\psi(x)$, $x$ represents the point in space at which we want to know the value of the wave function. Since complex numbers are, well, complex, you can't represent them by a position on a simple number line. Instead, the have to be represented by a point in a two--dimensional plot. 
 
@@ -2311,6 +2325,41 @@ This is just the gauge transformation which left the Electromagnetic fields inva
 
 To preserve invariance one notices that it is necessary to counteract the variation of $\theta$ with $x$, $y$, $z$, and $t$ by introducing the electromagnetic field $A_\mu$. In this way, the electromagnetic interaction is obtained as the result of impose local gauge invariance under $U(1)$ (local phase transformations). To fully implement the gauge principle, i.e, the paradigm to obtain the interactions as the result of the gauge invariance, we need to introduce some concepts of special relativity to be developed below.
 
+Mostraremos que en efecto, para esta densidad Lagrangiana particular los términos 
+\begin{align*}
+\sum_i \frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}\partial_{\mu}a_i+
+\sum_i  \frac{\partial\mathcal{L}}{\partial\phi_i}a_i =&0
+\end{align*}
+En efecto, usando $a_1=i \psi$ y $a_2=-i \psi^*$, tenemos
+\begin{align}
+\sum_i \frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}\partial_{\mu}a_i=&
+i   \frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\psi)} \partial_{\mu}\psi
+-i  \partial_{\mu}\psi^*   \frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\psi^*)}\nonumber\\
+=&\sum_j \frac{i}{2m} \left(\partial_j\psi^*-iq A_j\psi^* \right) \partial_{\mu}\psi
+-\sum_j\frac{i}{2m}\partial_i\psi^* \left(\partial_j\psi+iq A_j\psi \right)\nonumber\\
+&+i   \left(-\frac{i}{2}\psi^*\right)      \partial_0\psi 
+-i  \partial_0\psi^*     \left(\frac{i}{2}\psi\right) \nonumber\\
+=&\sum_j\frac{q}{2m} \left[\left(\partial_j\psi^* \right)\psi+\psi^*\partial_j\psi\right] A_j
++\frac{1}{2}\left[  \left(\partial_0\psi^*\right)\psi+\psi^*\partial_0\psi\right]
+\end{align}
+y
+\begin{align}
+\sum_i  \frac{\partial\mathcal{L}}{\partial\phi_i}a_i =&
+i \frac{\partial\mathcal{L}}{\partial\psi} \psi
+-i \psi^*\frac{\partial\mathcal{L}}{\partial\psi^*}\nonumber\\
+=&\sum_j\frac{i}{2m} \left(\partial_j\psi^*-iq A_j\psi^* \right)\left(iqA_j\right)\psi
+-\sum_j\frac{i}{2m}\psi^* \left(-iqA_j\right) \left(\partial_j\psi+iq A_j\psi \right)\nonumber\\
+&+i  \frac{i}{2}              \left(\partial_0\psi^*-    iqA_0\psi^*\right)        \psi
+-i\left(\frac{-i}{2}\right)\psi^*\left(\partial_0\psi+iqA_0\right) \nonumber\\
+=&-\sum_j\frac{q}{2m} \left[\left(\partial_j\psi^* \right)\psi+\psi^*\partial_j\psi\right] A_j
+-\frac{1}{2}\left[  \left(\partial_0\psi^*\right)\psi+\psi^*\partial_0\psi\right]
+\end{align}
+Por lo tanto, la corriente conservada corresponde para los campos $\psi$
+y $\psi^*$  es, de la ec.~\eqref{eq:tnoeth2}
+\begin{align}
+j^\mu=&\frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}a_i\nonumber\\
+=&...
+\end{align}
 
 
 \section{Ecuación de Scrödinger en presencia de un campo electromagnético}
@@ -2619,7 +2668,7 @@ donde
 \begin{align}
   j^{\upsilon}=-iq \left[  \phi^{*}\mathcal{D}^{\mu}\phi -  \left(  \mathcal{D}^{\mu}\phi \right) \phi^{*}\right]\,,
 \end{align}
-que corresponde a la carga eléctrica
+que corresponde a la carga eléctrica. Note que dicho resultado se puede obtener más directamente usando la ec.~\eqref{eq:tnoeth2}.
 
 Note además que 
 \begin{align}
