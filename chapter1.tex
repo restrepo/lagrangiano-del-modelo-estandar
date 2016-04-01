@@ -1623,53 +1623,65 @@ En el caso de teorías de campos estamos más interesados en simetría de espaci
  Nos enfocaremos en la formulación de los dos teoremas de Noether para el caso de simetrías internas globales y locales.   
 
 
-Si la transformación depende de algún parámetro $\theta$ continuo, entonces podemos garantizar la existencia de un parámetro infinitesimal $\Delta\theta$, tal que
+Si la transformación depende de algún parámetro $\theta$ continuo, entonces podemos garantizar la existencia de un parámetro infinitesimal tal que
 \begin{align}
 \label{eq:infdt}
-\delta\phi_i=\frac{\partial \left( \delta\phi_{i}  \right)}{\partial \left( \Delta\theta \right)}\Delta\theta\,.
+\delta\phi_i=a_i \left( \phi_i,\partial_{\mu}\phi_i \right)\theta\,.
 \end{align}
+donde $a_{i}$ es una función de los campos y sus derivadas.
+
 Para concretar, consideremos como transformación interna el cambio de fase de una función compleja
 \begin{align}
   \phi\to \phi'=\operatorname{e}^{i\theta}\phi\,,  
 \end{align}
-Para un $\Delta\theta$ suficientemente pequeño
+Para un $\theta$ suficientemente pequeño
 \begin{align}
-  \phi'=&\operatorname{e}^{i\Delta\theta}\phi \nonumber\\
-    \approx&(1+i\Delta\theta)\phi \nonumber\\
-    \approx&\phi+i\Delta\theta\, \phi\,.
+  \phi'=&\operatorname{e}^{i\theta}\phi \nonumber\\
+    \approx&(1+i \theta)\phi \nonumber\\
+    \approx&\phi+i \theta\, \phi\,.
 \end{align}
 Definimos el cambio interno en la función como
 \begin{align}
   \delta\phi\equiv \phi'-\phi\,,
 \end{align}
-y para el cambio infinitesimal de fase tenemos que
+y para el cambio infinitesimal del campo y su complejo conjugado, tenemos que haciendo $\phi_1=\phi$ y $\phi_2=\phi^{*}$
 \begin{align}
-  \delta\phi= i\phi\, \Delta\theta \,.
+  \delta\phi=&a_1 \theta\,, &  \delta\phi^{*}=&  a_2 \theta\,, \nonumber\\
+  &a_1= i\phi \,, & &a_2=-i\phi^{*}\,.
 \end{align}
-La ecuación \eqref{eq:infdt} da lugar a la misma expresión
-\begin{align}
-  \delta\phi=& \frac{\partial \left( \delta\phi  \right)}{\partial \left( \Delta\theta \right)}\Delta\theta\, \nonumber\\
-=& \frac{\partial \left( i \Delta\theta\, \phi\,  \right)}{\partial \left( \Delta\theta \right)}\Delta\theta \nonumber\\
-=& i\phi\, \Delta\theta\,.
-\end{align}
+
 
 
 \section{Primer teorema de Noether}
 
-Consideremos primero el caso en el que el parámetro de la transformación $\Delta\theta=\text{cte}$
+Consideremos primero el caso en el que el parámetro de la transformación $\theta=\text{cte}$
 
 %Demostrar el primer teorema de Noether
 
 Generalizando al caso de una transformación con varios parámetros, tendremos la formulación del primer teorema de Noether para simetrías internas:
 
-\textbf{Teorema 1} Si la acción $S$ es invariante bajo un grupo continuo de simetrías globales que dependen suavemente de $\rho$ parámetros independientes $\theta_{\alpha}$ ($\alpha=1,2,\ldots, \rho$), entonces existen las $\rho$ relaciones
+\textbf{Teorema 1} Si la acción $S$ es invariante bajo un grupo continuo de simetrías globales que dependen suavemente de $\rho$ parámetros independientes $\theta_{\alpha}=\text{cte}$ ($\alpha=1,2,\ldots, \rho$), tal que $\delta\phi_i=a_{\alpha i}\theta^{\alpha}$, entonces existen las $\rho$ relaciones
 \begin{align}
-\sum_{i}\mathcal{E}_i \frac{\partial \left( \delta\phi_{i} \right)}{\partial \left( \Delta \theta_{\alpha} \right)}\equiv \partial_{\mu} j^{\mu}_{\alpha}\,,  
+\sum_{i}\mathcal{E}_i a_{\alpha i}\equiv \partial_{\mu} j^{\mu}_{\alpha}\,,  
 \end{align}
 donde
 \begin{align}
-j^{\mu}_{\alpha}\equiv \sum_{i}B^{\mu}_i=\sum_{i}  \frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}\frac{\partial \left( \delta\phi_{i}  \right)}{\partial \left( \Delta\theta_{\alpha} \right)}\,.
+j^{\mu}_{\alpha}\equiv \sum_{i}B^{\mu}_i=\sum_{i}  \frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}a_{\alpha i}
 \end{align}
+
+\emph{Demostración}:  De la ec.~\eqref{eq:varprin}
+\begin{align}
+\label{eq:varprin}
+  \sum_i \mathcal{E}_i \delta\phi_i =&\sum_{i} \partial_{\mu} \left[\frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}\delta\phi_{i}  \right] \nonumber\\
+  \sum_i \mathcal{E}_i a_{\alpha i}\theta^{\alpha} =&\sum_{i} \partial_{\mu} \left[\frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)} a_{\alpha i}\theta^{\alpha}  \right] \nonumber\\
+  \sum_i \mathcal{E}_i a_{\alpha i}\theta^{\alpha} =&\sum_{i} \partial_{\mu} \left[\frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)} a_{\alpha i}  \right]\theta^{\alpha}\,.
+\end{align}
+Igualando para cada $\theta^{\alpha}$
+\begin{align}
+    \sum_i \mathcal{E}_i a_{\alpha i} =&\sum_{i} \partial_{\mu} \left[\frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)} a_{\alpha i}  \right]
+\end{align}
+
+
 %discutir la ecuación de continuidad y las cargas conservadas
 
 % \subsection{Teorema de Noether para simetr\'\i as externas}
@@ -1843,14 +1855,9 @@ j^{\mu}_{\alpha}\equiv \sum_{i}B^{\mu}_i=\sum_{i}  \frac{\partial\mathcal{L}}{\p
 % \end{equation}
 % \end{frame}
 
-
-
-
-
-
 Note que las ecuaciones de Euler-Lagrange surgen del Problema variacional de Noether cuando se impone la parte inversa del primer teorema de Noether, es decir, aparecen cuando se imponen que las cargas se conserven como consecuencia de la condición
 \begin{align}
-   \sum_i \partial_{\mu} B^{\mu}_{i}\,,
+   \sum_i \partial_{\mu} j^{\mu}_{\alpha i}=0\,.
 \end{align}
 
 
@@ -2078,7 +2085,7 @@ De esta manera, asumiendo una normalización adecuada,
 
 \section{Segundo teorema de Noether}
 
-Sólo para simetría internas. La invarianza de la Acción de Scrhödinger bajo una transformación de fase global, da lugar a una conservación global de la probabilidad: la probabilidad se conserva en todos los puntos del espacio simultáneamente. Esto no es incompatible con relatividad especial por que no involucra intercambio de información, pero si permite, en particular, que por ejemplo la teletransportación cuántica sea instantánea.
+Estudiaremos en una versión del segundo teorema de Noether sólo para simetrías internas . La invarianza de la Acción de Scrhödinger bajo una transformación de fase global, da lugar a una conservación global de la probabilidad: la probabilidad se conserva en todos los puntos del espacio simultáneamente. Esto no es incompatible con relatividad especial por que no involucra intercambio de información, pero si permite, en particular, que por ejemplo la teletransportación cuántica sea instantánea.
 
 Si imponemos que el cambio de fase sea local, es decir, dependiente de cada punto de cada punto del espacio tiempo, tendremos que para un campo $\phi_{i}=\phi,\phi^{*}$,
 \begin{align}
@@ -2161,18 +2168,16 @@ j^\mu_\alpha=\frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}a_{\rho i
 \section{Invarianza de fase local del Lagrangiano de  Scrödinger's}
 
 %Trasladar el material de sección 3.4 aquí. 
+Cuando se habla de la función $\psi(x)$, $x$ representa el punto del espacio tiempo en el cual deseamos conocer el valor de la función de onda. 
+Ya que los núneros complejos son, pues por eso, complejos, uno no los puede representar con una posición en una línea. En su lugar, hay que representarlos por un punto en un espacio en dos dimensiones.
 
+Además de la longitud de la flecha apuntando al número complejo también necesitamos un ángulo para especificar exactamente como dibujar la flecha apuntando al número complejo. El observable esta codificado dentro de la longitud de la flecha que representa el valor del función de onda complejo en ese punto del espacio-tiempo. Su ángulo es inobservable.
 
-When we discuss the wave function $\psi(x)$, $x$ represents the point in space at which we want to know the value of the wave function. Since complex numbers are, well, complex, you can't represent them by a position on a simple number line. Instead, the have to be represented by a point in a two--dimensional plot. 
+El número complejo $\psi(x)$  en la ecuación de Scrödinger es justo el número cuyo cuadrado es la probabilidad relativa de encontrar el objeto en ese punto, como hemos visto como consecuencia de la simetría asociada a que el ángulo es inobservable.
 
-In addition the length of the arrow pointing to the complex number we also need an angle to specify exactly how to draw the arrow pointing to the complex number. The observable is encoded into the length of the arrow representing the value of the complex valued wave function at that point of the space--time. Its angle is unobservable.
+Ahora, supongamos que usted decide hacer un cambio de fase de la función de onda de forma arbitraria en cada punto del espacio, osea el ángulo $\theta$ que el número complejo $\psi$ hace con respecto al eje real. Aquí hay un punto crucial: sie el cambio de fase es \emph{global}, es decir si el cambio de fase asociado al ángulo $\theta$ es el mismo en todos los puntos del espacio, este cambio no destruirá el delicado balance entre la energía cinética y la energía potencia en la ecuación de Scrödinger.
 
-The complex number $\psi(x)$ in the Scrödinger equation is just the number whose square is the relative probability of finding the object at that point.
-
-Now, suppose that you arbitrarily decide to make a change of phase of the wave function --to change, at every point in space, the angle $\theta$ of the complex number $\psi$ makes with the real axis. Here is the critical point: Is this change phase is \emph{global}, if the phase that you change the phase angle $\theta$ is the same everywhere in space, the this change of phase will not destroy the delicate and essential balance between the kinetic and potential energy in the Scrödinger equation.
-
-However, in the view implemented by Einstein's relativity, the need to require that quantum--mechanical systems be unaltered only by global changes of phase seemed to be very unnatural. Once you choose the phase of the wave function at one space-time point, the requirement of global phase invariance fixes it at all other space-time points:
-
+Sin embargo, desde el punto de vista de la relatividad espacial de Einstein, la necesidad de requerir que el sistema mecánico cuántico que inalterado sólo por cambios globales de fase parece poco natural. Una vez se escoge el fase de la función de onda en un punto del espacio-tiempo, el requerimiento de la invarianza de fase global fija esta en todos los puntos del espacio tiempo: 
 
   \begin{quote}
 \small
@@ -2184,58 +2189,58 @@ It seems that it is not consistent with the localized field concept that underli
     Yang-Mills, \emph{Physical Review}, 1954
   \end{flushright}
 
-This is similar to what happens in electromagnetic theory expressed in terms of scalar and vector potentials. The can be changed by arbitrary functions in a such way that the measured electric and magnetic fields remain invariant. As we will see, this feature is deeply connected with the local conservation of electric charge. 
+Un cambio de fase que dependa del punto del espacio-tiempo, $\theta(x)$, de otro lado, sería similar a lo que pasa en la teoría electromagnética cuand es expresada en términos de potenciales escalares y vectoriales. Ellos se pueden cambio por derivadas de funciones arbitrarias de una forma tal que los campos eléctricos y magnéticos medidos permanecen invariantes. Como veremos, estas características están profundamente conectas con la conservación local de la carga eléctrica.  
 
-Desde un punto de vista más cuantitativo, debido a que la energía y la cantidad de movimiento del electrón aparecén es en la fase de su función de onda
+Desde un punto de vista más cuantitativo, debido a que la energía y la cantidad de movimiento del electrón aparecen  en la fase de su función de onda
 \begin{align}
   \psi(x)\propto e^{i p\cdot x}=\exp(Et-\mathbf{p}\cdot \mathbf{x})\,,
 \end{align}
-un cambio de fase local
+entonces, un cambio de fase local
 \begin{align}
  \psi(x)\to \psi'(x)=e^{{i\theta(x)}}\psi\,,
 \end{align}
 cambia la energía y la cantidad de movimiento del electrón. Esto hace necesario la existencia de un nuevo campo que compense esos cambios para garantizar su convervación entre el sistema completo del electrón y el nuevo campo.
 
-Histroricamente primero se implmento la invarianza de Lorentz en Mecánica Cuántica cambiando el correspondiente Lagrangiano de Sch\"odinger. Sin embargo, el Lagrangiano resultante es inconsistente pues tiene una invarianza de fase global que contradice los principios de la relativad especial. El Lagrangiano definitio de la cromodinámica cuántica, que construiremos en detalle luego, incorpora además de la invarianza de Lorenta, la invarianza de fase local. Aquí, no seguiremos el camino histórico, sino que modificaremos el Lagrangiano de Sch\"odinger por uno que se invariante bajo cambios de fase locales. Como las interacciones van a resultar como consuecuencia de iponer la invarianza de fase local, es suficiente hacer el análisis partiendo de la Lagrangian libre de interacciones.
+Histroricamente primero se implemento la invarianza de Lorentz en Mecánica Cuántica cambiando el correspondiente Lagrangiano de Sch\"odinger. Sin embargo, el Lagrangiano resultante es insuficiente pues tiene una invarianza de fase global que contradice los principios de la relativad especial. El Lagrangiano definitivo de la electrodinámica cuántica, que construiremos en detalle luego, incorpora además de la invarianza de Lorentz, la invarianza de fase local. Aquí, no seguiremos el camino histórico, sino uno inverso en el  que primero modificaremos el Lagrangiano de Sch\"odinger por uno que se invariante bajo cambios de fase locales. Como las interacciones van a resultar como consecuencia de imponer la invarianza de fase local, es suficiente hacer el análisis partiendo de la Lagrangiana libre de interacciones, es decir, sin consirer el término $\psi^{*}V\psi$.
 
-We start again with the Scrödinger Lagrangian as written in eq.~\eqref{eq:5qft}: but without the interaction term
+Comenzamos de nuevo con el Lagrangiano de Schödinger escrito con en la ec.~\eqref{eq:5qft}, pero sin el término de interacción:
 
 \begin{align}
   \mathcal{L}(\psi,\psi^*,\partial_\mu\psi,\partial_\mu\psi^*)&=\frac{1}{2m}\boldsymbol{\nabla}\psi^*\cdot\boldsymbol{\nabla}\psi-\frac{i}{2}
   \left(
 \psi^*\frac{\partial\psi}{\partial t}-\frac{\partial\psi^*}{\partial t}\psi
   \right)+\cancel{\psi^*V\psi}\\
-\mathcal{L}_{\text{free}}&=\frac{1}{2m}\partial_i\psi^*\partial_i\psi-\frac{i}{2}
+\mathcal{L}_{\text{free}}&=\frac{1}{2m}\sum_i\partial_i\psi^*\partial_i\psi-\frac{i}{2}
   \left(\psi^*\partial_0\psi-\partial_0\psi^*\psi\right).\nonumber
 \end{align}
-This Lagrangian is not invariant under local phase changes of the wave function: 
+Este Lagrangiano no es invariante bajo cambios de fase locales de la función de onda:
 \begin{align}
   \partial_\mu \psi\to\partial_\mu \psi'=&\partial_\mu \left(e^{i\theta(x)}\psi\right)\nonumber\\
   =&\left(\partial_\mu e^{i\theta(x)}\right)\psi+e^{i\theta(x)}\partial_\mu\psi\nonumber\\
   =&e^{i\theta(x)}\left(i\partial_\mu \theta(x)\right)\psi+e^{i\theta(x)}\partial_\mu\psi\nonumber\\
   =&e^{i\theta(x)}\left[i\partial_\mu \theta(x)+\partial_\mu\right]\psi\,.
 \end{align}
-In order to have a new Lagrangian invariant under local phase changes, or local gauge transformations, we need to introduce a new term to compensate for the term arising from the derivate of $e^{i\theta(x)}$:
+Para tener un nuevo Lagrangiano invariante bajo transformaciones de fase locales, llamadas simplemente transformaciones gauge, necesitamos introducir un nuevo término para compensar el término que proviente de la derivada de  $e^{i\theta(x)}$. Éste término debe tener índice $\mu$ como el de la deriva normal:
 \begin{align}
 \label{eq:165qft}
    \mathcal{D}_\mu \psi\to\mathcal{D}_\mu' \psi'=&(\partial_\mu+X'_\mu) \left(e^{i\theta(x)}\psi\right)\nonumber\\
    =&e^{i\theta(x)}\left[i\partial_\mu \theta(x)+\partial_\mu\right]\psi+X'_\mu \left(e^{i\theta(x)}\psi\right)\nonumber\\
    =&e^{i\theta(x)}\left[i\partial_\mu \theta(x)+\partial_\mu+X'_\mu \right]\psi\,.
 \end{align}
-The transformation condition of the new term $X_\mu$, in order to compensate for the term arising from the derivative of the local phase, $i\partial_\mu\theta(x)$, is just that
+La condición de transformación del nuevo término $X_\mu$, para poder compensar el término que proviene de la derivada de la fase local,  $i\partial_\mu\theta(x)$, es justamente
 \begin{align}
 \label{eq:169qft}
 X_\mu\to  X'_\mu=X_\mu-i\partial_\mu\theta(x)\,.
 \end{align}
-Replacing back in Eq.~\eqref{eq:165qft} we have
+Reemplazándolo en la ec.~\eqref{eq:165qft}, tenemos
 \begin{align}
     \mathcal{D}_\mu \psi\to\left(\mathcal{D}_\mu \psi\right)'=\mathcal{D}_\mu' \psi'=&(\partial_\mu+X'_\mu) \left(e^{i\theta(x)}\psi\right)\nonumber\\
 =&e^{i\theta(x)}\left[i\partial_\mu \theta(x)+\partial_\mu+X_\mu-i\partial_\mu\theta(x) \right]\psi\nonumber\\
 =&e^{i\theta(x)}\left[\partial_\mu+X_\mu\right]\psi\nonumber\\
 =&e^{i\theta(x)}\left(\mathcal{D}_\mu\psi\right)\,.
 \end{align}
-Note that $\mathcal{D}_\mu\psi$ transforms like the field $\psi$, and because of this is called the \emph{covariant derivative} of $\psi$.
-Similarly
+Note que  $\mathcal{D}_\mu\psi$ transforma igual que el campo $\psi$, y debido a este es llamada la \emph{derivada covariante} de $\psi$.
+Similarmente
 \begin{align}
     (\mathcal{D}_\mu \psi)^*\to{\left(\mathcal{D}_\mu \psi\right)'}^*=&(\partial_\mu+{X'_\mu}^*) \left(\psi^*e^{-i\theta(x)}\right)\nonumber\\
 =&\left[-i\partial_\mu \theta(x)+\partial_\mu+X_\mu^*+i\partial_\mu\theta(x) \right]\psi^*e^{-i\theta(x)}\nonumber\\
@@ -2243,87 +2248,98 @@ Similarly
 =&\left(\mathcal{D}_\mu\psi\right)^*e^{-i\theta(x)}\,.
 \end{align}
 
-It is convenient to redefine $X_\mu$ in terms of $A_\mu$:
+Es conveniente redefinir $X_\mu$ en término de un campo  $A_\mu$ y unas constantes adecuadas
 \begin{align}
   A_\mu\equiv\frac{1}{i q}X_\mu\,,
 \end{align}
-such that the covariant derivative can be conveniently written as
+tal que la derivada covariante pueda escribirse de forma convenientes como
 \begin{align}
 \label{eq:170qft}
   \mathcal{D}_\mu=\partial_\mu+i q A_\mu\,.
 \end{align}
-The transformation properties of $A_\mu$ can be obtained from the $X_\mu$ transformation in eq.~\eqref{eq:169qft}: 
+Las propiedades de transformación de  $A_\mu$ pueden ser obtenidas de las de  $X_\mu$ en la ec.~\eqref{eq:169qft}: 
 \begin{align}
 \label{eq:159qft}
  i q A_\mu\to& i q A_\mu'=i q A_\mu-i \partial_\mu\theta(x)\nonumber\\
   A_\mu\to&  A_\mu'= A_\mu-\frac{1}{q} \partial_\mu\theta(x)\,.
 \end{align}
-To obtain the transformation properties of the covariant derivative itself we can start from the definition
+Para obtener las propiedades de la transformación de la derivada covariante misma, podemos comenzar de la definición
 \begin{align}
     \mathcal{D}_\mu \psi\to\left(\mathcal{D}_\mu \psi\right)'=&U\left(\mathcal{D}_\mu \psi\right)\,,
 \end{align}
-where $U(x)=e^{i\theta(x)}$. It is worth notice that the set of
-transfromations $U_j(x)=e^{i\theta_j(x)}$ form a group which is
-closed, i.e, with $U_3(x)=U_1(x)U_2(x)$ also in the group, identity
-$U_{\text{identity}}=e^{0}$, inverse $U_{j}^{-1}(x)=U_{j}^{*}(x)$, and the associativity property $\left( U_1(x)U_2(x) \right)U_3(x)=U_1(x)\left( U_2(x)U_3(x) \right)$. In addtion $U_1(x)U_2(x)=U_2(x)U_1(x)$. This Abelian continous group is called $U(1)$, and is isomorphic to the group of rotations in two dimensions by an angle $\theta_i$. 
+done $U(x)=e^{i\theta(x)}$. Es importante enfatizar que el conjunto de transformaciones  $U_3(x)=U_1(x)U_2(x)$ también esta en el grupo. También contiene la identidad
+$U_{\text{identity}}=e^{0}$, el inverso $U_{j}^{-1}(x)=U_{j}^{*}(x)$, y finalmente la propiedad de asociatividad bajo la operación del grupo $\left( U_1(x)U_2(x) \right)U_3(x)=U_1(x)\left( U_2(x)U_3(x) \right)$. 
+Además, como $U_1(x)U_2(x)=U_2(x)U_1(x)$, el grupo es Abeliano. Este grupo Abeliano de números complejos de módulo 1 es llamado el grupo $U(1)$, 
+y es isomorgo al grupo de rotaciones en dos dimensiones por un ángulo  $\theta$. 
 
-We have in general
+Para un elemento $U$ de un grupo general, tenemos como definición de derivada covariante que la correspondiente derivada del campo transforme como el campo. En este caso general el campo transforma como
 \begin{align}
-     \mathcal{D}_\mu \psi\to\left(\mathcal{D}_\mu \psi\right)'=&U\left(\mathcal{D}_\mu \psi\right)\nonumber\\
-    \mathcal{D}'_\mu \psi'=&U\left(\mathcal{D}_\mu \psi\right)\nonumber\\
+  \psi\to\psi'=U\psi\,,
+\end{align}
+de modo que la derivada covariante se puede definir como
+\begin{align}
+     \mathcal{D}_\mu \psi\to\left(\mathcal{D}_\mu \psi\right)'=&U\left(\mathcal{D}_\mu \psi\right)\,.
+\end{align}
+
+Para encontrar las propiedades de la derivada covariante en este contexto general, necesitamos evaluar cual la transformación de la derivada covariante como tal, es decir
+\begin{align}
+ \left(\mathcal{D}_\mu \psi\right)'=     \mathcal{D}'_\mu \psi'=&U\left(\mathcal{D}_\mu \psi\right)\nonumber\\
     \mathcal{D}'_\mu \left( U\psi \right)=&U\left(\mathcal{D}_\mu \psi\right)\,.
 \end{align}
-If we keep in mind that $\mathcal{D}'_\mu U$ is still an operator, we can have
+
+Si mantenemos en mente que  $\mathcal{D}'_\mu U$ es todavía un operador, tenemos que
 \begin{align}
     \mathcal{D}'_\mu U=&U\mathcal{D}_\mu \nonumber\\
     \mathcal{D}'_\mu UU^{-1}=&U\mathcal{D}_\mu U^{-1} \nonumber\\
     \mathcal{D}'_\mu =&U\mathcal{D}_\mu U^{-1} \,.
 \end{align}
-To check this identity we must to apply to some field
+Es decir, para comprobar esta identidad, debemos aplicar el nuevo operador sobre algún campo. Para mantener la generalidad del resultado evitaremos usar la propiedad conmutativa del algún grupo particular
 \begin{align*}
     \mathcal{D}'_\mu \psi =&U\mathcal{D}_\mu \left(U^{-1}\psi  \right) \nonumber\\
     \partial_{\mu}\psi+iq A'_{\mu} \psi =&U \left(\partial_{\mu}+iq A_{\mu}  \right) \left(U^{-1}\psi  \right) \nonumber\\
     \partial_{\mu}\psi+iq A'_{\mu} \psi =&U \left[U^{-1}\partial_{\mu}\psi+\left( \partial_{\mu}U^{-1} \right)\psi+iq  A_{\mu}U^{-1}\psi\right] \nonumber\\
     \partial_{\mu}\psi+iq A'_{\mu} \psi =&\partial_{\mu}\psi+U\left( \partial_{\mu}U^{-1} \right)\psi+iq  U A_{\mu}U^{-1}\psi\,.
 \end{align*}
-Afeter cancel out the $\partial_{\mu}\psi$ term in both sides, and factoring out the field $\psi$ we have
+Después de cancelar el término  $\partial_{\mu}\psi$ en ambos lados, y factorizando el campo  $\psi$, tenemos que
 \begin{align}
       iq A'_{\mu} =&iq  U A_{\mu}U^{-1}+ U\left( \partial_{\mu}U^{-1} \right)\nonumber\\
       A_{\mu}\to A'_{\mu} =&U A_{\mu}U^{-1}-\frac{i}{q}U\left( \partial_{\mu}U^{-1} \right)\,.
 \end{align}
-This expression is completely general and be useful later. In the particular case of the Abelian Group $U(1)$ we simply have
+Esta expresión es completamente general y será usada posteriormente en el contexto de grupos más complicados. En el caso particular de un Grupo Abeliano  $U(1)$, tenemos simplemente que
 \begin{align}
   A'_{\mu}=&A_{\mu}-\frac{i}{q}\left[ -i\partial_{\mu}\alpha(x) \right]UU^{*}\nonumber\\
  A_{\mu}\to  A'_{\mu}=&A_{\mu}-\frac{1}{q}\partial_{\mu}\alpha(x)\,.
 \end{align}
 
+Definimos la \emph{invarianza gauge local} como una forma arbitraria de escoger el factor de fase complejo de un campo cargado\footnote{como el electrón descrito por la ecuación usual de  Scrödinger.} en todos los puntos del espacio tiempo.
 
-We define \emph{local gauge invariance} as an arbitrary way of choosing the complex phase factor of a charged field\footnote{like the electron field as described by the usual Scrödinger equation.} at all space time points.
-
-In this way, we can change the original Lagrangian for a new one which is invariant under local phase transformations:
+De esta forma, podemos cambiar el Lagrangiano libre original por uno nuevo que sea invariante bajo transformaciones de fase locales, asegurándonos de considerar todos los término extra posibles, en particular los asociados al nuevo campo $A_{\mu}$:
 \begin{align}
-   \mathcal{L}(\psi,\psi^*,\partial_\mu\psi,\partial_\mu\psi^*,A_\mu)
+   \mathcal{L}(\psi,\psi^*,\partial_\mu\psi,\partial_\mu\psi^*,A_\nu,\partial_{\mu} A_{\nu} )
 =\frac{1}{2m}\left(\mathcal{D}_i\psi\right)^*\mathcal{D}_i\psi-\frac{i}{2}
-  \left[\psi^*\mathcal{D}_0\psi-\left(\mathcal{D}_0\psi\right)^*\psi\right].
+  \left[\psi^*\mathcal{D}_0\psi-\left(\mathcal{D}_0\psi\right)^*\psi\right]+\mathcal{L}\left( A_{\nu},\partial_{\mu} A_{\nu} \right).
 \end{align}
-where
+donde
 \begin{align}
 \label{eq:167qft}
   A_\mu\to A'_\mu=A_\mu-\frac{1}{q}\partial_\mu\theta(x)\,.
 \end{align}
-This is just the gauge transformation which left the Electromagnetic fields invariant. In fact, the new Lagrangian is now invariant under the local phase transformations
+Esta es justamente la transformación que deja el campo electromagnético invariante, y como veremos, el Lagrangiano faltante $\mathcal{L}_{\text{EM}}=\mathcal{L}\left( A_{\nu},\partial_{\mu} A_{\nu} \right)$ dará lugar precisamente a las ecuaciones de Maxwell!. El nuevo Lagrangiano es ahora invariante bajo transformaciones de fase (y deberemos imponer que $\mathcal{L}_{\text{EM}}$ también lo sea). De hecho:
 \begin{align}
   \mathcal{L}\to \mathcal{L}'=&
 \frac{1}{2m}{\left(\mathcal{D}_i\psi\right)'}^*\left(\mathcal{D}_i\psi\right)'
--\frac{i}{2}\left[{\psi'}^*\left(\mathcal{D}_0\psi\right)'-{\left(\mathcal{D}_0\psi\right)'}^*\psi'\right]\nonumber\\
+-\frac{i}{2}\left[{\psi'}^*\left(\mathcal{D}_0\psi\right)'-{\left(\mathcal{D}_0\psi\right)'}^*\psi'\right]+\mathcal{L}_{\text{EM}}'\nonumber\\
 =&
 \frac{1}{2m}{\left(\mathcal{D}_i\psi\right)}^*e^{-i\theta(x)}e^{i\theta(x)}\left(\mathcal{D}_i\psi\right)\nonumber\\
-&-\frac{i}{2}\left[{\psi}^*e^{-i\theta(x)}e^{i\theta(x)}\left(\mathcal{D}_0\psi\right)
--{\left(\mathcal{D}_0\psi\right)}^*e^{-i\theta(x)}e^{i\theta(x)}\psi\right].\nonumber\\
+&-\frac{i}{2}\left[{\psi}^*e^{-i\theta(x)}e^{i\theta(x)}\left(\mathcal{D}_0\psi\right)+\mathcal{L}_{\text{EM}}
+-{\left(\mathcal{D}_0\psi\right)}^*e^{-i\theta(x)}e^{i\theta(x)}\psi\right]+\mathcal{L}_{\text{EM}}\,.\nonumber\\
 =&\mathcal{L}\,.
 \end{align}
 
-To preserve invariance one notices that it is necessary to counteract the variation of $\theta$ with $x$, $y$, $z$, and $t$ by introducing the electromagnetic field $A_\mu$. In this way, the electromagnetic interaction is obtained as the result of impose local gauge invariance under $U(1)$ (local phase transformations). To fully implement the gauge principle, i.e, the paradigm to obtain the interactions as the result of the gauge invariance, we need to introduce some concepts of special relativity to be developed below.
+Para preservar la invarianza uno nota que es necesario contrarrestar la variación de  $\theta$ con $x$, $y$, $z$, y $t$ 
+introduciendo el campo electromagnético  $A_\mu$. De esta forma, una vez logremos especificar $\mathcal{L}_{\text{EM}}$, la interacción electromagnética serpa obtenida como resultado de imponer la invarianza de fase local bajo el grupo Abeliano  $U(1)$, correspondiente a las transformaciones de fase locales. Para implementar por completo el principio gauge local necesitamos especificar completamente el $\mathcal{L}_{\text{EM}}$ de una forma compatible con la transformación gauge del campo $A_{\mu}$ y las transformaciones de Lorentz, lo cual será desarrollado en el próximo capítulo. 
+
+Por ahora veremos las consecuencias del principio variacional de Noether para simetrías internas, expresado por la ec.~\eqref{eq:varprin}, sobre los campos $\psi$ y $\psi^{*}$.
 
 Mostraremos que en efecto, para esta densidad Lagrangiana particular los términos 
 \begin{align*}
