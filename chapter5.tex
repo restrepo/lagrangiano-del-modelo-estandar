@@ -214,7 +214,10 @@ En la figura, tomada de \cite{a}, se muestra el gráfico de $R$ con respecto a $
   \label{fig:r}
 \end{figure}
 \end{frame}
+\begin{frame}
 Si queremos que el color sea una carga conservada como la carga eléctrica, ésta debe ser la consecuencia de una simetría gauge local. Para tener tres cargas diferentes la posibilidad más simple es imponer la simetría $SU(3)_c$, tal que tengamos un vector compuesto de 3 espinores de Dirac en el espacio de color:
+
+  
 \begin{equation}
   \Psi=
   \begin{pmatrix}
@@ -227,8 +230,9 @@ Si queremos que el color sea una carga conservada como la carga eléctrica, ést
     q_r\\
     q_b\\
     q_g
-  \end{pmatrix}.
+  \end{pmatrix}\qquad q=u,d,c,s,t,b\,.
 \end{equation}
+\end{frame}
 El Lagrangiano de Dirac con invarianza gauge global $SU(3)$, para un quark, se puede escribir como
 \begin{equation}
   \label{eq:128qft}
@@ -239,11 +243,13 @@ El análisis es completamente simiar si se usa el Lagrangiano sólo para los fer
     \mathcal{L}_{\text{global}}=i\bar{\Psi}\overline{\sigma}^\mu\partial_\mu\Psi
 \end{align}
 
-donde
+\begin{frame}
+  
+La transformación gauge local bajo $SU(3)$ es
 \begin{equation}
-  \Psi\to \Psi'=\exp\left(i\theta_a\frac{\lambda^a}{2}\right)\Psi.
+  \Psi\to \Psi'=\exp\left(i\theta_a(x)\frac{\lambda^a}{2}\right)\Psi.
 \end{equation}
-$a=1,\ldots,8$, $\lambda_a/2$ son los ocho generadores de $SU(3)$ y $\theta_a$ son los parámetros de la transformación global. Los generadores de $SU(3)$
+donde $a=1,\ldots,8$, $\lambda_a/2$ son los ocho generadores de $SU(3)$ y $\theta_a(x)$ son los parámetros de la transformación global. Los generadores de $SU(3)$
 \begin{align}
   \Lambda^a\equiv\frac{\lambda^a}{2}\,,
 \end{align}
@@ -252,12 +258,16 @@ satisfacen el álgebra
   \left[\frac{\lambda^a}{2},\frac{\lambda^b}{2}\right]=if^{abc}\frac{\lambda^c}{2}\,,
 \end{equation}
 donde $f^{abc}$ son las constantes de estructura fina de $SU(3)$.
+\end{frame}
 
-En un análisis similar al de la sección \ref{sec:diracs-lagrangian} tenemos que la Acción invariante gauge local bajo $SU(3)_c$, se obtiene de reemplazar la derivada normal por la derivada covariante 
+Las ocho matrices $3\times3$ $\lambda^a$ se pueden construir a partir de las tres matrices de Pauli, pero su forma explícita no es necesaria en la siguiente discusión.
+
+En un análisis similar al de la sección \ref{sec:diracs-lagrangian} tenemos que la Acción invariante gauge local bajo $SU(3)_c$, se obtiene de reemplazar la derivada normal por la derivada covariante. Para compensar los 8 cambios asociados a los 8 parámetros $\theta_a(x)$, la derivada covariante debe definirse en términos de 8 campos vectoriales $G^\nu_a$
+\begin{frame}%[fragile,allowframebreaks]
 \begin{equation}
   \label{eq:127qft}
   \mathcal{L}_{\text{local}}=i\bar{\Psi}\gamma^\mu\mathcal{D}_\mu\Psi-m\bar{\Psi}\Psi
-  -\frac{1}{2}\operatorname{Tr}\left({G}^{\mu\nu}{G}_{\mu\nu}\right),
+  -\mathcal{L}\left( G^{\nu}_{a},\partial_{\mu}G^{\nu}_{a} \right)\,.%\frac{1}{2}\operatorname{Tr}\left({G}^{\mu\nu}{G}_{\mu\nu}\right),
 \end{equation}
 donde
 \begin{align}
@@ -278,7 +288,7 @@ donde hemos definido la matriz $3\times 3$  $G_\mu$, como
 \begin{equation}
   \left({G}_\mu\right)_{\alpha\beta}=\left(\frac{\lambda_a}{2}\right)_{\alpha\beta}G_\mu^a
 \end{equation}
-
+\end{frame}
 Este Lagrangiano da lugar a la interacción fuerte y es llamado el Lagrangiano de la Cromodinámica Cuántica, o el Lagrangiano de la QCD de sus siglas en Inglés.
 
 De \eqref{eq:qcdtr}, tenemos
@@ -313,9 +323,10 @@ de modo que
      {G'}^\mu U =&\frac{1}{i g_s}(\partial^\mu U)+ U{G}^\mu \nonumber\\
    {G'}^\mu  =&-\frac{i}{g_s}(\partial^\mu U)U^{-1}+ U{G}^\mu U^{-1}\,.
 \end{align}
+\begin{frame}[fragile,allowframebreaks]
 Como $U$ es unitaria, la transformación de los campos gauge puede escribirse como
 \begin{equation}
-    {G}^\mu\to\left({G}^\mu\right)'=U{G}^\mu U^{-1}-\frac{i}{g_s}\left(\partial^\mu U\right)U^\dagger.
+    {G}^\mu\to\left({G}^\mu\right)'=U{G}^\mu U^{\dagger}-\frac{i}{g_s}\left(\partial^\mu U\right)U^\dagger.
 \end{equation}
 
 Entonces
@@ -332,11 +343,101 @@ Entonces
 de donde
 \begin{align}
   \label{eq:gmutrinf}
-  G^\mu_a\to {G'}^\mu_a\approx&G^\mu_a+\frac{1}{g_s}\partial^\mu\theta_a+f^{abc}G^\mu_b\theta_c
+  G^\mu_a\to {G'}^\mu_a\approx&G^\mu_a+\frac{1}{g_s}\partial^\mu\theta_a+{f_a}^{bc}G^\mu_b\theta_c
 \end{align}
 que se reduce al caso Abeliano cuando las constates de estructura son cero. Como era de esperarse cada campo gauge tiene asociado un parámetro de transformación gauge $\theta_a(x)$.
+\end{frame}
+
+Note entonces que en el lenguage de los teoremas de noether, el campo $G^{\mu}_{a}$ transforma como un campo material y un campo de raduación a la vez, es decir, su transformación depende tanto del parámetro como de la derivada del parámetro. Por consiguiente, es conveniente definir la derivada covariante del campo $G^{\nu}_{a}$, tal que
+\begin{align}
+  \mathcal{D}_{\mu}  G_{\nu}=& \left(\mathbf{1}\partial_{\mu}-i g_s  G_{\mu} \right)G_{\nu}
+\end{align}
+o en componentes
+\begin{align}
+  \left[ \mathcal{D}_{\mu} \right]^{a}_{b} G_{\nu}^{b}=& \left(\delta^a_b\partial_{\mu}-i g_s \left[ G_{\mu} \right]^{a}_{b} \right)G_{\nu}^{b} \nonumber\\
+    =& \left(\delta^a_b\partial_{\mu}-i g_s \left[  \widetilde{\Lambda}_c \right]^a_b G^c_{\mu} \right)G_{\nu}^{a} \nonumber\\
+\end{align}
+\begin{align}
+ \mathcal{D}_{\mu} G_{\nu}\to   \left(   \mathcal{D}_{\mu} G_{\nu} \right)' =&
+\left[\partial_{\mu}-i g_s\left(U G_\mu U^{\dagger}-\frac{i}{g_s}\left(\partial_\mu U\right)U^\dagger  \right)   \right] \left(U G_\nu U^{\dagger}-\frac{i}{g_s}\left(\partial_\nu U\right)U^\dagger  \right) \nonumber\\
+=&
+\left[\partial_{\mu}-i g_sU G_\mu U^{\dagger}-\left(\partial_\mu U\right)U^\dagger   \right] \left(U G_\nu U^{\dagger}-\frac{i}{g_s}\left(\partial_\nu U\right)U^\dagger  \right) \nonumber\\
+=&
+\partial_{\mu} \left(U G_\nu U^{\dagger}-\frac{i}{g_s}\left(\partial_\nu U\right)U^\dagger  \right)
+-i g_sU G_\mu U^{\dagger}\left(U G_\nu U^{\dagger}-\frac{i}{g_s}\left(\partial_\nu U\right)U^\dagger  \right)
+\nonumber\\
+&-\left(\partial_\mu U\right)U^\dagger\left(U G_\nu U^{\dagger}-\frac{i}{g_s}\left(\partial_\nu U\right)U^\dagger  \right) \nonumber\\
+  =& \cancel{\left(\partial_{\mu} U \right) G_\nu U^{\dagger}} + U
+  \left( \partial_{\mu}G_\nu \right) U^{\dagger} + U
+  G_{\nu} \partial_{\mu} U^{\dagger} -\frac{i}{g_s}\partial_{\mu}
+  \left[ \left( \partial_{\nu}U \right)U^{\dagger} \right]
+  \nonumber\\
+  &-i g_s U G_{\mu}G_{\nu}U^{\dagger}- UG_{\mu} U^{\dagger} \left( \partial_{\nu} U\right)U^{\dagger} \nonumber\\
+  &-\cancel{\left( \partial_{\mu}U \right)G_{\nu} U^{\dagger}}
+  +\frac{i}{g_s} \left( \partial_{\mu}U \right) U^{\dagger} \left( \partial_{\nu}U \right) U^{\dagger} \nonumber\\
+  =& U \left( \partial_{\mu}G_\nu \right) U^{\dagger} + U
+  G_{\nu} \partial_{\mu} U^{\dagger}
+  -\cancel{\frac{i}{g_s}\partial_{\mu} \left[ U
+      U^{\dagger}\left( \partial_{\nu}U \right)U^{\dagger} \right]}
+  \nonumber\\
+  &-i g_s U G_{\mu}G_{\nu}U^{\dagger}- UG_{\mu}
+  U^{\dagger}\cancel{ \partial_{\nu}\left( UU^{\dagger} \right)}+
+  UG_{\mu} U^{\dagger} U\partial_{\nu}U^{\dagger}
+  \nonumber\\
+  &+\cancel{\frac{i}{g_s} \partial_{\mu} \left[ U U^{\dagger}
+      \left( \partial_{\nu}U \right) U^{\dagger}\right]}-
+  \frac{i}{g_s} U \partial_{\mu} \left[ U^{\dagger}
+    \left( \partial_{\nu}U \right) U^{\dagger}\right]
+\end{align}
+Ya que
+\begin{align}
+ \partial_{\mu} \left[ U^{\dagger}
+    \left( \partial_{\nu}U \right) U^{\dagger}\right]=&
+ \partial_{\mu} \left[ U^{\dagger} U \partial_{\nu} U^{\dagger}\right] \nonumber\\
+=& \partial_{\mu}  \partial_{\nu} U^{\dagger} \nonumber\\
+\end{align}
+entonces
+\begin{align}
+    \nonumber\\
+\mathcal{D}_{\mu} G_{\nu}\to   \left(   \mathcal{D}_{\mu} G_{\nu} \right)' =& U \left[ \left( \partial_{\mu}-ig_s G_{\mu} \right)G_\nu   \right]U^{\dagger}
+    + U \left[ G_{\nu} \partial_{\mu}+G_{\mu}\partial_{\nu}-\frac{i}{g_s} \partial_{\mu}\partial_{\nu} \right] U^{\dagger} \nonumber\\
+ =& U \left( \mathcal{D}_{\mu}G_\nu   \right)U^{\dagger}
+    + U \left[ G_{\nu} \partial_{\mu}+G_{\mu}\partial_{\nu}-\frac{i}{g_s} \partial_{\mu}\partial_{\nu} \right] U^{\dagger} \,.%\nonumber\\
+ %  =& U \left( \mathcal{D}_{\mu}G_\nu   \right)U^{\dagger}
+ %    + U  G_{\nu} \partial_{\mu}U^{\dagger}-\frac{i}{g_s} U\left(\partial_{\mu}+ig_s G_{\mu} \right)\partial_{\nu}  U^{\dagger} \nonumber\\
+ % =& U \left( \mathcal{D}_{\mu}G_\nu   \right)U^{\dagger}
+ %  \right]  + U  G_{\nu} \partial_{\mu} U^{\dagger}-\frac{i}{g_s}U \mathcal{D}_{\mu}^{\dagger}\partial_{\nu} U^{\dagger}  \nonumber\\
+\end{align} 
+Definiendo
+\begin{align}
+  G_{\mu\nu}=\mathcal{D}_{\mu}G_{\nu}-\mathcal{D}_{\nu}G_{\mu}\,,
+\end{align}
+que recupera la definición en el caso Abeliano
+\begin{align}
+  F_{\mu\nu}=\partial_{\mu} A_{\nu}-\partial_{\nu}A_{\mu}\,.
+\end{align}
+
+Tenemos que
+\begin{align}
+  G_{\mu\nu}\to G'_{\mu\nu}=U G_{\mu\nu} U^{\dagger}\,.
+\end{align}
 
 
+\begin{align}
+    \left[ \mathcal{D}_{\mu} \right]_{a}^{b} G^{\nu}_{b}\to 
+   \left\{   \left[ \mathcal{D}_{\mu} \right]_{a}^{b} G^{\nu}_{b}\right\}'=
+\left[ \mathcal{D}_{\mu} \right]_{a}^{b} G^\mu_b+\frac{1}{g_s}\partial^\mu\theta_a
++f^{abc}\theta_c\left[ \mathcal{D}_{\mu} \right]_{b}^{d} G^\mu_d
+\end{align}
+Esta propiedad puede ser obtenida si usamos la representación adjunta de $SU(3)$, consistente en las 8 matrices $8\times 8$
+\begin{align}
+  \left[  \widetilde{\Lambda}^{a}\right]_{bc}=-i {f^{a}}_{bc}\,.
+\end{align}
+Entonces
+\begin{align}
+  \left[\mathcal{D}_{\mu} \right]^b_c=&\delta^b_c\partial_{\mu}-i g_{s}\left[ \widetilde{\Lambda}_{a} G^a_{\mu} \right]^b_c \nonumber\\
+                  =&\delta^b_c\partial_{\mu}- g_{s} {f_{a}}^{bc}  G^a_{\mu} \nonumber\\
+\end{align}
 
 
 Similarmente, definiendo la matriz $3\times 3$, 
@@ -437,6 +538,7 @@ Haciendo explícitamente la traza tenemos (suma sobre índices $a,b,c,\cdots$ re
 +g_s^2 f^{abc}f_{ade}G^\mu_b G^\nu_c G_\mu^d G_\nu^e 
 \end{align}
 
+\begin{frame}[fragile,allowframebreaks]
 Expandiendo el Lagrangiano en ec.~(\ref{eq:127qft}), tenemos
 \begin{align}
   \mathcal{L}=&i\bar{\Psi}\gamma^\mu\left(\partial_\mu-i g_s\frac{\lambda_a}{2}G_\mu^a\right)\Psi
@@ -491,7 +593,9 @@ El Lagrangiano de interacción es:
 \end{align}
 
 %ver la discusión en el libro de Feyman sobre QED
+\end{frame}
 
+\begin{frame}
 From \cite{Feynman:1986er} (pag 136):
 \begin{quote}
   The quarks have an additional type of polarization that is not
@@ -520,7 +624,7 @@ From \cite{Feynman:1986er} (pag 136):
     \end{align*}
 }. The theory is not very complicated.  The complete rule of gluons is: gluons couple with things having ``color''--it just requires a little bookkeeping to keep track of where the ``colors go''.  There is, however, an interesesting possibility created by this rule: gluons can couple with other gluons (see Fig.~\ref{fig:qcd3gluon}).
 \end{quote}
-
+\end{frame}
 %11 12 13
 %21 22 23
 %31 32 33
