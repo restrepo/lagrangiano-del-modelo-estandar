@@ -433,6 +433,45 @@ Esta propiedad puede ser obtenida si usamos la representación adjunta de $SU(3)
 \begin{align}
   \left[  \widetilde{\Lambda}^{a}\right]_{bc}=-i {f^{a}}_{bc}\,.
 \end{align}
+En efecto, haciendo uso de la identidad para $SU(N)$ \url{}
+\begin{align}
+  f^{abe}f^{cde}=\frac{2}{N}(\delta^{ac}\delta^{bd}-
+ \delta^{ad}\delta^{bc})+d^{ace}d^{bde}-d^{ade}d^{bce}
+\end{align}
+donde $d^{abc}$ es totalmente antisimétrico en $a,b,c$ y esta definido a partir de la representación fundamental como
+\begin{align}
+  \left\{ \Lambda^{a},\Lambda^{b} \right\}=\frac{1}{N}\delta^{ab}+{d^{ab}}_c \Lambda^{c}\,
+\end{align}
+
+\textbf{Ejemplo:}  En el caso de $SU(2)$ $d^{ijk}=0$, definiendo $\Sigma_i$ como las matrices $3\times3$ generadores de $SU(2)$ en la representaci\'on adjunta
+\begin{align}
+  (\Sigma_i)_{jk}=-i\epsilon_{ijk}
+\end{align}
+Debemos comprobar que
+\begin{align}
+  \left[{\Sigma_i},{\Sigma_j}\right]&=i\epsilon_{ijk}{\Sigma_k}\nonumber\\
+  \left[{\Sigma_i},{\Sigma_j}\right]_{lm}&=i\epsilon_{ijk}(\Sigma_k)_{lm}
+\end{align}
+
+Ya que
+\begin{align}
+  \label{eq:167}
+  (\Sigma_i\Sigma_j)_{lm}&=(\Sigma_i)_{lk}(\Sigma_j)_{km}=-\epsilon_{ilk}\epsilon_{jkm}=\epsilon_{ilk}\epsilon_{jmk}=\delta_{ij}\delta_{lm}-\delta_{im}\delta_{lj}\nonumber\\
+  -(\Sigma_j\Sigma_i)_{lm}&=-(\Sigma_j)_{lk}(\Sigma_i)_{km}=\epsilon_{jlk}\epsilon_{ikm}=-\epsilon_{jlk}\epsilon_{imk}=-\delta_{ji}\delta_{lm}+\delta_{jm}\delta_{li}
+\end{align}
+Entonces
+\begin{align}
+[\Sigma_i,\Sigma_j]_{lm}=& (\Sigma_i\Sigma_j-\Sigma_j\Sigma_i)_{lm}\nonumber\\
+=&\delta_{il}\delta_{jm}-\delta_{im}\delta_{jl}\nonumber\\
+=&\epsilon_{ijk}\epsilon_{lmk}\nonumber\\
+=&i\epsilon_{ijk}(-i\epsilon_{klm})\nonumber\\
+=&i\epsilon_{ijk}(\Sigma_k)_{lm}
+\end{align}
+
+
+\textbf{Ejercicio:} Demostar que la representación adjunta satisface el álgebra de $SU(3)$
+
+
 Entonces
 \begin{align}
   \left[\mathcal{D}_{\mu} \right]^b_c=&\delta^b_c\partial_{\mu}-i g_{s}\left[ \widetilde{\Lambda}_{a} G^a_{\mu} \right]^b_c \nonumber\\
