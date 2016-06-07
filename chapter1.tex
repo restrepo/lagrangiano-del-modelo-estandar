@@ -312,6 +312,8 @@ donde $\mu,\nu=0,1,2,3$, $i=1,2,3$ y se asume suma sobre \'\i ndices repetidos. 
 \end{equation}
 donde $\left\{ g_{\mu\nu} \right\}$ denota la forma matricial del tensor $g_{\mu\nu}$.  
 
+
+
 El producto de dos cuadrivectores se define en forma similar como
 \begin{equation}
 \label{eq:157}
@@ -2550,7 +2552,7 @@ Aplicamos el segundo teorema de Noether con (con el reemplazo $\theta\to q\theta
 \begin{align}
   \phi_{1}:& \psi\,,\qquad a_{1}=iq \psi \,,\qquad b_1=0\nonumber\\
   \phi_{2}:& \psi^{*}\,,\qquad a_{2}=-i\psi^{*}\,,\qquad b_2=0 \nonumber\\
-  \phi_{3}:& \psi^{*}\,,\qquad a_{3}=0\,,\qquad b_2=-1\,,
+  \phi_{3}:& \psi^{*}\,,\qquad a_{3}=0\,,\qquad b_2=-\delta^{\mu}_{\nu}\,,
 \end{align}
 tenemos que para los campos $\psi$ y $\psi^{*}$, asumiendo que el campo $A^{\mu}$ satisface las ecuaciones de Euler-Lagrange, tenemos que
 \begin{align}
@@ -2573,6 +2575,18 @@ It is worth to notice that for $T^0_0$, and $T^0_i$ we should obtain
 \end{align}
 
 \end{frame}
+
+De otro lado, si asumimos que las ecuaciones de Euler-Lagrange para los campos de materia se satisfacen, el segundo teorema de Noether para el campo de radiación electromagnético tenemos
+\begin{align}
+  \partial_{\mu} \frac{\partial \mathcal{L}}{\partial A_{\mu}}=&0\,, &   \partial_{\mu} \partial_{\nu}\frac{\partial \mathcal{L}}{\partial \left(\partial  \partial_{\nu} A_{\mu}\right)}=&0\,.
+\end{align}
+La primera ecuación da lugar a la misma corriente conservada fermiónica, mientras que la segunda se puede interpretar como la necesidad de introducir el tensor antisimétrico
+\begin{align}
+  F_{\mu\nu}=\frac{\partial \mathcal{L}}{\partial \left(\partial  \partial_{\nu} A_{\mu}\right)}
+\end{align}
+
+
+
 The approach to change the Action for a new one invariant under local phase  transformations, is that the electron cannot be longer considered as an isolated \emph{naked} particle. The electron must be always surrounded by some cloud of virtual particles associated with the electromagnetic field in order to guarantee the conservation of the energy and momentum of the system. In general the wave function of the electron can be represented as the exponential of $iEt$ and $i \mathbf{p}\cdot \mathbf{x}$, so that a local phase transformation will change the energy $E$ and the momentum $\mathbf{p}$ of the electron. This changes must be compensated with the corresponding changes in $A_{\mu}$.
 
 Moreover, to be consistent, we could start with the free Lagrangian before the change of the normal derivative by the covariant derivative. The interactions are not longer imposed by hand but a consequence of the improved Action. 

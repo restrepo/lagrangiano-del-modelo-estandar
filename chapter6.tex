@@ -29,7 +29,7 @@
 \section{Contenido de partículas}
 
 \begin{frame}[fragile,allowframebreaks]
-The known matter is build from the elementary set of \emph{Dirac fermions} defined in table
+La materia conocida esta constituida de un cojunto de \emph{fermiones de Dirac} elementales definidos en la Tabla~\ref{tab:ef}
 \begin{table}
   \centering
   \begin{tabular}{l|l|c|r}
@@ -42,8 +42,7 @@ The known matter is build from the elementary set of \emph{Dirac fermions} defin
   \caption{Elementary fermions. The symbol represent both the particle, e.g $e^-$, as the antiparticle, e.g, $e^+$. The lectric chage is given in units of the electron chage $e$  }
   \label{tab:ef}
 \end{table}
-
-we further define the color triplets of quarks as
+donde podemos definir los tripletes de color de quarks como
 \begin{align}
   u=&
   \begin{pmatrix}
@@ -55,7 +54,7 @@ we further define the color triplets of quarks as
   \end{pmatrix}
 \end{align}
 
-This set of particles is well defined for the electromagnetic and strong interactions, but not for weak interactions 
+Este conjunto de partículas esta bien definido para interacciones que conservan paridad como la interacción electromagnética o la fuerte. Para introducir la interacciones débiles usaremos más bien espinores de Weyl
 
 \section{Interacciones débiles}
 En el contexto de las interacciones débiles un $e_L$ es completamente
@@ -355,18 +354,6 @@ donde $\text{h.c}$, denota el hermítico conjugado de cada término (para garant
 y hemos puesto la carga del electrón para hacer explícita la conservación de la carga eléctrica. 
 
 
-Para los campos del Lagrangiano, debemos asegurarnos de que todos los términos invariantes gauge locales y renormalizables sean considerados. De hecho un término de interacción entre fermiones y el campo escalar, correspondiente a una interacción de Yukawa: $\left( e_R \right)^{\dagger} {L}\cdot\Phi $ y $ \left( d_R \right)^{\dagger} {Q}\cdot\Phi$, son invariantes bajo transformaciones $SU(3)_c\times  SU(2)_L\times  U(1)_Y$ si
-\begin{align*}
-  Y_L+Y_{\widetilde{\Phi}}-Q_{e_R}=&0\\
-  Y_Q+Y_{\widetilde{\Phi}}-Q_{d_R}=&0\\
-  Y_Q+Y_{\Phi}-Y_{u_R}=Y_Q-Y_{\widetilde{\Phi}}-Q_{u_R}=&0\,,
-\end{align*}
-From this set of three equations we obtain the three doublet hypercharges:
-\begin{align}
-\label{eq:lhyp}
-Y_L=-\frac{1}{2}\,,\qquad Y_\Phi=\frac{1}{2}\,,\qquad Y_Q=\frac{1}{6}\,.
-\end{align}
-En el análisis anterior hemos fijado $Y_{\widetilde{\Phi}}=-Y_\Phi$. 
 
 El Lagrangiano completo involucrando estos campos son
 \begin{align}
@@ -375,9 +362,9 @@ i{e_R}^{\dagger}\sigma^\mu\mathcal{D}_\mu {e_R}+i{d_R}^{\dagger}\sigma^\mu\mathc
 \nonumber\\
      &-\tfrac{1}{4}G^{\mu\nu}_a G_{\mu\nu}^a-\tfrac{1}{4}W^{\mu\nu}_i W_{\mu\nu}^i-\tfrac{1}{4}B^{\mu\nu} B_{\mu\nu}\nonumber\\
      &+\widetilde{\left( \mathcal{D}_\mu{\Phi} \right)}\cdot\mathcal{D}^\mu\Phi-\mu^2\widetilde{\Phi}\cdot\Phi-\lambda \left( \widetilde{\Phi}\cdot\Phi \right)^2\nonumber\\
-     &- \left[  h_e \left( e_R \right)^{\dagger}\,\epsilon^{ab}L_a\widetilde{\Phi}_b +
-      h_d \left( d_R \right)^{\dagger}\,\epsilon^{ab}Q_a\widetilde{\Phi}_b +
-      h_u \left( u_R \right)^{\dagger}\,\epsilon_{ab}Q_a{\Phi}_{b}+\text{h.c}\right]\nonumber\\
+     &- \left[  h_e \left( e_R \right)^{\dagger}\,L\cdot \widetilde{\Phi}_b +
+      h_d \left( d_R \right)^{\dagger}\,Q\cdot \widetilde{\Phi} +
+      h_u \left( u_R \right)^{\dagger}\,Q\cdot {\Phi}+\text{h.c}\right]\nonumber\\
      =&\mathcal{L}_{\text{fermion}}+\mathcal{L}_{\text{gauge}}
      +\mathcal{L}_{WBH}
      -\mathcal{L}_{\text{Yukawa}}\,.
@@ -391,17 +378,44 @@ Resumiendo
 
 \begin{align}
   \label{eq:smscalar}
-\mathcal{L}_{\text{fermion}}=&i\widetilde{Q}\cdot \overline{\sigma}^\mu\mathcal{D}_\mu Q+i\widetilde{L}\cdot \overline{\sigma}^\mu\mathcal{D}_\mu L+
-i{e_R}^{\dagger}\sigma^\mu\mathcal{D}_\mu {e_R}+i{d_R}^{\dagger}\sigma^\mu\mathcal{D}_\mu {d_R}+i{u_R}^{\dagger}\sigma^\mu\mathcal{D}_\mu {u_R}\nonumber\\
+\mathcal{L}_{\text{fermion}}=&i\widetilde{Q}\cdot \overline{\sigma}^\mu\mathcal{D}_\mu Q+i\widetilde{L}\cdot \overline{\sigma}^\mu\mathcal{D}_\mu L \nonumber\\
+&+i(e_R)^{\dagger}\sigma^\mu\mathcal{D}_\mu {e_R}+i(d_R)^{\dagger}\sigma^\mu\mathcal{D}_\mu {d_R}+i(u_R)^{\dagger}\sigma^\mu\mathcal{D}_\mu {u_R}\nonumber\\
 \mathcal{L}_{\text{gauge}}=& -\tfrac{1}{4}G^{\mu\nu}_a G_{\mu\nu}^a-\tfrac{1}{4}W^{\mu\nu}_i W_{\mu\nu}^i-\tfrac{1}{4}B^{\mu\nu} B_{\mu\nu}\nonumber\\
   \mathcal{L}_{WBH}=&\widetilde{\left( \mathcal{D}_\mu{\Phi} \right)}\cdot\mathcal{D}^\mu\Phi-\mu^2\widetilde{\Phi}\cdot\Phi-\lambda \left( \widetilde{\Phi}\cdot\Phi \right)^2 \nonumber\\
 %=&(\mathcal{D}_\mu\Phi)^\dagger\mathcal{D}^\mu\Phi-\mu^2\Phi^\dagger\Phi-\lambda(\Phi^\dagger\Phi)^2\nonumber\\
 %=&(\mathcal{D}_\mu\widetilde{\Phi})^\dagger\mathcal{D}^\mu\widetilde{\Phi}-\mu^2\widetilde{\Phi}^\dagger\widetilde{\Phi}-\lambda(\widetilde{\Phi}^\dagger\widetilde{\Phi})^2\nonumber\\
-\mathcal{L}_{\text{Yukawa}}=&- \left[  h_e \left( e_R \right)^{\dagger}\,\epsilon^{ab}L_a\widetilde{\Phi}_b +
-      h_d \left( d_R \right)^{\dagger}\,\epsilon^{ab}Q_a\widetilde{\Phi}_b +
-      h_u \left( u_R \right)^{\dagger}\,\epsilon_{ab}Q_a{\Phi}_{b}+\text{h.c}\right]
+-\mathcal{L}_{\text{Yukawa}}=&  h_e \left( e_R \right)^{\dagger}\,L\cdot \widetilde{\Phi}_b +
+      h_d \left( d_R \right)^{\dagger}\,Q\cdot \widetilde{\Phi} +
+      h_u \left( u_R \right)^{\dagger}\,Q\cdot {\Phi}+\text{h.c}
 \end{align}
 Para el potencial escalar usaremos la forma más conveniente del producto matricial para el invariante de $SU(2)_L$ por que no hay ambiguedad con el conjugado de un campo escalar. 
+
+Para los campos del Lagrangiano, debemos asegurarnos de que todos los términos invariantes gauge locales y renormalizables sean considerados. De hecho un término de interacción entre fermiones y el campo escalar, correspondiente a una interacción de Yukawa son invariantes bajo transformaciones $SU(3)_c\times  SU(2)_L\times  U(1)_Y$ si
+\begin{align*}
+  Y_L+Y_{\widetilde{\Phi}}-Q_{e}=&0\\
+  Y_Q+Y_{\widetilde{\Phi}}-Q_{d}=&0\\
+  Y_Q+Y_{\Phi}-Y_{u_R}=Y_Q-Y_{\widetilde{\Phi}}-Q_{u}=&0\,,
+\end{align*}
+De este conjunto de 3 ecuaciones obtenemos
+\begin{align}
+ Y_L+ Y_Q+Y_{\widetilde{\Phi}}  =&Q_e+Q_d \nonumber\\
+  Y_Q-Y_{\widetilde{\Phi}} =&Q_u\,.
+\end{align}
+% Sumando y restando esas ecuaciones, tenemos
+% \begin{align}
+%   4 Y_L=&Q_e+Q_d+2Q_u \nonumber\\
+%   Y_L=&\frac{Q_e+Q_d+2Q_u}{4} \nonumber\\
+% =&\frac{-1+-1/3+4/3}{4} \nonumber\\
+% =&\frac{-1+-1/3+4/3}{4} \nonumber\\
+% \end{align}
+
+las tres hipercargas para los dobletes
+\begin{align}
+\label{eq:lhyp}
+Y_L=-\frac{1}{2}\,,\qquad Y_\Phi=\frac{1}{2}\,,\qquad Y_Q=\frac{1}{6}\,.
+\end{align}
+En el análisis anterior hemos fijado $Y_{\widetilde{\Phi}}=-Y_\Phi$. 
+
 
 Bajo una transformación gauge local las derivadas covariantes de los campos (y por consiguiente los campos) transforman como:
 \begin{align}
@@ -418,7 +432,7 @@ donde $Q_{e_R}=-1$, etc, son las cargas eléctricas asociadas a los campos.
 Sin perdida de generalidad los cuatro grados de libertad de $\Phi$, pueden escribirse en la forma
 \begin{align}
 \label{eq:polarhiggs}
-  {\Phi}=&e^{i\eta_j(x)T^j}
+  {\Phi}=&e^{i G_j(x)T^j}
   \begin{pmatrix}
     0\\
     \frac{1}{\sqrt{2}}[H(x)+v]
@@ -440,26 +454,26 @@ con $\mu^2<0$ y $\lambda>0$, se reduce a
 Retornando al doblete de Higgs del modelo estándar en la ec.~\eqref{eq:polarhiggs}, los cuatro grados de libertad de $\Phi$, pueden escribirse en forma polar con la parte real neutra desplazada para generar la ruptura espontánea de la simetría $SU(2)_L\times  U(1)_Y$
 \begin{align}
 \label{eq:92qft}
-  {\Phi}=&e^{i\eta_jT^j}
+  {\Phi}=&e^{i G_jT^j}
   \begin{pmatrix}
     0\\
     \frac{1}{\sqrt{2}}(H(x)+v)
   \end{pmatrix}\\
   \approx&
   \frac{1}{2}\begin{pmatrix}
-    1+i\eta_3&\sqrt{2}i\eta^+\\
-    \sqrt{2}i\eta^-&1-i\eta_3
+    1+i G_3&\sqrt{2}i G^+\\
+    \sqrt{2}i G^-&1-i G_3
   \end{pmatrix}  \begin{pmatrix}
     0\\
     \frac{1}{\sqrt{2}}(H(x)+v)
   \end{pmatrix}\nonumber\\
   =&\frac{1}{2}\begin{pmatrix}
-    i\eta^+H+vi\eta^+\\
-    \frac{1}{\sqrt{2}}(H+v-i\eta_3H-i\eta_3 v)
+    i G^+H+vi G^+\\
+    \frac{1}{\sqrt{2}}(H+v-i G_3H-i G_3 v)
   \end{pmatrix}\nonumber\\
   =&\begin{pmatrix}
-    G^+\\
-    \frac{1}{\sqrt{2}}(H(x)+v-iG^0)
+    \eta^+\\
+    \frac{1}{\sqrt{2}}(H(x)+v-i\eta^0)
   \end{pmatrix}.\nonumber
 \end{align}
 Para $SU(2)_L\times  U(1)_Y$ tenemos cuatro generadores y cuatro bosones gauge. De acuerdo a la parametrización en ec.~\eqref{eq:92qft} esperamos que aparezcan tres bosones de Goldstone y un campo de Higgs con masa, de manera que quedará un generador no roto correspondiente a una simetría remanente del vacío $U(1)_Q$
@@ -558,7 +572,7 @@ De modo que
   \end{pmatrix}-V(H)\nonumber\\
 =&\frac{1}{2}\begin{pmatrix}
     \partial^\mu H+i\left(-\frac{1}{2}gW_3^\mu+g'Y_{\widetilde{\Phi}} B^\mu\right)(H+v)\\
-    -\frac{i}{\sqrt{2}}g{W^\mu}^+(H+v)\\
+    \frac{i}{\sqrt{2}}g{W^\mu}^-(H+v)\\
   \end{pmatrix}\cdot
   \begin{pmatrix}
     -\frac{i}{\sqrt{2}}gW_\mu^+(H+v)\\
@@ -1021,7 +1035,7 @@ donde
 Recopilando los resultados para $\mathcal{L}_{WBH}$ \eqref{eq:lwbhfin}, $\mathcal{L}_{\text{Yukawa}}$ \eqref{eq:lyukfin}, $\mathcal{L}_{\text{fermion}}$ \eqref{eq:lfermionfin}, y $\mathcal{L}_{\text{gauge}}$ \eqref{eq:lgaguefin}, tenemos  para $f=\nu_e,e,u,d$; $q=u,d$ [con $f'=e$ ($d$) para $f=\nu_e$ ($u$) ], podemos escribir en notación de Dirac:
 %%arrglar
 \begin{align}
-  \mathcal{L}_{\text{1 gen}}=&\sum_f i{f}^{\dagger}\left(\overline{\sigma}^\mu\partial_\mu-m_f\right)f\nonumber\\
+  \mathcal{L}_{\text{1 gen}}=&\sum_f i\overline{f}\left(\gamma^\mu\partial_\mu-m_f\right)f\nonumber\\
 &-\tfrac{1}{4}F^{\mu\nu} F_{\mu\nu}-\tfrac{1}{4}Z^{\mu\nu} Z_{\mu\nu}-\tfrac{1}{2}(F_W^\dagger)^{\mu\nu} (F_W)_{\mu\nu}
 - \tfrac{1}{4}\widetilde{G}^{\mu\nu}_a \widetilde{G}_{\mu\nu}^a\nonumber\\
 &+\tfrac{1}{2}\partial^\mu H\partial_\mu H
