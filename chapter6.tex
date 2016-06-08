@@ -358,7 +358,7 @@ y hemos puesto la carga del electrón para hacer explícita la conservación de 
 El Lagrangiano completo involucrando estos campos son
 \begin{align}
      \mathcal{L}=&i\widetilde{Q}\cdot \overline{\sigma}^\mu\mathcal{D}_\mu Q+i\widetilde{L}\cdot \overline{\sigma}^\mu\mathcal{D}_\mu L+
-i{e_R}^{\dagger}\sigma^\mu\mathcal{D}_\mu {e_R}+i{d_R}^{\dagger}\sigma^\mu\mathcal{D}_\mu {d_R}+i{u_R}^{\dagger}\sigma^\mu\mathcal{D}_\mu {u_R}
+i(e_R)^{\dagger}\sigma^\mu\mathcal{D}_\mu {e_R}+i(d_R)^{\dagger}\sigma^\mu\mathcal{D}_\mu {d_R}+i(u_R)^{\dagger}\sigma^\mu\mathcal{D}_\mu {u_R}
 \nonumber\\
      &-\tfrac{1}{4}G^{\mu\nu}_a G_{\mu\nu}^a-\tfrac{1}{4}W^{\mu\nu}_i W_{\mu\nu}^i-\tfrac{1}{4}B^{\mu\nu} B_{\mu\nu}\nonumber\\
      &+\widetilde{\left( \mathcal{D}_\mu{\Phi} \right)}\cdot\mathcal{D}^\mu\Phi-\mu^2\widetilde{\Phi}\cdot\Phi-\lambda \left( \widetilde{\Phi}\cdot\Phi \right)^2\nonumber\\
@@ -1158,20 +1158,22 @@ De los procesos entre familias, es decir de cambio de sabor, sabemos que
 Proponemos entonces el Lagrangiano
 \begin{align}
 \label{eq:265qft} 
-    \mathcal{L}=&i\sum_i\left( Q^{\prime\dagger}_i\overline{\sigma}^\mu\mathcal{D}_\mu Q'_i+ L^{\prime\dagger}_i\overline{\sigma}^\mu\mathcal{D}_\mu L'_i+
-{e_R^{\prime\dagger}}_i\sigma^\mu\mathcal{D}_\mu {e_R}^{\prime i}+{d_R^{\prime\dagger}}_i\sigma^\mu\mathcal{D}_\mu {d_R}^{\prime i}+{u_R^{\prime\dagger}}_i\sigma^\mu\mathcal{D}_\mu {u_R}^{\prime i}\right)
+    \mathcal{L}=&i \widetilde{Q}^{\prime}_i\overline{\sigma}^\mu\cdot \mathcal{D}_\mu Q^{\prime i}+i\widetilde{ L}^{\prime}_i\overline{\sigma}^\mu\cdot \mathcal{D}_\mu L^{\prime i}+
+i\left( e_R^{\prime} \right)^{\dagger}_i\sigma^\mu\mathcal{D}_\mu {e_R}^{\prime i}+i(d_R^{\prime})^{\dagger}_i\sigma^\mu\mathcal{D}_\mu {d_R}^{\prime i}+i(u_R^{\prime})^{\dagger}_i\sigma^\mu\mathcal{D}_\mu {u_R}^{\prime i}
 \nonumber\\
-     &-(h_{ij}^E L^{\prime\dagger}_i\Phi {e_R}'_j+h_{ij}^D Q^{\prime\dagger}_i\Phi {d_R}'_j+h_{ij}^U Q^{\prime\dagger}_i\widetilde{\Phi}{u_R}'_j+\text{h.c})\nonumber\\
+     &- \sum_{ij}\left( h_{ij}^E (e_R')^{\dagger}_i{L}^{\prime}_j\cdot \widetilde{\Phi}  
++h_{ij}^D (d_R')^{\dagger}_i{Q}^{\prime}_j\cdot \widetilde{\Phi}  
++h_{ij}^U(u_R')^{\dagger}_i Q^{\prime}_j\cdot \Phi+\text{h.c} \right)\nonumber\\
      &-\tfrac{1}{4}W^{\mu\nu}_i W_{\mu\nu}^i-\tfrac{1}{4}B^{\mu\nu} B_{\mu\nu}\nonumber\\
-     &+(\mathcal{D}_\mu\Phi)^\dagger\mathcal{D}^\mu\Phi-\mu^2\Phi^\dagger\Phi+\lambda(\Phi^\dagger\Phi)^2\,.
+     &+\widetilde{\left( \mathcal{D}_\mu{\Phi} \right)}\cdot\mathcal{D}^\mu\Phi-\mu^2\widetilde{\Phi}\cdot\Phi-\lambda \left( \widetilde{\Phi}\cdot\Phi \right)^2\,.
 \end{align}
 Para aclarar la notación, obviando de momento la definición definitiva de $h_{ij}$ y las primas sobre los campos, consideremos el Lagrangiano de Yukawa para el sector down
 \begin{align}
   \label{eq:264qft}
-  \mathcal{L}\supset&h^D_{ij}{d_R}^{\dagger}_i\Phi^\dagger Q_j+\text{h.c}\nonumber\\
-\supset&h^D_{ij}{d_R}^{\dagger}_i\epsilon_{ab}\widetilde{\Phi}^aQ_j^b+\text{h.c}\nonumber\\
-\supset&h^D_{ij}\epsilon_{ab}{{d_R}^{\dagger}_i}^\alpha\widetilde{\Phi}^aQ_{j\alpha}^b+\text{h.c}\nonumber\\
-\supset&h^D_{ij}\epsilon_{ab}{(d_{R\gamma}^\dagger)}_i^\alpha\widetilde{\Phi}^aQ_{j\alpha}^{b\gamma}+\text{h.c}\,,
+  \mathcal{L}\supset&h_{ij}^D (d_R')^{\dagger}_i{Q}^{\prime}_j\cdot \widetilde{\Phi}+\text{h.c}\nonumber\\
+\supset&-h^D_{ij}{d_R}^{\dagger}_i\epsilon_{ab}\widetilde{\Phi}^aQ_j^b+\text{h.c}\nonumber\\
+\supset&-h^D_{ij}\epsilon_{ab}{{d_R}^{\dagger}_i}^\alpha\widetilde{\Phi}^aQ_{j\alpha}^b+\text{h.c}\nonumber\\
+\supset&-h^D_{ij}\epsilon_{ab}{(d_{R\gamma}^\dagger)}_i^\alpha\widetilde{\Phi}^aQ_{j\alpha}^{b\gamma}+\text{h.c}\,,
 \end{align}
 donde $i,a,\gamma,\alpha$ son índices en los espacios de familia, $SU(2)_L$, $SU(3)_c$ y de Weyl, respectivamente. Por ejemplo el primer termino de la sumatoria 
 \begin{align}
@@ -1182,65 +1184,64 @@ donde $i,a,\gamma,\alpha$ son índices en los espacios de familia, $SU(2)_L$, $S
 
 corresponde a la interacción de Yukawa del quark down rojo ($r$) con un campo escalar complejo neutro en carga eléctrica pero de isospín débil $1/2$. En forma compacta la primera expresión en la ec.~(\ref{eq:264qft}) puede escribirse como (en el gauge unitario)
 \begin{align}
-  \mathcal{L}\supset&\overline{\mathbf{d}_R} \mathbf{h}^D \Phi^\dagger \mathbf{Q}+\overline{\mathbf{Q}_L}\Phi{\mathbf{h}^{D}}^\dagger  \mathbf{d}_R\nonumber\\
-  &\supset\overline{\mathbf{d}_R} \mathbf{h}^D
-  \begin{pmatrix}
-    0 &
-    \frac{H(x)+v}{\sqrt{2}}
-  \end{pmatrix}
-  \begin{pmatrix}
-    \mathbf{u}_L\\
-    \mathbf{d}_L\\
-  \end{pmatrix}
+  \mathcal{L}\supset&(\mathbf{d}_R')^{\dagger} \mathbf{h}^D\mathbf{Q}'\cdot \widetilde{\Phi} +\text{h.c}\nonumber\\
+  % &\supset\overline{\mathbf{d}_R} \mathbf{h}^D
+  % \begin{pmatrix}
+  %   0 &
+  %   \frac{H(x)+v}{\sqrt{2}}
+  % \end{pmatrix}
+  % \begin{pmatrix}
+  %   \mathbf{u}_L\\
+  %   \mathbf{d}_L\\
+  % \end{pmatrix}
+  % +\text{h.c}\nonumber\\
+  &\supset(\mathbf{d}_R')^{\dagger} \mathbf{h}^D
+  \left(\frac{H(x)+v}{\sqrt{2}}\right)\mathbf{d}'_L
   +\text{h.c}\nonumber\\
-  &\supset\overline{\mathbf{d}_R} \mathbf{h}^D
-  \left(\frac{H(x)+v}{\sqrt{2}}\right)\mathbf{d}_L
-  +\text{h.c}\nonumber\\
-  &\supset\overline{\mathbf{d}_R} \frac{\mathbf{h}^D}{\sqrt{2}}H(x)\mathbf{d}_L
-  +\overline{\mathbf{d}_R} \frac{\mathbf{h}^Dv}{\sqrt{2}}\mathbf{d}_L
+  &\supset(\mathbf{d}_R')^{\dagger}  \frac{\mathbf{h}^D}{\sqrt{2}}H(x)\mathbf{d}'_L
+  +(\mathbf{d}_R')^{\dagger}  \frac{\mathbf{h}^Dv}{\sqrt{2}}\mathbf{d}'_L
       +\text{h.c}\nonumber\\
-  &\supset\overline{\mathbf{d}_R} \frac{\mathbf{h}^D}{\sqrt{2}}H(x)\mathbf{d}_L
-  +\overline{\mathbf{d}_R} \mathbf{M}^D\mathbf{d}_L
+  &\supset(\mathbf{d}_R')^{\dagger}  \frac{\mathbf{h}^D}{\sqrt{2}}H(x)\mathbf{d}'_L
+  +(\mathbf{d}_R')^{\dagger}  \mathbf{M}^D\mathbf{d}'_L
       +\text{h.c}\,.
 \end{align}
-La matrix $3\times 3$ $\mathbf{M}^3$ es en general una matriz compleja no diagonal, la cual se debe diagonalizar con una transformación biunitaria (de similaridad).
+La matrix $3\times 3$ $\mathbf{M}^D$ es en general una matriz compleja no diagonal, la cual se debe diagonalizar con una transformación biunitaria (de similaridad).
 Retornado a la ec.~(\ref{eq:265qft}), tenemos que para definir apropiadamente la masa de los quarks, rotamos de los autoestados de interacción a los autoestados de masa con la matrices unitarias
 \begin{align}
   \label{eq:229qft}
-  {d_{R,L}}'_j&=(V^D_{R,L})_{jk}\, {d_{R,L}}_k&   \overline{d_{R,L}}'_j&=\overline{d_{R,L}}_k({V^D_{R,L}}^\dagger)_{kj}\,&
+  {d_{R,L}}'_j&=(V^D_{R,L})_{jk}\, {d_{R,L}}_k&   (d_{R,L}')^{\dagger}_j&=(d_{R,L}')^{\dagger}_k({V^D_{R,L}}^\dagger)_{kj}\,&
 \end{align}
 Tal que
 \begin{align}
-  ({V^D_{R,L}}^\dagger)_{ij}(V^D_{R,L})_{jk}&=\delta_{ik}& ({V^D_L}^\dagger)_{ki}M^D_{ij}(V^D_R)_{jl}=m^D_k\delta_{kl}
+  ({V^D_{R,L}}^\dagger)_{ij}(V^D_{R,L})_{jk}&=\delta_{ik}& ({V^D_R}^\dagger)_{ki}M^D_{ij}(V^D_L)_{jl}=m^D_k\delta_{kl}
 \end{align}
 
 \begin{align}
- {\mathbf{V}_L^D}^\dagger \left(\mathbf{M}^D{\mathbf{M}^D}^\dagger\right)\mathbf{V}_L^D=&
- \left({\mathbf{V}_L^D}^\dagger \mathbf{M}^D\mathbf{V}_R^D\right)\left({\mathbf{V}_R^D}^\dagger{\mathbf{M}^D}^\dagger\mathbf{V}_L^D\right)\nonumber\\
- =& \mathbf{M}^D_{\text{diag}}{\mathbf{M}^D_{\text{diag}}}^\dagger\nonumber\\
- =& \left({\mathbf{M}^D_{\text{diag}}}\right)^2\,,
+ {\mathbf{V}_R^D}^\dagger \left(\mathbf{M}^D{\mathbf{M}^D}^\dagger\right)\mathbf{V}_R^D=&
+ \left({\mathbf{V}_R^D}^\dagger \mathbf{M}^D\mathbf{V}_L^D\right)\left({\mathbf{V}_L^D}^\dagger{\mathbf{M}^D}^\dagger\mathbf{V}_R^D\right)\nonumber\\
+ =& \mathbf{M}^D_{\text{diag}}{\mathbf{M}^D_{\text{diag}}}^\dagger\,,
 \end{align}
 donde $\mathbf{M}^D_{\text{diag}}=\operatorname{diag}(m_1^D,m_2^D,m_3^D)$. Similarmente
 \begin{align}
-  {\mathbf{V}_R^D}^\dagger \left({\mathbf{M}^D}^\dagger\mathbf{M}^D\right)\mathbf{V}_R^D=& \left({\mathbf{M}^D_{\text{diag}}}\right)^2\,.
+  {\mathbf{V}_L^D}^\dagger \left({\mathbf{M}^D}^\dagger\mathbf{M}^D\right)\mathbf{V}_L^D=& 
+  {\mathbf{M}^D_{\text{diag}}}^\dagger{\mathbf{M}^D_{\text{diag}}}\,,
 \end{align}
 %\left(\right)
-
+%cambiar orden
 Con definiciones similares para los campos $u_i$ y $e_i$.
 \begin{align}
-\mathcal{L}_{\text{Yukawa}}\supset&\overline{d_L}'_i\frac{h_{ij}^Dv}{\sqrt{2}} {d_R}'_j\nonumber\\
-=&\overline{d_L}'_iM^D_{ij} {d_R}'_j\nonumber\\
-=&{d_L}^{\dagger}_k({V^D_L}^\dagger)_{ki}M^D_{ij}(V^D_R)_{jl} {d_R}_l\nonumber\\
-=&{d_L}^{\dagger}_km^D_k\delta_{kl} {d_R}_l\nonumber\\
-=&m^D_k{d_L}^{\dagger}_k{d_R}_k
+\mathcal{L}_{\text{Yukawa}}\supset&(d_R')^{\dagger}_iM^D_{ij} {d_L'}_j\nonumber\\
+=&(d_R)^{\dagger}_k({V^D_R}^\dagger)_{ki}M^D_{ij}(V^D_L)_{jl} {d_L}_l\nonumber\\
+=&(d_R)^{\dagger}_km^D_k\delta_{kl} {d_L}_l\nonumber\\
+=&m^D_k(d_R)^{\dagger}_k{d_L}_k
 \end{align}
 Para las diferentes combinaciones de términos de corrientes
 \begin{align}
-  \overline{u_L}'_i \overline{\sigma}^\mu{d_L}'_i=&{u_L}^{\dagger}_k\overline{\sigma}^\mu({V^U_L}^\dagger)_{ki}(V^D_L)_{il} {d_L}_l\nonumber\\
-  =&V_{kl}{u_L}^{\dagger}_k\overline{\sigma}^\mu{d_L}_l\nonumber\\
-  \overline{\nu_L}'_i\overline{\sigma}^\mu {e_L}'_i=&\overline{\nu_L}'_i\overline{\sigma}^\mu(V^E_L)_{ij} {e_L}_j\nonumber\\
-  =&\overline{\nu_L}'_i(V^E_L)_{ij}\overline{\sigma}^\mu {e_L}_j\nonumber\\
-  =&\overline{\nu_L}_j\overline{\sigma}^\mu{e_L}_j
+  (u_L')^{\dagger}_i \overline{\sigma}^\mu{d_L}'_i=&(u_L)^{\dagger}_k\overline{\sigma}^\mu({V^U_L}^\dagger)_{ki}(V^D_L)_{il} {d_L}_l\nonumber\\
+  =&V_{kl}(u_L)^{\dagger}_k\overline{\sigma}^\mu{d_L}_l\nonumber\\
+  (\nu_L')^{\dagger}_i\overline{\sigma}^\mu {e_L}'_i=&(\nu_L')^{\dagger}_i\overline{\sigma}^\mu(V^E_L)_{ij} {e_L}_j\nonumber\\
+  =&(\nu_L')^{\dagger}_i(V^E_L)_{ij}\overline{\sigma}^\mu {e_L}_j\nonumber\\
+  =&(\nu_L)^{\dagger}_j\overline{\sigma}^\mu{e_L}_j
 \end{align}
 Donde hemos definido la matriz de Cabibbo--Kobayashi--Maskawa (CKM) como
 \begin{align}
@@ -1248,16 +1249,15 @@ Donde hemos definido la matriz de Cabibbo--Kobayashi--Maskawa (CKM) como
   V=&{V^U_L}^\dagger V^D_L\nonumber\\
   V^\dagger V=&{V^D_L}^\dagger{V^U_L}{V^U_L}^\dagger V^D_L=\mathbf{1}\Rightarrow \sum_jV^\dagger_{ij}V_{jk}=\delta_{ik}\Rightarrow\sum_jV^*_{ji}V_{jk}=\delta_{ik}\Rightarrow\sum_j|V_{ji}|^2=\sum_j|V_{ij}|^2=1
 \end{align}
-
 y los autoestados débiles de los neutrinos como
 \begin{align}
   {\nu_L}'_i=({V^E_L}^\dagger)_{ij}{\nu_L}_j
 \end{align}
 Con esta definición, las corrientes débiles cargadas para los leptones siguen siendo universales. Similarmente
 \begin{align}
-   {u_L}^{\prime\dagger}_i \overline{\sigma}^\mu{u_L}'_i=&{u_L}^{\dagger}_k\overline{\sigma}^\mu({V^U_L}^\dagger)_{ki}(V^U_L)_{il} {u_L}_l\nonumber\\
-  =&\delta_{kl}{u_L}^{\dagger}_k \overline{\sigma}^\mu{u_L}_l\nonumber\\
-  =&{u_L}^{\dagger}_k\overline{\sigma}^\mu {u_L}_k
+   (u_L')^{\dagger}_i \overline{\sigma}^\mu{u_L}'_i=&{u_L}^{\dagger}_k\overline{\sigma}^\mu({V^U_L}^\dagger)_{ki}(V^U_L)_{il} {u_L}_l\nonumber\\
+  =&\delta_{kl}(u_L)^{\dagger}_k \overline{\sigma}^\mu{u_L}_l\nonumber\\
+  =&(u_L)^{\dagger}_k\overline{\sigma}^\mu {u_L}_k
  \end{align}
 De modo que todas las corrientes neutras permanecen universales después de la redefinición de los campos fermiónicos. A éste resultado, basado en la unitariedad de las transformaciones biunitarias se le llama \emph{Mecanismo GIM}. En muchas extensiones del Modelo Estándar las matrices que transforman los fermiones a sus autoestados de masa no son unitarias y dan lugar a corrientes débiles neutras que cambian sabor (FCNC de sus siglas en inglés). 
 
