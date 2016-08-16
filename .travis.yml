@@ -21,7 +21,7 @@ language: r
 #in the before_install step.
 
 before_install:
-  - tlmgr install index chngcntr etoolbox
+  - tlmgr install chngcntr cancel
 
 # we can install additional software
 apt_packages:
