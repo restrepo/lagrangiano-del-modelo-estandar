@@ -1,52 +1,15 @@
-#https://github.com/SimonWaldherr/HowTo-Deploy-LaTeX-Documents -> .travis.yml
-#=========================
-#WARNING: Don't forget to create the DESCRIPTION FILE with contents:
-#Imports:
-#    rmarkdown
-#===========
-
 os: linux
 sudo: required
-
-# we use the R VM because it contains LaTeX and pandoc
-# https://docs.travis-ci.com/user/languages/r
-#Requieres DESCRIPTION file
-
 language: r
-
-#LaTeX/TexLive Packages #
-#The included TexLive distribution contains only a limited
-#set of default packages. If your vignettes require additional
-#TexLive packages you can install them using tlmgr install
-#in the before_install step.
-
-#before_install:
-#  - tlmgr install index simplewick
-
-# we can install additional software
 apt_packages:
-# we download pdf2djvu to also generate a djvu f i l e of our LaTeX source
-  - pdf2djvu
-
+- pdf2djvu
 script:
-# in the next step we use pdflatex to convert .tex to .pdf
-# of course we could use pandoc for this also, but pdflatex generates nicer PDFs
-  - pdflatex -interaction=nonstopmode fullnotes.tex
-  - pdflatex -interaction=nonstopmode fullnotes.tex
-
-#The following lines where automaticaly generated after
-# cd into my local repo with the old version of .travis.yml
-# install travis cli from: https://github.com/travis-ci/travis.rb
-#  $ sudo apt-get install ruby2.1-dev
-#  $ sudo gem install travis -v 1.8.2 --no-rdoc --no-ri
-#  $ travis setup releases
-# Add:   skip_cleanup: true (see below)
-
+- pdflatex -interaction=nonstopmode fullnotes.tex
+- pdflatex -interaction=nonstopmode fullnotes.tex
 deploy:
   provider: releases
   api_key:
-    secure: DPpPm2477M8Sz3oV3aIbrd4VianfNf/vaWUg5QSVg44FDP2sp0P19Nu2/KXS9rDafQ2IHhNJ2I7kSh6odpQYaeRyK1FuSAIdnHSYfySo3d0OCHgUFau67Cz1PV3V4H870dYRUcAln6Vt3Fhth5tK9oBJgWAEdf4sjbnuUziog3UXEP24yr9zrvMJ5iJ5bN2Wvd8ag7QuQT7vSBj0PHH8yWcpqqSN4yc3xYzWo/t4a66uo+V8Pt8LKw5q+D+6wloPYhg2P/AE0JvMHNPU3/CwhX3bTyFMvBtjzrysBRKshjEHvJwFy0hDJ3G224ucD6P+7QFWqjMNu8VaqSecAK8MGtZH7bBeNwFsj7WL3Oy8c/X4UhmlVW88FCIkFeZqUzpuFiub78//QC6WhKYzRQcv0exulZ+Z4ryZK69YGJfLPYY1byXdafZ7ftRaRkzoBX1nle060KH24jd6eqc+l3jyzTt/nFd+MGfBqybFPOp5qCgyHEDn3m6Yetttw57CGWvTCbiS8xRXWMoO+EehcKTY8h8AROj7RncxGZx9Xc/vlOA5yuRJr/hLpsWib0q7xU+SJRyNFdbMekkdzb+72Qg+wtqPEn/nW9Fq46BImDamCVA8A2k3FeP4T/durBdaI1/HZGFbzHbH6laJdCyn6hqGePgr9CU7NM/IAVBjpBQJI2g=
+    secure: fa0nXWt3nae7LrSay5Wtzc3HKgCWTIGulvPMPywI9TVNF9HBSuzVDxHBv0GHzbPeogSiFnsww5csOsAZ+WRxTUMx5zMQ1tMU66/eF8VQhWuT90bQPbgJ5HEIf0D84gwOdPv9JPNfU52xe1sMxTPH0zm80lg7ci/F62YSTJ8YMiPjGSIUmVmYGluub+K4YMxwBN5/my5P62Bi3Izw7xnx3jm+/r+HtzwCqUWSikS95CEBdvqUnLPCZEM9dR6JSSgaYEuzlvVdAi0YwwoeBiwLfC69lBe9YbfWjNRbF0RX1PpfQvaRg/Q5n17P1V/pBlnQ4MlhJwiBTlm2zy+VMPFk8vxKYBMyW3CLPHdrLVueCmP3+GRLV9EMiM8cxhMHBFxEaBCFKnqnzNzeRR7rTNpJG55/FKdxL9F1b/dL+0ZZZSv8XbmnmlaGv9jTS7XN+V6og+jAMDIGrplwEn3fHDoKhQYwlxXPI9Cao45boqDAoiDQZ8gejFIC2ly4LRvMgzKxQ+kogdVokA3VEaTDFP4JbTQirFjiG/XsxHsZJFJTn4mJOsBdyM87Jeh7pNZVcGIvzmPw/1RsChBpHG3BUbjB4CeFgcVq9fgQMDhMA3PZV7JUZZrcJz292EvC6qcOEwJ0Ngyacm8AxPKbcZAqLFSb4lL4Pb6DSwXCQtwjJ5avVok=
   file: fullnotes.pdf
-  skip_cleanup: true
   on:
     repo: restrepo/TCC
