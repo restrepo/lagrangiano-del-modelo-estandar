@@ -1513,7 +1513,7 @@ Ademas, para este caso
 
 \section{Primer teorema de Noether}
 
-Consideremos primero el caso en el que el parámetro de la transformación $\theta=\text{cte}$. Como $\partial_{\nu}\chi=0$ en ese caso
+Consideremos primero el caso en el que el parámetro de la transformación $\theta=\text{cte}$. Como $\partial_{\nu}\theta=0$ en ese caso
 \begin{align}
 \label{eq:infdt}
  \delta\phi_i= a_{i}\left( \phi_{i},\partial_{\mu}\phi_{i} \right) \theta(x)\,.
@@ -1525,7 +1525,7 @@ Consideremos primero el caso en el que el parámetro de la transformación $\the
 
 Generalizando al caso de una transformación con varios parámetros, tendremos la formulación del primer teorema de Noether para simetrías internas:
 
-\textbf{Teorema 1} Si la acción $S$ es invariante bajo un grupo continuo de simetrías globales que dependen suavemente de $\rho$ parámetros independientes $\theta_{\alpha}=\text{cte}$ ($\alpha=1,2,\ldots, \rho$), tal que $\delta\phi_i=a_{\alpha i}\theta^{\alpha}$, entonces existen las $\rho$ relaciones
+\textbf{Teorema 1}: Si la acción $S$ es invariante bajo un grupo continuo de simetrías globales que dependen suavemente de $\rho$ parámetros independientes $\theta_{\alpha}=\text{cte}$ ($\alpha=1,2,\ldots, \rho$), tal que $\delta\phi_i=a_{\alpha i}\theta^{\alpha}$, entonces existen las $\rho$ relaciones
 \begin{align}
 \sum_{i}\mathcal{E}_i a_{\alpha i}\equiv \partial_{\mu} j^{\mu}_{\alpha}\,,  
 \end{align}
@@ -1569,7 +1569,7 @@ Si interpretamos $j^0$ como la densidad, $\rho$, de una cierta carga $Q$, tal qu
 \begin{align}
   Q=\int_{V} \operatorname{d}^3x\, j^0= \int_{V} \operatorname{d}^3x\, \rho\,,
 \end{align}
-entonces, si escogemos $S$ como una superficie suficientemente grande para contener toda la distribución de carga $Q$ en su interior, tendremos que
+entonces, si escogemos $S$ como una superficie suficientemente grande para contener toda la distribución de carga $Q$ en su interior, tendremos que la integral sobre la superficie se anula y por consiguiente
 \begin{align}
   \int_V \operatorname{d}^3x\,\frac{\partial j^0}{\partial t}=&
 \frac{\operatorname{d}}{\operatorname{d}t}\int_V \operatorname{d}^3x\,\rho \nonumber\\
@@ -1759,23 +1759,23 @@ Note que las ecuaciones de Euler-Lagrange surgen del Problema variacional de Noe
 \end{align}
 \section{Segundo teorema de Noether}
 
-Estudiaremos en una versión del segundo teorema de Noether sólo para simetrías internas . La invarianza de la Acción de Scrhödinger bajo una transformación de fase global, da lugar a una conservación global de la probabilidad: la probabilidad se conserva en todos los puntos del espacio simultáneamente. Esto no es incompatible con relatividad especial por que no involucra intercambio de información, pero si permite, en particular, que por ejemplo la teletransportación cuántica sea instantánea.
+Estudiaremos  una versión del segundo teorema de Noether aplicable sólo a simetrías internas~\cite{La version general del teorema incluye el caso de la relatividad general}. Como veremos más adelante, La invarianza de la Acción de Scrhödinger bajo una transformación de fase global, da lugar a una conservación global de la probabilidad: la probabilidad se conserva en todos los puntos del espacio simultáneamente. Esto no es incompatible con relatividad especial por que no involucra intercambio de información, pero si permite, en particular, que por ejemplo la teletransportación cuántica sea instantánea.
 
 Si imponemos que el cambio de fase sea local, es decir, dependiente de cada punto de cada punto del espacio tiempo, tendremos que para un campo $\phi_{i}=\phi,\phi^{*}$,
 \begin{align}
-  \phi_i\to \phi'_i=\operatorname{e}^{i \Delta\theta(x)}\phi_i\approx (1+i\Delta(x))\phi_i \,,
+  \phi_i\to \phi'_i=\operatorname{e}^{i \theta(x)}\phi_i\approx (1+i\theta(x))\phi_i \,,
 \end{align}
 de modo que
 \begin{align}
-  \delta\phi_i=i  \phi_i\,\Delta\theta(x)\,.
+  \delta\phi_i=i  \phi_i\,\theta(x)\,.
 \end{align}
 
-En el caso en el que el parámetro de la transformación, $\Delta\theta(x)$ sea constante, recuperamos el caso de la invarianza global, que en mecánica cuántica da lugar a la conservación global de la probabilidad. Note que la carga conservada con una transformación local de fase aún no se ha analizado.
+En el caso en el que el parámetro de la transformación, $\theta(x)$ sea constante, recuperamos el caso de la invarianza global, que en mecánica cuántica dará lugar a la conservación global de la probabilidad. Note que la carga conservada con una transformación local de fase aún no se ha analizado.
 
 Una transformación local interesante es la que ocurre en el caso electromagnético. La siguientes transformaciones locales del potencial eléctrico y el vector de potencial electromagnético, dejan invariante las ecuaciones de Maxwell\footnote{La demostración se hará en el siguiente capítulo.}
 \begin{align}
-  \phi \to \phi'=\phi+\frac{\partial}{\partial t}\eta(x)\,,\nonumber\\
-  \mathbf{A} \to \mathbf{A}'=\mathbf{A}- \boldsymbol{\nabla}\eta(x)\,,
+  \phi \to \phi'=\phi+\frac{\partial}{\partial t}\theta(x)\,,\nonumber\\
+  \mathbf{A} \to \mathbf{A}'=\mathbf{A}- \boldsymbol{\nabla}\theta(x)\,,
 \end{align}
 o, si definimos el cuadrivector de potencial electromagnético
 \begin{align}
@@ -1783,7 +1783,7 @@ o, si definimos el cuadrivector de potencial electromagnético
 \end{align}
 entonces %faltan detalles
 \begin{align}
-  \delta A^{\mu}=\partial_\mu \eta(x)\,.
+  \delta A^{\mu}=A^{\prime\mu}-A^{\mu}=\partial_\mu \theta(x)\,.
 \end{align}
 
 
