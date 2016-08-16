@@ -1,0 +1,18 @@
+os: linux
+sudo: required
+language: r
+before_install:
+- tlmgr install index simplewick
+apt_packages:
+- pdf2djvu
+script:
+- pdflatex -interaction=nonstopmode beyond.tex
+- pdflatex -interaction=nonstopmode beyond.tex
+deploy:
+  provider: releases
+  api_key:
+    secure: DPpPm2477M8Sz3oV3aIbrd4VianfNf/vaWUg5QSVg44FDP2sp0P19Nu2/KXS9rDafQ2IHhNJ2I7kSh6odpQYaeRyK1FuSAIdnHSYfySo3d0OCHgUFau67Cz1PV3V4H870dYRUcAln6Vt3Fhth5tK9oBJgWAEdf4sjbnuUziog3UXEP24yr9zrvMJ5iJ5bN2Wvd8ag7QuQT7vSBj0PHH8yWcpqqSN4yc3xYzWo/t4a66uo+V8Pt8LKw5q+D+6wloPYhg2P/AE0JvMHNPU3/CwhX3bTyFMvBtjzrysBRKshjEHvJwFy0hDJ3G224ucD6P+7QFWqjMNu8VaqSecAK8MGtZH7bBeNwFsj7WL3Oy8c/X4UhmlVW88FCIkFeZqUzpuFiub78//QC6WhKYzRQcv0exulZ+Z4ryZK69YGJfLPYY1byXdafZ7ftRaRkzoBX1nle060KH24jd6eqc+l3jyzTt/nFd+MGfBqybFPOp5qCgyHEDn3m6Yetttw57CGWvTCbiS8xRXWMoO+EehcKTY8h8AROj7RncxGZx9Xc/vlOA5yuRJr/hLpsWib0q7xU+SJRyNFdbMekkdzb+72Qg+wtqPEn/nW9Fq46BImDamCVA8A2k3FeP4T/durBdaI1/HZGFbzHbH6laJdCyn6hqGePgr9CU7NM/IAVBjpBQJI2g=
+  file: fullnotes.pdf
+  skip_cleanup: true
+  on:
+    repo: restrepo/TCC
