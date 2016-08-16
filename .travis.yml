@@ -6,10 +6,3 @@ apt_packages:
 script:
 - pdflatex -interaction=nonstopmode fullnotes.tex
 - pdflatex -interaction=nonstopmode fullnotes.tex
-deploy:
-  provider: releases
-  api_key:
-    secure: fa0nXWt3nae7LrSay5Wtzc3HKgCWTIGulvPMPywI9TVNF9HBSuzVDxHBv0GHzbPeogSiFnsww5csOsAZ+WRxTUMx5zMQ1tMU66/eF8VQhWuT90bQPbgJ5HEIf0D84gwOdPv9JPNfU52xe1sMxTPH0zm80lg7ci/F62YSTJ8YMiPjGSIUmVmYGluub+K4YMxwBN5/my5P62Bi3Izw7xnx3jm+/r+HtzwCqUWSikS95CEBdvqUnLPCZEM9dR6JSSgaYEuzlvVdAi0YwwoeBiwLfC69lBe9YbfWjNRbF0RX1PpfQvaRg/Q5n17P1V/pBlnQ4MlhJwiBTlm2zy+VMPFk8vxKYBMyW3CLPHdrLVueCmP3+GRLV9EMiM8cxhMHBFxEaBCFKnqnzNzeRR7rTNpJG55/FKdxL9F1b/dL+0ZZZSv8XbmnmlaGv9jTS7XN+V6og+jAMDIGrplwEn3fHDoKhQYwlxXPI9Cao45boqDAoiDQZ8gejFIC2ly4LRvMgzKxQ+kogdVokA3VEaTDFP4JbTQirFjiG/XsxHsZJFJTn4mJOsBdyM87Jeh7pNZVcGIvzmPw/1RsChBpHG3BUbjB4CeFgcVq9fgQMDhMA3PZV7JUZZrcJz292EvC6qcOEwJ0Ngyacm8AxPKbcZAqLFSb4lL4Pb6DSwXCQtwjJ5avVok=
-  file: fullnotes.pdf
-  on:
-    repo: restrepo/TCC
