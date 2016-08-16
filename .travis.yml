@@ -1,4 +1,9 @@
 #https://github.com/SimonWaldherr/HowTo-Deploy-LaTeX-Documents -> .travis.yml
+#=========================
+#WARNING: Don't forget to create the DESCRIPTION FILE with contents:
+#Imports:
+#    rmarkdown
+#===========
 
 os: linux
 sudo: required
