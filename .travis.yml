@@ -3,7 +3,7 @@
 #WARNING: Don't forget to create the DESCRIPTION FILE with contents:
 #Imports:
 #    rmarkdown
-#===========
+#=================
 
 os: linux
 sudo: required
@@ -35,13 +35,20 @@ script:
   - pdflatex -interaction=nonstopmode fullnotes.tex
   - pdflatex -interaction=nonstopmode fullnotes.tex
 
+#The following lines where automaticaly generated after
+# cd into my local repo with the old version of .travis.yml
+# install travis cli from: https://github.com/travis-ci/travis.rb
+#  $ sudo apt-get install ruby2.1-dev
+#  $ sudo gem install travis -v 1.8.2 --no-rdoc --no-ri
+#  $ travis setup releases
+# If failed login: remove Personal access token from github -> Settings
+# Add:   skip_cleanup: true (see below)
+
 deploy:
   provider: releases
   api_key:
-    secure: oNJUkDRl3fTQgk8/j3PlwH7srGQYjW0ng9ZU/sSmZo9E9jhBEF6FR0ky9kREQMmu/bbHWPfZLKqMtIuGl/wW71q/gAV0AKT/sH+DZ269VJtmjR1KEj8VNEJ0RE+rBGQ/CD36MkXtwipCxuUg14U7PrOIapVPkUPpyr1gx0ozQIkbE3b+K468yIVHkR9pfiYkuJWvr7ezunkM6RltnJA13733FUj/4U+qaNEWcKD8FGh5E8l68Zz/hzzEMm4aFkPn4XEqaJuaMN/Kqm82O9LwALYN7pTvCj6par4OQ1Z+dx/sujKRjRyhFMIcv14QpxYA4FBoH06bxk+Y8x3hP/X1+aqfY6b9C4Z6m1IRSLObXwC/Nu3gsG+OnNsCCwzpwdjQYk8mgnXe+QR903jq03w3UveYPkR1hPGNMrMDsAO8oOcr98S0wpIzcxshVzBO2EQzDE7gidA3C9wjZprzW5PBc7hEtPWkv0Kh0hl1cGvQ7dYqn+uYPEJgvA8XsMyF3yEUYutSIGVcWTK2rDodPqNE6fdiLQUfUyoc3XAQhf4hh8k4b6wpSOrBqKiTrjSchdHAT+GalSfXP4RwKE3SjXIl5K2ir62XU+CmRxq1jg7zqNW5gNiHjqzQqarxjIRmriPm3Em2nySHWRFgM+Nsy4680NXf5EhX9HheIOFwdsczBeI=
-
+    secure: DZ7mYeMtakweAPmwvF2jysEP8/i2PHyMgOwyvi2MRMBR6ZEB9MeSVNybTrwSRkB48w7XsbRvnRHjmnNqylmf604qgQ9RThrgW7Qi0PNBz6pGlw4JSV8bD5BId5f3gvRN7yYPUqieLI/7OeZ9UFfBT0R5aLR0oIz2NhkqhXGmRB8HPI4AIoRnYe0pGntB3gKhGMrxy5S3MeLvUFQCI3qmXk/dOaIepIwY48H/l6UUrM01yz8rIEVi1JcWqMEZY8SHpyGKuN8v4Ja9YzDVjv9wwwG0ujOBaF5yQ0A4TT+fZd9AznmmNP2qdQ185kTmfvNDiKwnvfZF6cm2MwNi/3kwiFWzqCzqrN6FzqzL1nD720iySjZ+U+ilaTLTYerx4I7ZyiakT1WbKh3XKmQJEsunwtMJgrLIFKnvk91PUIqSsuGBZCHaKbwkdXXvPoAiaiXMEQJBQ7mtoTQPZlDZ3EA9d0ybmyi2RVpwrDMvW9NzLPfHa+rOcJWbw8cXGXZL1Z3YG+G6PPAZvfpBS0bFSYZE7JhWnOMIgyhTHSj09YTNGjZwu1LN6OZdMwZhelOgLZ7KEBjJEwq4//3qmdZDZ4L8zJScCKp4ofu4W8EjQcPuwUzKsXMt+dXXXSQejLo/zhRNjFHCJVYzVOSdGMSEd5GkcGA04/yHXF46m4fFQKdL3Gc=
   file: fullnotes.pdf
   skip_cleanup: true
   on:
     repo: restrepo/TCC
-
