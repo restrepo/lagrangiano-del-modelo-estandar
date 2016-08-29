@@ -1189,7 +1189,7 @@ En la ecuación~\eqref{eq:dlc3d}, teníamos un Lagragiano en función de $\parti
    \right]\nonumber\\
    =&\frac{1}{2}{\partial_\mu\phi}\,{\partial^\mu\phi}\,.
 \end{align}
-donde se ha usado la convención de suma para índices repetidos. Note que para que la velocidad de propagación sea independiente del sistema de coordenadas se requiere su identificación con la velocidad de la luz. De modo que la si queremos interpretar los términos de la densidad Lagrangiana como objetos invariantes, necesariamente se tiene que hacer en el contexto de la relatividad especial.
+donde se ha usado la convención de suma para índices repetidos. Note que para que la velocidad de propagación sea independiente del sistema de coordenadas se requiere su identificación con la velocidad de la luz. De modo que la queremos interpretar los términos de la densidad Lagrangiana como objetos invariantes, necesariamente se tiene que hacer en el contexto de la relatividad especial.
 
 
 
@@ -1205,7 +1205,11 @@ Por definición, el campo escalar no cambia bajo la transformación de Lorentz, 
 \begin{align}
  \phi(x)\to  \phi'(x')=\phi(x)\,,
 \end{align}
-como se ilustra en la Fig.~\ref{fig:trasla}. 
+como se ilustra en la Fig.~\ref{fig:trasla}. La prima en $\phi$ representa el cambio intrínseco en el campo $\phi$ como consecuencia de la transformación. Definimos el cambio correspondiente como
+\begin{align}
+  \delta \phi(x)=\phi'(x)-\phi(x)\,.
+\end{align}
+
 
 
 
@@ -1224,7 +1228,7 @@ Tenemos
   &=[\phi(x)+\delta\phi(x)]+\frac{\partial}{\partial x^\mu}[\phi(x)+\delta\phi(x)]\delta x^\mu\\
   &\approx\phi(x)+\delta\phi(x)+\frac{\partial\phi(x)}{\partial x^\mu}\delta x^\mu,
 \end{align}
-donde, por simplicidad, $\phi$ es de nuevo un campo real. Entonces,
+donde, por simplicidad, $\phi$ es un campo real. Entonces,
 \begin{equation}
   \label{eq:Deltaf}
   \Delta\phi(x)\equiv\phi'(x')-\phi(x)=\delta\phi(x)+\frac{\partial\phi(x)}{\partial x^\mu}\delta x^\mu.
@@ -1378,13 +1382,17 @@ Definiendo el cambio interno en el campo como en \eqref{eq:deltaphi}
 \end{align}
 y el cambio en $x$ bajo una transformación de Lorentz infinitesimal como
 \begin{align}
+\label{eq:deltax}
   x\to x'=x+\delta x
 \end{align}
 tenemos que la variación en las variables dependientes e independientes de la Acción son
 \begin{align}
    \delta S=&\int_{R}d^4x'\,\mathcal{L} \left( \phi_{i}',\partial_{\mu}\phi'_i;x' \right)- \int_{R}d^4x\,\mathcal{L} \left( \phi_{i}(x),\partial_{\mu}\phi_i(x);x \right) \nonumber\\
-     =&\int_{R}\frac{\partial x'}{\partial x}d^4x\,\mathcal{L} \left( \phi_{i}+\delta\phi_i,\partial_{\mu}(\phi_i+\delta\phi_i);x+\delta x \right)- \int_{R}d^4x\,\mathcal{L} \left( \phi_{i},\partial_{\mu}\phi_i;x \right) \nonumber\\
-     =&\int_{R} \left[ 1+\partial_{\mu} \left( \delta x^{\mu}  \right)\right]  d^4x\,\left\{ \mathcal{L}(\phi_i,\partial_{\mu}\phi_i;x)+\sum_i \left[ \frac{\partial\mathcal{L}}{\partial\phi_i}\delta\phi_{i} +\frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}\partial_{\mu}(\delta\phi_{i}) \right]+\left( \partial_{\mu}\mathcal{L} \right)\delta x^{\mu} \right\}\nonumber\\
+     =&\int_{R}\frac{\partial x'}{\partial x}d^4x\,\mathcal{L} \left( \phi_{i}+\delta\phi_i,\partial_{\mu}(\phi_i+\delta\phi_i);x+\delta x \right)- \int_{R}d^4x\,\mathcal{L} \left( \phi_{i},\partial_{\mu}\phi_i;x \right)\,
+\end{align}
+Derivando \eqref{eq:deltax},
+\begin{align}
+     \delta S =&\int_{R} \left[ 1+\partial_{\mu} \left( \delta x^{\mu}  \right)\right]  d^4x\,\left\{ \mathcal{L}(\phi_i,\partial_{\mu}\phi_i;x)+\sum_i \left[ \frac{\partial\mathcal{L}}{\partial\phi_i}\delta\phi_{i} +\frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}\partial_{\mu}(\delta\phi_{i}) \right]+\left( \partial_{\mu}\mathcal{L} \right)\delta x^{\mu} \right\}\nonumber\\
       &- \int_{R}d^4x\,\mathcal{L} \left( \phi_{i},\partial_{\mu}\phi_i;x \right) \nonumber\\
      =&\int_{R} d^4x\,\left[ \partial_{\mu} \left( \delta x^{\mu}  \right)\right] \mathcal{L} + \int_{R}d^4x\,\left\{\sum_i \left[ \frac{\partial\mathcal{L}}{\partial\phi_i}\delta\phi_{i} +\frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}\partial_{\mu}(\delta\phi_{i}) \right]+\left( \partial_{\mu}\mathcal{L} \right)\delta x^{\mu} \right\}\nonumber\\
      =&\int_{R} d^4x\,\partial_{\mu} \left(\mathcal{L} \delta x^{\mu}  \right)  + \int_{R}d^4x\,\sum_i \left\{ \frac{\partial\mathcal{L}}{\partial\phi_i}\delta\phi_{i} +\partial_{\mu} \left[ \frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}\delta\phi_{i} \right]-\partial_{\mu} \left[ \frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}\right]\delta\phi_{i}  \right\}\nonumber\\
@@ -1401,6 +1409,7 @@ o
 \end{align}
 donde
 \begin{align}
+\label{eq:master2}
   \mathcal{E}_i=&\partial_{\mu} \left[ \frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}\right]-\frac{\partial\mathcal{L}}{\partial\phi_i} & B^{\mu}_i=\mathcal{L} \delta x^{\mu} + \frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}\delta\phi_{i} 
 \end{align}
 
@@ -1534,7 +1543,7 @@ donde
 j^{\mu}_{\alpha}\equiv \sum_{i}B^{\mu}_i=\sum_{i}  \frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}a_{\alpha i}
 \end{align}
 
-\emph{Demostración}:  De la ec.~\eqref{eq:varprin}
+\emph{Demostración}:  De la ec.~\eqref{eq:master2}
 \begin{align}
 \label{eq:varprin}
   \sum_i \mathcal{E}_i \delta\phi_i =&\sum_{i} \partial_{\mu} \left[\frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}\delta\phi_{i}  \right] \nonumber\\
@@ -1761,7 +1770,7 @@ Note que las ecuaciones de Euler-Lagrange surgen del Problema variacional de Noe
 
 Estudiaremos  una versión del segundo teorema de Noether aplicable sólo a simetrías internas~\cite{La version general del teorema incluye el caso de la relatividad general}. Como veremos más adelante, La invarianza de la Acción de Scrhödinger bajo una transformación de fase global, da lugar a una conservación global de la probabilidad: la probabilidad se conserva en todos los puntos del espacio simultáneamente. Esto no es incompatible con relatividad especial por que no involucra intercambio de información, pero si permite, en particular, que por ejemplo la teletransportación cuántica sea instantánea.
 
-Si imponemos que el cambio de fase sea local, es decir, dependiente de cada punto de cada punto del espacio tiempo, tendremos que para un campo $\phi_{i}=\phi,\phi^{*}$,
+Si imponemos que el cambio de fase sea local, es decir, dependiente de cada punto  del espacio tiempo, tendremos que para un campo $\phi_{i}=\phi,\phi^{*}$,
 \begin{align}
   \phi_i\to \phi'_i=\operatorname{e}^{i \theta(x)}\phi_i\approx (1+i\theta(x))\phi_i \,,
 \end{align}
@@ -1787,13 +1796,17 @@ entonces %faltan detalles
 \end{align}
 
 
-Ambos caso se pueden escribir en términos de una transformación en términos del parámetro infinitesimal local $\theta(x)$ como
+Tanto la transformación del campo $\phi$ como la del $A^{\mu}$ se pueden escribir en términos de una transformación en términos del parámetro infinitesimal local $\theta(x)$ y su derivada como
 \begin{align}
 \label{eq:dfi}
   \delta\phi_i= a_{i}\left( \phi_{i},\partial_{\mu}\phi_{i} \right) \theta(x)+b^{\nu}_i \left( \phi_{i},\partial_{\mu}\phi_{i} \right) \partial_{\nu}\theta(x),\qquad \text{para $\phi_{i}=\phi,\phi^{*},A^{\mu}$}\,.
 \end{align}
 
-\textbf{Ejercicio:} Encontrar los $a_i$, $b_i$ y  $\theta(x)$ para cada $\phi_i$.
+%TODO: Check si U(1) esta definido.
+\textbf{Ejercicio:} Encontrar los $a_i$, $b_i$ y  $\theta(x)$ para cada $\phi_i$ bajo el Grupo U(1).
+
+Diremos que un campo es de \emph{materia} si su transformación interna es proporcional al parámetro de transformación ($b^{\nu}=0$), o de radiación si su transformación interna es proporcional a la derivada del parámetro de transformación ($a=0$). Bajo estas definiciones $\phi$ es un campo de materia bajo el Grupo U(1), mientras que $A^{\mu}$ es un campo de radiación bajo algún grupo a especificar más adelante. 
+
 
 \textbf{Teorema 2} Si la acción $S$ es invariante bajo un Grupo gauge continuo, entonces existen $\rho$ relaciones
 \begin{align}
@@ -1807,15 +1820,14 @@ Ambos caso se pueden escribir en términos de una transformación en términos d
 \end{align}
 Extrayendo la derivada total del término de lado izquierdo 
 \begin{align}
-      \sum_i \int {d^4}x\, \mathcal{E}_ia_i \theta+\sum_i \int {d^4}x\, \left[ \partial_{\mu} \left(  \mathcal{E}_i b^{\mu}_i \theta \right)-\partial_{\mu} \left(  \mathcal{E}_i b^{\mu}_i  \right) \theta \right]  =&  \sum_i \int {d^4}x\, \partial_{\mu} \left\{ \left[ \frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}\right] \left( a_i \theta +b^{\nu}_i \partial_{\nu}\theta \right)  \right\}\nonumber\\
-     \sum_i \int {d^4}x\, \mathcal{E}_ia_i \theta+\sum_i \int {d^4}x\, \left[ \partial_{\mu} \left(  \mathcal{E}_i b^{\mu}_i \theta \right)-\partial_{\mu} \left(  \mathcal{E}_i b^{\mu}_i  \right) \theta \right]  =&  \sum_i \int {d^4}x\, \partial_{\mu} \left\{ \left[ \frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}\right] \left( a_i \theta +b^{\nu}_i \partial_{\nu}\theta \right)  \right\}\nonumber\\
-       \sum_i \int {d^4}x\, \mathcal{E}_ia_i \theta-\sum_i \int {d^4}x\, \left[ \partial_{\mu}   \left(  \mathcal{E}_i b^{\mu}_i  \right) \right] \theta   =&-  \sum_i \int {d^4}x\, \partial_{\mu} \left\{ \left[ \frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}\right] \left( a_i \theta +b^{\nu}_i \partial_{\nu}\theta \right) -\mathcal{E}_i b^{\mu}_i \theta  \right\}.
+   &   \sum_i \int {d^4}x\, \mathcal{E}_ia_i \theta+\sum_i \int {d^4}x\, \left[ \partial_{\mu} \left(  \mathcal{E}_i b^{\mu}_i \theta \right)-\partial_{\mu} \left(  \mathcal{E}_i b^{\mu}_i  \right) \theta \right]  =  \sum_i \int {d^4}x\, \partial_{\mu} \left\{ \left[ \frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}\right] \left( a_i \theta +b^{\nu}_i \partial_{\nu}\theta \right)  \right\}\nonumber\\
+&        \sum_i \int {d^4}x\, \mathcal{E}_ia_i \theta-\sum_i \int {d^4}x\, \left[ \partial_{\mu}   \left(  \mathcal{E}_i b^{\mu}_i  \right) \right] \theta   =-  \sum_i \int {d^4}x\, \partial_{\mu} \left\{ \left[ \frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}\right] \left( a_i \theta +b^{\nu}_i \partial_{\nu}\theta \right) -\mathcal{E}_i b^{\mu}_i \theta  \right\}.
 \end{align}
 Usando el Teorema de Gauss y escogiendo los $\theta(x)$ y $\partial_{\mu}\theta(x)$ de modo que se desvanezcan en la frontera, obtenemos que
 \begin{align}
   \sum_i \mathcal{E}_ia_i=\sum_i  \partial_{\mu}   \left(  \mathcal{E}_i b^{\mu}_i  \right) \,.
 \end{align}
-En el caso del campo complejo, $a_1=-a_2$ y $b_1=b_2=0$. Entonces
+En el caso de un campo de materia complejo, $a_1=-a_2$ y $b_1=b_2=0$. Entonces
 \begin{align}
 \sum_i \left\{ \partial_{\mu} \left[ \frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}\right]-\frac{\partial\mathcal{L}}{\partial\phi_i} \right\}a_i=&0 \nonumber\\
 \sum_i \left\{ \partial_{\mu} \left[ \frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}\right]a_i-\frac{\partial\mathcal{L}}{\partial\phi_i}a_i \right\}=&0 \nonumber\\
@@ -1834,7 +1846,7 @@ Entonces,
 \begin{align}
 \sum_i \partial_{\mu} \left[ \frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}a_i\right]=&0\,.
 \end{align}
-Este resultado particular para campos complejos se mantiene en general para el conjunto de campos que dependan sólo del parámetro y no de la derivada del parámetro, es decir, el conjunto de campos con $b_i^\mu=0$: ver Teorema 3 de \cite{Brading:2000hc}. En tal caso, las $\rho$ corrientes conservadas son
+Este resultado particular para campos complejos se mantiene en general para el conjunto de campos que dependan sólo del parámetro y no de la derivada del parámetro, es decir, el conjunto de campos de materia con $b_i^\mu=0$: ver Teorema 3 de \cite{Brading:2000hc}. En tal caso, las $\rho$ corrientes conservadas son
 \begin{align}
 \label{eq:tnoeth2}
 j^\mu_\alpha=\frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}a_{\rho i}\,.
@@ -1908,7 +1920,7 @@ Generalizando a un campo complejo
 
 Haciendo $\hbar=1$, el Lagrangiano que da lugar a la ecuaci\'on de Schr\"odinger es
 \begin{align}
-\label{eq:5}
+\label{eq:5tcc}
   \mathcal{L}(\psi,\psi^*,\partial_\mu\psi,\partial_\mu\psi^*)&=\frac{1}{2m}\boldsymbol{\nabla}\psi^*\cdot\boldsymbol{\nabla}\psi-\frac{i}{2}
   \left(
 \psi^*\frac{\partial\psi}{\partial t}-\frac{\partial\psi^*}{\partial t}\psi
@@ -2133,9 +2145,9 @@ Además de la longitud de la flecha apuntando al número complejo también neces
 
 El número complejo $\psi(x)$  en la ecuación de Scrödinger es justo el número cuyo cuadrado es la probabilidad relativa de encontrar el objeto en ese punto, como hemos visto como consecuencia de la simetría asociada a que el ángulo es inobservable.
 
-Ahora, supongamos que usted decide hacer un cambio de fase de la función de onda de forma arbitraria en cada punto del espacio, osea el ángulo $\theta$ que el número complejo $\psi$ hace con respecto al eje real. Aquí hay un punto crucial: sie el cambio de fase es \emph{global}, es decir si el cambio de fase asociado al ángulo $\theta$ es el mismo en todos los puntos del espacio, este cambio no destruirá el delicado balance entre la energía cinética y la energía potencia en la ecuación de Scrödinger.
+Ahora, supongamos que usted decide hacer un cambio de fase de la función de onda de forma arbitraria en cada punto del espacio, osea el ángulo $\theta$ que el número complejo $\psi$ hace con respecto al eje real. Aquí hay un punto crucial: si el cambio de fase es \emph{global}, es decir si el cambio de fase asociado al ángulo $\theta$ es el mismo en todos los puntos del espacio, este cambio no destruirá el delicado balance entre la energía cinética y la energía potencial en la ecuación de Scrödinger.
 
-Sin embargo, desde el punto de vista de la relatividad espacial de Einstein, la necesidad de requerir que el sistema mecánico cuántico que inalterado sólo por cambios globales de fase parece poco natural. Una vez se escoge el fase de la función de onda en un punto del espacio-tiempo, el requerimiento de la invarianza de fase global fija esta en todos los puntos del espacio tiempo: 
+Sin embargo, desde el punto de vista de la relatividad especial de Einstein, la necesidad de requerir que el sistema mecánico cuántico quede inalterado sólo por cambios globales de fase parece poco natural. Una vez se escoge el fase de la función de onda en un punto del espacio-tiempo, el requerimiento de la invarianza de fase global fija esta en todos los puntos del espacio tiempo: 
 
   \begin{quote}
 \small
@@ -2147,7 +2159,7 @@ It seems that it is not consistent with the localized field concept that underli
     Yang-Mills, \emph{Physical Review}, 1954
   \end{flushright}
 
-Un cambio de fase que dependa del punto del espacio-tiempo, $\theta(x)$, de otro lado, sería similar a lo que pasa en la teoría electromagnética cuand es expresada en términos de potenciales escalares y vectoriales. Ellos se pueden cambio por derivadas de funciones arbitrarias de una forma tal que los campos eléctricos y magnéticos medidos permanecen invariantes. Como veremos, estas características están profundamente conectas con la conservación local de la carga eléctrica.  
+Un cambio de fase que dependa del punto del espacio-tiempo, $\theta(x)$, de otro lado, sería similar a lo que pasa en la teoría electromagnética cuando es expresada en términos de potenciales escalares y vectoriales. Ellos se pueden cambiar por derivadas de funciones arbitrarias de una forma tal que los campos eléctricos y magnéticos medidos permanecen invariantes. Como veremos, estas características están profundamente conectas con la conservación local de la carga eléctrica.  
 
 Desde un punto de vista más cuantitativo, debido a que la energía y la cantidad de movimiento del electrón aparecen  en la fase de su función de onda
 \begin{align}
@@ -2159,9 +2171,9 @@ entonces, un cambio de fase local
 \end{align}
 cambia la energía y la cantidad de movimiento del electrón. Esto hace necesario la existencia de un nuevo campo que compense esos cambios para garantizar su convervación entre el sistema completo del electrón y el nuevo campo.
 
-Histroricamente primero se implemento la invarianza de Lorentz en Mecánica Cuántica cambiando el correspondiente Lagrangiano de Sch\"odinger. Sin embargo, el Lagrangiano resultante es insuficiente pues tiene una invarianza de fase global que contradice los principios de la relativad especial. El Lagrangiano definitivo de la electrodinámica cuántica, que construiremos en detalle luego, incorpora además de la invarianza de Lorentz, la invarianza de fase local. Aquí, no seguiremos el camino histórico, sino uno inverso en el  que primero modificaremos el Lagrangiano de Sch\"odinger por uno que se invariante bajo cambios de fase locales. Como las interacciones van a resultar como consecuencia de imponer la invarianza de fase local, es suficiente hacer el análisis partiendo de la Lagrangiana libre de interacciones, es decir, sin consirer el término $\psi^{*}V\psi$.
+Histroricamente primero se implemento la invarianza de Lorentz en Mecánica Cuántica cambiando el correspondiente Lagrangiano de Sch\"odinger. Sin embargo, el Lagrangiano resultante es insuficiente pues tiene una invarianza de fase global que contradice los principios de la relativad especial. El Lagrangiano definitivo de la electrodinámica cuántica, que construiremos en detalle luego, incorpora además de la invarianza de Lorentz, la invarianza de fase local. Aquí, no seguiremos el camino histórico, sino uno inverso en el  que primero modificaremos el Lagrangiano de Sch\"odinger por uno que sea invariante bajo cambios de fase locales. Como las interacciones van a resultar como consecuencia de imponer la invarianza de fase local, es suficiente hacer el análisis partiendo de la Lagrangiana libre de interacciones, es decir, sin considerar el término $\psi^{*}V\psi$.
 
-Comenzamos de nuevo con el Lagrangiano de Schödinger escrito con en la ec.~\eqref{eq:5qft}, pero sin el término de interacción:
+Comenzamos de nuevo con el Lagrangiano de Schödinger escrito como en la ec.~\eqref{eq:5tcc}, pero sin el término de interacción:
 
 \begin{align}
   \mathcal{L}(\psi,\psi^*,\partial_\mu\psi,\partial_\mu\psi^*)&=\frac{1}{2m}\boldsymbol{\nabla}\psi^*\cdot\boldsymbol{\nabla}\psi-\frac{i}{2}
@@ -2239,7 +2251,7 @@ de modo que la derivada covariante se puede definir como
      \mathcal{D}_\mu \psi\to\left(\mathcal{D}_\mu \psi\right)'=&U\left(\mathcal{D}_\mu \psi\right)\,.
 \end{align}
 
-Para encontrar las propiedades de la derivada covariante en este contexto general, necesitamos evaluar cual la transformación de la derivada covariante como tal, es decir
+Para encontrar las propiedades de la derivada covariante en este contexto general, necesitamos evaluar cual es la transformación de la derivada covariante como tal, es decir
 \begin{align}
  \left(\mathcal{D}_\mu \psi\right)'=     \mathcal{D}'_\mu \psi'=&U\left(\mathcal{D}_\mu \psi\right)\nonumber\\
     \mathcal{D}'_\mu \left( U\psi \right)=&U\left(\mathcal{D}_\mu \psi\right)\,.
@@ -2265,12 +2277,13 @@ Después de cancelar el término  $\partial_{\mu}\psi$ en ambos lados, y factori
 \end{align}
 Esta expresión es completamente general y será usada posteriormente en el contexto de grupos más complicados. En el caso particular de un Grupo Abeliano  $U(1)$, tenemos simplemente que
 \begin{align}
-  A'_{\mu}=&A_{\mu}-\frac{i}{q}\left[ -i\partial_{\mu}\alpha(x) \right]UU^{*}\nonumber\\
- A_{\mu}\to  A'_{\mu}=&A_{\mu}-\frac{1}{q}\partial_{\mu}\alpha(x)\,.
+  A'_{\mu}=&A_{\mu}-\frac{i}{q}\left[ -i\partial_{\mu}\theta(x) \right]UU^{*}\nonumber\\
+ A_{\mu}\to  A'_{\mu}=&A_{\mu}-\frac{1}{q}\partial_{\mu}\theta(x)\,.
 \end{align}
 
 Definimos la \emph{invarianza gauge local} como una forma arbitraria de escoger el factor de fase complejo de un campo cargado\footnote{como el electrón descrito por la ecuación usual de  Scrödinger.} en todos los puntos del espacio tiempo.
 
+\begin{frame}
 De esta forma, podemos cambiar el Lagrangiano libre original por uno nuevo que sea invariante bajo transformaciones de fase locales, asegurándonos de considerar todos los término extra posibles, en particular los asociados al nuevo campo $A_{\mu}$:
 \begin{align}
    \mathcal{L}(\psi,\psi^*,\partial_\mu\psi,\partial_\mu\psi^*,A_\nu,\partial_{\mu} A_{\nu} )
@@ -2282,6 +2295,7 @@ donde
 \label{eq:167qft}
   A_\mu\to A'_\mu=A_\mu-\frac{1}{q}\partial_\mu\theta(x)\,.
 \end{align}
+\end{frame}
 Esta es justamente la transformación que deja el campo electromagnético invariante, y como veremos, el Lagrangiano faltante $\mathcal{L}_{\text{EM}}=\mathcal{L}\left( A_{\nu},\partial_{\mu} A_{\nu} \right)$ dará lugar precisamente a las ecuaciones de Maxwell!. El nuevo Lagrangiano es ahora invariante bajo transformaciones de fase (y deberemos imponer que $\mathcal{L}_{\text{EM}}$ también lo sea). De hecho:
 \begin{align}
   \mathcal{L}\to \mathcal{L}'=&
@@ -2295,7 +2309,7 @@ Esta es justamente la transformación que deja el campo electromagnético invari
 \end{align}
 
 Para preservar la invarianza uno nota que es necesario contrarrestar la variación de  $\theta$ con $x$, $y$, $z$, y $t$ 
-introduciendo el campo electromagnético  $A_\mu$. De esta forma, una vez logremos especificar $\mathcal{L}_{\text{EM}}$, la interacción electromagnética serpa obtenida como resultado de imponer la invarianza de fase local bajo el grupo Abeliano  $U(1)$, correspondiente a las transformaciones de fase locales. Para implementar por completo el principio gauge local necesitamos especificar completamente el $\mathcal{L}_{\text{EM}}$ de una forma compatible con la transformación gauge del campo $A_{\mu}$ y las transformaciones de Lorentz, lo cual será desarrollado en el próximo capítulo. 
+introduciendo el campo electromagnético  $A_\mu$. De esta forma, una vez logremos especificar $\mathcal{L}_{\text{EM}}$, la interacción electromagnética será obtenida como resultado de imponer la invarianza de fase local bajo el grupo Abeliano  $U(1)$, correspondiente a las transformaciones de fase locales. Para implementar por completo el principio gauge local necesitamos especificar completamente el $\mathcal{L}_{\text{EM}}$ de una forma compatible con la transformación gauge del campo $A_{\mu}$ y las transformaciones de Lorentz, lo cual será desarrollado en el próximo capítulo. 
 
 Por ahora veremos las consecuencias del principio variacional de Noether para simetrías internas, expresado por la ec.~\eqref{eq:varprin}, sobre los campos $\psi$ y $\psi^{*}$.
 
@@ -2328,17 +2342,20 @@ i \frac{\partial\mathcal{L}}{\partial\psi} \psi
 =&-\sum_j\frac{q}{2m} \left[\left(\partial_j\psi^* \right)\psi+\psi^*\partial_j\psi\right] A_j
 -\frac{1}{2}\left[  \left(\partial_0\psi^*\right)\psi+\psi^*\partial_0\psi\right]
 \end{align}
-Por lo tanto, la corriente conservada corresponde para los campos $\psi$
+Por lo tanto, la corriente conservada corresponde para los campos $\psi$\footnote{El témrino con $b_3^{\mu}$ se puede anular usando condiciones de frontera para el campo $\phi_3\to A_{\mu}$.}
 y $\psi^*$  es, de la ec.~\eqref{eq:tnoeth2}
 \begin{align}
 j^\mu=&\frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}a_i\nonumber\\
-=&...
+ =&\begin{cases}
+q \psi^{*}\psi & \mu=0\\
+-\frac{i}{2m} \left[ \psi^{*}\mathcal{D}^i\psi-\left( \mathcal{D}^i\psi^{*} \right)\psi \right] & \mu=i
+  \end{cases}
 \end{align}
 
 
 \section{Ecuación de Scrödinger en presencia de un campo electromagnético}
 
-The expansion of the Lagrangian in terms of the field $\psi$, $\psi^*$, and $A_\mu$ is 
+La expansión del Lagrangiano en términos de los campos $\psi$, $\psi^*$, y $A_\mu$ es %add LEM
 \begin{align}
 \label{eq:178qft}
    \mathcal{L}
@@ -2356,7 +2373,7 @@ The expansion of the Lagrangian in terms of the field $\psi$, $\psi^*$, and $A_\
   \left[\psi^*\partial_0\psi-(\partial_0\psi^*)\psi+2 i q \psi^*A_0\psi\right]\,.
  \end{align}
 
-Then we have
+Entonces, tenemos
 \begin{align}
   \mathcal{L}=&\frac{1}{2m}\sum_i\partial_i\psi^*\partial_i\psi
 -\frac{i}{2}
@@ -2364,10 +2381,10 @@ Then we have
 &+\frac{1}{2m}\sum_i\left[ -i q \psi^*A_i\partial_i\psi+i q \left(\partial_i\psi^*\right) A^i\psi+q^2A_i A_i \psi^*\psi\right]\nonumber\\
  &+ q \psi^*A_0\psi\,.
  \end{align}
+De aquí podemos obtener las ecuaciones de Euler-Lagrange para cada campo.
 
-From this we can obtain the Euler-Lagrange equation for each field.
-
-In the following developments we will heavily the covariant and contravariant form of the four-vector $A_{\mu}$ defined in eqs:\eqref{eq:covariante}, \eqref{eq:contravariante}, such that the tridimensional vector is defined in term od the spacial covariant components
+%TRADUCIR
+In the following developments we will use heavily  the covariant and contravariant form of the four-vector $A_{\mu}$ defined in eqs:\eqref{eq:covariante}, \eqref{eq:contravariante}, such that the tridimensional vector is defined in term od the spacial covariant components
 \begin{align*}
   \mathbf{A}=\left( A^1,A^2,A^3\right)=-\left( A_1,A_2,A_3\right)\,.
 \end{align*}
@@ -2488,17 +2505,20 @@ y la derivada covariante del campo transforma como el campo. Tenemos entonces qu
 \end{align}
 \end{itemize}
 
-En resumen, para 
+\begin{frame}
+  En resumen, para 
 \begin{equation}
   \mathcal{D}^\mu=\partial^\mu+iqA^\mu
 \end{equation}
 y reemplazando $\theta\to q\theta$ tenemos
 \begin{align}
-   A^\mu&\to{A^\mu}'=A^\mu-\partial^\mu\theta(x)\nonumber\\
+\label{eq:tfgl}
+   A^\mu&\to{A^\mu}'=A^\mu-\partial^\mu\theta(x)\\
    \psi&\to \psi'=e^{iq\theta(x)}\psi\nonumber\\
   \mathcal{D}^\mu\psi&\to {\mathcal{D}'}^\mu\psi'=e^{iq\theta(x)}(\mathcal{D}^\mu\psi)\,.
 \end{align}
 En esta convención $q$ corresponde al \emph{generador} de la transformación y $\theta$ al parámetro de la transformación.
+\end{frame}
 %\left(\right)
 
 
@@ -2508,7 +2528,7 @@ Aplicamos el segundo teorema de Noether con (con el reemplazo $\theta\to q\theta
 \begin{align}
   \phi_{1}:& \psi\,,\qquad a_{1}=iq \psi \,,\qquad b_1=0\nonumber\\
   \phi_{2}:& \psi^{*}\,,\qquad a_{2}=-i\psi^{*}\,,\qquad b_2=0 \nonumber\\
-  \phi_{3}:& \psi^{*}\,,\qquad a_{3}=0\,,\qquad b_2=-\delta^{\mu}_{\nu}\,,
+  \phi_{3}:& A^{\mu}\,,\qquad a_{3}=0\,,\qquad b_2=-\delta^{\mu}_{\nu}\,,
 \end{align}
 tenemos que para los campos $\psi$ y $\psi^{*}$, asumiendo que el campo $A^{\mu}$ satisface las ecuaciones de Euler-Lagrange, tenemos que
 \begin{align}
@@ -2523,25 +2543,64 @@ q \psi^{*}\psi & \mu=0\\
   \end{cases}
 \end{align}
 
+Podemos interpretar la corriente conservada como la asociada a la conservación de la carga eléctrica, tal que
+\begin{align}
+  \left\langle \widehat{Q} \right\rangle =\int_{V}\operatorname{d}^3x\, \psi^{*} \widehat{Q} \psi=q\int_{V}\operatorname{d}^3x\, \psi^{*} \psi=q\,,
+\end{align}
+donde
+\begin{align}
+  \widehat{Q} \psi=q\psi\,.
+\end{align}
 
 
-It is worth to notice that for $T^0_0$, and $T^0_i$ we should obtain
+Es importante hacer notar que para  $T^0_0$, y $T^0_i$ deberíamos obtener
 \begin{align}
   \widehat{H}=& i\frac{\partial}{\partial t}-q\phi & \widehat{\mathbf{p}}=&-i\boldsymbol{\nabla}-q\mathbf{A}\,.
 \end{align}
 
 \end{frame}
 
-De otro lado, si asumimos que las ecuaciones de Euler-Lagrange para los campos de materia se satisfacen, el segundo teorema de Noether para el campo de radiación electromagnético tenemos
+De otro lado, si aplicamos el segundo teorema de Noether al campo de radiación
 \begin{align}
-  \partial_{\mu} \frac{\partial \mathcal{L}}{\partial A_{\mu}}=&0\,, &   \partial_{\mu} \partial_{\nu}\frac{\partial \mathcal{L}}{\partial \left(\partial  \partial_{\nu} A_{\mu}\right)}=&0\,.
+  0=&\partial_{\mu} \left( \mathcal{E}_3 b^{\mu}_3 \right) \nonumber\\
+   0=&\partial_{\mu} \left( \mathcal{E}_3 \delta^{\mu}_\nu \right) \nonumber\\
+   0=&
+ \partial_{\mu} \partial_{\rho} \left[ \frac{\partial \mathcal{L}}{\partial \left(\partial  \partial_{\rho} A_{\nu}\right)}  \delta^{\mu}_\nu \right] - \partial_{\mu} \frac{\partial \mathcal{L}}{\partial A_{\nu}}\delta^{\mu}_{\nu} \nonumber\\
+   0=&
+ \partial_{\mu} \partial_{\rho}\left[ \frac{\partial \mathcal{L}}{\partial \left(\partial  \partial_{\rho} A_{\mu}\right)}  \right] - \partial_{\mu} \frac{\partial \mathcal{L}}{\partial A_{\mu}} \,.
 \end{align}
-La primera ecuación da lugar a la misma corriente conservada fermiónica, mientras que la segunda se puede interpretar como la necesidad de introducir el tensor antisimétrico
+El segundo témrino da lugar a la misma corriente conservada fermiónica
 \begin{align}
-  F_{\mu\nu}=\frac{\partial \mathcal{L}}{\partial \left(\partial  \partial_{\nu} A_{\mu}\right)}
+  \partial_{\mu} \frac{\partial \mathcal{L}}{\partial A_{\mu}}=&
+\partial_{\mu} j^{\mu}=0\,,
 \end{align}
-
-
+Por consiguiente, la identidad resultante
+\begin{align}
+   \partial_{\mu} \partial_{\rho}\left[ \frac{\partial \mathcal{L}}{\partial \left(\partial  \partial_{\rho} A_{\mu}\right)}  \right]=0\,,
+\end{align}
+se puede interpretar como la necesidad de introducir el tensor antisimétrico
+\begin{align}
+  F_{\mu\nu}=\frac{\partial \mathcal{L}}{\partial \left(\partial  \partial_{\nu} A_{\mu}\right)}\,,
+\end{align}
+tal que
+\begin{align}
+  \partial_{\mu}\partial_{\nu}F^{\mu\nu}=0\,.
+\end{align}
+Para obtener una forma para $F_{\mu\nu}$, es conveniente imponer que la densidad Lagrangiana asociada sólo a las nuevas contribuciones de los campos $A_{\nu}$ y sus derivadas $\partial_{\mu}A_{\nu}$, denotada como $\mathcal{L}_{\text{EM}}$ 
+%en la ec.
+sea invariante gauge local bajo la transformación del campo $A_{\mu}$ en \eqref{eq:tfgl}. Esto implíca que $\mathcal{L}_{\text{EM}}$  solo puede depender de las derivadas de las campos, y por consiguiente $F^{\mu\nu}$ debe ser una combinación antisimétrica de las derivadas de los campos
+\begin{align}
+  F_{\mu\nu}\equiv\partial_{\mu}A_{\nu}-\partial_{\nu}A_{\mu}\,.
+\end{align}
+Con esta definición, bajo la transformación  \eqref{eq:tfgl}
+\begin{align}
+  F_{\mu\nu}\to F_{\mu\nu}'=F_{\mu\nu}\,.
+\end{align}
+Por consiguiente, el único término posible que a la vez es invariante de Lorentz e invariante gauge local es
+\begin{align}
+  \mathcal{L}_{\text{EM}}=-\frac{1}{4}F_{\mu\nu}F^{\mu\nu}\,.
+\end{align}
+%%hablar de la ecuaciones de Euler-Lagrange, el gauge de Lorentz y la ecuación de onda.
 
 The approach to change the Action for a new one invariant under local phase  transformations, is that the electron cannot be longer considered as an isolated \emph{naked} particle. The electron must be always surrounded by some cloud of virtual particles associated with the electromagnetic field in order to guarantee the conservation of the energy and momentum of the system. In general the wave function of the electron can be represented as the exponential of $iEt$ and $i \mathbf{p}\cdot \mathbf{x}$, so that a local phase transformation will change the energy $E$ and the momentum $\mathbf{p}$ of the electron. This changes must be compensated with the corresponding changes in $A_{\mu}$.
 
@@ -2671,7 +2730,7 @@ Por lo tanto la ecuación de movimiento asociada al campo $\phi^{*}$
 \end{align}
 Que corresponde a la ecuación de Klein-Gordon pero con la derivada normal reemplazada por la derivada covariante.
 
-
+%\appendix
 \section{Principio de M\'\i nima Acci\'on para $\mathcal{L}$}
 \label{sec:principio-de-minima-call}
 Consideremos primero el problema de hallar la condiciones extremal sobre el funcional de acción
@@ -2687,7 +2746,11 @@ En tres dimensiones, la acci\'on de la ec.~\eqref{eq:Scall}, queda
   \label{eq:Scall3d}
   S[\phi,\partial_\mu\phi]=\int_{R}d^4x\mathcal{L}(\phi,\partial_\mu\phi)
 \end{equation}
-donde $d^4x=d t\,d x\, d y\,d z$.  El principio de Hamilton para el campo $\phi$ requiere que la acción sea extremal (es decir que $\delta S=0$, donde es la variación funcional de primer orden en $S$) para variaciones arbitrarias del campo $\phi$ que se hagan cero en la frontera.
+donde $d^4x=d t\,d x\, d y\,d z$.  El principio de Hamilton para el campo $\phi$ requiere que la acción sea extremal (es decir que $\delta S=0$, donde
+\begin{align}
+  \delta S=S'-S\,,
+\end{align}
+es la variación funcional de primer orden en $S$ para variaciones arbitrarias del campo $\phi$ que se hagan cero en la frontera.
 
 Considere una variaci\'on s\'olo de
 los campos, tal que ($x=x^\mu)$
@@ -2706,7 +2769,7 @@ Para $\mathcal{L}$, tenemos de la ec.~\eqref{eq:deltaphi}
   \mathcal{L}(\phi',\partial_\mu\phi')&=\mathcal{L}(\phi+\delta\phi,\partial_\mu\phi+\partial_\mu(\delta\phi))\nonumber\\
   &=\mathcal{L}+\frac{\partial\mathcal{L}}{\partial\phi}\delta\phi+\frac{\partial\mathcal{L}}{\partial(\partial_\mu\phi)}\partial_\mu(\delta\phi)
 \end{align}
-Entonces, de imponer que $\delta S=0$, tenemos
+Entonces, de imponer que $\delta S=0$, tenemos que para una transformación interna
 \begin{align}
   \delta S&=S'-S=\int_{R}d^4x\,\mathcal{L}(\phi',\partial_\mu\phi')-\int_{R}d^4x\,\mathcal{L}(\phi,\partial_\mu\phi)\nonumber\\
 &=\int_{R}d^4x\,
@@ -2842,7 +2905,7 @@ entonces, podemos escribir el nuevo producto escalar como
   A\cdot B=&\sum_{\mu} A^{\mu}\left( \sum_{\nu} g_{\mu\nu} B^{\nu} \right)\nonumber\\
 \sum_{\mu} A^{\mu}B_{\mu}\,.
 \end{align}
-El producto de Lorentez definido anteriormente si $v$ es independiente del sistema de referencia inercial.
+El producto definido anteriormente es invariante de Lorentz si $v$ es independiente del sistema de referencia inercial.
  
 
 
