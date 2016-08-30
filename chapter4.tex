@@ -253,7 +253,40 @@ Also from \cite{Peskin}\footnote{Introduction to Chapter 20}
 
 It is now only natural to consider a fourth possibility: What happens if we include both local gauge invariance  and spontaneous symmetry breaking in the same theory?
 \end{quote}
- 
+
+La ruptura espontánea de simetría se puede parametrizar convenientemente en este caso en coordenadas polares:
+\begin{align}
+  \phi(x)=\frac{\varphi(x)}{\sqrt{2}} \operatorname{e}^{i\bar{G}(x)}\,,
+\end{align}
+donde el factor de $\sqrt{2}$ se ha puesto para obtener la normalizaciones apropiadas para la Acción, y $\bar{G}(x)$ es una función adimensional del espacio tiempo. Expandiendo la ec.~\eqref{eq:85qft}
+\begin{align}
+    \mathcal{L}=&\partial^\mu\phi^*\partial_\mu\phi-\mu^2\phi^*\phi-\lambda(\phi^*\phi)^2 \nonumber\\
+=&\frac{1}{2}\left( \partial^{\mu}\varphi-i\varphi \partial^{\mu}\bar{G} \right)^{*}\left(\partial_{\mu}\varphi+i\varphi \partial_{\mu}\bar{G}  \right)
+-\frac{1}{2}\mu^2 \varphi^2 -\frac{1}{4}\varphi^4 \nonumber\\
+=&\frac{1}{2}\partial^{\mu}\varphi\partial_{\mu}\varphi+\frac{1}{2}\varphi^2 \partial^{\mu}\bar{G}\partial_{\mu}\bar{G} 
+-\frac{1}{2}\mu^2 \varphi^2 -\frac{1}{4}\varphi^4 \,.
+\end{align}
+ Como $\varphi^2=\phi_1^2+\phi_2^2$, el módulo del campo complejo, podemos expandirlo  alrededor del campo que oscila en mínimo en el modo que sube por las paredes, como se describió en la fig.~\ref{fig:mexicanhat}. Hacemos entonces el cambio de variables
+ \begin{align}
+   \varphi(x)=H(x)+v\,,
+ \end{align}
+tal que $|\varphi_{\text{min}}|=v$. Reemplazando en el Lagrangiano anterior tenemos que
+\begin{align}
+  \mathcal{L}=&\frac{1}{2}\partial^{\mu}H\partial_{\mu}H+\frac{1}{2}\partial^{\mu}G\partial_{\mu}G+\frac{H}{v}\partial^{\mu}G\partial_{\mu}G
+-\tfrac{1}{2}\mu^2(H+v)^2-\tfrac{1}{4}\lambda(H+v)^4 \nonumber\\
+=&  \frac{1}{2}\partial^{\mu}H\partial_{\mu}H+\frac{1}{2}\partial^{\mu}G\partial_{\mu}G+\frac{H}{v}\partial^{\mu}G\partial_{\mu}G-\frac{1}{2}m_H^2H^2-\frac{1}{2}\frac{m_H^2}{v}H^3-\frac{1}{8}\frac{m_H^2}{v^2} H^4\,,
+\end{align}
+donde hemos definido el bosón de Goldstone sin masa como
+\begin{align}
+  G(x)=v\bar{G}(x)\,,
+\end{align}
+y $m_H$ está dado por la ec.~\eqref{eq:higgsmass}\,.
+
+Como era de esperarse, obtenemos un modo masivo $H$ cuyas oscilaciones cuestan energía, y un modo $G$ sin masa que se mueve sobre el mínimo. La prueba de la simetría de fase global espontáneamente rota estaría en el término de interacción
+\begin{align}
+  \mathcal{L}_{\text{int}}=\frac{H}{v}\partial^{\mu}G\partial_{\mu}G\,,
+\end{align}
+que predice que el campo $H$ debe decaer a dos campos $G$. Sin embargo, este tipo de procesos aún no se han observado en la naturaleza. 
 \section{Principio gauge local}
 
 
@@ -281,22 +314,22 @@ En el caso de la superconductividad  electromagnética, $\phi$ representaría al
 \subsection{Gauge unitario}
 Como $\phi$ es un campo complejo, podemos escribirlo en coordenadas polares con un campo real asociado a la magnitud del campo complejo y otro a la fase
 \begin{align*}
-  \phi(x)=\varphi(x)e^{i\eta(x)}
+  \phi(x)=\frac{\varphi(x)}{\sqrt{2}}e^{i\bar{G}(x)}
 \end{align*}
-Expandiendo el campo $\varphi(x)$ alrededor del mínimo: $\varphi(x)=(H(x)+v)/\sqrt{2}$, tenemos
+Expandiendo el campo $\varphi(x)$ alrededor del mínimo: $\varphi(x)=(H(x)+v)$, tenemos
 \begin{align*}
-    \phi(x)=e^{i\eta(x)}\left(\frac{H(x)+v}{\sqrt{2}}\right)\,.
+    \phi(x)=e^{i\bar{G}(x)}\left(\frac{H(x)+v}{\sqrt{2}}\right)\,.
 \end{align*}
 
 
 La libertad gauge nos permite en un momento determinado escoger la fase $\theta(x)$ de la ec.~\eqref{eq:sqedgu} sin que ese alteren los observables de la teoría. Para el campo en coordenadas polares tenemos que
 \begin{align*}
-     \phi\to\phi'=e^{i\theta(x)}e^{i\eta(x)}\left(\frac{H(x)+v}{\sqrt{2}}\right)
+     \phi\to\phi'=e^{i\theta(x)}e^{i\bar{G}(x)}\left(\frac{H(x)+v}{\sqrt{2}}\right)
 \end{align*}
-Haciendo $\theta(x)=-\eta(x)$,
+Haciendo $\theta(x)=-\bar{G}(x)$,
 \begin{align}
 \label{eq:87qft}
-   \phi\to\phi'=&e^{-i\eta(x)+i\eta(x)}\left(\frac{H(x)+v}{\sqrt{2}}\right)=\frac{H(x)+v}{\sqrt{2}} \nonumber\\
+   \phi\to\phi'=&e^{-i\bar{G}(x)+i\bar{G}(x)}\left(\frac{H(x)+v}{\sqrt{2}}\right)=\frac{H(x)+v}{\sqrt{2}} \nonumber\\
    A_{\mu}\to A_{\mu}'=&A_{\mu}-\frac{1}{q}\partial_{\mu}\theta(x)\,.
 \end{align}
 \begin{align}
