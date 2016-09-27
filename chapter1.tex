@@ -1846,10 +1846,10 @@ Entonces,
 \begin{align}
 \sum_i \partial_{\mu} \left[ \frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}a_i\right]=&0\,.
 \end{align}
-Este resultado particular para campos complejos se mantiene en general para el conjunto de campos que dependan sólo del parámetro y no de la derivada del parámetro, es decir, el conjunto de campos de materia con $b_i^\mu=0$: ver Teorema 3 de \cite{Brading:2000hc}. En tal caso, las $\rho$ corrientes conservadas son
+Este resultado particular para campos complejos se mantiene en general para el conjunto de campos que dependan sólo del parámetro y no de la derivada del parámetro, es decir, el conjunto de campos de materia con $b_i^\mu=0$: ver Teorema 3 de \cite{Brading:2000hc}. En tal caso, las corrientes conservadas son
 \begin{align}
 \label{eq:tnoeth2}
-j^\mu_\alpha=\frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}a_{\rho i}\,.
+j^\mu=\frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}a_{i}\,.
 \end{align}
 Note que la conservación de la carga en este caso no requiere imponer que $\mathcal{E}_i=0$. Por lo tanto el caso de la conservación de carga \emph{impropia} se puede considerar más fundamental e inviolable. Esto nos permite formular el \emph{principio gauge} como la necesidad de establecer Lagrangianos que que respetan las simetría internas a nivel local.
 
@@ -2287,7 +2287,7 @@ Definimos la \emph{invarianza gauge local} como una forma arbitraria de escoger 
 De esta forma, podemos cambiar el Lagrangiano libre original por uno nuevo que sea invariante bajo transformaciones de fase locales, asegurándonos de considerar todos los término extra posibles, en particular los asociados al nuevo campo $A_{\mu}$:
 \begin{align}
    \mathcal{L}(\psi,\psi^*,\partial_\mu\psi,\partial_\mu\psi^*,A_\nu,\partial_{\mu} A_{\nu} )
-=\frac{1}{2m}\left(\mathcal{D}_i\psi\right)^*\mathcal{D}_i\psi-\frac{i}{2}
+=\frac{1}{2m}\sum_i\left(\mathcal{D}_i\psi\right)^*\mathcal{D}_i\psi-\frac{i}{2}
   \left[\psi^*\mathcal{D}_0\psi-\left(\mathcal{D}_0\psi\right)^*\psi\right]+\mathcal{L}\left( A_{\nu},\partial_{\mu} A_{\nu} \right).
 \end{align}
 donde
@@ -2299,10 +2299,10 @@ donde
 Esta es justamente la transformación que deja el campo electromagnético invariante, y como veremos, el Lagrangiano faltante $\mathcal{L}_{\text{EM}}=\mathcal{L}\left( A_{\nu},\partial_{\mu} A_{\nu} \right)$ dará lugar precisamente a las ecuaciones de Maxwell!. El nuevo Lagrangiano es ahora invariante bajo transformaciones de fase (y deberemos imponer que $\mathcal{L}_{\text{EM}}$ también lo sea). De hecho:
 \begin{align}
   \mathcal{L}\to \mathcal{L}'=&
-\frac{1}{2m}{\left(\mathcal{D}_i\psi\right)'}^*\left(\mathcal{D}_i\psi\right)'
+\frac{1}{2m}\sum_i{\left(\mathcal{D}_i\psi\right)'}^*\left(\mathcal{D}_i\psi\right)'
 -\frac{i}{2}\left[{\psi'}^*\left(\mathcal{D}_0\psi\right)'-{\left(\mathcal{D}_0\psi\right)'}^*\psi'\right]+\mathcal{L}_{\text{EM}}'\nonumber\\
 =&
-\frac{1}{2m}{\left(\mathcal{D}_i\psi\right)}^*e^{-i\theta(x)}e^{i\theta(x)}\left(\mathcal{D}_i\psi\right)\nonumber\\
+\frac{1}{2m}\sum_i{\left(\mathcal{D}_i\psi\right)}^*e^{-i\theta(x)}e^{i\theta(x)}\left(\mathcal{D}_i\psi\right)\nonumber\\
 &-\frac{i}{2}\left[{\psi}^*e^{-i\theta(x)}e^{i\theta(x)}\left(\mathcal{D}_0\psi\right)+\mathcal{L}_{\text{EM}}
 -{\left(\mathcal{D}_0\psi\right)}^*e^{-i\theta(x)}e^{i\theta(x)}\psi\right]+\mathcal{L}_{\text{EM}}\,.\nonumber\\
 =&\mathcal{L}\,.
@@ -2343,7 +2343,7 @@ i \frac{\partial\mathcal{L}}{\partial\psi} \psi
 -\frac{1}{2}\left[  \left(\partial_0\psi^*\right)\psi+\psi^*\partial_0\psi\right]
 \end{align}
 Por lo tanto, la corriente conservada corresponde para los campos $\psi$\footnote{El témrino con $b_3^{\mu}$ se puede anular usando condiciones de frontera para el campo $\phi_3\to A_{\mu}$.}
-y $\psi^*$  es, de la ec.~\eqref{eq:tnoeth2}
+y $\psi^*$  es, de la ec.~\eqref{eq:tnoeth2} 
 \begin{align}
 j^\mu=&\frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}a_i\nonumber\\
  =&\begin{cases}
@@ -2360,17 +2360,21 @@ La expansión del Lagrangiano en términos de los campos $\psi$, $\psi^*$, y $A_
 \label{eq:178qft}
    \mathcal{L}
 =&\frac{1}{2m}\sum_i\left(\partial_i\psi+i q A_i\psi\right)^*\left(\partial_i\psi+i q A_i\psi\right)-\frac{i}{2}
-  \left[\psi^*\left(\partial_0\psi+i q A_0\psi\right)-\left(\partial_0\psi+i q A_0\psi\right)^*\psi\right] 
+  \left[\psi^*\left(\partial_0\psi+i q A_0\psi\right)-\left(\partial_0\psi+i q A_0\psi\right)^*\psi\right]+\mathcal{L}_{\text{EM}} 
 \nonumber\\
 =&\frac{1}{2m}\sum_i\left(\partial_i\psi^*-i q A_i\psi^*\right)\left(\partial_i\psi+i q A_i\psi\right)-\frac{i}{2}
-  \left[\psi^*\left(\partial_0\psi+i q A_0\psi\right)-\left(\partial_0\psi^*-i q A_0\psi^*\right)\psi\right]
+  \left[\psi^*\left(\partial_0\psi+i q A_0\psi\right)-\left(\partial_0\psi^*-i q A_0\psi^*\right)\psi\right]+\mathcal{L}_{\text{EM}}
 \nonumber\\
- =&\frac{1}{2m}\sum_i\left(\partial_i\psi^*\partial_i\psi-i q \psi^*A_i\partial_i\psi+i q \partial_i\psi^*A_i\psi+q^2A_i A_i \psi^*\psi\right)\nonumber\\
+ =&\frac{1}{2m}\sum_i\left(\partial_i\psi^*\partial_i\psi-i q \psi^*A_i\partial_i\psi+i q \partial_i\psi^*A_i\psi+q^2A_i A_i \psi^*\psi\right)
++\mathcal{L}_{\text{EM}}
+\nonumber\\
  &-\frac{i}{2}
   \left[\psi^*\partial_0\psi+i q \psi^*A_0\psi-(\partial_0\psi^*)\psi+i q A_0\psi^*\psi\right]\nonumber\\
- =&\frac{1}{2m}\sum_i\left(\partial_i\psi^*\partial_i\psi-i q \psi^*A_i\partial_i\psi+i q \partial_i\psi^*A_i\psi+q^2A_i A_i \psi^*\psi\right)\nonumber\\
+ =&\frac{1}{2m}\sum_i\left(\partial_i\psi^*\partial_i\psi-i q \psi^*A_i\partial_i\psi+i q \partial_i\psi^*A_i\psi+q^2A_i A_i \psi^*\psi\right)
++\mathcal{L}_{\text{EM}}
+\nonumber\\
  &-\frac{i}{2}
-  \left[\psi^*\partial_0\psi-(\partial_0\psi^*)\psi+2 i q \psi^*A_0\psi\right]\,.
+  \left[\psi^*\partial_0\psi-(\partial_0\psi^*)\psi+2 i q \psi^*A_0\psi\right]+\mathcal{L}_{\text{EM}}\,.
  \end{align}
 
 Entonces, tenemos
@@ -2379,7 +2383,7 @@ Entonces, tenemos
 -\frac{i}{2}
   \left[\psi^*\partial_0\psi-(\partial_0\psi^*)\psi\right] \nonumber\\
 &+\frac{1}{2m}\sum_i\left[ -i q \psi^*A_i\partial_i\psi+i q \left(\partial_i\psi^*\right) A^i\psi+q^2A_i A_i \psi^*\psi\right]\nonumber\\
- &+ q \psi^*A_0\psi\,.
+ &+ q \psi^*A_0\psi+\mathcal{L}_{\text{EM}}\,.
  \end{align}
 De aquí podemos obtener las ecuaciones de Euler-Lagrange para cada campo.
 
