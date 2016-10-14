@@ -99,7 +99,7 @@ Cualquier representación matricial de estos operadores que vaya a representar e
   To find a representation of the usual boosts and rotations, 
 consider a boost
 \end{english}
-\begin{equation}
+\begin{align}
   \left\{x^\mu\right\}=\begin{pmatrix}
     t\\
     x\\
@@ -117,7 +117,7 @@ consider a boost
     \frac{x+vt}{\sqrt{1-v^2}}\\
     y\\
     z
-  \end{pmatrix}=
+  \end{pmatrix}=&
   \begin{pmatrix}
     \cosh\xi&\sinh\xi&0&0\\
     \sinh\xi&\cosh\xi&0&0\\
@@ -129,8 +129,9 @@ consider a boost
     x\\
     y\\
     z
-  \end{pmatrix}=\left\{{\Lambda^\mu}_{\nu}\right\}\left\{x^\nu\right\},
-\end{equation}
+  \end{pmatrix}\nonumber\\
+&=\left\{{\Lambda^\mu}_{\nu}\right\}\left\{x^\nu\right\},
+\end{align}
 \begin{spanish}
   Ya que
 \end{spanish}
@@ -154,11 +155,11 @@ consider a boost
     \xi&1&0&0\\
     0&0&1&0\\
     0&0&0&1
-  \end{pmatrix}=\exp \left( i\xi  K \right),
+  \end{pmatrix}=\exp \left( i\xi  K^1 \right),
 \end{align}
 donde el generador de boost es
 \begin{align}
- K= \begin{pmatrix}
+ K^1= \begin{pmatrix}
     0 & -i & 0 & 0\\
    -i & 0  & 0 & 0\\
    0 & 0 &  0 & 0\\
@@ -212,8 +213,8 @@ Que como hemos visto, puede obtenerse a partir de los generadores del Grupo de r
    0 & 0 & 0\\
  \end{pmatrix}
 \end{align*}.
-
-In general we define the six independent Lorentz--Group parameters:
+\end{frame}
+En general definimos los seis parámetros independientes del Grupo de Lorentz
 \begin{align}
   \omega_{i0}=-\omega_{0i}\equiv&\xi_{i} \nonumber\\
   \omega_{12}=-\omega_{21}\equiv&2\theta^3 &   \omega_{32}=-\omega_{23}\equiv&-2\theta^2 &   \omega_{13}=-\omega_{31}\equiv&2\theta^1\,.
@@ -223,7 +224,7 @@ Por lo tanto
 \xi^i=&\omega^{i0}=-\omega^{0i}&\theta^i=&\frac{1}{2}\epsilon^{ijk}\omega_{jk}\,.  
 \end{align}
 
-The $4\times 4$ matrices
+Las  matrices $4\times 4$ 
 \begin{align}
    \left(J^{\mu\nu}\right)_{\alpha\beta}=&i\epsilon^{\mu\nu\rho\sigma}\epsilon_{\rho\sigma\alpha\beta}\nonumber\\
    \left(J^{\mu\nu}\right)^{\alpha}_{\beta}=g^{\gamma\alpha}\left(J^{\mu\nu}\right)_{\gamma\beta}= &i\epsilon^{\mu\nu\rho\sigma}\epsilon_{\rho\sigma\gamma\beta}g^{\gamma\alpha}\nonumber\\
@@ -282,12 +283,13 @@ y usando \eqref{eq:klkl}
 =&  -i\xi_{i}K^{i}-i\omega_{ij}\frac{\widehat{J}^{ij}}{2}\nonumber\\
 =&\sum_i \left(i\xi^i K^i+i\theta^i L^i  \right)\,.
 \end{align}
+\begin{frame}
 Entonces
 \begin{align}
   \{\Lambda\}=\exp\left(-i\omega_{\mu\nu}\frac{\widehat{J}^{\mu\nu}}{2}\right)=
 \exp\left( i\boldsymbol{\xi}\cdot\mathbf{K}+i\boldsymbol{\theta}\cdot\mathbf{L} \right)\,.
 \end{align}
-
+\end{frame}
 
 %ver programa mathematica
 
@@ -439,7 +441,7 @@ Therefore  the most general Lagrangian for two-component spinors contains at lea
     \mathcal{L}\supset&\frac{i}{2}{\psi}^{\dagger}_{\dot{\alpha}}\left(\overline{\sigma}^{\mu}\right)^{\dot{\alpha}\alpha}\partial_\mu\psi_{\alpha}+m\,\psi^{\alpha}\psi_{\alpha} \nonumber\\
 \supset&\frac{i}{2}{\psi}^{\dagger}\overline{\sigma}^\mu\partial_\mu\psi+m\,\psi\psi
 \end{align}
-To guarantee that $\mathcal{L}^{\dagger}=\mathcal{L}$ so that the Action will be real, the easiest way is to add the hermitian conjugate (h.c) of each of the terms. So that, the most general Lagrangian for one left spinot field is
+To guarantee that $\mathcal{L}^{\dagger}=\mathcal{L}$ so that the Action will be real, the easiest way is to add the hermitian conjugate (h.c) of each of the terms. So that, the most general Lagrangian for one left spinor field is
 \begin{align*}
   \mathcal{L}=&\frac{i}{2}{\psi}^{\dagger}\overline{\sigma}^\mu\partial_\mu\psi+m\,\psi\psi+
 \text{h.c} \nonumber\\

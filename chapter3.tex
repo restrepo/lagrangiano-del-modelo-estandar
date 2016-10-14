@@ -325,6 +325,7 @@ Para estudiar otros posibles tipos de campos además de los escalares y vectoria
 
 Seguiremos el mismo método de encontrar representaciones matriciales a partir del algebra  de los generadores del Grupo (los cuales deben satisfacer la relaciones de conmutación apropiadas) para luego exponenciar estas representaciones infinitesimales.
 
+\begin{frame}[fragile,allowframebreaks]
 Para el presente problema, necesitamos conocer las relaciones de conmutación de los generadores del grupo de transformaciones de Lorentz. Hemos mostrado en la ec.~ \eqref{eq:rotgr}  que, a partir de la relación (haciendo expícito el caracter de operadores)
 \begin{align}
 \label{eq:rxp}
@@ -346,21 +347,11 @@ Definimos una representación matricial de los operadores de momento angular com
 =&i(\delta_{li}\delta_{mj}-\delta_{lj}\delta_{mi})x^i\partial^j\nonumber\\
 =&i(x^l\partial^m-x^m\partial^l)\,.
 \end{align}
-\begin{spanish}
   Que involucran tres generadores. La generalización a cuatro dimensiones da lugar a generadores adicionales $\widehat{J}^{0i}$:
-\end{spanish}
-\begin{english}
-  Involving three generators. The generalization to four-dimensions give to arise three further generators $\widehat{J}^{0i}$:
-\end{english}
 \begin{align}
   \widehat{J}^{\mu\nu}=i(x^\mu\partial^\nu-x^\nu\partial^\mu)\,.
 \end{align}
-\begin{spanish}
 Los seis generadores satisfacen el álgebra
-\end{spanish}
-\begin{english}
-  The six generators $\widehat{J}^{\mu\nu}$ satisfy the algebra
-\end{english}
 \begin{align}
 \label{eq:lrtalg}
   \left[\widehat{J}^{\mu\nu},\widehat{J}^{\rho\sigma}\right]=&
@@ -369,24 +360,17 @@ i(g^{\nu\rho}\widehat{J}^{\mu\sigma}-g^{\mu\rho}\widehat{J}^{\nu\sigma}-g^{\nu\s
 %From \cite{Peskin}:
 Cualquier representación matricial de estos operadores que vaya a representar esta álgebra debe obedecer las mismas reglas de conmutación.
 
-\begin{spanish}
+
   La exponenciación de los generadores da lugar al grupo de elementos 
-\end{spanish}
-\begin{english}
-  The exponentiation of the generators give to arise to group elements
-\end{english}
 \begin{align}
   \widehat{\Lambda}=\exp\left(-i\omega_{\mu\nu}\frac{\widehat{J}^{\mu\nu}}{2}\right)
 \end{align}
-\begin{spanish}
   Para encontrar una representación matricial de los boosts (que son básicamente rotaciones entre el espacio y el tiempo) y las rotaciones usuales, 
   consideremos un boost
-\end{spanish}
-\begin{english}
   To find a representation of the usual boosts and rotations, 
 consider a boost
-\end{english}
-\begin{equation}
+
+\begin{align}
   \left\{x^\mu\right\}=\begin{pmatrix}
     t\\
     x\\
@@ -404,7 +388,7 @@ consider a boost
     \frac{x+vt}{\sqrt{1-v^2}}\\
     y\\
     z
-  \end{pmatrix}=
+  \end{pmatrix}=&
   \begin{pmatrix}
     \cosh\xi&\sinh\xi&0&0\\
     \sinh\xi&\cosh\xi&0&0\\
@@ -416,24 +400,15 @@ consider a boost
     x\\
     y\\
     z
-  \end{pmatrix}=\left\{{\Lambda^\mu}_{\nu}\right\}\left\{x^\nu\right\},
-\end{equation}
-\begin{spanish}
+  \end{pmatrix}\nonumber\\
+=&\left\{{\Lambda^\mu}_{\nu}\right\}\left\{x^\nu\right\}\,,
+\end{align}
   Ya que
-\end{spanish}
-\begin{english}
-  Since
-\end{english}
 \begin{align}
   \cosh\xi=&\sum_{n=0}^{\infty}\frac{\xi^{2n}}{2n!}\approx 1+\mathcal{O}(\xi^2)\nonumber\\
   \sinh\xi=&\sum_{n=0}^{\infty}\frac{\xi^{2n+1}}{(2n+1)!}\approx \xi+\mathcal{O}(\xi^2)\,,
 \end{align}
-\begin{spanish}
   Un boost infinitesimal a lo largo de $x$ es
-\end{spanish}
-\begin{english}
-  one infinitesimal boost along $x$ is
-\end{english}
 \begin{align}
   \left\{{\Lambda^\mu}_{\nu}\right\}_{x-\text{boost }}\approx
   \begin{pmatrix}
@@ -441,11 +416,11 @@ consider a boost
     \xi&1&0&0\\
     0&0&1&0\\
     0&0&0&1
-  \end{pmatrix}=\exp \left( i\xi  K \right),
+  \end{pmatrix}=\exp \left( i\xi  K^1 \right),
 \end{align}
 donde el generador de boost es
 \begin{align}
- K= \begin{pmatrix}
+ K^1= \begin{pmatrix}
     0 & -i & 0 & 0\\
    -i & 0  & 0 & 0\\
    0 & 0 &  0 & 0\\
@@ -453,12 +428,7 @@ donde el generador de boost es
   \end{pmatrix}.
 \end{align}
 
-\begin{spanish}
   Similarmente una rotación por un ángulo infinitesimal $\theta=\theta_3$ alrededor del plano $xy$ (o sobre el eje $z$)
-\end{spanish}
-\begin{english}
-  Similarly a rotation by an infinitesimal angle $\theta=\theta_3$ along $xy$--plane (or about the $z$--axis)
-\end{english}
 \begin{align}
   \left\{{\Lambda^\mu}_{\nu}\right\}_{xy-\text{rotation }}\approx
   \begin{pmatrix}
@@ -500,7 +470,8 @@ Que como hemos visto, puede obtenerse a partir de los generadores del Grupo de r
 \end{align*}.
 
 
-In general we define the six independent Lorentz--Group parameters:
+\end{frame}
+En general definimos los seis parámetros independientes del Grupo de Lorentz
 \begin{align}
   \omega_{i0}=-\omega_{0i}\equiv&\xi_{i} \nonumber\\
   \omega_{12}=-\omega_{21}\equiv&2\theta^3 &   \omega_{32}=-\omega_{23}\equiv&-2\theta^2 &   \omega_{13}=-\omega_{31}\equiv&2\theta^1\,.
@@ -510,7 +481,7 @@ Por lo tanto
 \xi^i=&\omega^{i0}=-\omega^{0i}&\theta^i=&\frac{1}{2}\epsilon^{ijk}\omega_{jk}\,.  
 \end{align}
 
-The $4\times 4$ matrices
+Las  matrices $4\times 4$ 
 \begin{align}
    \left(J^{\mu\nu}\right)_{\alpha\beta}=&i\epsilon^{\mu\nu\rho\sigma}\epsilon_{\rho\sigma\alpha\beta}\nonumber\\
    \left(J^{\mu\nu}\right)^{\alpha}_{\beta}=g^{\gamma\alpha}\left(J^{\mu\nu}\right)_{\gamma\beta}= &i\epsilon^{\mu\nu\rho\sigma}\epsilon_{\rho\sigma\gamma\beta}g^{\gamma\alpha}\nonumber\\
@@ -569,6 +540,7 @@ y usando \eqref{eq:klkl}
 =&  -i\xi_{i}K^{i}-i\omega_{ij}\frac{\widehat{J}^{ij}}{2}\nonumber\\
 =&\sum_i \left(i\xi^i K^i+i\theta^i L^i  \right)\,.
 \end{align}
+\begin{frame}
 Entonces
 \begin{align}
   \{\Lambda\}=\exp\left(-i\omega_{\mu\nu}\frac{\widehat{J}^{\mu\nu}}{2}\right)=
@@ -577,6 +549,44 @@ Entonces
 
 
 %ver programa mathematica
+\end{frame}
+
+\section{2 representaciones $2\times 2$ del Grupo de Lorentz}
+\begin{frame}[fragile,allowframebreaks]
+Here we focus on the simplest non-trivial irreducible representations of the Lorentz algebra. These are the two-dimensional (inequivalent) representations: $(\frac{1}{2},0)$ and $(0,\frac{1}{2})$. 
+
+\begin{align}
+  S(\Lambda)_{\left( \frac{1}{2},0 \right)}=&\exp\left(-i \omega_{\mu\nu}\frac{\sigma^{\mu\nu}}{2}\right)\nonumber
+\end{align}
+\begin{align}
+  \sigma^{\mu\nu}=\frac{i}{4}\left[\sigma^\mu,\overline{\sigma}^\nu\right]\,.
+\end{align}
+where
+\begin{align}
+  \sigma^0=&\mathbf{1}_{2\times2},& \sigma^{i}\to \boldsymbol{\sigma}=&(\sigma^1,\sigma^2,\sigma^3)\nonumber\\
+  \overline{\sigma}^0=&\mathbf{1}_{2\times2},& \overline{\sigma}^{i}\to \overline{\boldsymbol{\sigma}}=&(-\sigma^1,-\sigma^2,-\sigma^3)
+\end{align}
+include the Pauli matrices \eqref{eq:paulimatr}.
+
+\end{frame}
+\begin{frame}[fragile,allowframebreaks]
+Eq. \eqref{eq:4lt}, which yields
+\begin{align}
+\label{eq:SLet}
+  S(\Lambda)_{\left( \frac{1}{2},0 \right)}\equiv S(\Lambda)=
+\exp\left( \boldsymbol{\xi}\cdot \frac{\boldsymbol{\sigma}}{2}+i\boldsymbol{\theta}\cdot \frac{\boldsymbol{\sigma}}{2} \right)\,,
+\end{align}
+
+La otra representación independiente es
+\begin{align}
+\label{eq:SLet}
+\left[S(\Lambda)\right]^{\dagger} = S(\Lambda)_{\left(0,\frac{1}{2} \right)}\equiv S^{*}(\Lambda)=&
+\exp\left( \boldsymbol{\xi}\cdot \frac{\boldsymbol{\sigma}}{2}+i\boldsymbol{\theta}\cdot \frac{\boldsymbol{\sigma}}{2} \right)^{\dagger}\nonumber\\
+=&\exp\left( \boldsymbol{\xi}\cdot \frac{\boldsymbol{\sigma}^{*}}{2}-i\boldsymbol{\theta}\cdot \frac{\boldsymbol{\sigma}^{*}}{2} \right)\,.
+\end{align}
+ 
+The components of $S(\Lambda)$ will be denoted as ${\left[ S(\Lambda) \right]_{\alpha}}^{\beta}$. In such a case, $S^{*}$ is another independent $2\times2$ representation of the Lorentz Group. It is denoted by $\left( 0,\frac{1}{2}\right)$, and, in order to emphasize the difference, it is convenient to denote their components with dotted indices $\dot{\alpha},\dot{\beta},\cdots$. We can get $S^{*}$ from $S^{\dagger}$.
+\end{frame}
 
 
 
@@ -593,13 +603,15 @@ does not left the Action invariant. To have a proper formulation of the quantum 
   i\frac{\partial}{\partial t}\psi=\hat{H} \psi\,,  
 \end{align}
 with some, to be determined, relativistic Hamiltonian operator $\widehat{H}$, we should be able to build a Lagrangian with temporal derivatives of order one. Therefore, the Lorentz invariant requires all the derivatives of order one.  
-
+\begin{frame}
 Consider spinor fields, which transforms as
 \begin{align}
 \label{eq:184qft}
   \psi_\alpha(x)\to\psi'_\alpha(x)={\left[ S(\Lambda) \right]_\alpha}^\beta\psi_\beta(\Lambda^{-1}x)\,, 
 \end{align}
-where $S(\Lambda)$ is some spinorial representation of the Lorentz Group. In matricial form, if $\Psi(x)$ is a two-component column vector, 
+where $S(\Lambda)$ is some spinorial representation of the Lorentz Group. 
+\end{frame}
+In matricial form, if $\Psi(x)$ is a two-component column vector, 
 \begin{align*}
   \Psi=
   \begin{pmatrix}
@@ -621,6 +633,7 @@ In components, and anticipating the dotted indices for $S^{*}$, we have
 =&\left( \psi_\beta \right)^{\dagger}{\left( S^*\right)_{\dot{\alpha}}}^{\dot{\beta}}\nonumber\\
 =&\left( \psi_\beta \right)^{\dagger}{\left( S^*\right)_{\dot{\alpha}}}^{\dot{\beta}}\,,
 \end{align}
+\begin{frame}
 If we interpret $\left( \psi_\beta \right)^{\dagger}$ as the components of a new column vector transforming under $S^{*}(\Lambda)$, with dotted components
 \begin{align}
  \psi_{\dot{\alpha}}^{\dagger}\equiv \left( \psi_\alpha \right)^{\dagger}
@@ -629,6 +642,7 @@ then we have
 \begin{align}
   {\psi'}_{\dot{\alpha}}^{\dagger}=&{\left[ S^*(\Lambda)\right]_{\dot{\alpha}}}^{\dot{\beta}} \psi_{\dot{\beta}}^{\dagger}\,,
 \end{align}
+\end{frame}
 or in matricial form
 \begin{align}
 {{\Psi'}^{\dagger}}^{T}=S^{*}{{\Psi}^{\dagger}}^{T}
@@ -643,17 +657,23 @@ or in matricial form
   \end{pmatrix}
 \end{align}
 
-
+\begin{frame}
 In summary we have the following Lorentz's transformation properties for the fields
 \begin{align}
-   \phi(x)\to \phi'(x')=&\phi(\Lambda^{-1}x) && \text{Scalar field,}\nonumber\\
+   \phi(x)\to \phi'(x')=&\phi(x) && \text{Scalar field,}\nonumber\\
    A^\mu(x)\to {A'}^\mu=&{\Lambda^\mu}_\nu A^\nu(\Lambda^{-1}x)&&\text{Vector field,}\nonumber\\
-   \Psi(x)\to\Psi'(x)=&S(\Lambda)\Psi(\Lambda^{-1}x)&&\text{Spinor field.}\nonumber\\
-   \Psi^{\dagger T}(x)\to{\Psi'}^{\dagger T}(x)=&S^{*}(\Lambda)\Psi^{\dagger T}(\Lambda^{-1}x)&&\text{Conjugate spinor field.}
-\end{align}
+  \psi_\alpha(x)\to\psi'_\alpha(x)=&{\left[ S(\Lambda) \right]_\alpha}^\beta\psi_\beta(\Lambda^{-1}x)
+&& \text{Left-handed spinor field,}\nonumber\\
+ {\psi'}_{\dot{\alpha}}^{\dagger}(x)\to  {\psi'}_{\dot{\alpha}}^{\dagger}(x)=&{\left[ S^*(\Lambda)\right]_{\dot{\alpha}}}^{\dot{\beta}} \psi_{\dot{\beta}}^{\dagger}(\Lambda^{-1}x)&& \text{Rigth-handed anti-spinor field,}\,,
+ \end{align}
+\end{frame}
+
+
 
 In the following we use only the dotted and undotted components for
-spinors but not the matricial form. There are two additional spin-1/2
+spinors but not the matricial form. 
+\begin{frame}
+There are two additional spin-1/2
 irreducible representations of the Lorentz group. $\left( S^{-1}
 \right)^T$ and $\left( S^{-1} \right)^{\dagger}$, but these are
 equivalent to the $\left( \frac{1}{2},0 \right)$ and the $\left(
@@ -687,6 +707,7 @@ and similarly
 \to &{\psi'}^{\dagger}_{\dot{\alpha}}{\psi'}^{\dagger\dot{\alpha}}\nonumber\\
 =&\psi^{\dagger}\psi^{\dagger}\,.
 \end{align}
+\end{frame}
 To construct Lorentz invariant Lagrangians, one needs to first combine products of spinors to make objects that transforms as Lorentz tensors.
 When constructing Lorentz  tensors from fermion fields the lowered indices must only be contracted with raised indices following the same convention established in eq.~(\ref{eq:conven}). A contravariant  Lorentz tensor of rank $(n\times n)$  in this space must have an index structure with $n$ undotted (dotted) indices follow by $n$ dotted (undotted) indices, as for example,   $\alpha_1\alpha_2\ldots\alpha_n\dot{\alpha}_1\dot{\alpha}_2\ldots\dot{\alpha}_n$.
 
@@ -743,7 +764,8 @@ Eq. \eqref{eq:4lt}, which yields
 \end{align}
 where $\boldsymbol{\sigma}=(\sigma_1,\sigma_2,\sigma_3)$ are the Pauli matrices \eqref{eq:paulimatr}.
 
-we could need a new representation acting in and internal space upon a
+\begin{frame}[fragile,allowframebreaks]
+We could need a new representation acting in and internal space upon a
 two-component field $\psi_a$ ($a=1,2$). An Action with a Lagrangian term linear in the derivatives, could be Lorentz invariant if, taking into account the convention in eq.~(\ref{eq:conven}) and the dotted-undotted structure of the tensor in this internal space, we have that if $a^{\mu}$ is to be a 2th rank tensor of the internal space, it must have components, e.g, $\left( a^{\mu} \right)^{\dot{\alpha}\beta}$. Therefore, a posible Lorentz invariant with a single derivative could be 
  \begin{align}
    {\psi}^{\dagger}a^\mu\partial_\mu\psi\to  {\psi'}^{\dagger}(x)a^\mu\partial'_\mu\psi'
@@ -784,13 +806,14 @@ where
 \begin{align}
 \sigma^0=& \mathbf{1} & \overline{\boldsymbol{\sigma}}=&-\boldsymbol{\sigma}=\left(-\sigma^1,-\sigma^2,-\sigma^3\right)\,.
 \end{align}
-
+\end{frame}
+\begin{frame}[fragile,allowframebreaks]
 Therefore  the most general Lagrangian for two-component spinors contains at least
 \begin{align}
     \mathcal{L}\supset&\frac{i}{2}{\psi}^{\dagger}_{\dot{\alpha}}\left(\overline{\sigma}^{\mu}\right)^{\dot{\alpha}\alpha}\partial_\mu\psi_{\alpha}-m\,\psi^{\alpha}\psi_{\alpha} \nonumber\\
 \supset&\frac{i}{2}{\psi}^{\dagger}\overline{\sigma}^\mu\partial_\mu\psi-m\,\psi\psi
 \end{align}
-To guarantee that $\mathcal{L}^{\dagger}=\mathcal{L}$ so that the Action will be real, the easiest way is to add the hermitian conjugate (h.c) of each of the terms. So that, the most general Lagrangian for one left spinot field is
+To guarantee that $\mathcal{L}^{\dagger}=\mathcal{L}$ so that the Action will be real, the easiest way is to add the hermitian conjugate (h.c) of each of the terms. So that, the most general Lagrangian for one left spinor field is
 \begin{align*}
   \mathcal{L}=&\frac{i}{2}{\psi}^{\dagger}\overline{\sigma}^\mu\partial_\mu\psi-m\,\psi\psi+
 \text{h.c} \nonumber\\
@@ -830,11 +853,12 @@ The previos Lagrangian which is invariant under
   \psi\to \psi'=e^{i\alpha}\psi\,,
 \end{align}
 is the most general one if $\psi$ have any conserved charge, and will be the one the will use in the subsequent discussions.
-
+\end{frame}
 
 
 \subsection{Corriente conservada y Lagrangiano de Weyl}
 \label{sec:corriente-conservada}
+\begin{frame}
 En general
 \begin{align}
    J^\mu&\propto\left[\frac{\partial\mathcal{L}}{\partial\left(\partial_\mu\psi\right)}\right]\delta\psi+\delta\psi^\dagger\left[\frac{\partial\mathcal{L}}{\partial\left(\partial_\mu\psi^\dagger\right)}\right]\nonumber\\
@@ -851,8 +875,10 @@ La  densidad de corriente es
   J^0&\propto \psi^\dagger \sigma^0\psi=\psi^{\dagger}\psi\,.
 \end{align}
 Que podemos interpretar como una densidad de probabilidad. Por consiguiente, la ecuación de movimiento se puede interpretar directamente como una ecuación de una función de onda de la mecánica cuántica.
+\end{frame}
 \subsection{Tensor momento-energía}
 \label{sec:tens-momento-energi}
+\begin{frame}[fragile,allowframebreaks]
 Usando $\sigma^{0}=\mathbf{1}$,
 \begin{align}
   T^0_0&=\frac{\partial\mathcal{L}}{\partial\left(\partial_0\psi\right)}\partial_0\psi+\partial_0\psi^\dagger\frac{\partial\mathcal{L}}{\partial\left(\partial_0\psi^\dagger\right)}-\mathcal{L}\nonumber\\
@@ -891,9 +917,10 @@ de modo que
 \begin{align}
 \langle\hat{\mathbf{p}}\rangle=\int\psi^\dagger\hat{\mathbf{p}}\psi\,d^3 x
 \end{align}
-
+\end{frame}
 \subsection{Rigth-handed fermion}
 
+\begin{frame}
 For the right handed two-component field ${\eta^{\dagger}}^{\dot{\alpha}}$ ($\dot{\alpha}=\dot{1},\dot{2}$). a posible Lorentz invariant with a single derivative could be 
  \begin{align}
    {\eta}a^\mu\partial_\mu\eta^{\dagger}\to  {\eta'}\left(a^\mu\right)\partial'_\mu{\eta^{\dagger}}'
@@ -921,7 +948,7 @@ con donde hemos definido el Hamiltoniano de Weyl como
   \hat{H}_W= \mathbf{\sigma}\cdot\widehat{\mathbf{p}}
 \end{equation}
 Que corresponde a la proyección del espín en la dirección de movimiento. El signo más justica la definción de $\eta^{\dot{\alpha}}$ como un espinor de Weyl derecho.
-
+\end{frame}
 
 \subsection{Ecuaciones de Euler-Lagrange}
 \label{sec:ecuaciones-de-euler}
@@ -1105,12 +1132,7 @@ It is worth notices that in fact $\sigma^{\mu\nu}$ satisfy the Lorentz algebra, 
 \end{align}
 
 
-\begin{english}
-  We need to satisfy the following condition
-\end{english}
-\begin{spanish}
   Necesitamos satifacer la siguiente condición
-\end{spanish}
 \begin{align}
 \label{eq:sss}
   S^\dagger\overline{\sigma}^\mu S=&{\Lambda^\mu}_\nu\overline{\sigma}^\nu
@@ -1246,7 +1268,7 @@ Con esto podemos reescribir el siguiente producto de espinores  de Weyl que tran
   =&\pm\eta\,{\sigma}^{\mu}\,\xi^{\dagger} \,,
 \end{align}
 donde el signo $+$ ($-$) es para campos clásicos (anticonmutantes).
-
+\begin{frame}
 Para describir completamente un electrón, que conserva carga eléctrica bajo $U(1)$, necesitamos todas las componentes detalladas en la Tabla~\ref{tab:electron}
 \begin{table}
   \centering
@@ -1261,7 +1283,8 @@ Para describir completamente un electrón, que conserva carga eléctrica bajo $U
   \label{tab:electron}
 \end{table}
 
-
+\end{frame}
+\begin{frame}[fragile,allowframebreaks]
 Podemos especificar el Lagrangiano completo para el electrón invariante bajo $U(1)$ sin perdidad de generalidad, usando los dos fermiones izquierdos de cargas opuestas, $\xi_{\alpha}$ y $\eta^{\alpha}$:
 \begin{align}
   \xi\to\xi'=&e^{i\theta}\xi &   \eta\to\eta'=&e^{-i\theta}\eta &
@@ -1384,6 +1407,7 @@ podemos escribir finalmente el Lagrangiano para espinores de Dirac  como
 \begin{align}
   \mathcal{L}=&i\overline{\Psi}\gamma^{\mu}\partial_{\mu}\Psi-m\overline{\Psi}\Psi\,.
 \end{align}
+\end{frame}
 En adelante para simplificar la notación nos referiremos al electrón de Dirac simplemente como $\psi$.
 
 En términos de los campos de Weyl un escalar y un vector de espinores Dirac se escriben como
@@ -1396,6 +1420,7 @@ En términos de los campos de Weyl un escalar y un vector de espinores Dirac se 
 
 Un tratamiento de la invarianza de Lorentz para la Acción de Dirac esta dado en el Apéndice~\ref{cha:dirac-action}. 
 
+\begin{frame}
 La ecuación de Dirac se obtiene facilmente de la ecuación de Euler Lagrange para el espinor adjunto $\overline{\Psi}$
 \begin{align}
   \partial_{\mu}\left[ \frac{\partial\mathcal{L}}{\partial \left( \partial_{\mu} \overline{\Psi} \right)} \right]-\frac{\partial \mathcal{L}}{\partial \overline{\Psi}}=&0 \nonumber\\
@@ -1413,6 +1438,7 @@ donde
 \begin{align}
   \widehat{H}_D=\gamma^0\left( \boldsymbol{\gamma}\cdot \widehat{\mathbf{p}} +m \right)
 \end{align}
+\end{frame}
 Antes de intentar tomar el límite no relativista, y para ser consistentes con relatividad espacial, anse debe cambiar el Lagangiano por uno que tenga la invarianza de fase local. En tal caso el Hamiltoniano resultando se debe reducir al Hamiltoniano de  Sch\"odinger en presencia de un campo electrómagnético (ver Apéndice \ref{sec:limite-no-relat}).
 
 
