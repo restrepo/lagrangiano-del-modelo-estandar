@@ -13,20 +13,33 @@ A continuación veremos cual es la forma explícita de la derivada covariante pa
 
 Para hacer el Lagrangiano en ec.~\eqref{eq:115qft} invariante gauge local bajo $U(1)_Q$, procedemos de la forma usual. El campo transforma como
 \begin{align}
-  \psi\to\psi'=e^{-i\theta(x)Q}\psi\nonumber\\
-  \bar{\psi}\to\bar{\psi}'=\bar{\psi}e^{i\theta(x)Q}\,,
+  \psi\to\psi'=\operatorname{e}^{ieQ\, \theta(x)}\psi\nonumber\\
+  \bar{\psi}\to\bar{\psi}'=\bar{\psi}\operatorname{e}^{-ieQ\,\theta(x)}\,,
 \end{align}
 donde $Q$ es el generador de carga eléctrica en unidades de la carga del electrón.
 
 La derivada covariante se define de manera que transforma de la misma forma que el campo, introduciendo el campo gauge $A^\mu$
 \begin{equation}
   \label{eq:202qft}
-  \partial^\mu\to\mathcal{D}^\mu=\partial^\mu-ieQA^\mu\,,
+  \partial_\mu\to\mathcal{D}_\mu=\partial_\mu-ieQA_\mu\,,
 \end{equation}
+tal que
+\begin{align}
+  A_{\mu}\to A_{\mu}'=A_{\mu}-\partial_{\mu}\theta(x)\,.
+\end{align}
+
 donde $e$ es la carga eléctrica del electrón. De esta forma, si $\psi_e$ es el campo que representa al electrón
 \begin{align}
   eQ \psi_e=e(-1)\psi_e=-e \psi_e\,.
 \end{align}
+
+En efecto
+\begin{align}
+  \mathcal{D}_{\mu}\psi\to \left( \mathcal{D}_{\mu}\psi \right)'=&\mathcal{D}_{\mu}'\psi' \nonumber\\
+=&\operatorname{e}^{ieQ\, \theta(x)}\mathcal{D}_{\mu}\psi\,,
+\end{align}
+como corresponde a una derivada covariante.
+
 
 El Lagrangiano correspondiente a la interacción de un fermión y el campo electromagnético corresponde al Lagrangiano de Dirac con la derivada normal reemplzada por la derivada covariante, y el correspondiente término cinético invariante gauge y de Lorentz asociado al nuevo campo introducido en la derivada covariante: $A^\mu$. Este campo es necesario para compensar los cambios en la energía y momentum que sufre el electrón como consecuencia de imponer la invarianza de la Acción bajo un cambio de fase local 
 \begin{equation}
