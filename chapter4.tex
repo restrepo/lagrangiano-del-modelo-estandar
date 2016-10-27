@@ -287,7 +287,7 @@ Como era de esperarse, obtenemos un modo masivo $H$ cuyas oscilaciones cuestan e
   \mathcal{L}_{\text{int}}=\frac{H}{v}\partial^{\mu}G\partial_{\mu}G\,,
 \end{align}
 que predice que el campo $H$ debe decaer a dos campos $G$. Sin embargo, este tipo de procesos aún no se han observado en la naturaleza. 
-\section{Principio gauge local}
+\section{Electrodinámica cuántica escalar}
 
 
 
@@ -436,6 +436,206 @@ El espectro de partículas alrededor del mínimo asociado a la ruptura espontán
   m=\frac{hv}{\sqrt{2}}\,,
 \end{align*}
 un Higgs con masa $m_H^2$ y un bosón de Goldston sin masa $J(x)$. Cuando el bosón de Goldstone no puede ser reabsorvido como la masa de un bosón gauge, corresponde a una partícula física que se suele llamar el Majoron. El término de interacción $\psi \psi J$ implica que un par de fermiones de Weyl se pueden aniquilar en un Majoron (sin masa). Este tipo de procesos están fuertemente suprimidos a partir de observaciones astrofísicas pues podrían implicar por ejemplo un enfriamiento demasiado rápido de una supernova por energía perdida a través de Majorones provenientes de la aniquilación de neutrinos. 
+
+\section{SU(2) escalar}
+Para construir la teoría gauge no Abeliana $SU(2)$ para campos escalares, usaremos los mismos métodos desarrollados para SU(3) del capítulo pasado con los siguientes cambios de notación
+\begin{align}
+  G_{\mu}^a \to& W_{\mu}^{i}\,,\qquad i=1,2,3 \nonumber\\
+  G_{\mu\nu}^a \to& W_{\mu\nu}^{i}\,.
+\end{align}
+Consideremos un doblete escalar bajo SU(2) compuesto de dos escalares complejos
+\begin{align}
+  \Phi=  \begin{pmatrix}
+    \phi_1\\
+     \phi_2\\
+  \end{pmatrix},\qquad \phi_1\,,\ \phi_2\in \mathbb{C}\,,
+\end{align}
+con un Lagrangiano gauge local
+\begin{align}
+  \mathcal{L}&=\mathcal{L}_W-\frac{1}{4}W_{\mu\nu}^{i}W^{\mu\nu}\,,
+\end{align}
+donde
+\begin{align}
+ \mathcal{L}_W= \left( \mathcal{D}_{\mu} \Phi\right)^{\dagger}\mathcal{D}^{\mu} \Phi-
+\mu^2 \left( \Phi^{\dagger} \Phi\right)-\lambda \left( \Phi^{\dagger} \Phi\right)^2\,,\ \text{con $\mu^2<0,\ \lambda>0$}\,.
+\end{align}
+
+
+\begin{frame}[fragile,allowframebreaks]
+Las condiciones sobre los parámetros del potencial escalar garantizan un rompimiento espontáneo de la simetría. Los cuatro grados de libertad de $\Phi$, pueden escribirse en forma polar con la parte real neutra desplazada para generar la ruptura espontánea de la simetría SU(2)
+\begin{align}
+\label{eq:92qft}
+  {\Phi}=&e^{i G_jT^j}
+  \begin{pmatrix}
+    0\\
+    \frac{1}{\sqrt{2}}(H(x)+v)
+  \end{pmatrix}\\
+  \approx&
+  \frac{1}{2}\begin{pmatrix}
+    1+i G_3&\sqrt{2}i G^+\\
+    \sqrt{2}i G^-&1-i G_3
+  \end{pmatrix}  \begin{pmatrix}
+    0\\
+    \frac{1}{\sqrt{2}}(H(x)+v)
+  \end{pmatrix}\nonumber\\
+  =&\frac{1}{2}\begin{pmatrix}
+    i G^+H+vi G^+\\
+    \frac{1}{\sqrt{2}}(H+v-i G_3H-i G_3 v)
+  \end{pmatrix}\nonumber\\
+  =&\begin{pmatrix}
+    \eta^+\\
+    \frac{1}{\sqrt{2}}(H(x)+v-i\eta^0)
+  \end{pmatrix}.\nonumber
+\end{align}
+Para SU(2) tenemos tres generadores y tres bosones gauge. De acuerdo a la parametrización en ec.~\eqref{eq:92qft} esperamos que aparezcan tres bosones de Goldstone y un campo de Higgs con masa, de manera que todos los campos gauge adquirirán masa.
+Se espera entonces que el espectro consista de un bosón de Higgs, tres bosones gauge masivos, y un bosón gauge sin masa.
+
+Podemos hacer una transformación gauge similar a la de la 
+%DEBUG: corregir
+ec.~\eqref{eq:93qft} sobre el campo $\Phi$, tal que
+\begin{equation}
+  \label{eq:123qft}
+    {\Phi}\to{\Phi}'=
+  \begin{pmatrix}
+    0\\
+    \frac{1}{\sqrt{2}}(H(x)+v)
+  \end{pmatrix},
+\end{equation}
+que define el \emph{gauge unitario}. En adelante sin embargo omitiremos las primas sobre los campos transformados ${\Phi}'$ y $W'_{\mu\nu}$.
+
+Comenzaremos analizando la parte escalar del Lagrangiano del Modelo dada en la ec.~\eqref{eq:smscalar}
+\begin{equation}
+  \mathcal{L}_{W}=\frac{1}{2}\left[\mathcal{D}^\mu \begin{pmatrix}
+    0\\
+    H(x)+v
+  \end{pmatrix}\right]^{\dagger} \mathcal{D}_\mu\begin{pmatrix}
+    0\\
+    H(x)+v
+  \end{pmatrix}-V(H)\,,
+\end{equation}
+donde $V(H)$ dado en la ec.~\eqref{eq:higgspot}, incluye el término de masa para el bosón de Higgs \eqref{eq:higgsmass}:
+\begin{equation}
+  m_H^2=2\left|\mu^2\right|=2\lambda v^2
+\end{equation}
+Como
+\begin{align}
+\label{eq:w22}
+      W_\mu=T_i W^{i}_\mu&=
+  \frac{1}{2}\begin{pmatrix}
+    0&1\\
+    1&0
+  \end{pmatrix}W^1_\mu+
+  \frac{1}{2}\begin{pmatrix}
+    0&-i\\
+    i&0
+  \end{pmatrix}W^2_\mu+
+  \frac{1}{2}\begin{pmatrix}
+    1&0\\
+    0&-1
+  \end{pmatrix}W^3_\mu\nonumber\\
+  &=
+  \frac{1}{2}\begin{pmatrix}
+    W^3_\mu                                  &\sqrt{2}\,\dfrac{W^1_\mu-i\,W^2_\mu}{\sqrt{2}}\\
+    \sqrt{2}\,\dfrac{W^1_\mu+i\,W^2_\mu}{\sqrt{2}} &-W^3_\mu
+  \end{pmatrix}\nonumber\\
+  &\equiv
+  \frac{1}{2}\begin{pmatrix}
+    W^3_\mu&\sqrt{2}W^+_\mu\\
+    \sqrt{2}W^-_\mu&-W^3_\mu
+  \end{pmatrix}\nonumber\\
+=&\begin{pmatrix}
+    \frac{1}{2}W_3&\frac{1}{\sqrt{2}}W^+_\mu\\
+    \frac{1}{\sqrt{2}}W^-_\mu&-\frac{1}{2}W^3_\mu
+  \end{pmatrix}.
+\end{align}
+$\mathcal{D}_\mu$ corresponde a la matrix $2\times  2$
+\begin{align}
+\label{eq:d22}
+ \mathcal{D}_\mu &=  \begin{pmatrix}
+    \partial_\mu-\frac{i}{2}g W^3_\mu&-\frac{i}{\sqrt{2}}g W^+_\mu\\
+    -\frac{i}{\sqrt{2}}g W^-_\mu&\partial_\mu+\frac{i}{2}g W^3_\mu
+  \end{pmatrix}.
+\end{align}
+
+Entonces
+\begin{align}
+\mathcal{D}_\mu \begin{pmatrix}
+    0\\
+    H(x)+v
+  \end{pmatrix}=\begin{pmatrix}
+    -\frac{i}{\sqrt{2}}gW_\mu^+(H+v)\\
+    \partial_\mu H+\frac{i}{2}gW^3_\mu(H+v)
+  \end{pmatrix}.
+\end{align}
+
+De modo que %fix all to $W_{3}$
+
+\begin{align}
+  \mathcal{L}_{W}=&\frac{1}{2}\begin{pmatrix}
+    -\frac{i}{\sqrt{2}}g{W^\mu}^+(H+v)\\
+    \partial^\mu H+\frac{i}{2}gW_3^\mu(H+v)
+  \end{pmatrix}^{\dagger}
+   \begin{pmatrix}
+    -\frac{i}{\sqrt{2}}gW_\mu^+(H+v)\\
+    \partial_\mu H+\frac{i}{2}gW^3_\mu(H+v)
+  \end{pmatrix}-V(H)\nonumber\\
+=&\frac{1}{2}\begin{pmatrix}
+    +\frac{i}{\sqrt{2}}g{W^\mu}^+(H+v)&
+    \partial^\mu H-\frac{i}{2}gW_3^\mu(H+v)
+  \end{pmatrix}
+  \begin{pmatrix}
+    -\frac{i}{\sqrt{2}}gW_\mu^+(H+v)\\
+    \partial_\mu H-i\left(-\frac{1}{2}gW^3_\mu+g'Y_{\widetilde{\Phi}} B_\mu\right)(H+v)
+  \end{pmatrix}-V(H)\nonumber\\
+  =&\frac{1}{4}g^2{W^\mu}^-W_\mu^+(H+v)^2+\frac{1}{2}\left[\partial^\mu H-\tfrac{i}{2}gW_3^\mu(H+v)\right]\left[\partial_\mu H      +\tfrac{1}{2}gW^3_\mu(H+v)\right]-V(H)\nonumber\\
+ =&-V(H)
+  +\frac{1}{4}g^2\,{W^\mu}^-W_\mu^+(H+v)^2+
+  \frac{1}{2}\partial^\mu H\partial_\mu H+\frac{1}{8}g^2\,W_{3\mu} W_3^{\mu}(H+v)^2\,,
+\end{align}
+donde la última línea corresponde a la magnitud del ``número'' complejo: 
+\begin{align}
+\left[\partial_\mu H+\tfrac{i}{2}gW^3_\mu(H+v)\right]
+\end{align}
+
+\end{frame}
+\begin{frame}[fragile,allowframebreaks]
+
+Entonces
+\begin{align}
+  \label{eq:96qftm}
+  \mathcal{L}_{W}=&\frac{1}{2}\partial^\mu H\partial_\mu H-V(H)\nonumber\\
+  &+\left(\frac{gv}{4}\right)^2{W^\mu}^-W_\mu^++\frac{1}{4}g^2{W^\mu}^-W_\mu^+H^2+\frac{1}{2}vg^2{W^\mu}^-W_\mu^+H+\frac{1}{8}g^2 W_3^\mu W^3_\mu\left(H^2+2vH+v^2\right)\,.
+\end{align}
+Tenemos
+\begin{align}
+  \label{eq:lwbhfinm}
+  \mathcal{L}_{W}=&\left( \mathcal{D}_\mu{\Phi} \right)^{\dagger}\mathcal{D}^\mu\Phi-\mu^2\Phi^{\dagger}\Phi-\lambda \left( \Phi^{\dagger}\Phi \right)^2 \nonumber\\
+  =&\frac{1}{2}\partial^\mu H\partial_\mu H-V(H)\nonumber\\
+&+\frac{1}{4}g^2{W^\mu}^-W_\mu^+H^2+\frac{1}{2}g^2v{W^\mu}^-W_\mu^+H
+  +\frac{1}{8}g^2 W_3^\mu W^3_\mu H^2+\frac{1}{4}g^2v W_3^\mu W^3_\mu H\nonumber\\
+  &+m_W^2{W^\mu}^-W_\mu^+ +\frac{1}{2}m_3^2W_3^\mu W^3_\mu\,,
+\end{align}
+donde:
+%instiki:
+\begin{itemize} %noinstiki
+\item Masas gauge:
+\begin{equation}
+  m_W=m_3=\frac{gv}{2}\,.
+\end{equation}
+\item
+  \begin{align}
+    V(H)=&\tfrac{1}{2}m_H^2H^2+\lambda vH^3+\tfrac{1}{4}\lambda H^4\nonumber\\
+    =&\frac{1}{2}m_H^2H^2+\frac{m_H^2}{2v}H^3+\frac{1}{4}\frac{m_H^2}{2v^2} H^4\nonumber\\
+    =&\frac{1}{2}m_H^2H^2\left(1+\frac{H}{v}+\frac{H^2}{4v^2}\right)\,.
+  \end{align}
+con
+\begin{equation}
+  m_H^2=-2\mu^2=2\lambda v^2.
+\end{equation}
+\end{itemize} %noinstiki
+%instiki:
+
+\end{frame}
 
 
 %\left(\right)

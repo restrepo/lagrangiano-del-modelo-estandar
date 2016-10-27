@@ -676,15 +676,7 @@ From \cite{Feynman:1986er} (pag 136):
   changes to red (see Fig.~\ref{fig:qcd}). There are eigth different
   possible gluons, such as red-antired, red-antiblue, red-antigreen,
   and so on (you'd think there'd be nine, but for technical reasons,
-  one is missing)\footnote{
-    \begin{align*}
-      \begin{pmatrix}
-        r\bar{r} & r\bar{b} &r\bar{g}\\ 
-        b\bar{r} & b\bar{b} &b\bar{g}\\ 
-        g\bar{r} & g\bar{b} &g\bar{g}\\ 
-      \end{pmatrix},\qquad\text{with}\quad r\bar{r}+b\bar{b}+g\bar{g}=0
-    \end{align*}
-}. The theory is not very complicated.  The complete rule of gluons is: gluons couple with things having ``color''--it just requires a little bookkeeping to keep track of where the ``colors go''.  There is, however, an interesesting possibility created by this rule: gluons can couple with other gluons (see Fig.~\ref{fig:qcd3gluon}).
+  one is missing)\footnote{Ver ec.~\ref{eq:glu}.}. The theory is not very complicated.  The complete rule of gluons is: gluons couple with things having ``color''--it just requires a little bookkeeping to keep track of where the ``colors go''.  There is, however, an interesesting possibility created by this rule: gluons can couple with other gluons (see Fig.~\ref{fig:qcd3gluon}).
 \end{quote}
 \end{frame}
 %11 12 13
@@ -692,11 +684,23 @@ From \cite{Feynman:1986er} (pag 136):
 %31 32 33
 %33+11+22=0
 
+
+
 El primer término da lugar a interacciones de cambio de color de quarks como la que se ilustra en la Figura \ref{fig:qcd}
 \begin{frame}  
+    \begin{align}
+\label{eq:glu}
+      \begin{pmatrix}
+        \color{red}{r\bar{r}} & \color{red}{r}\bar{b} &\color{red}{r}\bar{g}\\ 
+        \color{blue}{b}\color{red}{\bar{r}} & \color{blue}{b\bar{b}} &\color{blue}{b}\color{green}{\bar{g}}\\ 
+        \color{green}{g}\color{red}{\bar{r}} & g\color{blue}{\bar{b}} &\color{green}{g\bar{g}}\\ 
+      \end{pmatrix},\qquad\text{with}\quad 
+      \color{red}{r\bar{r}}+\color{blue}{b\bar{b}}+\color{green}{g\bar{g}}=0\,.
+    \end{align}
+
 \begin{figure}
   \centering
-  \includegraphics{qcd} % In qcd.svg as a layer
+  \includegraphics[scale=0.8]{qcd} % In qcd.svg as a layer
   \caption{Quark--gluon interaction}
   \label{fig:qcd}
 \end{figure}
@@ -711,6 +715,10 @@ Mientras que el segundo y tercer término dan lugar a autointeracciones de los g
 \end{figure}
 \end{frame}
 
+
+\begin{frame}
+  \includegraphics[scale=0.2]{proton}
+\end{frame}
 
 Todas las interacciones están determinadas en términos de una única constante de acoplamiento $g_s$. Las autointeracciones gauge pueden explicar aspectos de la interacción fuerte como la libertada asintótica, que consiste en que las interacciones fuertes se vuelven más débiles a distancias cortas. 
 

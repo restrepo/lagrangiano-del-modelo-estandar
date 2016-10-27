@@ -458,23 +458,7 @@ Retornando al doblete de Higgs del modelo estándar en la ec.~\eqref{eq:polarhig
   \begin{pmatrix}
     0\\
     \frac{1}{\sqrt{2}}(H(x)+v)
-  \end{pmatrix}\\
-  \approx&
-  \frac{1}{2}\begin{pmatrix}
-    1+i G_3&\sqrt{2}i G^+\\
-    \sqrt{2}i G^-&1-i G_3
-  \end{pmatrix}  \begin{pmatrix}
-    0\\
-    \frac{1}{\sqrt{2}}(H(x)+v)
-  \end{pmatrix}\nonumber\\
-  =&\frac{1}{2}\begin{pmatrix}
-    i G^+H+vi G^+\\
-    \frac{1}{\sqrt{2}}(H+v-i G_3H-i G_3 v)
-  \end{pmatrix}\nonumber\\
-  =&\begin{pmatrix}
-    \eta^+\\
-    \frac{1}{\sqrt{2}}(H(x)+v-i\eta^0)
-  \end{pmatrix}.\nonumber
+  \end{pmatrix}
 \end{align}
 Para $SU(2)_L\times  U(1)_Y$ tenemos cuatro generadores y cuatro bosones gauge. De acuerdo a la parametrización en ec.~\eqref{eq:92qft} esperamos que aparezcan tres bosones de Goldstone y un campo de Higgs con masa, de manera que quedará un generador no roto correspondiente a una simetría remanente del vacío $U(1)_Q$
 \begin{equation}
@@ -510,37 +494,18 @@ donde $V(H)$ dado en la ec.~\eqref{eq:higgspot}, incluye el término de masa par
 \begin{equation}
   m_H^2=2\left|\mu^2\right|=2\lambda v^2
 \end{equation}
-Como
+De la ec.~\eqref{eq:w22}
 \begin{align}
-      W_\mu=T_i W^{i}_\mu&=
-  \frac{1}{2}\begin{pmatrix}
-    0&1\\
-    1&0
-  \end{pmatrix}W^1_\mu+
-  \frac{1}{2}\begin{pmatrix}
-    0&-i\\
-    i&0
-  \end{pmatrix}W^2_\mu+
-  \frac{1}{2}\begin{pmatrix}
-    1&0\\
-    0&-1
-  \end{pmatrix}W^3_\mu\nonumber\\
-  &=
-  \frac{1}{2}\begin{pmatrix}
-    W^3_\mu                                  &\sqrt{2}\,\dfrac{W^1_\mu-i\,W^2_\mu}{\sqrt{2}}\\
-    \sqrt{2}\,\dfrac{W^1_\mu+i\,W^2_\mu}{\sqrt{2}} &-W^3_\mu
-  \end{pmatrix}\nonumber\\
-  &\equiv
-  \frac{1}{2}\begin{pmatrix}
-    W^3_\mu&\sqrt{2}W^+_\mu\\
-    \sqrt{2}W^-_\mu&-W^3_\mu
-  \end{pmatrix}\nonumber\\
-=&\begin{pmatrix}
+      W_\mu=&\begin{pmatrix}
     \frac{1}{2}W_3&\frac{1}{\sqrt{2}}W^+_\mu\\
     \frac{1}{\sqrt{2}}W^-_\mu&-\frac{1}{2}W^3_\mu
   \end{pmatrix}.
 \end{align}
-$\mathcal{D}_\mu$ corresponde a la matrix $2\times  2$
+$\mathcal{D}_\mu$ corresponde a la matrix $2\times  2$, dada en la ec.~\eqref{eq:d22}, con el reemplazo
+\begin{align}
+\mp\frac{i}{2}g W^3_\mu\to  -i\left(\pm\frac{1}{2}g W^3_\mu+g'Y B_\mu\right)
+\end{align}
+
 \begin{align}
  \mathcal{D}_\mu &=  \begin{pmatrix}
     \partial_\mu-i\left(\frac{1}{2}g W^3_\mu+g' Y B_\mu\right)&-\frac{i}{\sqrt{2}}g W^+_\mu\\
@@ -559,7 +524,7 @@ Entonces
   \end{pmatrix}.
 \end{align}
 
-De modo que
+De modo que, como se mostro en 
 
 \begin{align}
   \mathcal{L}_{WBH}=&\frac{1}{2}\widetilde{\begin{pmatrix}
