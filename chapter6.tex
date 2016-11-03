@@ -56,7 +56,10 @@ donde podemos definir los tripletes de color de quarks como
 
 Este conjunto de partículas esta bien definido para interacciones que conservan paridad como la interacción electromagnética o la fuerte. Para introducir la interacciones débiles usaremos más bien espinores de Weyl
 
+\end{frame}
+
 \section{Interacciones débiles}
+\begin{frame}[fragile,allowframebreaks]
 En el contexto de las interacciones débiles un $e_L$ es completamente
 equivalente a un campo $\nu_L$. Es decir, el Lagrangiano debe ser
 invariante bajo una transformación $SU(2)_L$ de esos campos. La
@@ -97,15 +100,15 @@ Para considerar las interacciones débiles en conjunto con las interacciones ele
       u_L\\
       d_L      
     \end{pmatrix}}$ & $\left( \mathbf{3},\mathbf{2},Y_Q \right)$\\
-   $\eta^{\alpha}_1$: positrón izquierdo & $\left( e_R \right)^{\dagger}$&$\left(\mathbf{1},\mathbf{1},Y_{R}\right)$ \\
-   $\eta^{\alpha}_2$: anti-up izquierdo & $\left( u_R \right)^{\dagger}$&$\left(\overline{\mathbf{3}},\mathbf{1},Y_{R}\right)$ \\
-   $\eta^{\alpha}_3$: anti-down izquierdo & $\left( d_R \right)^{\dagger}$&$\left(\overline{\mathbf{3}},\mathbf{1},Y_{R}\right)$ \\
+   $\eta^{\alpha}_1$: positrón izquierdo & $\left( e_R \right)^{\dagger}$&$\left(\mathbf{1},\mathbf{1},Y_{E}\right)$ \\
+   $\eta^{\alpha}_2$: anti-up izquierdo & $\left( u_R \right)^{\dagger}$&$\left(\overline{\mathbf{3}},\mathbf{1},Y_{U}\right)$ \\
+   $\eta^{\alpha}_3$: anti-down izquierdo & $\left( d_R \right)^{\dagger}$&$\left(\overline{\mathbf{3}},\mathbf{1},Y_{D}\right)$ \\
   \end{tabular}
   \caption{Spinores de Weyl izquierdos para la primera generación del modelo estándar}
   \label{tab:fgw}
 \end{table}
 
-Donde el $\mathbf{3}$ o el $\overline{\mathbf{3}}$ de $SU(3)_c$ quieren decir que
+Donde el $\mathbf{3}$ o el $\overline{\mathbf{3}}$ de $SU(3)_c$ quieren decir que, además, para cada quark
 \begin{align}
 u_L=&
 \begin{pmatrix}
@@ -117,9 +120,9 @@ u_L=&
   \begin{pmatrix}
     \left( u_R \right)^{\dagger}_1&
         \left( u_R \right)^{\dagger}_2&    \left( u_R \right)^{\dagger}_3
-  \end{pmatrix}
+  \end{pmatrix},
 \end{align}
-
+etc.
 
 Bajo la simetría $SU(2)_L$, los campos transforman como:
  \begin{align}
@@ -135,8 +138,9 @@ donde
 \end{align}
 y $\tau^i$ son las matrices de Pauli dadas en la ec.~\eqref{eq:paulimatr}.
 
-
+\end{frame}
 \subsection{Productos $SU(2)$}
+\begin{frame}[fragile,allowframebreaks]
 Sean $A$ y $B$ $C$, dobletes $SU(2)$. En el Lagrangiano \eqref{eq:L0}, hemos construido invariantes $SU(2)$ de la forma $C^{\dagger}B$, por ejemplo. Pero hay otra forma de construir el producto invariante
 
 Para los dobletes  $SU(2)_L$ 
@@ -224,7 +228,7 @@ En forma matricial, tenemos
 \end{align}
 
 
-En el caso de un doblete fermiónes $\Xi$, el símbolo  $\dagger$ se usa para denotar el conjugado de fermiones de Weyl. El doblete adjunto en ese caso se puede definir como\begin{align}
+En el caso de un doblete de fermiónes $\Xi$, el símbolo  $\dagger$ se usa para denotar el conjugado de fermiones de Weyl. El doblete adjunto en ese caso se puede definir como\begin{align}
 \label{eq:Xiadj}
  \widetilde{\Xi}=i\tau_2 \begin{pmatrix}
                   \Xi_1^{\dagger}\\
@@ -240,7 +244,7 @@ Para evitar confusiones con los invariantes $SU(2)$, usaremos entonces la defini
   \widetilde{\Xi}\cdot \overline{\sigma}^{\mu}\Xi=\epsilon_{ab}\,\widetilde{\Xi}^{a}\overline{\sigma}^{\mu}\Xi^{b}\,.
 \end{align}
 
-Para evitar confusón con el conjugado de spinores de Weyl, usaremas el producto escalar con la métrica $SU(2)$ para escribir los correspondientes invariantes.
+Para evitar confusión con el conjugado de espinores de Weyl, usaremos el producto escalar con la métrica $SU(2)$ para escribir los correspondientes invariantes.
 
 \subsection*{Simetría gauge local $SU(3)_c\times  SU(2)_L\times  U(1)_Y$}
 Los términos de masa de Dirac, usando las convenciones de la
@@ -311,14 +315,13 @@ A este nivel, tanto los 15 fermiones de Weyl (cada quark iquierdo y derecho vien
 
 
 
-
+\end{frame}
 \subsection{Ruptura espontánea de simetría}
 
-
-All the particles in this Lagrangian are massless. It is only good for
-the gluons and the Abelian gauge boson, but is no realist for the
-fermions of the weak gauge bosons $W_\mu^i$. To solve this problem, we
-postulate a new complex scalar doublet, con su correspondiente adjunto de $SU(2)$ with four degree of freedom:
+\begin{frame}[fragile,allowframebreaks]
+Todas las partículas en este lagrangiano son no masivas. Esto funciona sólo para los gluones y uno de los bosones gauge abelianos, pero no es realista para los bosones gauge cargados. 
+Para solucionar este problema se postula la existencia de un nuevo doblete escalar complejo
+( y su correspondiente adjunto de $SU(2)$) con cuatro grados de libertad:
 \begin{align}
   \Phi=&
   \begin{pmatrix}
@@ -335,7 +338,7 @@ postulate a new complex scalar doublet, con su correspondiente adjunto de $SU(2)
    -\phi^-\\
   \end{pmatrix}\,.
 \end{align}
-The ``$\pm$'' and 0 superindexes are just for later convenience, with $\left( \phi^+ \right)^{*}=\phi^-$
+El  ``$\pm$'' y el superíndice 0, se ponen de forma conveniente para obtener expresiones consitente. Es claro que $\left( \phi^+ \right)^{*}=\phi^-\,.$
 
 
 
@@ -352,6 +355,11 @@ Es posible ahora construir invariantes $SU(2)$ con las siguientes combinaciones 
  \end{align}
 donde $\text{h.c}$, denota el hermítico conjugado de cada término (para garantizar que el Lagrangiano sea real)
 y hemos puesto la carga del electrón para hacer explícita la conservación de la carga eléctrica. 
+
+Note que
+\begin{align}
+  \left( e_R \right)^{\dagger}\epsilon_{ab}L^a\widetilde{\Phi}^b=\left( e_R \right)^{\dagger}L\cdot \widetilde{\Phi}\,.
+\end{align}
 
 
 
