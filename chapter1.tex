@@ -51,6 +51,7 @@ Las constantes f\'\i sicas que suelen normalizarse se escogen del conjunto dado 
   \label{eq:145}
   e,\qquad m_e,\qquad m_p.
 \end{equation}
+\begin{frame}[fragile,allowframebreaks]
 Teniendo en cuenta que $1\,\text{eV}=1.602\;176\;565(35)\times10^{-19}\,\text{J}$,
 \begin{align}
   10^{-9}\,\text{GeV}=&1.602\;176\;565(35)\times10^{-19}\,\text{J}\nonumber\\
@@ -127,7 +128,7 @@ $299\;792\;450\,\text{m}\,\text{s}^{-1}$&$c$\\ \hline
 m\,kg&$2.842\;278\,859\times10^{-16}\hbar\,c^{-1}$\\ \hline
 %instiki:
   \end{tabular} %noinstiki
-  \caption{MKS $\leftrightarrow$ MPU} %noinstiki
+  \caption{SI $\leftrightarrow$ MPU} %noinstiki
   \label{tab:mks2mpu} %noinstiki
 \end{table} %noinstiki
 
@@ -180,7 +181,7 @@ de modo que
   \end{align}
 \end{example}
 Como $V$ tiene unidades de energ\'\i a, de la ec.~(\ref{eq:240})  resulta de nuevo $\alpha$.
-
+\end{frame}
 \subsection{Dimensiones de Planck}
 
 
@@ -423,14 +424,15 @@ ec.~\eqref{eq:lambdainv}, tenemos que
 
 \end{frame}
 
-\begin{itemize}
-\item
-\begin{english}
-\textbf{Example:} Lorentz invariance    
-\end{english}
-\begin{spanish}
-\textbf{Ejemplo:} Invarianza de Lorentz
-\end{spanish}
+
+
+\begin{frame}[fragile,allowframebreaks]
+\begin{example}
+  
+
+
+Invarianza de Lorentz
+
   \begin{align}
     x_\mu y^\mu\to x'_\mu{y'}^\mu=&{\Lambda_\mu}^\nu x_\nu{\Lambda^\mu}_\rho y^\rho \nonumber\\
     =&{\Lambda_\mu}^\nu x_\nu{\Lambda^\mu}_\rho y^\rho \nonumber\\
@@ -439,8 +441,11 @@ ec.~\eqref{eq:lambdainv}, tenemos que
     =&x_\nu y^\nu \nonumber\,.
   \end{align}
 
-\end{itemize}
+\end{example}
 
+\end{frame}
+
+\begin{frame}[fragile,allowframebreaks]
 
 
 Como un ejemplo de Transformaci\'on de Lorentz considere un desplazamiento a lo largo del eje $x$
@@ -525,7 +530,9 @@ El ${\Lambda^\mu}_{\nu}$ definido en la ec.~\eqref{eq:147} satisface la condici\
   \end{pmatrix}\nonumber\\
 =&g
 \end{align}
+\end{frame}
 
+\begin{frame}[fragile,allowframebreaks]
 Denotaremos los cuadrivectores con \'\i ndices arriba como
 \begin{equation}
   \label{eq:upindx}
@@ -555,11 +562,13 @@ El invariante de Lorentz asociado a $p^\mu$ corresponde a la ecuaci\'on de momen
 \begin{equation}
   p^2=p_\mu p^\mu=m^2=E^2-\mathbf{p}^2
 \end{equation}
+\end{frame}
 De \cite{uslhcblog}
 \begin{quote}
   The intuitive understanding of this equation is that the energy of a particle is partially due to its motion and partially due to the intrinsic energy of its mass.  The application to particle detectors is that if you know the mass of a particular particle, or if it’s going so fast that its energy and momentum are both huge so that the mass can be roughly ignored, then knowing the energy tells you the momentum and vice versa
 \end{quote}
 
+\begin{frame}[fragile,allowframebreaks]
 Para esta ecuación se suele definir dos casos límites.
 \begin{itemize}
 \item \emph{Límite no relativista}: Para $\mathbf{p}=0$, es decir cuando la part\'\i cula est\'a en reposo se reduce a la famosa ecuaci\'on, (con $c^2=1$)
@@ -574,8 +583,9 @@ Para esta ecuación se suele definir dos casos límites.
 Por lo tanto para una partícula de masa cero, su energía total da cuenta de su cantidad de movimiento.
 \end{itemize}
 
+\end{frame}
 
-
+\begin{frame}[fragile,allowframebreaks]
 Del electromagnetismo tenemos
 \begin{equation}
   \label{eq:cv_jmu}
@@ -585,7 +595,10 @@ Del electromagnetismo tenemos
   \label{eq:cv_phia}
   A^\mu=(A^0,\mathbf{A})=(\phi,\mathbf{A})
 \end{equation}
-Del c\'alculo vectorial
+\end{frame}
+
+\begin{frame}[fragile,allowframebreaks]
+Del cálculo vectorial
 \begin{align}
   \partial^\mu\equiv\frac{\partial}{\partial x_\mu}=&
   \left(
@@ -628,7 +641,9 @@ Por consiguiente la ecuaci\'on de onda para un campo $\phi(t,x,y,z)$  con veloci
   \right)\phi=0\,,
 \end{equation}
 es también invariante de Lorentz
+\end{frame}
 
+\begin{frame}[fragile,allowframebreaks]
 Los operadores de energ\'\i a y momentum de la mec\'anica cu\'antica tambi\'en forma un cuadrivector
 \begin{equation}
   \hat p^\mu=({\hat p}^0,\hat{\mathbf{p}})=(\widehat H,\hat{\mathbf{p}})
@@ -638,6 +653,7 @@ con $\widehat H$, y $\hat{\mathbf{p}}$ dados en la ec.~\eqref{eq:151}. Entonces
   \label{eq:cv_hatpmu}
   \hat{p}^\mu=i\partial^\mu=i(\partial^0,\partial^i)=i(\frac{\partial}{\partial t},-\boldsymbol{\nabla})
 \end{equation}
+\end{frame}
 Más adelante se definirán las derivadas  covariantes
 \begin{align}
    \mathcal{D}_0=&\partial_0+i q A_0\nonumber\\
@@ -698,7 +714,7 @@ which is just the transformation obtained in eq.~\eqref{eq:159qft}.
 qu\'e es justamente la ecuaci\'on de transformaci\'on obtenida en la ec.~\eqref{eq:159qft}.  
 \end{spanish}
 
-
+\begin{frame}[fragile,allowframebreaks]
 \begin{example}
   Calcule la fracci\'on de la velocidad a la que puede ser acelerado un prot\'on en el LHC.
 Recuperando los factores de $c$
@@ -734,6 +750,9 @@ Por lo tanto observamos al protón contraído en un factor de $1\times10^{-8}$. 
 \end{align}
 \end{example}
 
+\end{frame}
+
+\begin{frame}[fragile,allowframebreaks]
 \begin{example}
   La amplitud de decaimiento del mu\'on es
     \begin{align}
@@ -763,9 +782,11 @@ el doble de cuando est\'a en reposo.
   L_\mu'=c\tau_\mu'=1290.74\,\text{m}\,.
 \end{align}
 A medida que el mu\'on se acerca m\'as a la velocidad de la luz, $L_\mu'$ coincide m\'as con la distancia recorrida por el mu\'on antes de decaer. De hecho se estima que despu\'es de ser producidos en la atm\'osfera de rayos c\'osmicos, a la superficie de la Tierra llegan unos 10000 muones por metro cuadrado cada minuto~\cite{muon}.
+
 %examen: calcular la fracci\'on de la velocidad de la luz del muon para llegar a la superficie de la Tierra.
 \end{example}
 
+\end{frame}
 
 \section{Principio de M\'\i nima Acci\'on}
 \label{sec:la}
@@ -873,6 +894,7 @@ Para sistemas continuos es conveniente usar la densidad Lagrangiana. Abordaremos
 \section{La cuerda cl\'asica unidimensional}
 \label{sec:la-cuerda-clasica}
 
+\begin{frame}[fragile,allowframebreaks]
 Considere una cuerda de longitud $L$ formando un c\'\i rculo de radio $R$.
 Es conveniente considerar un conjunto de $N$ part\'\i culas de masa $m$ a
 lo largo de la circunferencia, unidas por resortes de longitud $l$ y
@@ -982,6 +1004,7 @@ tenemos
   \frac{1}{v^2}\left(\frac{\partial\phi}{\partial t}\right)^2-\left(\frac{\partial\phi}{\partial z}\right)^2
 \right],
 \end{align}
+\end{frame}
 Note que:
 \begin{align}
   \label{eq:dcalt}
@@ -1157,6 +1180,7 @@ las coordenadas generalizadas  $\partial\phi/\partial x^\mu$ y $\phi$, es
 \'Esta \'ultima ecuaci\'on se deducir\'a usando m\'etodos variacionales en la
 secci\'on~\ref{sec:principio-de-minima-call}.
 
+\begin{frame}[fragile,allowframebreaks]
 La generalización de la densidad Lagrangiana a tres dimensiones esta dada por
 \begin{align}
   \label{eq:dlc3d}
@@ -1167,7 +1191,7 @@ La generalización de la densidad Lagrangiana a tres dimensiones esta dada por
 \right],
 \end{align}
 
-
+\end{frame}
 
 \section{Construción de Lagrangianos covariantes}
 
@@ -1307,7 +1331,51 @@ Ya que la Acción involucra la integración sobre todos los puntos, esta es inva
 \begin{align}
   S\to S'=\int d^4x\, \mathcal{L}
 \end{align}
-Una realización física para la acción del campo escalar real corresponde por ejemplo al campo del inflatón en cosmología.
+
+Note que en unidades naturales
+\begin{align}
+  [S]=[\hbar]=1,
+\end{align}
+y ya que $[d^4x]=E^{-4}$, entonces
+\begin{align}
+  [\mathcal{L}]=E^{4}\,.
+\end{align}
+Como $[\partial_{\mu}]=E$, entonces
+\begin{align}
+  [\phi]=E\,.
+\end{align}
+
+\section{Principio de mínima acción para campos}
+Hemos visto que la acción para una oscilación mecánica en tres dimensiones se puede escribir en una notación similar a la del producto escalar de un cuadrivector de Lorentz $\partial_\mu\phi$. Cuando dicho campo se interpreta como un campo fundamental, es decir, que su velocidad de propagación es independiente de los sistemas de referencia inerciales, entonces la Acción queda invariante bajo dicho producto escalar. También hemos visto que adicionar una función del campo $V(\phi)$, la invarianza de la acción se mantiene.
+
+Establecemos el \emph{principio de mínima acción para campos} de la siguiente manera: La acción más general posible para un conjunto de campos contiene todos los posibles productos escalares entres los campos y sus derivadas, con las siguientes restricciones
+\begin{enumerate}
+\item La dimensión de los campos y derivadas en cada término de la correspondiente densidad lagrangiana debe ser menor o igual a cuatro.
+\item La densisdad Lagrangiana no debe contener derivadas altas (máximo dos derivadas)
+\item Los campos fundamentales se deben anular a espacio infinito.
+\end{enumerate}
+Con estas restricciones es suficiente mantener los primeros cuatro términos de la expansión de Taylor de $V(\phi)$ (el término constante se puede remover redefiniendo el estado de mínima energía)
+\begin{align}
+  V(\phi)=a \phi + b\phi^2+c\phi^4+d\phi^4\,,
+\end{align}
+
+La última condición excluye términos del tipo
+\begin{align}
+  \partial_\mu \partial^\mu phi\,,   \phi\partial_\mu \partial^\mu phi\,.
+\end{align}
+De modo que la densidad Lagrangiana más general posible para un campo escalar real es
+\begin{align}
+  \frac{1}{2}{\partial_\mu\phi}\,{\partial^\mu\phi}+a \phi + b\phi^2+c\phi^4+d\phi^4\,.
+\end{align}
+
+Realizaciones propuestas para este campo escalar incluye el de un campo de materia oscura con un potencial tipo oscilador armónico.
+% figura
+Pero una realización ya encontrada en la naturaleza corresponde al campo de Higgs con un potencial tipo ruptura expontánea de vacio
+
+Una realización física para la acción del campo escalar real con un potencia escalar tipo ``slow-roll''  corresponde al campo del inflatón en cosmología.
+
+\section{Campo escalar complejo}
+
 
 Para un campo complejo con invarianza de fase, el potencial $V(\phi,\phi^{*})$ es único:
 \begin{align}
@@ -1326,18 +1394,6 @@ Para $\theta$ infinitesimal
 
 
 
-Note que en unidades naturales
-\begin{align}
-  [S]=[\hbar]=1,
-\end{align}
-y ya que $[d^4x]=E^{-4}$, entonces
-\begin{align}
-  [\mathcal{L}]=E^{4}\,.
-\end{align}
-Como $[\partial_{\mu}]=E$, entonces
-\begin{align}
-  [\phi]=E\,.
-\end{align}
 Por lo tanto
 \begin{align}
   \left[ m \right]=&E& \left[ \lambda \right]=&1\,.
@@ -1365,6 +1421,13 @@ Veremos más adelante que la integral de una derivada total, con las condiciones
 
 
 \section{Problema variacional de Noether}
+
+\section{Tipos de conservación }
+Un sistema binario de estrellas conserva la energía globalmente, pero un sistema binario de estrellas de neutrones donde los efectos relativistas sean importante violan la energía globalmente, es decir, el sistema se vuelve inestable. ¿Qué pasa con la conservación de la energía en ese último caso?
+
+\section{Teoremas}
+
+
 
 Seguiremos la discusión basada en \cite{Brading:2000hc,Brading:2003nv,Sundermeyer:2014kha}.
 
@@ -1807,11 +1870,12 @@ Tanto la transformación del campo $\phi$ como la del $A^{\mu}$ se pueden escrib
 
 Diremos que un campo es de \emph{materia} si su transformación interna es proporcional al parámetro de transformación ($b^{\nu}=0$), o de radiación si su transformación interna es proporcional a la derivada del parámetro de transformación ($a=0$). Bajo estas definiciones $\phi$ es un campo de materia bajo el Grupo U(1), mientras que $A^{\mu}$ es un campo de radiación bajo algún grupo a especificar más adelante. 
 
-
+\begin{frame}[fragile,allowframebreaks]
 \textbf{Teorema 2} Si la acción $S$ es invariante bajo un Grupo gauge continuo, entonces existen $\rho$ relaciones
 \begin{align}
   \sum_{i}\mathcal{E}_{i} a_{\alpha i}=\sum_{i} \partial_{\mu} \left( \mathcal{E}_{i} b^{\mu}_{\alpha i} \right)
 \end{align}
+\end{frame}
 \emph{Demostración}: La haremos en el caso de un sólo parámetro. La generación a $\rho$ parámetros es directa. Partiendo de la ecuación \eqref{eq:varprin} recordando que proviene de una integral y sustituyendo la expresión para $\delta\phi_i$ en \eqref{eq:dfi}, tenemos
 \begin{align}
     \sum_i\int {d^4}x\, \mathcal{E}_i \delta\phi_i = & \sum_{i}\int {d^4}x\, \partial_{\mu} \left[  \frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}\delta\phi_i \right]\nonumber\\
@@ -1837,7 +1901,7 @@ En el caso de un campo de materia complejo, $a_1=-a_2$ y $b_1=b_2=0$. Entonces
 \sum_i \left\{ \partial_{\mu} \left[ \frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}a_i\right]-\frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}\partial_{\mu}a_i-\frac{\partial\mathcal{L}}{\partial\phi_i}a_i \right\}=&0 \,.
 \end{align}
 
-
+\begin{frame}[fragile,allowframebreaks]
 Teniendo en cuenta que como veremos más adelante, para un campo complejo
 \begin{align}
 \sum_i \left[\frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}\partial_{\mu}a_i-\frac{\partial\mathcal{L}}{\partial\phi_i}a_i \right]=0
@@ -1851,8 +1915,8 @@ Este resultado particular para campos complejos se mantiene en general para el c
 \label{eq:tnoeth2}
 j^\mu=\frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}a_{i}\,.
 \end{align}
-Note que la conservación de la carga en este caso no requiere imponer que $\mathcal{E}_i=0$. Por lo tanto el caso de la conservación de carga \emph{impropia} se puede considerar más fundamental e inviolable. Esto nos permite formular el \emph{principio gauge} como la necesidad de establecer Lagrangianos que que respetan las simetría internas a nivel local.
-
+Note que la conservación de la carga en este caso no requiere imponer que $\mathcal{E}_i=0$. Por lo tanto el caso de la conservación de carga \emph{impropia} se puede considerar más fundamental e inviolable. Esto nos permite formular el \emph{principio gauge} como la necesidad de establecer Lagrangianos que respetan las simetría internas a nivel local.
+\end{frame}
 \section{Simetrías externas}
 Consideremos el caso en el cual el campos es sólo afectado en su dependencia espacio-temporal como ocurre para un campo escalar de Lotentz en la ec.~\eqref{eq:dmuxmu}, es decir,
  $\delta\phi_{i}=-\left( \partial_{\nu}\phi \right)\delta x^{\nu}$,
@@ -2387,6 +2451,8 @@ Entonces, tenemos
  \end{align}
 De aquí podemos obtener las ecuaciones de Euler-Lagrange para cada campo.
 
+
+
 %TRADUCIR
 In the following developments we will use heavily  the covariant and contravariant form of the four-vector $A_{\mu}$ defined in eqs:\eqref{eq:covariante}, \eqref{eq:contravariante}, such that the tridimensional vector is defined in term od the spacial covariant components
 \begin{align*}
@@ -2609,6 +2675,21 @@ Por consiguiente, el único término posible que a la vez es invariante de Loren
 The approach to change the Action for a new one invariant under local phase  transformations, is that the electron cannot be longer considered as an isolated \emph{naked} particle. The electron must be always surrounded by some cloud of virtual particles associated with the electromagnetic field in order to guarantee the conservation of the energy and momentum of the system. In general the wave function of the electron can be represented as the exponential of $iEt$ and $i \mathbf{p}\cdot \mathbf{x}$, so that a local phase transformation will change the energy $E$ and the momentum $\mathbf{p}$ of the electron. This changes must be compensated with the corresponding changes in $A_{\mu}$.
 
 Moreover, to be consistent, we could start with the free Lagrangian before the change of the normal derivative by the covariant derivative. The interactions are not longer imposed by hand but a consequence of the improved Action. 
+
+Combinando todos los resultados, podemos escribir el Lagrangiano final como %DEBUG: Check signs
+\begin{align}
+  \mathcal{L}=&\frac{1}{2m}\sum_i\partial_i\psi^*\partial_i\psi
+-\frac{i}{2}
+  \left[\psi^*\partial_0\psi-(\partial_0\psi^*)\psi\right] \nonumber\\
++j^\nu A_\nu\nonumber\\
+ &-\frac{1}{4}F_{\mu\nu}F^{\mu\nu}\,.\,.
+\end{align}
+
+Las ecuaciones de movimiento para el campo $A_\nu$, se obtienen del Lagrangiano
+\begin{align}
+\mathcal{L}_{A_\nu} = -\frac{1}{4}F_{\mu\nu}F^{\mu\nu} - j^\nu A_\nu\,,
+\end{align}
+como se mostrará en el próximo capítulo.
 
 \subsection{Interpretación física}
 Al ser una función compleja, la función de onda del electrón puede escribirse en coordenadas polares como
