@@ -75,6 +75,8 @@ De confirmarse que la partícula recientemente descubierta en el Gran Acelerador
 
 
 \section{Campo escalar real}
+
+\begin{frame}[fragile,allowframebreaks]
 Escribamos el Lagrangiano para una part\'\i cula escalar real de masa $m$ como
 \begin{equation}
 \label{eq:83qft}
@@ -96,7 +98,7 @@ Cuando $\mu^2\gt 0$, el campo tiene excitaciones alrededor del mínimo del poten
 \end{figure} %noinstiki <div id="fig:x2">Figura: Un mínimo</div>
 %noinstiki![cuerda](http://gfif.udea.edu.co/figfs/vphi2.png)
 %noinstiki
-
+\end{frame}
 Si $\mu^2\lt 0$, no existe un mínimo del potencial alrededor del cual el campo pueda oscilar. Además el alejamiento del campo del punto de simetría del potencial no cuesta energía. Por consiguiente en ese caso, el término de interacción
 \begin{equation}
   V(\phi)=\tfrac{1}{2}\mu^2   \qquad 
@@ -104,23 +106,28 @@ Si $\mu^2\lt 0$, no existe un mínimo del potencial alrededor del cual el campo 
 \end{equation}
 no puede interpretarse como un término de masa en el Lagrangiano dado por la ec.~\eqref{eq:83qft}. 
 
+\begin{frame}[fragile,allowframebreaks]
 Consideremos ahora el potencial
 \begin{equation}
   V(\phi)=\tfrac{1}{2}\mu^2\phi^2+\tfrac{1}{4}\lambda\phi^4
   \qquad   \mu^2\lt 0,\ \lambda\gt 0
 \end{equation}
 que mantiene la simetría bajo la transformación discreta $\phi\to-\phi$. $\lambda\gt 0$ garantiza la aparición de los dos mínimos que se muestran el la figura \ref{fig:x2l}. Si la energía es suficientemente alta como se muestra en la figura~\ref{fig:x2l}, las excitaciones son simétricas con respecto al máximo del potencial y el término en $\mu^2$ no puede interpretarse como masa para la partícula escalar. 
-
+\end{frame}
+\begin{frame}[fragile,allowframebreaks]
 %noinstiki
 \begin{figure} %noinstiki
   \centering %noinstiki
   \includegraphics{vphi4}
   \caption{$V(\phi)=\frac{1}{2}\mu^2 \phi^2+\frac{1}{4}\lambda\phi^4$ con $\mu^2\lt 0$, y $\lambda\gt 0$. Simetría exácta} %noinstiki
   \label{fig:x2l} %noinstiki
-\end{figure} %noinstiki <div id="fig:x2l">Figura: Mínimos degenerados</div>
+\end{figure} 
+%noinstiki <div id="fig:x2l">Figura: Mínimos degenerados</div>
 %noinstiki![cuerda](http://gfif.udea.edu.co/figfs/vphi4.png)
 %noinstiki
+\end{frame}
 Sin embargo, si la energía es suficientemente baja como se muestra en la figura~\ref{fig:x2lm}, las excitaciones alrededor del mínimo dan lugar a la aparición de un término de masa para el campo escalar. Además, dichas excitaciones no respetan la simetrías $\phi\to-\phi$. En tal caso decimos que la simetría ha sido espontáneamente rota: aunque el Lagrangiano mantiene la simetría original, el vacío la rompe. 
+\begin{frame}[fragile,allowframebreaks]
 
 %noinstiki
 \begin{figure} %noinstiki
@@ -132,7 +139,9 @@ Sin embargo, si la energía es suficientemente baja como se muestra en la figura
 \end{figure}  %noinstiki <div id="fig:x2lm">Figura: Simetría espontáneamente rota  </div>
 %noinstiki![vphi4lm](http://gfif.udea.edu.co/figfs/vphi4lm.png)
 %noinstiki
+\end{frame}
 
+\begin{frame}[fragile,allowframebreaks]
 Para analizar cuantitativamente el espectro de partículas es necesario expandir el campo alrededor del mínimo y determinar las excitaciones. Establezcamos en primer lugar los mínimos del potencial. La $\partial V/\partial\phi=0$ da lugar a
 \begin{align}
   \mu^2\phi+\lambda\phi^3&=0\\
@@ -147,6 +156,7 @@ De hecho
 \begin{equation}
   \frac{\partial^2V}{\partial\phi^2}=\mu^2+3\lambda\phi^2.
 \end{equation}
+\end{frame}
 $\phi=0$ corresponde a un máximo, mientras que la segunda derivada para $\phi=\pm\sqrt{-\mu^2/\lambda}$ es $-2\mu^2\gt 0$ y corresponden a los mínimos. Expandiendo el campo alrededor del mínimo
 \begin{equation}
   \phi(x)=H(x)+v
@@ -170,6 +180,7 @@ y
 \end{equation}
 Entonces $H$ adquiere una masa $-2\mu^2$ y no es invariante bajo $H\to-H$. 
 
+\begin{frame}[fragile,allowframebreaks]
 Otro método es usar las ecuaciones de mínimo $-\mu^2=\lambda v^2$, para eliminar un parámetro del potencial:
 \begin{align}
   V(\phi)&=-\tfrac{1}{2}\lambda v^2\phi^2+\tfrac{1}{4}\lambda\phi^4\nonumber\\
@@ -179,14 +190,15 @@ Otro método es usar las ecuaciones de mínimo $-\mu^2=\lambda v^2$, para elimin
 Podemos escribir el potencial en términos del  nuevo campo como
 \begin{align}
 \label{eq:higgspot}
-  V(H)=\frac{1}{2}m_H^2H^2+\frac{1}{2}\frac{m_H^2}{v}H^3+\frac{1}{8}\frac{m_H^2}{v^2} H^4\,.
+  \mathcal{L}_H=\tfrac{1}{2}\partial^\mu H\partial_\mu H- V(H)=
+\tfrac{1}{2}\partial^\mu H\partial_\mu-\frac{1}{2}m_H^2H^2-\frac{1}{2}\frac{m_H^2}{v}H^3-\frac{1}{8}\frac{m_H^2}{v^2} H^4\,.
 \end{align}
 donde
 \begin{equation}
 \label{eq:higgsmass}
   m_H^2=2\left|\mu^2\right|=2\lambda v^2
 \end{equation}
-
+\end{frame}
 \subsection{Ausencia de taquiones}
 
 Uno se podría preocupar por la presencia de un término de masa
@@ -206,7 +218,7 @@ la masa del escalar esta bien definida.
 
 \subsection{Caso complejo}
 
-
+\begin{frame}[fragile,allowframebreaks]
 Consideremos ahora un campo escalar complejo sin término de masa, pero con potencial:
 \begin{equation}
   \label{eq:85qft}
@@ -217,7 +229,10 @@ Consideremos ahora un campo escalar complejo sin término de masa, pero con pote
   \qquad 
   \mu^2\lt 0,\ \lambda\gt 0 
 \end{equation}
+\end{frame}
 La simetría del Lagrangiano corresponde a $U(1)$ global. Este potencial corresponde al ``sombrero mexicano'', como se ilustra en la Figura \ref{fig:mexicanhat}. Para una energía suficientemente baja de manera que el campo deba oscilar alrededor del mínimo aparecen dos tipos de excitaciones. Una sobre las paredes  que cuestan energía y corresponden a un campo escalar masivo como en el caso anterior, y otra a lo largo de la circunferencia de mínimo, que corresponde a una partícula escalar sin masa, y es llamada bosón del Golstone. 
+
+\begin{frame}[fragile,allowframebreaks]
 
 
 
@@ -228,7 +243,7 @@ La simetría del Lagrangiano corresponde a $U(1)$ global. Este potencial corresp
   \label{fig:mexicanhat}
 \end{figure}
 
-
+\end{frame}
 
 El Lagrangiano escalar complejo es equivalente al Lagragiano de dos campos escalares reales con los mismos paramétros. Para un conjunto de $N$ campos reales tenedremos (suma sobre $i$) \cite{Peskin}\footnote{\S 11.1}: 
 \begin{align}
@@ -254,23 +269,24 @@ Also from \cite{Peskin}\footnote{Introduction to Chapter 20}
 It is now only natural to consider a fourth possibility: What happens if we include both local gauge invariance  and spontaneous symmetry breaking in the same theory?
 \end{quote}
 
+\begin{frame}[fragile,allowframebreaks]
 La ruptura espontánea de simetría se puede parametrizar convenientemente en este caso en coordenadas polares:
 \begin{align}
-  \phi(x)=\frac{\varphi(x)}{\sqrt{2}} \operatorname{e}^{i\bar{G}(x)}\,,
+  \phi(x)=\frac{\eta(x)}{\sqrt{2}} \operatorname{e}^{i\bar{G}(x)}\,,
 \end{align}
 donde el factor de $\sqrt{2}$ se ha puesto para obtener la normalizaciones apropiadas para la Acción, y $\bar{G}(x)$ es una función adimensional del espacio tiempo. Expandiendo la ec.~\eqref{eq:85qft}
 \begin{align}
     \mathcal{L}=&\partial^\mu\phi^*\partial_\mu\phi-\mu^2\phi^*\phi-\lambda(\phi^*\phi)^2 \nonumber\\
-=&\frac{1}{2}\left( \partial^{\mu}\varphi-i\varphi \partial^{\mu}\bar{G} \right)^{*}\left(\partial_{\mu}\varphi+i\varphi \partial_{\mu}\bar{G}  \right)
--\frac{1}{2}\mu^2 \varphi^2 -\frac{1}{4}\varphi^4 \nonumber\\
-=&\frac{1}{2}\partial^{\mu}\varphi\partial_{\mu}\varphi+\frac{1}{2}\varphi^2 \partial^{\mu}\bar{G}\partial_{\mu}\bar{G} 
--\frac{1}{2}\mu^2 \varphi^2 -\frac{1}{4}\varphi^4 \,.
+=&\frac{1}{2}\left( \partial^{\mu}\eta-i\eta \partial^{\mu}\bar{G} \right)^{*}\left(\partial_{\mu}\eta+i\eta \partial_{\mu}\bar{G}  \right)
+-\frac{1}{2}\mu^2 \eta^2 -\frac{1}{4}\eta^4 \nonumber\\
+=&\frac{1}{2}\partial^{\mu}\eta\partial_{\mu}\eta+\frac{1}{2}\eta^2 \partial^{\mu}\bar{G}\partial_{\mu}\bar{G} 
+-\frac{1}{2}\mu^2 \eta^2 -\frac{1}{4}\eta^4 \,.
 \end{align}
- Como $\varphi^2=\phi_1^2+\phi_2^2$, el módulo del campo complejo, podemos expandirlo  alrededor del campo que oscila en mínimo en el modo que sube por las paredes, como se describió en la fig.~\ref{fig:mexicanhat}. Hacemos entonces el cambio de variables
+ Como $\eta^2=\phi_1^2+\phi_2^2$, el módulo del campo complejo, podemos expandirlo  alrededor del campo que oscila en mínimo en el modo que sube por las paredes, como se describió en la fig.~\ref{fig:mexicanhat}. Hacemos entonces el cambio de variables
  \begin{align}
-   \varphi(x)=H(x)+v\,,
+   \eta(x)=H(x)+v\,,
  \end{align}
-tal que $|\varphi_{\text{min}}|=v$. Reemplazando en el Lagrangiano anterior tenemos que
+tal que $|\eta_{\text{min}}|=v$. Reemplazando en el Lagrangiano anterior tenemos que
 \begin{align}
   \mathcal{L}=&\frac{1}{2}\partial^{\mu}H\partial_{\mu}H+\frac{1}{2}\partial^{\mu}G\partial_{\mu}G+\frac{H}{v}\partial^{\mu}G\partial_{\mu}G+\frac{H^2}{v^2}\partial^{\mu}G\partial_{\mu}G
 -\tfrac{1}{2}\mu^2(H+v)^2-\tfrac{1}{4}\lambda(H+v)^4 \nonumber\\
@@ -286,11 +302,13 @@ Como era de esperarse, obtenemos un modo masivo $H$ cuyas oscilaciones cuestan e
 \begin{align}
   \mathcal{L}_{\text{int}}=\frac{H}{v}\partial^{\mu}G\partial_{\mu}G\,,
 \end{align}
-que predice que el campo $H$ debe decaer a dos campos $G$. Sin embargo, este tipo de procesos aún no se han observado en la naturaleza. 
+que predice que el campo $H$ debe decaer a dos campos $G$ sin masa. Sin embargo, este tipo de procesos aún no se han observado en la naturaleza. 
+\end{frame}
+
 \section{Electrodinámica cuántica escalar}
 
 
-
+\begin{frame}[fragile,allowframebreaks]
 En el caso de la Acción invariante gauge local bajo el Grupo $U(1)$, tenemos el Lagrangiano 
 \begin{equation}
   \label{eq:89qft}
@@ -314,9 +332,9 @@ En el caso de la superconductividad  electromagnética, $\phi$ representaría al
 \subsection{Gauge unitario}
 Como $\phi$ es un campo complejo, podemos escribirlo en coordenadas polares con un campo real asociado a la magnitud del campo complejo y otro a la fase
 \begin{align*}
-  \phi(x)=\frac{\varphi(x)}{\sqrt{2}}e^{i\bar{G}(x)}
+  \phi(x)=\frac{\eta(x)}{\sqrt{2}}e^{i\bar{G}(x)}
 \end{align*}
-Expandiendo el campo $\varphi(x)$ alrededor del mínimo: $\varphi(x)=(H(x)+v)$, tenemos
+Expandiendo el campo $\eta(x)$ alrededor del mínimo: $\eta(x)=(H(x)+v)$, tenemos
 \begin{align*}
     \phi(x)=e^{i\bar{G}(x)}\left(\frac{H(x)+v}{\sqrt{2}}\right)\,.
 \end{align*}
@@ -343,24 +361,30 @@ En adelante omitiremos las primas, aunque debe estar claro que se esta trabajand
   \tfrac{1}{4}\lambda(H+v)^4+\tfrac{1}{2}g^2A^\mu A_\mu(H+v)^2
   -\tfrac{1}{4}F^{\mu\nu}F_{\mu\nu}.
 \end{align}
-Usando la ec.~\eqref{eq:84qft}
+Usando la ec.~\eqref{eq:higgspot}
 \begin{equation}
   \label{eq:94qft}
   \mathcal{L}=\mathcal{L}_H+\mathcal{L}_{A^\mu}+\tfrac{1}{2}g^2A^\mu A_\mu H^2+g^2vA^\mu A_\mu H,
 \end{equation}
-donde $\mathcal{L}_H$ esta dado por la ec.~\eqref{eq:88qft} y
+donde $\mathcal{L}_H$ esta dado por la ec.~\eqref{eq:higgspot} y
 \begin{equation}
   \mathcal{L}_{A^\mu}=-\tfrac{1}{4}F^{\mu\nu}F_{\mu\nu}+\tfrac{1}{2}g^2v^2A^\mu A_\mu.
 \end{equation}
 Teniendo en cuenta la ec.~\eqref{eq:23qft} para el Lagrangiano de Proca, vemos que como consecuencia de la ruptura espontánea de simetría el campo gauge ha adquirido una masa
 \begin{equation}
-  m_{A^\mu}=gv.
+  m_{A}=gv.
 \end{equation}
+
+Por lo tanto, y sin perdidad de generaliad, podemos escribir el Lagrangiano de Proca resultante como
+\begin{align}
+  \mathcal{L}_{A^\mu}=-\tfrac{1}{2}\partial_\mu A_\nu \partial^\mu A^\nu +\tfrac{1}{2}m_{A}^2 A^\nu A_\nu.
+\end{align}
+donde hemos usado la condición de Proca, eq.~\eqref{eq:procacon}: $\partial_\nu A^\nu=0$.
 
 El mecanismo completo mediante el cual, a partir de un Lagrangiano invariante gauge local, los bosones gauge adquieren masa se llama \emph{mecanismo de Brout–Englert–Higgs} \cite{Englert:1964et,Higgs:1964pj}. La partícula escalar que adquiere masa se llama Higgs, mientras que el bosón de Goldstone es absorbido por campo gauge como modo longitudinal. 
 
 El número de grados de libertad independientes en el Lagrangiano original en la ec.~\eqref{eq:89qft} es cuatro. Correspondientes a los dos grados de libertad del bosón gauge no masivo y los dos del campo escalar complejo. En el Lagrangiano final en la ec.~\eqref{eq:94qft} no aparece el bosón de Goldstone. Sin embargo esto no es un problema porque dicho Lagrangiano también tiene cuatro grados de libertad correspondientes a  los tres grados de libertad del bosón gauge masivo y al grado de libertad del bosón de Higgs. 
-
+\end{frame}
 
 
 \subsection{Superconductividad}
@@ -461,7 +485,7 @@ donde
 \end{align}
 
 
-\begin{frame}[fragile,allowframebreaks]
+
 Las condiciones sobre los parámetros del potencial escalar garantizan un rompimiento espontáneo de la simetría. Los cuatro grados de libertad de $\Phi$, pueden escribirse en forma polar con la parte real neutra desplazada para generar la ruptura espontánea de la simetría SU(2)
 \begin{align}
 \label{eq:92qft}
@@ -597,8 +621,6 @@ donde la última línea corresponde a la magnitud del ``número'' complejo:
 \left[\partial_\mu H+\tfrac{i}{2}gW^3_\mu(H+v)\right]
 \end{align}
 
-\end{frame}
-\begin{frame}[fragile,allowframebreaks]
 
 Entonces
 \begin{align}
@@ -635,7 +657,6 @@ con
 \end{itemize} %noinstiki
 %instiki:
 
-\end{frame}
 
 
 %\left(\right)

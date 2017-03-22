@@ -1078,7 +1078,12 @@ condici\'on de Lorentz, ec.~(\ref{eq:20}), emerge como una restricci\'on
 adicional que debe ser siempre tomada en cuenta. De este modo la
 libertad gauge de las ecuaciones de Maxwell se pierde completamente en
 la ecuaciones de Proca, que sin perdida de generalidad se pueden
-reescribir, usando $\partial_\mu A^\mu=0$ y las ecs.~(\ref{eq:21}),~(\ref{eq:24}),  como:
+reescribir, usando la condición de Proca
+\begin{align}
+\label{eq:procacon}
+\partial_\mu A^\mu=0\,,
+\end{align}
+ y las ecs.~(\ref{eq:21}),~(\ref{eq:24}),  como:
 \begin{equation}
   \label{eq:26}
    (\Box+m^2)A^\nu=J^\nu
@@ -1092,7 +1097,7 @@ Aplicando la condici\'on de Lorentz a la ec.~(\ref{eq:23}), obtenemos el
 Lagrangiano de la Ecuaci\'on de Proca (\ref{eq:26})
 \begin{equation}
   \label{eq:27}
-  \mathcal{L}=\frac{1}{2}\partial_\mu A^\nu\partial_\mu A^\nu-\frac{1}{2} m^2A^\nu A_\nu+J^\nu A_\nu,
+  \mathcal{L}=-\frac{1}{2}\partial_\mu A^\nu\partial^\mu A_\nu+\frac{1}{2} m^2A^\nu A_\nu-J^\nu A_\nu,
 \end{equation}
 donde hemos reabsorbido un signo global que no afecta las ecuaciones
 de movimiento. El primer t\'ermino que incluye s\'olo derivadas de los
@@ -1110,9 +1115,9 @@ modo podemos reescribir el Lagrangiano \eqref{eq:27} como
 \end{equation*}
 donde,
 \begin{align}
-\mathcal{L}_{\text{free}}&=\frac{1}{2}\partial_\mu A^\nu\partial_\mu A^\nu-\frac{1}{2} m^2A^\nu A_\nu\nonumber\\
+\mathcal{L}_{\text{free}}&=-\frac{1}{2}\partial_\mu A^\nu\partial^\mu A_\nu+\frac{1}{2} m^2A^\nu A_\nu\nonumber\\
 \label{eq:28}
-\mathcal{L}_{\text{int}}&=J^\nu A_\nu.
+\mathcal{L}_{\text{int}}&=-J^\nu A_\nu.
 \end{align}
 
 Debido a que la teor\'\i a masiva ya no es invariante gauge, la condici\'on
@@ -1138,7 +1143,16 @@ cargas no electromagn\'eticas y pueden ser masivos. El reto durante
 varias d\'ecadas fue entender como las masa de los campos vectoriales de
 la interacci\'on d\'ebil podr\'\i a hacerse compatible con el principio gauge
 local.  
+
+Además, el Lagrangiano libre se puede reescribir como la suma de cuatro lagrangianos independientes para cada campo $\phi=A^0$, $A^i$:
+\begin{align}
+  \mathcal{L}_{\text{free}}&=-\frac{1}{2}\partial_\mu A^\nu\partial^\mu A_\nu+\frac{1}{2} m^2A^\nu A_\nu\nonumber\\
+  &=-\frac{1}{2}\partial_\mu \phi\partial^\mu \phi+\frac{1}{2} m^2\phi^2
+   +\frac{1}{2}\partial_\mu \boldsymbol{A}\cdot \partial^\mu \boldsymbol{A}-\frac{1}{2} m^2\boldsymbol{A}\cdot \boldsymbol{A}\,.
+\end{align}
+
 \end{frame}
+
 
 
 
