@@ -1982,17 +1982,23 @@ Generalizando a un campo complejo
 \section{Aplicaci\'on a Mec\'anica Cu\'antica}
 \label{sec:aplic-mecan-cuant}
 
-Haciendo $\hbar=1$, el Lagrangiano que da lugar a la ecuaci\'on de Schr\"odinger es
+Haciendo $\hbar=1$, el Lagrangiano que da lugar a la ecuaci\'on de Schr\"odinger es~\cite{0712.1608}\footnote{A simple version is discussed in 
+\url{http://physics.stackexchange.com/questions/55622/how-would-a-lagrangian-be-used-to-recover-the-schrodinger-equation}}
 \begin{align}
 \label{eq:5tcc}
-  \mathcal{L}(\psi,\psi^*,\partial_\mu\psi,\partial_\mu\psi^*)&=\frac{1}{2m}\boldsymbol{\nabla}\psi^*\cdot\boldsymbol{\nabla}\psi-\frac{i}{2}
+  \mathcal{L}(\psi,\psi^*,\partial_\mu\psi,\partial_\mu\psi^*)
+  &=-\frac{1}{2m}\psi^*\nabla^2\psi-\frac{i}{2}
+  \left(
+\psi^*\frac{\partial\psi}{\partial t}-\frac{\partial\psi^*}{\partial t}\psi
+  \right)+\psi^*V\psi\\
+&=\frac{1}{2m}\boldsymbol{\nabla}\psi^*\cdot\boldsymbol{\nabla}\psi-\frac{i}{2}
   \left(
 \psi^*\frac{\partial\psi}{\partial t}-\frac{\partial\psi^*}{\partial t}\psi
   \right)+\psi^*V\psi\\
 &=\frac{1}{2m}\partial_i\psi^*\partial_i\psi-\frac{i}{2}
   \left(\psi^*\partial_0\psi-\partial_0\psi^*\psi\right)+\psi^*V\psi.\nonumber
 \end{align}
-Aplicando las ecuaciones de Euler-Lagrange (\ref{eq:132}) para
+donde la segunda forma es real: $\mathcal{L}^*=\mathcal{L}$. Aplicando las ecuaciones de Euler-Lagrange (\ref{eq:132}) para
 la funci\'on de onda $\psi^*$ obtenemos la ecuaci\'on de Scr\"odinger con $\hbar=1$:
 \begin{equation}
   \label{eq:137}

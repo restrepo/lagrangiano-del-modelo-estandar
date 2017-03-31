@@ -624,9 +624,9 @@ donde
 \mathcal{L}_{\text{free}}=&i\bar{\Psi}\gamma^\mu\partial_\mu\Psi-m\bar{\Psi}\Psi\nonumber\\
   \mathcal{L}_{\text{gauge}}=&g_s\bar{\Psi}\gamma^\mu\frac{\lambda_a}{2}\Psi G_\mu^a
   - \frac{1}{4}\widetilde{G}^{\mu\nu}_a \widetilde{G}_{\mu\nu}^a\nonumber\\
-  \mathcal{L}_{\text{SI}}=&- \frac{1}{4}\left(%g_s\widetilde{G}^{\mu\nu}_af_{a d e}G^d_\mu G^e_\nu+
+  \mathcal{L}_{\text{SI}}=&{\color{red}- \frac{1}{4}\left(%g_s\widetilde{G}^{\mu\nu}_af_{a d e}G^d_\mu G^e_\nu+
     2 g_sf^{a b c}G_b^\mu G_c^\nu\widetilde{G}_{\mu\nu}^a
-    +g_s^2f^{a b c}f_{a d e}G_b^\mu G_c^\nu G^d_\mu G^e_\nu\right)\,.
+    +g_s^2f^{a b c}f_{a d e}G_b^\mu G_c^\nu G^d_\mu G^e_\nu\right)\,.}
 \end{align}
 
 Hemos divido el Lagrangiano en tres partes
@@ -1399,28 +1399,30 @@ Entonces las Ecuaciones de Euler Lagrange para $G_\nu^a$, son
 \delta^a_d\partial_\mu{G}^{\mu\nu d}-i g_s {\left[\widetilde{\Lambda_c}\right]^a}_d G^c_\mu{G}^{\mu\nu d}
 =&-g_s\overline{\Psi}\gamma^\nu\frac{\lambda_a}{2}\Psi\Psi\nonumber\\
 {\left[ \mathcal{D}_\mu \right]^a}_d{G}^{\mu\nu d}
-=&-g_s\overline{\Psi}\gamma^\nu\Lambda^{a}\Psi\nonumber\\
-\mathcal{D}_\mu{\mathbf{G}}^{\mu\nu}
+=&-g_s\overline{\Psi}\gamma^\nu\Lambda^{a}\Psi \nonumber\\
+  \mathcal{D}_\mu{\boldsymbol{G}}^{\mu\nu}
 =&-g_s\overline{\Psi}\gamma^\nu\boldsymbol{\Lambda}\Psi\,.
 \end{align}
-donde $\mathbf{G}^{\mu\nu}$ y $\boldsymbol{\Lambda}$ son vectores en el espacio $SU(3)$
+\begin{frame}[fragile,allowframebreaks]
+por lo tanto
+\begin{align}
+  \mathcal{D}_\mu{\boldsymbol{G}}^{\mu\nu}
+=&\boldsymbol{J}^{\nu}
+\end{align}
 
-Definimos la derivada covariante en la representación adjunta como matrix  $8\times8$ 
+donde $\boldsymbol{G}^{\mu\nu}$ y $\boldsymbol{\Lambda}$ son vectores en el espacio $SU(3)$.
+Además, hemos definido la derivada covariante en la representación adjunta como matrix  $8\times8$ 
 \begin{align}
   \mathcal{D}_{\mu}=\mathbf{1}\partial_{\mu}-i g_s \widetilde{\Lambda}_a G_{\mu}^{a} 
 \end{align}
-
-
-
-
-Definiendo
+y finalmente
 \begin{align}
-J^\mu_a = -g_s\bar{\Psi}\gamma^\mu\frac{\lambda_a}{2}\Psi\,,
+J^\mu_a = -g_s\bar{\Psi}\gamma^\mu\frac{\lambda_a}{2}\Psi\,.
 \end{align}
 
 La ec.\eqref{eq:Gmuael} puede reescribirse como:
 \begin{align}
-  \partial_\mu G^{\mu\nu}_a=-g_s\left[f_{abc}G^b_\mu G^{\mu\nu}_c+\bar{\Psi}\gamma^\nu\frac{\lambda_a}{2}\Psi  \right]
+  \partial_\mu G^{\mu\nu}_a=-g_s\left[{\color{red}f_{abc}G^b_\mu G^{\mu\nu}_c}+\bar{\Psi}\gamma^\nu\frac{\lambda_a}{2}\Psi  \right]
 \end{align}
 y usando el hecho que $\partial_\mu\partial_\nu=\partial_\nu\partial_\mu$:
 \begin{align}
@@ -1442,6 +1444,7 @@ donde
 \end{align}
 
 El primer término corresponde a las autointeracciones y el segundo a la corriente de color generada por los quarks.
+\end{frame}
 
 \subsection{Corrientes conservadas}
 
