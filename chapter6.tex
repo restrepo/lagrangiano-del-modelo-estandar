@@ -33,13 +33,13 @@ La materia conocida esta constituida de un cojunto de \emph{fermiones de Dirac} 
 \begin{table}
   \centering
   \begin{tabular}{l|l|c|r}
-    Type &Name & Symbol&Charge\\\hline{}
-   leptons& electron & $e$& $-1$\\
+    Tipo &Nombre & Simbolo&Carga\\\hline{}
+   leptones& electrón & $e$& $-1$\\
           & neutrino & $\nu$ & $0$\\\hline{}
-   quarks &up quark & $u_1,u_2,u_3$ & $2/3$\\
-          &down quark & $d_1,d_2,d_3$& $-1/3$\\
+   quarks &quark up  & $u_1,u_2,u_3$ & $2/3$\\
+          &quark down  & $d_1,d_2,d_3$& $-1/3$\\
   \end{tabular}
-  \caption{Elementary fermions. The symbol represent both the particle, e.g $e^-$, as the antiparticle, e.g, $e^+$. The lectric chage is given in units of the electron chage $e$  }
+  \caption{Fermiones elementales:  The symbol represent both the particle, e.g $e^-$, as the antiparticle, e.g, $e^+$. The lectric chage is given in units of the electron chage $e$  }
   \label{tab:ef}
 \end{table}
 donde podemos definir los tripletes de color de quarks como
@@ -516,8 +516,8 @@ $\mathcal{D}_\mu$ corresponde a la matrix $2\times  2$, dada en la ec.~\eqref{eq
 
 \begin{align}
  \mathcal{D}_\mu &=  \begin{pmatrix}
-    \partial_\mu-i\left(\frac{1}{2}g W^3_\mu+g' Y B_\mu\right)&-\frac{i}{\sqrt{2}}g W^+_\mu\\
-    -\frac{i}{\sqrt{2}}g W^-_\mu&\partial_\mu-i\left(-\frac{1}{2}g W^3_\mu+g'Y B_\mu\right)
+    \partial_\mu-i\left(\frac{1}{2}g W^3_\mu+{\color{red}g' Y B_\mu}\right)&-\frac{i}{\sqrt{2}}g W^+_\mu\\
+    -\frac{i}{\sqrt{2}}g W^-_\mu&\partial_\mu-i\left(-\frac{1}{2}g W^3_\mu+{\color{red}g'Y B_\mu}\right)
   \end{pmatrix}.
 \end{align}
 
@@ -528,7 +528,7 @@ Entonces
     H(x)+v
   \end{pmatrix}=\begin{pmatrix}
     -\frac{i}{\sqrt{2}}gW_\mu^+(H+v)\\
-    \partial_\mu H-i\left(-\frac{1}{2}gW^3_\mu+g'Y_{\widetilde{\Phi}} B_\mu\right)(H+v)
+    \partial_\mu H-i\left(-\frac{1}{2}gW^3_\mu+{\color{red}g'Y_{\widetilde{\Phi}} B_\mu}\right)(H+v)
   \end{pmatrix}.
 \end{align}
 
@@ -557,7 +557,7 @@ De modo que, como se mostro en
   &\qquad\left[\partial_\mu H-i\left(-\tfrac{1}{2}gW^3_\mu+g'Y_{\widetilde{\Phi}} B_\mu\right)(H+v)\right]\nonumber\\
  =&-V(H)
   +\frac{1}{4}g^2{W^\mu}^-W_\mu^+(H+v)^2+\nonumber\\
-  &+\frac{1}{2}\partial^\mu H\partial_\mu H+\frac{1}{2}\left(-\tfrac{1}{2}gW_3^\mu+g'Y_{\widetilde{\Phi}} B^\mu\right)^2(H+v)^2
+  &+\frac{1}{2}\partial^\mu H\partial_\mu H+\frac{1}{2}\left(-\tfrac{1}{2}gW_3^\mu+{\color{red}g'Y_{\widetilde{\Phi}} B^\mu}\right)^2(H+v)^2
 \end{align}
 donde la última línea corresponde a la magnitud del ``número'' complejo: 
 \begin{align}
