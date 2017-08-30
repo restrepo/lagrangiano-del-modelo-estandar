@@ -28,6 +28,46 @@ Se hará un repaso de las nociones de relatividad especial para mostrar como se 
 
 \section{Preliminares}
 Antes de entrar en materia, se sentarán las bases teóricas necesarias sobre el sistema de unidades  más utilizado en física subatómica en la Sección~\ref{sec:NU} y temas de relatividad especial que serán utilizados posteriormente en la Sección \ref{sec:srn}. Los ejemplos te cuadrivectores en la Subsección~ se dejan como referencia para posible uso posterior
+
+\section{Teoría de Grupos}
+
+\subsubsection{Rotaciones en dos dimensiones}
+Considere el generador del Grupo de Rotaciones en dos dimensiones
+\begin{align}
+  \tau=
+  \begin{pmatrix}
+   0 & -i \\
+   i & 0 \\    
+  \end{pmatrix},
+\end{align}
+con álgebra
+\begin{align}
+  \tau^2=\boldsymbol{1}_{2\times2}=
+  \begin{pmatrix}
+    1 & 0\\
+    0 & 1\\
+  \end{pmatrix}.
+\end{align}
+
+Definimos una representación matricial del Grupo de la rotaciones como
+\begin{align}
+  R(\theta)=&\exp \left(i \tau \theta  \right) \nonumber\\
+=&
+\begin{pmatrix}
+  \cos\theta & -\sin\theta \\
+  \sin\theta & \cos\theta \\
+\end{pmatrix}.
+\end{align}
+
+$R$ is ortogonal since
+\begin{align}
+  R^{\operatorname{T}}(\theta)=& \exp \left(i \tau^{\operatorname{T}} \theta  \right) \nonumber\\
+        =& \exp \left(-i \tau \theta  \right) \nonumber\\
+        =&R^{-1}
+\end{align}
+
+
+
 \section{Unidades Naturales}
 \label{sec:NU}
 Las \emph{unidades naturales} son unidades f\'\i sicas de medida definidas en t\'erminos de constantes f\'\i sicas universales~\cite{NU}. El primer conjunto consiste de unidades naturales, las \emph{unidades de Planck}~\cite{PU},  fue formulado por el propio Planck despu\'es de establecer la \'ultima constante universal, que lleva su nombre.  En palabras de Planck
@@ -44,7 +84,7 @@ De este modo, estas unidades son naturales debido a que el origen de su definici
 \label{eq:144}
   G_N=1,\qquad \hbar=1,\qquad c=1,\qquad K=\frac{1}{4\pi\epsilon_0}=1,\qquad k=1,
 \end{equation}
-est\'an basadas s\'olo en las propiedades del espacio libre, y no en las propiedades (tales como carga, masa, tama\~no o radio) de alg\'un objeto o part\'\i cula elemental.
+est\'an basadas s\'olo en las propiedades del espacio libre, y no en las propiedades (tales como carga, masa, tama\~no o radio) de alg\'un objeto o part\'\i cula elemental. El segunod y el metro están ya definidos en términos de contantes naturales y los demás patrones de medida pronto serán definidos también en términos de constantes naturales (ver \url{https://www.wired.com/story/the-quest-to-perfect-the-universal-language-of-science/}).
 
 Las constantes f\'\i sicas que suelen normalizarse se escogen del conjunto dado por la ec.~\eqref{eq:144} y
 \begin{equation}
