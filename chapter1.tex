@@ -2037,6 +2037,7 @@ Generalizando a un campo complejo
 \section{Aplicaci\'on a Mec\'anica Cu\'antica}
 \label{sec:aplic-mecan-cuant}
 
+\begin{frame}[fragile,allowframebreaks]
 Haciendo $\hbar=1$, el Lagrangiano que da lugar a la ecuaci\'on de Schr\"odinger es~\cite{0712.1608}\footnote{A simple version is discussed in 
 \url{http://physics.stackexchange.com/questions/55622/how-would-a-lagrangian-be-used-to-recover-the-schrodinger-equation}}
 \begin{align}
@@ -2068,6 +2069,7 @@ Como
   &\frac{\partial\mathcal{L}}{\partial(\partial_i\psi)}=\frac{1}{2m}\partial_i\psi^*&&\frac{\partial\mathcal{L}}{\partial(\partial_i\psi^*)}=\frac{1}{2m}\partial_i\psi\\
   &\frac{\partial\mathcal{L}}{\partial\psi}=\frac{i}{2}\partial_0\psi^*+\psi^*V&&\frac{\partial\mathcal{L}}{\partial\psi^*}=-\frac{i}{2}\partial_0\psi+V\psi.\nonumber
 \end{align}
+\end{frame}
 Entonces, reemplazando la ec.~(\ref{eq:136}) en la ec.~(\ref{eq:137}), tenemos
 \begin{align}
  0=\partial_\mu\left[\frac{\partial\mathcal{L}}{\partial(\partial_\mu\psi^*)}\right]-\frac{\partial\mathcal{L}}{\partial\psi^*}
@@ -2120,12 +2122,13 @@ Entonces, normalizando apropiadamente la corriente escogiendo $\theta=1$, tenemo
     \psi\boldsymbol{\nabla}\psi^*-\psi^*\boldsymbol{\nabla}\psi
   \right).
 \end{align}
+\begin{frame}[fragile,allowframebreaks]
 De acuerdo a la ec.~(\ref{eq:7}), la cantidad conservada corresponde a la probabilidad de la funci\'on de onda y normalizando apropiadamente la ec.~(\ref{eq:qcons})
 \begin{equation}
   \label{eq:57}
 Q_\rho=  \int_V \psi^*\psi \,d^3x=1.
 \end{equation}
-
+\end{frame}
 
 En cuanto a las simetr\'\i as externas, tenemos de la ec.~(\ref{eq:tmunu}) que
 da lugar a las ecuaciones de continuidad (\ref{eq:122})(\ref{eq:235})
@@ -2165,6 +2168,7 @@ Integrando en el volumen
 \begin{equation}
   \int_V \mathbf{T}^0\, d^3x=-i\int_V \psi^*\boldsymbol{\nabla}\psi\, d^3x+\frac{i}{2}\boldsymbol{\nabla}\int_V\psi^*\psi\,d^3x
 \end{equation}
+\begin{frame}[fragile,allowframebreaks]
 De acuerdo a la ec.~(\ref{eq:57}), la \'ultima integral es una constante y
 \begin{align}
   \label{eq:140}
@@ -2179,7 +2183,7 @@ En general, el valor esperado de un operador $ \widehat{\cal O}$, se define en m
 \begin{align*}
   \langle\widehat{\cal O}\rangle=\int_V d^3x\,\psi^{*}\widehat{\cal O}\psi\,.
 \end{align*}
-
+\end{frame}
 \subsection{Conservación de la energía}
 De otro lado
 \begin{align}
@@ -2236,6 +2240,7 @@ la condici\'on de normalizaci\'on en ec.~\eqref{eq:57} implica que $|A|^2=1/L^3$
   \int_V \mathbf{T}^0\, d^3x&=\mathbf{k}.
 \end{align}
 
+\begin{frame}[fragile,allowframebreaks]
 Los dos operadores se pueden combinar en relatividad especial definiendo el operador de cuadrimomentum
 \begin{align}
   \widehat{p}\;^{\mu}=i\partial^{\mu}=
@@ -2244,7 +2249,7 @@ Los dos operadores se pueden combinar en relatividad especial definiendo el oper
     i\partial^i=-i\partial_i=\widehat{p}\;^{i} & \mu=i\\
   \end{cases}
 \end{align}
-
+\end{frame}
 
 
 \begin{itemize}
@@ -2285,6 +2290,8 @@ It seems that it is not consistent with the localized field concept that underli
   \end{flushright}
 
 Un cambio de fase que dependa del punto del espacio-tiempo, $\theta(x)$, de otro lado, sería similar a lo que pasa en la teoría electromagnética cuando es expresada en términos de potenciales escalares y vectoriales. Ellos se pueden cambiar por derivadas de funciones arbitrarias de una forma tal que los campos eléctricos y magnéticos medidos permanecen invariantes. Como veremos, estas características están profundamente conectas con la conservación local de la carga eléctrica.  
+
+\subsection{Motivación}
 
 Desde un punto de vista más cuantitativo, debido a que la energía y la cantidad de movimiento del electrón aparecen  en la fase de su función de onda
 \begin{align}
@@ -2358,14 +2365,32 @@ Las propiedades de transformación de  $A_\mu$ pueden ser obtenidas de las de  $
  i q A_\mu\to& i q A_\mu'=i q A_\mu-i \partial_\mu\theta(x)\nonumber\\
   A_\mu\to&  A_\mu'= A_\mu-\frac{1}{q} \partial_\mu\theta(x)\,.
 \end{align}
+
+\subsection{Derivadas covariantes}
+\begin{frame}[fragile,allowframebreaks]
 Para obtener las propiedades de la transformación de la derivada covariante misma, podemos comenzar de la definición
 \begin{align}
-    \mathcal{D}_\mu \psi\to\left(\mathcal{D}_\mu \psi\right)'=&U\left(\mathcal{D}_\mu \psi\right)\,,
+    \mathcal{D}_\mu \psi\to\left(\mathcal{D}_\mu \psi\right)'=&U(\theta)\left(\mathcal{D}_\mu \psi\right) \nonumber\\
+    \left[ \mathcal{D}_\mu \psi  \right]^{*}\to \left[ \left(\mathcal{D}_\mu \psi\right)'  \right]^{*}=&\left(\mathcal{D}_\mu \psi\right)^{*} U^{*}(\theta) \nonumber\\
+\,,
 \end{align}
-done $U(x)=e^{i\theta(x)}$. Es importante enfatizar que el conjunto de transformaciones  $U_3(x)=U_1(x)U_2(x)$ también esta en el grupo. También contiene la identidad
-$U_{\text{identity}}=e^{0}$, el inverso $U_{j}^{-1}(x)=U_{j}^{*}(x)$, y finalmente la propiedad de asociatividad bajo la operación del grupo $\left( U_1(x)U_2(x) \right)U_3(x)=U_1(x)\left( U_2(x)U_3(x) \right)$. 
-Además, como $U_1(x)U_2(x)=U_2(x)U_1(x)$, el grupo es Abeliano. Este grupo Abeliano de números complejos de módulo 1 es llamado el grupo $U(1)$, 
+donde
+\begin{align}
+  U(\theta)=e^{iq\theta(x)}\,.
+\end{align}
+A $q$ hace las veces del generador del Grupo U(1), mientras que $\theta(x)$ es el parámetro local de transformación.
+Es importante enfatizar las propiedas de grupo:
+\begin{enumerate}
+\item El conjunto de transformaciones  $U(\theta_3)=U(\theta_1)U(\theta_2)$ también esta en el grupo.
+\item Contiene la identidad
+$U_{\text{identity}}=e^{0}$.
+\item Contiene  el inverso $U^{-1}(\theta)=U^{*}(\theta)=U(-\theta)$,
+\item Satisface la propiedad de asociatividad bajo la operación del grupo $\left( U(\theta_1)U(\theta_2) \right)U (\theta_3 )=U(\theta_1)\left( U(\theta_2)U(\theta_3) \right)$. 
+\end{enumerate}
+Como $U(\theta_1)U_2(\theta_2)=U(\theta_2)U_1(\theta_1)$, el grupo es Abeliano. Este grupo Abeliano de números complejos de módulo 1 es llamado el grupo $U(1)$, 
 y es isomorgo al grupo de rotaciones en dos dimensiones por un ángulo  $\theta$. 
+
+\end{frame}
 
 Para un elemento $U$ de un grupo general, tenemos como definición de derivada covariante que la correspondiente derivada del campo transforme como el campo. En este caso general el campo transforma como
 \begin{align}
@@ -2402,8 +2427,8 @@ Después de cancelar el término  $\partial_{\mu}\psi$ en ambos lados, y factori
 \end{align}
 Esta expresión es completamente general y será usada posteriormente en el contexto de grupos más complicados. En el caso particular de un Grupo Abeliano  $U(1)$, tenemos simplemente que
 \begin{align}
-  A'_{\mu}=&A_{\mu}-\frac{i}{q}\left[ -i\partial_{\mu}\theta(x) \right]UU^{*}\nonumber\\
- A_{\mu}\to  A'_{\mu}=&A_{\mu}-\frac{1}{q}\partial_{\mu}\theta(x)\,.
+  A'_{\mu}=&A_{\mu}-\frac{i}{q}\left[ iq\partial_{\mu}\theta(x) \right]UU^{*}\nonumber\\
+ A_{\mu}\to  A'_{\mu}=&A_{\mu}+\partial_{\mu}\theta(x)\,.
 \end{align}
 
 Definimos la \emph{invarianza gauge local} como una forma arbitraria de escoger el factor de fase complejo de un campo cargado\footnote{como el electrón descrito por la ecuación usual de  Scrödinger.} en todos los puntos del espacio tiempo.
