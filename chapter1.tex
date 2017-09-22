@@ -1973,12 +1973,12 @@ Note que las ecuaciones de Euler-Lagrange surgen del Problema variacional de Noe
 
 
 \section{Simetrías externas}
-Consideremos el caso en el cual el campos es sólo afectado en su dependencia espacio-temporal como ocurre para un campo escalar de Lotentz en la ec.~\eqref{eq:dmuxmu}, es decir,
+Consideremos el caso en el cual el campo es sólo afectado en su dependencia espacio-temporal como ocurre para un campo escalar de Lotentz en la ec.~\eqref{eq:dmuxmu}, es decir,
  $\delta\phi_{i}=-\left( \partial_{\nu}\phi \right)\delta x^{\nu}$,
 \begin{align}
    \sum_i    B^{\mu}_i= - T^{\mu}_{\nu} \delta x^{\nu}\,,
 \end{align}
-donde
+donde, de la ecuación~\ref{eq:master2}
 \begin{align}
   T^{\mu}_{\nu}=\sum_i \frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}\partial_{\nu}\phi_i-\delta^{\mu}_{\nu}\mathcal{L}
 \end{align}
@@ -2427,8 +2427,9 @@ Después de cancelar el término  $\partial_{\mu}\psi$ en ambos lados, y factori
 \end{align}
 Esta expresión es completamente general y será usada posteriormente en el contexto de grupos más complicados. En el caso particular de un Grupo Abeliano  $U(1)$, tenemos simplemente que
 \begin{align}
-  A'_{\mu}=&A_{\mu}-\frac{i}{q}\left[ iq\partial_{\mu}\theta(x) \right]UU^{*}\nonumber\\
- A_{\mu}\to  A'_{\mu}=&A_{\mu}+\partial_{\mu}\theta(x)\,.
+  A'_{\mu}=&A_{\mu}-\frac{i}{q} \operatorname{e}^{iq\theta(x)}\left( \partial_{\mu} \operatorname{e}^{-iq\theta(x)} \right)\nonumber\\
+=&A_{\mu}-\frac{i}{q}\left[ -iq\partial_{\mu}\theta(x) \right]\operatorname{e}^{iq\theta(x)} \operatorname{e}^{-iq\theta(x)}\nonumber\\
+ A_{\mu}\to  A'_{\mu}=&A_{\mu}-\partial_{\mu}\theta(x)\,.
 \end{align}
 
 Definimos la \emph{invarianza gauge local} como una forma arbitraria de escoger el factor de fase complejo de un campo cargado\footnote{como el electrón descrito por la ecuación usual de  Scrödinger.} en todos los puntos del espacio tiempo.
@@ -2852,14 +2853,14 @@ Aunque la interpretación en mecánica cuántica de la ecuación de momentum-ene
 
 \section{Invarianza de fase local para campo escalar complejo}
 
-Invarianza de fase local del campo escalar complejo, $\mathcal{D}_{\mu}=\partial_{\mu}+iq A_{\mu}$
-
+Aplicando el principio gauge local al Lagrangiano para un campo escalar complejo presentado en la ecuación~\ref{eq:cef} con $\lambda=0$, debemos reemplazar la derivada normal $\partial_{\mu}$, por la derivada covariante $\mathcal{D}_{\mu}=\partial_{\mu}+iq A_{\mu}$ y adicionar todos los términos invariantes asociados al campo $A_\mu$, de modo que
 \begin{align}
+\label{eq:lcv}
   \mathcal{L}=& \left( \mathcal{D}_{\mu} \phi \right)^{*} \mathcal{D}^{\mu}\phi -m^2 \phi^{*}\phi-\frac{1}{4}F^{\mu\nu}F_{\mu\nu} \nonumber\\
              =&\left( \partial_{\mu}\phi^{*}-iq A_{\mu} \phi^{*} \right)\left( \partial^{\mu}\phi+iq A^{\mu} \phi \right) -m^2 \phi^{*}\phi-\frac{1}{4}F^{\mu\nu}F_{\mu\nu} \nonumber\\
-              =&\partial_{\mu}\phi^{*}\partial^{\mu}\phi+iq \left(\phi\partial_{\mu}\phi^{*} -\phi^{*}\partial_{\mu}\phi \right) A^{\mu} +q^2 \phi^{*}\phi A_{\mu} A^{\mu} -m^2 \phi^{*}\phi-\frac{1}{4}F^{\mu\nu}F_{\mu\nu} 
+              =&\partial_{\mu}\phi^{*}\partial^{\mu}\phi-m^2 \phi^{*}\phi+iq \left(\phi\partial_{\mu}\phi^{*} -\phi^{*}\partial_{\mu}\phi \right) A^{\mu} +q^2 \phi^{*}\phi A_{\mu} A^{\mu} -\frac{1}{4}F^{\mu\nu}F_{\mu\nu} 
 \end{align}
-
+De modo que
 \begin{align}
   \partial_{\mu} \left[ \frac{\partial \mathcal{L}}{\partial \left( \partial_{\mu}\phi^{*} \right)} \right]-\frac{\partial \mathcal{L}}{\partial \phi^{*}}
 =&\partial_{\mu} \left( \partial^{\mu}+iq A^{\mu} \right)\phi -\left(-iq \partial_{\mu}\phi A^{\mu} +q^2 A_{\mu}A^{\mu}\phi-m^{2}\phi  \right) \nonumber\\
@@ -2884,7 +2885,7 @@ Sumando las dos expresiones, todos los términos con excepción de los primeros 
 \end{align}
 donde
 \begin{align}
-  j^{\upsilon}=-iq \left[  \phi^{*}\mathcal{D}^{\mu}\phi -  \left(  \mathcal{D}^{\mu}\phi \right) \phi^{*}\right]\,,
+  j^{\upsilon}=-iq \left[  \phi^{*}\mathcal{D}^{\mu}\phi -  \left(  \mathcal{D}^{\mu}\phi \right)^{*} \phi\right]\,,
 \end{align}
 que corresponde a la carga eléctrica. Note que dicho resultado se puede obtener más directamente usando la ec.~\eqref{eq:tnoeth2}.
 
@@ -2903,96 +2904,98 @@ Por lo tanto la ecuación de movimiento asociada al campo $\phi^{*}$
 \end{align}
 Que corresponde a la ecuación de Klein-Gordon pero con la derivada normal reemplazada por la derivada covariante.
 
+Partiendo de nuevo de \ref{eq:lcv}, es interesenta notar que
+
 %\appendix
-\section{Principio de M\'\i nima Acci\'on para $\mathcal{L}$}
-\label{sec:principio-de-minima-call}
-Consideremos primero el problema de hallar la condiciones extremal sobre el funcional de acción
+% \section{Principio de M\'\i nima Acci\'on para $\mathcal{L}$}
+% \label{sec:principio-de-minima-call}
+% Consideremos primero el problema de hallar la condiciones extremal sobre el funcional de acción
 
 
-Definamos
-\begin{equation}
-  \label{eq:dmu}
-  \partial_\mu=\frac{\partial}{\partial x^\mu},
-  \end{equation}
-En tres dimensiones, la acci\'on de la ec.~\eqref{eq:Scall}, queda
-\begin{equation}
-  \label{eq:Scall3d}
-  S[\phi,\partial_\mu\phi]=\int_{R}d^4x\mathcal{L}(\phi,\partial_\mu\phi)
-\end{equation}
-donde $d^4x=d t\,d x\, d y\,d z$.  El principio de Hamilton para el campo $\phi$ requiere que la acción sea extremal (es decir que $\delta S=0$, donde
-\begin{align}
-  \delta S=S'-S\,,
-\end{align}
-es la variación funcional de primer orden en $S$ para variaciones arbitrarias del campo $\phi$ que se hagan cero en la frontera.
+% Definamos
+% \begin{equation}
+%   \label{eq:dmu}
+%   \partial_\mu=\frac{\partial}{\partial x^\mu},
+%   \end{equation}
+% En tres dimensiones, la acci\'on de la ec.~\eqref{eq:Scall}, queda
+% \begin{equation}
+%   \label{eq:Scall3d}
+%   S[\phi,\partial_\mu\phi]=\int_{R}d^4x\mathcal{L}(\phi,\partial_\mu\phi)
+% \end{equation}
+% donde $d^4x=d t\,d x\, d y\,d z$.  El principio de Hamilton para el campo $\phi$ requiere que la acción sea extremal (es decir que $\delta S=0$, donde
+% \begin{align}
+%   \delta S=S'-S\,,
+% \end{align}
+% es la variación funcional de primer orden en $S$ para variaciones arbitrarias del campo $\phi$ que se hagan cero en la frontera.
 
-Considere una variaci\'on s\'olo de
-los campos, tal que ($x=x^\mu)$
-\begin{equation}
-  \label{eq:deltaphi}
-  \delta\phi(x)=\phi'(x)-\phi(x)
-\end{equation}
-Con la condición adicional de que la variación del campo sea cero en la frontera, como ocurre con el campo electromagnéticos en el infinito.
+% Considere una variaci\'on s\'olo de
+% los campos, tal que ($x=x^\mu)$
+% \begin{equation}
+%   \label{eq:deltaphi}
+%   \delta\phi(x)=\phi'(x)-\phi(x)
+% \end{equation}
+% Con la condición adicional de que la variación del campo sea cero en la frontera, como ocurre con el campo electromagnéticos en el infinito.
 
-De otro lado, con $\delta x=x'-x$, la expansi\'on de Taylor para $f(x+\delta x)$ es
-\begin{equation}
-  f(x+\delta x)=f(x)+\frac{\partial f}{\partial x}\delta x+\cdots 
-\end{equation}
-Para $\mathcal{L}$, tenemos de la ec.~\eqref{eq:deltaphi}
-\begin{align}
-  \mathcal{L}(\phi',\partial_\mu\phi')&=\mathcal{L}(\phi+\delta\phi,\partial_\mu\phi+\partial_\mu(\delta\phi))\nonumber\\
-  &=\mathcal{L}+\frac{\partial\mathcal{L}}{\partial\phi}\delta\phi+\frac{\partial\mathcal{L}}{\partial(\partial_\mu\phi)}\partial_\mu(\delta\phi)
-\end{align}
-Entonces, de imponer que $\delta S=0$, tenemos que para una transformación interna
-\begin{align}
-  \delta S&=S'-S=\int_{R}d^4x\,\mathcal{L}(\phi',\partial_\mu\phi')-\int_{R}d^4x\,\mathcal{L}(\phi,\partial_\mu\phi)\nonumber\\
-&=\int_{R}d^4x\,
-\left[
-\frac{\partial\mathcal{L}}{\partial\phi}\delta\phi+\frac{\partial\mathcal{L}}{\partial(\partial_\mu\phi)}\partial_\mu(\delta\phi)
-\right]\nonumber\\
- &=\int_{R}d^4x\,
-  \left\{ 
-    \frac{\partial\mathcal{L}}{\partial\phi}-\left[\partial_\mu\left(
-      \frac{\partial\mathcal{L}}{\partial(\partial_\mu\phi)}
-    \right)\right]
-  \right\}\delta\phi+\int_{R}d^4x\,
-    \partial_\mu\left[
-      \frac{\partial\mathcal{L}}{\partial(\partial_\mu\phi)}\delta\phi
-    \right]\nonumber\\
-\label{eq:1}
-\delta S&=\int_{R}d^4x\,
-  \left\{ 
-    \frac{\partial\mathcal{L}}{\partial\phi}-    
-    \left[\partial_\mu\left(
-      \frac{\partial\mathcal{L}}{\partial(\partial_\mu\phi)}
-    \right)\right]
-  \right\}\delta\phi+\int_{\sigma}\left[
-      \frac{\partial\mathcal{L}}{\partial(\partial_\mu\phi)}\delta\phi
-    \right]\,d\sigma_\mu=0.
-\end{align}
-Donde hemos aplicado el Teorema de Gauss
-\begin{equation}
-\int_V\boldsymbol{\nabla}\cdot\mathbf{A}\,d^3x=
- \int_S\mathbf{A}\cdot d\mathbf{S}\,
-\end{equation}
-generalizado a cuatro dimensiones. De la condición de frontera, tenemos que la variaci\'on de $\delta\phi$ es cero sobre la hipersuperficie $\sigma$, de modo que
-\begin{equation}
-  \int_{R}d^4x\,
-  \left\{ 
-    \frac{\partial\mathcal{L}}{\partial\phi}-
-   \left[\partial_\mu\left(
-      \frac{\partial\mathcal{L}}{\partial(\partial_\mu\phi)}
-    \right)\right]
-  \right\}\delta\phi=0.
-\end{equation}
-Como $\delta\phi$ es cualquier posible variaci\'on al \emph{interior} de la  hipersuperficie, el integrando debe anularse y resultan las ecuaciones de Euler-Lagrange:
-\begin{equation}
-\label{eq:eelcallfmuold}
- \partial_\mu
-  \left[
-    \frac{\partial\mathcal{L}}{\partial
-      (\partial_\mu\phi)}
-  \right]-\frac{\partial\mathcal{L}}{\partial\phi}=0.
-\end{equation}
+% De otro lado, con $\delta x=x'-x$, la expansi\'on de Taylor para $f(x+\delta x)$ es
+% \begin{equation}
+%   f(x+\delta x)=f(x)+\frac{\partial f}{\partial x}\delta x+\cdots 
+% \end{equation}
+% Para $\mathcal{L}$, tenemos de la ec.~\eqref{eq:deltaphi}
+% \begin{align}
+%   \mathcal{L}(\phi',\partial_\mu\phi')&=\mathcal{L}(\phi+\delta\phi,\partial_\mu\phi+\partial_\mu(\delta\phi))\nonumber\\
+%   &=\mathcal{L}+\frac{\partial\mathcal{L}}{\partial\phi}\delta\phi+\frac{\partial\mathcal{L}}{\partial(\partial_\mu\phi)}\partial_\mu(\delta\phi)
+% \end{align}
+% Entonces, de imponer que $\delta S=0$, tenemos que para una transformación interna
+% \begin{align}
+%   \delta S&=S'-S=\int_{R}d^4x\,\mathcal{L}(\phi',\partial_\mu\phi')-\int_{R}d^4x\,\mathcal{L}(\phi,\partial_\mu\phi)\nonumber\\
+% &=\int_{R}d^4x\,
+% \left[
+% \frac{\partial\mathcal{L}}{\partial\phi}\delta\phi+\frac{\partial\mathcal{L}}{\partial(\partial_\mu\phi)}\partial_\mu(\delta\phi)
+% \right]\nonumber\\
+%  &=\int_{R}d^4x\,
+%   \left\{ 
+%     \frac{\partial\mathcal{L}}{\partial\phi}-\left[\partial_\mu\left(
+%       \frac{\partial\mathcal{L}}{\partial(\partial_\mu\phi)}
+%     \right)\right]
+%   \right\}\delta\phi+\int_{R}d^4x\,
+%     \partial_\mu\left[
+%       \frac{\partial\mathcal{L}}{\partial(\partial_\mu\phi)}\delta\phi
+%     \right]\nonumber\\
+% \label{eq:1}
+% \delta S&=\int_{R}d^4x\,
+%   \left\{ 
+%     \frac{\partial\mathcal{L}}{\partial\phi}-    
+%     \left[\partial_\mu\left(
+%       \frac{\partial\mathcal{L}}{\partial(\partial_\mu\phi)}
+%     \right)\right]
+%   \right\}\delta\phi+\int_{\sigma}\left[
+%       \frac{\partial\mathcal{L}}{\partial(\partial_\mu\phi)}\delta\phi
+%     \right]\,d\sigma_\mu=0.
+% \end{align}
+% Donde hemos aplicado el Teorema de Gauss
+% \begin{equation}
+% \int_V\boldsymbol{\nabla}\cdot\mathbf{A}\,d^3x=
+%  \int_S\mathbf{A}\cdot d\mathbf{S}\,
+% \end{equation}
+% generalizado a cuatro dimensiones. De la condición de frontera, tenemos que la variaci\'on de $\delta\phi$ es cero sobre la hipersuperficie $\sigma$, de modo que
+% \begin{equation}
+%   \int_{R}d^4x\,
+%   \left\{ 
+%     \frac{\partial\mathcal{L}}{\partial\phi}-
+%    \left[\partial_\mu\left(
+%       \frac{\partial\mathcal{L}}{\partial(\partial_\mu\phi)}
+%     \right)\right]
+%   \right\}\delta\phi=0.
+% \end{equation}
+% Como $\delta\phi$ es cualquier posible variaci\'on al \emph{interior} de la  hipersuperficie, el integrando debe anularse y resultan las ecuaciones de Euler-Lagrange:
+% \begin{equation}
+% \label{eq:eelcallfmuold}
+%  \partial_\mu
+%   \left[
+%     \frac{\partial\mathcal{L}}{\partial
+%       (\partial_\mu\phi)}
+%   \right]-\frac{\partial\mathcal{L}}{\partial\phi}=0.
+% \end{equation}
 % La densidad Lagrangiana
 % \begin{align}
 %   \mathcal{L}'=\mathcal{L}+\partial_\mu(\eta^{\mu}(x))
@@ -3005,80 +3008,80 @@ Como $\delta\phi$ es cualquier posible variaci\'on al \emph{interior} de la  hip
 % \end{align}
 % para una hipersuperficie suficientemente grande. De modo que dos densidades lagrangianas que difieran solo en derivadas totales dan lugar a la misma Acci\'on.
 
-Usando el principio de m\'\i nima acci\'on en t\'erminos del campo $\phi$, tenemos que para la densidad Lagrangiana~\eqref{eq:call2}
-\begin{align}
-  \mathcal{L}=&\frac{1}{2}  \left[
-  \frac{1}{v^2}\left(\frac{\partial\phi}{\partial t}\right)^2-\left(\frac{\partial\phi}{\partial z}\right)^2
-\right],
-\end{align}
-las ecuaciones de Euler-Lagrange~\eqref{eq:eelcallfmu}
-\begin{align}
-  \partial_0\left[\frac{\partial\mathcal{L}}{\partial(\partial_0\phi)}\right]+
-\partial_3\left[\frac{\partial\mathcal{L}}{\partial(\partial_3\phi)}\right]
--\frac{\partial\mathcal{L}}{\partial\phi}=&0\nonumber\\
-  \frac{\partial}{\partial t}\left[\frac{\partial\mathcal{L}}{\partial(\partial\phi/\partial t)}\right]+
-\frac{\partial}{\partial z}\left[\frac{\partial\mathcal{L}}{\partial(\partial\phi/\partial z)}\right]
-=&0\nonumber\\
- \frac{1}{v^2}\frac{\partial}{\partial t}\left[\frac{\partial\phi}{\partial t}\right]
--\frac{\partial}{\partial z}\left[\frac{\partial\phi}{\partial z}\right]=&0\nonumber\\
- \frac{1}{v^2}\frac{\partial^2\phi}{\partial t^2}-\frac{\partial^2\phi}{\partial z^2}=&0\,,
-\end{align}
-que corresponde a la ec.~\eqref{eq:econda1}.
+% Usando el principio de m\'\i nima acci\'on en t\'erminos del campo $\phi$, tenemos que para la densidad Lagrangiana~\eqref{eq:call2}
+% \begin{align}
+%   \mathcal{L}=&\frac{1}{2}  \left[
+%   \frac{1}{v^2}\left(\frac{\partial\phi}{\partial t}\right)^2-\left(\frac{\partial\phi}{\partial z}\right)^2
+% \right],
+% \end{align}
+% las ecuaciones de Euler-Lagrange~\eqref{eq:eelcallfmu}
+% \begin{align}
+%   \partial_0\left[\frac{\partial\mathcal{L}}{\partial(\partial_0\phi)}\right]+
+% \partial_3\left[\frac{\partial\mathcal{L}}{\partial(\partial_3\phi)}\right]
+% -\frac{\partial\mathcal{L}}{\partial\phi}=&0\nonumber\\
+%   \frac{\partial}{\partial t}\left[\frac{\partial\mathcal{L}}{\partial(\partial\phi/\partial t)}\right]+
+% \frac{\partial}{\partial z}\left[\frac{\partial\mathcal{L}}{\partial(\partial\phi/\partial z)}\right]
+% =&0\nonumber\\
+%  \frac{1}{v^2}\frac{\partial}{\partial t}\left[\frac{\partial\phi}{\partial t}\right]
+% -\frac{\partial}{\partial z}\left[\frac{\partial\phi}{\partial z}\right]=&0\nonumber\\
+%  \frac{1}{v^2}\frac{\partial^2\phi}{\partial t^2}-\frac{\partial^2\phi}{\partial z^2}=&0\,,
+% \end{align}
+% que corresponde a la ec.~\eqref{eq:econda1}.
 
-Generalizando a tres dimensiones vemos que la ecuaci\'on para una onda propagandose a una velocidad $v$, eq.~\eqref{eq:econda3},  
-\begin{equation}
-     \frac{1}{v^2}\frac{\partial^2\phi}{\partial t^2}-\nabla^2\phi=0\,,
-\end{equation}
-proviene de una densidad Lagrangiana (hasta derivadas totales)
-\begin{align}
-    \label{eq:ls3d}
-    \mathcal{L}=&\frac{1}{2}\left[
-  \left(
-\frac{1}{v^2}\frac{\partial\phi}{\partial t}
-  \right)^2-\boldsymbol{\nabla}\phi\cdot\boldsymbol{\nabla}\phi \right]\nonumber\\
-    =&\frac{1}{2}\left[
-      \frac{1}{v^2}{\partial_0\phi}\,{\partial_0\phi}-\sum_i{\partial_i\phi}\,{\partial_i\phi}
-   \right]\,.
-\end{align}
-Definiendo $x^0=vt$, podemos escribir la densidad Lagrangiana como
-\begin{align}
-   \mathcal{L}=&\frac{1}{2}\sum_{\mu,\nu}g_{\mu\nu}\frac{\partial\phi}{\partial x^{\mu}}\frac{\partial\phi}{\partial x^{\nu}}
-\end{align}
-donde
-\begin{align}
-  g_{\mu\nu}=
-  \begin{cases}
-    1, & \mu=0,\nu=0\\
-    -1, & \mu=i,\nu=i\\
-    0, & \mu\ne\nu\\
-  \end{cases}
-\end{align}
-Que corresponde a un nuevo producto escalar entre $\partial\phi/\partial x^{\mu}$ y $\partial\phi/\partial x^{\nu}$ con la métrica $g_{\mu\nu}$. En general si tenemos dos cuadrivectores \emph{covariantes} (en términos de superíndices)
-\begin{align}
-\label{eq:covariante}
-  A^{\mu}\to &\left(A^0,A^1,A^2,A^3  \right) & B^{\mu}\to &\left(B^0,B^1,B^2,B^3  \right)
-\end{align}
-su producto escalar bajo la métrica $g^{\mu\nu}$ es
-\begin{align}
-  A\cdot B\equiv &A^0 B^0-A^1B^1-A^2B^2-A^3B^3 \nonumber\\
- =&\sum_{\mu\nu} g_{\mu\nu}A^{\mu} B^{\nu}\,.
-\end{align}
-Si definimos el cuadrivector \emph{contravariante} (en términos de subíndices)
-\begin{align}
-  B_{\mu}\to \left( B_0,B_1,B_2,B_3 \right)\,,
-\end{align}
-como
-\begin{align}
-  \label{eq:contravariante}
-  B_{\mu}=&\sum_{\nu} g_{\mu\nu}B^{\nu}\nonumber\\
-  B_{\mu}\to& \left(B^0,-B^1,-B^2,-B^3\right)\,,
-\end{align}
-entonces, podemos escribir el nuevo producto escalar como
-\begin{align}
-  A\cdot B=&\sum_{\mu} A^{\mu}\left( \sum_{\nu} g_{\mu\nu} B^{\nu} \right)\nonumber\\
-\sum_{\mu} A^{\mu}B_{\mu}\,.
-\end{align}
-El producto definido anteriormente es invariante de Lorentz si $v$ es independiente del sistema de referencia inercial.
+% Generalizando a tres dimensiones vemos que la ecuaci\'on para una onda propagandose a una velocidad $v$, eq.~\eqref{eq:econda3},  
+% \begin{equation}
+%      \frac{1}{v^2}\frac{\partial^2\phi}{\partial t^2}-\nabla^2\phi=0\,,
+% \end{equation}
+% proviene de una densidad Lagrangiana (hasta derivadas totales)
+% \begin{align}
+%     \label{eq:ls3d}
+%     \mathcal{L}=&\frac{1}{2}\left[
+%   \left(
+% \frac{1}{v^2}\frac{\partial\phi}{\partial t}
+%   \right)^2-\boldsymbol{\nabla}\phi\cdot\boldsymbol{\nabla}\phi \right]\nonumber\\
+%     =&\frac{1}{2}\left[
+%       \frac{1}{v^2}{\partial_0\phi}\,{\partial_0\phi}-\sum_i{\partial_i\phi}\,{\partial_i\phi}
+%    \right]\,.
+% \end{align}
+% Definiendo $x^0=vt$, podemos escribir la densidad Lagrangiana como
+% \begin{align}
+%    \mathcal{L}=&\frac{1}{2}\sum_{\mu,\nu}g_{\mu\nu}\frac{\partial\phi}{\partial x^{\mu}}\frac{\partial\phi}{\partial x^{\nu}}
+% \end{align}
+% donde
+% \begin{align}
+%   g_{\mu\nu}=
+%   \begin{cases}
+%     1, & \mu=0,\nu=0\\
+%     -1, & \mu=i,\nu=i\\
+%     0, & \mu\ne\nu\\
+%   \end{cases}
+% \end{align}
+% Que corresponde a un nuevo producto escalar entre $\partial\phi/\partial x^{\mu}$ y $\partial\phi/\partial x^{\nu}$ con la métrica $g_{\mu\nu}$. En general si tenemos dos cuadrivectores \emph{covariantes} (en términos de superíndices)
+% \begin{align}
+% \label{eq:covariante}
+%   A^{\mu}\to &\left(A^0,A^1,A^2,A^3  \right) & B^{\mu}\to &\left(B^0,B^1,B^2,B^3  \right)
+% \end{align}
+% su producto escalar bajo la métrica $g^{\mu\nu}$ es
+% \begin{align}
+%   A\cdot B\equiv &A^0 B^0-A^1B^1-A^2B^2-A^3B^3 \nonumber\\
+%  =&\sum_{\mu\nu} g_{\mu\nu}A^{\mu} B^{\nu}\,.
+% \end{align}
+% Si definimos el cuadrivector \emph{contravariante} (en términos de subíndices)
+% \begin{align}
+%   B_{\mu}\to \left( B_0,B_1,B_2,B_3 \right)\,,
+% \end{align}
+% como
+% \begin{align}
+%   \label{eq:contravariante}
+%   B_{\mu}=&\sum_{\nu} g_{\mu\nu}B^{\nu}\nonumber\\
+%   B_{\mu}\to& \left(B^0,-B^1,-B^2,-B^3\right)\,,
+% \end{align}
+% entonces, podemos escribir el nuevo producto escalar como
+% \begin{align}
+%   A\cdot B=&\sum_{\mu} A^{\mu}\left( \sum_{\nu} g_{\mu\nu} B^{\nu} \right)\nonumber\\
+% \sum_{\mu} A^{\mu}B_{\mu}\,.
+% \end{align}
+% El producto definido anteriormente es invariante de Lorentz si $v$ es independiente del sistema de referencia inercial.
  
 
 
