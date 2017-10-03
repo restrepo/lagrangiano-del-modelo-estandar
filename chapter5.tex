@@ -1,6 +1,6 @@
 \chapter{Principio gauge local}
 
-Hemos introducido ya todos los ingredientes necesarios para entender a nivel cualitativo el modelo estándar de las partículas elementales. Para permitir simetrías internas más generales que el simple cambio de fase es necesario usar siempre el hermítico conjugado, en lugar de sólo el conjugado. Con esta notación un conjuto de $f$ fermiones (izquierdos) que conserván localmente $n$ cargas, deben interaccionar a través de $a=n^2-1$ bosones gauge. Si además alguno de ellos es masivo, debemos introducir por lo menos un campo escalar. Un Lagrangiano para tal sistema debe tener la forma genérica
+Hemos introducido ya todos los ingredientes necesarios para entender a nivel cualitativo el modelo estándar de las partículas elementales. Para permitir simetrías internas más generales que el simple cambio de fase es necesario usar siempre el hermítico conjugado, en lugar de sólo el conjugado. Con esta notación un conjuto de $f$ fermiones (izquierdos) que conservan localmente $n$ cargas, deben interaccionar a través de $a=n^2-1$ bosones gauge. Si además alguno de ellos es masivo, debemos introducir por lo menos un campo escalar. Un Lagrangiano para tal sistema debe tener la forma genérica
 \begin{align}
   \mathcal{L}=&i \psi^{\dagger}_f \overline{\sigma}^{\mu}\mathcal{D}_{\mu} \psi^f-\frac{1}{4}F_{\mu\nu}^{a} F^{\mu\nu}_a \nonumber\\
               &+\left( \mathcal{D}_{\mu}\phi \right)^{\dagger} \mathcal{D}^{\mu}\phi-\mu^2 \phi^{\dagger} \phi-\lambda \left(\phi^{\dagger} \phi  \right) \nonumber\\
@@ -11,7 +11,7 @@ A continuación veremos cual es la forma explícita de la derivada covariante pa
 \section{Electrodinámica Cuántica}
 \label{sec:electr-cuant}
 
-Para hacer el Lagrangiano en ec.~\eqref{eq:115qft} invariante gauge local bajo $U(1)_Q$, procedemos de la forma usual. El campo transforma como
+Para hacer el Lagrangiano en ec.~\eqref{eq:115qftnew} invariante gauge local bajo $U(1)_Q$, procedemos de la forma usual. El campo transforma como\footnote{A partir de ahora se usará $\psi$ (minúscula) para denotar un fermión de Dirac.}
 \begin{align}
   \psi\to\psi'=\operatorname{e}^{ieQ\, \theta(x)}\psi\nonumber\\
   \bar{\psi}\to\bar{\psi}'=\bar{\psi}\operatorname{e}^{-ieQ\,\theta(x)}\,,
@@ -71,19 +71,33 @@ Que corresponde a la ecuación de Dirac en presencia del campo electromagnético
   \partial_\mu F^{\mu\nu}&=-eQ\bar{\psi}\gamma^\nu\psi
 \end{align}
 Definimos entonces la corriente electromagnética generada por el fermión como
-\begin{equation}
+\begin{align}
   \label{eq:222qft}
-  j^\mu=-eQ\bar{\psi}\gamma^\mu\psi.
-\end{equation}
+  j^\mu=&-e\bar{\psi}\gamma^\mu Q\psi \nonumber\\
+       =&e\bar{\psi}\gamma^\mu\psi \,,
+\end{align}
+donde hemos interpretado a $Q$ como el operador de carga eléctrica con autovalor $-1$ para el electrón:
+\begin{align}
+  Q\psi =-1\psi\,.
+\end{align}
+
 De nuevo, la aparición de la interacción electromagnética es una consecuencia de la invarianza gauge local. 
 
-El cálculo directo de la  corriente 
+El cálculo directo de la  corriente, de acuerdo al segundo teorema de Noether, se reduce a calcular 
 \begin{align}
-  J^\mu&=\frac{\partial\mathcal{L}}{\partial\left(\partial_\mu\psi\right)}\delta\psi+\delta\bar{\psi}\frac{\partial\mathcal{L}}{\partial\left(\partial_\mu\bar{\psi}\right)}\nonumber\\
-  &= i\overline{\psi}\gamma^\mu(-i \theta(x) Q ) \psi
-  &= \theta(x) Q\overline{\psi}\gamma^\mu \psi\,,
+  j^\mu&=\frac{\partial\mathcal{L}}{\partial\left(\partial_\mu\psi\right)}a_1+a_2\frac{\partial\mathcal{L}}{\partial\left(\partial_\mu\bar{\psi}\right)} \nonumber\\
+  &=\frac{\partial\mathcal{L}}{\partial\left(\partial_\mu\psi\right)}a_1\,.
 \end{align}
-y para la ecuación de Dirac, a diferencia de la ecuación de Schrödinger, la corriente de probabilidad tiene la misma forma que la corriente electromagnética.
+Como
+\begin{align}
+  a_1=ieQ\psi=-ie\psi\,,
+\end{align}
+entonces
+\begin{align}
+  j^{\mu}=&i \overline{\psi}\gamma^{\mu} \left( -i e \psi \right) \nonumber\\
+        =&e \overline{\psi}\gamma^{\mu} \psi\,.
+\end{align}
+ que corresponde a la cuadri-corriente electromágnética conservada localmente de la electrodinámica cuántica.
 
 \begin{frame}[fragile,allowframebreaks]
 De esta manera podemos reescribir el Lagrangiano en términos de un Lagrangiano libre y otro de interacción
