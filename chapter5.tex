@@ -11,6 +11,7 @@ A continuación veremos cual es la forma explícita de la derivada covariante pa
 \section{Electrodinámica Cuántica}
 \label{sec:electr-cuant}
 
+\begin{frame}[fragile,allowframebreaks]
 Para hacer el Lagrangiano en ec.~\eqref{eq:115qftnew} invariante gauge local bajo $U(1)_Q$, procedemos de la forma usual. El campo transforma como\footnote{A partir de ahora se usará $\psi$ (minúscula) para denotar un fermión de Dirac.}
 \begin{align}
   \psi\to\psi'=\operatorname{e}^{ieQ\, \theta(x)}\psi\nonumber\\
@@ -38,7 +39,124 @@ En efecto
   \mathcal{D}_{\mu}\psi\to \left( \mathcal{D}_{\mu}\psi \right)'=&\mathcal{D}_{\mu}'\psi' \nonumber\\
 =&\operatorname{e}^{ieQ\, \theta(x)}\mathcal{D}_{\mu}\psi\,,
 \end{align}
-como corresponde a una derivada covariante.
+como corresponde a una derivada covariante. Para mayor generalidad de los resultados, definimos un elemento de $\operatorname{U}(1)_Q$ como
+\begin{align}
+  U(\theta)=\operatorname{e}^{ieQ\, \theta(x)}\,.
+\end{align}
+
+Repetimos a continuación el análisis hecho en la Sección~\ref{sec:dv} pero haciendo referencia sólo a los resultados. Para los detalles se recomienda ir a dicha Sección. De este modo, la derivada covariante se puede definir como
+\begin{align}
+     \mathcal{D}_\mu \psi\to\left(\mathcal{D}_\mu \psi\right)'=&U\left(\mathcal{D}_\mu \psi\right)\,.
+\end{align}
+
+Para encontrar las propiedades de la derivada covariante en este contexto general, necesitamos evaluar cual es la transformación de la derivada covariante como tal, es decir
+\begin{align}
+ \left(\mathcal{D}_\mu \psi\right)'=     \mathcal{D}'_\mu \psi'=&U\left(\mathcal{D}_\mu \psi\right)\nonumber\\
+    \mathcal{D}'_\mu \left( U\psi \right)=&U\left(\mathcal{D}_\mu \psi\right)\,.
+\end{align}
+
+Si mantenemos en mente que  $\mathcal{D}'_\mu U$ es todavía un operador, tenemos que
+\begin{align}
+    \mathcal{D}'_\mu U=&U\mathcal{D}_\mu \nonumber\\
+    \mathcal{D}'_\mu =&U\mathcal{D}_\mu U^{-1} \,.
+\end{align}
+Es decir, para comprobar esta identidad, debemos aplicar el nuevo operador sobre algún campo. Para mantener la generalidad del resultado evitaremos usar la propiedad conmutativa del algún grupo particular. Al aplicar la derivada covariante en un campo, en interpretandóla como un operador, tenemos que
+\begin{align*}
+    \mathcal{D}'_\mu \psi =&U\mathcal{D}_\mu \left(U^{-1}\psi  \right)\,,
+\end{align*}
+da lugar a la propiedad
+\begin{align}
+    \partial_{\mu}\psi+iq A'_{\mu} \psi =&\partial_{\mu}\psi+U\left( \partial_{\mu}U^{-1} \right)\psi+iq  U A_{\mu}U^{-1}\psi\,.
+\end{align}
+Después de cancelar el término  $\partial_{\mu}\psi$ en ambos lados, y factorizando el campo  $\psi$, tenemos que
+\begin{align}
+       A_{\mu}\to A'_{\mu} =&U A_{\mu}U^{-1}-\frac{i}{q}U\left( \partial_{\mu}U^{-1} \right)\,.
+\end{align}
+Esta expresión es completamente general y será usada posteriormente en el contexto de grupos más complicados. En el caso particular de un Grupo Abeliano  $U(1)$, tenemos simplemente que
+\begin{align}
+ A_{\mu}\to  A'_{\mu}=&A_{\mu}-\partial_{\mu}\theta(x)\,.
+\end{align}
+
+El Lagrangiano de Dirac invariante gauge local se obtiene reemplazando la derivada normal por la derivada covariante:
+\begin{align}
+  \mathcal{L}=&\overline{\psi}\left(i\gamma^\mu\mathcal{D}_\mu-m\right)\psi+\mathcal{L}\left( \partial_{\mu}A_{\nu}\right)\nonumber\\
+=&\bar{\psi}\left[i\gamma^\mu\left(\partial_\mu-ieQA_\mu\right)-m\right]\psi +\mathcal{L}\left( \partial_{\mu}A_{\nu}\right).
+\end{align}
+Retomando los resultados para las corrientes conservadas de la Sección~\ref{ref:cc}, aplicamos el segundo teorema de Noether 
+\begin{align}
+\label{eq:dpa}
+  \phi_{1}:& \psi\,,\qquad a_{1}=ie Q \psi \,,\qquad b_1=0\nonumber\\
+  \phi_{2}:& \psi^{*}\,,\qquad a_{2}=-ie Q\psi^{*}\,,\qquad b_2=0 \nonumber\\
+  \phi_{3}:& A^{\mu}\,,\qquad a_{3}=0\,,\qquad b_2=-\delta^{\mu}_{\nu}\,,
+\end{align}
+tenemos que para los campos $\psi$ y $\psi^{*}$, asumiendo que el campo $A^{\mu}$ satisface las ecuaciones de Euler-Lagrange, tenemos que
+\begin{align}
+  \partial_{\mu}j^{\mu}=0\,,
+\end{align}
+donde
+\begin{align}
+  j^{\mu}=\sum_i\frac{\partial \mathcal{L}}{\partial\left(\partial_{\mu} \psi \right)}a_i\,,
+\end{align}
+El cálculo directo de la  corriente, de acuerdo al segundo teorema de Noether, se reduce a calcular 
+\begin{align}
+  j^\mu&=\frac{\partial\mathcal{L}}{\partial\left(\partial_\mu\psi\right)}a_1+a_2\frac{\partial\mathcal{L}}{\partial\left(\partial_\mu\bar{\psi}\right)} \nonumber\\
+  &=\frac{\partial\mathcal{L}}{\partial\left(\partial_\mu\psi\right)}a_1\,.
+\end{align}
+Usando el $a_1$ de la ec.~\eqref{eq:dpa}
+resulta en
+\begin{align}
+  j^{\mu}=-e\overline{\psi}\gamma^{\mu} Q \psi\,,
+\end{align}
+que corresponde a la cuadri-corriente electromágnética conservada localmente de la electrodinámica cuántica.
+
+
+
+Tenemos además que si aplicamos el segundo teorema de Noether al campo de radiación
+\begin{align}
+  0=&\partial_{\mu} \left( \mathcal{E}_3 b^{\mu}_3 \right),
+\end{align}
+donde $\mathcal{E}_3$ es la ecuación de Euler-Lagrange para el campo $A_{\nu}$,
+entonces
+\begin{align}
+     0=&\partial_{\mu} \left( \mathcal{E}_3 \delta^{\mu}_\nu \right) \nonumber\\
+    0=&
+ \partial_{\mu} \partial_{\rho}\left[ \frac{\partial \mathcal{L}}{\partial \left(  \partial_{\rho} A_{\mu}\right)}  \right] - \partial_{\mu} \frac{\partial \mathcal{L}}{\partial A_{\mu}} \,.
+\end{align}
+Ya que
+\begin{align}
+  \frac{\partial \mathcal{L}}{\partial A_{\mu}}=e\overline{\psi}\gamma^{\mu} Q \psi\,,
+\end{align}
+el segundo témrino da lugar a la misma corriente conservada fermiónica
+\begin{align}
+  \partial_{\mu} \frac{\partial \mathcal{L}}{\partial A_{\mu}}=&
+\partial_{\mu} j^{\mu}=0\,,
+\end{align}
+Por consiguiente, la identidad resultante
+\begin{align}
+   \partial_{\mu} \partial_{\rho}\left[ \frac{ \mathcal{L}}{\partial \left(\partial  \partial_{\rho} A_{\mu}\right)}  \right]=0\,,
+\end{align}
+se puede interpretar como la necesidad de introducir el tensor antisimétrico
+\begin{align}
+  F_{\mu\nu}=\frac{\partial \mathcal{L}}{\partial \left(\partial  \partial_{\nu} A_{\mu}\right)}\,,
+\end{align}
+tal que
+\begin{align}
+  \partial_{\mu}\partial_{\nu}F^{\mu\nu}=0\,.
+\end{align}
+Para obtener una forma para $F_{\mu\nu}$, es conveniente imponer que la densidad Lagrangiana asociada sólo a las nuevas contribuciones de los campos $A_{\nu}$ y sus derivadas $\partial_{\mu}A_{\nu}$, denotada como $\mathcal{L}\left( \partial_{\mu}A_{\nu}\right)$.
+%en la ec.
+sea invariante gauge local bajo la transformación del campo $A_{\mu}$ en \eqref{eq:tfgl}. Esto implíca que $\mathcal{L}\left( \partial_{\mu}A_{\nu}\right)$  solo puede depender de las derivadas de las campos, y por consiguiente $F^{\mu\nu}$ debe ser una combinación antisimétrica de las derivadas de los campos
+\begin{align}
+  F_{\mu\nu}\equiv\partial_{\mu}A_{\nu}-\partial_{\nu}A_{\mu}\,.
+\end{align}
+Con esta definición, bajo la transformación  \eqref{eq:tfgl}
+\begin{align}
+  F_{\mu\nu}\to F_{\mu\nu}'=F_{\mu\nu}\,.
+\end{align}
+Por consiguiente, el único término posible que a la vez es invariante de Lorentz e invariante gauge local es
+\begin{align}
+ \mathcal{L}\left( \partial_{\mu}A_{\nu}\right)=-\frac{1}{4}F_{\mu\nu}F^{\mu\nu}\,.
+\end{align}
 
 
 El Lagrangiano correspondiente a la interacción de un fermión y el campo electromagnético corresponde al Lagrangiano de Dirac con la derivada normal reemplzada por la derivada covariante, y el correspondiente término cinético invariante gauge y de Lorentz asociado al nuevo campo introducido en la derivada covariante: $A^\mu$. Este campo es necesario para compensar los cambios en la energía y momentum que sufre el electrón como consecuencia de imponer la invarianza de la Acción bajo un cambio de fase local 
@@ -82,22 +200,7 @@ donde hemos interpretado a $Q$ como el operador de carga eléctrica con autovalo
 \end{align}
 
 De nuevo, la aparición de la interacción electromagnética es una consecuencia de la invarianza gauge local. 
-
-El cálculo directo de la  corriente, de acuerdo al segundo teorema de Noether, se reduce a calcular 
-\begin{align}
-  j^\mu&=\frac{\partial\mathcal{L}}{\partial\left(\partial_\mu\psi\right)}a_1+a_2\frac{\partial\mathcal{L}}{\partial\left(\partial_\mu\bar{\psi}\right)} \nonumber\\
-  &=\frac{\partial\mathcal{L}}{\partial\left(\partial_\mu\psi\right)}a_1\,.
-\end{align}
-Como
-\begin{align}
-  a_1=ieQ\psi=-ie\psi\,,
-\end{align}
-entonces
-\begin{align}
-  j^{\mu}=&i \overline{\psi}\gamma^{\mu} \left( -i e \psi \right) \nonumber\\
-        =&e \overline{\psi}\gamma^{\mu} \psi\,.
-\end{align}
- que corresponde a la cuadri-corriente electromágnética conservada localmente de la electrodinámica cuántica.
+\end{frame}
 
 \begin{frame}[fragile,allowframebreaks]
 De esta manera podemos reescribir el Lagrangiano en términos de un Lagrangiano libre y otro de interacción
@@ -349,8 +452,8 @@ Desarrollando a ambos lados
 \end{align}
 de modo que
 \begin{align}
-     {G'}^\mu U =&\frac{1}{i g_s}(\partial^\mu U)+ U{G}^\mu \nonumber\\
-   {G'}^\mu  =&-\frac{i}{g_s}(\partial^\mu U)U^{-1}+ U{G}^\mu U^{-1}\,.
+ G^{\mu}\to     {G'}^\mu U =&\frac{1}{i g_s}(\partial^\mu U)+ U{G}^\mu \nonumber\\
+ G^{\mu}\to  {G'}^\mu  =&-\frac{i}{g_s}(\partial^\mu U)U^{-1}+ U{G}^\mu U^{-1}\,.
 \end{align}
 \begin{frame}[fragile,allowframebreaks]
 Como $U$ es unitaria, la transformación de los campos gauge puede escribirse como
@@ -403,7 +506,7 @@ $G^\mu_a\to {G'}^\mu_a\approx G^\mu_a+\frac{1}{g_s}\partial^\mu\theta_a+{f_a}^{b
 % 2 Construya tensor con derivadas covariantes
 % 3 Encuentre como tranforma un tensor
 % 2 Demuestre que la derivada covariante de Gmunu transforma como Gmunu
-
+\begin{frame}[fragile,allowframebreaks]
 
 Note entonces que en el lenguage de los teoremas de Noether, el campo $G^{\mu}_{a}$ transforma como un campo material y un campo de radiación a la vez, es decir, su transformación depende tanto del parámetro como de la derivada del parámetro. Por consiguiente, es conveniente definir la derivada covariante del campo $G^{\nu}_{a}$. Para ello se debe introducir la representación adjunta de $\operatorname{SU}(N)$.
 
@@ -464,8 +567,10 @@ o en componentes
   \left[ \mathcal{D}_{\mu} \right]^{a}_{b} \left[ G_{\nu} \right]^b_c=& \left(\delta^a_b\partial_{\mu}-i g_s \left[ G_{\mu} \right]^{a}_{b} \right)\left[ G_{\nu} \right]^b_c \nonumber\\
     =& \left(\delta^a_b\partial_{\mu}-i g_s \left[  \widetilde{\Lambda}_c \right]^a_b G^c_{\mu} \right) \left[  \widetilde{\Lambda}_d \right]^b_cG_{\nu}^{d}\,.
 \end{align}
+\end{frame}
 Veamos como transforma la derivada covariante de la matriz de campos de gluones en la representación adjunta:
 \begin{align}
+\label{eq:tdcg}
  \mathcal{D}_{\mu} G_{\nu}\to   \left(   \mathcal{D}_{\mu} G_{\nu} \right)' =&
 \left[\boldsymbol{1}\partial_{\mu}-i g_s\left(U G_\mu U^{\dagger}-\frac{i}{g_s}\left(\partial_\mu U\right)U^\dagger  \right)   \right] \left(U G_\nu U^{\dagger}-\frac{i}{g_s}\left(\partial_\nu U\right)U^\dagger  \right) \nonumber\\
 =&
@@ -504,8 +609,9 @@ Ya que
  \partial_{\mu} \left[ U^{\dagger}
     \cancel{\partial_{\nu}\left( U U^{\dagger}\right)} -U^{\dagger}U \partial_{\nu} U^{\dagger}\right] \nonumber\\
 =&- \partial_{\mu} \left[ U^{\dagger} U \partial_{\nu} U^{\dagger}\right] \nonumber\\
-=&- \partial_{\mu}  \partial_{\nu} U^{\dagger} \nonumber\\
+=&- \partial_{\mu}  \partial_{\nu} U^{\dagger} \,,
 \end{align}
+\begin{frame}[fragile,allowframebreaks]
 entonces
 \begin{align}
 \label{eq:Dmup}
@@ -528,16 +634,20 @@ entonces,
 \begin{align}
    G_{\mu\nu}\to  G'_{\mu\nu}=\left( \mathcal{D}_{\mu} G_{\nu} \right)'-\left( \mathcal{D}_{\nu} G_{\mu}  \right)'\,,
 \end{align}
-usando \eqref{eq:Dmup} da lugar a
+y usando \eqref{eq:Dmup} da lugar a
 \begin{align}
 \label{eq:ugum}
     G_{\mu\nu}\to  G'_{\mu\nu}=&  U \left\{ \left( \mathcal{D}_{\mu}G_\nu   \right)
-    +  \left[ G_{\nu} \partial_{\mu}+G_{\mu}\partial_{\nu}+\frac{i}{g_s} \partial_{\mu}\partial_{\nu} \right]  %\nonumber\\
+    +  \left[ G_{\nu} \partial_{\mu}+G_{\mu}\partial_{\nu}+\frac{i}{g_s} \partial_{\mu}\partial_{\nu} \right]
   -   \left( \mathcal{D}_{\nu}G_\mu   \right)
     - \left[ G_{\mu} \partial_{\nu}-G_{\nu}\partial_{\mu}-\frac{i}{g_s} \partial_{\nu}\partial_{\mu} \right]  \right\} U^{\dagger} \nonumber\\
-=& U G_{\mu\nu} U^{-1}\,.
+=&  U \left[  \mathcal{D}_{\mu}G_\nu 
+    -   \mathcal{D}_{\nu}G_\mu
+  \right] U^{\dagger} \nonumber\\
+=& U G_{\mu\nu} U^{\dagger}\,.
 \end{align}
 Esto es justo lo que se espera de la transformación de un tensor para un grupo de simetría continuo. 
+
 
 En efecto, para el campo electromagnético invariante bajo $\operatorname{U}(1)_Q$, podemos considerar como campo fundamental al tensor de campo electromagnético, que bajo el Grupo de Lorentz transforma como
 \begin{align}
@@ -586,7 +696,23 @@ F_{\alpha\beta}F_{\sigma\rho} \nonumber\\
 
 Sin embargo, para el tensor electromagnético la transformación bajo $\operatorname{U}(1)_Q$ es trivial.
 
-Retornado a la definición la matriz de tensores de campos gauge para una teoría no Abeliana $\operatorname{SU}(3)$, tenemos entonces que
+Retornado a la definición la matriz de tensores de campos gauge para una teoría no Abeliana $\operatorname{SU}(3)$, 
+si imponemos que la derivada covariante de $G_{\mu\nu}$ transforme como $G_{\mu\nu}$\footnote{o asumiendo simplemente que la propiedas de la derivada covariante no dependen de la representación}
+\begin{align}
+  \mathcal{D}_{\mu}F^{\mu\nu} \to \left(  \mathcal{D}_{\mu}F^{\mu\nu}  \right)'=
+    U \mathcal{D}_{\mu}F^{\mu\nu} U^{\dagger}\,,
+\end{align}
+obtenemos que
+\begin{align}
+{\mathcal{D}}^\mu \to   {\mathcal{D}'}^\mu =U {\mathcal{D}}^\mu U^{\dagger}\,.
+\end{align}
+Como se hizo antes, de esta propiedad se puede obtener la transformación de la matriz de gluones pero ahora en la representación adjunta:
+\begin{align}
+ G^{\mu}\to  {G'}^\mu  =&-\frac{i}{g_s}(\partial^\mu U)U^{-1}+ U{G}^\mu U^{-1}\,.  
+\end{align}
+De modo que es consistente asumir que la transformación de la matriz de  campo $G^{\mu}$ es independiente de la representación, como se hizo explícitamente en~\eqref{eq:tdcg}.
+
+Tenemos entonces que %Obtener a partir del segundo teorema de Noether
 \begin{align}
   G_{\mu\nu}\equiv & \mathcal{D}_{\mu} G_{\nu}-\mathcal{D}_{\nu} G_{\mu} \nonumber\\
 =&\left( \mathbf{1}\partial_{\mu}-i g_s G_{\mu} \right)G_{\nu}-
@@ -680,6 +806,7 @@ Haciendo explícitamente la traza tenemos (suma sobre índices $a,b,c,\cdots$ re
 +g_s^2 f^{abc}f_{ade}G^\mu_b G^\nu_c G_\mu^d G_\nu^e 
 \end{align}
 
+\end{frame}
 \subsection{Lagrangiano QCD}
 
 \begin{frame}[fragile,allowframebreaks]

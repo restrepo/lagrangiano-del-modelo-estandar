@@ -1401,7 +1401,7 @@ Con estas restricciones es suficiente mantener los primeros cuatro términos de 
 
 La última condición excluye términos del tipo
 \begin{align}
-  \partial_\mu \partial^\mu phi\,,   \phi\partial_\mu \partial^\mu phi\,.
+  \partial_\mu \partial^\mu \phi\,,   \phi\partial_\mu \partial^\mu \phi\,.
 \end{align}
 De modo que la densidad Lagrangiana más general posible para un campo escalar real es
 \begin{align}
@@ -2367,6 +2367,7 @@ Las propiedades de transformación de  $A_\mu$ pueden ser obtenidas de las de  $
 \end{align}
 
 \subsection{Derivadas covariantes}
+\label{sec:dv}
 \begin{frame}[fragile,allowframebreaks]
 Para obtener las propiedades de la transformación de la derivada covariante misma, podemos comenzar de la definición
 \begin{align}
@@ -2680,11 +2681,13 @@ En esta convención $q$ corresponde al \emph{generador} de la transformación y 
 
 
 \subsection{Corrientes conservadas}
+\label{ref:cc}
 \begin{frame}[fragile,allowframebreaks]
 Aplicamos el segundo teorema de Noether con (con el reemplazo $\theta\to q\theta$
 \begin{align}
+\label{eq:dpa}
   \phi_{1}:& \psi\,,\qquad a_{1}=iq \psi \,,\qquad b_1=0\nonumber\\
-  \phi_{2}:& \psi^{*}\,,\qquad a_{2}=-i\psi^{*}\,,\qquad b_2=0 \nonumber\\
+  \phi_{2}:& \psi^{*}\,,\qquad a_{2}=-iq\psi^{*}\,,\qquad b_2=0 \nonumber\\
   \phi_{3}:& A^{\mu}\,,\qquad a_{3}=0\,,\qquad b_2=-\delta^{\mu}_{\nu}\,,
 \end{align}
 tenemos que para los campos $\psi$ y $\psi^{*}$, asumiendo que el campo $A^{\mu}$ satisface las ecuaciones de Euler-Lagrange, tenemos que
@@ -2722,9 +2725,9 @@ De otro lado, si aplicamos el segundo teorema de Noether al campo de radiación
   0=&\partial_{\mu} \left( \mathcal{E}_3 b^{\mu}_3 \right) \nonumber\\
    0=&\partial_{\mu} \left( \mathcal{E}_3 \delta^{\mu}_\nu \right) \nonumber\\
    0=&
- \partial_{\mu} \partial_{\rho} \left[ \frac{\partial \mathcal{L}}{\partial \left(\partial  \partial_{\rho} A_{\nu}\right)}  \delta^{\mu}_\nu \right] - \partial_{\mu} \frac{\partial \mathcal{L}}{\partial A_{\nu}}\delta^{\mu}_{\nu} \nonumber\\
+ \partial_{\mu} \partial_{\rho} \left[ \frac{\partial \mathcal{L}}{\partial \left(  \partial_{\rho} A_{\nu}\right)}  \delta^{\mu}_\nu \right] - \partial_{\mu} \frac{\partial \mathcal{L}}{\partial A_{\nu}}\delta^{\mu}_{\nu} \nonumber\\
    0=&
- \partial_{\mu} \partial_{\rho}\left[ \frac{\partial \mathcal{L}}{\partial \left(\partial  \partial_{\rho} A_{\mu}\right)}  \right] - \partial_{\mu} \frac{\partial \mathcal{L}}{\partial A_{\mu}} \,.
+ \partial_{\mu} \partial_{\rho}\left[ \frac{\partial \mathcal{L}}{\partial \left(  \partial_{\rho} A_{\mu}\right)}  \right] - \partial_{\mu} \frac{\partial \mathcal{L}}{\partial A_{\mu}} \,.
 \end{align}
 El segundo témrino da lugar a la misma corriente conservada fermiónica
 \begin{align}
@@ -2733,7 +2736,7 @@ El segundo témrino da lugar a la misma corriente conservada fermiónica
 \end{align}
 Por consiguiente, la identidad resultante
 \begin{align}
-   \partial_{\mu} \partial_{\rho}\left[ \frac{\partial \mathcal{L}}{\partial \left(\partial  \partial_{\rho} A_{\mu}\right)}  \right]=0\,,
+   \partial_{\mu} \partial_{\rho}\left[ \frac{\partial \mathcal{L}}{\partial \left(  \partial_{\rho} A_{\mu}\right)}  \right]=0\,,
 \end{align}
 se puede interpretar como la necesidad de introducir el tensor antisimétrico
 \begin{align}
