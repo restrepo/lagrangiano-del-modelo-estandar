@@ -323,6 +323,179 @@ Además,
 \end{align}
 y $G_{\mu\nu}$ en ec. \ref{}
 
+\subsection{interacciones Fermión-gauge }
+
+\begin{frame}[fragile,allowframebreaks]
+De la ec.~\eqref{eq:smscalar} tenemos
+\begin{align}
+  \label{eq:lfermion}
+  \mathcal{L}_{\text{fermion}}=&i \widetilde{Q}\cdot\overline{\sigma}^\mu\mathcal{D}_\mu Q+i \widetilde{L}\cdot\overline{\sigma}^\mu\mathcal{D}_\mu L+
+i{e_R}^{\dagger}\sigma^\mu\mathcal{D}_\mu {e_R}+i{d_R}^{\dagger}\sigma^\mu\mathcal{D}_\mu {d_R}+i{u_R}^{\dagger}\sigma^\mu\mathcal{D}_\mu {u_R}\,.
+\end{align}
+Donde, 
+\begin{align}
+  \widetilde{Q}\cdot\overline{\sigma}^\mu\mathcal{D}_\mu Q=&
+  \epsilon_{ab}\widetilde{Q}^a\overline{\sigma}^\mu \left( \mathcal{D}_\mu Q \right)^b \nonumber\\
+  \widetilde{L}\cdot\overline{\sigma}^\mu\mathcal{D}_\mu L=&
+  \epsilon_{ab}\widetilde{L}^a\overline{\sigma}^\mu \left( \mathcal{D}_\mu L \right)^b\,.
+\end{align}
+
+Note que las partes derechas involucran necesesariamente una simetría $\operatorname{U}(1)_Y$ de la que debemos obtener la interacción electromagnética entre fermiones derechos. Por eso la implementación la simetría $\operatorname{SU(2)}_L$ debe hacerce en el contexto del Grupo Gauge semisimple $\operatorname{SU(2)}_L\times \operatorname{U}(1)_Y$.
+
+Nos enfocaremos de momento en la parte leptónica pues las interacciones para quarks involucran el mismo tipo de cálculos.
+
+Los términos de interacción generados por la simetría gauge para el sector leptónico son:
+\begin{align}
+\label{eq:devLW}
+  i \widetilde{L}\cdot\overline{\sigma}^\mu\mathcal{D}_\mu L
+=&i \widetilde{L}\cdot\overline{\sigma}^\mu\partial_\mu L+i{e_R}^{\dagger}\sigma^\mu\partial_\mu {e_R}+
+ i \widetilde{L}\cdot\overline{\sigma}^\mu(-i g T_iW_\mu^i-i g'\,Y_LB_\mu) L + i{e_R}^{\dagger}\sigma^\mu \left( -ig' Y_E B_{\mu} \right) {e_R}\nonumber\\
+=& \widetilde{L}\cdot\overline{\sigma}^\mu(g T_1W_\mu^1+ g T_2W_\mu^2+g T_3W_\mu^3+g'\,Y_LB_\mu) L+ g' Y_E{e_R}^{\dagger}\sigma^\mu  {e_R} B_\mu\nonumber\\
+=&i \widetilde{L}\cdot\overline{\sigma}^\mu\partial_\mu L+i{e_R}^{\dagger}\sigma^\mu\partial_\mu {e_R}+ \widetilde{L}\cdot\overline{\sigma}^\mu\left[\frac{g}{\sqrt{2}}
+  \begin{pmatrix}
+0 & W_\mu^+\\
+W_\mu^- & 0\\    
+  \end{pmatrix}
++g T_3W_\mu^3+g'\,Y_LB_\mu
+\right]L+ g' Y_E{e_R}^{\dagger}\sigma^\mu  {e_R} B_\mu\nonumber\\
+=&i \widetilde{L}\cdot\overline{\sigma}^\mu\partial_\mu L+i{e_R}^{\dagger}\sigma^\mu\partial_\mu {e_R}+i \widetilde{L}\cdot\overline{\sigma}^\mu\frac{g}{\sqrt{2}}
+  \begin{pmatrix}
+0 & W_\mu^+\\
+W_\mu^- & 0\\    
+  \end{pmatrix}L+
+ \widetilde{L}\cdot\overline{\sigma}^\mu\left[g T_3W_\mu^3+g'\,Y_LB_\mu
+\right]L+ g' Y_E{e_R}^{\dagger}\sigma^\mu  {e_R} B_\mu\nonumber\\
+  =&i \widetilde{L}\cdot\overline{\sigma}^\mu\partial_\mu L+i{e_R}^{\dagger}\sigma^\mu\partial_\mu {e_R}+ \frac{g}{\sqrt{2}}\widetilde{L}\cdot\overline{\sigma}^\mu
+  \begin{pmatrix}
+e_LW_\mu^+\\
+\nu_L W_\mu^-\\    
+  \end{pmatrix}+\mathcal{L}_{A Z L}\,,
+\end{align}
+donde
+\begin{align}
+  \mathcal{L}_{A Z L}=& \widetilde{L}\cdot\overline{\sigma}^\mu\left[g T_3W_\mu^3+g'\,Y_LB_\mu\right]L+ g' Y_E{e_R}^{\dagger}\sigma^\mu  {e_R} B_\mu\,.
+\end{align}
+Teniendo en cuenta que 
+\begin{align}
+  \frac{g}{\sqrt{2}}\widetilde{L}\cdot\overline{\sigma}^\mu
+  \begin{pmatrix}
+e_LW_\mu^+\\
+\nu_L W_\mu^-\\    
+  \end{pmatrix}=\frac{g}{\sqrt{2}} \left[ \epsilon^{12} \widetilde{L}_1 \overline{\sigma}^{\mu} \nu_L W_{\mu}^-
++\epsilon^{21}  \widetilde{L}_2 \overline{\sigma}^{\mu} e_L W_{\mu}^+ \right],
+\end{align}
+y usando \eqref{eq:widetildeLQ}
+\begin{align}
+  \frac{g}{\sqrt{2}}\widetilde{L}\cdot\overline{\sigma}^\mu
+  \begin{pmatrix}
+e_LW_\mu^+\\
+\nu_L W_\mu^-\\    
+  \end{pmatrix}=\frac{g}{\sqrt{2}} \left[\left( e_L \right)^{\dagger} \overline{\sigma}^{\mu} \nu_L W_{\mu}^-
++ \left( \nu_L \right)^{\dagger} \overline{\sigma}^{\mu} e_L W_{\mu}^+ \right].
+\end{align}
+De esto modo, la simetría gauge genera la interacción deseada con los bosones gauge cargados $W_{\mu}^{\pm}$. Sin embargo, se generan muchas otras interacciones de las cuales deben contener apropiadamente la interacción electromagnética en algún cambio de base.
+
+Reemplazando en \eqref{eq:devLW}
+\begin{align}
+    i \widetilde{L}\cdot\overline{\sigma}^\mu\mathcal{D}_\mu L-i \widetilde{L}\cdot\overline{\sigma}^\mu\partial_\mu L
+  =&
+\frac{g}{\sqrt{2}}\left[\left( \nu_L \right)^{\dagger}\overline{\sigma}^\mu e_LW_\mu^++
+\left( e_L \right)^{\dagger}\overline{\sigma}^\mu\nu_L W_\mu^-\right]    
++\mathcal{L}_{A Z L}\nonumber\\
+  =&
+\mathcal{L}_{W L}    
++\mathcal{L}_{A Z L}\,,
+\end{align}
+donde
+\begin{align}
+  \mathcal{L}_{W L}=&\frac{g}{\sqrt{2}}\left[\left( \nu_L \right)^{\dagger}\overline{\sigma}^\mu e_LW_\mu^++
+\left( e_L \right)^{\dagger}\overline{\sigma}^\mu\nu_L W_\mu^-\right].
+\end{align}
+Generalizando para todos los campos:
+\begin{align}
+  \label{eq:wl}
+   \mathcal{L}_{W L}\to&\frac{g}{\sqrt{2}}\left[{\nu_L}^{\dagger}\overline{\sigma}^\mu e_LW_\mu^++
+{u_L}^{\dagger}\overline{\sigma}^\mu d_LW_\mu^++\text{h.c}\right]\,.
+\end{align}
+
+
+Usando la ec.~\eqref{eq:azmix}
+\begin{align}
+   \mathcal{L}_{A Z L}=& \widetilde{L}\cdot\overline{\sigma}^\mu\left[g T_3(c_W Z_\mu+s_W A_\mu)+g'\,Y_L(-s_W Z_\mu+c_W A_\mu)\right]L\nonumber\\
+     =& \widetilde{L}\cdot\overline{\sigma}^\mu\left[g T_3c_W Z_\mu+g T_3s_W A_\mu-g'\,Y_Ls_W Z_\mu+g'\,Y_Lc_W A_\mu\right]L\nonumber\\
+    =& \widetilde{L}\cdot\overline{\sigma}^\mu\left[\left(g c_WT_3-g's_W\,Y_L\right)Z_\mu
+       +\left(g s_W T_3+g'c_W\,Y_L\right) A_\mu\right]L\,,
+\end{align}
+donde $c_W=\cos\theta_W$, $s_W=\sin\theta_W$. Usando la relación entre $g$ y $g'$~\eqref{eq:tw}:
+\begin{align}
+    \mathcal{L}_{A Z L}=& \widetilde{L}\cdot\overline{\sigma}^\mu\left[\left(g c_WT_3-g \frac{s_W^2}{c_W}\,Y_L\right)Z_\mu
+       +\left(g s_W T_3+g s_W\,Y_L\right) A_\mu\right]L\nonumber\\
+=&g s_W \widetilde{L}\cdot\overline{\sigma}^\mu\left[\left(\cot\theta_WT_3- \tan\theta_W\,Y_L\right)Z_\mu
+       +\left(T_3+Y_L\right) A_\mu\right]L\,.
+\end{align}
+Como el generador asociado a $A_\mu$ debe ser el generador de carga eléctrica, tenemos que
+\begin{align}
+  e=g\sin\theta_W
+\end{align}
+donde $e$ es la carga eléctrica del electrón, y el generador de carga
+\begin{align}
+\label{eq:gn}
+  \widehat{Q}=T_3+Y\,,
+\end{align}
+de modo que
+\begin{align}
+  \widehat{Q}L=(T_3+Y)L=
+  \begin{pmatrix}
+    Q_\nu & 0\\
+    0  & Q_e
+  \end{pmatrix}L=  \begin{pmatrix}
+    0 & 0\\
+    0  & -1
+  \end{pmatrix}L
+\,.
+\end{align}
+La ec. \eqref{eq:gn}, se conoce como la relación Gell-Mann--Nishijima, y establece la condición que se debe satisfacer para obtener apropiadamente la QED a partir de la interacción electrodébil asociada al grupo semisimple $SU(2)_L\times  U(1)_Y$.
+De esta forma
+\begin{align}
+    \mathcal{L}_{A Z L}
+=&e \widetilde{L}\cdot\overline{\sigma}^\mu\left(\cot\theta_W T_3-\tan\theta_W\,Y_L\right)L Z_\mu
+       +e \widetilde{L}\cdot\gamma^\mu \widehat{Q}_L L A_\mu\nonumber\\
+=&e \widetilde{L}\cdot\overline{\sigma}^\mu\left[\cot\theta_W T_3-\tan\theta_W\left(\widehat{Q}_L-T_3\right)\right]L Z_\mu
+       +e \widetilde{L}\cdot\overline{\sigma}^\mu \widehat{Q}_L L A_\mu\nonumber\\
+=&\frac{e}{2c_W s_W} \widetilde{L}\cdot\overline{\sigma}^\mu\left[ \tau_3-2s_W^2\widehat{Q}_L\right]L Z_\mu
+       +e \widetilde{L}\cdot\overline{\sigma}^\mu \widehat{Q}_L L A_\mu\,.
+\end{align}
+Generalizando para los otros campos, tenemos
+\begin{align}
+  \label{eq:azl}
+      \mathcal{L}_{A Z L}\to\sum_{F=Q,L,e_R,d_R,u_R}\frac{e}{2c_W s_W}\widetilde{F}\cdot\overline{\sigma}^{\mu}\left[ \tau_3-2s_W^2\widehat{Q}_L\right]F Z_\mu
+       +e\widetilde{F}\cdot\overline{\sigma}^\mu \widehat{Q}_L F A_\mu\,.
+\end{align}
+con
+\begin{align}
+  \widetilde{F}\cdot\overline{\sigma}^{\mu} \to F^{\dagger}\sigma^{\mu} \qquad \text{for}\quad F=e_R,d_R,u_R\,.
+\end{align}
+
+Usando los acoplamientos gauge de los quarks con los gluones \eqref{eq:qcdgauge}, de los fermiones con el $W_\mu^\pm$  \eqref{eq:wl} y  con $Z_\mu$ y $A_\mu$ \eqref{eq:azl} para expandir $\mathcal{L}_{\text{fermion}}$ en \eqref{eq:lfermion}, tenemos
+\begin{align}
+\label{eq:sm1g2}
+ \mathcal{L}_{\text{fermion}}=&i \widetilde{Q}\cdot \overline{\sigma}^\mu\mathcal{D}_\mu Q+i \widetilde{L}\cdot\overline{\sigma}^\mu\mathcal{D}_\mu L+
+i{e_R}^{\dagger}\sigma^\mu\mathcal{D}_\mu {e_R}+i{d_R}^{\dagger}\sigma^\mu\mathcal{D}_\mu {d_R}+i{u_R}^{\dagger}\sigma^\mu\mathcal{D}_\mu {u_R}\nonumber\\
+  =&i{u_L}^{\dagger}\overline{\sigma}^\mu\partial_\mu u_L+i{u_R}^{\dagger}\sigma^\mu{\partial}_\mu {u_R}+i{d_L}^{\dagger}\overline{\sigma}^\mu\partial_\mu d_L+i{d_R}^{\dagger}\sigma^\mu{\partial}_\mu {d_R}\nonumber\\
+&+i{e_L}^{\dagger}\overline{\sigma}^\mu{\partial}_\mu e_L
++i{e_R}^{\dagger}\sigma^\mu{\partial}_\mu {e_R}+i{\nu_L}^{\dagger}\overline{\sigma}^\mu{\partial}_\mu \nu_L\nonumber\\
+&+g_s \left({u_L}^{\dagger}\overline{\sigma}^\mu\frac{\lambda^a}{2}u_L+{u_R}^{\dagger}{\sigma}^{\mu}\frac{\lambda^a}{2}u_R
++{d_L}^{\dagger}\overline{\sigma}^{\mu}\frac{\lambda^a}{2}d_L+ {d_R}^{\dagger}\sigma^{\mu}\frac{\lambda^a}{2}d_R\right)G_{\mu}^a\nonumber\\
+&+\frac{g}{\sqrt{2}}\left[{\nu_L}^{\dagger}\overline{\sigma}^\mu e_LW_\mu^++
+{u_L}^{\dagger}\overline{\sigma}^\mu d_LW_\mu^++\text{h.c}\right]\nonumber\\
+&+\sum_{F=Q,L,e_R,d_R,u_R}\frac{e}{2c_W s_W}\widetilde{F}\cdot\overline{\sigma}^\mu\left[ \tau_3-2s_W^2\widehat{Q}_L\right]F Z_\mu\nonumber\\
+&+e\left({e_L}^{\dagger}\overline{\sigma}^\mu \widehat{Q}_e e_L+{e_R}^{\dagger}\sigma^\mu \widehat{Q}_e e_R\right.\nonumber\\
+  &\qquad\left.+{u_L}^{\dagger}\overline{\sigma}^\mu \widehat{Q}_u u_L+{u_R}^{\dagger}{\sigma}^\mu \widehat{Q}_u u_R
++{d_L}^{\dagger}\overline{\sigma}^\mu \widehat{Q}_d d_L+{d_R}^{\dagger}\sigma^\mu \widehat{Q}_d d_R\right) A_\mu\,.
+\end{align}
+\end{frame}
+
+
 \subsection{Ruptura espontánea de simetría}
 
 \begin{frame}[fragile,allowframebreaks]
@@ -813,169 +986,6 @@ Vemos entonces que si la masa de los fermiónes no es fundamental sino
 emergente, necesariamente se predice la existencia de interacciones
 entre fermiones y el Higgs!
 
-\end{frame}
-\subsection{interacciones Fermión-gauge }
-
-\begin{frame}[fragile,allowframebreaks]
-De la ec.~\eqref{eq:smscalar} tenemos
-\begin{align}
-  \label{eq:lfermion}
-  \mathcal{L}_{\text{fermion}}=&i \widetilde{Q}\cdot\overline{\sigma}^\mu\mathcal{D}_\mu Q+i \widetilde{L}\cdot\overline{\sigma}^\mu\mathcal{D}_\mu L+
-i{e_R}^{\dagger}\sigma^\mu\mathcal{D}_\mu {e_R}+i{d_R}^{\dagger}\sigma^\mu\mathcal{D}_\mu {d_R}+i{u_R}^{\dagger}\sigma^\mu\mathcal{D}_\mu {u_R}\,.
-\end{align}
-Donde, 
-\begin{align}
-  \widetilde{Q}\cdot\overline{\sigma}^\mu\mathcal{D}_\mu Q=&
-  \epsilon_{ab}\widetilde{Q}^a\overline{\sigma}^\mu \left( \mathcal{D}_\mu Q \right)^b \nonumber\\
-  \widetilde{L}\cdot\overline{\sigma}^\mu\mathcal{D}_\mu L=&
-  \epsilon_{ab}\widetilde{L}^a\overline{\sigma}^\mu \left( \mathcal{D}_\mu L \right)^b\,.
-\end{align}
-Los términos de interacción generados por la simetría gauge para el campo $L$ son:
-\begin{align}
-\label{eq:devLW}
-  i \widetilde{L}\cdot\overline{\sigma}^\mu\mathcal{D}_\mu L-i \widetilde{L}\cdot\overline{\sigma}^\mu\partial_\mu L
-=&i \widetilde{L}\cdot\overline{\sigma}^\mu(-i g T_iW_\mu^i-i g'\,Y_LB_\mu) L\nonumber\\
-=& \widetilde{L}\cdot\overline{\sigma}^\mu(g T_1W_\mu^1+ g T_2W_\mu^2+g T_3W_\mu^3+g'\,Y_LB_\mu) L\nonumber\\
-=& \widetilde{L}\cdot\overline{\sigma}^\mu\left[\frac{g}{\sqrt{2}}
-  \begin{pmatrix}
-0 & W_\mu^+\\
-W_\mu^- & 0\\    
-  \end{pmatrix}
-+g T_3W_\mu^3+g'\,Y_LB_\mu
-\right]L\nonumber\\
-=&i \widetilde{L}\cdot\overline{\sigma}^\mu\frac{g}{\sqrt{2}}
-  \begin{pmatrix}
-0 & W_\mu^+\\
-W_\mu^- & 0\\    
-  \end{pmatrix}L+
- \widetilde{L}\cdot\overline{\sigma}^\mu\left[g T_3W_\mu^3+g'\,Y_LB_\mu
-\right]L\nonumber\\
-  =& \frac{g}{\sqrt{2}}\widetilde{L}\cdot\overline{\sigma}^\mu
-  \begin{pmatrix}
-e_LW_\mu^+\\
-\nu_L W_\mu^-\\    
-  \end{pmatrix}+\mathcal{L}_{A Z L}\,,
-\end{align}
-donde
-\begin{align}
-  \mathcal{L}_{A Z L}=& \widetilde{L}\cdot\overline{\sigma}^\mu\left[g T_3W_\mu^3+g'\,Y_LB_\mu\right]L\,.
-\end{align}
-Teniendo en cuenta que 
-\begin{align}
-  \frac{g}{\sqrt{2}}\widetilde{L}\cdot\overline{\sigma}^\mu
-  \begin{pmatrix}
-e_LW_\mu^+\\
-\nu_L W_\mu^-\\    
-  \end{pmatrix}=\frac{g}{\sqrt{2}} \left[ \epsilon^{12} \widetilde{L}_1 \overline{\sigma}^{\mu} \nu_L W_{\mu}^-
-+\epsilon^{21}  \widetilde{L}_2 \overline{\sigma}^{\mu} e_L W_{\mu}^+ \right],
-\end{align}
-y usando \eqref{eq:widetildeLQ}
-\begin{align}
-  \frac{g}{\sqrt{2}}\widetilde{L}\cdot\overline{\sigma}^\mu
-  \begin{pmatrix}
-e_LW_\mu^+\\
-\nu_L W_\mu^-\\    
-  \end{pmatrix}=\frac{g}{\sqrt{2}} \left[\left( e_L \right)^{\dagger} \overline{\sigma}^{\mu} \nu_L W_{\mu}^-
-+ \left( \nu_L \right)^{\dagger} \overline{\sigma}^{\mu} e_L W_{\mu}^+ \right].
-\end{align}
-Reemplazando en \eqref{eq:devLW}
-\begin{align}
-    i \widetilde{L}\cdot\overline{\sigma}^\mu\mathcal{D}_\mu L-i \widetilde{L}\cdot\overline{\sigma}^\mu\partial_\mu L
-  =&
-\frac{g}{\sqrt{2}}\left[\left( \nu_L \right)^{\dagger}\overline{\sigma}^\mu e_LW_\mu^++
-\left( e_L \right)^{\dagger}\overline{\sigma}^\mu\nu_L W_\mu^-\right]    
-+\mathcal{L}_{A Z L}\nonumber\\
-  =&
-\mathcal{L}_{W L}    
-+\mathcal{L}_{A Z L}\,,
-\end{align}
-donde
-\begin{align}
-  \mathcal{L}_{W L}=&\frac{g}{\sqrt{2}}\left[\left( \nu_L \right)^{\dagger}\overline{\sigma}^\mu e_LW_\mu^++
-\left( e_L \right)^{\dagger}\overline{\sigma}^\mu\nu_L W_\mu^-\right].
-\end{align}
-Generalizando para todos los campos:
-\begin{align}
-  \label{eq:wl}
-   \mathcal{L}_{W L}\to&\frac{g}{\sqrt{2}}\left[{\nu_L}^{\dagger}\overline{\sigma}^\mu e_LW_\mu^++
-{u_L}^{\dagger}\overline{\sigma}^\mu d_LW_\mu^++\text{h.c}\right]\,.
-\end{align}
-
-
-Usando la ec.~\eqref{eq:azmix}
-\begin{align}
-   \mathcal{L}_{A Z L}=& \widetilde{L}\cdot\overline{\sigma}^\mu\left[g T_3(c_W Z_\mu+s_W A_\mu)+g'\,Y_L(-s_W Z_\mu+c_W A_\mu)\right]L\nonumber\\
-     =& \widetilde{L}\cdot\overline{\sigma}^\mu\left[g T_3c_W Z_\mu+g T_3s_W A_\mu-g'\,Y_Ls_W Z_\mu+g'\,Y_Lc_W A_\mu\right]L\nonumber\\
-    =& \widetilde{L}\cdot\overline{\sigma}^\mu\left[\left(g c_WT_3-g's_W\,Y_L\right)Z_\mu
-       +\left(g s_W T_3+g'c_W\,Y_L\right) A_\mu\right]L\,,
-\end{align}
-donde $c_W=\cos\theta_W$, $s_W=\sin\theta_W$. Usando la relación entre $g$ y $g'$~\eqref{eq:tw}:
-\begin{align}
-    \mathcal{L}_{A Z L}=& \widetilde{L}\cdot\overline{\sigma}^\mu\left[\left(g c_WT_3-g \frac{s_W^2}{c_W}\,Y_L\right)Z_\mu
-       +\left(g s_W T_3+g s_W\,Y_L\right) A_\mu\right]L\nonumber\\
-=&g s_W \widetilde{L}\cdot\overline{\sigma}^\mu\left[\left(\cot\theta_WT_3- \tan\theta_W\,Y_L\right)Z_\mu
-       +\left(T_3+Y_L\right) A_\mu\right]L\,.
-\end{align}
-Como el generador asociado a $A_\mu$ debe ser el generador de carga eléctrica, tenemos que
-\begin{align}
-  e=g\sin\theta_W
-\end{align}
-donde $e$ es la carga eléctrica del electrón, y el generador de carga
-\begin{align}
-\label{eq:gn}
-  \widehat{Q}=T_3+Y\,,
-\end{align}
-de modo que
-\begin{align}
-  \widehat{Q}L=(T_3+Y)L=
-  \begin{pmatrix}
-    Q_\nu & 0\\
-    0  & Q_e
-  \end{pmatrix}L=  \begin{pmatrix}
-    0 & 0\\
-    0  & -1
-  \end{pmatrix}L
-\,.
-\end{align}
-La ec. \eqref{eq:gn}, se conoce como la relación Gell-Mann--Nishijima, y establece la condición que se debe satisfacer para obtener apropiadamente la QED a partir de la interacción electrodébil asociada al grupo semisimple $SU(2)_L\times  U(1)_Y$.
-De esta forma
-\begin{align}
-    \mathcal{L}_{A Z L}
-=&e \widetilde{L}\cdot\overline{\sigma}^\mu\left(\cot\theta_W T_3-\tan\theta_W\,Y_L\right)L Z_\mu
-       +e \widetilde{L}\cdot\gamma^\mu \widehat{Q}_L L A_\mu\nonumber\\
-=&e \widetilde{L}\cdot\overline{\sigma}^\mu\left[\cot\theta_W T_3-\tan\theta_W\left(\widehat{Q}_L-T_3\right)\right]L Z_\mu
-       +e \widetilde{L}\cdot\overline{\sigma}^\mu \widehat{Q}_L L A_\mu\nonumber\\
-=&\frac{e}{2c_W s_W} \widetilde{L}\cdot\overline{\sigma}^\mu\left[ \tau_3-2s_W^2\widehat{Q}_L\right]L Z_\mu
-       +e \widetilde{L}\cdot\overline{\sigma}^\mu \widehat{Q}_L L A_\mu\,.
-\end{align}
-Generalizando para los otros campos, tenemos
-\begin{align}
-  \label{eq:azl}
-      \mathcal{L}_{A Z L}\to\sum_{F=Q,L,e_R,d_R,u_R}\frac{e}{2c_W s_W}\widetilde{F}\cdot\overline{\sigma}^{\mu}\left[ \tau_3-2s_W^2\widehat{Q}_L\right]F Z_\mu
-       +e\widetilde{F}\cdot\overline{\sigma}^\mu \widehat{Q}_L F A_\mu\,.
-\end{align}
-con
-\begin{align}
-  \widetilde{F}\cdot\overline{\sigma}^{\mu} \to F^{\dagger}\sigma^{\mu} \qquad \text{for}\quad F=e_R,d_R,u_R\,.
-\end{align}
-
-Usando los acoplamientos gauge de los quarks con los gluones \eqref{eq:qcdgauge}, de los fermiones con el $W_\mu^\pm$  \eqref{eq:wl} y  con $Z_\mu$ y $A_\mu$ \eqref{eq:azl} para expandir $\mathcal{L}_{\text{fermion}}$ en \eqref{eq:lfermion}, tenemos
-\begin{align}
-\label{eq:sm1g2}
- \mathcal{L}_{\text{fermion}}=&i \widetilde{Q}\cdot \overline{\sigma}^\mu\mathcal{D}_\mu Q+i \widetilde{L}\cdot\overline{\sigma}^\mu\mathcal{D}_\mu L+
-i{e_R}^{\dagger}\sigma^\mu\mathcal{D}_\mu {e_R}+i{d_R}^{\dagger}\sigma^\mu\mathcal{D}_\mu {d_R}+i{u_R}^{\dagger}\sigma^\mu\mathcal{D}_\mu {u_R}\nonumber\\
-  =&i{u_L}^{\dagger}\overline{\sigma}^\mu\partial_\mu u_L+i{u_R}^{\dagger}\sigma^\mu{\partial}_\mu {u_R}+i{d_L}^{\dagger}\overline{\sigma}^\mu\partial_\mu d_L+i{d_R}^{\dagger}\sigma^\mu{\partial}_\mu {d_R}\nonumber\\
-&+i{e_L}^{\dagger}\overline{\sigma}^\mu{\partial}_\mu e_L
-+i{e_R}^{\dagger}\sigma^\mu{\partial}_\mu {e_R}+i{\nu_L}^{\dagger}\overline{\sigma}^\mu{\partial}_\mu \nu_L\nonumber\\
-&+g_s \left({u_L}^{\dagger}\overline{\sigma}^\mu\frac{\lambda^a}{2}u_L+{u_R}^{\dagger}{\sigma}^{\mu}\frac{\lambda^a}{2}u_R
-+{d_L}^{\dagger}\overline{\sigma}^{\mu}\frac{\lambda^a}{2}d_L+ {d_R}^{\dagger}\sigma^{\mu}\frac{\lambda^a}{2}d_R\right)G_{\mu}^a\nonumber\\
-&+\frac{g}{\sqrt{2}}\left[{\nu_L}^{\dagger}\overline{\sigma}^\mu e_LW_\mu^++
-{u_L}^{\dagger}\overline{\sigma}^\mu d_LW_\mu^++\text{h.c}\right]\nonumber\\
-&+\sum_{F=Q,L,e_R,d_R,u_R}\frac{e}{2c_W s_W}\widetilde{F}\cdot\overline{\sigma}^\mu\left[ \tau_3-2s_W^2\widehat{Q}_L\right]F Z_\mu\nonumber\\
-&+e\left({e_L}^{\dagger}\overline{\sigma}^\mu \widehat{Q}_e e_L+{e_R}^{\dagger}\sigma^\mu \widehat{Q}_e e_R\right.\nonumber\\
-  &\qquad\left.+{u_L}^{\dagger}\overline{\sigma}^\mu \widehat{Q}_u u_L+{u_R}^{\dagger}{\sigma}^\mu \widehat{Q}_u u_R
-+{d_L}^{\dagger}\overline{\sigma}^\mu \widehat{Q}_d d_L+{d_R}^{\dagger}\sigma^\mu \widehat{Q}_d d_R\right) A_\mu\,.
-\end{align}
 \end{frame}
 
 \subsection{Self-interactions}
