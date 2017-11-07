@@ -59,16 +59,48 @@ Este conjunto de partículas esta bien definido para interacciones que conservan
 \end{frame}
 
 \section{Interacciones débiles}
+Las interacciones débiles son las responsables, entre otros fenoménos,
+del decaimiento de neutrones libres en un protón, un electron y un
+anti-neutrino electrónico. En nuestro entendimiento actual, se asume
+que dicho decaimiento esta medidado por una bosón vectorial masivo y
+cargado llamado $W^-_{\mu}$ con su correspondiente antipartícula
+$W^{+}_{\mu}$. El caracter másivo da cuenta del corto alcance de la
+interacción comparado con el rango infinito de la
+interacción electromagnética mediada por un fotón sin masa
+$A_{\mu}$. En la primera parte del decaimiento, el neutrón decae al
+proton y un $W^{-}_{\mu}$ virtual, el cual a su vez decae en un
+anti-neutrino derecho y un electrón izquierdo como se muestra en la
+figura~\ref{fig:wnl}.
+
+\begin{figure}
+  \centering
+  \includegraphics[scale=0.5]{wnl}
+  \caption{Decaimiento del $W_\mu^-$.}
+  \label{fig:wnl}
+\end{figure}
+
+Dicho decaimiento debe involucrar un término de interacción del tipo
+\begin{align}
+  \mathcal{L}_{W}\propto \left( \nu_L \right)^{\dagger}\overline{\sigma}^{\mu} e_L W_{\mu}^{+}.
+\end{align}
+
+
 \begin{frame}[fragile,allowframebreaks]
-En el contexto de las interacciones débiles un $e_L$ es completamente
+Este tipo de interacción significa que en el contexto de las interacciones débiles un $e_L$ debe ser completamente
 equivalente a un campo $\nu_L$. Es decir, el Lagrangiano debe ser
-invariante bajo una transformación $SU(2)_L$ de esos campos. La
-diferencia entre ellos son sus respectivas cargas electricas y sus
-masas. Asumiendo que ambos campos tienen una misma hipercarga,
-asociada a una nueva simetría Abeliana $U(1)_Y$, podríamos esperar que
+invariante bajo una transformación $SU(2)_L$ de esos campos. A las energías normales, a las que se encuentra por ejemplo un neutrón dentro de un núcleo de Uranio, dicha simetría permanece oculta pues un electrón izquierdo y un neutrino izquierdo son campos completamente diferentes.
+La
+diferencia entre ellos está en sus respectivas cargas electricas y sus
+masas, pues la masa del neutrino es mucho más pequeña que la del electrón. 
+
+Para poder explicar dicha interacción en el contexto de una simetría gauge local $SU(2)_L$, debemos asumir que dicha simetría es explicita en alguna otra escala de energía donde en efecto  $e_L$ sea completamente
+equivalente a $\nu_L$.
+
+Debemos asumir entonces que ambos campos tienen una misma hipercarga,
+asociada a una nueva simetría Abeliana $\operatorname{U}(1)_Y$ que sea la precursora de la simetría Abeliana de carga eléctrica $\operatorname{U}(1)_Q$. En tal caso, podríamos esperar que
 la corriente electromagnética apropiada pueda obtenerse a partir del
-Grupo semisimple $SU(2)_L\times U(1)_Y$. Además las respectivas masas
-se podrían obtener a partir del mecanismo de Higgs.
+Grupo semisimple $SU(2)_L\times U(1)_Y$. Además. la respectiva masa para $W_{\mu}^{-}$
+se podría obtener a partir del mecanismo de Higgs.
 
 La simetría $SU(2)_L$ entre las partes izquierdas del neutrino y el electrón, y entre las partes izquierdas de los quarks up y down, se establece  definiendo los dobletes:
   \begin{align}
@@ -85,7 +117,7 @@ De otro lado, La invarianza bajo $U(1)_Y$ requiere que
   Y_L=&Y_{\nu_L}=Y_{e_L}\nonumber\\
   Y_Q=&Y_{u_L}=Y_{d_L}\,.
 \end{align}
-El generador de carga eléctrica $\widehat{Q}$, se va obtener a partir de una combinación lineal del generador diagonal de $SU(2)_L$, $T_3$, y del generador de hipercarga, $Y$.
+El generador de carga eléctrica $\widehat{Q}$, se va obtener a partir de una combinación lineal del generador diagonal de $SU(2)_L$, $T_3$, y del generador de hipercarga, $\widehat{Y}$.
 
 Para considerar las interacciones débiles en conjunto con las interacciones electromágneticas y fuertes, es conveniente definir los campos de la primera generación en términos de los espinores ($\xi_{\alpha}$) y anti-espinores ($\eta^{\alpha}$) de Weyl izquierdos, de acuerdo a las convenciones de la Tabla~\ref{tab:electron}. El contenido de partículas con sus propiedades de transformación bajo el Grupo semisimple $SU(3)_c\times SU(2)_L\times U(1)_Y$ está dado en la Tabla~\ref{tab:fgw}
 \begin{table}
@@ -482,7 +514,7 @@ y
 \label{eq:gn}
  \widehat{Q}=&T_3+\widehat{Y}\,.
 \end{align}
-donde $e$ es la carga eléctrica del electrón, y $\widehat{Q}$ es el generador de carga elétrica conservada asociada a la simetría gaugel local $\operatorname{U}(1)_Q$. 
+donde $e$ es la carga eléctrica del electrón, y $\widehat{Q}$ es el generador de carga elétrica conservada asociada a la simetría gauge local $\operatorname{U}(1)_Q$. 
 
 La ec. \eqref{eq:gn}, se conoce como la relación de Gell-Mann--Nishijima, y junto con~\eqref{eq:esc}, establece las condiciones que se deben satisfacer para obtener apropiadamente la QED a partir de la interacción electrodébil asociada al grupo semisimple $SU(2)_L\times  U(1)_Y$.
 
