@@ -248,9 +248,9 @@ Para evitar confusión con el conjugado de espinores de Weyl, usaremos el produc
 
 \subsection*{Simetría gauge local $SU(3)_c\times  SU(2)_L\times  U(1)_Y$}
 Los términos de masa de Dirac, usando las convenciones de la
-Tabla\ref{tab:fgw} no son invariante bajo la simetría $SU(2)_L$ porque
+Tabla~\ref{tab:fgw} no son invariantes bajo la simetría $SU(2)_L$ porque
 no hay forma de escribir términos escalares usando combinaciones los
-campos $\Xi$ y $\eta$.  De la ec.~\eqref{eq:dwlag}, y usando la definición para los dobletes adjuntos de $SU(2)_L$ en la ec.\eqref{eq:Xiadj}, el Lagrangiano más
+campos $\Xi$ y $\eta$.  De la ec.~\eqref{eq:dwlag}, y usando la definición para los dobletes adjuntos de $SU(2)_L$ en la ec.~\eqref{eq:Xiadj}, el Lagrangiano más
 general posible para los campos de la Tabla~\ref{tab:fgw} compatibles
 con las simetría de Lorentz y el grupo global $SU(3)_c\times
 SU(2)_L\times U(1)_Y$ es
@@ -303,7 +303,7 @@ i{e_R}^{\dagger}\sigma^\mu\mathcal{D}_\mu {e_R}+i{d_R}^{\dagger}\sigma^\mu\mathc
 \end{align}
 donde
 \begin{align}
-  \mathcal{D}^\mu&\equiv\partial^\mu-i g_s\frac{\lambda^a}{2}G^\mu_a-i g \frac{\tau^i}{2}W^\mu_i-i g'YB^\mu\,.
+  \mathcal{D}^\mu&\equiv\partial^\mu-i g_s\frac{\lambda^a}{2}G^\mu_a-i g \frac{\tau^i}{2}W^\mu_i-i {g_1}YB^\mu\,.
 \end{align}
 y además
 \begin{align*}
@@ -321,9 +321,9 @@ Además,
   W_{\mu \nu}^i=&\partial_\mu W_\nu^i -\partial_\mu W_\mu^i+ g \epsilon_{ijk}W_\mu^j W_\nu^k \nonumber\\
   B_{\mu \nu}=&\partial_\mu B_\nu -\partial_\mu B_\mu\,.
 \end{align}
-y $G_{\mu\nu}$ en ec. \ref{}
+y $G_{\mu\nu}$ en ec.~\eqref{}
 
-\subsection{interacciones Fermión-gauge }
+\section{interacciones Fermión-gauge }
 
 \begin{frame}[fragile,allowframebreaks]
 De la ec.~\eqref{eq:smscalar} tenemos
@@ -342,161 +342,302 @@ Donde,
 
 Note que las partes derechas involucran necesesariamente una simetría $\operatorname{U}(1)_Y$ de la que debemos obtener la interacción electromagnética entre fermiones derechos. Por eso la implementación la simetría $\operatorname{SU(2)}_L$ debe hacerce en el contexto del Grupo Gauge semisimple $\operatorname{SU(2)}_L\times \operatorname{U}(1)_Y$.
 
+\section{Interacciónes débiles fermiónicas para leptones}
+
 Nos enfocaremos de momento en la parte leptónica pues las interacciones para quarks involucran el mismo tipo de cálculos.
 
 Los términos de interacción generados por la simetría gauge para el sector leptónico son:
 \begin{align}
 \label{eq:devLW}
-  i \widetilde{L}\cdot\overline{\sigma}^\mu\mathcal{D}_\mu L
-=&i \widetilde{L}\cdot\overline{\sigma}^\mu\partial_\mu L+i{e_R}^{\dagger}\sigma^\mu\partial_\mu {e_R}+
- i \widetilde{L}\cdot\overline{\sigma}^\mu(-i g T_iW_\mu^i-i g'\,Y_LB_\mu) L + i{e_R}^{\dagger}\sigma^\mu \left( -ig' Y_E B_{\mu} \right) {e_R}\nonumber\\
-=& \widetilde{L}\cdot\overline{\sigma}^\mu(g T_1W_\mu^1+ g T_2W_\mu^2+g T_3W_\mu^3+g'\,Y_LB_\mu) L+ g' Y_E{e_R}^{\dagger}\sigma^\mu  {e_R} B_\mu\nonumber\\
-=&i \widetilde{L}\cdot\overline{\sigma}^\mu\partial_\mu L+i{e_R}^{\dagger}\sigma^\mu\partial_\mu {e_R}+ \widetilde{L}\cdot\overline{\sigma}^\mu\left[\frac{g}{\sqrt{2}}
+  i \widetilde{L}\cdot\overline{\sigma}^\mu\mathcal{D}_\mu L+  i \left( e_R \right)^{\dagger}{\sigma}^\mu\mathcal{D}_\mu e_R
+=&i \widetilde{L}\cdot\overline{\sigma}^\mu\partial_\mu L+i \left(e_R  \right)^{\dagger}\sigma^\mu\partial_\mu {e_R} \nonumber\\
+&+ i \widetilde{L}\cdot\overline{\sigma}^\mu(-i g_2 T_iW_\mu^i-i {g_1}\,Y_LB_\mu) L + i \left( e_R \right)^{\dagger}\sigma^\mu \left( -i{g_1} Y_E B_{\mu} \right) {e_R}\,.
+\end{align}
+Definiendo
+\begin{align}
+\label{eq:knt}
+  \mathcal{L}_{\text{kinetic}}=&i \widetilde{L}\cdot\overline{\sigma}^\mu\partial_\mu L+i \left(e_R  \right)^{\dagger}\sigma^\mu\partial_\mu {e_R} \\
+  \mathcal{L}_{WBL}=&i \widetilde{L}\cdot\overline{\sigma}^\mu(-i g_2 T_iW_\mu^i-i {g_1}\,Y_LB_\mu) L + i \left( e_R \right)^{\dagger}\sigma^\mu \left( -i{g_1} Y_E B_{\mu} \right) {e_R}\nonumber\,.
+\end{align}
+tenemos que
+\begin{align}
+\mathcal{L}_{WBL}=& \widetilde{L}\cdot\overline{\sigma}^\mu(g_2 T_1W_\mu^1+ g_2 T_2W_\mu^2+g_2 T_3W_\mu^3+{g_1}\,Y_LB_\mu) L+ g_1 Y_E\left(e_R \right)^{\dagger}\sigma^\mu  {e_R} B_\mu\nonumber\\
+=& \widetilde{L}\cdot\overline{\sigma}^\mu\left[\frac{g_2}{\sqrt{2}}
   \begin{pmatrix}
 0 & W_\mu^+\\
 W_\mu^- & 0\\    
   \end{pmatrix}
-+g T_3W_\mu^3+g'\,Y_LB_\mu
-\right]L+ g' Y_E{e_R}^{\dagger}\sigma^\mu  {e_R} B_\mu\nonumber\\
-=&i \widetilde{L}\cdot\overline{\sigma}^\mu\partial_\mu L+i{e_R}^{\dagger}\sigma^\mu\partial_\mu {e_R}+i \widetilde{L}\cdot\overline{\sigma}^\mu\frac{g}{\sqrt{2}}
++g_2 T_3W_\mu^3+{g_1}\,Y_LB_\mu
+\right]L+ {g_1} Y_E\left(e_R \right)^{\dagger}\sigma^\mu  {e_R} B_\mu\nonumber\\
+=&i \widetilde{L}\cdot\overline{\sigma}^\mu\frac{g_2}{\sqrt{2}}
   \begin{pmatrix}
 0 & W_\mu^+\\
 W_\mu^- & 0\\    
   \end{pmatrix}L+
- \widetilde{L}\cdot\overline{\sigma}^\mu\left[g T_3W_\mu^3+g'\,Y_LB_\mu
-\right]L+ g' Y_E{e_R}^{\dagger}\sigma^\mu  {e_R} B_\mu\nonumber\\
-  =&i \widetilde{L}\cdot\overline{\sigma}^\mu\partial_\mu L+i{e_R}^{\dagger}\sigma^\mu\partial_\mu {e_R}+ \frac{g}{\sqrt{2}}\widetilde{L}\cdot\overline{\sigma}^\mu
+ \widetilde{L}\cdot\overline{\sigma}^\mu\left[g_2 T_3W_\mu^3+{g_1}\,Y_LB_\mu
+\right]L+ {g_1} Y_E\left(e_R \right)^{\dagger}\sigma^\mu  {e_R} B_\mu\nonumber\\
+  =& \frac{g_2}{\sqrt{2}}\widetilde{L}\cdot\overline{\sigma}^\mu
   \begin{pmatrix}
 e_LW_\mu^+\\
 \nu_L W_\mu^-\\    
   \end{pmatrix}+\mathcal{L}_{A Z L}\,,
 \end{align}
+
 donde
 \begin{align}
-  \mathcal{L}_{A Z L}=& \widetilde{L}\cdot\overline{\sigma}^\mu\left[g T_3W_\mu^3+g'\,Y_LB_\mu\right]L+ g' Y_E{e_R}^{\dagger}\sigma^\mu  {e_R} B_\mu\,.
+\label{eq:lazl}
+  \mathcal{L}_{A Z L}=& \widetilde{L}\cdot\overline{\sigma}^\mu\left[g_2 T_3W_\mu^3+{g_1}\,Y_LB_\mu\right]L+ {g_1} Y_E\left(e_R \right)^{\dagger}\sigma^\mu  {e_R} B_\mu\,.
 \end{align}
+
 Teniendo en cuenta que 
 \begin{align}
-  \frac{g}{\sqrt{2}}\widetilde{L}\cdot\overline{\sigma}^\mu
+  \frac{g_2}{\sqrt{2}}\widetilde{L}\cdot\overline{\sigma}^\mu
   \begin{pmatrix}
 e_LW_\mu^+\\
 \nu_L W_\mu^-\\    
-  \end{pmatrix}=\frac{g}{\sqrt{2}} \left[ \epsilon^{12} \widetilde{L}_1 \overline{\sigma}^{\mu} \nu_L W_{\mu}^-
+  \end{pmatrix}=\frac{g_2}{\sqrt{2}} \left[ \epsilon^{12} \widetilde{L}_1 \overline{\sigma}^{\mu} \nu_L W_{\mu}^-
 +\epsilon^{21}  \widetilde{L}_2 \overline{\sigma}^{\mu} e_L W_{\mu}^+ \right],
 \end{align}
 y usando \eqref{eq:widetildeLQ}
 \begin{align}
-  \frac{g}{\sqrt{2}}\widetilde{L}\cdot\overline{\sigma}^\mu
+  \frac{g_2}{\sqrt{2}}\widetilde{L}\cdot\overline{\sigma}^\mu
   \begin{pmatrix}
 e_LW_\mu^+\\
 \nu_L W_\mu^-\\    
-  \end{pmatrix}=\frac{g}{\sqrt{2}} \left[\left( e_L \right)^{\dagger} \overline{\sigma}^{\mu} \nu_L W_{\mu}^-
+  \end{pmatrix}=\frac{g_2}{\sqrt{2}} \left[\left( e_L \right)^{\dagger} \overline{\sigma}^{\mu} \nu_L W_{\mu}^-
 + \left( \nu_L \right)^{\dagger} \overline{\sigma}^{\mu} e_L W_{\mu}^+ \right].
 \end{align}
-De esto modo, la simetría gauge genera la interacción deseada con los bosones gauge cargados $W_{\mu}^{\pm}$. Sin embargo, se generan muchas otras interacciones de las cuales deben contener apropiadamente la interacción electromagnética en algún cambio de base.
+De esto modo, la simetría gauge genera la interacción deseada con los bosones gauge cargados $W_{\mu}^{\pm}$. Sin embargo, se generan muchas otras interacciones las cuales deben contener apropiadamente la interacción electromagnética en algún cambio de base.
 
-Reemplazando en \eqref{eq:devLW}
+% Reemplazando en \eqref{eq:devLW}
+% \begin{align}
+%     i \widetilde{L}\cdot\overline{\sigma}^\mu\mathcal{D}_\mu L-i \widetilde{L}\cdot\overline{\sigma}^\mu\partial_\mu L
+%   =&
+% \frac{g_2}{\sqrt{2}}\left[\left( \nu_L \right)^{\dagger}\overline{\sigma}^\mu e_LW_\mu^++
+% \left( e_L \right)^{\dagger}\overline{\sigma}^\mu\nu_L W_\mu^-\right]    
+% +\mathcal{L}_{A Z L}\nonumber\\
+%   =&
+% \mathcal{L}_{W L}    
+% +\mathcal{L}_{A Z L}\,,
+% \end{align}
+Entonces
 \begin{align}
-    i \widetilde{L}\cdot\overline{\sigma}^\mu\mathcal{D}_\mu L-i \widetilde{L}\cdot\overline{\sigma}^\mu\partial_\mu L
-  =&
-\frac{g}{\sqrt{2}}\left[\left( \nu_L \right)^{\dagger}\overline{\sigma}^\mu e_LW_\mu^++
-\left( e_L \right)^{\dagger}\overline{\sigma}^\mu\nu_L W_\mu^-\right]    
-+\mathcal{L}_{A Z L}\nonumber\\
-  =&
-\mathcal{L}_{W L}    
-+\mathcal{L}_{A Z L}\,,
+  \mathcal{L}_{WBL}= \mathcal{L}_{W L}+  \mathcal{L}_{A Z L}\,,
 \end{align}
 donde
 \begin{align}
-  \mathcal{L}_{W L}=&\frac{g}{\sqrt{2}}\left[\left( \nu_L \right)^{\dagger}\overline{\sigma}^\mu e_LW_\mu^++
+\label{eq:lwl}
+  \mathcal{L}_{W L}=&\frac{g_2}{\sqrt{2}}\left[\left( \nu_L \right)^{\dagger}\overline{\sigma}^\mu e_LW_\mu^++
 \left( e_L \right)^{\dagger}\overline{\sigma}^\mu\nu_L W_\mu^-\right].
 \end{align}
-Generalizando para todos los campos:
-\begin{align}
-  \label{eq:wl}
-   \mathcal{L}_{W L}\to&\frac{g}{\sqrt{2}}\left[{\nu_L}^{\dagger}\overline{\sigma}^\mu e_LW_\mu^++
-{u_L}^{\dagger}\overline{\sigma}^\mu d_LW_\mu^++\text{h.c}\right]\,.
-\end{align}
 
+El prinicipal problema con $\mathcal{L}_{AZL}$ en la ec.~\eqref{eq:lazl} es que el neutrino izquierdo $\nu_L$ presente en $L$ se acopla a los dos bosones gauge neutros $W_3^{\mu}$ y $B^{\mu}$. Debemos buscar una base en la cual recuperar la interacción electromagnética en la cual el fotón $A_{\mu}$ no se acopla a partículas neutras como el $\nu_L$. Definimos entonces el posible fotón a partir de la rotación
+\begin{equation}
+  \begin{pmatrix}
+    W^3_\mu\\
+    B_\mu
+  \end{pmatrix}=\begin{pmatrix}
+    \cos\theta_W & \sin\theta_W\\
+    -\sin\theta_W& \cos\theta_W
+  \end{pmatrix}
+  \begin{pmatrix}
+    Z_\mu\\
+    A_\mu
+  \end{pmatrix}.
+\end{equation}
+Aplicando esta rotación a~\eqref{eq:lazl}, tenemos que
+\begin{align}
+\label{eq:brot}
+   \mathcal{L}_{A Z L}=& \widetilde{L}\cdot\overline{\sigma}^\mu\left[g_2 T_3(c_W Z_\mu+s_W A_\mu)+{g_1}\,Y_L(-s_W Z_\mu+c_W A_\mu)\right]L
+    +g_1 Y_E\left(e_R \right)^{\dagger}\sigma^\mu  {e_R} (-s_W Z_\mu+c_W A_\mu)\nonumber\\
+     =& \widetilde{L}\cdot\overline{\sigma}^\mu\left[g_2 T_3c_W Z_\mu+g_2 T_3s_W A_\mu-{g_1}\,Y_Ls_W Z_\mu+{g_1}\,Y_Lc_W A_\mu\right]L\nonumber\\
+&-g_1 s_W Y_E\left(e_R \right)^{\dagger}\sigma^\mu  {e_R}Z_{\mu}  +g_1 c_W Y_E\left(e_R \right)^{\dagger}\sigma^\mu  {e_R}A_{\mu}  \nonumber\\
+    =& \widetilde{L}\cdot\overline{\sigma}^\mu\left[\left(g_2 c_WT_3-{g_1}s_W\,Y_L\right)Z_\mu
+       +\left(g_2 s_W T_3+{g_1}c_W\,Y_L\right) A_\mu\right]L \nonumber\\
+&-g_1 s_W Y_E\left(e_R \right)^{\dagger}\sigma^\mu  {e_R}Z_{\mu}  +g_1 c_W Y_E\left(e_R \right)^{\dagger}\sigma^\mu  {e_R}A_{\mu}  \,,
+\end{align}
+donde $c_W=\cos\theta_W$, $s_W=\sin\theta_W$. 
 
-Usando la ec.~\eqref{eq:azmix}
+Para identificar $A_{\mu}$ con el fotón, debemos imponer la condición
 \begin{align}
-   \mathcal{L}_{A Z L}=& \widetilde{L}\cdot\overline{\sigma}^\mu\left[g T_3(c_W Z_\mu+s_W A_\mu)+g'\,Y_L(-s_W Z_\mu+c_W A_\mu)\right]L\nonumber\\
-     =& \widetilde{L}\cdot\overline{\sigma}^\mu\left[g T_3c_W Z_\mu+g T_3s_W A_\mu-g'\,Y_Ls_W Z_\mu+g'\,Y_Lc_W A_\mu\right]L\nonumber\\
-    =& \widetilde{L}\cdot\overline{\sigma}^\mu\left[\left(g c_WT_3-g's_W\,Y_L\right)Z_\mu
-       +\left(g s_W T_3+g'c_W\,Y_L\right) A_\mu\right]L\,,
+e\widehat{Q}=g_2 s_W T_3+{g_1}c_W\,\widehat{Y}\,.
 \end{align}
-donde $c_W=\cos\theta_W$, $s_W=\sin\theta_W$. Usando la relación entre $g$ y $g'$~\eqref{eq:tw}:
+De este modo
 \begin{align}
-    \mathcal{L}_{A Z L}=& \widetilde{L}\cdot\overline{\sigma}^\mu\left[\left(g c_WT_3-g \frac{s_W^2}{c_W}\,Y_L\right)Z_\mu
-       +\left(g s_W T_3+g s_W\,Y_L\right) A_\mu\right]L\nonumber\\
-=&g s_W \widetilde{L}\cdot\overline{\sigma}^\mu\left[\left(\cot\theta_WT_3- \tan\theta_W\,Y_L\right)Z_\mu
-       +\left(T_3+Y_L\right) A_\mu\right]L\,.
+  e\widehat{Q}L =& \left(g_2 s_W T_3+{g_1}c_W\,\widehat{Y}\right) L \nonumber\\
+=& \left(g_2 s_W T_3+{g_1}c_W\,Y_L\right) L \,,
 \end{align}
-Como el generador asociado a $A_\mu$ debe ser el generador de carga eléctrica, tenemos que
+y
 \begin{align}
-  e=g\sin\theta_W
+ e\widehat{Q} e_R =& \left(g_2 s_W T_3+{g_1}c_W\,\widehat{Y}\right) e_R\nonumber\\  
+=& g_1 c_W\,Y_E \, e_R\,.
 \end{align}
-donde $e$ es la carga eléctrica del electrón, y el generador de carga
+Separando las condiciones sobre los coeficientes de las condiciones sobre los generadores, tenemos las dos condiciones equivalentes
+\begin{align}
+\label{eq:esc}
+    e=&g_2\sin\theta_W=g_1 \cos\theta_W\,,
+\end{align}
+y
 \begin{align}
 \label{eq:gn}
-  \widehat{Q}=T_3+Y\,,
+ \widehat{Q}=&T_3+\widehat{Y}\,.
 \end{align}
-de modo que
+donde $e$ es la carga eléctrica del electrón, y $\widehat{Q}$ es el generador de carga elétrica conservada asociada a la simetría gaugel local $\operatorname{U}(1)_Q$. 
+
+La ec. \eqref{eq:gn}, se conoce como la relación de Gell-Mann--Nishijima, y junto con~\eqref{eq:esc}, establece las condiciones que se deben satisfacer para obtener apropiadamente la QED a partir de la interacción electrodébil asociada al grupo semisimple $SU(2)_L\times  U(1)_Y$.
+
+
+De \eqref{eq:esc}, podemos expresar el ángulo $\theta_W$ en términos de $g_1$ y $g_2$ como
 \begin{align}
-  \widehat{Q}L=(T_3+Y)L=
+\label{eq:twa}
+  \tan\theta_W=\frac{g_1}{g_2}\,.
+\end{align}
+
+
+Usando la relación entre $g_2$ y ${g_1}$~\eqref{eq:twa} en ~\eqref{eq:brot}
+\begin{align}
+    \mathcal{L}_{A Z L}
+=&g_2 s_W \widetilde{L}\cdot\overline{\sigma}^\mu\left[\left(\cot\theta_WT_3- \tan\theta_W\,Y_L\right)Z_\mu
+       +\left(T_3+Y_L\right) A_\mu\right]L \nonumber\\
+&+g_2 s_W \left(e_R \right)^{\dagger}\sigma^\mu \left[ \left(0 -\tan\theta_W  Y_E  \right) Z_{\mu}  +\left( 0+ Y_E \right)  A_{\mu} \right]{e_R}\,,
+\end{align}
+donde hemos puesto explícitamente el cero correspondiente a: $T_3 e_R= 0 \,e_R$.
+
+Como el generador asociado a $A_\mu$ debe ser el generador de carga eléctrica, podemos usar la primera ecuación en \eqref{eq:esc}:
+\begin{align}
+  e=g_2\sin\theta_W\,,
+\end{align}
+y si además definimos
+\begin{align}
+  \mathcal{L}_{E}=g_2 s_W \left(e_R \right)^{\dagger}\sigma^\mu \left[ \left(0 -\tan\theta_W  Y_E  \right) Z_{\mu}  +\left( 0+ Y_E \right)  A_{\mu} \right]{e_R}\,,
+\end{align}
+tenemos que
+\begin{align}
+\label{eq:lazlf}
+    \mathcal{L}_{A Z L}
+=&e \widetilde{L}\cdot\overline{\sigma}^\mu\left(\cot\theta_W T_3-\tan\theta_W\,Y_L\right)L Z_\mu
+       +e \widetilde{L}\cdot\gamma^\mu \widehat{Q} L A_\mu+\mathcal{L}_E\nonumber\\
+=&e \widetilde{L}\cdot\overline{\sigma}^\mu\left[\cot\theta_W T_3-\tan\theta_W\left(\widehat{Q}-T_3\right)\right]L Z_\mu
+       +e \widetilde{L}\cdot\overline{\sigma}^\mu \widehat{Q} L A_\mu + \mathcal{L}_E\nonumber\\
+=&\phantom{+}\frac{e}{2c_W s_W} \widetilde{L}\cdot\overline{\sigma}^\mu\left[ \tau_3-2s_W^2\widehat{Q}\right]L Z_\mu
+       +e \widetilde{L}\cdot\overline{\sigma}^\mu \widehat{Q} L A_\mu \nonumber\\
+&+\frac{e}{2c_W s_W} \left( e_R \right)^{\dagger}{\sigma}^\mu\left[ 0-2s_W^2\widehat{Q}\right]e_R\, Z_\mu
+       +e \left( e_R \right)^{\dagger}{\sigma}^\mu \widehat{Q} e_R\, A_\mu \,.
+\end{align}
+Para mostrar explícitamente que el neutrino izquierdo no se acopla al fotón y que la QED se puede recuperar, 
+debemos encontrar los valores numérico para $Y_L$ y $Y_E$. Partiendo de la relación de Gell-Mann--Nishijima \eqref{eq:gn}
+\begin{align}
+  \widehat{Q}L=&(T_3+Y_L)L \nonumber\\
   \begin{pmatrix}
     Q_\nu & 0\\
     0  & Q_e
-  \end{pmatrix}L=  \begin{pmatrix}
-    0 & 0\\
-    0  & -1
-  \end{pmatrix}L
-\,.
+  \end{pmatrix}
+  \begin{pmatrix}
+    \nu_L\\
+    e_L
+  \end{pmatrix}=  
+  \begin{pmatrix}
+   Q_{\nu} \nu_L\\
+   Q_e e_L
+  \end{pmatrix}
+= & \begin{pmatrix}
+    \frac{1}{2} + Y_L & 0\\
+    0  & -\frac{1}{2}+Y_L
+  \end{pmatrix}  \begin{pmatrix}
+    \nu_L\\
+    e_L
+  \end{pmatrix} \,,
 \end{align}
-La ec. \eqref{eq:gn}, se conoce como la relación Gell-Mann--Nishijima, y establece la condición que se debe satisfacer para obtener apropiadamente la QED a partir de la interacción electrodébil asociada al grupo semisimple $SU(2)_L\times  U(1)_Y$.
-De esta forma
+podemos establecer que
 \begin{align}
-    \mathcal{L}_{A Z L}
-=&e \widetilde{L}\cdot\overline{\sigma}^\mu\left(\cot\theta_W T_3-\tan\theta_W\,Y_L\right)L Z_\mu
-       +e \widetilde{L}\cdot\gamma^\mu \widehat{Q}_L L A_\mu\nonumber\\
-=&e \widetilde{L}\cdot\overline{\sigma}^\mu\left[\cot\theta_W T_3-\tan\theta_W\left(\widehat{Q}_L-T_3\right)\right]L Z_\mu
-       +e \widetilde{L}\cdot\overline{\sigma}^\mu \widehat{Q}_L L A_\mu\nonumber\\
-=&\frac{e}{2c_W s_W} \widetilde{L}\cdot\overline{\sigma}^\mu\left[ \tau_3-2s_W^2\widehat{Q}_L\right]L Z_\mu
-       +e \widetilde{L}\cdot\overline{\sigma}^\mu \widehat{Q}_L L A_\mu\,.
+  Q_{\nu}&=0=\frac{1}{2}+Y_L\,, & Q_e&=-1=-\frac{1}{2}+Y_L\,,
 \end{align}
+lo cual  requiere que
+\begin{align}
+  Y_L=\frac{1}{2}\,.
+\end{align}
+De la misma forma
+\begin{align}
+  Y_E=-1\,.
+\end{align}
+
+Entonces
+\begin{align}
+     \mathcal{L}^{\text{int}}_{\text{QED}}=&e \widetilde{L}\cdot\overline{\sigma}^\mu \widehat{Q} L A_\mu+
+e \left( e_R \right)^{\dagger}{\sigma}^\mu \widehat{Q} e_R\, A_\mu \nonumber\\
+=&-e \left[ \left( e_L \right)^{\dagger}\overline{\sigma}^\mu \ e_L + \left( e_R \right)^{\dagger}{\sigma}^\mu \ e_R  \right]A_{\mu}\,,
+\end{align}
+y la interacción de la electrodinámica cuántica se recupera satisfactoriamente.
+
+Resumiendo
+\begin{align}
+    i \widetilde{L}\cdot\overline{\sigma}^\mu\mathcal{D}_\mu L+  i \left( e_R \right)^{\dagger}{\sigma}^\mu\mathcal{D}_\mu e_R=&\mathcal{L}_{\text{kinetic}}+
+\mathcal{L}_{WL}+ \mathcal{L}_{A Z L}\,,
+\end{align}
+dados en las ecs.~\eqref{eq:knt}, \eqref{eq:lwl} y \eqref{eq:lazlf}. Para obtener la interacción reqierida de los $W^{\pm}$ con el $\nu_L$ y $e_L$, el modelo gauge local $\operatorname{SU}(2)_L\times \operatorname{U}(1)_Y$ predice la existencia de nuevas interacciones con un nuevo bosón gauge $Z_{\mu}$ dadas por
+\begin{align}
+\mathcal{L}_{ZL}=&\mathcal{L}_{AZL}-\mathcal{L}^{\text{int}}_{\text{QED}} \nonumber\\
+=&\frac{e}{2c_W s_W} \widetilde{L}\cdot\overline{\sigma}^\mu\left[ \tau_3-2s_W^2\widehat{Q}\right]L Z_\mu
++\frac{e}{2c_W s_W} \left( e_R \right)^{\dagger}{\sigma}^\mu\left[ 0-2s_W^2\widehat{Q}\right]e_R\, Z_\mu\,.
+\end{align}
+Una predicción bastante concreta es que los neutrinos izquierdos se acoplan con el nuevo bosón gage neutro a través del término de interacción
+\begin{align}
+\mathcal{L}_{Z\nu}=  \frac{e}{4c_W s_W}\left( \nu_L \right)^{\dagger} \overline{\sigma}^{\mu} \nu_L Z_\mu\,.
+\end{align}
+Note que a este nivel el bosón gauge $Z_{\mu}$ es no masivo. Sin embargo para explicar porque dicha interacción no había sido observada al momento de su predicción se tiene que asumir que el bosón gauge $Z_{\mu}$ debe ser muy masivo para que la interacción sea de corto alcance y por consiguiente suprimida con respecto a la de bosones gauge sin masa. 
+
+Por lo tanto, para obtener una teoría realista se debe adicionar un mecanismo de ruptura espontánea de simetría para dar masa a los tres bosones $W_{\mu}^{+}$, $W_{\mu}^{-}$ y $Z_{\mu}$. Dicho mecanismo será discutido en la Sección~\ref{sec:rupt-espont-de}.
+
+
+
+\section{Interacciones fermiónicas para la primera generación}
+
+
 Generalizando para los otros campos, tenemos
 \begin{align}
   \label{eq:azl}
-      \mathcal{L}_{A Z L}\to\sum_{F=Q,L,e_R,d_R,u_R}\frac{e}{2c_W s_W}\widetilde{F}\cdot\overline{\sigma}^{\mu}\left[ \tau_3-2s_W^2\widehat{Q}_L\right]F Z_\mu
-       +e\widetilde{F}\cdot\overline{\sigma}^\mu \widehat{Q}_L F A_\mu\,.
+      \mathcal{L}_{A Z L}\to\sum_{F=Q,L,e_R,d_R,u_R}\frac{e}{2c_W s_W}\widetilde{F}\cdot\overline{\sigma}^{\mu}\left[ \tau_3-2s_W^2\widehat{Q}\right]F Z_\mu
+       +e\widetilde{F}\cdot\overline{\sigma}^\mu \widehat{Q} F A_\mu\,.
 \end{align}
 con
 \begin{align}
   \widetilde{F}\cdot\overline{\sigma}^{\mu} \to F^{\dagger}\sigma^{\mu} \qquad \text{for}\quad F=e_R,d_R,u_R\,.
 \end{align}
 
+
+
+
+Generalizando para todos los campos:
+\begin{align}
+  \label{eq:wl}
+   \mathcal{L}_{W L}\to&\frac{g_2}{\sqrt{2}}\left[{\nu_L}^{\dagger}\overline{\sigma}^\mu e_LW_\mu^++
+{u_L}^{\dagger}\overline{\sigma}^\mu d_LW_\mu^++\text{h.c}\right]\,.
+\end{align}
+
+
+
 Usando los acoplamientos gauge de los quarks con los gluones \eqref{eq:qcdgauge}, de los fermiones con el $W_\mu^\pm$  \eqref{eq:wl} y  con $Z_\mu$ y $A_\mu$ \eqref{eq:azl} para expandir $\mathcal{L}_{\text{fermion}}$ en \eqref{eq:lfermion}, tenemos
 \begin{align}
 \label{eq:sm1g2}
  \mathcal{L}_{\text{fermion}}=&i \widetilde{Q}\cdot \overline{\sigma}^\mu\mathcal{D}_\mu Q+i \widetilde{L}\cdot\overline{\sigma}^\mu\mathcal{D}_\mu L+
-i{e_R}^{\dagger}\sigma^\mu\mathcal{D}_\mu {e_R}+i{d_R}^{\dagger}\sigma^\mu\mathcal{D}_\mu {d_R}+i{u_R}^{\dagger}\sigma^\mu\mathcal{D}_\mu {u_R}\nonumber\\
+i\left(e_R \right)^{\dagger}\sigma^\mu\mathcal{D}_\mu {e_R}+i{d_R}^{\dagger}\sigma^\mu\mathcal{D}_\mu {d_R}+i{u_R}^{\dagger}\sigma^\mu\mathcal{D}_\mu {u_R}\nonumber\\
   =&i{u_L}^{\dagger}\overline{\sigma}^\mu\partial_\mu u_L+i{u_R}^{\dagger}\sigma^\mu{\partial}_\mu {u_R}+i{d_L}^{\dagger}\overline{\sigma}^\mu\partial_\mu d_L+i{d_R}^{\dagger}\sigma^\mu{\partial}_\mu {d_R}\nonumber\\
 &+i{e_L}^{\dagger}\overline{\sigma}^\mu{\partial}_\mu e_L
-+i{e_R}^{\dagger}\sigma^\mu{\partial}_\mu {e_R}+i{\nu_L}^{\dagger}\overline{\sigma}^\mu{\partial}_\mu \nu_L\nonumber\\
++i\left(e_R \right)^{\dagger}\sigma^\mu{\partial}_\mu {e_R}+i{\nu_L}^{\dagger}\overline{\sigma}^\mu{\partial}_\mu \nu_L\nonumber\\
 &+g_s \left({u_L}^{\dagger}\overline{\sigma}^\mu\frac{\lambda^a}{2}u_L+{u_R}^{\dagger}{\sigma}^{\mu}\frac{\lambda^a}{2}u_R
 +{d_L}^{\dagger}\overline{\sigma}^{\mu}\frac{\lambda^a}{2}d_L+ {d_R}^{\dagger}\sigma^{\mu}\frac{\lambda^a}{2}d_R\right)G_{\mu}^a\nonumber\\
-&+\frac{g}{\sqrt{2}}\left[{\nu_L}^{\dagger}\overline{\sigma}^\mu e_LW_\mu^++
+&+\frac{g_2}{\sqrt{2}}\left[{\nu_L}^{\dagger}\overline{\sigma}^\mu e_LW_\mu^++
 {u_L}^{\dagger}\overline{\sigma}^\mu d_LW_\mu^++\text{h.c}\right]\nonumber\\
 &+\sum_{F=Q,L,e_R,d_R,u_R}\frac{e}{2c_W s_W}\widetilde{F}\cdot\overline{\sigma}^\mu\left[ \tau_3-2s_W^2\widehat{Q}_L\right]F Z_\mu\nonumber\\
-&+e\left({e_L}^{\dagger}\overline{\sigma}^\mu \widehat{Q}_e e_L+{e_R}^{\dagger}\sigma^\mu \widehat{Q}_e e_R\right.\nonumber\\
+&+e\left({e_L}^{\dagger}\overline{\sigma}^\mu \widehat{Q}_e e_L+\left(e_R \right)^{\dagger}\sigma^\mu \widehat{Q}_e e_R\right.\nonumber\\
   &\qquad\left.+{u_L}^{\dagger}\overline{\sigma}^\mu \widehat{Q}_u u_L+{u_R}^{\dagger}{\sigma}^\mu \widehat{Q}_u u_R
 +{d_L}^{\dagger}\overline{\sigma}^\mu \widehat{Q}_d d_L+{d_R}^{\dagger}\sigma^\mu \widehat{Q}_d d_R\right) A_\mu\,.
 \end{align}
 \end{frame}
 
 
-\subsection{Ruptura espontánea de simetría}
+\section{Ruptura espontánea de simetría}
+\label{sec:rupt-espont-de}
 
 \begin{frame}[fragile,allowframebreaks]
 Todas las partículas en este lagrangiano son no masivas. Esto funciona sólo para los gluones y uno de los bosones gauge abelianos, pero no es realista para los bosones gauge cargados. 
@@ -691,13 +832,13 @@ De la ec.~\eqref{eq:w22}
 \end{align}
 $\mathcal{D}_\mu$ corresponde a la matrix $2\times  2$, dada en la ec.~\eqref{eq:d22}, con el reemplazo
 \begin{align}
-\mp\frac{i}{2}g W^3_\mu\to  -i\left(\pm\frac{1}{2}g W^3_\mu+g'Y B_\mu\right)
+\mp\frac{i}{2}g_2 W^3_\mu\to  -i\left(\pm\frac{1}{2}g_2 W^3_\mu+{g_1}Y B_\mu\right)
 \end{align}
 
 \begin{align}
  \mathcal{D}_\mu &=  \begin{pmatrix}
-    \partial_\mu-i\left(\frac{1}{2}g W^3_\mu+{\color{red}g' Y B_\mu}\right)&-\frac{i}{\sqrt{2}}g W^+_\mu\\
-    -\frac{i}{\sqrt{2}}g W^-_\mu&\partial_\mu-i\left(-\frac{1}{2}g W^3_\mu+{\color{red}g'Y B_\mu}\right)
+    \partial_\mu-i\left(\frac{1}{2}g_2 W^3_\mu+{\color{red}{g_1} Y B_\mu}\right)&-\frac{i}{\sqrt{2}}g_2 W^+_\mu\\
+    -\frac{i}{\sqrt{2}}g_2 W^-_\mu&\partial_\mu-i\left(-\frac{1}{2}g_2 W^3_\mu+{\color{red}{g_1}Y B_\mu}\right)
   \end{pmatrix}.
 \end{align}
 
@@ -708,7 +849,7 @@ Entonces
     H(x)+v
   \end{pmatrix}=\begin{pmatrix}
     -\frac{i}{\sqrt{2}}gW_\mu^+(H+v)\\
-    \partial_\mu H-i\left(-\frac{1}{2}gW^3_\mu+{\color{red}g'Y_{\widetilde{\Phi}} B_\mu}\right)(H+v)
+    \partial_\mu H-i\left(-\frac{1}{2}gW^3_\mu+{\color{red}{g_1}Y_{\widetilde{\Phi}} B_\mu}\right)(H+v)
   \end{pmatrix}.
 \end{align}
 
@@ -717,31 +858,31 @@ De modo que, como se mostro en
 \begin{align}
   \mathcal{L}_{WBH}=&\frac{1}{2}\widetilde{\begin{pmatrix}
     -\frac{i}{\sqrt{2}}g{W^\mu}^+(H+v)\\
-    \partial^\mu H-i\left(-\frac{1}{2}gW_3^\mu+g'Y_{\widetilde{\Phi}} B^\mu\right)(H+v)
+    \partial^\mu H-i\left(-\frac{1}{2}gW_3^\mu+{g_1}Y_{\widetilde{\Phi}} B^\mu\right)(H+v)
   \end{pmatrix}}\cdot
    \begin{pmatrix}
     -\frac{i}{\sqrt{2}}gW_\mu^+(H+v)\\
-    \partial_\mu H-i\left(-\frac{1}{2}gW^3_\mu+g'Y_{\widetilde{\Phi}} B_\mu\right)(H+v)
+    \partial_\mu H-i\left(-\frac{1}{2}gW^3_\mu+{g_1}Y_{\widetilde{\Phi}} B_\mu\right)(H+v)
   \end{pmatrix}-V(H)\nonumber\\
 =&\frac{1}{2}\begin{pmatrix}
-    \partial^\mu H+i\left(-\frac{1}{2}gW_3^\mu+g'Y_{\widetilde{\Phi}} B^\mu\right)(H+v)\\
+    \partial^\mu H+i\left(-\frac{1}{2}gW_3^\mu+{g_1}Y_{\widetilde{\Phi}} B^\mu\right)(H+v)\\
     \frac{i}{\sqrt{2}}g{W^\mu}^-(H+v)\\
   \end{pmatrix}\cdot
   \begin{pmatrix}
     -\frac{i}{\sqrt{2}}gW_\mu^+(H+v)\\
-    \partial_\mu H-i\left(-\frac{1}{2}gW^3_\mu+g'Y_{\widetilde{\Phi}} B_\mu\right)(H+v)
+    \partial_\mu H-i\left(-\frac{1}{2}gW^3_\mu+{g_1}Y_{\widetilde{\Phi}} B_\mu\right)(H+v)
   \end{pmatrix}-V(H)\nonumber\\
   =&\frac{1}{4}g^2{W^\mu}^-W_\mu^+(H+v)^2-V(H)\nonumber\\
-  &+\frac{1}{2}\left[\partial^\mu H+i\left(-\tfrac{1}{2}gW_3^\mu+g'Y_{\widetilde{\Phi}} B^\mu\right)(H+v)\right]
+  &+\frac{1}{2}\left[\partial^\mu H+i\left(-\tfrac{1}{2}gW_3^\mu+{g_1}Y_{\widetilde{\Phi}} B^\mu\right)(H+v)\right]
   \times\nonumber\\
-  &\qquad\left[\partial_\mu H-i\left(-\tfrac{1}{2}gW^3_\mu+g'Y_{\widetilde{\Phi}} B_\mu\right)(H+v)\right]\nonumber\\
+  &\qquad\left[\partial_\mu H-i\left(-\tfrac{1}{2}gW^3_\mu+{g_1}Y_{\widetilde{\Phi}} B_\mu\right)(H+v)\right]\nonumber\\
  =&-V(H)
   +\frac{1}{4}g^2{W^\mu}^-W_\mu^+(H+v)^2+\nonumber\\
-  &+\frac{1}{2}\partial^\mu H\partial_\mu H+\frac{1}{2}\left(-\tfrac{1}{2}gW_3^\mu+{\color{red}g'Y_{\widetilde{\Phi}} B^\mu}\right)^2(H+v)^2
+  &+\frac{1}{2}\partial^\mu H\partial_\mu H+\frac{1}{2}\left(-\tfrac{1}{2}gW_3^\mu+{\color{red}{g_1}Y_{\widetilde{\Phi}} B^\mu}\right)^2(H+v)^2
 \end{align}
 donde la última línea corresponde a la magnitud del ``número'' complejo: 
 \begin{align}
-\left[\partial_\mu H-i\left(-\tfrac{1}{2}gW^3_\mu+g'Y_{\widetilde{\Phi}} B_\mu\right)(H+v)\right]
+\left[\partial_\mu H-i\left(-\tfrac{1}{2}gW^3_\mu+{g_1}Y_{\widetilde{\Phi}} B_\mu\right)(H+v)\right]
 \end{align}
 
 \end{frame}
@@ -755,7 +896,7 @@ Entonces
 \end{align}
 donde
 \begin{align}
-  \mathcal{L}_{ZAH}=\frac{1}{2}&\left(\tfrac{1}{4}g^2W_3^\mu W^3_\mu-\tfrac{1}{2}gg'Y_{\widetilde{\Phi}} W_3^\mu B_\mu-\tfrac{1}{2}gg'Y_{\widetilde{\Phi}} W_3^\mu B_\mu+{g'}^2Y_{\widetilde{\Phi}} ^2B^\mu B_\mu\right)\times\nonumber\\
+  \mathcal{L}_{ZAH}=\frac{1}{2}&\left(\tfrac{1}{4}g^2W_3^\mu W^3_\mu-\tfrac{1}{2}g{g_1}Y_{\widetilde{\Phi}} W_3^\mu B_\mu-\tfrac{1}{2}g{g_1}Y_{\widetilde{\Phi}} W_3^\mu B_\mu+{{g_1}}^2Y_{\widetilde{\Phi}} ^2B^\mu B_\mu\right)\times\nonumber\\
 &\left(H^2+2vH+v^2\right)
 \end{align}
 Haciendo $Y_{\widetilde{\Phi}} =1/2$ como en la ec.~\eqref{eq:lhyp},
@@ -765,8 +906,8 @@ Haciendo $Y_{\widetilde{\Phi}} =1/2$ como en la ec.~\eqref{eq:lhyp},
     W^\mu_3 & B^\mu
   \end{pmatrix}
   \begin{pmatrix}
-    g^2&-gg'\\
-    -gg'&{g'}^2
+    g^2_2&-g_2{g_1}\\
+    -g_2{g_1}&g_1^2
   \end{pmatrix}
   \begin{pmatrix}
     W^3_\mu\\
@@ -780,12 +921,12 @@ Sea
     \cos\theta_W & \sin\theta_W\\
     -\sin\theta_W& \cos\theta_W
   \end{pmatrix}=
-  \frac{1}{\sqrt{g^2+{g'}^2}}\begin{pmatrix}
-    g   & g'\\
-    -g' & g
+  \frac{1}{\sqrt{g^2_2+g_1^2}}\begin{pmatrix}
+    g_2   & {g_1}\\
+    -{g_1} & g_2
   \end{pmatrix},
 \end{equation}
-con $\tan\theta_W=g'/g$, tal que $g\sin\theta_W=g'\cos\theta_W$, como en la ec.~\eqref{eq:82qft}. Note que $V$ es una matrix ortogonal que satisface $VV^T=V^TV=\mathbf{1}$. Si (ver ec.~\eqref{eq:81qft}),
+con $\tan\theta_W={g_1}/g$, tal que $g\sin\theta_W={g_1}\cos\theta_W$, como en la ec.~\eqref{eq:82qft}. Note que $V$ es una matrix ortogonal que satisface $VV^T=V^TV=\mathbf{1}$. Si (ver ec.~\eqref{eq:81qft}),
 \begin{align}
   \begin{pmatrix}
     W^3_\mu\\
@@ -811,8 +952,8 @@ entonces
     W^{3\mu} & B^\mu
   \end{pmatrix}VV^T
   \begin{pmatrix}
-    g^2&-gg'\\
-    -gg'&{g'}^2
+    g^2&-g_2{g_1}\\
+    -g_2{g_1}&g_1^2
   \end{pmatrix}VV^T
   \begin{pmatrix}
     W^3_\mu\\
@@ -824,8 +965,8 @@ entonces
     Z^\mu & A^\mu
   \end{pmatrix}\left[V^T
   \begin{pmatrix}
-    g^2&-gg'\\
-    -gg'&{g'}^2
+    g_2^2&-g_2{g_1}\\
+    -g_2{g_1}&g_1^2
   \end{pmatrix}V\right]
   \begin{pmatrix}
     Z_\mu\\
@@ -836,45 +977,45 @@ entonces
 \begin{align}
   V^T
   \begin{pmatrix}
-    g^2&-gg'\\
-    -gg'&{g'}^2
-  \end{pmatrix}V=&\frac{1}{g^2+{g'}^2}
+    g_2^2&-g_2{g_1}\\
+    -g_2{g_1}&{{g_1}}^2
+  \end{pmatrix}V=&\frac{1}{g_2^2+{{g_1}}^2}
   \begin{pmatrix}
-    g^3+g{g'}^2 & -g^2g'-{g'}^3\\
-+g^2g'-g^2g'    &-g{g'}^2+g{g'}^2
+    g_2^3+g{{g_1}}^2 & -g_2^2{g_1}-{{g_1}}^3\\
++g_2^2{g_1}-g_2^2{g_1}    &-g_2 g_1^2+g_2 g_1^2
   \end{pmatrix}
 \begin{pmatrix}
-    g   & g'\\
-    -g' & g
+    g_2   & {g_1}\\
+    -{g_1} & g_2
   \end{pmatrix}\nonumber\\
-=&\frac{1}{g^2+{g'}^2}
+=&\frac{1}{g_2^2+{{g_1}}^2}
   \begin{pmatrix}
-    g^3+g{g'}^2 & -g^2g'-{g'}^3\\
+    g_2^3+g_2 g_1^2 & -g_2^2{g_1}-g_1^3\\
     0   &0
   \end{pmatrix}
 \begin{pmatrix}
-    g   & g'\\
-    -g' & g
+    g_2   & {g_1}\\
+    -{g_1} & g_2
   \end{pmatrix}\nonumber\\
-=&\frac{1}{g^2+{g'}^2}
+=&\frac{1}{g_2^2+{{g_1}}^2}
   \begin{pmatrix}
-    g^4+g^2{g'}^2+g^2{g'}^2+{g'}^4 & g^3g'+g{g'}^3-g^3g'-g{g'}^3\\
+    g_2^4+g^2 g_1^2+g_2^2 g_1^2+g_1^4 & g_2^3{g_1}+g_2 g_1^3-g_2^3{g_1}-g_2 g_1^3\\
     0    &0
   \end{pmatrix}\nonumber\\
 =&\begin{pmatrix}
-    g^2+{g'}^2 & 0\\
+    g_2^2+g_1^2 & 0\\
     0    &0
   \end{pmatrix}
 \end{align}
 
 
 \begin{align}
-  \mathcal{L}_{ZAH}&=\frac{1}{2}\left(\frac{g^2+{g'}^2}{4}\right)Z^\mu Z_\mu
+  \mathcal{L}_{ZAH}&=\frac{1}{2}\left(\frac{g_2^2+g_1^2}{4}\right)Z^\mu Z_\mu
   \left(H^2+2vH+v^2\right)\nonumber\\
-  &=\frac{1}{2}\left(\frac{g}{2}\right)^2\left(1+\tan^2\theta_W\right)Z^\mu Z_\mu\left(H^2+2vH+v^2\right)\nonumber\\
-  &=\frac{1}{2}\left(\frac{g}{2\cos\theta_W}\right)^2Z^\mu Z_\mu\left(H^2+2vH+v^2\right)\nonumber\\
-  &=\frac{1}{2}\left(\frac{gv}{2\cos\theta_W}\right)^2Z^\mu Z_\mu+\frac{1}{2}\left(\frac{g}{2\cos\theta_W}\right)^2Z^\mu Z_\mu H^2\nonumber\\
-  &+\left(\frac{g}{2\cos\theta_W}\right)^2vZ^\mu Z_\mu H
+  &=\frac{1}{2}\left(\frac{g_2}{2}\right)^2\left(1+\tan^2\theta_W\right)Z^\mu Z_\mu\left(H^2+2vH+v^2\right)\nonumber\\
+  &=\frac{1}{2}\left(\frac{g_2}{2\cos\theta_W}\right)^2Z^\mu Z_\mu\left(H^2+2vH+v^2\right)\nonumber\\
+  &=\frac{1}{2}\left(\frac{g_2v}{2\cos\theta_W}\right)^2Z^\mu Z_\mu+\frac{1}{2}\left(\frac{g}{2\cos\theta_W}\right)^2Z^\mu Z_\mu H^2\nonumber\\
+  &+\left(\frac{g_2}{2\cos\theta_W}\right)^2vZ^\mu Z_\mu H
 \end{align}
 Retornando a la ec.~(\ref{eq:96qft}), tenemos
 tenemos
@@ -882,8 +1023,8 @@ tenemos
   \label{eq:lwbhfin}
   \mathcal{L}_{W B H}=&\widetilde{\left( \mathcal{D}_\mu{\Phi} \right)}\cdot\mathcal{D}^\mu\Phi-\mu^2\widetilde{\Phi}\cdot\Phi-\lambda \left( \widetilde{\Phi}\cdot\Phi \right)^2 \nonumber\\
   =&\frac{1}{2}\partial^\mu H\partial_\mu H-V(H)\nonumber\\
-&+\frac{1}{4}g^2{W^\mu}^-W_\mu^+H^2+\frac{1}{2}vg^2{W^\mu}^-W_\mu^+H\nonumber\\
-  &+\frac{1}{2}\left(\frac{g}{2\cos\theta_W}\right)^2Z^\mu Z_\mu H^2+\left(\frac{g}{2\cos\theta_W}\right)^2v\,Z^\mu Z_\mu H\nonumber\\
+&+\frac{1}{4}g_2^2{W^\mu}^-W_\mu^+H^2+\frac{1}{2}vg_2^2{W^\mu}^-W_\mu^+H\nonumber\\
+  &+\frac{1}{2}\left(\frac{g_2}{2\cos\theta_W}\right)^2Z^\mu Z_\mu H^2+\left(\frac{g_2}{2\cos\theta_W}\right)^2v\,Z^\mu Z_\mu H\nonumber\\
   &+\frac{1}{2}m_W^2{W^\mu}^-W_\mu^++\frac{1}{2}m_W^2{W^\mu}^-W_\mu^+ +\frac{1}{2}m_Z^2Z^\mu Z_\mu\,,
 \end{align}
 donde:
@@ -891,9 +1032,9 @@ donde:
 \begin{itemize} %noinstiki
 \item Masas gauge:
 \begin{equation}
-  m_W=\frac{gv}{2}
+  m_W=\frac{g_2v}{2}
   \qquad 
-  m_Z=\frac{gv}{2\cos\theta_W},
+  m_Z=\frac{g_2v}{2\cos\theta_W},
 \end{equation}
 y
 \begin{equation}
@@ -928,7 +1069,7 @@ con
 tal que
 \begin{equation}
   \label{eq:tw}
-  g\sin\theta_W=g'\cos\theta_W\,.
+  g_2\sin\theta_W={g_1}\cos\theta_W\,.
 \end{equation}
 \end{itemize} %noinstiki
 %instiki:
@@ -1033,7 +1174,7 @@ Recopilando los resultados para $\mathcal{L}_{WBH}$ \eqref{eq:lwbhfin}, $\mathca
 &+\left(m_W^2{W^\mu}^-W_\mu^++\frac{1}{2}m_Z^2Z^\mu Z_\mu\right)\left(1+2\frac{H}{v}+\frac{H^2}{v^2}\right)\nonumber\\
 &+g_s\sum_q\bar{q}\gamma^\mu\left(\frac{\lambda_a}{2}\right)q\,G_\mu^a+e\sum_f \bar{f}\gamma^\mu Q_f f A_\mu\nonumber\\
 &+\frac{e}{2\cos\theta_W\sin\theta_W}\sum_{f}\bar{f}\gamma^\mu(v_f-a_f\gamma_5)f Z_\mu\nonumber\\
-&+\frac{g}{2\sqrt{2}}\left[\sum_{f}\bar{f}\gamma^\mu(1-\gamma_5)f' W_\mu^++\text{h.c}\right]
+&+\frac{g_2}{2\sqrt{2}}\left[\sum_{f}\bar{f}\gamma^\mu(1-\gamma_5)f' W_\mu^++\text{h.c}\right]
 +\sum_f \frac{m_f}{v} \bar{f}f H\nonumber\\
 &\phantom{- \frac{1}{4}\left(g_s\widetilde{G}^{\mu\nu}_af_{a d e}G^d_\mu G^e_\nu
     +g_sf^{a b c}G_b^\mu G_c^\nu\widetilde{G}_{\mu\nu}^a
