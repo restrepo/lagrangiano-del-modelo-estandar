@@ -1094,12 +1094,14 @@ donde:
 \begin{itemize} %noinstiki
 \item Masas gauge:
 \begin{equation}
+\label{eq:mwz}
   m_W=\frac{g_2v}{2}
   \qquad 
   m_Z=\frac{g_2v}{2\cos\theta_W},
 \end{equation}
 y
 \begin{equation}
+\label{eq:mwzw}
   m_Z=\frac{m_W}{\cos\theta_W}.
 \end{equation}
 \item
@@ -1272,10 +1274,9 @@ que
 &+\tfrac{1}{2}\partial^\mu H\partial_\mu H
 -\frac{1}{2}m_H^2H^2\left(1+\frac{H}{v}+\frac{H^2}{4v^2}\right)\nonumber\\
 &+\left(m_W^2{W^\mu}^-W_\mu^++\frac{1}{2}m_Z^2Z^\mu Z_\mu\right)\left(1+2\frac{H}{v}+\frac{H^2}{v^2}\right)\nonumber\\
-&+g_s\sum_f  \widetilde{f}\cdot\overline{\sigma}^\mu \left( \frac{\lambda_a}{2} \right) f\, G_\mu^a+e\sum_f  \widetilde{f}\cdot\overline{\sigma}^\mu Q_f f\, A_\mu \nonumber\\
+&+g_s\sum_q  \widetilde{q}\cdot\overline{\sigma}^\mu \left( \frac{\lambda_a}{2} \right) q\, G_\mu^a+e\sum_f  \widetilde{f}\cdot\overline{\sigma}^\mu Q_f f\, A_\mu \nonumber\\
 &+\frac{e}{2\cos\theta_W \sin\theta_W} \sum_f\widetilde{f}\cdot\overline{\sigma}^{\mu}\left[t_f-2s_W^2Q_f\right]f Z_\mu \nonumber\\
-&+\frac{g_2}{\sqrt{2}}\left[\sum_{f=\nu,u}(f_L)^\dagger \overline{\sigma}^\mu f'_LW_\mu^++
-(u_L)^\dagger \overline{\sigma}^\mu d_LW_\mu^++\text{h.c}\right]
+&+\frac{g_2}{\sqrt{2}}\left[\sum_{f=\nu,u}(f_L)^\dagger \overline{\sigma}^\mu f'_LW_\mu^++\text{h.c}\right]
 +\sum_{g=e,u,d} \frac{m_g}{v} \left[ \left( g_L \right)^{\dagger} g_R+\text{h.c} \right]H\nonumber\\
 %\end{align*}
 %\begin{align*}
@@ -1840,20 +1841,55 @@ El Lagrangiano del Modelo contiene los parámetros $g_s,g,\sin\theta_W,v,m_H$. A
   m_Z&=91.1876(20)\,\text{GeV}\nonumber\\
   \alpha_s(m_Z)&=0.1176(20)\,.
 \end{align}
-donde $\alpha_i=g_i^2/(4\pi)$. 
-Esto tiene la ventaja de usar las tres cantidades experimentales mejor medidas. Las relaciones
+donde $\alpha_i=g_i^2/(4\pi)$ con $\alpha_3=\alpha_s$. Esto tiene la ventaja de usar las tres cantidades experimentales mejor medidas.
+
+
+Para relacionar la constante de Fermi, $G_F$, con los parámetros del Lagrangiano del Modelo Estándar (ME), consideremos el decaimiento del muón como un proceso en el cual el muón decae directamente a tres fermiones. Entonces dicho proceso estaría explicado por un Lagrangiano no fundamental
+\begin{align}
+  \mathcal{L}_{\mu}=\frac{G_F}{\sqrt{2}}\left[\bar{\nu}_\mu\gamma^\mu(1-\gamma_5)\mu\right]\left[\bar{e}\gamma_\mu(1-\gamma_5)\nu_e\right]\,,
+\end{align}
+donde $G_F$ tiene las dimensiones de uno sobre masa al cuadrado. 
+
+Construyendo la misma interacción a partir del Lagrangiano del ME
+\begin{align}
+  \mathcal{L}=&\frac{g_2^2}{8}\left[\bar{\nu}_\mu\gamma^\mu(1-\gamma_5)\mu\right] \left[ W_{\mu}^{+}W^{\mu-} \right]
+  \left[\bar{e}\gamma^\nu(1-\gamma_5)\nu_e\right]\,.
+\end{align}
+Por lo tanto la contracción apropiada de $\left[ W_{\mu}^{+}W^{\mu-} \right]$ debe generar el coeficiente inverso de masa al cuadrado:
+\begin{align}
+  \left[ W_{\mu}^{+}W^{\mu-} \right]\to \frac{1}{m_W^2}\,.
+\end{align}
+Una deducción más rigurosa se realizará en la Sección~\ref{sec:deca-debil-medi}. Por lo tanto
+\begin{align}
+    \frac{G_F}{\sqrt{2}}=&\frac{g^2}{8m_W^2}\nonumber\\
+=& \frac{e^2}{8m_W^2\sin^2\theta_W} \nonumber\\
+=& \frac{4\pi e^2}{8(4 \pi) m_W^2\sin^2\theta_W} \nonumber\\
+=& \frac{\pi\alpha }{2 m_W^2\sin^2\theta_W} \nonumber\\
+m_{W}^2\sin^2\theta_W=&\frac{\sqrt{2}\pi\alpha }{2 G_F} \nonumber\\
+m_{W}^2\sin^2\theta_W=&\frac{\pi\alpha }{\sqrt{2} G_F} \,.
+\end{align}
+
+Además, de la ec.~\eqref{eq:mwzw}
+\begin{align}
+  \cos^2\theta_W=&\frac{m_W^2}{m_Z^2} \nonumber\\
+  1-\sin^2\theta_W=&\frac{m_W^2}{m_Z^2} \nonumber\\
+  \sin^2\theta_W=&1-\frac{m_W^2}{m_Z^2} \,.
+\end{align}
+
+
+De esta forma, las relaciones
 \begin{align}
   \sin^2\theta_W=&1-\frac{m_W^2}{m_Z^2},&m_W^2\sin^2\theta_W=\frac{\pi\alpha}{\sqrt{2}G_F}
 \end{align}
-determinan entonces
+permiten determinar entonces que
 \begin{align}
-  \sin^2\theta_W=&0.212\nonumber\\
-  m_W=&80.94\,\text{GeV}
+  \sin^2\theta_W\approx &0.21\nonumber\\
+  m_W\approx &81\,\text{GeV}
 \end{align}
 Si se usa $\alpha(M_Z)\approx1/128$ entonces
 \begin{align}
-   \sin^2\theta_W=&0.233\nonumber\\
-  m_W=&79.84\,\text{GeV}
+   \sin^2\theta_W\approx &0.23\nonumber\\
+  m_W\approx &80\,\text{GeV}
 \end{align}
 Los valores medidos son $\sin^2\theta_W=0.23149(13)$, $m_W=80.398(25)\,$GeV, y pueden ser reproducidos por el modelo estándar una vez se tienen en cuenta correcciones perturbativas inducidas por partículas virtuales.
 
@@ -1943,6 +1979,7 @@ El ME también tiene una predicción concreta para la amplitud del $Z$ a neutrin
 mientras que el valor medido experimentalmente para esta cantidad $5.942(16)$ \cite{a}, es una evidencia muy fuerte de que sólo exiten tres neutrinos livianos. 
 \end{frame}
 \subsection{Decaimientos débiles mediados por corrientes cargadas}
+\label{sec:deca-debil-medi}
 \begin{frame}[fragile,allowframebreaks]
 De la corrientes cargadas para leptones tenemos
 \begin{align}
@@ -1976,16 +2013,16 @@ Este resultado se entiende fácilmente cuando se compara con el propagador de un
 
 El Lagrangiano efectivo para el decaimiento del muón, $\mu^-\to \nu_\mu e^- \bar{\nu}_e$ es entonces
 \begin{align}
-  \mathcal{L}=&\frac{g^2}{8}\left[\bar{\nu}_\mu\gamma^\mu(1-\gamma_5)\mu\right]\frac{g_{\mu\nu}}{m_W^2}
+  \mathcal{L}=&\frac{g_2^2}{8}\left[\bar{\nu}_\mu\gamma^\mu(1-\gamma_5)\mu\right]\frac{g_{\mu\nu}}{m_W^2}
   \left[\bar{e}\gamma^\nu(1-\gamma_5)\nu_e\right]\nonumber\\
-=&\frac{g^2}{8m_W^2}\left[\bar{\nu}_\mu\gamma^\mu(1-\gamma_5)\mu\right]
+=&\frac{g_2^2}{8m_W^2}\left[\bar{\nu}_\mu\gamma^\mu(1-\gamma_5)\mu\right]
   \left[\bar{e}\gamma^\nu(1-\gamma_5)\nu_e\right]\nonumber\\
   =&\frac{G_F}{\sqrt{2}}\left[\bar{\nu}_\mu\gamma^\mu(1-\gamma_5)\mu\right]\left[\bar{e}\gamma_\mu(1-\gamma_5)\nu_e\right]\,,
 \end{align}
 donde
 \begin{align}
-  \frac{G_F}{\sqrt{2}}=&\frac{g^2}{8m_W^2}\nonumber\\
-  =&\frac{g^24}{8g^2v^2}\nonumber\\
+  \frac{G_F}{\sqrt{2}}=&\frac{g_2^2}{8m_W^2}\nonumber\\
+  =&\frac{g_2^24}{8g^2v^2}\nonumber\\
   =&\frac{1}{2v^2}\,,
 \end{align}
 y
