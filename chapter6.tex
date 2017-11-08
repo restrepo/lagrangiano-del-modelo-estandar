@@ -59,6 +59,7 @@ Este conjunto de partículas esta bien definido para interacciones que conservan
 \end{frame}
 
 \section{Interacciones débiles}
+\begin{frame}[fragile,allowframebreaks]
 Las interacciones débiles son las responsables, entre otros fenoménos,
 del decaimiento de neutrones libres en un protón, un electron y un
 anti-neutrino electrónico. En nuestro entendimiento actual, se asume
@@ -85,7 +86,7 @@ Dicho decaimiento debe involucrar un término de interacción del tipo
 \end{align}
 
 
-\begin{frame}[fragile,allowframebreaks]
+
 Este tipo de interacción significa que en el contexto de las interacciones débiles un $e_L$ debe ser completamente
 equivalente a un campo $\nu_L$. Es decir, el Lagrangiano debe ser
 invariante bajo una transformación $SU(2)_L$ de esos campos. A las energías normales, a las que se encuentra por ejemplo un neutrón dentro de un núcleo de Uranio, dicha simetría permanece oculta pues un electrón izquierdo y un neutrino izquierdo son campos completamente diferentes.
@@ -222,6 +223,12 @@ En tal caso es posible escribir el producto escalar $SU(2)$ es una forma matrici
                      =&A^{\dagger} B\,.
  \end{align}
 
+Por lo tanto, el producto escalres entre dos dobletes de $SU(2)$ se puede escribir en cualquiera de las dos formas
+\begin{align}
+  \widetilde{A}\cdot B\,, \qquad\text{or}   \qquad A^{\dagger}B\,.
+\end{align}
+En adelante, usaremos la primera forma.
+
 
 Usando la correspondiente identidad para los delta de Kronecker
 \begin{align}
@@ -260,15 +267,16 @@ En forma matricial, tenemos
 \end{align}
 
 
-En el caso de un doblete de fermiónes $\Xi$, el símbolo  $\dagger$ se usa para denotar el conjugado de fermiones de Weyl. El doblete adjunto en ese caso se puede definir como\begin{align}
+En el caso de un doblete de fermiónes $\Xi$, el símbolo  $\dagger$ se usa para denotar el conjugado de fermiones de Weyl. El doblete adjunto en ese caso se puede definir como
+\begin{align}
 \label{eq:Xiadj}
  \widetilde{\Xi}=i\tau_2 \begin{pmatrix}
                   \Xi_1^{\dagger}\\
                   \Xi_2^{\dagger}\\
                 \end{pmatrix}
 =& \begin{pmatrix}
-                  \Xi_2^{*}\\
-                 -\Xi_1^{*}\\
+                  \Xi_2^{\dagger}\\
+                 -\Xi_1^{\dagger}\\
                 \end{pmatrix}
 \end{align}
 Para evitar confusiones con los invariantes $SU(2)$, usaremos entonces la definición de producto escalar en el espacio $SU(2)$ para escribir los correspondientes invariantes, por ejemplo
@@ -719,7 +727,8 @@ Note que
 \end{align}
 
 
-
+\end{frame}
+\begin{frame}[fragile,allowframebreaks]
 El Lagrangiano completo involucrando estos campos es
 \begin{align}
      \mathcal{L}=&i\widetilde{Q}\cdot \overline{\sigma}^\mu\mathcal{D}_\mu Q+i\widetilde{L}\cdot \overline{\sigma}^\mu\mathcal{D}_\mu L+
@@ -736,30 +745,37 @@ i(e_R)^{\dagger}\sigma^\mu\mathcal{D}_\mu {e_R}+i(d_R)^{\dagger}\sigma^\mu\mathc
 \end{align}
 donde $\mu^2<0$, y $\lambda>0$,
 \begin{align}
-  \widetilde{\Phi}=&i\tau_2\Phi^* \nonumber\\
-=&i
-\begin{pmatrix}
-  0 & -i \\
- i & 0\\
-\end{pmatrix}
-\begin{pmatrix}
-  \phi^+\\
-\phi^0
-\end{pmatrix}^{*} \nonumber\\
-=&\begin{pmatrix}
-  0 & 1 \\
- -1 & 0\\
-\end{pmatrix}
-\begin{pmatrix}
-  \phi^-\\
-{\phi^0}^{*}
-\end{pmatrix} \nonumber\\
-=&\begin{pmatrix}
+  \widetilde{\Phi}=&i\tau_2\Phi^* 
+% \nonumber\\
+% =&i
+% \begin{pmatrix}
+%   0 & -i \\
+%  i & 0\\
+% \end{pmatrix}
+% \begin{pmatrix}
+%   \phi^+\\
+% \phi^0
+% \end{pmatrix}^{*} \nonumber\\
+% =&\begin{pmatrix}
+%   0 & 1 \\
+%  -1 & 0\\
+% \end{pmatrix}
+% \begin{pmatrix}
+%   \phi^-\\
+% {\phi^0}^{*}
+%\end{pmatrix} \nonumber\\
+=\begin{pmatrix}
 {\phi^0}^{*}\\
 -  \phi^-\\
-\end{pmatrix}.
+\end{pmatrix}, &   \Phi=&
+  \begin{pmatrix}
+    \phi^+\\
+    \phi^0\\
+  \end{pmatrix}.
 \end{align}
 
+\end{frame}
+\begin{frame}[fragile,allowframebreaks]
 Resumiendo
 
 \begin{align}
@@ -803,22 +819,13 @@ Bajo una transformación gauge local las derivadas covariantes de los campos (y 
   \mathcal{D}_\mu L&\to\left(\mathcal{D}_\mu L\right)'=\exp\left(-i\theta_iT^i-i\beta Y_L\right)\mathcal{D}_\mu L\nonumber\\
   \mathcal{D}_\mu Q&\to\left(\mathcal{D}_\mu Q\right)'=\exp\left(-i\alpha_a\Lambda^a-i\theta_iT^i-i\beta Y_Q\right)\mathcal{D}_\mu Q\nonumber\\
   \mathcal{D}_\mu \Phi&\to\left(\mathcal{D}_\mu \Phi\right)'=\exp\left(-i\theta_iT^i-i\beta Y_\Phi\right)\mathcal{D}_\mu \Phi\nonumber\\
-  \mathcal{D}_\mu e_R&\to\left(\mathcal{D}_\mu e_R\right)'=\exp\left(-i\beta Y_{e_R}\right)\mathcal{D}_\mu e_R=\exp\left(-i\beta Q_{e}\right)\mathcal{D}_\mu e_R\nonumber\\
-  \mathcal{D}_\mu d_R&\to\left(\mathcal{D}_\mu d_R\right)'=\exp\left(-i\alpha_a\Lambda^a-i\beta Y_{d_R}\right)\mathcal{D}_\mu d_R=\exp\left(-i\alpha_a\Lambda^a-i\beta Q_{d}\right)\mathcal{D}_\mu d_R\nonumber\\
-  \mathcal{D}_\mu u_R&\to\left(\mathcal{D}_\mu u_R\right)'=\exp\left(-i\alpha_a\Lambda^a-i\beta Y_{u_R}\right)\mathcal{D}_\mu u_R=\exp\left(-i\alpha_a\Lambda^a-i\beta Q_{u}\right)\mathcal{D}_\mu u_R\,.
+  \mathcal{D}_\mu e_R&\to\left(\mathcal{D}_\mu e_R\right)'=\exp\left(-i\beta Y_{E}\right)\mathcal{D}_\mu e_R=\exp\left(-i\beta Q_{e}\right)\mathcal{D}_\mu e_R\nonumber\\
+  \mathcal{D}_\mu d_R&\to\left(\mathcal{D}_\mu d_R\right)'=\exp\left(-i\alpha_a\Lambda^a-i\beta Y_{D}\right)\mathcal{D}_\mu d_R=\exp\left(-i\alpha_a\Lambda^a-i\beta Q_{d}\right)\mathcal{D}_\mu d_R\nonumber\\
+  \mathcal{D}_\mu u_R&\to\left(\mathcal{D}_\mu u_R\right)'=\exp\left(-i\alpha_a\Lambda^a-i\beta Y_{U}\right)\mathcal{D}_\mu u_R=\exp\left(-i\alpha_a\Lambda^a-i\beta Q_{u}\right)\mathcal{D}_\mu u_R\,.
 \end{align}
 donde $Q_{e}=-1$, etc, son las cargas eléctricas asociadas a los campos.
 
 
-Sin perdida de generalidad los cuatro grados de libertad de $\Phi$, pueden escribirse en la forma
-\begin{align}
-\label{eq:polarhiggs}
-  {\Phi}=&e^{i G_j(x)T^j}
-  \begin{pmatrix}
-    0\\
-    \frac{1}{\sqrt{2}}[H(x)+v]
-  \end{pmatrix}.
-\end{align}
 El potencial escalar contiene los términos
 \begin{align}
   V(\Phi)=\mu^2\widetilde{\Phi}\cdot\Phi+\lambda \left( \widetilde{\Phi}\cdot\Phi \right)^2 
@@ -832,15 +839,16 @@ con $\mu^2<0$ y $\lambda>0$. % se reduce a
 \subsection{El gauge unitario}
 
 \begin{frame}[fragile,allowframebreaks]
-Retornando al doblete de Higgs del modelo estándar en la ec.~\eqref{eq:polarhiggs}, los cuatro grados de libertad de $\Phi$, pueden escribirse en forma polar con la parte real neutra desplazada para generar la ruptura espontánea de la simetría $SU(2)_L\times  U(1)_Y$
+Retornando al doblete de Higgs del modelo estándar en la ec.~\eqref{eq:polarhiggs}, los cuatro grados de libertad de $\Phi$, pueden escribirse en forma polar con la parte real neutra desplazada para generar la ruptura espontánea de la simetría $SU(2)_L\times  U(1)_Y$. De este modo, y sin perdida de generalidad
 \begin{align}
 \label{eq:92qft}
-  {\Phi}=&e^{i G_jT^j}
+  {\Phi}=&e^{i G_j(x)T^j}
   \begin{pmatrix}
     0\\
-    \frac{1}{\sqrt{2}}(H(x)+v)
-  \end{pmatrix}
+    \frac{1}{\sqrt{2}}[H(x)+v]
+  \end{pmatrix}.
 \end{align}
+
 Para $SU(2)_L\times  U(1)_Y$ tenemos cuatro generadores y cuatro bosones gauge. De acuerdo a la parametrización en ec.~\eqref{eq:92qft} esperamos que aparezcan tres bosones de Goldstone y un campo de Higgs con masa, de manera que quedará un generador no roto correspondiente a una simetría remanente del vacío $U(1)_Q$
 \begin{equation}
   SU(2)_L\times  U(1)_Y\overset{\langle\widetilde{\Phi}\rangle}{\longrightarrow}U(1)_Q.
@@ -1253,6 +1261,7 @@ f'=&
   \end{cases}
 \end{align}
 que
+\begin{frame}[fragile,allowframebreaks]
 \begin{align*}
    \mathcal{L}_{\text{1 gen}}=&
 \sum_f  i \widetilde{f}\cdot\overline{\sigma}^\mu\partial_\mu f 
@@ -1281,6 +1290,7 @@ que
     +g_sf^{a b c}G_b^\mu G_c^\nu\widetilde{G}_{\mu\nu}^a
     +g_s^2f^{a b c}f_{a d e}G_b^\mu G_c^\nu G^d_\mu G^e_\nu\right)\,.
 \end{align*}
+\end{frame}
 
 \section{Notación de Dirac para la primera generación}
 
@@ -1576,7 +1586,7 @@ donde $Q_f$ están dadas en la Tabla~\ref{tab:ef} y $v_f$, $a_f$ en la Tabla \re
 \begin{frame}[fragile,allowframebreaks]
 Recopilando los resultados para $\mathcal{L}_{WBH}$ \eqref{eq:lwbhfin}, $\mathcal{L}_{\text{Yukawa}}$ \eqref{eq:lyukfin}, $\mathcal{L}_{\text{fermion}}$ \eqref{eq:lfermionfin}, y $\mathcal{L}_{\text{gauge}}$ \eqref{eq:lgaguefin}, tenemos  para $f=\nu_e,e,u,d$; $q=u,d$ [con $f'=e$ ($d$) para $f=\nu_e$ ($u$) ], podemos escribir en notación de Dirac:
 %%arrglar
-\begin{align}
+\begin{align*}
   \mathcal{L}_{\text{1 gen}}=&\sum_f \overline{f}\left(i\gamma^\mu\partial_\mu-m_f\right)f\nonumber\\
 &-\tfrac{1}{4}F^{\mu\nu} F_{\mu\nu}-\tfrac{1}{4}Z^{\mu\nu} Z_{\mu\nu}-\tfrac{1}{2}(F_W^\dagger)^{\mu\nu} (F_W)_{\mu\nu}
 - \tfrac{1}{4}\widetilde{G}^{\mu\nu}_a \widetilde{G}_{\mu\nu}^a\nonumber\\
@@ -1587,18 +1597,14 @@ Recopilando los resultados para $\mathcal{L}_{WBH}$ \eqref{eq:lwbhfin}, $\mathca
 &+\frac{e}{2\cos\theta_W\sin\theta_W}\sum_{f}\bar{f}\gamma^\mu(v_f-a_f\gamma_5)f Z_\mu\nonumber\\
 &+\frac{g_2}{2\sqrt{2}}\left[\sum_{f=\nu_e,u}\bar{f}\gamma^\mu(1-\gamma_5)f' W_\mu^++\text{h.c}\right]
 +\sum_f \frac{m_f}{v} \bar{f}f H\nonumber\\
-&\phantom{- \frac{1}{4}\left(g_s\widetilde{G}^{\mu\nu}_af_{a d e}G^d_\mu G^e_\nu
-    +g_sf^{a b c}G_b^\mu G_c^\nu\widetilde{G}_{\mu\nu}^a
-    +g_s^2f^{a b c}f_{a d e}G_b^\mu G_c^\nu G^d_\mu G^e_\nu\right)\,.}\nonumber
-\end{align}
-\end{frame}
-\begin{frame}[fragile,allowframebreaks]{}
-
-
-
-
-\begin{align}
-  \phantom{\mathcal{L}_{\text{1 gen}}=}
+% &\phantom{- \frac{1}{4}\left(g_s\widetilde{G}^{\mu\nu}_af_{a d e}G^d_\mu G^e_\nu
+%     +g_sf^{a b c}G_b^\mu G_c^\nu\widetilde{G}_{\mu\nu}^a
+%     +g_s^2f^{a b c}f_{a d e}G_b^\mu G_c^\nu G^d_\mu G^e_\nu\right)\,.}\nonumber
+% \end{align}
+% \end{frame}
+% \begin{frame}[fragile,allowframebreaks]{}
+% \begin{align}
+%  \phantom{\mathcal{L}_{\text{1 gen}}=}
 &-ie\cot\theta_W\left[(F_W^\dagger)^{\mu\nu}W_\mu^+ Z_\nu-(F_W)^{\mu\nu}W_\mu^- Z_\nu+W_\mu^-W_\nu^+Z^{\mu\nu}\right]\nonumber\\
 &-ie\left[(F_W^\dagger)^{\mu\nu}W_\mu^+ A_\nu-(F_W)^{\mu\nu}W_\mu^- A_\nu+W_\mu^-W_\nu^+F^{\mu\nu}\right]\nonumber\\
 &-\frac{e^2}{2\sin^2\theta_W}\left[\left(W_\mu^+{W^\mu}^-\right)^2-W_\mu^+{W^\mu}^+W_\nu^-{W^\nu}^-\right]\nonumber\\
@@ -1608,7 +1614,7 @@ Recopilando los resultados para $\mathcal{L}_{WBH}$ \eqref{eq:lwbhfin}, $\mathca
 &- \frac{1}{4}\left(g_s\widetilde{G}^{\mu\nu}_af_{a d e}G^d_\mu G^e_\nu
     +g_sf^{a b c}G_b^\mu G_c^\nu\widetilde{G}_{\mu\nu}^a
     +g_s^2f^{a b c}f_{a d e}G_b^\mu G_c^\nu G^d_\mu G^e_\nu\right)\,.
-\end{align}     
+\end{align*}     
 \end{frame}
 \noindent
 donde  $v_f$, $a_f$ estan definidos en la ec.~\eqref{eq:vfaf} y evaluados en la Tabla \ref{tab:zcoup}.
