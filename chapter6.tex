@@ -1264,7 +1264,8 @@ f'=&
 \end{align}
 que
 \begin{frame}[fragile,allowframebreaks]
-\begin{align*}
+\begin{align}
+\label{eq:lsmw}
    \mathcal{L}_{\text{1 gen}}=&
 \sum_f  i \widetilde{f}\cdot\overline{\sigma}^\mu\partial_\mu f 
 +\sum_{g=e,u,d} m_g \left[ \left( g_L \right)^{\dagger} g_R+\text{h.c} \right]
@@ -1290,7 +1291,7 @@ que
 &- \frac{1}{4}\left(g_s\widetilde{G}^{\mu\nu}_af_{a d e}G^d_\mu G^e_\nu
     +g_sf^{a b c}G_b^\mu G_c^\nu\widetilde{G}_{\mu\nu}^a
     +g_s^2f^{a b c}f_{a d e}G_b^\mu G_c^\nu G^d_\mu G^e_\nu\right)\,.
-\end{align*}
+\end{align}
 \end{frame}
 
 \section{Notación de Dirac para la primera generación}
@@ -1484,13 +1485,15 @@ Similarmente
 
 
 
-Podemos extender ahora los resultados de la ec.~\eqref{eq:mwd} para corrientes escalaras y vectoriales. En términos de los campos de Weyl una corriente escalar (S),  vectorial (V), V-A y V+A de espinores Dirac, se pueden escribir respectivamente como
+Podemos extender ahora los resultados de la ec.~\eqref{eq:mwd} para corrientes escalaras y vectoriales. En términos de los campos de Weyl una corriente escalar (S), pseudoscalar (P), vectorial (V), axial (A),  V-A y V+A de espinores Dirac, se pueden escribir respectivamente como
 \begin{align}
 \label{eq:8}
-\text{S:} &&  \overline{\Psi}\Psi =& \left( \psi_R \right)^\dagger \psi_L+\left( \psi_L \right)^{\dagger}\psi_R \nonumber\\
-\text{V:}& &  \overline{\Psi}\gamma^{\mu}\Psi=& \psi_L^{\dagger}\overline{\sigma}^{\mu}\psi_L+\psi_R^{\dagger}\sigma^{\mu}\psi_{R}\nonumber\\
-\text{V-A:} &&  \tfrac{1}{2}\overline{\Psi}\gamma^{\mu}(1-\gamma_5)\Psi=& \psi_L^{\dagger}\overline{\sigma}^{\mu}\psi_L\nonumber\\
-\text{V+A:} &&  \tfrac{1}{2}\overline{\Psi}\gamma^{\mu}(1+\gamma_5)\Psi=& \psi_R^{\dagger}{\sigma}^{\mu}\psi_L\,.
+\color{red}\text{S:} &&  \overline{\Psi}\Psi =& \left( \psi_R \right)^\dagger \psi_L+\left( \psi_L \right)^{\dagger}\psi_R \nonumber\\
+\text{P:} &&  \overline{\Psi}\gamma_5\Psi =& \left( \psi_R \right)^\dagger \psi_L-\left( \psi_L \right)^{\dagger}\psi_R \nonumber\\
+\color{red}\text{V:}& &  \overline{\Psi}\gamma^{\mu}\Psi=& \psi_L^{\dagger}\overline{\sigma}^{\mu}\psi_L+\psi_R^{\dagger}\sigma^{\mu}\psi_{R}\nonumber\\
+\text{A:}& &  \overline{\Psi}\gamma^{\mu}\gamma_5\Psi=& \psi_L^{\dagger}\overline{\sigma}^{\mu}\psi_L-\psi_R^{\dagger}\sigma^{\mu}\psi_{R}\nonumber\\
+\color{red}\text{V-A:} && \overline{\Psi}\gamma^{\mu}P_L\Psi=& \psi_L^{\dagger}\overline{\sigma}^{\mu}\psi_L\nonumber\\
+\text{V+A:} && \overline{\Psi}\gamma^{\mu}P_R\Psi=& \psi_R^{\dagger}{\sigma}^{\mu}\psi_R\,.
 \end{align}
 
 Para escribir este Lagrangiano en terminos de espinores de 4 componentes, tomemos algunos casos específicos:
@@ -1804,16 +1807,13 @@ Teniendo en cuenta estos resultados podemos escribir finalmente el Lagrangiano c
 &+\left(m_W^2{W^\mu}^-W_\mu^++\frac{1}{2}m_Z^2Z^\mu Z_\mu\right)\left(1+2\frac{H}{v}+\frac{H^2}{v^2}\right)\nonumber\\
 &+g_s\sum_q\bar{q}\gamma^\mu\left(\frac{\lambda_a}{2}\right)q\,G_\mu^a+e\sum_f \bar{f}\gamma^\mu Q_f f A_\mu\nonumber\\
 &+\frac{e}{2\cos\theta_W\sin\theta_W}\sum_{f}\bar{f}\gamma^\mu(v_f-a_f\gamma_5)f Z_\mu\nonumber\\
-&+\frac{g}{2\sqrt{2}}\left[\sum_{l=e}^{\tau}\bar{\nu_l}\gamma^\mu(1-\gamma_5)l W_\mu^++\sum_{ij}V_{ij}\bar{u}_i\gamma^\mu(1-\gamma_5)d_j W_\mu^++\text{h.c}\right]\nonumber\\
-&+\sum_f \frac{m_f}{v} \bar{f}f H\nonumber
-\end{align}
-
-\end{frame}
-
-\begin{frame}[fragile,allowframebreaks]{}
-\begin{align}
-     \label{eq:234qft}
-\phantom{\mathcal{L}_{\text{SM}}=}&-ie\cot\theta_W\left[(F_W^\dagger)^{\mu\nu}W_\mu^+ Z_\nu-(F_W)^{\mu\nu}W_\mu^- Z_\nu+W_\mu^-W_\nu^+Z^{\mu\nu}\right]\nonumber\\
+&+\frac{g_2}{2\sqrt{2}}\left[\sum_{l=e}^{\tau}\bar{\nu_l}\gamma^\mu(1-\gamma_5)l W_\mu^++\sum_{ij}{\color{red}V_{ij}}\,\bar{u}_i\gamma^\mu(1-\gamma_5)d_j W_\mu^++\text{h.c}\right]
++\sum_f \frac{m_f}{v} \bar{f}f H\nonumber\\
+% \end{align}
+% \end{frame}
+% \begin{frame}[fragile,allowframebreaks]{}
+% \begin{align}
+% \phantom{\mathcal{L}_{\text{SM}}=}&-ie\cot\theta_W\left[(F_W^\dagger)^{\mu\nu}W_\mu^+ Z_\nu-(F_W)^{\mu\nu}W_\mu^- Z_\nu+W_\mu^-W_\nu^+Z^{\mu\nu}\right]\nonumber\\
 &-ie\left[(F_W^\dagger)^{\mu\nu}W_\mu^+ A_\nu-(F_W)^{\mu\nu}W_\mu^- A_\nu+W_\mu^-W_\nu^+F^{\mu\nu}\right]\nonumber\\
 &-\frac{e^2}{2\sin^2\theta_W}\left[\left(W_\mu^+{W^\mu}^-\right)^2-W_\mu^+{W^\mu}^+W_\nu^-{W^\nu}^-\right]
 -e^2\cot^2\theta_W\left(W_\mu^+{W^\mu}^-Z_\nu Z^\nu-W_\mu^+Z^\mu W_\nu^-Z^\nu\right)\nonumber\\
@@ -1971,6 +1971,7 @@ El ME también tiene una predicción concreta para la amplitud del $Z$ a neutrin
   &=\frac{N_\nu\Gamma(Z\to\bar{\nu}_e\nu_e)}{\Gamma(Z\to e^+ e^-)}\nonumber\\
   &\approx\frac{N_\nu(|v_{\nu_e}|^2+|a_{\nu_e}|^2)}{|v_{e}|^2+|a_{e}|^2}\nonumber\\
   &=\frac{2N_\nu}{(-1+4\sin^2\theta_W)^2+1}\nonumber\\
+  &=\frac{N_\nu}{1-4\sin^2\theta_W+8 \sin^4\theta_W}\nonumber\\
   &\approx\begin{cases}
     5.865&N_\nu=3\\
     7.819&N_\nu=4
@@ -1978,12 +1979,22 @@ El ME también tiene una predicción concreta para la amplitud del $Z$ a neutrin
 \end{align}
 mientras que el valor medido experimentalmente para esta cantidad $5.942(16)$ \cite{a}, es una evidencia muy fuerte de que sólo exiten tres neutrinos livianos. 
 \end{frame}
+
+Note que el mismo resultado se puede obtener usuando la notación de dos componentes de \eqref{eq:lsmw}. Con $t_{e_R}=0$, $t_{\nu}=-t_{e_L}=1$, $Q_{\nu}=0$ y $Q_e=-1$ tenemos que
+\begin{align}
+  \frac{\Gamma_{\text{inv}}}{\Gamma_l}=&\frac{\sum_l\Gamma \left[ Z\to \left( \nu_l \right)^{\dagger}\nu_l \right]}{\Gamma \left[Z\to \left( e_L \right)^{\dagger} e_L  \right]+\Gamma \left[Z\to \left( e_R \right)^{\dagger} e_R  \right]}\nonumber\\
+=&\frac{N_{\nu} t_{\nu}^2 }{\left( t_{e_L} - 2 Q_e \sin^2\theta_W \right)^2+ \left( 2 Q_e \sin^2\theta_W \right)^2 } \nonumber\\
+=&\frac{N_{\nu} }{\left( -1 + 2 \sin^2\theta_W \right)^2+4 \sin^4\theta_W } \nonumber\\
+=&\frac{N_{\nu} }{1 - 4 \sin^2\theta_W +4 \sin^4\theta_W +4 \sin^4\theta_W } \nonumber\\
+=&\frac{N_{\nu} }{1 - 4 \sin^2\theta_W +8 \sin^4\theta_W } \,.
+\end{align}
+
 \subsection{Decaimientos débiles mediados por corrientes cargadas}
 \label{sec:deca-debil-medi}
 \begin{frame}[fragile,allowframebreaks]
 De la corrientes cargadas para leptones tenemos
 \begin{align}
-  \mathcal{L}_{cc}\supset&\frac{g}{2\sqrt{2}}\left[\sum_l\bar{\nu_l}\gamma^\mu(1-\gamma_5)l W_\mu^++\bar{l}\gamma^\mu(1-\gamma_5)\nu_l W_\mu^-\right]
+  \mathcal{L}_{cc}\supset&\frac{g_2}{2\sqrt{2}}\left[\sum_l\bar{\nu_l}\gamma^\mu(1-\gamma_5)l W_\mu^++\bar{l}\gamma^\mu(1-\gamma_5)\nu_l W_\mu^-\right]
 \end{align}
 Esto da lugar a los posibles diagramas para decaimientos de leptones a bosones virtuales, y bosones a leptontes mostrados en la figura~\ref{fig:leptoncc}. Las flechas representan el flujo de número leptónico. La flecha de tiempo es de izquierda a derecha. Al lado izquierdo del vértice entran partículas y salen antipartículas. Mientras que al lado derecho entran antip artículas y salen partículas
 \begin{figure}
