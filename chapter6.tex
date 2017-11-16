@@ -1,5 +1,5 @@
 %instiki:category: FisicaSubatomica
-\chapter{Modelo Est\'andar}
+\chapter{Modelo Estándar}
 \label{cha:modelo-estandar} %noinstiki
 %instiki:
 %instiki:***
@@ -1841,23 +1841,30 @@ El Lagrangiano del Modelo contiene los parámetros $g_s,g,\sin\theta_W,v,m_H$. A
   m_Z&=91.1876(20)\,\text{GeV}\nonumber\\
   \alpha_s(m_Z)&=0.1176(20)\,.
 \end{align}
-donde $\alpha_i=g_i^2/(4\pi)$ con $\alpha_3=\alpha_s$. Esto tiene la ventaja de usar las tres cantidades experimentales mejor medidas.
+donde $\alpha_i=g_i^2/(4\pi)$ con $\alpha_3=\alpha_s$ ($g_3=g_s$) y $\alpha=e^2/(4\pi)$. Esto tiene la ventaja de usar las cuatro cantidades experimentales mejor medidas.
 
 
-Para relacionar la constante de Fermi, $G_F$, con los parámetros del Lagrangiano del Modelo Estándar (ME), consideremos el decaimiento del muón como un proceso en el cual el muón decae directamente a tres fermiones. Entonces dicho proceso estaría explicado por un Lagrangiano no fundamental
+Para relacionar la constante de Fermi, $G_F$, con los parámetros del Lagrangiano del Modelo Estándar (ME), consideremos el decaimiento del muón como un proceso en el cual el muón decae directamente a tres fermiones a través de la  interacción de contacto ilustatrada en la figura~\ref{fig:mucontact}. Entonces dicho proceso estaría explicado por un Lagrangiano no fundamental
 \begin{align}
   \mathcal{L}_{\mu}=\frac{G_F}{\sqrt{2}}\left[\bar{\nu}_\mu\gamma^\mu(1-\gamma_5)\mu\right]\left[\bar{e}\gamma_\mu(1-\gamma_5)\nu_e\right]\,,
 \end{align}
 donde $G_F$ tiene las dimensiones de uno sobre masa al cuadrado. 
 
+\begin{figure}
+  \centering
+\includegraphics[scale=0.8]{mucontact}  
+  \caption{Decaimiento del muón a tres cuerpos}
+  \label{fig:mucontact}
+\end{figure}
+
 Construyendo la misma interacción a partir del Lagrangiano del ME
 \begin{align}
-  \mathcal{L}=&\frac{g_2^2}{8}\left[\bar{\nu}_\mu\gamma^\mu(1-\gamma_5)\mu\right] \left[ W_{\mu}^{+}W^{\mu-} \right]
+  \mathcal{L}=&\frac{g_2^2}{8}\left[\bar{\nu}_\mu\gamma^\mu(1-\gamma_5)\mu\right] \left[ W_{\mu}^{+}W_\nu^{-} \right]
   \left[\bar{e}\gamma^\nu(1-\gamma_5)\nu_e\right]\,.
 \end{align}
-Por lo tanto la contracción apropiada de $\left[ W_{\mu}^{+}W^{\mu-} \right]$ debe generar el coeficiente inverso de masa al cuadrado:
+Por lo tanto la contracción apropiada de $\left[ W_{\mu}^{+}W_{\nu}^{-} \right]$ debe generar el coeficiente inverso de masa al cuadrado:
 \begin{align}
-  \left[ W_{\mu}^{+}W^{\mu-} \right]\to \frac{1}{m_W^2}\,.
+  \left[ W_{\mu}^{+}W_\nu^{-} \right]\to \frac{1}{m_W^2}\,.
 \end{align}
 Una deducción más rigurosa se realizará en la Sección~\ref{sec:deca-debil-medi}. Por lo tanto
 \begin{align}
@@ -1877,23 +1884,23 @@ Además, de la ec.~\eqref{eq:mwzw}
 \end{align}
 
 
-De esta forma, las relaciones
+De esta forma tenemos las relaciones
 \begin{align}
-  \sin^2\theta_W=&1-\frac{m_W^2}{m_Z^2},&m_W^2\sin^2\theta_W=\frac{\pi\alpha}{\sqrt{2}G_F}
+  \sin^2\theta_W=&1-\frac{m_W^2}{m_Z^2}\,,&m_W^2\sin^2\theta_W=\frac{\pi\alpha}{\sqrt{2}G_F}\,,
 \end{align}
-permiten determinar entonces que
+que permiten determinar que
 \begin{align}
   \sin^2\theta_W\approx &0.21\nonumber\\
-  m_W\approx &81\,\text{GeV}
+  m_W\approx &81\,\text{GeV}\,.
 \end{align}
-Si se usa $\alpha(M_Z)\approx1/128$ entonces
+El uso de $\alpha(M_Z)\approx1/128$, permite tener en cuenta algunas correcciones cuánticas dando lugar a
 \begin{align}
    \sin^2\theta_W\approx &0.23\nonumber\\
   m_W\approx &80\,\text{GeV}
 \end{align}
 Los valores medidos son $\sin^2\theta_W=0.23149(13)$, $m_W=80.398(25)\,$GeV, y pueden ser reproducidos por el modelo estándar una vez se tienen en cuenta correcciones perturbativas inducidas por partículas virtuales.
 
-El acelerador $e^+e^-$ LEP, que funcionó hasta desde 1998 hasta el 2000~\cite{LEP}, operó a energías suficientes para producir millones de $Z$. Combinado con otros resultados experimentales, se pudo verificar todo el Lagrangiano del Modelo Estándar hasta un nivel del 1 por mil. Con excepción de las interacciones asociadas con el Higgs. 
+El acelerador $e^+e^-$ LEP, que funcionó desde 1998 hasta el 2000~\cite{LEP}, operó a energías suficientes para producir millones de $Z$. Combinado con otros resultados experimentales, se pudo verificar todo el Lagrangiano del Modelo Estándar hasta un nivel del 1 por mil. Con excepción de las interacciones asociadas con el Higgs. 
 
 La universalidad de los decaimientos del $Z$ está soportada por los resultados experimentales siguientes donde sólo se muestran los decaimientos leptónicos del $Z$ diferentes de cero \cite{a} 
 \begin{align}
@@ -1903,14 +1910,14 @@ La universalidad de los decaimientos del $Z$ está soportada por los resultados 
   \operatorname{Br}(Z\to e^+e^-)&=3.363(4)\%, &\operatorname{Br}(Z\to\mu^+\mu^-)&=3.366(7)\%,  &
   \operatorname{Br}(Z\to\tau^+\tau^-)&=3.370(8)\% 
 \end{align}
-Mientras que para el $W^\pm$, en \%,
+Mientras que para el $W^\pm$, en \%, \cite{pdg}
 \begin{align}
 \label{eq:231qft}
-  \operatorname{Br}(W^-\to\bar{\nu}_e e^-)&=10.65(17), &
-\operatorname{Br}(W^-\to\bar{\nu}_\mu \mu^-)&=10.59(15), &
-\operatorname{Br}(W^-\to\bar{\nu}_\tau \tau^-)&=11.44(22) 
+  \operatorname{Br}(W^-\to\bar{\nu}_e e^-)&=10.71(16), &
+\operatorname{Br}(W^-\to\bar{\nu}_\mu \mu^-)&=10.63(15), &
+\operatorname{Br}(W^-\to\bar{\nu}_\tau \tau^-)&=11.38(21)\,. 
 \end{align}
-La diferencia de $\bar{\nu}_\tau \tau$ respecto a los otros representa un efecto a $2.8\sigma$. La universalidad de los acoplamientos leptónicos de $W$ puede comprobarse también indirectamente a través de los decaimientos débiles mediados por corrientes cargadas. Los datos actuales verifican la universalidad de los acoplamientos de corrientes cargadas leptónicas al nivel del 0.2\%~\cite{a}. Sin necesidad de entrar en detalles de los cálculos de las amplitudes de decaimiento, podemos usar el hecho de que ellas son proporcionales a los acoplamientos al cuadrado correspondiente, de modo que  un cociente entre amplitudes de decaimiento es igual, en primera aproximación, a los cocientes de los acoplamientos al cuadrado. Tendremos en cuenta además que el Branching es la amplitud de decaimiento a un canal especifico divido por la suma de las amplitudes de decaimiento a todos los canales posibles.
+La diferencia de $\bar{\nu}_\tau \tau$ respecto a los otros representa un efecto alrededor de $2\sigma$. La universalidad de los acoplamientos leptónicos de $W$ puede comprobarse también indirectamente a través de los decaimientos débiles mediados por corrientes cargadas. Los datos actuales verifican la universalidad de los acoplamientos de corrientes cargadas leptónicas al nivel del 0.2\%~\cite{a}. Sin necesidad de entrar en detalles de los cálculos de las amplitudes de decaimiento, podemos usar el hecho de que ellas son proporcionales a los acoplamientos al cuadrado correspondiente, de modo que  un cociente entre amplitudes de decaimiento es igual, en primera aproximación, a los cocientes de los acoplamientos al cuadrado. Tendremos en cuenta además que el Branching es la amplitud de decaimiento a un canal especifico divido por la suma de las amplitudes de decaimiento a todos los canales posibles.
 
 
 
