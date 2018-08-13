@@ -29,9 +29,11 @@
 
 \section{Preliminares}
 
+Para detalles adicionales ver por ejemplo \url{https://indico.cern.ch/event/243629}
+
 \subsection{Representaciones de grupos}
 
-\subsubsection{$SO(2)$ y $U(1)$}
+\subsubsection{$\operatorname{SO}(2)$ y $\operatorname{U}(1)$}
 Considere el grupo de rotaciones de dos ejes reales $SO(2)$. Una representación matricial corresponde al Grupo de matrices $2\times 2$ ortogonales de determinante 1
 \begin{align*}
   R(\theta)=
@@ -103,7 +105,7 @@ De otro lado el Grupo $U(1)$ corresponde a las rotaciones de un eje complejo y t
 donde $Y$ es el generador de los elementos del Grupo y su representación es un número real. 
 
 Estos dos grupos son isomorfos: para un elemento complejo $U(\theta)$ el correspondiente elemento en $SO(2)$ es la rotación por el ángulo el cual es el argumento de $U(\theta)$
-\subsubsection{$S0(3)$ y $SU(2)$}
+\subsubsection{$\operatorname{S0}(3)$}
 \begin{english}
 First, let us consider a simpler group, corresponding to the rotation group in tree dimensions. The generators are the angular momentum operators $J^i$, which satisfy the commutation relations
 \end{english}
@@ -182,36 +184,92 @@ Explícitamente
 
 Estos generan los elementos de $SO(3)$
 \begin{align}
-  R(\boldsymbol{\theta})=&\exp(i \theta_j L^{j})\nonumber\\
-                        =&\exp(i\theta_1 L_1+i\theta_2 L_2+i\theta_3 L_3)\nonumber\\
-                        =&R(\theta_1)R(\theta_2)R(\theta_3)
+  R(\boldsymbol{\theta})=&\exp(i \theta_j L^{j}),\qquad\text{sum in $j$}\nonumber\\
+                 =&\exp(i\theta_1 L_1+i\theta_2 L_2+i\theta_3 L_3)\,.
+\end{align}
+
+Para aislar los subgrupos de un parámetro definimos:
+\begin{align}
+  R_i\equiv R(\theta_i)
 \end{align}
 donde, haciendo los mismos pasos que para $SO(2)$ en \eqref{eq:so2},
 \begin{align}
-  R(\boldsymbol{\theta})=
+  R(\theta_1)=&
   \begin{pmatrix}
    1 &   0        &0\\
    0 &\cos\theta_1  & \sin\theta_1\\
    0 & -\sin\theta_1& \cos\theta_1\\
-  \end{pmatrix}
+  \end{pmatrix},\quad R(\theta_2)=
   \begin{pmatrix}
      \cos\theta_2 &0& -\sin\theta_2\\
      0          &1& 0          \\
     \sin\theta_2  &0&  \cos\theta_2\\
-  \end{pmatrix}
+  \end{pmatrix}\quad R(\theta_3)=
   \begin{pmatrix}
      \cos\theta_3 & \sin\theta_3&0\\
      -\sin\theta_3& \cos\theta_3&0\\
       0         &     0     &1\\
-  \end{pmatrix}
+  \end{pmatrix}\,,
 \end{align}
+que corresponden respectivamente a rotaciones sobre el eje $x$ por un ángulo $\theta_1$, sobre el eje $y$ por un ángulo $\theta_2$, sobre el eje $z$ por un ángulo $\theta_3$.
+
+Sin perdida de generalidad, un elemento del grupo $\operatorname{SO}(3)$, es decir, una matriz $3\times3$ ortogonal de determinante 1, $A$, se puede definir como el producto de las anteriores matrices de rotación de un parámetro
+\begin{align}
+ A =&R(\theta_1)R(\theta_2)R(\theta_3) \nonumber\\
+=&
+  \begin{pmatrix}
+    c_1 c_2-c_3 s_1 s_2    & c_1 c_2 + c_3 c_1 s_2  & s_3 s_2 \\
+    -c_1 s_2 - c_3 s_1 s_2 & -s_1 s_2 + c_3 c_1 c_2 & s_3 c_2 \\
+    s_3 s_1               & -s_3 c_1               & c_3\\
+  \end{pmatrix},
+\end{align}
+donde $c_i=\cos \theta_i$,  $s_i=\sin \theta_i$.
+
 Claramente, el Grupo $SO(3)$ es no Abeliano, es decir
 \begin{align*}
   R(\boldsymbol{\theta}_1)R(\boldsymbol{\theta}_2)\ne R(\boldsymbol{\theta}_2)R(\boldsymbol{\theta}_1)
 \end{align*}
 
+Note que la combinación lineal se puede expresar como
+\begin{align}
+  i\boldsymbol{\theta}\cdot\boldsymbol{L}=& i\theta_1 L_1+i\theta_2 L_2+i\theta_3 L_3 \nonumber\\
+=&   \begin{pmatrix}
+  0           & \theta_3 & -\theta_2 \\
+  -\theta_3   &  0       & \theta_1 \\
+  \theta_2    & -\theta_1 & 0
+   \end{pmatrix}.
+\end{align}
 
-La representación matricial isomorfa a $SO(3)$ pero con matrices $2\times$ corresponde al Grupo $SU(2)$ de rotaciones de dos ejes complejos.
+Un ejemplo de vector es el vector de velocidad, $\boldsymbol{v}$. Sea $\boldsymbol{k}$ un vector unitario describiendo un eje de rotación sobre el cual $\boldsymbol{v}$ rota por un ángulo $\theta$ de acuerdo a la regla de la mano derecha como se ilustra en la figura~\ref{fig:rf}.
+\begin{figure}
+  \centering
+  \includegraphics[scale=0.8]{Rodrigues-formula}
+  \caption{Rotación vector velocidad. Tomado de \cite{rodriguez}}
+  \label{fig:rf}
+\end{figure}
+
+Representado el resultado del producto vectorial $\boldsymbol{k}\times\boldsymbol{v}$ como una matrix columna,
+\begin{align}
+  \begin{pmatrix} (\boldsymbol{k}\times\boldsymbol{v})_x \\ (\boldsymbol{k}\times\boldsymbol{v})_y \\ (\boldsymbol{k}\times\boldsymbol{v})_z \end{pmatrix} = \begin{pmatrix} k_y v_z - k_z v_y \\ k_z v_x - k_x v_z \\ k_x v_y - k_y v_x \end{pmatrix} =& \begin{pmatrix} 0 & -k_z & k_y \\ k_z & 0 & -k_x \\ -k_y & k_x & 0 \end{pmatrix} \begin{pmatrix} v_x \\ v_y \\ v_z \end{pmatrix} \nonumber\\
+=& \boldsymbol{K} \boldsymbol{v}\,,
+\end{align}
+donde
+\begin{align}
+  \boldsymbol{K}=\begin{pmatrix} 0 & -k_z & k_y \\ k_z & 0 & -k_x \\ -k_y & k_x & 0 \end{pmatrix}
+\end{align}
+Si definimos la matriz de rotación, $R$ perteneciente a $\operatorname{SO}(3)$, a través de un ángulo $\theta$ sobre el eje $\boldsymbol{k}$
+\begin{align}
+  R(\theta)=\exp \left( - i \theta i \boldsymbol{K} \right)\,,
+\end{align}
+entonces
+\begin{align}
+  R(\theta)=I+ \boldsymbol{K} \sin\theta + (1-\cos\theta)\boldsymbol{K}^2\,.
+\end{align}
+done $I$ es la matriz identidad. En \cite{rodriguez} se encuentra la demostración.
+
+\subsection{$\operatorname{SU}(2)$} 
+
+La representación matricial isomorfa a $SO(3)$ pero con matrices $2\times2$ corresponde al Grupo $SU(2)$ de rotaciones de dos ejes complejos.
 \begin{english}
   The Pauli matrices are set of matrices satisfying this commutation relations:
 \end{english}
@@ -282,7 +340,7 @@ Como antes, $\theta_i$ son los parámetros de la transformación.  Usando las pr
 =&\mathbf{1}\,,
   \end{align*}
 la identidad $2\times 2$.
-\item Especial (Special): Usando la formula de Jacobi para la exponencial de una matrix, $A$, $e^{A}=e^{\operatorname{Tr}A}$, tenemos que
+\item Especial (Special): Usando la formula de Jacobi para la exponencial de una matriz, $A$, $e^{A}=e^{\operatorname{Tr}A}$, tenemos que
   \begin{align*}
    \det[U(\boldsymbol{\theta})]=&\det\left\{\exp\left[  i \operatorname{Tr}\left( T^i \right)\theta_i \right]  \right\}\nonumber\\
                            =&e^{0}\nonumber\\
