@@ -31,9 +31,31 @@ Antes de entrar en materia, se sentarán las bases teóricas necesarias sobre el
 
 \section{Teoría de Grupos}
 
-\subsubsection{Rotaciones en dos dimensiones}
+\subsection{Definición de grupo}
+Ver \url{https://indico.cern.ch/event/243629}
+
+\subsection{$\operatorname{SO}(2)$ y $\operatorname{U}(1)$}
+Considere el grupo de rotaciones de dos ejes reales $SO(2)$. Una representación matricial corresponde al Grupo de matrices $2\times 2$ ortogonales de determinante 1
+\begin{align*}
+  R(\theta)=
+  \begin{pmatrix}
+  \cos\theta &\sin\theta\\  
+  -\sin\theta&\cos\theta\\  
+  \end{pmatrix},
+\end{align*}
+donde
+\begin{align*}
+  R^{-1}(\theta)=& R^{\operatorname{T}}(\theta)=R(-\theta)
+=
+  \begin{pmatrix}
+  \cos\theta &-\sin\theta\\  
+  \sin\theta&\cos\theta\\  
+  \end{pmatrix}, & \det[R(\theta)]=&\cos^2\theta+\sin^2\theta=1\,.
+\end{align*}
+
 Considere el generador del Grupo de Rotaciones en dos dimensiones
 \begin{align}
+  \label{eq:so2g}
   \tau=
   \begin{pmatrix}
    0 & -i \\
@@ -59,23 +81,86 @@ Por consiguiente
 
 Definimos una representación matricial del Grupo de la rotaciones como
 \begin{align}
+  \label{eq:tye}
   R(\theta)=&\exp \left(i \tau \theta  \right) \nonumber\\
-=&
-\begin{pmatrix}
-  \cos\theta & -\sin\theta \\
-  \sin\theta & \cos\theta \\
-\end{pmatrix}.
+=&\sum_{n=0}^{\infty}\frac{\left(i \theta\tau \right)^{n}}{n!}\,.
 \end{align}
 
-$R$ is ortogonal since
+Con está definición $R(\theta)$ is ortogonal ya que
 \begin{align}
   R^{\operatorname{T}}(\theta)=& \exp \left(i \tau^{\operatorname{T}} \theta  \right) \nonumber\\
         =& \exp \left(-i \tau \theta  \right) \nonumber\\
-        =&R^{-1}
+        =&R^{-1}(\theta)\,,
+\end{align}
+y además
+\begin{align}
+  \operatorname{det}[R(\theta)]=\operatorname{det} \left[ \exp \left(i \tau \theta  \right)  \right]
+  =\exp \left[ i \operatorname{Tr}(\tau) \right]=\operatorname{e}^0=1\,.
 \end{align}
 
 
-El grupo SO(2) corresponde al grupo de matrices ortogonales $2\times2$
+
+
+
+Para realizar la expansión de Taylor en la ec.~\eqref{eq:tye}, podemos usar la matriz de traza nula y hermítica en ec.~\eqref{eq:so2g} y generalizar sus potencias para $n$ entero
+\begin{align*}
+  \tau=&
+  \begin{pmatrix}
+   0 &-i\\ %0 &-i\\
+   i &0\\  %i &0\\ 
+  \end{pmatrix},&\tau^{2n}=&  \begin{pmatrix}
+   1 &0\\
+   0 &1\\ 
+  \end{pmatrix},&\tau^{2n+1}=&  \begin{pmatrix}
+   0 &-i\\
+   i &0\\ 
+  \end{pmatrix}.
+\end{align*}
+Entonces
+\begin{align}
+\label{eq:so2}
+  R(\theta)=\exp \left( i \theta\tau \right)=&\sum_{n=0}^{\infty}\frac{\left(i \theta\tau \right)^{n}}{n!}\nonumber\\
+=&\sum_{n=0}^{\infty}(i)^{2n}\frac{\left( \theta\tau \right)^{2n}}{2n!}+\sum_{n=0}^{\infty}(i)^{2n+1}\frac{\left( \theta\tau \right)^{2n+1}}{(2n+1)!}\nonumber\\
+  =&\sum_{n=0}^{\infty}(-1)^{n}\frac{\theta^{2n}}{2n!}
+  \begin{pmatrix}
+    1 & 0\\
+    0 & 1\\
+  \end{pmatrix}
++\sum_{n=0}^{\infty}i(-1)^{n}\frac{ \theta^{2n+1}}{(2n+1)!}
+\begin{pmatrix}
+  0 & -i \\
+  i & 0
+\end{pmatrix}
+\nonumber\\
+    =&
+  \begin{pmatrix}
+    \cos\theta & 0\\
+    0 & \cos\theta \\
+  \end{pmatrix}
++
+\begin{pmatrix}
+  0 & \sin\theta \\
+  -\sin\theta & 0
+\end{pmatrix}
+\nonumber\\
+    =&
+  \begin{pmatrix}
+    \cos\theta & \sin\theta\\
+     -\sin\theta& \cos\theta \\
+  \end{pmatrix}
+\end{align}
+Este grupo es Abeliano, ya que
+\begin{align}
+  R(\theta_1)R(\theta_2)=R(\theta_2)R(\theta_1)
+\end{align}
+De otro lado el Grupo $U(1)$ corresponde a las rotaciones de un eje complejo y tiene elementos
+\begin{align}
+  U(\theta)=e^{i \theta Y}\,,
+\end{align}
+donde $Y$ es el generador de los elementos del Grupo y su representación es un número real. 
+
+Estos dos grupos son isomorfos: para un elemento complejo $U(\theta)$ el correspondiente elemento en $SO(2)$ es la rotación por el ángulo el cual es el argumento de $U(\theta)$.
+
 
 Note que
 \begin{align*}
@@ -86,7 +171,213 @@ tal que
 \epsilon_{ac}\epsilon_{cb}=-\delta_{ab}
 \end{align*}
 
+Estas relaciones se pueden generalizar a rotaciones en mayores dimensiones.
+
+
+\subsection{$\operatorname{SO}(3)$}
+Una representación matricial de esta álgebra se puede obtener con la llamada representación adjunta del Grupo de rotaciones en 3 dimensiones, $SO(3)$, definida a partir de las constantes de estructura \cite{Veltman}
+\begin{align}
+  (L^i)_{jk}=-i\epsilon_{ijk}\,.
+\end{align}
+Explícitamente
+\begin{align*}
+  L^1=&
+  \begin{pmatrix}
+   0 & 0 & 0\\
+   0 & 0 & -i\\
+   0 & i & 0 \\
+  \end{pmatrix}&
+ L^2=&
+ \begin{pmatrix}
+  0 & 0  & i \\ 
+  0 & 0  & 0 \\
+ -i & 0  & 0 \\
+ \end{pmatrix}&
+ L^3=&
+ \begin{pmatrix}
+   0 & -i & 0\\
+   i & 0  & 0\\
+   0 & 0 & 0\\
+ \end{pmatrix}
+\end{align*}
+
+Estos generan los elementos de $SO(3)$
+\begin{align}
+  R(\boldsymbol{\theta})=&\exp(i \theta_j L^{j}),\qquad\text{sum in $j$}\nonumber\\
+                 =&\exp(i\theta_1 L_1+i\theta_2 L_2+i\theta_3 L_3)\,.
+\end{align}
+
+Para aislar los subgrupos de un parámetro definimos:
+\begin{align}
+  R_i\equiv R(\theta_i)
+\end{align}
+donde, haciendo los mismos pasos que para $SO(2)$ en \eqref{eq:so2},
+\begin{align}
+  R(\theta_1)=&
+  \begin{pmatrix}
+   1 &   0        &0\\
+   0 &\cos\theta_1  & \sin\theta_1\\
+   0 & -\sin\theta_1& \cos\theta_1\\
+  \end{pmatrix},\quad R(\theta_2)=
+  \begin{pmatrix}
+     \cos\theta_2 &0& -\sin\theta_2\\
+     0          &1& 0          \\
+    \sin\theta_2  &0&  \cos\theta_2\\
+  \end{pmatrix}\quad R(\theta_3)=
+  \begin{pmatrix}
+     \cos\theta_3 & \sin\theta_3&0\\
+     -\sin\theta_3& \cos\theta_3&0\\
+      0         &     0     &1\\
+  \end{pmatrix}\,,
+\end{align}
+que corresponden respectivamente a rotaciones sobre el eje $x$ por un ángulo $\theta_1$, sobre el eje $y$ por un ángulo $\theta_2$, sobre el eje $z$ por un ángulo $\theta_3$.
+
+Sin perdida de generalidad, un elemento del grupo $\operatorname{SO}(3)$, es decir, una matriz $3\times3$ ortogonal de determinante 1, $A$, se puede definir como el producto de las anteriores matrices de rotación de un parámetro
+\begin{align}
+ A =&R(\theta_1)R(\theta_2)R(\theta_3) \nonumber\\
+=&
+  \begin{pmatrix}
+    c_1 c_2-c_3 s_1 s_2    & c_1 c_2 + c_3 c_1 s_2  & s_3 s_2 \\
+    -c_1 s_2 - c_3 s_1 s_2 & -s_1 s_2 + c_3 c_1 c_2 & s_3 c_2 \\
+    s_3 s_1               & -s_3 c_1               & c_3\\
+  \end{pmatrix},
+\end{align}
+donde $c_i=\cos \theta_i$,  $s_i=\sin \theta_i$.
+
+Claramente, el Grupo $SO(3)$ es no Abeliano, es decir
+\begin{align*}
+  R(\boldsymbol{\theta}_1)R(\boldsymbol{\theta}_2)\ne R(\boldsymbol{\theta}_2)R(\boldsymbol{\theta}_1)
+\end{align*}
+
+Note que la combinación lineal se puede expresar como
+\begin{align}
+  i\boldsymbol{\theta}\cdot\boldsymbol{L}=& i\theta_1 L_1+i\theta_2 L_2+i\theta_3 L_3 \nonumber\\
+=&   \begin{pmatrix}
+  0           & \theta_3 & -\theta_2 \\
+  -\theta_3   &  0       & \theta_1 \\
+  \theta_2    & -\theta_1 & 0
+   \end{pmatrix}.
+\end{align}
+
+Un ejemplo de vector es el vector de velocidad, $\boldsymbol{v}$. Sea $\boldsymbol{k}$ un vector unitario describiendo un eje de rotación sobre el cual $\boldsymbol{v}$ rota por un ángulo $\theta$ de acuerdo a la regla de la mano derecha como se ilustra en la figura~\ref{fig:rf}.
+\begin{figure}
+  \centering
+  \includegraphics[scale=0.8]{Rodrigues-formula}
+  \caption{Rotación vector velocidad. Tomado de \cite{rodriguez}}
+  \label{fig:rf}
+\end{figure}
+
+Representado el resultado del producto vectorial $\boldsymbol{k}\times\boldsymbol{v}$ como una matrix columna,
+\begin{align}
+  \begin{pmatrix} (\boldsymbol{k}\times\boldsymbol{v})_x \\ (\boldsymbol{k}\times\boldsymbol{v})_y \\ (\boldsymbol{k}\times\boldsymbol{v})_z \end{pmatrix} = \begin{pmatrix} k_y v_z - k_z v_y \\ k_z v_x - k_x v_z \\ k_x v_y - k_y v_x \end{pmatrix} =& \begin{pmatrix} 0 & -k_z & k_y \\ k_z & 0 & -k_x \\ -k_y & k_x & 0 \end{pmatrix} \begin{pmatrix} v_x \\ v_y \\ v_z \end{pmatrix} \nonumber\\
+=& \boldsymbol{K} \boldsymbol{v}\,,
+\end{align}
+donde
+\begin{align}
+  \boldsymbol{K}=\begin{pmatrix} 0 & -k_z & k_y \\ k_z & 0 & -k_x \\ -k_y & k_x & 0 \end{pmatrix}
+\end{align}
+Si definimos la matriz de rotación, $R$ perteneciente a $\operatorname{SO}(3)$, a través de un ángulo $\theta$ sobre el eje $\boldsymbol{k}$
+\begin{align}
+  R(\theta)=\exp \left( - i \theta i \boldsymbol{K} \right)\,,
+\end{align}
+entonces
+\begin{align}
+  R(\theta)=I+ \boldsymbol{K} \sin\theta + (1-\cos\theta)\boldsymbol{K}^2\,.
+\end{align}
+done $I$ es la matriz identidad. En \cite{rodriguez} se encuentra la demostración.
+
+
+
+\subsection{$\operatorname{SU}(2)$} 
+
+La representación matricial isomorfa a $SO(3)$ pero con matrices $2\times2$ corresponde al Grupo $SU(2)$ de rotaciones de dos ejes complejos.
+\begin{english}
+  The Pauli matrices are set of matrices satisfying this commutation relations:
+\end{english}
+\begin{spanish}
+Las matrices de Pauli son un conjunto de matrices que satisfacen estas mismas condiciones de conmutación: 
+\end{spanish}
+\begin{equation}
+  \label{eq:paulialg}
+  \left[\frac{\tau^i}{2},\frac{\tau^j}{2} \right]=i\,\epsilon_{ijk}\frac{\tau^k}{2}
+\end{equation}
+donde $\tau^i$ 
+\begin{equation}
+  \label{eq:paulimatr}
+  \tau_1=
+  \begin{pmatrix}
+    0&1\\
+    1&0
+  \end{pmatrix} \qquad
+ \tau_2=
+  \begin{pmatrix}
+    0&-i\\
+    i&0
+  \end{pmatrix}\qquad 
+ \tau_3=
+  \begin{pmatrix}
+    1&0\\
+    0&-1
+  \end{pmatrix}
+ \end{equation}
+dividas por dos, corresponden a los generadores del Grupo. Las constantes de estructura del Grupo corresponden a $\epsilon_{ijk}$. Como los generadores no conmutan, $SU(2)$ es un Grupo de Lie no Abeliano. Definiendo los generadores de $SU(2)$ como
+\begin{equation}
+  T^i=\frac{\tau_i}{2},
+\end{equation}
+
+Las matrices de Pauli y por consiguiente $T_i$ satisfacen 
+\begin{align}
+  \tau_i^\dagger&=\tau_i\nonumber\\
+  \operatorname{Tr}  \left(
+    \tau_i
+  \right)&=0
+\end{align}
+Además
+\begin{align}
+  \label{eq:64qft}
+  \det
+  \left(
+    \tau_i
+  \right)&=-1\nonumber\\
+  \left\{ 
+    \tau_i,\tau_j
+  \right\}&=2\delta_{ij}\cdot I\Rightarrow\tau_i^2=I\nonumber \\
+\operatorname{Tr} \left(\tau^i\tau^j\right)&=2\delta^{ij}\nonumber\\
+\tau_i\tau_j&=i\epsilon_{ijk}\tau_k+\delta_{ij}\,.
+\end{align}
+
+Un elemento del Grupo puede escribirse como
+\begin{equation}
+  \label{eq:63qft}
+  U(\boldsymbol{\theta})=e^{iT^i \theta_i }\approx1+iT^i\theta_i=1+i\frac{\tau^i}{2}\theta_i\,.
+\end{equation}
+Como antes, $\theta_i$ son los parámetros de la transformación.  Usando las propiedades $T_i$, podemos mostrar que la representación matricial $2\times 2$, $U(\boldsymbol{\theta})$, satisface
+\begin{enumerate}
+\item Unitariedad: $U^{-1}(\boldsymbol{\theta})=U^{\dagger}(\boldsymbol{\theta})$. En efecto
+  \begin{align*}
+    U^{\dagger}(\boldsymbol{\theta})U(\boldsymbol{\theta})=&e^{-i{T^i}^{\dagger} \theta_i }e^{iT^i \theta_i }\nonumber\\
+=&e^{-i T^i \theta_i }e^{iT^i \theta_i } \nonumber\\
+=&e^{\mathbf{0}}\nonumber\\
+=&\mathbf{1}\,,
+  \end{align*}
+la identidad $2\times 2$.
+\item Especial (Special): Usando la formula de Jacobi para la exponencial de una matriz, $A$, $e^{A}=e^{\operatorname{Tr}A}$, tenemos que
+  \begin{align*}
+   \det[U(\boldsymbol{\theta})]=&\det\left\{\exp\left[  i \operatorname{Tr}\left( T^i \right)\theta_i \right]  \right\}\nonumber\\
+                           =&e^{0}\nonumber\\
+                           =&1\,.
+  \end{align*}
+\end{enumerate}
+De esta manera $T_i$ genera el grupo de matrices $2\times 2$ unitarias y de determinante 1: $SU(2)$. 
+
+El grupo $SU(2)$ de rotaciones de dos ejes complejos, es isomorfo al Grupo $SO(3)$ de rotaciones sobre tres ejes reales.
+
+
+Para ir más allá de las rotaciones de sistemas de referencias en reposo, debemos considerar también transformaciones entre sistemas de referencias inerciales. Para ello es conveniente usar unidades naturales y establecer una notación relativista.
+
+
 \section{Unidades Naturales}
+
 \label{sec:NU}
 Las \emph{unidades naturales} son unidades f\'\i sicas de medida definidas en t\'erminos de constantes f\'\i sicas universales~\cite{NU}. El primer conjunto consiste de unidades naturales, las \emph{unidades de Planck}~\cite{PU},  fue formulado por el propio Planck despu\'es de establecer la \'ultima constante universal, que lleva su nombre.  En palabras de Planck
 \begin{quotation} %noinstiki
@@ -343,6 +634,7 @@ Usando la ec.~(\ref{eq:242})
 \end{align}
 \end{example}
 
+\url{http://www.wolframalpha.com/input/?i=hbar*c/(13+eV)+to+m}
 
 
 \section{Notaci\'on relativista}
