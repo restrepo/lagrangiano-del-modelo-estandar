@@ -161,6 +161,57 @@ donde $Y$ es el generador de los elementos del Grupo y su representación es un 
 
 Estos dos grupos son isomorfos: para un elemento complejo $U(\theta)$ el correspondiente elemento en $SO(2)$ es la rotación por el ángulo el cual es el argumento de $U(\theta)$.
 
+El producto escalar entre dos vectores con respecto a un sistema inicial $(x,y)$  y un sistema final rotado  $(x', y')$ se puede obtener a partir de la rotación del sistema incial al sistema final
+\begin{align}
+\begin{bmatrix}
+    x\\
+    y\\
+  \end{bmatrix} \to  \begin{bmatrix}
+    x'\\
+    y'\\
+  \end{bmatrix}=R(\theta)  \begin{bmatrix}
+    x\\
+    y\\
+  \end{bmatrix} ,
+\end{align}
+o equvalentemente 
+\begin{align}
+\begin{bmatrix}
+    x^1\\
+    x^2\\
+  \end{bmatrix}\to  \begin{bmatrix}
+    x^{\prime 1}\\
+    x ^{\prime 2} \\
+  \end{bmatrix}=R(\theta)  \begin{bmatrix}
+    x^1\\
+    x^2\\
+  \end{bmatrix}.
+\end{align}
+
+En componentes y usando la convención de suma sobre índices repetidos, tenemos
+\begin{align}
+  \label{eq:rso2}
+  x^i\to x^{\prime i}=\sum_j{R^i}_j x^j\,.
+\end{align}
+
+Entonces, para el producto escalar
+\begin{align}
+  \boldsymbol{x}\cdot \boldsymbol{y}=\sum_{ij}\delta_{ij} x^i y^j. 
+\end{align}
+Bajo una rotación del sistema de coordenas el producto escalar que invariante. Para demostarlo aplicamos la rotación~\eqref{eq:rso2} sobre el producto escalar rotado:
+\begin{align}
+  \boldsymbol{x}\cdot \boldsymbol{y}\to  \boldsymbol{x}'\cdot \boldsymbol{y}'
+                     =&\sum_{ij} \delta_{ij} x^{\prime i}  y^{\prime j} \nonumber\\
+                     =&\sum_{ijkl}\delta_{ij} {R^i}_k x^{k}  {R^j}_l y^{l} \nonumber\\
+                     =&\sum_{ijkl} {R^i}_k \delta_{ij} {R^j}_l  x^{k}  y^{l} \nonumber\\
+                     =&\sum_{ikl} {R^i}_k  {R^i}_l  x^{k}  y^{l} \nonumber\\
+                     =&\sum_{kl}  {\left( R^{\text{T}} \right)_k}^i  {R^i}_l  x^{k}  y^{l} \nonumber\\
+  =&\sum_{kl}  \left( R^{\text{T}}R \right)_{kl}    x^{k}  y^{l} \nonumber\\
+  =&\sum_{kl}  \delta_{kl}    x^{k}  y^{l} \nonumber\\
+    =& \boldsymbol{x}\cdot \boldsymbol{y}\,,
+\end{align}
+
+
 
 Note que
 \begin{align*}
