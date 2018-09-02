@@ -35,17 +35,46 @@
 %instiki:***
 %instiki:
 
-Hemos visto que la acción para una oscilación mecánica en tres dimensiones se puede escribir en una notación similar a la del producto escalar de un cuadrivector de Lorentz $\partial_\mu\phi$. Cuando dicho campo se interpreta como un campo fundamental, es decir, que su velocidad de propagación es independiente de los sistemas de referencia inerciales, entonces la Acción queda invariante bajo dicho producto escalar.
-
-
-Se mostrará como la invarianza de la Acción bajo transformaciones de Lorentz es el punto de partida en la construcción de densidades Lagrangianas únicas.
+ Se mostrará como la invarianza de la Acción bajo transformaciones es el punto de partida en la construcción de densidades Lagrangianas únicas.
 
 %\subsection{Transformaciones de Lorentz}
 %\label{sec:transf-de-lorentz}
+
+ 
+\section{Principio de mínima acción para campos}
+Hemos visto que la acción para una oscilación mecánica en tres dimensiones se puede escribir en una notación similar a la del producto escalar de un cuadrivector de Lorentz $\partial_\mu\phi$. Cuando dicho campo se interpreta como un campo fundamental, es decir, que su velocidad de propagación es independiente de los sistemas de referencia inerciales, entonces la Acción queda invariante bajo dicho producto escalar. También hemos visto que adicionar una función del campo $V(\phi)$, la invarianza de la acción se mantiene.
+
+Establecemos el \emph{principio de mínima acción para campos} de la siguiente manera: La acción más general posible para un conjunto de campos contiene todos los posibles productos escalares entres los campos y sus derivadas, con las siguientes restricciones
+\begin{enumerate}
+\item La dimensión de los campos y derivadas en cada término de la correspondiente densidad lagrangiana debe ser menor o igual a cuatro.
+\item La densidad Lagrangiana no debe contener derivadas altas (máximo dos derivadas)
+\item Los campos fundamentales se deben anular a espacio infinito.
+\end{enumerate}
+Con estas restricciones es suficiente mantener los primeros cuatro términos de la expansión de Taylor de $V(\phi)$ (el término constante se puede remover redefiniendo el estado de mínima energía)
+\begin{align}
+  V(\phi)=a \phi + b\phi^2+c\phi^4+d\phi^4\,,
+\end{align}
+
+La última condición excluye términos del tipo
+\begin{align}
+  \partial_\mu \partial^\mu \phi\,,   \phi\partial_\mu \partial^\mu \phi\,.
+\end{align}
+De modo que la densidad Lagrangiana más general posible para un campo escalar real es
+\begin{align}
+  \frac{1}{2}{\partial_\mu\phi}\,{\partial^\mu\phi}+a \phi + b\phi^2+c\phi^4+d\phi^4\,.
+\end{align}
+
+Realizaciones propuestas para este campo escalar incluye el de un campo de materia oscura con un potencial tipo oscilador armónico.
+% figura
+Pero una realización ya encontrada en la naturaleza corresponde al campo de Higgs con un potencial tipo ruptura expontánea de vacio
+
+Una realización física para la acción del campo escalar real con un potencia escalar tipo ``slow-roll''  corresponde al campo del inflatón en cosmología.
+
+
+
 \section{Construción de Lagrangianos covariantes}
 
 En está sección vamos a conectar la discusión sobre el Lagrangiano de las vibraciones de la cuerda con las tranformaciones de Lorentz de la relatividad especial. Dicho Lagrangiano tiene hasta ahora la siguiente dependencia funcional $\mathcal{L}(\partial_{\mu}\phi)$.
-
 
 En la formulación de la teoría clásica de campos debemos asegurarnos de que todos los términos posibles perimtidos por la simetrías asociadas al campo estén presentes en la densidad Lagrangiana. De inmediato surge la pregunta: ¿Qué posibles términos de la forma $\partial_{\mu}\phi$ podrían estar presentes en Lagrangiano?. Antes de responder está pregunta, abordemos el problema algo más general donde la densidad Lagrangiana también depende del campo como mismo
 \begin{align*}
@@ -85,47 +114,7 @@ como se ilustra en la Fig.~\ref{fig:trasla}. La prima en $\phi$ representa el ca
 \end{align}
 
 
-Una transformación de Lorentz infinitesimal,
-puede parametrizarse sin perdida de generalidad como
-\begin{align}
-  x^\mu\to{x'}^\mu=&x^\mu+\delta x^{\mu}\,.
-\end{align}
 
-Para visualizar más fácilmente la situación para un campo escalar, supongamos de momento que $\delta x^{\mu}$ corresponde  traslaci\'on espacio--temporal.
-
-Tenemos
-\begin{align}
-  \phi'(x')&=\phi'(x+\delta x)\\
-  &\approx\phi'(x)+\frac{\partial\phi'(x)}{\partial x^\mu}\delta x^\mu\\
-  &=[\phi(x)+\delta\phi(x)]+\frac{\partial}{\partial x^\mu}[\phi(x)+\delta\phi(x)]\delta x^\mu\\
-  &\approx\phi(x)+\delta\phi(x)+\frac{\partial\phi(x)}{\partial x^\mu}\delta x^\mu,
-\end{align}
-donde, por simplicidad, $\phi$ es un campo real. Entonces,
-\begin{equation}
-  \label{eq:Deltaf}
-  \Delta\phi(x)\equiv\phi'(x')-\phi(x)=\delta\phi(x)+\frac{\partial\phi(x)}{\partial x^\mu}\delta x^\mu.
-\end{equation}
-Para una traslaci\'on, $\Delta\phi(x)=0$, ver figura 
-\ref{fig:trasla}. %noinstiki([trasla](#fig:trasla)).
-De modo que
-\begin{equation}
-  \label{eq:dmuxmu}
-  \delta\phi=-(\partial_\mu\phi)\delta x^\mu,
-\end{equation}
-y la transformaci\'on del campo $\phi$ como consecuencia de la traslaci\'on es
-\begin{align}
-  \phi(x)\to\phi'(x)=\phi(x)-\delta\phi(x)=\phi(x)+(\partial_\mu\phi(x))\delta x^\mu\,.
-\end{align}
-%noinstiki
-
-\begin{figure} %noinstiki
-  \centering %noinstiki
-  \includegraphics{trasla} %noinstiki
-  \caption{Traslaci\'on de funci\'on y coordenadas en una dimensi\'on: $\phi(x)=\phi'(x')$ } %noinstiki
-  \label{fig:trasla} %noinstiki
-\end{figure} %noinstiki<div id="fig:trasla">Figura trasla:Traslaci\'on de funci\'on y coordenadas $\phi(x)=\phi(x')$ </div>
-%noinstiki![trasla](http://gfif.udea.edu.co/figfs/trasla.png)
-%noinstiki
 
 
 
@@ -169,10 +158,6 @@ de modo que la transformación de Lorentz para $\partial_\mu=\partial/\partial x
 \end{align}
 Podemos ahora demostrar que la Acción obtenida del Lagrangiano en la ec.\eqref{eq:Lpr} es invariante bajo transformaciones de Lorentz haciendo uso de la ec.~(\ref{eq:Lambdacontra}). Para hacer la demostración más general, podemos agregar una función general que solo dependa del campo $\phi$ pero no de sus derivadas, $V(\phi)$
 \begin{align}
- \mathcal{L}= \frac{1}{2}{\partial_\mu\phi}\,{\partial^\mu\phi}-V(\phi)\,.
-\end{align}
-Entonces
-\begin{align}
   \mathcal{L}(\phi(x),\partial_{\mu}\phi(x))\to  \mathcal{L}'=& \frac{1}{2}\partial'_\mu\phi'(x)\partial^{'\mu}\phi'(x)-V(\phi'), \nonumber\\
   =&{\left(\Lambda^{-1}\right)^\nu}_\mu g^{\mu \rho}{\left(\Lambda^{-1}\right)^\sigma}_\rho \partial_\nu\phi(\Lambda^{-1}x) \partial_\sigma \phi(\Lambda^{-1}x) -V(\phi')\nonumber\\
   =& g^{\nu \sigma}\partial_\nu\phi(\Lambda^{-1}x) \partial_\sigma \phi(\Lambda^{-1}x) -V(\phi(\Lambda^{-1}x))\nonumber\\
@@ -198,6 +183,35 @@ Como $[\partial_{\mu}]=E$, entonces
 \end{align}
 
  
+
+\section{Construción de Lagrangianos covariantes}
+
+En está sección vamos a conectar la discusión sobre el Lagrangiano de las vibraciones de la cuerda con el Lagrangiano de Scr\"odinger en presencia de un campo electromagnético. Dicho Lagrangiano tiene hasta ahora la siguiente dependencia funcional
+\begin{align*}
+  \mathcal{L}_{\text{Scrödinger-local}}(\psi,\partial_{\mu}\psi,\psi^{*},\partial_{\mu}\psi^{*},A_{\mu})
+\end{align*}
+Un segundo ingrediente del principio gauge local es que debemos asegurarnos de todos los términos posibles asociados a un campo esten presente en el Lagrangiano. De inmediato surge la pregunta: ¿Qué posibles términos de la forma $\partial_{\mu}A_{\nu}$ podrían estar presentes en Lagrangiano?. Antes de responder está pregunta general, abordemos el problema más simple
+\begin{align*}
+  \mathcal{L}(A_0,\partial_\mu A_0)=  \mathcal{L}(\phi,\partial_\mu \phi)\,.
+\end{align*}
+En la ecuación~\eqref{eq:ls3d}, teníamos un Lagragiano en función de $\partial_{\mu}\phi$, y haciendo $v\to c=1$, tenemos
+\begin{align*}
+  \mathcal{L}(\partial_{\mu}\phi)
+    =&\frac{1}{2}\left[
+      {\partial_0\phi}\,{\partial_0\phi}-\sum_i{\partial_i\phi}\,{\partial_i\phi}
+   \right]\nonumber\\
+    =&\frac{1}{2}\left[
+      {\partial_0\phi}\,{\partial^0\phi}+{\partial_i\phi}\,{\partial^i\phi}
+   \right]\nonumber\\
+   =&\frac{1}{2}{\partial_\mu\phi}\,{\partial^\mu\phi}\,.
+\end{align*}
+
+
+
+\subsection{Ecuaciones covariantes}
+\label{sec:ecuac-covar}
+
+
 Con el cuadrivector \eqref{eq:cv_hatpmu} podemos construir la
 siguiente ecuaci\'on
 \begin{align}
@@ -217,9 +231,9 @@ Que corresponde a la ecuaci\'on de Klein-Gordon \eqref{eq:152}. Una expresi\'on 
 \end{equation}
 El Lagrangiano m\'as general posible para el campo $\phi$ es en general bastante arbitrario:
 \begin{equation}
-  \mathcal{L}=\frac{1}{2}\partial_\mu\phi\partial^\mu\phi-V(\phi)\,,
+  \mathcal{L}=\frac{1}{2}\partial_\mu\phi\partial^\mu\phi+f(\phi)\,,
 \end{equation}
-donde $V(\phi)$ es una función de campos escalar real $\phi$. Si $V(\phi)$ es una función polinómica del campo $\phi$, tenemos por ejemplo.
+donde $f(\phi)$ es una función de campos escalar real $\phi$. Si $f(\phi)$ es una función polinómica del campo $\phi$, tenemos por ejemplo.
 \begin{equation}
   \label{eq:wavelag}
   \mathcal{L}=\frac{1}{2}\partial_\mu\phi\partial^\mu\phi-\frac{1}{2}m^2\phi^2+\frac{1}{4}\lambda\phi^4+a\phi+b\phi^3.
@@ -280,220 +294,10 @@ $\phi\to-\phi$. A $\phi$ se le denomina \emph{campo escalar}.
 % \end{align}
 %\end{frame}
 
- 
-\section{Principio de mínima acción para campos}
-%También hemos visto que adicionar una función del campo $V(\phi)$, la invarianza de la acción se mantiene.
-
-Establecemos el \emph{principio de mínima acción para campos} de la siguiente manera: La acción más general posible para un conjunto de campos contiene todos los posibles productos escalares entre los campos y sus derivadas, con las siguientes restricciones
-\begin{enumerate}
-\item La dimensión de los campos y derivadas en cada término de la correspondiente densidad lagrangiana debe ser menor o igual a cuatro.
-\item La densidad Lagrangiana no debe contener derivadas altas (máximo dos derivadas)
-\item Los campos fundamentales se deben anular a espacio infinito.
-\end{enumerate}
-
-
-
-
-Con estas restricciones es suficiente mantener los primeros cuatro términos de la expansión de Taylor de $V(\phi)$ (el término constante se puede remover redefiniendo el estado de mínima energía)
-\begin{align}
-  V(\phi)=a \phi + b\phi^2+c\phi^4+d\phi^4\,,
-\end{align}
-
-La última condición excluye términos del tipo
-\begin{align}
-  \partial_\mu \partial^\mu \phi\,,   \phi\partial_\mu \partial^\mu \phi\,.
-\end{align}
-De modo que la densidad Lagrangiana más general posible para un campo escalar real es
-\begin{align}
-  \frac{1}{2}{\partial_\mu\phi}\,{\partial^\mu\phi}+a \phi + b\phi^2+c\phi^4+d\phi^4\,.
-\end{align}
-
-Realizaciones propuestas para este campo escalar incluye el de un campo de materia oscura con un potencial tipo oscilador armónico.
-% figura
-Pero una realización ya encontrada en la naturaleza corresponde al campo de Higgs con un potencial tipo ruptura expontánea de vacio
-
-Una realización física para la acción del campo escalar real con un potencia escalar tipo ``slow-roll''  corresponde al campo del inflatón en cosmología.
-
-\section{Campo escalar complejo}
-Entre más simetrías posea una Acción menos arbitraría es. Podemos
-ilustrar esta afirmación si consideramos una Acción para un campo escalar
-complejo que además de ser invariante de Lorentz, es además invariante
-bajo transformaciónes de fase.
-
-
-Para un campo complejo con invarianza de fase, el potencial $V(\phi,\phi^{*})$ es único:
-\begin{align}
-\label{eq:cef}
-  \mathcal{L}=\partial_{\mu}\phi^{*} \partial^{\mu}\phi-m^2\phi^{*}\phi+\lambda \left(\phi^{*}\phi \right)^2\,.
-\end{align}
-En efecto, la densidad Lagrangiana y por consiguiente la Acción, son invariante bajo la transformación
-\begin{align}
-  \phi\to \phi'=\operatorname{e}^{i\theta}\phi\,,\qquad \text{$\theta$ constante}\,.
-\end{align}
-Para $\theta$ infinitesimal
-\begin{align}
-\label{eq:deltaphi}
-  \delta\phi=\phi'-\phi=i\theta\phi
-\end{align}
-
-
-
-Por lo tanto
-\begin{align}
-  \left[ m \right]=&E& \left[ \lambda \right]=&1\,.
-\end{align}
-
-
-Términos de orden superior se pueden obtener a partir de esa
-Lagrangiana única y por eso no se consideran. 
-No se consideran términos con derivadas superiores porque al igual que en mecánica clásica pueden generar inestabilidades. Por lo tanto, los únicos términos con derivadas que dejen invariante la acción bajo transformaciones de Lorentz son (el primero sólo es posible para un campo real):
-\begin{align}
-  \partial_{\mu}\partial^{\mu}\phi,\qquad \phi^{*}\partial_{\mu}\partial^{\mu}\phi\,.
-\end{align}
-Una densidad Lagrangiana incluyendo estos términos se puede reescribir en términos de la densidad Lagranginan en la ec.~\eqref{eq:cef}, hasta una deriva total. Por ejemplo
-\begin{align}
-  \mathcal{L}_{\text{new}}=&-\phi^{*}\partial_{\mu}\partial^{\mu}\phi-m^2\phi^{*}\phi+\lambda \left(\phi^{*}\phi \right)^2\,\nonumber\\
-=&\partial_{\mu}\phi^{*}\partial^{\mu}\phi\,-\partial_{\mu}\left(\phi^{*}\partial^{\mu}\phi\right)-m^2\phi^{*}\phi+\lambda \left(\phi^{*}\phi \right)^2\,\nonumber\\
-=&\mathcal{L}-\partial_{\mu}\left(\phi^{*}\partial^{\mu}\phi\right)\,.
-\end{align}
-En general, si comparamos dos acciones que difieran en la derivada total de algún $X^{\mu}$ (en el caso anterior $X^{\mu}=-\phi^{*}\partial^{\mu}\phi$)
-\begin{align}
-  S_{\text{new}}=S+\int \partial_{\mu}\left(\phi^{*}\partial^{\mu}\phi\right)d^4x\,.
-\end{align}
-Veremos más adelante que la integral de una derivada total, con las condiciones de frontera adecuadas, no contribuye a la Acción.
-
-\begin{frame}[fragile,allowframebreaks]
-
-
-En ese caso la Acción, y la correspondiente densidad Lagrangiana son
-únicas y están dadas por una función polinómica de $\phi^{*}\phi$
-\begin{align}
-  \mathcal{L}=\partial_{\mu}\phi^{*} \partial^{\mu}\phi-m^2\phi^{*}\phi+\lambda \left(\phi^{*}\phi \right)^2\,.
-\end{align}
-\end{frame}
-
-De las ecuaciones de Euler-Lagrange para $\phi^*$, usando el Lagrangiano en ec.~(\ref{eq:41qft})
-\begin{align}
-  \partial_\mu\left[
-      \frac{\partial\mathcal{L}}{\partial(\partial_\mu\phi^*)}\right]-\frac{\partial\mathcal{L}}{\partial\phi^*}&=0\nonumber\\
-    \partial_\mu\partial^\mu\phi+m^2\phi&=0\nonumber\\
-    \label{eq:43qft}
-    (\Box+m^2)\phi&=0,
-\end{align}
-y de la ecuaciones de Euler-Lagrange para $\phi$,
-\begin{equation}
-  \label{eq:44qft}
-    (\Box+m^2)\phi^*=0.
-\end{equation}
-De este modo tanto $\phi$, como $\phi^*$, satisfacen la ecuación de Klein-Gordon. Cada campo además corresponde a una partícula de masa $m$ como en el caso de $\phi_1$ y $\phi_2$
-
-Estamos ahora interesado en las simetrías internas del Lagrangiano. Entonces la corriente conservada puede definida en la sección~\ref{sec:principio-de-minima-call}, eq.~\eqref{eq:jmuphi}
-\begin{align}
-  J^\mu=&\frac{\partial\mathcal{L}}{\partial(\partial_\mu\phi)}\delta\phi+\delta\phi^*\frac{\partial\mathcal{L}}{\partial(\partial_\mu\phi^*)}\nonumber\\
-  \label{eq:45qft}
-  J^\mu=&\partial^\mu\phi^*\delta\phi+\delta\phi^*\partial^\mu\phi.
-\end{align}
-Además de la invarianza de Lorentz, el Lagrangiano en ec,~(\ref{eq:41qft}) también es invariante bajo el grupo de transformaciones U(1) definido en las sección~\ref{sec:lagr-electr}, pero con una fase constante
-\begin{equation*}
-  U=e^{i\theta}\approx1+i\theta.
-\end{equation*}
-Entonces
-\begin{align}
-  \phi\overset{U}{\longrightarrow}\phi'&=e^{i\theta}\phi\approx(1+i\theta)\phi\nonumber\\
-  &=\phi+i\theta\phi.
-\end{align}
-Entonces,
-\begin{align}
-  \delta\phi&=i\theta\phi\\
-  \delta\phi^*&=-i\theta\phi^*.
-\end{align}
-Reemplazando en ec.~(\ref{eq:45qft})
-\begin{equation}
-\label{eq:46qft}
-  J^\mu\propto -i\theta(\phi\partial^\mu\phi^*-\phi^*\partial^\mu\phi),
-\end{equation}
-y
-\begin{equation}
-\label{eq:47qft}
-  \rho=J^0\propto-i\theta(\phi\frac{\partial\phi^*}{\partial t}-\phi^*\frac{\partial\phi}{\partial t}).
-\end{equation}
-Definimos $J^\mu$ como
-\begin{equation}
-  \label{eq:48qft}
-   J^\mu= i(\phi^*\partial^\mu\phi-\phi\partial^\mu\phi^*),
-\end{equation}
-Como $\rho$ puede ser negativo no puede interpretarse como una
-probalidad, como se hizo con la función de onda de la ecuación de
-Scrödinger. Esto presentó un obstaculo en la interpretación inicial de
-la ecuación de Klein-Gordon. Sin embargo una vez se cuantiza el
-campo escalar la probabilidad de los estados cuánticos queda bien
-definida \cite{Gross}. 
-
-\section{Invarianza de fase local para campo escalar complejo}
-
-Aplicando el principio gauge local al Lagrangiano para un campo escalar complejo presentado en la ecuación~\ref{eq:cef} con $\lambda=0$, debemos reemplazar la derivada normal $\partial_{\mu}$, por la derivada covariante $\mathcal{D}_{\mu}=\partial_{\mu}+iq A_{\mu}$ y adicionar todos los términos invariantes asociados al campo $A_\mu$, de modo que
-\begin{align}
-\label{eq:lcv}
-  \mathcal{L}=& \left( \mathcal{D}_{\mu} \phi \right)^{*} \mathcal{D}^{\mu}\phi -m^2 \phi^{*}\phi-\frac{1}{4}F^{\mu\nu}F_{\mu\nu} \nonumber\\
-             =&\left( \partial_{\mu}\phi^{*}-iq A_{\mu} \phi^{*} \right)\left( \partial^{\mu}\phi+iq A^{\mu} \phi \right) -m^2 \phi^{*}\phi-\frac{1}{4}F^{\mu\nu}F_{\mu\nu} \nonumber\\
-              =&\partial_{\mu}\phi^{*}\partial^{\mu}\phi-m^2 \phi^{*}\phi+iq \left(\phi\partial_{\mu}\phi^{*} -\phi^{*}\partial_{\mu}\phi \right) A^{\mu} +q^2 \phi^{*}\phi A_{\mu} A^{\mu} -\frac{1}{4}F^{\mu\nu}F_{\mu\nu} 
-\end{align}
-De modo que
-\begin{align}
-  \partial_{\mu} \left[ \frac{\partial \mathcal{L}}{\partial \left( \partial_{\mu}\phi^{*} \right)} \right]-\frac{\partial \mathcal{L}}{\partial \phi^{*}}
-=&\partial_{\mu} \left( \partial^{\mu}+iq A^{\mu} \right)\phi -\left(-iq \partial_{\mu}\phi A^{\mu} +q^2 A_{\mu}A^{\mu}\phi-m^{2}\phi  \right) \nonumber\\
- =&\partial_{\mu} \left( \partial^{\mu}+iq A^{\mu} \right)\phi  +iq \partial_{\mu}\phi A^{\mu}-q^2 A_{\mu}A^{\mu}\phi+m^{2}\phi\,.
-\end{align}
-
-Por lo tanto
-\begin{align}
--iq &\phi^{*} \left\{\partial_{\mu} \left[ \frac{\partial \mathcal{L}}{\partial \left( \partial_{\mu}\phi^{*} \right)} \right]-\frac{\partial \mathcal{L}}{\partial \phi^{*}} \right\}   
-= -iq \phi^{*}\partial_{\mu}\left( \partial^{\mu}+iq A^{\mu} \right)\phi+q^2 A_{\mu}  \phi^{*} \partial^{\mu}\phi +iq^3 A_{\mu}A^{\mu}\phi^{*}\phi-iq m^2\phi^{*}\phi \nonumber\\
-  =& -iq \partial_{\mu} \left[ \phi^{*}\left( \partial^{\mu}+iq A^{\mu} \right)\phi \right]+iq \left( \partial_{\mu} \phi^{*}\right)\left( \partial^{\mu}+iq A^{\mu} \right)\phi +q^2 A_{\mu}  \phi^{*} \partial^{\mu}\phi +iq^3 A_{\mu}A^{\mu}\phi^{*}\phi-iq m^2\phi^{*}\phi \nonumber\\
-  =& -iq \partial_{\mu} \left[ \phi^{*}\mathcal{D}^{\mu}\phi \right]+iq  \partial_{\mu} \phi^{*}\partial^{\mu}\phi-q^2A^\mu \left( \partial_{\mu} \phi^{*} \right)\phi  +q^2 A_{\mu}  \phi^{*} \partial^{\mu}\phi +iq^3 A_{\mu}A^{\mu}\phi^{*}\phi-iq m^2\phi^{*}\phi\,. 
-\end{align}
-Similarmente
-\begin{align}
-  iq &\left\{\partial_{\mu} \left[ \frac{\partial \mathcal{L}}{\partial \left( \partial_{\mu}\phi \right)} \right]-\frac{\partial \mathcal{L}}{\partial \phi} \right\} \phi \nonumber\\
-  =& iq \partial_{\mu} \left[ \left(  \mathcal{D}^{\mu}\phi \right) \phi^{*} \right]-iq  \partial_{\mu} \phi^{*}\partial^{\mu}\phi+q^2A^\mu \left( \partial_{\mu} \phi^{*} \right)\phi  -q^2 A_{\mu}  \phi^{*} \partial^{\mu}\phi -iq^3 A_{\mu}A^{\mu}\phi^{*}\phi+iq m^2\phi^{*}\phi\,. 
-\end{align}
-Sumando las dos expresiones, todos los términos con excepción de los primeros se cancelan entre si, dando lugar a 
-\begin{align}
-   \sum_{i}\mathcal{E}_{i} a_{\alpha i}=& \partial_{\mu} j^{\mu}\,,
-\end{align}
-donde
-\begin{align}
-  j^{\mu}=-iq \left[  \phi^{*}\mathcal{D}^{\mu}\phi -  \left(  \mathcal{D}^{\mu}\phi \right)^{*} \phi\right]\,,
-\end{align}
-que corresponde a la carga eléctrica. Note que dicho resultado se puede obtener más directamente usando la ec.~\eqref{eq:tnoeth2}.
-
-Note además que 
-\begin{align}
-\mathcal{D}_{\mu}\mathcal{D}^{\mu}\phi=  \left( \partial_{\mu}+iq A_{\mu}  \right)\left( \partial^{\mu}+iq A^{\mu} \right)\phi=& \partial_{\mu}\left( \partial^{\mu}+iq A^{\mu} \right)\phi+iq A_{\mu}  \left( \partial^{\mu}+iq A^{\mu} \right)\phi \nonumber\\
-=& \partial_{\mu}\left( \partial^{\mu}+iq A^{\mu} \right)\phi+iq A_{\mu}   \partial^{\mu}\phi -q^2 A_{\mu}A^{\mu}\phi\,.
-\end{align}
-Por lo tanto la ecuación de movimiento asociada al campo $\phi^{*}$
-
-
-
-\begin{align}
-  \partial_{\mu} \left[ \frac{\partial \mathcal{L}}{\partial \left( \partial_{\mu}\phi^{*} \right)} \right]-\frac{\partial \mathcal{L}}{\partial \phi}=&
- \left(\mathcal{D}_{\mu}\mathcal{D}^{\mu}+m^2  \right)\phi\,=0
-\end{align}
-Que corresponde a la ecuación de Klein-Gordon pero con la derivada normal reemplazada por la derivada covariante.
-
-Partiendo de nuevo de \ref{eq:lcv}, es interesenta notar que
-
 
 
 \section{Ecuaciones de Maxwell en notaci\'on covariante }
 \label{sec:maxeqs}
-
-\begin{align*}
-  \mathcal{L}(A_0,\partial_\mu A_0)=  \mathcal{L}(\phi,\partial_\mu \phi)\,.
-\end{align*}
-
-
 Ecuaciones homog\'eneas:
 \begin{align}
   \label{eq:hom_m_eq}
@@ -1421,6 +1225,126 @@ Además, el Lagrangiano libre se puede reescribir como la suma de cuatro lagrang
 \end{frame}
 
 
+
+
+
+\section{Campos escalares complejos}
+Entre más simetrías posea una Acción menos arbitraría es. Podemos
+ilustrar esta afirmación si consideramos una Acción para un campo escalar
+complejo que además de ser invariante de Lorentz, es además invariante
+bajo transformaciónes de fase.
+
+\begin{frame}[fragile,allowframebreaks]
+
+
+En ese caso la Acción, y la correspondiente densidad Lagrangiana son
+únicas y están dadas por una función polinómica de $\phi^{*}\phi$
+\begin{align}
+  \mathcal{L}=\partial_{\mu}\phi^{*} \partial^{\mu}\phi-m^2\phi^{*}\phi+\lambda \left(\phi^{*}\phi \right)^2\,.
+\end{align}
+Términos de orden superior se pueden obtener a partir de esa
+Lagrangiana única y por eso no se consideran. 
+\end{frame}
+
+De las ecuaciones de Euler-Lagrange para $\phi^*$, usando el Lagrangiano en ec.~(\ref{eq:41qft})
+\begin{align}
+  \partial_\mu\left[
+      \frac{\partial\mathcal{L}}{\partial(\partial_\mu\phi^*)}\right]-\frac{\partial\mathcal{L}}{\partial\phi^*}&=0\nonumber\\
+    \partial_\mu\partial^\mu\phi+m^2\phi&=0\nonumber\\
+    \label{eq:43qft}
+    (\Box+m^2)\phi&=0,
+\end{align}
+y de la ecuaciones de Euler-Lagrange para $\phi$,
+\begin{equation}
+  \label{eq:44qft}
+    (\Box+m^2)\phi^*=0.
+\end{equation}
+De este modo tanto $\phi$, como $\phi^*$, satisfacen la ecuación de Klein-Gordon. Cada campo además corresponde a una partícula de masa $m$ como en el caso de $\phi_1$ y $\phi_2$
+
+Estamos ahora interesado en las simetrías internas del Lagrangiano. Entonces la corriente conservada puede definida en la sección~\ref{sec:principio-de-minima-call}, eq.~\eqref{eq:jmuphi}
+\begin{align}
+  J^\mu=&\frac{\partial\mathcal{L}}{\partial(\partial_\mu\phi)}\delta\phi+\delta\phi^*\frac{\partial\mathcal{L}}{\partial(\partial_\mu\phi^*)}\nonumber\\
+  \label{eq:45qft}
+  J^\mu=&\partial^\mu\phi^*\delta\phi+\delta\phi^*\partial^\mu\phi.
+\end{align}
+Además de la invarianza de Lorentz, el Lagrangiano en ec,~(\ref{eq:41qft}) también es invariante bajo el grupo de transformaciones U(1) definido en las sección~\ref{sec:lagr-electr}, pero con una fase constante
+\begin{equation*}
+  U=e^{i\theta}\approx1+i\theta.
+\end{equation*}
+Entonces
+\begin{align}
+  \phi\overset{U}{\longrightarrow}\phi'&=e^{i\theta}\phi\approx(1+i\theta)\phi\nonumber\\
+  &=\phi+i\theta\phi.
+\end{align}
+Entonces,
+\begin{align}
+  \delta\phi&=i\theta\phi\\
+  \delta\phi^*&=-i\theta\phi^*.
+\end{align}
+Reemplazando en ec.~(\ref{eq:45qft})
+\begin{equation}
+\label{eq:46qft}
+  J^\mu\propto -i\theta(\phi\partial^\mu\phi^*-\phi^*\partial^\mu\phi),
+\end{equation}
+y
+\begin{equation}
+\label{eq:47qft}
+  \rho=J^0\propto-i\theta(\phi\frac{\partial\phi^*}{\partial t}-\phi^*\frac{\partial\phi}{\partial t}).
+\end{equation}
+Definimos $J^\mu$ como
+\begin{equation}
+  \label{eq:48qft}
+   J^\mu= i(\phi^*\partial^\mu\phi-\phi\partial^\mu\phi^*),
+\end{equation}
+Como $\rho$ puede ser negativo no puede interpretarse como una
+probalidad, como se hizo con la función de onda de la ecuación de
+Scrödinger. Esto presentó un obstaculo en la interpretación inicial de
+la ecuación de Klein-Gordon. Sin embargo una vez se cuantiza el
+campo escalar la probabilidad de los estados cuánticos queda bien
+definida \cite{Gross}. 
+
+
+\section{Campo escalar complejo}
+
+
+Para un campo complejo con invarianza de fase, el potencial $V(\phi,\phi^{*})$ es único:
+\begin{align}
+\label{eq:cef}
+  \mathcal{L}=\partial_{\mu}\phi^{*} \partial^{\mu}\phi-m^2\phi^{*}\phi+\lambda \left(\phi^{*}\phi \right)^2\,.
+\end{align}
+En efecto, la densidad Lagrangiana y por consiguiente la Acción, son invariante bajo la transformación
+\begin{align}
+  \phi\to \phi'=\operatorname{e}^{i\theta}\phi\,,\qquad \text{$\theta$ constante}\,.
+\end{align}
+Para $\theta$ infinitesimal
+\begin{align}
+\label{eq:deltaphi}
+  \delta\phi=\phi'-\phi=i\theta\phi
+\end{align}
+
+
+
+Por lo tanto
+\begin{align}
+  \left[ m \right]=&E& \left[ \lambda \right]=&1\,.
+\end{align}
+
+
+Más adelente justificaremos por qué no hay potencias con dimensiones mayor a $E^{4}$ del campo $\phi$ en la ec.~\eqref{eq:cef}. No se consideran términos con derivadas superiores porque al igual que en mecánica clásica pueden generar inestabilidades. Por lo tanto, los únicos términos con derivadas que dejen invariante la acción bajo transformaciones de Lorentz son (el primero sólo es posible para un campo real):
+\begin{align}
+  \partial_{\mu}\partial^{\mu}\phi,\qquad \phi^{*}\partial_{\mu}\partial^{\mu}\phi\,.
+\end{align}
+Una densidad Lagrangiana incluyendo estos términos se puede reescribir en términos de la densidad Lagranginan en la ec.~\eqref{eq:cef}, hasta una deriva total. Por ejemplo
+\begin{align}
+  \mathcal{L}_{\text{new}}=&-\phi^{*}\partial_{\mu}\partial^{\mu}\phi-m^2\phi^{*}\phi+\lambda \left(\phi^{*}\phi \right)^2\,\nonumber\\
+=&\partial_{\mu}\phi^{*}\partial^{\mu}\phi\,-\partial_{\mu}\left(\phi^{*}\partial^{\mu}\phi\right)-m^2\phi^{*}\phi+\lambda \left(\phi^{*}\phi \right)^2\,\nonumber\\
+=&\mathcal{L}-\partial_{\mu}\left(\phi^{*}\partial^{\mu}\phi\right)\,.
+\end{align}
+En general, si comparamos dos acciones que difieran en la derivada total de algún $X^{\mu}$ (en el caso anterior $X^{\mu}=-\phi^{*}\partial^{\mu}\phi$)
+\begin{align}
+  S_{\text{new}}=S+\int \partial_{\mu}\left(\phi^{*}\partial^{\mu}\phi\right)d^4x\,.
+\end{align}
+Veremos más adelante que la integral de una derivada total, con las condiciones de frontera adecuadas, no contribuye a la Acción.
 
 
 
