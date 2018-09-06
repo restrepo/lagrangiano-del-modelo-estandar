@@ -40,40 +40,11 @@
 %\subsection{Transformaciones de Lorentz}
 %\label{sec:transf-de-lorentz}
 
+
+
  
-\section{Principio de mínima acción para campos}
-Hemos visto que la acción para una oscilación mecánica en tres dimensiones se puede escribir en una notación similar a la del producto escalar de un cuadrivector de Lorentz $\partial_\mu\phi$. Cuando dicho campo se interpreta como un campo fundamental, es decir, que su velocidad de propagación es independiente de los sistemas de referencia inerciales, entonces la Acción queda invariante bajo dicho producto escalar. También hemos visto que adicionar una función del campo $V(\phi)$, la invarianza de la acción se mantiene.
-
-Establecemos el \emph{principio de mínima acción para campos} de la siguiente manera: La acción más general posible para un conjunto de campos contiene todos los posibles productos escalares entres los campos y sus derivadas, con las siguientes restricciones
-\begin{enumerate}
-\item La dimensión de los campos y derivadas en cada término de la correspondiente densidad lagrangiana debe ser menor o igual a cuatro.
-\item La densidad Lagrangiana no debe contener derivadas altas (máximo dos derivadas)
-\item Los campos fundamentales se deben anular a espacio infinito.
-\end{enumerate}
-Con estas restricciones es suficiente mantener los primeros cuatro términos de la expansión de Taylor de $V(\phi)$ (el término constante se puede remover redefiniendo el estado de mínima energía)
-\begin{align}
-  V(\phi)=a \phi + b\phi^2+c\phi^4+d\phi^4\,,
-\end{align}
-
-La última condición excluye términos del tipo
-\begin{align}
-  \partial_\mu \partial^\mu \phi\,,   \phi\partial_\mu \partial^\mu \phi\,.
-\end{align}
-De modo que la densidad Lagrangiana más general posible para un campo escalar real es
-\begin{align}
-  \frac{1}{2}{\partial_\mu\phi}\,{\partial^\mu\phi}+a \phi + b\phi^2+c\phi^4+d\phi^4\,.
-\end{align}
-
-Realizaciones propuestas para este campo escalar incluye el de un campo de materia oscura con un potencial tipo oscilador armónico.
-% figura
-Pero una realización ya encontrada en la naturaleza corresponde al campo de Higgs con un potencial tipo ruptura expontánea de vacio
-
-Una realización física para la acción del campo escalar real con un potencia escalar tipo ``slow-roll''  corresponde al campo del inflatón en cosmología.
-
-
 
 \section{Construción de Lagrangianos covariantes}
-
 En está sección vamos a conectar la discusión sobre el Lagrangiano de las vibraciones de la cuerda con las tranformaciones de Lorentz de la relatividad especial. Dicho Lagrangiano tiene hasta ahora la siguiente dependencia funcional $\mathcal{L}(\partial_{\mu}\phi)$.
 
 En la formulación de la teoría clásica de campos debemos asegurarnos de que todos los términos posibles perimtidos por la simetrías asociadas al campo estén presentes en la densidad Lagrangiana. De inmediato surge la pregunta: ¿Qué posibles términos de la forma $\partial_{\mu}\phi$ podrían estar presentes en Lagrangiano?. Antes de responder está pregunta, abordemos el problema algo más general donde la densidad Lagrangiana también depende del campo como mismo
@@ -95,8 +66,6 @@ En la ecuación~\eqref{eq:dlc3d}, teníamos un Lagragiano en función de $\parti
 donde se ha usado la convención de suma para índices repetidos. Note que para que la velocidad de propagación sea independiente del sistema de coordenadas se requiere su identificación con la velocidad de la luz. De modo que la queremos interpretar los términos de la densidad Lagrangiana como objetos invariantes, necesariamente se tiene que hacer en el contexto de la relatividad especial.
 
 
-
-
 \section{Transformación de Lorentz para campos escalares}
 
 El campo escalar esta definido por sus propiedades bajo transformaciones de Lorentz. Vamos a estudiar el comportamiento de un campo escalar bajo una transformación general de Lorentz:
@@ -108,15 +77,7 @@ Por definición, el campo escalar no cambia bajo la transformación de Lorentz, 
 \begin{align}
  \phi(x)\to  \phi'(x')=\phi(x)\,,
 \end{align}
-como se ilustra en la Fig.~\ref{fig:trasla}. La prima en $\phi$ representa el cambio intrínseco en el campo $\phi$ como consecuencia de la transformación. Definimos el cambio correspondiente como
-\begin{align}
-  \delta \phi(x)=\phi'(x)-\phi(x)\,.
-\end{align}
-
-
-
-
-
+como se ilustró en la Fig.~\ref{fig:trasla}. La prima en $\phi$ representa el cambio intrínseco en el campo $\phi$ como consecuencia de la transformación.
 
 
 Usando la ec.~\eqref{eq:179qft}, tenemos que
@@ -135,6 +96,16 @@ que el campo escalar transforma bajo una transformación de Lorentz como
  \phi(x)\to  \phi'(x)=\phi(\Lambda^{-1}x)\,.
 \end{align}
 \end{frame}
+
+
+
+% Definimos el cambio correspondiente como
+% \begin{align}
+%   \delta \phi(x)=\phi'(x)-\phi(x)\,.
+% \end{align}
+
+
+
 
 Para comprobar la invarianza de Lorentz de la Acción para el campo escalar, necesitamos las propiedades de transformación para $\partial_\mu$. En conveniente invertir la ec.~\eqref{eq:179qft}
 \begin{align}
@@ -182,32 +153,45 @@ Como $[\partial_{\mu}]=E$, entonces
   [\phi]=E\,.
 \end{align}
 
+
  
+\section{Principio de mínima acción para campos}
+Hemos visto que la acción para una oscilación mecánica en tres dimensiones se puede escribir en una notación similar a la del producto escalar de un cuadrivector de Lorentz $\partial_\mu\phi$. Cuando dicho campo se interpreta como un campo fundamental, es decir, que su velocidad de propagación es independiente de los sistemas de referencia inerciales, entonces la Acción queda invariante bajo dicho producto escalar. También hemos visto que adicionar una función del campo $V(\phi)$, la invarianza de la acción se mantiene.
 
-\section{Construción de Lagrangianos covariantes}
+Establecemos el \emph{principio de mínima acción para campos} de la siguiente manera: La acción más general posible para un conjunto de campos contiene todos los posibles productos escalares entres los campos y sus derivadas, con las siguientes restricciones
+\begin{enumerate}
+\item La dimensión de los campos y derivadas en cada término de la correspondiente densidad lagrangiana debe ser menor o igual a cuatro.
+\item La densidad Lagrangiana no debe contener derivadas altas (máximo dos derivadas)
+\item Los campos fundamentales se deben anular a espacio infinito.
+\end{enumerate}
+Con estas restricciones es suficiente mantener los primeros cuatro términos de la expansión de Taylor de $V(\phi)$ (el término constante se puede remover redefiniendo el estado de mínima energía)
+\begin{align}
+  \label{eq:fullV}
+  V(\phi)=a \phi + b\phi^2+c\phi^3+d\phi^4\,,
+\end{align}
 
-En está sección vamos a conectar la discusión sobre el Lagrangiano de las vibraciones de la cuerda con el Lagrangiano de Scr\"odinger en presencia de un campo electromagnético. Dicho Lagrangiano tiene hasta ahora la siguiente dependencia funcional
-\begin{align*}
-  \mathcal{L}_{\text{Scrödinger-local}}(\psi,\partial_{\mu}\psi,\psi^{*},\partial_{\mu}\psi^{*},A_{\mu})
-\end{align*}
-Un segundo ingrediente del principio gauge local es que debemos asegurarnos de todos los términos posibles asociados a un campo esten presente en el Lagrangiano. De inmediato surge la pregunta: ¿Qué posibles términos de la forma $\partial_{\mu}A_{\nu}$ podrían estar presentes en Lagrangiano?. Antes de responder está pregunta general, abordemos el problema más simple
-\begin{align*}
-  \mathcal{L}(A_0,\partial_\mu A_0)=  \mathcal{L}(\phi,\partial_\mu \phi)\,.
-\end{align*}
-En la ecuación~\eqref{eq:ls3d}, teníamos un Lagragiano en función de $\partial_{\mu}\phi$, y haciendo $v\to c=1$, tenemos
-\begin{align*}
-  \mathcal{L}(\partial_{\mu}\phi)
-    =&\frac{1}{2}\left[
-      {\partial_0\phi}\,{\partial_0\phi}-\sum_i{\partial_i\phi}\,{\partial_i\phi}
-   \right]\nonumber\\
-    =&\frac{1}{2}\left[
-      {\partial_0\phi}\,{\partial^0\phi}+{\partial_i\phi}\,{\partial^i\phi}
-   \right]\nonumber\\
-   =&\frac{1}{2}{\partial_\mu\phi}\,{\partial^\mu\phi}\,.
-\end{align*}
+La última condición excluye términos del tipo
+\begin{align}
+  \partial_\mu \partial^\mu \phi\,,   \phi\partial_\mu \partial^\mu \phi\,.
+\end{align}
+De modo que la densidad Lagrangiana más general posible para un campo escalar real es
+\begin{align}
+  \frac{1}{2}{\partial_\mu\phi}\,{\partial^\mu\phi}-V(\phi)\,.
+\end{align}
+La ecuación de movimiento es
+\begin{align}
+  \left( \partial_\mu \partial^{\mu} +2b \right)\phi= J(\phi)\,,
+\end{align}
+donde
+\begin{align}
+  J(\phi)=- \left( a + 3c\phi^3 + 4d\phi^4 \right),
+\end{align}
+es el término de fuente. En ausencia de fuentes el campo $\phi$ se propaga libremente a través de la ecuación
+\begin{align}
+  \left( \partial_\mu \partial^{\mu} +2b \right)\phi= 0.
+\end{align}
 
-
-
+A continuación procedemos a encontrar una interpretación física al coeficiente $2b$
 \subsection{Ecuaciones covariantes}
 \label{sec:ecuac-covar}
 
@@ -231,32 +215,15 @@ Que corresponde a la ecuaci\'on de Klein-Gordon \eqref{eq:152}. Una expresi\'on 
 \end{equation}
 El Lagrangiano m\'as general posible para el campo $\phi$ es en general bastante arbitrario:
 \begin{equation}
-  \mathcal{L}=\frac{1}{2}\partial_\mu\phi\partial^\mu\phi+f(\phi)\,,
+  \mathcal{L}=\frac{1}{2}\partial_\mu\phi\partial^\mu\phi-V(\phi)\,,
 \end{equation}
-donde $f(\phi)$ es una función de campos escalar real $\phi$. Si $f(\phi)$ es una función polinómica del campo $\phi$, tenemos por ejemplo.
+donde $f(\phi)$ es una función de campos escalar real $\phi$. Si $V(\phi)$ es una función polinómica del campo $\phi$, tenemos por ejemplo.
 \begin{equation}
   \label{eq:wavelag}
-  \mathcal{L}=\frac{1}{2}\partial_\mu\phi\partial^\mu\phi-\frac{1}{2}m^2\phi^2+\frac{1}{4}\lambda\phi^4+a\phi+b\phi^3.
+  \mathcal{L}=\frac{1}{2}\partial_\mu\phi\partial^\mu\phi-\frac{1}{2}m^2\phi^2-\frac{1}{4}\lambda\phi^4-a\phi+b\phi^3.
 \end{equation}
-Un t\'ermino de la forma $\partial_\mu\partial^\mu\phi$ puede reabsorverse en la
-ec.~\eqref{eq:wavelag} como una derivada total. Un posible t\'ermino
-$J_\mu\partial^\mu\phi$, con $J_\mu$ constante, tambi\'en puede reescribirse como una
-derivada total. Un t\'ermino constante
-no afecta las ecuaciones de movimiento. Imponer la simetr\'\i a $\phi\to-\phi$
-anula los dos \'ultimos t\'erminos. Potencias de $\phi$ mayores de cuatro
-dar\'\i a lugar a una Teor\'\i a Cu\'antica de Campos no renormalizable. 
 
-La dimensi\'on del campo $\phi$ puede obtenerse usando que la acci\'on es adimensional
-\begin{equation}
-  [S]\supset\left[\int d^4x\,m^2\phi^2\right]=E^{-4}E^2[\phi]^2\to [\phi]=E^1
-\end{equation}
-Diremos entonces que la dimensi\'on de $\phi$ es 1 (en unidades de energ\'\i a). Similarmente
-\begin{equation}
-  [S]\supset\left[\int d^4x\,\partial_\mu\phi\partial^\mu\phi\right]=E^{-4}[\partial_\mu]^2E^2\to [\partial_\mu]=E^1
-\end{equation}
-Como era de esperarse debido a que la derivada tiene unidades de longitud inversa.
-
-Si hacemos $\lambda=a=b=0$ en la ec.~\eqref{eq:wavelag}, y usando las
+En asencia de fuentes $a=c=d=0$ en la ec.~\eqref{eq:fullV}, y usando las
 ecuaciones de Euler-Lagrange \eqref{eq:eelcallfmu}, se obtiene
 \begin{align}
   (\hat{p}_\mu\hat{p}^\mu-m^2)\phi&=0\nonumber\\
@@ -286,17 +253,115 @@ ecuaci\'on de Klein--Gordon y su correspondiente Lagrangiano est\'an
 en forma covariante. Tambi\'en tienen la simetr\'\i a
 $\phi\to-\phi$. A $\phi$ se le denomina \emph{campo escalar}.
 
+Hemos identificado que el término $2a=m^2$ se podría interpretar como la masa al cuadrado del campo escalar. Dicha interpretación surge de analizar la segunda cuantización del campo $\phi$ que se traduce en una interpretación en términos del oscilador armónico.
+%TODO: FALTA
+
+Realizaciones propuestas para este campo escalar incluye el de un campo de materia oscura con un potencial tipo oscilador armónico.
+% figura
+Pero una realización ya encontrada en la naturaleza corresponde al campo de Higgs con un potencial tipo ruptura expontánea de vacio
+
+Una realización física para la acción del campo escalar real con un potencia escalar tipo ``slow-roll''  corresponde al campo del inflatón en cosmología.
+
+
+
+
+\section{Lagrangiano para el campo vectorial}
+\begin{frame}[fragile,allowframebreaks]
+Ya estamos en capacidad de responder la siguiente pregunta: ¿Cual es el Lagrangiano más general posible para el campo de cuatro componentes $A^{\mu}(x)$ compatible con la invarianza de Lorentz 
+
+Las correspondientes transformaciones son
+
+\begin{align}
+  A^\mu(x)\to {A'}^\mu(x')={\Lambda^\mu}_\nu A^\nu(\Lambda^{-1}x)\,.
+\end{align}
+
+
+\begin{align}
+\label{eq:172qft}
+  A^\mu\to{A'}^\mu=A^\mu-\partial^\mu\chi(x)\;?
+\end{align}
+
+
+
+
+Definiendo
+\begin{align*}
+  F^{\mu\nu}&=\partial^\mu A^\nu-\partial^\nu A^\mu\\
+  G^{\mu\nu}&=\partial^\mu A^\nu+\partial^\nu A^\mu\\
+\end{align*}
+El Lagrangiano que da lugar a una Acción invariante de Lorentz para el cuadrivector $A^\mu$
+es, hasta derivadas totales y potencias en los campos de hasta dimensión 4:
+\begin{align}
+  \mathcal{L}=&-\frac{1}{4}F^{\mu\nu}F_{\mu\nu}-\frac{1}{4}G^{\mu\nu}G_{\mu\nu}-\frac{1}{2}F^{\mu\nu}G_{\mu\nu}\nonumber\\
+&-J^\mu A_\mu+
+ \frac{1}{2}m^2A^\mu A_\mu +\lambda_1\partial_\nu A^\nu(x) A_\mu(x) A^\mu(x)+\lambda_2 A^\mu A_\mu A^\nu A_\nu\nonumber\\
+&+\lambda_3 F^{\mu\nu}(x)A_\mu(x) A_\nu(x)+\lambda_4G^{\mu\nu}(x)A_\mu(x) A_\nu+\cdots
+  \label{eq:lagAmu}
+\end{align}
+\end{frame}
+
+\begin{itemize}
+\item \textbf{Ejercicio:} Show that terms like $\partial^\mu A^\nu(x)\partial_\mu A_\nu(x)$, and hence $F^{\mu\nu}F_{\mu\nu}$, transforms as
+  \begin{align}
+    \partial^\mu A^\nu\left(\Lambda^{-1}x\right)\partial_\mu A_\nu\left(\Lambda^{-1}x\right)
+  \end{align}
+Hint: use the Lorentz transformation properties of $\partial_\mu$ in eq.~\eqref{dmulrtran}.
+\end{itemize}
+In the case of $J^\mu A_\mu$:
+\begin{align}
+  J^\mu(x)A_\mu(x)\to g_{\mu\nu}{J'}^\mu(x){A'}^\nu(x)=& g_{\mu\nu}{\Lambda^\mu}_\rho J^\rho\left(\Lambda^{-1}x\right){\Lambda^\nu}_\sigma A^\sigma\left(\Lambda^{-1}x\right)\nonumber\\
+=& {\Lambda^\mu}_\rho g_{\mu\nu}{\Lambda^\nu}_\sigma J^\rho\left(\Lambda^{-1}x\right)A^\sigma\left(\Lambda^{-1}x\right)\nonumber\\
+=& g_{\rho\sigma}J^\rho\left(\Lambda^{-1}x\right)A^\sigma\left(\Lambda^{-1}x\right)\,,
+\end{align}
+in the case $\partial_\nu A^\nu(x) A_\mu(x) A^\mu(x)$:
+\begin{align}
+   \partial_\nu A^\nu(x) A_\mu(x) A^\mu(x)\to {\partial'}_\nu{A'}^\nu(x') {A'}_\mu(x') {A'}^\mu(x')=& {\left(\Lambda^{-1}\right)^\sigma}_\nu{\Lambda^\nu}_\rho\partial_\sigma A^\rho\left(\Lambda^{-1}x\right) A_\mu\left(\Lambda^{-1}x\right) A^\mu\left(\Lambda^{-1}x\right)\nonumber\\
+=& \delta^\sigma_\rho\partial_\sigma A^\rho\left(\Lambda^{-1}x\right) A_\mu\left(\Lambda^{-1}x\right) A^\mu\left(\Lambda^{-1}x\right)\nonumber\\
+=& \partial_\rho A^\rho\left(\Lambda^{-1}x\right) A_\mu\left(\Lambda^{-1}x\right) A^\mu\left(\Lambda^{-1}x\right)\,,\nonumber\\
+\end{align}
+and similarly for the other terms. Under a Lorentz transformation the full Lagrangian transform as
+\begin{align}
+  \mathcal{L}(x)\to\mathcal{L}'(x)=\mathcal{L}(\Lambda^{-1}x) 
+\end{align}
+Since the Action involves the integration over all the points, it is invariant under the Lorentz transformation. The $J^\mu(x)$ does not involves the introduction a new vector field, because it will be identified later as the 4--current.
+
+
+Terms like
+\begin{align}
+  K_\nu A^\nu(x) A_\mu(x) A^\mu(x)\,,
+\end{align}
+(for $K_\nu$ constant) are not Lorentz invariant:
+\begin{align}
+  K_\nu A^\nu(x) A_\mu(x) A^\mu(x)\to K_\nu{A'}^\nu(x) {A'}_\mu(x) {A'}^\mu(x)=& K_\nu{\Lambda^\nu}_\rho A^\rho\left(\Lambda^{-1}x\right) A_\mu\left(\Lambda^{-1}x\right) A^\mu\left(\Lambda^{-1}x\right)\,.
+\end{align}
+$K_\nu(x)A^\nu(x)A_\mu(x)A^\mu(x)$ is Lorentz invariant %but not gauge-invariant (see below).
+
+
+
 
 %\begin{frame}[fragile,allowframebreaks]
 % The field $A^\mu(x)$ transforms simultaneously as field and as vector under Lorentz transformation
 % \begin{align}
 %   A^\mu(x)\to {A'}^\mu(x')={\Lambda^\mu}_\nu A^\nu(\Lambda^{-1}x)\,.
 % \end{align}
-%\end{frame}
+% \end{frame}
+
+
+
 
 \section{Lagrangiano electromagnético}
+Las ecuaciones de Maxwell tienen la siguiente simetría
+\begin{align}
+   A^\mu\to {A'}^\mu=&A^\mu-\partial^\mu\theta(x)
+\end{align}
+ que cuando fue descubierta parecía ser una simple curiosidad matemática de dichas ecuaciones.
 
-De otro lado, si aplicamos el segundo teorema de Noether al campo de radiación
+Comparando con la transformación más general de un campo vemos que para el campo vectorial con dicha invarianza $a_i=0$ y $b^{\mu_i}=1$ en la ec.\eqref{eq:infdt}. 
+
+Ya estamos en capacidad de responder la siguiente pregunta: ¿Cual es el Lagrangiano más general posible para el campo de cuatro componentes $A^{\mu}(x)$ compatible con la invarianza de Lorentz y la invarianza bajo transformaciones gauge?
+
+
+De hecho, si aplicamos el segundo teorema de Noether al campo de radiación
 \begin{align}
   0=&\partial_{\mu} \left( \mathcal{E}_3 b^{\mu}_3 \right) \nonumber\\
    0=&\partial_{\mu} \left( \mathcal{E}_3 \delta^{\mu}_\nu \right) \nonumber\\
@@ -339,6 +404,36 @@ Por consiguiente, el único término posible que a la vez es invariante de Loren
 %%hablar de la ecuaciones de Euler-Lagrange, el gauge de Lorentz y la ecuación de onda.
 
 
+Podemos coprobar que si
+\begin{align}
+F^{\rho\sigma}F_{\rho\sigma}=&(\partial^\rho A^\sigma-\partial^\sigma A^\rho)(\partial_\rho A_\sigma-\partial_\sigma A_\rho)\nonumber\\
+=&\partial^\rho A^\sigma\partial_\rho A_\sigma-\partial^\rho A^\sigma\partial_\sigma A_\rho-\partial^\sigma A^\rho\partial_\rho A_\sigma+\partial^\sigma A^\rho\partial_\sigma
+A_\rho\nonumber\\
+=&g^{\rho\alpha}g^{\sigma\beta}(\partial_\alpha A_\beta\partial_\rho A_\sigma-\partial_\alpha A_\beta\partial_\sigma A_\rho-\partial_\beta A_\alpha\partial_\rho A_\sigma+\partial_\beta A_\alpha\partial_\sigma A_\rho).\nonumber
+\end{align}
+Entonces
+\begin{align}
+  \frac{\partial}{\partial(\partial_\mu A_\nu)}F^{\rho\sigma}F_{\rho\sigma}=&g^{\rho\alpha}g^{\sigma\beta}(\delta_{\alpha\mu}\delta_{\beta\nu}\partial_\rho
+  A_\sigma+\partial_\alpha A_\beta\delta_{\rho\mu} \delta_{\sigma\nu}-\delta_{\alpha\mu}\delta_{\beta\nu}\partial_\sigma A_\rho-\partial_\alpha A_\beta\delta_{\sigma\mu}\delta_{\rho\nu}\nonumber\\
+&-\delta_{\beta\mu}\delta_{\alpha\nu}\partial_\rho A_\sigma-\partial_\beta A_\alpha\delta_{\rho\mu}\delta_{\sigma\nu}+\delta_{\beta\mu}\delta_{\alpha\nu}\partial_\sigma A_\rho+\partial_\beta
+A_\alpha\delta_{\sigma\mu}\delta_{\rho\nu}).\nonumber\\
+=&  g^{\rho\mu}g^{\sigma\nu}\partial_\rho A_\sigma+g^{\mu\alpha}g^{\nu\beta}\partial_\alpha A_\beta-g^{\rho\mu}g^{\sigma\nu}\partial_\sigma A_\rho-g^{\nu\alpha}g^{\mu\beta}\partial_\alpha A_\beta\nonumber\\
+ &-g^{\rho\nu}g^{\sigma\mu}\partial_\rho A_\sigma-g^{\mu\alpha}g^{\nu\beta}\partial_\beta A_\alpha+g^{\rho\nu}g^{\sigma\mu}\partial_\sigma A_\rho+g^{\nu\alpha}g^{\mu\beta}\partial_\beta A_\alpha\nonumber\\
+=&  \partial^\mu A^\nu+\partial^\mu A^\nu-\partial^\nu A^\mu-\partial^\nu A^\mu-\partial^\nu A^\mu-\partial^\nu A^\mu+\partial^\mu A^\nu+\partial^\mu A^\nu\nonumber\\
+=&4(\partial^\mu A^\nu-\partial^\nu A^\mu) \nonumber\\
+\label{eq:dddmufmunu2}
+\frac{\partial}{\partial(\partial_\mu A_\nu)}F^{\rho\sigma}F_{\rho\sigma}&=4F^{\mu\nu}
+\end{align}
+y en efecto
+\begin{align}
+  F_{\mu\nu}=\frac{\partial \mathcal{L}}{\partial \left(\partial  \partial_{\nu} A_{\mu}\right)}\,,
+\end{align}
+tal que
+\begin{align}
+  \partial_{\mu}\partial_{\nu}F^{\mu\nu}=0\,.
+\end{align}
+
+
 \section{Ecuaciones de Maxwell en notaci\'on covariante }
 \label{sec:maxeqs}
 Ecuaciones homog\'eneas:
@@ -373,6 +468,8 @@ Tomando la divergencia de la Ley de Amp\`ere modificada por Maxwell
 \end{equation}
 obtenemos la ecuaci\'on de continuidad \eqref{eq:153}. Dicha ecuaci\'on establece que la raz\'on de decrecimiento de la carga en un volumen arbitrario $V$ es debido precisa y \'unicamente al flujo de la corriente fuera de su superficie; de modo que la carga no puede ser creada ni destruida dentro de $V$.  Ya que $V$ puede ser arbitrariamente peque\~no esto significa que la carga el\'ectrica debe conservarse localmente.   El t\'ermino extra introducido por Maxwell est\'a motivado por un requerimiento de conservaci\'on local. 
 
+
+
 A la luz del teorema de Noether la conservaci\'on local de la carga el\'ectrica debe provenir de una transformaci\'on continua y \emph{local} que deje invariante a la ecuaciones de Maxwell. Las invarianza gauge de la ecuaciones de Maxwell juegan este papel. Las cargas conservadas localmente pueden determinarse a partir de la din\'amica del sistema  \cite{Aitchison:2003tq}, adem\'as del uso de cargas conocidas que participen en alguna reacci\'on. Por ejemplo se puede estudiar la forma como responde una part\'\i cula de carga desconocida a campos electromagn\'eticos para determinar su carga. 
 
 El principio gauge local, que pretendemos formular, va m\'as all\'a del teorema de Noether estableciendo una relaci\'on entre las simetr\'\i as, las leyes de conservaci\'on y la din\'amica. Este se constituye en el paradigma para estudiar las interacciones relevantes en f\'\i sica de part\'\i culas.
@@ -396,6 +493,140 @@ y
   \boldsymbol{\nabla}\cdot\mathbf{B}&=\boldsymbol{\nabla}\cdot(\boldsymbol{\nabla}\times\mathbf{A})\\
   &=0
 \end{align*}
+
+
+
+
+
+La ec.~(\ref{eq:phia}) es invariante bajo las siguientes transformaciones
+\begin{align}
+  \label{eq:phia_transf}
+  \mathbf{A}&\to\mathbf{A}'=\mathbf{A}+\boldsymbol{\nabla}\chi&
+  \phi&\to\phi'=\phi-\frac{\partial\chi}{\partial t} 
+\end{align}
+%to_en:Since
+Ya que
+\begin{equation}
+  \label{eq:Etrans}
+  \mathbf{E}\to\mathbf{E}'= -\boldsymbol{\nabla}\phi+\frac{\partial}{\partial t}\boldsymbol{\nabla}\chi
+  -\frac{\partial\mathbf{A}}{\partial t}-\frac{\partial}{\partial t}\boldsymbol{\nabla}\chi=\mathbf{E}
+\end{equation}
+\begin{equation}
+  \label{eq:btransf}
+  \mathbf{B}\to\mathbf{B}'= \boldsymbol{\nabla}\times\mathbf{A}+
+  \underbrace{\boldsymbol{\nabla}\times\boldsymbol{\nabla}\chi}_{\displaystyle =0}=\mathbf{B}
+\end{equation}
+%to_en:This imply that different observers in different space points, using different calibrations for their measures, get the same fields. 
+Esto implica que diferentes observadores en diferentes puntos del espacio, usando diferentes calibraciones para sus medidas, obtienen los mismos campos. Las  ecs.~\eqref{eq:phia_transf}, corresponden a \emph{transformaciones gauge locales}
+
+%to_en:In covariant notation
+En notaci\'on de cuadrivectores
+\begin{align}
+  A^\mu\to {A'}^\mu=&\left(\phi-\frac{\partial\chi}{\partial t},\mathbf{A}+\boldsymbol{\nabla}\chi
+  \right)\nonumber\\
+  =&\left(\phi-\frac{\partial\chi}{\partial t},A^{i}+\partial_i\chi
+  \right)\nonumber\\
+  =&\left(\phi-\partial^0\chi,A^{i}-\partial^{i}\chi
+  \right)\nonumber\\
+  =&\left(\phi,A^{i}
+  \right)-
+  \left(
+    \partial^0\chi,\partial^{i}\chi
+  \right)\nonumber\\
+  \label{eq:aphicov}
+  A^\mu\to {A'}^\mu=&A^\mu-\partial^\mu\chi
+\end{align}
+%to_en: Let $U$ an element of the Transformation Group $U(1)$:
+Sea  $U$ un elemento del Grupo de Transformaciones  $U(1)$:
+\begin{equation}
+  \label{eq:u1ele}
+  U=e^{i\theta(x)}\in U(1)
+\end{equation}
+%to_en: The Group is defined by the infinity set of elements $U_i=e^{i\theta(x_i)}$. Then
+El Grupo est\'a definido por el conjunto infinito de elementos $U_i=e^{i\theta(x_i)}$. Entonces
+\begin{itemize} %noinstiki
+%instiki:
+\item Producto de Grupo 
+  \begin{equation*}
+      U_1\cdot U_2=e^{i[\theta(x_1)+\theta(x_2)]}\equiv e^{i\theta(x_3)}\in U(1)
+  \end{equation*}
+\item Identidad: 
+  \begin{equation*}
+  \theta(x)=0\qquad \text{tal que}\qquad U_I=1  
+  \end{equation*}
+\item Inverso 
+  \begin{equation*}
+      \theta(-x)=-\theta(x)\qquad \text{tal que}\qquad U^{-1}=e^{-i\theta(x)}
+  \end{equation*}
+\end{itemize} %noinstiki
+Note que si
+\begin{equation}
+  \label{eq:amutransf}
+  A^\mu\to{A'}^\mu=A^\mu-\frac{i}{e}(\partial^\mu U)U^{-1}
+\end{equation}
+%to_en:(If $\theta(x)=$cte, $ A^\mu={A^\mu}'$, phase invariance). If $\theta$ is sufficiently small
+(Si $\theta=$cte, $ A^\mu={A'}^\mu$, invarianza de fase). Si $\theta$ es suficientemente peque\~no
+\begin{align}
+  \label{eq:Uinf}
+  U=e^{i\theta(x)}&\approx1+i\theta(x)+\mathcal{O}(\theta^2)&U^{-1}=e^{-i\theta(x)}&\approx1-i\theta(x)+\mathcal{O}(\theta^2)
+\end{align}
+Entonces
+\begin{align}
+  \label{eq:checkinft}
+  {A^\mu}'=&-\frac{1}{e}(i\partial^\mu\theta(8x))[1+i\theta(x)+\mathcal{O}(\theta^2)][1-i\theta(x)+\mathcal{O}(\theta^2)]
+  +A^\mu[1+i\theta(x)+\mathcal{O}(\theta^2)][1-i\theta(x)+\mathcal{O}(\theta^2)]\nonumber\\
+  =&A^\mu+\frac{1}{e}\partial^\mu\theta(x)+\mathcal{O}(\theta^2)
+\end{align}
+%to_en:Therefore, if $\chi(x)=-(1/e)\theta(x)$, then eq.~(\ref{eq:aphicov}) is the infinitesimal version of the $U(1)$ transformation in eq.~(\ref{eq:amutransf})
+Por consiguiente, si $\chi(x)=-(1/e)\theta(x)$, entonces la ec.~(\ref{eq:aphicov}) es la versi\'on infinitesimal de la transformaci\'on $U(1)$  en ec.~(\ref{eq:amutransf}). Del Teorema de Noether debe existir una carga conservada corresponde a la carga el\'ectrica, asociada la corriente $J^\mu$, de la cual a\'un no hemos especificado su origen. 
+
+%to_en:Under this transformation
+Bajo esta transformaci\'on
+\begin{align}
+  \label{eq:fmunutrans}
+  F^{\mu\nu}\to{F'}^{\mu\nu}=&(\partial^\mu{A'}^\nu-\partial^\nu{A'}^\mu)\nonumber\\
+  =&\partial^\mu A^\nu-\partial^\mu\partial^\nu\chi-\partial^\nu A^\mu+\partial^\nu\partial^\mu\chi\nonumber\\
+  =&\partial^\mu A^\nu-\partial^\nu A^\mu-\partial^\mu\partial^\nu\chi+\partial^\mu\partial^\nu\chi\nonumber\\
+  =&F^{\mu\nu}
+\end{align}
+%to_en:In this way the homogeneous part of Maxwell equations corresponds to a Gauge Theory!. This was a curiosity until 1950's. 
+De este modo las ecuaciones homog\'eneas de Maxwell \eqref{eq:fmunu} son invariantes gauge. Como la transformaci\'on gauge solo afecta al campo $A^\mu$, las ecuaciones inhomog\'eneas de Maxwell \eqref{eq:nohomME2} tambi\'en son invariantes gauge. 
+De esta forma las ecuaciones de Maxwell corresponde a una Teor\'\i a Gauge!. Esto fue una curiosidad hasta los 1950. 
+
+
+
+
+%to_en:Under this transformation
+\begin{frame}[fragile,allowframebreaks]
+Bajo la transformación gauge \eqref{eq:172qft}
+\begin{align}
+  \label{eq:fmunutrans}
+  F^{\mu\nu}\to{F'}^{\mu\nu}=&(\partial^\mu{A'}^\nu-\partial^\nu{A'}^\mu)\nonumber\\
+  =&\partial^\mu A^\nu-\partial^\mu\partial^\nu\chi-\partial^\nu A^\mu+\partial^\nu\partial^\mu\chi\nonumber\\
+  =&\partial^\mu A^\nu-\partial^\nu A^\mu-\partial^\mu\partial^\nu\chi+\partial^\mu\partial^\nu\chi\nonumber\\
+  =&F^{\mu\nu}
+\end{align}
+
+Si queremos que la Acción refleje las simetrías de las ecuaciones de
+Maxwell debemos mantener sólo los términos del Lagrangiano para $A^\mu$
+en \eqref{eq:lagAmu} que sean invariantes hasta una derivada total. Bajo una transformación gauge, cada
+uno de los términos
+\begin{equation*}
+  -\frac{1}{4}G^{\mu\nu}G_{\mu\nu}+
+  \frac{1}{2}m^2A^\mu A_\mu+\lambda_1\partial_\mu A^\mu A_\nu A^\nu+\lambda_2 A^\mu A_\mu A^\nu A_\nu+\lambda_3F^{\mu\nu}A_\mu A_\nu+\lambda_4G^{\mu\nu}A_\mu A_\nu
++K_\nu(x) A^\nu A_\mu A^\mu
+\end{equation*}
+dan lugar a un $\delta\mathcal{L}\neq\partial_\mu(\text{algo})$ y la Acción no es
+invariante bajo la transformación gauge.
+
+\end{frame}
+
+
+
+
+\section{Tensor EM}
+
+
 Usando el cuadrivector en ec.~(\ref{eq:cv_phia}) y
 expandiendo la ec.~(\ref{eq:phia}), tenemos
 \begin{align}
@@ -534,100 +765,6 @@ Por consiguiente, la cuadricorriente $J^\mu$ es conservada:
 \subsection{Lagrangiano Electromagn\'etico}
 \label{sec:lagr-electr}
 %to_en:Eq.~(\ref{eq:phia}) is invariant under the following transformations
-La ec.~(\ref{eq:phia}) es invariante bajo las siguientes transformaciones
-\begin{align}
-  \label{eq:phia_transf}
-  \mathbf{A}&\to\mathbf{A}'=\mathbf{A}+\boldsymbol{\nabla}\chi&
-  \phi&\to\phi'=\phi-\frac{\partial\chi}{\partial t} 
-\end{align}
-%to_en:Since
-Ya que
-\begin{equation}
-  \label{eq:Etrans}
-  \mathbf{E}\to\mathbf{E}'= -\boldsymbol{\nabla}\phi+\frac{\partial}{\partial t}\boldsymbol{\nabla}\chi
-  -\frac{\partial\mathbf{A}}{\partial t}-\frac{\partial}{\partial t}\boldsymbol{\nabla}\chi=\mathbf{E}
-\end{equation}
-\begin{equation}
-  \label{eq:btransf}
-  \mathbf{B}\to\mathbf{B}'= \boldsymbol{\nabla}\times\mathbf{A}+
-  \underbrace{\boldsymbol{\nabla}\times\boldsymbol{\nabla}\chi}_{\displaystyle =0}=\mathbf{B}
-\end{equation}
-%to_en:This imply that different observers in different space points, using different calibrations for their measures, get the same fields. 
-Esto implica que diferentes observadores en diferentes puntos del espacio, usando diferentes calibraciones para sus medidas, obtienen los mismos campos. Las  ecs.~\eqref{eq:phia_transf}, corresponden a \emph{transformaciones gauge locales}
-
-%to_en:In covariant notation
-En notaci\'on de cuadrivectores
-\begin{align}
-  A^\mu\to {A'}^\mu=&\left(\phi-\frac{\partial\chi}{\partial t},\mathbf{A}+\boldsymbol{\nabla}\chi
-  \right)\nonumber\\
-  =&\left(\phi-\frac{\partial\chi}{\partial t},A^{i}+\partial_i\chi
-  \right)\nonumber\\
-  =&\left(\phi-\partial^0\chi,A^{i}-\partial^{i}\chi
-  \right)\nonumber\\
-  =&\left(\phi,A^{i}
-  \right)-
-  \left(
-    \partial^0\chi,\partial^{i}\chi
-  \right)\nonumber\\
-  \label{eq:aphicov}
-  A^\mu\to {A'}^\mu=&A^\mu-\partial^\mu\chi
-\end{align}
-%to_en: Let $U$ an element of the Transformation Group $U(1)$:
-Sea  $U$ un elemento del Grupo de Transformaciones  $U(1)$:
-\begin{equation}
-  \label{eq:u1ele}
-  U=e^{i\theta(x)}\in U(1)
-\end{equation}
-%to_en: The Group is defined by the infinity set of elements $U_i=e^{i\theta(x_i)}$. Then
-El Grupo est\'a definido por el conjunto infinito de elementos $U_i=e^{i\theta(x_i)}$. Entonces
-\begin{itemize} %noinstiki
-%instiki:
-\item Producto de Grupo 
-  \begin{equation*}
-      U_1\cdot U_2=e^{i[\theta(x_1)+\theta(x_2)]}\equiv e^{i\theta(x_3)}\in U(1)
-  \end{equation*}
-\item Identidad: 
-  \begin{equation*}
-  \theta(x)=0\qquad \text{tal que}\qquad U_I=1  
-  \end{equation*}
-\item Inverso 
-  \begin{equation*}
-      \theta(-x)=-\theta(x)\qquad \text{tal que}\qquad U^{-1}=e^{-i\theta(x)}
-  \end{equation*}
-\end{itemize} %noinstiki
-Note que si
-\begin{equation}
-  \label{eq:amutransf}
-  A^\mu\to{A'}^\mu=A^\mu-\frac{i}{e}(\partial^\mu U)U^{-1}
-\end{equation}
-%to_en:(If $\theta(x)=$cte, $ A^\mu={A^\mu}'$, phase invariance). If $\theta$ is sufficiently small
-(Si $\theta=$cte, $ A^\mu={A'}^\mu$, invarianza de fase). Si $\theta$ es suficientemente peque\~no
-\begin{align}
-  \label{eq:Uinf}
-  U=e^{i\theta(x)}&\approx1+i\theta(x)+\mathcal{O}(\theta^2)&U^{-1}=e^{-i\theta(x)}&\approx1-i\theta(x)+\mathcal{O}(\theta^2)
-\end{align}
-Entonces
-\begin{align}
-  \label{eq:checkinft}
-  {A^\mu}'=&-\frac{1}{e}(i\partial^\mu\theta(8x))[1+i\theta(x)+\mathcal{O}(\theta^2)][1-i\theta(x)+\mathcal{O}(\theta^2)]
-  +A^\mu[1+i\theta(x)+\mathcal{O}(\theta^2)][1-i\theta(x)+\mathcal{O}(\theta^2)]\nonumber\\
-  =&A^\mu+\frac{1}{e}\partial^\mu\theta(x)+\mathcal{O}(\theta^2)
-\end{align}
-%to_en:Therefore, if $\chi(x)=-(1/e)\theta(x)$, then eq.~(\ref{eq:aphicov}) is the infinitesimal version of the $U(1)$ transformation in eq.~(\ref{eq:amutransf})
-Por consiguiente, si $\chi(x)=-(1/e)\theta(x)$, entonces la ec.~(\ref{eq:aphicov}) es la versi\'on infinitesimal de la transformaci\'on $U(1)$  en ec.~(\ref{eq:amutransf}). Del Teorema de Noether debe existir una carga conservada corresponde a la carga el\'ectrica, asociada la corriente $J^\mu$, de la cual a\'un no hemos especificado su origen. 
-
-%to_en:Under this transformation
-Bajo esta transformaci\'on
-\begin{align}
-  \label{eq:fmunutrans}
-  F^{\mu\nu}\to{F'}^{\mu\nu}=&(\partial^\mu{A'}^\nu-\partial^\nu{A'}^\mu)\nonumber\\
-  =&\partial^\mu A^\nu-\partial^\mu\partial^\nu\chi-\partial^\nu A^\mu+\partial^\nu\partial^\mu\chi\nonumber\\
-  =&\partial^\mu A^\nu-\partial^\nu A^\mu-\partial^\mu\partial^\nu\chi+\partial^\mu\partial^\nu\chi\nonumber\\
-  =&F^{\mu\nu}
-\end{align}
-%to_en:In this way the homogeneous part of Maxwell equations corresponds to a Gauge Theory!. This was a curiosity until 1950's. 
-De este modo las ecuaciones homog\'eneas de Maxwell \eqref{eq:fmunu} son invariantes gauge. Como la transformaci\'on gauge solo afecta al campo $A^\mu$, las ecuaciones inhomog\'eneas de Maxwell \eqref{eq:nohomME2} tambi\'en son invariantes gauge. 
-De esta forma las ecuaciones de Maxwell corresponde a una Teor\'\i a Gauge!. Esto fue una curiosidad hasta los 1950. 
 
 Para ilustrar la relaci\'on entre la conservaci\'on local de la carga el\'ectrica y la transformaci\'on gauge, que no es una conexi\'on simple, considere las ecuaciones de Maxwell
 \begin{equation}
@@ -643,101 +780,11 @@ Adem\'as las ecuaciones de Maxwell permanecen invariantes bajo la transformaci\'
 \end{equation}
 ya que dicha transformaci\'on deja invariante a $F^{\mu\nu}$. De aqu\'\i{} la sugerencia de la invarianza gauge esta relacionada de alguna manera a la conservaci\'on de la carga. De hecho la acci\'on m\'as general posible para el campo $A^\mu$ compatible tanto con la invarianza de Lorentz y la invarianza gauge local corresponde a la acci\'on que da lugar a las ecuaciones de Maxwell.
 
-
-
-\section{Lagrangiano para el campo vectorial}
-\begin{frame}[fragile,allowframebreaks]
-Ya estamos en capacidad de responder la siguiente pregunta: ¿Cual es el Lagrangiano más general posible para el campo de cuatro componentes $A^{\mu}(x)$ compatible con la invarianza de Lorentz y la invarianza bajo transformaciones gauge?
-
-Las correspondientes transformaciones son
-
-\begin{align}
-  A^\mu(x)\to {A'}^\mu(x')={\Lambda^\mu}_\nu A^\nu(\Lambda^{-1}x)\,.
-\end{align}
-
-
-\begin{align}
-\label{eq:172qft}
-  A^\mu\to{A'}^\mu=A^\mu-\partial^\mu\chi(x)\;?
-\end{align}
+\section{Lagragino completo}
 
 
 
-
-Definiendo
-\begin{align*}
-  F^{\mu\nu}&=\partial^\mu A^\nu-\partial^\nu A^\mu\\
-  G^{\mu\nu}&=\partial^\mu A^\nu+\partial^\nu A^\mu\\
-\end{align*}
-El Lagrangiano que da lugar a una Acción invariante de Lorentz para el cuadrivector $A^\mu$
-es, hasta derivadas totales y potencias en los campos de hasta dimensión 4:
-\begin{align}
-  \mathcal{L}=&-\frac{1}{4}F^{\mu\nu}F_{\mu\nu}-\frac{1}{4}G^{\mu\nu}G_{\mu\nu}-\frac{1}{2}F^{\mu\nu}G_{\mu\nu}\nonumber\\
-&-J^\mu A_\mu+
- \frac{1}{2}m^2A^\mu A_\mu +\lambda_1\partial_\nu A^\nu(x) A_\mu(x) A^\mu(x)+\lambda_2 A^\mu A_\mu A^\nu A_\nu\nonumber\\
-&+\lambda_3 F^{\mu\nu}(x)A_\mu(x) A_\nu(x)+\lambda_4G^{\mu\nu}(x)A_\mu(x) A_\nu+\cdots
-  \label{eq:lagAmu}
-\end{align}
-\end{frame}
-
-\begin{itemize}
-\item \textbf{Ejercicio:} Show that terms like $\partial^\mu A^\nu(x)\partial_\mu A_\nu(x)$, and hence $F^{\mu\nu}F_{\mu\nu}$, transforms as
-  \begin{align}
-    \partial^\mu A^\nu\left(\Lambda^{-1}x\right)\partial_\mu A_\nu\left(\Lambda^{-1}x\right)
-  \end{align}
-Hint: use the Lorentz transformation properties of $\partial_\mu$ in eq.~\eqref{dmulrtran}.
-\end{itemize}
-In the case of $J^\mu A_\mu$:
-\begin{align}
-  J^\mu(x)A_\mu(x)\to g_{\mu\nu}{J'}^\mu(x){A'}^\nu(x)=& g_{\mu\nu}{\Lambda^\mu}_\rho J^\rho\left(\Lambda^{-1}x\right){\Lambda^\nu}_\sigma A^\sigma\left(\Lambda^{-1}x\right)\nonumber\\
-=& {\Lambda^\mu}_\rho g_{\mu\nu}{\Lambda^\nu}_\sigma J^\rho\left(\Lambda^{-1}x\right)A^\sigma\left(\Lambda^{-1}x\right)\nonumber\\
-=& g_{\rho\sigma}J^\rho\left(\Lambda^{-1}x\right)A^\sigma\left(\Lambda^{-1}x\right)\,,
-\end{align}
-in the case $\partial_\nu A^\nu(x) A_\mu(x) A^\mu(x)$:
-\begin{align}
-   \partial_\nu A^\nu(x) A_\mu(x) A^\mu(x)\to {\partial'}_\nu{A'}^\nu(x') {A'}_\mu(x') {A'}^\mu(x')=& {\left(\Lambda^{-1}\right)^\sigma}_\nu{\Lambda^\nu}_\rho\partial_\sigma A^\rho\left(\Lambda^{-1}x\right) A_\mu\left(\Lambda^{-1}x\right) A^\mu\left(\Lambda^{-1}x\right)\nonumber\\
-=& \delta^\sigma_\rho\partial_\sigma A^\rho\left(\Lambda^{-1}x\right) A_\mu\left(\Lambda^{-1}x\right) A^\mu\left(\Lambda^{-1}x\right)\nonumber\\
-=& \partial_\rho A^\rho\left(\Lambda^{-1}x\right) A_\mu\left(\Lambda^{-1}x\right) A^\mu\left(\Lambda^{-1}x\right)\,,\nonumber\\
-\end{align}
-and similarly for the other terms. Under a Lorentz transformation the full Lagrangian transform as
-\begin{align}
-  \mathcal{L}(x)\to\mathcal{L}'(x)=\mathcal{L}(\Lambda^{-1}x) 
-\end{align}
-Since the Action involves the integration over all the points, it is invariant under the Lorentz transformation. The $J^\mu(x)$ does not involves the introduction a new vector field, because it will be identified later as the 4--current.
-
-
-Terms like
-\begin{align}
-  K_\nu A^\nu(x) A_\mu(x) A^\mu(x)\,,
-\end{align}
-(for $K_\nu$ constant) are not Lorentz invariant:
-\begin{align}
-  K_\nu A^\nu(x) A_\mu(x) A^\mu(x)\to K_\nu{A'}^\nu(x) {A'}_\mu(x) {A'}^\mu(x)=& K_\nu{\Lambda^\nu}_\rho A^\rho\left(\Lambda^{-1}x\right) A_\mu\left(\Lambda^{-1}x\right) A^\mu\left(\Lambda^{-1}x\right)\,.
-\end{align}
-$K_\nu(x)A^\nu(x)A_\mu(x)A^\mu(x)$ is Lorentz covariant but not gauge-invariant (see below).
-
-%to_en:Under this transformation
-\begin{frame}[fragile,allowframebreaks]
-Bajo la transformación gauge \eqref{eq:172qft}
-\begin{align}
-  \label{eq:fmunutrans}
-  F^{\mu\nu}\to{F'}^{\mu\nu}=&(\partial^\mu{A'}^\nu-\partial^\nu{A'}^\mu)\nonumber\\
-  =&\partial^\mu A^\nu-\partial^\mu\partial^\nu\chi-\partial^\nu A^\mu+\partial^\nu\partial^\mu\chi\nonumber\\
-  =&\partial^\mu A^\nu-\partial^\nu A^\mu-\partial^\mu\partial^\nu\chi+\partial^\mu\partial^\nu\chi\nonumber\\
-  =&F^{\mu\nu}
-\end{align}
-
-Si queremos que la Acción refleje las simetrías de las ecuaciones de
-Maxwell debemos mantener sólo los términos del Lagrangiano para $A^\mu$
-en \eqref{eq:lagAmu} que sean invariantes hasta una derivada total. Bajo una transformación gauge, cada
-uno de los términos
-\begin{equation*}
-  -\frac{1}{4}G^{\mu\nu}G_{\mu\nu}+
-  \frac{1}{2}m^2A^\mu A_\mu+\lambda_1\partial_\mu A^\mu A_\nu A^\nu+\lambda_2 A^\mu A_\mu A^\nu A_\nu+\lambda_3F^{\mu\nu}A_\mu A_\nu+\lambda_4G^{\mu\nu}A_\mu A_\nu
-+K_\nu(x) A^\nu A_\mu A^\mu
-\end{equation*}
-dan lugar a un $\delta\mathcal{L}\neq\partial_\mu(\text{algo})$ y la Acción no es
-invariante bajo la transformación gauge. Para los 
+ Para los 
 términos restantes
 \begin{align}
     \mathcal{L}=-\frac{1}{4}F^{\mu\nu}F_{\mu\nu}-J^\mu A_\mu\,,
@@ -760,7 +807,7 @@ Para tener $\delta S=0$ necesitamos asumir de momento que
 $\partial_\mu J^\mu=0$. Sin embargo, veremos que esta es una condición
 auto consistente.
 
-\end{frame}
+
 
 In summary, if the electromagnetic current is conserved, then the Lagrangian is invariant under the gauge transformation \eqref{eq:172qft}. Note that the Lagrangian density is not locally gauge invariant. However, the action (and hence the theory) is gauge invariant.
 
@@ -856,28 +903,6 @@ una forma equivalente de las ecuaciones homogéneas de Maxwell. Las
 ecuaciones de Maxwell restante se pueden obtener a partir de las
 ecuaciones de Euler-Lagrange para $A^\nu$:
 
-
-Con miras a calcular  las ecuaciones de Euler-Lagrange para el Lagrangiano en
-ec.~\eqref{eq:lagAmum}, tenemos
-\begin{align}
-F^{\rho\sigma}F_{\rho\sigma}=&(\partial^\rho A^\sigma-\partial^\sigma A^\rho)(\partial_\rho A_\sigma-\partial_\sigma A_\rho)\nonumber\\
-=&\partial^\rho A^\sigma\partial_\rho A_\sigma-\partial^\rho A^\sigma\partial_\sigma A_\rho-\partial^\sigma A^\rho\partial_\rho A_\sigma+\partial^\sigma A^\rho\partial_\sigma
-A_\rho\nonumber\\
-=&g^{\rho\alpha}g^{\sigma\beta}(\partial_\alpha A_\beta\partial_\rho A_\sigma-\partial_\alpha A_\beta\partial_\sigma A_\rho-\partial_\beta A_\alpha\partial_\rho A_\sigma+\partial_\beta A_\alpha\partial_\sigma A_\rho).\nonumber
-\end{align}
-Entonces
-\begin{align}
-  \frac{\partial}{\partial(\partial_\mu A_\nu)}F^{\rho\sigma}F_{\rho\sigma}=&g^{\rho\alpha}g^{\sigma\beta}(\delta_{\alpha\mu}\delta_{\beta\nu}\partial_\rho
-  A_\sigma+\partial_\alpha A_\beta\delta_{\rho\mu} \delta_{\sigma\nu}-\delta_{\alpha\mu}\delta_{\beta\nu}\partial_\sigma A_\rho-\partial_\alpha A_\beta\delta_{\sigma\mu}\delta_{\rho\nu}\nonumber\\
-&-\delta_{\beta\mu}\delta_{\alpha\nu}\partial_\rho A_\sigma-\partial_\beta A_\alpha\delta_{\rho\mu}\delta_{\sigma\nu}+\delta_{\beta\mu}\delta_{\alpha\nu}\partial_\sigma A_\rho+\partial_\beta
-A_\alpha\delta_{\sigma\mu}\delta_{\rho\nu}).\nonumber\\
-=&  g^{\rho\mu}g^{\sigma\nu}\partial_\rho A_\sigma+g^{\mu\alpha}g^{\nu\beta}\partial_\alpha A_\beta-g^{\rho\mu}g^{\sigma\nu}\partial_\sigma A_\rho-g^{\nu\alpha}g^{\mu\beta}\partial_\alpha A_\beta\nonumber\\
- &-g^{\rho\nu}g^{\sigma\mu}\partial_\rho A_\sigma-g^{\mu\alpha}g^{\nu\beta}\partial_\beta A_\alpha+g^{\rho\nu}g^{\sigma\mu}\partial_\sigma A_\rho+g^{\nu\alpha}g^{\mu\beta}\partial_\beta A_\alpha\nonumber\\
-=&  \partial^\mu A^\nu+\partial^\mu A^\nu-\partial^\nu A^\mu-\partial^\nu A^\mu-\partial^\nu A^\mu-\partial^\nu A^\mu+\partial^\mu A^\nu+\partial^\mu A^\nu\nonumber\\
-=&4(\partial^\mu A^\nu-\partial^\nu A^\mu) \nonumber\\
-\label{eq:dddmufmunu2}
-\frac{\partial}{\partial(\partial_\mu A_\nu)}F^{\rho\sigma}F_{\rho\sigma}&=4F^{\mu\nu}
-\end{align}
 
 Usando la ec.~\eqref{eq:dddmufmunu2}, tenemos
 \begin{align}
