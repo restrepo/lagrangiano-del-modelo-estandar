@@ -1013,18 +1013,6 @@ Por lo tanto para una partícula de masa cero, su energía total da cuenta de su
 \end{frame}
 
 \begin{frame}[fragile,allowframebreaks]
-Del electromagnetismo tenemos
-\begin{equation}
-  \label{eq:cv_jmu}
-  J^\mu=(J^0,\mathbf{J})=(\rho,\mathbf{J})
-\end{equation}
-\begin{equation}
-  \label{eq:cv_phia}
-  A^\mu=(A^0,\mathbf{A})=(\phi,\mathbf{A})
-\end{equation}
-\end{frame}
-
-\begin{frame}[fragile,allowframebreaks]
 Del cálculo vectorial
 \begin{align}
   \partial^\mu\equiv\frac{\partial}{\partial x_\mu}=&
@@ -1081,6 +1069,117 @@ con $\widehat H$, y $\hat{\mathbf{p}}$ dados en la ec.~\eqref{eq:151}. Entonces
   \hat{p}^\mu=i\partial^\mu=i(\partial^0,\partial^i)=i(\frac{\partial}{\partial t},-\boldsymbol{\nabla})
 \end{equation}
 \end{frame}
+
+
+
+\subsubsection{Ecuaciones de Maxwell en términos de cuarivectores}
+
+Ecuaciones homog\'eneas:
+\begin{align}
+  \label{eq:hom_m_eq}
+  \boldsymbol{\nabla}\cdot\mathbf{B}&=0,&\boldsymbol{\nabla}\times\mathbf{E}+\frac{\partial\mathbf{B}}{\partial t}&=0
+\end{align}
+Ecuaciones inhomog\'eneas:
+\begin{align}
+  \label{eq:inhom_m_eq}
+  \boldsymbol{\nabla}\cdot\mathbf{E}&=\rho,&\boldsymbol{\nabla}\times\mathbf{B}-\frac{\partial\mathbf{E}}{\partial t}&=\mathbf{J}.
+\end{align}
+La primera ecuaci\'on establece la ausencia de cargas magn\'eticas, la segunda corresponde a la Ley de Faraday y la tercera a la Ley de Gauss. La cuarta sin el t\'ermino de desplazamiento el\'ectrico introducido por Maxwell corresponde a la Ley de Amp\`ere
+\begin{equation}
+   \boldsymbol{\nabla}\times\mathbf{B}=\mathbf{J}.
+\end{equation}
+Tomando la divergencia en esta expresi\'on tenemos
+\begin{equation}
+  \boldsymbol{\nabla}\cdot\mathbf{J}=0,
+\end{equation}
+que corresponde a la ecuaci\'on de continuidad \eqref{eq:conti} para $\rho$ constante
+\begin{equation}
+  \label{eq:153}
+  \frac{\partial \rho}{\partial t}+\boldsymbol{\nabla}\cdot\mathbf{J}=0.
+\end{equation}
+De este modo la Ley de Amp\`ere da lugar a la conservaci\'on de carga el\'ectrica pero solo a nivel global:  una perdida de carga el\'ectrica en un punto del universo puede ser compensada por la aparici\'on instant\'anea de carga el\'ectrica en otro lugar del universo. La conservaci\'on global podr\'\i a necesitar la propagaci\'on instant\'anea de se\~nales, y esto est\'a en conflicto con la relatividad especial.
+
+
+Tomando la divergencia de la Ley de Amp\`ere modificada por Maxwell
+\begin{equation}
+   \boldsymbol{\nabla}\times\mathbf{B}-\frac{\partial\mathbf{E}}{\partial t}=\mathbf{J},
+\end{equation}
+obtenemos la ecuaci\'on de continuidad \eqref{eq:153}. Dicha ecuaci\'on establece que la raz\'on de decrecimiento de la carga en un volumen arbitrario $V$ es debido precisa y \'unicamente al flujo de la corriente fuera de su superficie; de modo que la carga no puede ser creada ni destruida dentro de $V$.  Ya que $V$ puede ser arbitrariamente peque\~no esto significa que la carga el\'ectrica debe conservarse localmente.   El t\'ermino extra introducido por Maxwell est\'a motivado por un requerimiento de conservaci\'on local. 
+
+Vamos a  reescribir las ecuaciones de Maxwell en términos de cuadrivector usando el potencial escalar el\'ectrico $\phi$ y el potencia vectorial magn\'etico $\mathbf{A}$.
+
+De hecho ecuaciones   \label{eq:phia} 
+\begin{align}
+  \label{eq:phia}
+  \mathbf{E}&=-\boldsymbol{\nabla}\phi-\frac{\partial\mathbf{A}}{\partial t}&
+  \mathbf{B}&=\boldsymbol{\nabla}\times\mathbf{A}.
+\end{align}
+ Son equivalentes a las ecuaciones homog\'eneas de Maxwell Ya que, como vimos entonces y repetimos aca
+\begin{align*}
+  \boldsymbol{\nabla}\times\mathbf{E}&=-\boldsymbol{\nabla}\times\boldsymbol{\nabla}\phi-\frac{\partial}{\partial t}\boldsymbol{\nabla}\times\mathbf{A}\\
+  &=-\frac{\partial\mathbf{B}}{\partial t},
+\end{align*}
+y
+\begin{align*}
+  \boldsymbol{\nabla}\cdot\mathbf{B}&=\boldsymbol{\nabla}\cdot(\boldsymbol{\nabla}\times\mathbf{A})\\
+  &=0
+\end{align*}
+
+
+\begin{frame}[fragile,allowframebreaks]
+Del electromagnetismo tenemos entonce que
+\begin{equation}
+  \label{eq:cv_jmu}
+  J^\mu=(J^0,\mathbf{J})=(\rho,\mathbf{J})
+\end{equation}
+\begin{equation}
+  \label{eq:cv_phia}
+  A^\mu=(A^0,\mathbf{A})=(\phi,\mathbf{A})
+\end{equation}
+\end{frame}
+
+La ec.~(\ref{eq:phia}) es invariante bajo las siguientes transformaciones
+\begin{align}
+  \label{eq:phia_transf}
+  \mathbf{A}&\to\mathbf{A}'=\mathbf{A}+\boldsymbol{\nabla}\chi&
+  \phi&\to\phi'=\phi-\frac{\partial\chi}{\partial t} 
+\end{align}
+%to_en:Since
+Ya que
+\begin{equation}
+  \label{eq:Etrans}
+  \mathbf{E}\to\mathbf{E}'= -\boldsymbol{\nabla}\phi+\frac{\partial}{\partial t}\boldsymbol{\nabla}\chi
+  -\frac{\partial\mathbf{A}}{\partial t}-\frac{\partial}{\partial t}\boldsymbol{\nabla}\chi=\mathbf{E}
+\end{equation}
+\begin{equation}
+  \label{eq:btransf}
+  \mathbf{B}\to\mathbf{B}'= \boldsymbol{\nabla}\times\mathbf{A}+
+  \underbrace{\boldsymbol{\nabla}\times\boldsymbol{\nabla}\chi}_{\displaystyle =0}=\mathbf{B}
+\end{equation}
+%to_en:This imply that different observers in different space points, using different calibrations for their measures, get the same fields. 
+Esto implica que diferentes observadores en diferentes puntos del espacio, usando diferentes calibraciones para sus medidas, obtienen los mismos campos. Las  ecs.~\eqref{eq:phia_transf}, corresponden a \emph{transformaciones gauge locales}
+
+%to_en:In covariant notation
+En notaci\'on de cuadrivectores
+\begin{align}
+  A^\mu\to {A'}^\mu=&\left(\phi-\frac{\partial\chi}{\partial t},\mathbf{A}+\boldsymbol{\nabla}\chi
+  \right)\nonumber\\
+  =&\left(\phi-\frac{\partial\chi}{\partial t},A^{i}+\partial_i\chi
+  \right)\nonumber\\
+  =&\left(\phi-\partial^0\chi,A^{i}-\partial^{i}\chi
+  \right)\nonumber\\
+  =&\left(\phi,A^{i}
+  \right)-
+  \left(
+    \partial^0\chi,\partial^{i}\chi
+  \right)\nonumber\\
+  \label{eq:aphicov}
+  A^\mu\to {A'}^\mu=&A^\mu-\partial^\mu\chi
+\end{align}
+
+
+
+
 Más adelante se definirán las derivadas  covariantes
 \begin{align}
    \mathcal{D}_0=&\partial_0+i q A_0\nonumber\\
@@ -1100,27 +1199,6 @@ donde hemos usado que las componentes de $\mathcal{D}$ son (con índices abajo)
 \begin{align}
 \mathcal{D}_i=\partial_i-i q A^i\,.
   \mathcal{D}_i=\partial_i+i q A_i\,.
-\end{align}
-Adem\'as $A^\mu$ tiene la transformaci\'on gauge
-\begin{align}
-  \mathbf{A}&\to\mathbf{A}'=\mathbf{A}+\boldsymbol{\nabla}\chi&
-  A_0&\to A_0'=A_0-\frac{\partial\chi}{\partial t} 
-\end{align}
-En notaci\'on de cuadrivectores
-\begin{align}
-\label{eq:166qft}
-  A^\mu\to {A'}^\mu=&\left(A^0-\frac{\partial\chi}{\partial t},\mathbf{A}+\boldsymbol{\nabla}\chi
-  \right)\nonumber\\
-  =&\left(A^0-\frac{\partial\chi}{\partial t},A^{i}+\partial_i\chi
-  \right)\nonumber\\
-  =&\left(A^0-\partial^0\chi,A^{i}-\partial^{i}\chi
-  \right)\nonumber\\
-  =&\left(A^0,A^{i}
-  \right)-
-  \left(
-    \partial^0\chi,\partial^{i}\chi
-  \right)\nonumber\\
-  A^\mu\to {A'}^\mu=&A^\mu-\partial^\mu\chi\,.
 \end{align}
 
 \begin{english}
