@@ -610,6 +610,66 @@ invariante bajo la transformación gauge.
 \end{frame}
 
 
+\section{Lagragino completo}
+
+
+
+ Para los 
+términos restantes
+\begin{align}
+    \mathcal{L}=-\frac{1}{4}F^{\mu\nu}F_{\mu\nu}-J^\mu A_\mu\,,
+\end{align}
+
+ usando la ec.~\eqref{eq:consvjmu}, tenemos
+\begin{align}
+  \delta\mathcal{L}=\mathcal{L}'-\mathcal{L}=&
+-\frac{1}{4}{F'}^{\mu\nu}F'_{\mu\nu}-J^\mu A'_\mu+\frac{1}{4}F^{\mu\nu}F_{\mu\nu}+J^\mu A_\mu\nonumber\\
+=&-J^\mu A_\mu+J^\mu\partial_\mu\chi(x)-J^\mu A_\mu\nonumber\\
+=&\partial_\mu(J^\mu\chi)-(\partial_\mu J^\mu)\chi(x)
+\end{align}
+Para la Acción
+\begin{align}
+  \delta S=&\int d^4x \left[\partial_\mu(J^\mu\chi)-(\partial_\mu J^\mu)\chi(x)\right]\nonumber\\
+=&-\int d^4x (\partial_\mu J^\mu)\chi(x)\nonumber\\
+=&-\int d^3x\int_{-\infty}^\infty dt (\partial_\mu J^\mu)\chi(x)\,.
+\end{align}
+Para tener $\delta S=0$ necesitamos asumir de momento que
+$\partial_\mu J^\mu=0$. Sin embargo, veremos que esta es una condición
+auto consistente.
+
+
+
+In summary, if the electromagnetic current is conserved, then the Lagrangian is invariant under the gauge transformation \eqref{eq:172qft}. Note that the Lagrangian density is not locally gauge invariant. However, the action (and hence the theory) is gauge invariant.
+
+\begin{frame}[fragile,allowframebreaks]
+Por lo tanto, el Lagrangiano
+\begin{equation}
+  \label{eq:lagAmum}
+  \mathcal{L}=-\frac{1}{4}F^{\mu\nu}F_{\mu\nu}-J^\mu A_\mu
+\end{equation}
+es el más general que da lugar a una Acción invariante de Lorentz e invariante gauge
+local. 
+
+\end{frame}
+
+\begin{frame}[fragile,allowframebreaks]
+
+Usando la ec.~\eqref{eq:dddmufmunu2}, tenemos
+\begin{align}
+\label{eq:177qft}
+  \partial_\mu\left[
+    \frac{\partial\mathcal{L}}{\partial(\partial_\mu A_\nu)}  
+  \right]-\frac{\partial\mathcal{L}}{\partial A_\nu}&=0\nonumber\\
+  -\frac{1}{4}\partial_\mu\left[
+    \frac{\partial}{\partial(\partial_\mu A_\nu)}(F^{\rho\sigma}F_{\rho\sigma})  
+  \right]+J^\rho\frac{\partial A_\rho}{\partial A_\nu}&=0\nonumber\\
+  -\partial_\mu F^{\mu\nu}+J^\rho\delta_{\rho\nu}&=0\nonumber\\
+  \partial_\mu F^{\mu\nu}&=J^\nu.
+\end{align}
+Como era de esperarse una Acción invariante de Lorentz e invariante
+gauge local, expresada en términos del Lagrangiano \eqref{eq:lagAmum},
+da lugar a la Teoría Electromagnética. 
+\end{frame}
 
 
 \section{Tensor EM}
@@ -768,51 +828,6 @@ Adem\'as las ecuaciones de Maxwell permanecen invariantes bajo la transformaci\'
 \end{equation}
 ya que dicha transformaci\'on deja invariante a $F^{\mu\nu}$. De aqu\'\i{} la sugerencia de la invarianza gauge esta relacionada de alguna manera a la conservaci\'on de la carga. De hecho la acci\'on m\'as general posible para el campo $A^\mu$ compatible tanto con la invarianza de Lorentz y la invarianza gauge local corresponde a la acci\'on que da lugar a las ecuaciones de Maxwell.
 
-\section{Lagragino completo}
-
-
-
- Para los 
-términos restantes
-\begin{align}
-    \mathcal{L}=-\frac{1}{4}F^{\mu\nu}F_{\mu\nu}-J^\mu A_\mu\,,
-\end{align}
-
- usando la ec.~\eqref{eq:consvjmu}, tenemos
-\begin{align}
-  \delta\mathcal{L}=\mathcal{L}'-\mathcal{L}=&
--\frac{1}{4}{F'}^{\mu\nu}F'_{\mu\nu}-J^\mu A'_\mu+\frac{1}{4}F^{\mu\nu}F_{\mu\nu}+J^\mu A_\mu\nonumber\\
-=&-J^\mu A_\mu+J^\mu\partial_\mu\chi(x)-J^\mu A_\mu\nonumber\\
-=&\partial_\mu(J^\mu\chi)-(\partial_\mu J^\mu)\chi(x)
-\end{align}
-Para la Acción
-\begin{align}
-  \delta S=&\int d^4x \left[\partial_\mu(J^\mu\chi)-(\partial_\mu J^\mu)\chi(x)\right]\nonumber\\
-=&-\int d^4x (\partial_\mu J^\mu)\chi(x)\nonumber\\
-=&-\int d^3x\int_{-\infty}^\infty dt (\partial_\mu J^\mu)\chi(x)\,.
-\end{align}
-Para tener $\delta S=0$ necesitamos asumir de momento que
-$\partial_\mu J^\mu=0$. Sin embargo, veremos que esta es una condición
-auto consistente.
-
-
-
-In summary, if the electromagnetic current is conserved, then the Lagrangian is invariant under the gauge transformation \eqref{eq:172qft}. Note that the Lagrangian density is not locally gauge invariant. However, the action (and hence the theory) is gauge invariant.
-
-\begin{frame}[fragile,allowframebreaks]
-Por lo tanto, el Lagrangiano
-\begin{equation}
-  \label{eq:lagAmum}
-  \mathcal{L}=-\frac{1}{4}F^{\mu\nu}F_{\mu\nu}-J^\mu A_\mu
-\end{equation}
-es el más general que da lugar a una Acción invariante de Lorentz e invariante gauge
-local. 
-
-\end{frame}
-
-\begin{frame}[fragile,allowframebreaks]
-
-
 La  definición of $F^{\mu\nu}$ incluye de entrada las ecuaciones
 homogéneas de Maxwell. Para ver esto, note en primer lugar que las
 únicas componentes diferentes de  cero son
@@ -892,22 +907,7 @@ ecuaciones de Maxwell restante se pueden obtener a partir de las
 ecuaciones de Euler-Lagrange para $A^\nu$:
 
 
-Usando la ec.~\eqref{eq:dddmufmunu2}, tenemos
-\begin{align}
-\label{eq:177qft}
-  \partial_\mu\left[
-    \frac{\partial\mathcal{L}}{\partial(\partial_\mu A_\nu)}  
-  \right]-\frac{\partial\mathcal{L}}{\partial A_\nu}&=0\nonumber\\
-  -\frac{1}{4}\partial_\mu\left[
-    \frac{\partial}{\partial(\partial_\mu A_\nu)}(F^{\rho\sigma}F_{\rho\sigma})  
-  \right]+J^\rho\frac{\partial A_\rho}{\partial A_\nu}&=0\nonumber\\
-  -\partial_\mu F^{\mu\nu}+J^\rho\delta_{\rho\nu}&=0\nonumber\\
-  \partial_\mu F^{\mu\nu}&=J^\nu.
-\end{align}
-Como era de esperarse una Acción invariante de Lorentz e invariante
-gauge local, expresada en términos del Lagrangiano \eqref{eq:lagAmum},
-da lugar a la Teoría Electromagnética. 
-\end{frame}
+
  
 \begin{frame}[fragile,allowframebreaks]
 Tomando la derivada con respecto a $\nu$ en ambos lados tenemos
@@ -1290,6 +1290,8 @@ ilustrar esta afirmación si consideramos una Acción para un campo escalar
 complejo que además de ser invariante de Lorentz, es además invariante
 bajo transformaciónes de fase.
 
+El sistema que podríamos describir es el de los pares de Cooper de carga eléctrica $-2$ y dos veces la masa del electrón en el interior de un superconductor de Tipo-I.
+
 \begin{frame}[fragile,allowframebreaks]
 
 
@@ -1357,7 +1359,9 @@ probalidad, como se hizo con la función de onda de la ecuación de
 Scrödinger. Esto presentó un obstaculo en la interpretación inicial de
 la ecuación de Klein-Gordon. Sin embargo una vez se cuantiza el
 campo escalar la probabilidad de los estados cuánticos queda bien
-definida \cite{Gross}. 
+definida \cite{Gross}.
+
+Al interpretarse como carga eléctrica se predice la existencia de antipartículas!
 
 
 \section{Campo escalar complejo}
@@ -1401,7 +1405,6 @@ En general, si comparamos dos acciones que difieran en la derivada total de alg�
   S_{\text{new}}=S+\int \partial_{\mu}\left(\phi^{*}\partial^{\mu}\phi\right)d^4x\,.
 \end{align}
 Veremos más adelante que la integral de una derivada total, con las condiciones de frontera adecuadas, no contribuye a la Acción.
-
 
 
 \section{Invarianza de fase local para campo escalar complejo}
