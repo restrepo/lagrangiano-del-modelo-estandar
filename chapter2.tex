@@ -476,14 +476,14 @@ El principio gauge local, que pretendemos formular, va m\'as all\'a del teorema 
 
 Para mostrar la invarianza gauge que exhiben las ecuaciones de Maxwell, es conveniente reescribirlas en forma covariante. Para ello es conveniente usar el potencial escalar el\'ectrico $\phi$ y el potencia vectorial magn\'etico $\mathbf{A}$.
 
-%to_en:The following equations are equivalent to the two homogenous Maxwell equations
-Las siguientes ecuaciones son equivalentes a las ecuaciones homog\'eneas de Maxwell
+% to_en:The following equations are equivalent to the two homogenous Maxwell equations
+De hecho las siguientes ecuaciones \eqref{eq:phia}
 \begin{align}
   \label{eq:phia}
   \mathbf{E}&=-\boldsymbol{\nabla}\phi-\frac{\partial\mathbf{A}}{\partial t}&
   \mathbf{B}&=\boldsymbol{\nabla}\times\mathbf{A}.
 \end{align}
-Ya que
+ son equivalentes a las ecuaciones homog\'eneas de Maxwell, ya que como vimos entonces y repetimos aca
 \begin{align*}
   \boldsymbol{\nabla}\times\mathbf{E}&=-\boldsymbol{\nabla}\times\boldsymbol{\nabla}\phi-\frac{\partial}{\partial t}\boldsymbol{\nabla}\times\mathbf{A}\\
   &=-\frac{\partial\mathbf{B}}{\partial t},
@@ -520,20 +520,8 @@ Ya que
 Esto implica que diferentes observadores en diferentes puntos del espacio, usando diferentes calibraciones para sus medidas, obtienen los mismos campos. Las  ecs.~\eqref{eq:phia_transf}, corresponden a \emph{transformaciones gauge locales}
 
 %to_en:In covariant notation
-En notaci\'on de cuadrivectores
+En notaci\'on de cuadrivectores, tenemos   \eqref{eq:aphicov}
 \begin{align}
-  A^\mu\to {A'}^\mu=&\left(\phi-\frac{\partial\chi}{\partial t},\mathbf{A}+\boldsymbol{\nabla}\chi
-  \right)\nonumber\\
-  =&\left(\phi-\frac{\partial\chi}{\partial t},A^{i}+\partial_i\chi
-  \right)\nonumber\\
-  =&\left(\phi-\partial^0\chi,A^{i}-\partial^{i}\chi
-  \right)\nonumber\\
-  =&\left(\phi,A^{i}
-  \right)-
-  \left(
-    \partial^0\chi,\partial^{i}\chi
-  \right)\nonumber\\
-  \label{eq:aphicov}
   A^\mu\to {A'}^\mu=&A^\mu-\partial^\mu\chi
 \end{align}
 %to_en: Let $U$ an element of the Transformation Group $U(1)$:
