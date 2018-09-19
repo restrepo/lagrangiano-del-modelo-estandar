@@ -275,10 +275,10 @@ Las correspondientes transformaciones son
   A^\mu(x)\to {A'}^\mu(x')={\Lambda^\mu}_\nu A^\nu(\Lambda^{-1}x)\,.
 \end{align}
 
-
+Además, tenemos la ec.\eqref{eq:aphicov}:
 \begin{align}
 \label{eq:172qft}
-  A^\mu\to{A'}^\mu=A^\mu-\partial^\mu\chi(x)\;?
+  A^\mu\to{A'}^\mu=A^\mu-\partial^\mu\chi(x)\;.
 \end{align}
 
 
@@ -350,8 +350,9 @@ $K_\nu(x)A^\nu(x)A_\mu(x)A^\mu(x)$ is Lorentz invariant %but not gauge-invariant
 
 
 \section{Lagrangiano electromagnético}
-Las ecuaciones de Maxwell tienen la siguiente simetría
+Las ecuaciones de Maxwell tienen la simetría obtenida en la ec.~\eqref{eq:aphicov}
 \begin{align}
+  \label{eq:aphicovch2}
    A^\mu\to {A'}^\mu=&A^\mu-\partial^\mu\theta(x)
 \end{align}
  que cuando fue descubierta parecía ser una simple curiosidad matemática de dichas ecuaciones.
@@ -399,6 +400,7 @@ Con esta definición, bajo la transformación  \eqref{eq:tfgl}
 \end{align}
 Por consiguiente, el único término posible que a la vez es invariante de Lorentz e invariante gauge local es
 \begin{align}
+  \label{eq:lemfree}
   \mathcal{L}_{\text{EM}}=-\frac{1}{4}F_{\mu\nu}F^{\mu\nu}\,.
 \end{align}
 %%hablar de la ecuaciones de Euler-Lagrange, el gauge de Lorentz y la ecuación de onda.
@@ -432,6 +434,69 @@ tal que
 \begin{align}
   \partial_{\mu}\partial_{\nu}F^{\mu\nu}=0\,.
 \end{align}
+
+
+El Lagrangiano en ec.~\eqref{eq:lemfree} admite un término adicional:
+\begin{align}
+    \mathcal{L}=-\frac{1}{4}F^{\mu\nu}F_{\mu\nu}-J^\mu A_\mu\,,
+\end{align}
+siempre y cuando $J^\mu(x)$ sea una corriente vectorial conservada:
+\begin{align}
+J^\mu(x)\to  {J'}^\mu(x)=&\Lambda^\mu_\nu J^\nu(\Lambda^{-1}x)\,,&  \partial_\mu J^\mu(x)=&0\,.
+\end{align}
+
+De hecho,  usando la ec.~\eqref{eq:consvjmu}, tenemos que para la transformación interna del campo $A^\mu$, eq.~\eqref{eq:aphicovch2}
+\begin{align}
+  \delta\mathcal{L}=\mathcal{L}'-\mathcal{L}=&
+-\frac{1}{4}{F'}^{\mu\nu}F'_{\mu\nu}-J^\mu A'_\mu+\frac{1}{4}F^{\mu\nu}F_{\mu\nu}+J^\mu A_\mu\nonumber\\
+  =&-J^\mu A_\mu+J^\mu\partial_\mu\theta(x)+J^\mu A_\mu\nonumber\\
+  =&J^\mu\partial_\mu\theta(x)\nonumber\\
+=&\partial_\mu(J^\mu\chi)-(\partial_\mu J^\mu)\theta(x)
+\end{align}
+Para la Acción
+\begin{align}
+  \delta S=&\int d^4x \left[\partial_\mu(J^\mu\chi)-(\partial_\mu J^\mu)\chi(x)\right]\nonumber\\
+=&-\int d^4x (\partial_\mu J^\mu)\chi(x)\nonumber\\
+=&-\int d^3x\int_{-\infty}^\infty dt (\partial_\mu J^\mu)\chi(x)\,.
+\end{align}
+Para tener $\delta S=0$ necesitamos asumir de momento que
+$\partial_\mu J^\mu=0$. Sin embargo, veremos que esta es una condición
+auto consistente.
+
+
+En resumen, si la corriente electromagnética, $J^\mu$ se conserva, entonces la Acción es invariante bajo la transformación gauge \eqref{eq:aphicovch2}. Note que la densidad Lagrangiana no es localmente invariante gauge. Sin embargo, la Acción (y por consiguiente la teoría) es invariante gauge.
+
+
+\begin{frame}[fragile,allowframebreaks]
+Por lo tanto, el Lagrangiano
+\begin{equation}
+  \label{eq:lagAmum}
+  \mathcal{L}=-\frac{1}{4}F^{\mu\nu}F_{\mu\nu}-J^\mu A_\mu
+\end{equation}
+es el más general que da lugar a una Acción invariante de Lorentz e invariante gauge
+local. 
+
+\end{frame}
+
+\begin{frame}[fragile,allowframebreaks]
+
+Usando la ec.~\eqref{eq:dddmufmunu2}, tenemos
+\begin{align}
+\label{eq:177qft}
+  \partial_\mu\left[
+    \frac{\partial\mathcal{L}}{\partial(\partial_\mu A_\nu)}  
+  \right]-\frac{\partial\mathcal{L}}{\partial A_\nu}&=0\nonumber\\
+  -\frac{1}{4}\partial_\mu\left[
+    \frac{\partial}{\partial(\partial_\mu A_\nu)}(F^{\rho\sigma}F_{\rho\sigma})  
+  \right]+J^\rho\frac{\partial A_\rho}{\partial A_\nu}&=0\nonumber\\
+  -\partial_\mu F^{\mu\nu}+J^\rho\delta_{\rho\nu}&=0\nonumber\\
+  \partial_\mu F^{\mu\nu}&=J^\nu.
+\end{align}
+Como era de esperarse una Acción invariante de Lorentz e invariante
+gauge local, expresada en términos del Lagrangiano \eqref{eq:lagAmum},
+da lugar a la Teoría Electromagnética. 
+\end{frame}
+
 
 
 \section{Ecuaciones de Maxwell en notaci\'on covariante }
@@ -610,66 +675,6 @@ invariante bajo la transformación gauge.
 \end{frame}
 
 
-\section{Lagragino completo}
-
-
-
- Para los 
-términos restantes
-\begin{align}
-    \mathcal{L}=-\frac{1}{4}F^{\mu\nu}F_{\mu\nu}-J^\mu A_\mu\,,
-\end{align}
-
- usando la ec.~\eqref{eq:consvjmu}, tenemos
-\begin{align}
-  \delta\mathcal{L}=\mathcal{L}'-\mathcal{L}=&
--\frac{1}{4}{F'}^{\mu\nu}F'_{\mu\nu}-J^\mu A'_\mu+\frac{1}{4}F^{\mu\nu}F_{\mu\nu}+J^\mu A_\mu\nonumber\\
-=&-J^\mu A_\mu+J^\mu\partial_\mu\chi(x)-J^\mu A_\mu\nonumber\\
-=&\partial_\mu(J^\mu\chi)-(\partial_\mu J^\mu)\chi(x)
-\end{align}
-Para la Acción
-\begin{align}
-  \delta S=&\int d^4x \left[\partial_\mu(J^\mu\chi)-(\partial_\mu J^\mu)\chi(x)\right]\nonumber\\
-=&-\int d^4x (\partial_\mu J^\mu)\chi(x)\nonumber\\
-=&-\int d^3x\int_{-\infty}^\infty dt (\partial_\mu J^\mu)\chi(x)\,.
-\end{align}
-Para tener $\delta S=0$ necesitamos asumir de momento que
-$\partial_\mu J^\mu=0$. Sin embargo, veremos que esta es una condición
-auto consistente.
-
-
-
-In summary, if the electromagnetic current is conserved, then the Lagrangian is invariant under the gauge transformation \eqref{eq:172qft}. Note that the Lagrangian density is not locally gauge invariant. However, the action (and hence the theory) is gauge invariant.
-
-\begin{frame}[fragile,allowframebreaks]
-Por lo tanto, el Lagrangiano
-\begin{equation}
-  \label{eq:lagAmum}
-  \mathcal{L}=-\frac{1}{4}F^{\mu\nu}F_{\mu\nu}-J^\mu A_\mu
-\end{equation}
-es el más general que da lugar a una Acción invariante de Lorentz e invariante gauge
-local. 
-
-\end{frame}
-
-\begin{frame}[fragile,allowframebreaks]
-
-Usando la ec.~\eqref{eq:dddmufmunu2}, tenemos
-\begin{align}
-\label{eq:177qft}
-  \partial_\mu\left[
-    \frac{\partial\mathcal{L}}{\partial(\partial_\mu A_\nu)}  
-  \right]-\frac{\partial\mathcal{L}}{\partial A_\nu}&=0\nonumber\\
-  -\frac{1}{4}\partial_\mu\left[
-    \frac{\partial}{\partial(\partial_\mu A_\nu)}(F^{\rho\sigma}F_{\rho\sigma})  
-  \right]+J^\rho\frac{\partial A_\rho}{\partial A_\nu}&=0\nonumber\\
-  -\partial_\mu F^{\mu\nu}+J^\rho\delta_{\rho\nu}&=0\nonumber\\
-  \partial_\mu F^{\mu\nu}&=J^\nu.
-\end{align}
-Como era de esperarse una Acción invariante de Lorentz e invariante
-gauge local, expresada en términos del Lagrangiano \eqref{eq:lagAmum},
-da lugar a la Teoría Electromagnética. 
-\end{frame}
 
 
 \section{Tensor EM}
@@ -1292,6 +1297,8 @@ bajo transformaciónes de fase.
 
 El sistema que podríamos describir es el de los pares de Cooper de carga eléctrica $-2$ y dos veces la masa del electrón en el interior de un superconductor de Tipo-I.
 
+
+
 \begin{frame}[fragile,allowframebreaks]
 
 
@@ -1303,6 +1310,17 @@ En ese caso la Acción, y la correspondiente densidad Lagrangiana son
 Términos de orden superior se pueden obtener a partir de esa
 Lagrangiana única y por eso no se consideran. 
 \end{frame}
+
+
+Por lo tanto
+\begin{align}
+  \left[ m \right]=&E& \left[ \lambda \right]=&1\,.
+\end{align}
+
+
+
+
+
 
 De las ecuaciones de Euler-Lagrange para $\phi^*$, usando el Lagrangiano en ec.~(\ref{eq:41qft})
 \begin{align}
@@ -1319,12 +1337,6 @@ y de la ecuaciones de Euler-Lagrange para $\phi$,
 \end{equation}
 De este modo tanto $\phi$, como $\phi^*$, satisfacen la ecuación de Klein-Gordon. Cada campo además corresponde a una partícula de masa $m$ como en el caso de $\phi_1$ y $\phi_2$
 
-Estamos ahora interesado en las simetrías internas del Lagrangiano. Entonces la corriente conservada puede definida en la sección~\ref{sec:principio-de-minima-call}, eq.~\eqref{eq:jmuphi}
-\begin{align}
-  J^\mu=&\frac{\partial\mathcal{L}}{\partial(\partial_\mu\phi)}\delta\phi+\delta\phi^*\frac{\partial\mathcal{L}}{\partial(\partial_\mu\phi^*)}\nonumber\\
-  \label{eq:45qft}
-  J^\mu=&\partial^\mu\phi^*\delta\phi+\delta\phi^*\partial^\mu\phi.
-\end{align}
 Además de la invarianza de Lorentz, el Lagrangiano en ec,~(\ref{eq:41qft}) también es invariante bajo el grupo de transformaciones U(1) definido en las sección~\ref{sec:lagr-electr}, pero con una fase constante
 \begin{equation*}
   U=e^{i\theta}\approx1+i\theta.
@@ -1334,27 +1346,23 @@ Entonces
   \phi\overset{U}{\longrightarrow}\phi'&=e^{i\theta}\phi\approx(1+i\theta)\phi\nonumber\\
   &=\phi+i\theta\phi.
 \end{align}
-Entonces,
+Para $\theta$ infinitesimal
 \begin{align}
-  \delta\phi&=i\theta\phi\\
-  \delta\phi^*&=-i\theta\phi^*.
+\label{eq:deltaphi}
+  \delta\phi=&\phi'-\phi=i\theta\phi\,,&  \delta\phi^*=&{\phi'}^*-\phi^*=-i\theta\phi^*\,,
 \end{align}
-Reemplazando en ec.~(\ref{eq:45qft})
-\begin{equation}
-\label{eq:46qft}
-  J^\mu\propto -i\theta(\phi\partial^\mu\phi^*-\phi^*\partial^\mu\phi),
-\end{equation}
-y
-\begin{equation}
-\label{eq:47qft}
-  \rho=J^0\propto-i\theta(\phi\frac{\partial\phi^*}{\partial t}-\phi^*\frac{\partial\phi}{\partial t}).
-\end{equation}
-Definimos $J^\mu$ como
-\begin{equation}
-  \label{eq:48qft}
-   J^\mu= i(\phi^*\partial^\mu\phi-\phi\partial^\mu\phi^*),
-\end{equation}
-Como $\rho$ puede ser negativo no puede interpretarse como una
+Comparando con la expresión para la transformación de un conjunto de campos $\phi_i$, eq.~\eqref{eq:dfi}, con la identificación $\phi_1\to \phi$ y $\phi_2\to \phi^{*}$, tenemos que
+\begin{align}
+  a_1=& i\phi\,, & a_2 =-i\phi^{*}\,.
+\end{align}
+Reemplazando en la expresión para el Teorema 1 de Noether relacionado con simetrías internas globales,eq.~\eqref{eq:thn1} tenemos que:
+\begin{align}
+  J^\mu=&\frac{\partial\mathcal{L}}{\partial(\partial_\mu\phi)}i\phi-i \phi^{*}\frac{\partial\mathcal{L}}{\partial(\partial_\mu\phi^*)}\nonumber\\
+  \label{eq:45qft}
+  J^\mu=&i\partial^\mu\phi^*\phi+\text{h.c}\,.
+\end{align}
+Y por lo tanto la corriente es real.
+Como $\rho=J^{0}$ puede ser negativo, entonces no puede interpretarse como una
 probalidad, como se hizo con la función de onda de la ecuación de
 Scrödinger. Esto presentó un obstaculo en la interpretación inicial de
 la ecuación de Klein-Gordon. Sin embargo una vez se cuantiza el
@@ -1364,47 +1372,6 @@ definida \cite{Gross}.
 Al interpretarse como carga eléctrica se predice la existencia de antipartículas!
 
 
-\section{Campo escalar complejo}
-
-
-Para un campo complejo con invarianza de fase, el potencial $V(\phi,\phi^{*})$ es único:
-\begin{align}
-\label{eq:cef}
-  \mathcal{L}=\partial_{\mu}\phi^{*} \partial^{\mu}\phi-m^2\phi^{*}\phi+\lambda \left(\phi^{*}\phi \right)^2\,.
-\end{align}
-En efecto, la densidad Lagrangiana y por consiguiente la Acción, son invariante bajo la transformación
-\begin{align}
-  \phi\to \phi'=\operatorname{e}^{i\theta}\phi\,,\qquad \text{$\theta$ constante}\,.
-\end{align}
-Para $\theta$ infinitesimal
-\begin{align}
-\label{eq:deltaphi}
-  \delta\phi=\phi'-\phi=i\theta\phi
-\end{align}
-
-
-
-Por lo tanto
-\begin{align}
-  \left[ m \right]=&E& \left[ \lambda \right]=&1\,.
-\end{align}
-
-
-Más adelente justificaremos por qué no hay potencias con dimensiones mayor a $E^{4}$ del campo $\phi$ en la ec.~\eqref{eq:cef}. No se consideran términos con derivadas superiores porque al igual que en mecánica clásica pueden generar inestabilidades. Por lo tanto, los únicos términos con derivadas que dejen invariante la acción bajo transformaciones de Lorentz son (el primero sólo es posible para un campo real):
-\begin{align}
-  \partial_{\mu}\partial^{\mu}\phi,\qquad \phi^{*}\partial_{\mu}\partial^{\mu}\phi\,.
-\end{align}
-Una densidad Lagrangiana incluyendo estos términos se puede reescribir en términos de la densidad Lagranginan en la ec.~\eqref{eq:cef}, hasta una deriva total. Por ejemplo
-\begin{align}
-  \mathcal{L}_{\text{new}}=&-\phi^{*}\partial_{\mu}\partial^{\mu}\phi-m^2\phi^{*}\phi+\lambda \left(\phi^{*}\phi \right)^2\,\nonumber\\
-=&\partial_{\mu}\phi^{*}\partial^{\mu}\phi\,-\partial_{\mu}\left(\phi^{*}\partial^{\mu}\phi\right)-m^2\phi^{*}\phi+\lambda \left(\phi^{*}\phi \right)^2\,\nonumber\\
-=&\mathcal{L}-\partial_{\mu}\left(\phi^{*}\partial^{\mu}\phi\right)\,.
-\end{align}
-En general, si comparamos dos acciones que difieran en la derivada total de algún $X^{\mu}$ (en el caso anterior $X^{\mu}=-\phi^{*}\partial^{\mu}\phi$)
-\begin{align}
-  S_{\text{new}}=S+\int \partial_{\mu}\left(\phi^{*}\partial^{\mu}\phi\right)d^4x\,.
-\end{align}
-Veremos más adelante que la integral de una derivada total, con las condiciones de frontera adecuadas, no contribuye a la Acción.
 
 
 \section{Invarianza de fase local para campo escalar complejo}
