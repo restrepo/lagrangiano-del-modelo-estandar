@@ -158,14 +158,26 @@ Los seis generadores satisfacen el álgebra
 i(g^{\nu\rho}\widehat{J}^{\mu\sigma}-g^{\mu\rho}\widehat{J}^{\nu\sigma}-g^{\nu\sigma}\widehat{J}^{\mu\rho}+g^{\mu\sigma}\widehat{J}^{\nu\rho})\,.
 \end{align}
 %From \cite{Peskin}:
-Cualquier representación matricial de estos operadores que vaya a representar esta álgebra debe obedecer las mismas reglas de conmutación.
+Cualquier representación matricial de esta álgebra debe obedecer las mismas reglas de conmutación.
 
 
-  La exponenciación de los generadores da lugar al grupo de elementos 
+\noindent
+\textbf{Teorema}:
+  La representación $4\times 4$ del Grupo de Lorentz se puede obtener de la exponenciación de los generadores matriciales $4\times 4$ $J^{\mu\nu}$ y los parámetros $\omega_{\mu\nu}$
 \begin{align}
-  \widehat{\Lambda}=\exp\left(-i\omega_{\mu\nu}\frac{\widehat{J}^{\mu\nu}}{2}\right)
+  {\Lambda}=\exp\left(-i\omega_{\mu\nu}\frac{{J}^{\mu\nu}}{2}\right)\,,
 \end{align}
-Para encontrar una representación matricial de los boosts (que son básicamente rotaciones entre el espacio y el tiempo), tenemos
+tal que,
+\begin{align}
+   \left(J^{\mu\nu}\right)_{\alpha\beta}=&i\epsilon^{\mu\nu\rho\sigma}\epsilon_{\rho\sigma\alpha\beta}\,,
+\end{align}
+$\omega_{\mu\nu}=0$ para $\mu\ne\nu$, y
+\begin{align}
+\xi^i=&\omega^{i0}=-\omega^{0i}&\theta^i=&\frac{1}{2}\epsilon^{ijk}\omega_{jk}\,.  
+\end{align}
+
+Antes de la demostración, recordemos que
+para encontrar una representación matricial de los boosts (que son básicamente rotaciones entre el espacio y el tiempo), tenemos
 \begin{align}
   \left\{x^\mu\right\}=\begin{pmatrix}
     t\\
