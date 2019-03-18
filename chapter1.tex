@@ -1779,8 +1779,8 @@ Derivando \eqref{eq:deltax},
 \begin{align}
      \delta S =&\int_{R} \left[ 1+\partial_{\mu} \left( \delta x^{\mu}  \right)\right]  d^4x\,\left\{ \mathcal{L}(\phi_i,\partial_{\mu}\phi_i;x)+\sum_i \left[ \frac{\partial\mathcal{L}}{\partial\phi_i}\delta\phi_{i} +\frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}\partial_{\mu}(\delta\phi_{i}) \right]+\left( \partial_{\mu}\mathcal{L} \right)\delta x^{\mu} \right\}\nonumber\\
       &- \int_{R}d^4x\,\mathcal{L} \left( \phi_{i},\partial_{\mu}\phi_i;x \right) \nonumber\\
-     =&\int_{R} d^4x\,\left[ \partial_{\mu} \left( \delta x^{\mu}  \right)\right] \mathcal{L} + \int_{R}d^4x\,\left\{\sum_i \left[ \frac{\partial\mathcal{L}}{\partial\phi_i}\delta\phi_{i} +\frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}\partial_{\mu}(\delta\phi_{i}) \right]+\left( \partial_{\mu}\mathcal{L} \right)\delta x^{\mu} \right\}\nonumber\\
-     =&\int_{R} d^4x\,\partial_{\mu} \left(\mathcal{L} \delta x^{\mu}  \right)  + \int_{R}d^4x\,\sum_i \left\{ \frac{\partial\mathcal{L}}{\partial\phi_i}\delta\phi_{i} +\partial_{\mu} \left[ \frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}\delta\phi_{i} \right]-\partial_{\mu} \left[ \frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}\right]\delta\phi_{i}  \right\}\nonumber\\
+     =&\int_{R} d^4x\,\left[ \partial_{\mu} \left( \delta x^{\mu}  \right)\right] \mathcal{L} + \int_{R}d^4x\,\left\{\sum_i \left[ \frac{\partial\mathcal{L}}{\partial\phi_i}\delta\phi_{i} +\frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}\partial_{\mu}(\delta\phi_{i}) \right]+\left( \partial_{\mu}\mathcal{L} \right)\delta x^{\mu} \right\}+\mathcal{O} \left( \delta^2 \right)\nonumber\\
+     \approx&\int_{R} d^4x\,\partial_{\mu} \left(\mathcal{L} \delta x^{\mu}  \right)  + \int_{R}d^4x\,\sum_i \left\{ \frac{\partial\mathcal{L}}{\partial\phi_i}\delta\phi_{i} +\partial_{\mu} \left[ \frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}\delta\phi_{i} \right]-\partial_{\mu} \left[ \frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}\right]\delta\phi_{i}  \right\}\nonumber\\
 \end{align}
 \begin{frame}[fragile,allowframebreaks]
 La condición $\delta S=0$ implica que
@@ -3046,9 +3046,9 @@ Aplicamos el segundo teorema de Noether con (con el reemplazo $\theta\to q\theta
 \label{eq:dpa}
   \phi_{1}:& \psi\,,\qquad a_{1}=iq \psi \,,\qquad b_1=0\nonumber\\
   \phi_{2}:& \psi^{*}\,,\qquad a_{2}=-iq\psi^{*}\,,\qquad b_2=0 \nonumber\\
-  \phi_{3}:& A^{\mu}\,,\qquad a_{3}=0\,,\qquad b_2=-\delta^{\mu}_{\nu}\,,
+  \phi_{3}:& A^{\mu}\,,\qquad a_{3}=0\,,\qquad b_3=-\delta^{\mu}_{\nu}\,,
 \end{align}
-tenemos que para los campos $\psi$ y $\psi^{*}$, asumiendo que el campo $A^{\mu}$ satisface las ecuaciones de Euler-Lagrange, tenemos que
+para los campos $\psi$ y $\psi^{*}$, asumiendo que el campo $A^{\mu}$ satisface las ecuaciones de Euler-Lagrange, tenemos que
 \begin{align}
   \partial_{\mu}j^{\mu}=0\,,
 \end{align}
