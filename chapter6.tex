@@ -172,121 +172,12 @@ donde
 y $\tau^i$ son las matrices de Pauli dadas en la ec.~\eqref{eq:paulimatr}.
 
 \end{frame}
-\subsection{Productos $SU(2)$}
-\begin{frame}[fragile,allowframebreaks]
-Sean $A$ y $B$ $C$, dobletes $SU(2)$. En el Lagrangiano \eqref{eq:L0}, hemos construido invariantes $SU(2)$ de la forma $C^{\dagger}B$, por ejemplo. Pero hay otra forma de construir el producto invariante
-
-Para los dobletes  $SU(2)_L$ 
-\begin{align}
-  A=&
-  \begin{pmatrix}
-    A^1\\
-    A^2\\
-  \end{pmatrix},&
-  B=&
-  \begin{pmatrix}
-    B^1\\
-    B^2\\
-  \end{pmatrix},&
-  C=&
-  \begin{pmatrix}
-    C^1\\
-    C^2\\
-  \end{pmatrix},
-\end{align}
-podemos definir un producto que es invariante bajo $SU(2)$ como el producto escalar bajo la ``métrica'' de $SU(2)$
-\begin{align}
-\epsilon^{ab}A_a B_b\to \epsilon_{ab}A'_a B'_b=&\epsilon_{ab}U_{ac}U_{bd}A_c B_d\nonumber\\
-  =&\left( U_{11}U_{22}-U_{12}U_{21} \right)\left(A_1B_2-A_2B_1  \right)\nonumber\\
-  =&\epsilon^{ab}\det\mathbf{U} A_a B_b\nonumber\\
-  =&\epsilon^{ab} A_a B_b\,.
-\end{align}
-Teniendo en cuenta que
-\begin{align}
-  \epsilon^{ab}A_a B_b=&A_1 B_2-A_2 B_1 \,.
- \end{align}
-Con el contenido de campos de $A$, siempre es posible definir un nuevo doblete adjunto de $SU(2)$, definido como 
-\begin{align}
-\label{eq:conjA}
- \widetilde{A}=& \begin{pmatrix}
-                  A_2^{*}\\
-                 -A_1^{*}\\
-                \end{pmatrix}
-\end{align}
-En tal caso es posible escribir el producto escalar $SU(2)$ es una forma matricial, la cual muestra una invarianza más evidente
-\begin{align}
-\widetilde{A}\cdot B\equiv \epsilon^{ab}\widetilde{A}_a B_b=&\widetilde{A}_1 B_2-\widetilde{A}_2 B_1 \nonumber\\
-                     =&A_2^{*}B_2 -(-A_1^{*}) B_1 \nonumber\\
-                     =&A_2^{*}B_2 +A_1^{*} B_1 \nonumber\\
-                     =&A_2^{*}B_2 +A_1^{*} B_1 \nonumber\\
-                     =&\delta^{ac}A_a^{*}B_c \nonumber\\
-                     =&A^{\dagger} B\,.
- \end{align}
-
-Por lo tanto, el producto escalres entre dos dobletes de $SU(2)$ se puede escribir en cualquiera de las dos formas
-\begin{align}
-  \widetilde{A}\cdot B\,, \qquad\text{or}   \qquad A^{\dagger}B\,.
-\end{align}
-En adelante, usaremos la primera forma.
 
 
-Usando la correspondiente identidad para los delta de Kronecker
-\begin{align}
-   \epsilon^{ab}\widetilde{A}_{a} B_{b} =&\delta^{ac}A_a^{*}B_c \nonumber\\
-                                     =&\epsilon^{ad}\epsilon^{cd}A_a^{*}B_c \,,
- \end{align}
-y con el intercambio $a\leftrightarrow d$, tenemos que
-\begin{align}
-  \widetilde{A}_{a} \left( \epsilon^{ab}B_{b}\right)=&\epsilon^{da}\epsilon^{ca}A_d^{*}B_c \nonumber\\
-=&\epsilon^{ad}\epsilon^{ac}A_d^{*}B_c \nonumber\\
-=&\epsilon^{ad}A_d^{*}\left( \epsilon^{ac}B_c \right)\,.
-\end{align}
-Por consiguiente
-\begin{align}
-\widetilde{A}_a=& \epsilon^{ad}A_d^{*} \,.
-\end{align}
-En forma matricial, tenemos
-\begin{align}
-     \widetilde{A}=&\begin{pmatrix} 
-                  \epsilon_{11} & \epsilon_{12}\\
-                 \epsilon_{21} & \epsilon_{22}
-               \end{pmatrix}
-               \begin{pmatrix}
-                 A_1^{*}\\
-                 A_2^{*}\\
-               \end{pmatrix}\nonumber\\
-               =&i\begin{pmatrix}
-                 0 & -i\\
-                 i & 0
-               \end{pmatrix}
-               \begin{pmatrix}
-                 A_1^{*}\\
-                 A_2^{*}\\
-               \end{pmatrix}\nonumber\\
-             =&i \tau_2 A^{*}\,.
-\end{align}
 
-
-En el caso de un doblete de fermiónes $\Xi$, el símbolo  $\dagger$ se usa para denotar el conjugado de fermiones de Weyl. El doblete adjunto en ese caso se puede definir como
-\begin{align}
-\label{eq:Xiadj}
- \widetilde{\Xi}=i\tau_2 \begin{pmatrix}
-                  \Xi_1^{\dagger}\\
-                  \Xi_2^{\dagger}\\
-                \end{pmatrix}
-=& \begin{pmatrix}
-                  \Xi_2^{\dagger}\\
-                 -\Xi_1^{\dagger}\\
-                \end{pmatrix}
-\end{align}
-Para evitar confusiones con los invariantes $SU(2)$, usaremos entonces la definición de producto escalar en el espacio $SU(2)$ para escribir los correspondientes invariantes, por ejemplo
-\begin{align}
-  \widetilde{\Xi}\cdot \overline{\sigma}^{\mu}\Xi=\epsilon_{ab}\,\widetilde{\Xi}^{a}\overline{\sigma}^{\mu}\Xi^{b}\,.
-\end{align}
-
-Para evitar confusión con el conjugado de espinores de Weyl, usaremos el producto escalar con la métrica $SU(2)$ para escribir los correspondientes invariantes.
 
 \section{Simetría gauge local $SU(3)_c\times  SU(2)_L\times  U(1)_Y$}
+\begin{frame}[fragile,allowframebreaks]
 Los términos de masa de Dirac, usando las convenciones de la
 Tabla~\ref{tab:fgw} no son invariantes bajo la simetría $SU(2)_L$ porque
 no hay forma de escribir términos escalares usando combinaciones los
