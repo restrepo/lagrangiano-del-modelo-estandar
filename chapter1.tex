@@ -214,13 +214,24 @@ Bajo una rotación del sistema de coordenas el producto escalar que invariante. 
                      =&\sum_{ij} \delta_{ij} x^{\prime i}  y^{\prime j} \nonumber\\
                      =&\sum_{ijkl}\delta_{ij} {R^i}_k x^{k}  {R^j}_l y^{l} \nonumber\\
                      =&\sum_{ijkl} {R^i}_k \delta_{ij} {R^j}_l  x^{k}  y^{l} \nonumber\\
-                     =&\sum_{ikl} {R^i}_k  {R^i}_l  x^{k}  y^{l} \nonumber\\
-                     =&\sum_{kl}  {\left( R^{\text{T}} \right)_k}^i  {R^i}_l  x^{k}  y^{l} \nonumber\\
-  =&\sum_{kl}  \left( R^{\text{T}}R \right)_{kl}    x^{k}  y^{l} \nonumber\\
+  =&\sum_{ikl} {R^i}_k  {R^i}_l  x^{k}  y^{l} \nonumber\\
+  \label{eq:xrtrx}
+                     =&\sum_{kl}  {\left( R^{\text{T}} \right)_k}^i  {R^i}_l  x^{k}  y^{l} \\
+  =&\sum_{kl} x^{k}  \left( R^{\text{T}}R \right)_{kl}      y^{l} \nonumber\\
   =&\sum_{kl}  \delta_{kl}    x^{k}  y^{l} \nonumber\\
     =& \boldsymbol{x}\cdot \boldsymbol{y}\,,
 \end{align}
 
+En forma compacta, usando \eqref{eq:xrtrx}, tenemos que
+\begin{align}
+  \boldsymbol{x}\to \boldsymbol{x}'=&R \boldsymbol{x}\,,&
+  \boldsymbol{x}^{\operatorname{T}}\to \boldsymbol{x}^{\prime {\operatorname{T}}}=& \boldsymbol{x}^{\operatorname{T}} R^{\operatorname{T}}\,,
+\end{align}
+\begin{align}
+  \label{eq:psso2}
+  \boldsymbol{x}\cdot \boldsymbol{x}= \boldsymbol{x}^{\operatorname{T}} \boldsymbol{x}\to \boldsymbol{x}^{\prime\operatorname{T}} \boldsymbol{x}'
+  =\boldsymbol{x}^{\operatorname{T}}R^{\boldsymbol{T}} R \boldsymbol{x}=\boldsymbol{x}^{\operatorname{T}} \boldsymbol{x}=  \boldsymbol{x}\cdot \boldsymbol{x}\,.
+\end{align}
 
 
 Note que
@@ -308,6 +319,13 @@ Claramente, el Grupo $SO(3)$ es no Abeliano, es decir
 \begin{align*}
   R(\boldsymbol{\theta}_1)R(\boldsymbol{\theta}_2)\ne R(\boldsymbol{\theta}_2)R(\boldsymbol{\theta}_1)
 \end{align*}
+
+El producto escalar bajo es invariante:
+\begin{align}
+  \label{eq:psso3}
+  \boldsymbol{x}\cdot \boldsymbol{x}= \boldsymbol{x}^{\operatorname{T}} \boldsymbol{x}\to \boldsymbol{x}^{\prime\operatorname{T}} \boldsymbol{x}'
+  =\boldsymbol{x}^{\operatorname{T}}R^{\boldsymbol{T}} R \boldsymbol{x}=\boldsymbol{x}^{\operatorname{T}} \boldsymbol{x}=  \boldsymbol{x}\cdot \boldsymbol{x}\,.
+\end{align}
 
 Note que la combinación lineal se puede expresar como
 \begin{align}
@@ -739,7 +757,7 @@ Usando la ec.~(\ref{eq:242})
 Las transformaciones de Lorentz se definen como la transformaciones que dejan invariante al producto escalar en el espacio de Minkowski definido como
 \begin{equation}
   \label{eq:146}
-  x^2=g_{\mu\nu}x^\mu x^\nu\equiv x_\nu x^\nu={x^0}^2-x^i x^i={a^0}^2-\mathbf{x}\cdot\mathbf{x}
+ x\cdot x= x^2=g_{\mu\nu}x^\mu x^\nu={x^0}^2-x^i x^i={a^0}^2-\mathbf{x}\cdot\mathbf{x}
 \end{equation}
 donde $\mu,\nu=0,1,2,3$, $i=1,2,3$ y se asume suma sobre \'\i ndices repetidos. Adem\'as
 \begin{equation}
@@ -764,32 +782,34 @@ donde $\left\{ g_{\mu\nu} \right\}$ denota la forma matricial del tensor $g_{\mu
 El producto de dos cuadrivectores se define en forma similar como
 \begin{equation}
 \label{eq:157}
-  x_\nu y^\nu=g_{\mu\nu}x^\mu y^\nu=x^0y^0-\mathbf{x}\cdot\mathbf{y}
+  x\cdot y=g_{\mu\nu}x^\mu y^\nu=x^0y^0-\mathbf{x}\cdot\mathbf{y}
 \end{equation}
-El inverso de la m\'etrica es
+El inverso de la métrica es
 \begin{equation}
   \left\{ g^{\mu\nu} \right\}\equiv\left\{ g_{\mu\nu} \right\}^{-1}=\left\{ g_{\mu\nu} \right\}
 \end{equation}
 tal que
 \begin{equation}
-  g^{\mu\alpha}g_{\alpha\nu}=\delta^\mu_\nu\qquad\text{and}\qquad x^\mu=g^{\mu\nu}x_\nu
+  g^{\mu\alpha}g_{\alpha\nu}=\delta^\mu_\nu\,.
 \end{equation}
 
 Bajo una transformaci\'on de Lorentz.
 \begin{equation}
+  \label{eq:xx5}
   x^\mu\to {x'}^\mu={\Lambda^\mu}_{\nu}x^\nu.
 \end{equation}
 La invarianza del producto escalar en ec.~\eqref{eq:157}
 \begin{equation}
-  {x'}^\mu{y'}_\mu=x^\mu y_\mu
+  {x'}\cdot {y'}=x\cdot y\,.
 \end{equation}
 implica que
 \begin{align}
 \label{eq:Lambdasteps}
-  {x'}^\mu{y'}_\mu&=g_{\mu\nu}{x'}^\mu{y'}^{\nu}\nonumber\\
+{x'}\cdot{y'}_\mu\to  {x'}\cdot{y'}_\mu&=g_{\mu\nu}{x'}^\mu{y'}^{\nu}\nonumber\\
   &=g_{\mu\nu}{\Lambda^{\mu}}_{\alpha}x^{\alpha}{\Lambda^{\nu}}_{\beta}y^{\beta}\nonumber\\
  &={\Lambda^{\mu}}_{\alpha}g_{\mu\nu}{\Lambda^{\nu}}_{\beta}x^{\alpha}y^{\beta}\,.
 \end{align}
+
 Por consiguiente, la condición para que el producto escalar  en el espacio de Minkowski definido por la métrica $g_{\mu\nu}$, sea invariante bajo transformaciones de Lorentz es
 \begin{align}
   {\Lambda^{\mu}}_{\alpha}g_{\mu\nu}{\Lambda^{\nu}}_{\beta}x^{\alpha}y^{\beta}=
@@ -802,7 +822,7 @@ y por consiguiente
 o, reorganizando los índices mudos
 \begin{equation}
   \label{eq:lrinv}
-  g_{\mu\nu}={\Lambda^\alpha}_{\mu}g_{\alpha\beta}{\Lambda^\beta}_{\nu}\qquad\text{or}\qquad 
+  g_{\mu\nu}={(\Lambda^{T})_{\mu}}^\alpha g_{\alpha\beta}{\Lambda^\beta}_{\nu}\qquad\text{or}\qquad 
 \left\{g_{\mu\nu}\right\}=\left\{{\Lambda_{\mu}}^{\alpha}\right\}^{\text{T}}\left\{g_{\alpha\beta}\right\}\left\{{\Lambda^\beta}_{\nu}\right\}.
 \end{equation}
 En notaci\'on matricial
@@ -810,13 +830,52 @@ En notaci\'on matricial
  g=\Lambda^T g \Lambda\,. 
 \end{align}
 
-\begin{english}
-From eq.~\eqref{eq:lrinv} we also have  
-\end{english}
-\begin{spanish}
-De la ec.~\eqref{eq:lrinv} tenemos que
-\end{spanish}
+Introducimos ahora un cuadrivector que lleva intrínsicamente el índice abajo
+\begin{align}
+   \partial_\mu=\frac{\partial}{\partial x^\mu}=&\left(
+    \frac{\partial}{\partial t},\frac{\partial}{\partial x},\frac{\partial}{\partial y},\frac{\partial}{\partial z}
+  \right)
+  =(\partial_0,\boldsymbol{\nabla}).
+\end{align}
 
+
+
+Las propiedades de transformación para $\partial_\mu$ se pueden obtener a partir de la ec.~\eqref{eq:xx5}
+\begin{align}
+  {\left(\Lambda^{-1}\right)^\mu}_\alpha{x'}^\alpha=&{\left(\Lambda^{-1}\right)^\mu}_\alpha{\Lambda^\alpha}_\nu x^\nu\nonumber\\
+=&\delta^\mu_\nu x^\nu\nonumber\\
+=&x^\mu\,,
+\end{align}
+\begin{align}
+  \frac{1}{{x'}^\nu}= {\left(\Lambda^{-1}\right)^\mu}_\nu\frac{1}{x^\mu}\,,
+\end{align}
+o
+\begin{align}
+  \label{eq:183qft}
+    \frac{1}{{x'}^\mu}= {\left(\Lambda^{-1}\right)^\nu}_\mu\frac{1}{x^\nu}\,,
+\end{align}
+de modo que la transformación de Lorentz para $\partial_\mu=\partial/\partial x^\mu$, es
+\begin{align}
+  \label{dmulrtran}
+   \frac{\partial}{{\partial x'}^\mu}=& {\left(\Lambda^{-1}\right)^\nu}_\mu\frac{\partial}{\partial x^\nu}\nonumber\\
+   {\partial\,}'_\mu=& {\left(\Lambda^{-1}\right)^\nu}_\mu\partial_\nu\,.
+\end{align}
+
+Imponiendo la invarianza sobre el producto escalar
+\begin{align}
+  \partial^2=g^{\mu\nu}\partial_{\mu} \partial_{\nu}\,,
+\end{align}
+y repitiendo los pasos que dieron lugar a la ec.~(\ref{eq:Lambdasteps})
+pero para la métrica contravariante
+\begin{align}
+g^{\mu\nu}= {\left(\Lambda^{-1}\right)^\mu}_\alpha g^{\alpha \beta}{\left(\Lambda^{-1}\right)^\nu}_\beta\,, 
+\end{align}
+
+Si además imponemos que está nueva métrica baje los índices
+\begin{align}
+  x_{\nu}=g^{\mu\nu}x_{\nu}\,,
+\end{align}
+de la ec.~\eqref{eq:lrinv} tenemos que
 \begin{align}
   g^{\rho\mu}g_{\mu\nu}=&g^{\rho\mu}{\Lambda^\alpha}_{\mu}g_{\alpha\beta}{\Lambda^\beta}_{\nu}\nonumber\\
   \delta^\rho_\nu=&{\Lambda_\beta}^\rho{\Lambda^\beta}_{\nu}\,,
@@ -859,14 +918,13 @@ o
   {\left(\Lambda^{-1}\right)^\mu}_\nu={\Lambda_\nu}^\mu\,,
 \end{align}
 
-Repitiendo los pasos que dieron lugar a la ec.~(\ref{eq:Lambdasteps})
-pero para la métrica contravariante (TAREA), y usando la
-ec.~\eqref{eq:lambdainv}, tenemos que
+Usnando ec.~\eqref{eq:lambdainv}, tenemos que
 \begin{align}
   \label{eq:Lambdacontra}
-  g^{\mu\nu}=&{\Lambda_{\alpha}}^{\mu}g^{\alpha\beta}{\Lambda_{\beta}}^{\nu}\nonumber\\
-           =&{\left( \Lambda^{-1} \right)^{\mu}}_{\alpha}g^{\alpha\beta} {\left( \Lambda^{-1} \right)^{\nu}}_{\beta}\,.
+  g^{\mu\nu}=&{\left( \Lambda^{-1} \right)^{\mu}}_{\alpha}g^{\alpha\beta} {\left( \Lambda^{-1} \right)^{\nu}}_{\beta}\nonumber\\
+=&{\Lambda_{\alpha}}^{\mu}g^{\alpha\beta}{\Lambda_{\beta}}^{\nu}\,.           
 \end{align}
+
 
 \end{frame}
 
@@ -880,7 +938,7 @@ ec.~\eqref{eq:lambdainv}, tenemos que
 Invarianza de Lorentz
 
   \begin{align}
-    x_\mu y^\mu\to x'_\mu{y'}^\mu=&{\Lambda_\mu}^\nu x_\nu{\Lambda^\mu}_\rho y^\rho \nonumber\\
+  x\cdot y= g_{\mu\nu}x^{\mu}x^{\nu}=  x_\mu y^\mu\to x'_\mu{y'}^\mu=&{\Lambda_\mu}^\nu x_\nu{\Lambda^\mu}_\rho y^\rho \nonumber\\
     =&{\Lambda_\mu}^\nu x_\nu{\Lambda^\mu}_\rho y^\rho \nonumber\\
     =&{\left(\Lambda^{-1}\right)^\nu}_\mu{\Lambda^\mu}_\rho x_\nu y^\rho \nonumber\\
     =&\delta^\nu_\rho x_\nu y^\rho \nonumber\\
@@ -977,6 +1035,16 @@ El ${\Lambda^\mu}_{\nu}$ definido en la ec.~\eqref{eq:147} satisface la condici\
 =&g
 \end{align}
 \end{frame}
+
+Note que el orden de los índices es importante porque, recuperando la dependencias en el parámetro de transformación
+\begin{align}
+  {\Lambda(\xi)^{\mu}}_{\nu}\ne {\Lambda(\xi)_{\nu}}^{\mu}={\Lambda(-\xi)^{\mu}}_{\nu}\,,
+\end{align}
+En efecto, a modo de ejercicio se puede comprobar que
+\begin{align}
+{\Lambda^{-1}(\xi)^{\mu}}_{\nu} ={\Lambda(\xi)_{\nu}}^{\mu}= {\Lambda(-\xi)^{\mu}}_{\nu}\,.
+\end{align}
+
 
 \begin{frame}[fragile,allowframebreaks]
 Denotaremos los cuadrivectores con \'\i ndices arriba como
