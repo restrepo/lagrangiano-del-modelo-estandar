@@ -248,6 +248,7 @@ tal que
 \subsection{$\operatorname{SO}(3)$}
 Una representación matricial de esta álgebra se puede obtener con la llamada representación adjunta del Grupo de rotaciones en 3 dimensiones, $SO(3)$, definida a partir de las constantes de estructura \cite{Veltman}
 \begin{align}
+  \label{eq:so3adj}
   (L^i)_{jk}=-i\epsilon_{ijk}\,.
 \end{align}
 Explícitamente
@@ -456,16 +457,209 @@ El momentum angular total de la tierra es la suma vectorial del momentum angular
 
 El momentum angular total del electrón en el átomo de Higdrógeno es a su vez la suma vectorial del momentum angular orbital (alrededor del protón) y el momentum angular intrínsico del electrón.  Éste último sin embargo, transforma bajo rotaciones de $\operatorname{SU}(3)$, de manera que el campo asociado con el electrón debe ser un campo complejo: con magnitud y fase.
 
+Los objetos que sufren transformaciones en $\operatorname{SO}(N)$ son vectores en ese espacio, $\boldsymbol{x}$, que dejan el producto escalar bajo la métrica $\delta_{ij}$ del tipo~\eqref{eq:psso3} invariante.
+
+Los objetos más simples que pueden sufrir transformaciones  $\operatorname{SU}(2)$, corresponden a vectores columnas de dos objetos complejos, como dos funciones de ondas, donde cada función de onda puede tener una de dos posibilidades de carga (una carga más que en $\operatorname{U}(1)$)
+\begin{align}
+  \Psi=&
+  \begin{pmatrix}
+    \Psi_1\\
+    \Psi_2
+  \end{pmatrix},&
+  \Psi^{\dagger}=&
+  \begin{pmatrix}
+    \Psi_1^{*} &
+    \Psi_2^{*}
+  \end{pmatrix}.                  
+\end{align}
+
+La transformación de este \emph{doblete} bajo $\operatorname{SU}(2)$ es
+\begin{align}
+  \Psi\to \Psi'=& U(\boldsymbol{\theta}) \Psi \nonumber\\
+  \Psi^{\dagger}\to \Psi^{\prime\dagger} =& \Psi^{\dagger}U^{\dagger}(\boldsymbol{\theta}).
+\end{align}
+
+La definición del producto escalar es
+\begin{align}
+  | \Psi |^2 \equiv \Psi^{\dagger}\Psi\,. 
+\end{align}
+
+\textbf{Ejercicio:} Mostrar la invarianza del producto escalar.
+
+\subsection{Producto escalar en $SU(2)$}
+El producto escalar de $\operatorname{SU}(2)$ también se puede definir en términos de una métrica.
+
+\begin{frame}[fragile,allowframebreaks]
+  Sean $\Psi$ y $B$ $C$, dobletes $SU(2)$. En el Lagrangiano \eqref{eq:L0}, hemos construido invariantes $SU(2)$ de la forma $C^{\dagger}B$, por ejemplo. Pero hay otra forma de construir el producto invariante
+  
+
+Para los dobletes  $SU(2)_L$ 
+\begin{align}
+  \Psi=&
+  \begin{pmatrix}
+    \Psi_1\\
+    \Psi_2\\
+  \end{pmatrix},&
+  \Upsilon=&
+  \begin{pmatrix}
+    \Upsilon_1\\
+    \Upsilon_2\\
+  \end{pmatrix},
+\end{align}
+podemos definir un producto que es invariante bajo $SU(2)$ como el producto escalar bajo la ``métrica'' de $SU(2)$
+\begin{align}
+\epsilon^{ab}\Psi_a \Upsilon_b\to \epsilon_{ab}\Psi'_a \Upsilon'_b=&\epsilon_{ab}U_{ac}U_{bd}\Psi_c \Upsilon_d\nonumber\\
+  =&\left( U_{11}U_{22}-U_{12}U_{21} \right)\left(\Psi_1\Upsilon_2-\Psi_2\Upsilon_1  \right)\nonumber\\
+  =&\epsilon^{ab}\det\mathbf{U} \Psi_a \Upsilon_b\nonumber\\
+  =&\epsilon^{ab} \Psi_a \Upsilon_b\,.
+\end{align}
+Teniendo en cuenta que
+\begin{align}
+  \epsilon^{ab}\Psi_a \Upsilon_b=&\Psi_1 \Upsilon_2-\Psi_2 \Upsilon_1 \,.
+ \end{align}
+Con el contenido de campos de $\Psi$, siempre es posible definir un nuevo doblete adjunto de $SU(2)$, definido como 
+\begin{align}
+\label{eq:conjA}
+ \widetilde{\Psi}=& \begin{pmatrix}
+                  \Psi_2^{*}\\
+                 -\Psi_1^{*}\\
+                \end{pmatrix}
+\end{align}
+En tal caso es posible escribir el producto escalar $SU(2)$ es una forma matricial, la cual muestra una invarianza más evidente
+\begin{align}
+\widetilde{\Psi}\cdot \Upsilon\equiv \epsilon^{ab}\widetilde{\Psi}_a \Upsilon_b=&\widetilde{\Psi}_1 \Upsilon_2-\widetilde{\Psi}_2 \Upsilon_1 \nonumber\\
+                     =&\Psi_2^{*}\Upsilon_2 -(-\Psi_1^{*}) \Upsilon_1 \nonumber\\
+                     =&\Psi_2^{*}\Upsilon_2 +\Psi_1^{*} \Upsilon_1 \nonumber\\
+                     =&\Psi_2^{*}\Upsilon_2 +\Psi_1^{*} \Upsilon_1 \nonumber\\
+                     =&\delta^{ac}\Psi_a^{*}\Upsilon_c \nonumber\\
+                     =&\Psi^{\dagger} \Upsilon\,.
+ \end{align}
+
+Por lo tanto, el producto escalres entre dos dobletes de $SU(2)$ se puede escribir en cualquiera de las dos formas
+\begin{align}
+  \widetilde{\Psi}\cdot \Upsilon\,, \qquad\text{or}   \qquad \Psi^{\dagger}\Upsilon\,.
+\end{align}
+En adelante, usaremos la primera forma.
+
+
+Usando la correspondiente identidad para los delta de Kronecker
+\begin{align}
+   \epsilon^{ab}\widetilde{\Psi}_{a} \Upsilon_{b} =&\delta^{ac}\Psi_a^{*}\Upsilon_c \nonumber\\
+                                     =&\epsilon^{ad}\epsilon^{cd}\Psi_a^{*}\Upsilon_c \,,
+ \end{align}
+y con el intercambio $a\leftrightarrow d$, tenemos que
+\begin{align}
+  \widetilde{\Psi}_{a} \left( \epsilon^{ab}\Upsilon_{b}\right)=&\epsilon^{da}\epsilon^{ca}\Psi_d^{*}\Upsilon_c \nonumber\\
+=&\epsilon^{ad}\epsilon^{ac}\Psi_d^{*}\Upsilon_c \nonumber\\
+=&\epsilon^{ad}\Psi_d^{*}\left( \epsilon^{ac}\Upsilon_c \right)\,.
+\end{align}
+Por consiguiente
+\begin{align}
+\widetilde{\Psi}_a=& \epsilon^{ad}\Psi_d^{*} \,.
+\end{align}
+En forma matricial, tenemos
+\begin{align}
+     \widetilde{\Psi}=&\begin{pmatrix} 
+                  \epsilon_{11} & \epsilon_{12}\\
+                 \epsilon_{21} & \epsilon_{22}
+               \end{pmatrix}
+               \begin{pmatrix}
+                 \Psi_1^{*}\\
+                 \Psi_2^{*}\\
+               \end{pmatrix}\nonumber\\
+               =&i\begin{pmatrix}
+                 0 & -i\\
+                 i & 0
+               \end{pmatrix}
+               \begin{pmatrix}
+                 \Psi_1^{*}\\
+                 \Psi_2^{*}\\
+               \end{pmatrix}\nonumber\\
+             =&i \tau_2 \Psi^{*}\,.
+\end{align}
+
+\end{frame}
+
+
+\subsection{$SU(N)$}
+
+
+En general, si $N^{2}-1$ generadores $\Lambda_a$, satisfacen el álgebra
+\begin{align}
+  \left[ \Lambda_a,\Lambda_b \right]=f_{abc}\Lambda_{c}\,,
+\end{align}
+con
+\begin{align}
+  \Lambda^{\dagger}=&\Lambda\,, & \operatorname{Tr}(\Lambda)=0\,,
+\end{align}
+entonces las matrices $N\times N$  
+\begin{align}
+  U(\boldsymbol{\theta})=\exp\left( i \Lambda_{a}\theta_{a} \right)
+\end{align}
+son unitarias y de determinante 1, y constituyen la representación fundamental de $SU(N)$.
+
+En el caso de $U(1)$, el único generador conmutativo satisface trivialmente el álgebra y da lugar al elemento de grupo
+\begin{align}
+  U(\theta)=e^{i\Lambda \theta}
+\end{align}
+que automáticamente tienen norma 1
+\begin{align*}
+|U(\theta)|^2= U^{*}(\theta)U(\theta)=1\,.
+\end{align*}
+
+
+Los objetos más simples que pueden sufrir transformaciones  $\operatorname{SU}(N)$, corresponden a vectores columnas de dos objetos complejos, como dos funciones de ondas, donde cada función de onda puede tener una de $N$ posibilidades de carga ($N-1$ cargas más que en $\operatorname{U}(1)$)
+\begin{align}
+  \Psi=&
+  \begin{pmatrix}
+    \Psi_1\\
+    \Psi_2\\
+    \vdots\\
+    \Psi_N\\
+  \end{pmatrix},&
+  \Psi^{\dagger}=&
+  \begin{pmatrix}
+    \Psi_1^{*} &
+    \Psi_2^{*}& \cdots \Psi_N^{*} 
+  \end{pmatrix}.                  
+\end{align}
+
+La transformación de este \emph{doblete} bajo $\operatorname{SU}(N)$ es
+\begin{align}
+  \Psi\to \Psi'=& U(\boldsymbol{\theta}) \Psi \nonumber\\
+  \Psi^{\dagger}\to \Psi^{\prime\dagger} =& \Psi^{\dagger}U^{\dagger}(\boldsymbol{\theta}),
+\end{align}
+donde
+\begin{align}
+  \boldsymbol{\theta}=\left(\theta_1,\theta_2,\cdots,\theta_{N^2-1}  \right).
+\end{align}
+
+La definición del producto escalar es
+\begin{align}
+  | \Psi |^2 \equiv \Psi^{\dagger}\Psi\,. 
+\end{align}
+
+\textbf{Ejercicio:} Mostrar la invarianza del producto escalar.
 
 
 
-Para ir más allá de las rotaciones de sistemas de referencias en reposo, debemos considerar también transformaciones entre sistemas de referencias inerciales. Para ello es conveniente usar unidades naturales y establecer una notación relativista.
+La representación adjunta para $\operatorname{SU}(N)$ esta definida por
+\begin{align}
+  \left[ \widetilde{\Lambda}_a \right]_{bc}=-i f_{abc}\,.
+\end{align}
+
+
+
+
+
 
 
 
 \section{Unidades Naturales}
-
 \label{sec:NU}
+Para ir más allá de las rotaciones de sistemas de referencias en reposo, debemos considerar también transformaciones entre sistemas de referencias inerciales. Para ello es conveniente usar unidades naturales y establecer una notación relativista.
+
+
 Las \emph{unidades naturales} son unidades f\'\i sicas de medida definidas en t\'erminos de constantes f\'\i sicas universales~\cite{NU}. El primer conjunto consiste de unidades naturales, las \emph{unidades de Planck}~\cite{PU},  fue formulado por el propio Planck despu\'es de establecer la \'ultima constante universal, que lleva su nombre.  En palabras de Planck
 \begin{quotation} %noinstiki
 
@@ -1100,7 +1294,14 @@ Por lo tanto para una partícula de masa cero, su energía total da cuenta de su
 \end{frame}
 
 \begin{frame}[fragile,allowframebreaks]
-Del cálculo vectorial
+  Del cálculo vectorial
+  \begin{align}
+      \partial_\mu=\frac{\partial}{\partial x^\mu}=&\left(
+    \frac{\partial}{\partial t},\frac{\partial}{\partial x},\frac{\partial}{\partial y},\frac{\partial}{\partial z}
+  \right)
+  =(\partial_0,\boldsymbol{\nabla})
+  \end{align}
+Este cuadrivector tiene intrínsicamente el índice abajo. La correspondiente derivada con índice superior es  
 \begin{align}
   \partial^\mu\equiv\frac{\partial}{\partial x_\mu}=&
   \left(
@@ -1111,11 +1312,7 @@ Del cálculo vectorial
   =&\left(
     \frac{\partial}{\partial t},-\frac{\partial}{\partial x},-\frac{\partial}{\partial y},-\frac{\partial}{\partial z}
   \right)\nonumber\\
-  =&(\partial_0,-\boldsymbol{\nabla})=(\partial^0,-\boldsymbol{\nabla})\\
-  \partial_\mu=\frac{\partial}{\partial x^\mu}=&\left(
-    \frac{\partial}{\partial t},\frac{\partial}{\partial x},\frac{\partial}{\partial y},\frac{\partial}{\partial z}
-  \right)
-  =(\partial_0,\boldsymbol{\nabla})
+  =&(\partial_0,-\boldsymbol{\nabla})=(\partial^0,-\boldsymbol{\nabla}).
 \end{align}
 Por consiguiente:
 \begin{equation}
@@ -1379,6 +1576,336 @@ A medida que el mu\'on se acerca m\'as a la velocidad de la luz, $L_\mu'$ coinci
 \end{example}
 
 \end{frame}
+
+\subsection{Grupo de Lorentz}
+
+\begin{frame}[fragile,allowframebreaks]
+  Los seis generadores independientes del Grupo de Lorentz (GL) se pueden definir a partir del tensor antisimétrico
+\begin{align}
+   \left(J^{\mu\nu}\right)_{\alpha\beta}=&i\epsilon^{\mu\nu\rho\sigma}\epsilon_{\rho\sigma\alpha\beta}\,,
+\end{align}
+
+Los seis generadores indpendientes satisfacen el álgebra de GL, también denotado como el grupo $\operatorname{SO(1,3)}$
+\begin{align}
+\label{eq:lrtalg}
+  \left[{J}^{\mu\nu},{J}^{\rho\sigma}\right]=&
+i(g^{\nu\rho}{J}^{\mu\sigma}-g^{\mu\rho}{J}^{\nu\sigma}-g^{\nu\sigma}{J}^{\mu\rho}+g^{\mu\sigma}{J}^{\nu\rho})\,.
+\end{align}
+%From \cite{Peskin}:
+Cualquier representación matricial de esta álgebra debe obedecer las mismas reglas de conmutación.
+
+
+\noindent
+\textbf{Teorema}:
+  La representación $4\times 4$ del Grupo de Lorentz se puede obtener de la exponenciación de los generadores matriciales $4\times 4$ $J^{\mu\nu}$ y los parámetros $\omega_{\mu\nu}$
+\begin{align}
+  {\Lambda}=\exp\left(-i\omega_{\mu\nu}\frac{{J}^{\mu\nu}}{2}\right)\,,
+\end{align}
+tal que,
+$\omega_{\mu\nu}=0$ para $\mu\ne\nu$, y
+\begin{align}
+\xi^i=&\omega^{i0}=-\omega^{0i}&\theta^i=&\frac{1}{2}\epsilon^{ijk}\omega_{jk}\,.  
+\end{align}
+
+Antes de la demostración, recordemos que
+para encontrar una representación matricial de los boosts (que son básicamente rotaciones entre el espacio y el tiempo), tenemos
+\begin{align}
+  \left\{x^\mu\right\}=\begin{pmatrix}
+    t\\
+    x\\
+    y\\
+    z
+  \end{pmatrix}\to
+  \begin{pmatrix}
+    t'\\
+    x'\\
+    y'\\
+    z'
+  \end{pmatrix}=
+  \begin{pmatrix}
+    \frac{t+vx}{\sqrt{1-v^2}}\\
+    \frac{x+vt}{\sqrt{1-v^2}}\\
+    y\\
+    z
+  \end{pmatrix}=&
+  \begin{pmatrix}
+    \cosh\xi&\sinh\xi&0&0\\
+    \sinh\xi&\cosh\xi&0&0\\
+    0     &  0  &1&0\\
+    0     &  0  &0&1
+  \end{pmatrix}
+  \begin{pmatrix}
+    t\\
+    x\\
+    y\\
+    z
+  \end{pmatrix}\nonumber\\
+=&\left\{{\Lambda^\mu}_{\nu}\right\}\left\{x^\nu\right\}\,,
+\end{align}
+  Ya que
+\begin{align}
+  \cosh\xi=&\sum_{n=0}^{\infty}\frac{\xi^{2n}}{2n!}\approx 1+\mathcal{O}(\xi^2)\nonumber\\
+  \sinh\xi=&\sum_{n=0}^{\infty}\frac{\xi^{2n+1}}{(2n+1)!}\approx \xi+\mathcal{O}(\xi^2)\,,
+\end{align}
+  Un boost infinitesimal a lo largo de $x$ es
+\begin{align}
+  \left\{{\Lambda^\mu}_{\nu}\right\}_{x-\text{boost }}\approx
+  \begin{pmatrix}
+    1&\xi&0&0\\
+    \xi&1&0&0\\
+    0&0&1&0\\
+    0&0&0&1
+  \end{pmatrix}=\exp \left( i\xi  K^1 \right),
+\end{align}
+donde el generador de boost es
+\begin{align}
+ K^1= \begin{pmatrix}
+    0 & -i & 0 & 0\\
+   -i & 0  & 0 & 0\\
+   0 & 0 &  0 & 0\\
+    0 & 0 &  0 & 0\\ 
+  \end{pmatrix}.
+\end{align}
+
+  Similarmente una rotación por un ángulo infinitesimal $\theta=\theta_3$ alrededor del plano $xy$ (o sobre el eje $z$)
+\begin{align}
+  \left\{{\Lambda^\mu}_{\nu}\right\}_{xy-\text{rotation }}\approx
+  \begin{pmatrix}
+    1&0&0&0\\
+    0&1&\theta&0\\
+    0&-\theta&1&0\\
+    0&0&0&1
+  \end{pmatrix}.
+\end{align}
+Que como hemos visto, puede obtenerse a partir de los generadores del Grupo de rotaciones $SO(3)$, generalizados a matrices $4\times4$
+\begin{align}
+  \{L^{i}\}\equiv
+  \begin{pmatrix}
+    1 & 0 & 0& 0\\
+    0 &   &  &  \\
+    0 &   & L^i_{3\times3}  &  \\
+    0 &   &  &  \\
+  \end{pmatrix}
+\end{align}
+\begin{align*}
+  L^1_{3\times3}=&
+  \begin{pmatrix}
+   0 & 0 & 0\\
+   0 & 0 & -i\\
+   0 & i & 0 \\
+  \end{pmatrix}&
+ L^2_{3\times3}=&
+ \begin{pmatrix}
+  0 & 0  & i \\ 
+  0 & 0  & 0 \\
+ -i & 0  & 0 \\
+ \end{pmatrix}&
+ L^3_{3\times3}=&
+ \begin{pmatrix}
+   0 & -i & 0\\
+   i & 0  & 0\\
+   0 & 0 & 0\\
+ \end{pmatrix}
+\end{align*}.
+
+
+\end{frame}
+En general definimos los seis parámetros independientes del Grupo de Lorentz
+\begin{align}
+  \omega_{i0}=-\omega_{0i}\equiv&\xi_{i} \nonumber\\
+  \omega_{12}=-\omega_{21}\equiv&2\theta^3 &   \omega_{32}=-\omega_{23}\equiv&-2\theta^2 &   \omega_{13}=-\omega_{31}\equiv&2\theta^1\,.
+\end{align}
+Por lo tanto
+\begin{align}
+\xi^i=&\omega^{i0}=-\omega^{0i}&\theta^i=&\frac{1}{2}\epsilon^{ijk}\omega_{jk}\,.  
+\end{align}
+
+Las  matrices $4\times 4$ 
+\begin{align}
+   \left(J^{\mu\nu}\right)_{\alpha\beta}=&i\epsilon^{\mu\nu\rho\sigma}\epsilon_{\rho\sigma\alpha\beta}\nonumber\\
+   \left(J^{\mu\nu}\right)^{\alpha}_{\beta}=g^{\gamma\alpha}\left(J^{\mu\nu}\right)_{\gamma\beta}= &i\epsilon^{\mu\nu\rho\sigma}\epsilon_{\rho\sigma\gamma\beta}g^{\gamma\alpha}\nonumber\\
+\end{align}
+\begin{align}
+  \left(J^{\mu\nu}\right)_{\alpha\beta}  =&i\left({\delta^\mu}_\alpha{\delta^\nu}_\beta-{\delta^\mu}_\beta{\delta^\nu}_\alpha\right)\nonumber\\
+ {\left(J^{\mu\nu}\right)^{\alpha}}_{\beta}=&ig^{\gamma\alpha}\left({\delta^{\mu}}_{\gamma}{\delta^\nu}_\beta-{\delta^\mu}_\beta{\delta^{\nu}}_\gamma\right) \nonumber\\
+ =&i\left(g^{\mu\alpha}{\delta^\nu}_\beta-{\delta^\mu}_\beta g^{\nu\alpha}\right)\nonumber\\
+{\left(J^{\mu\nu}\right)^{\alpha\beta}}=&i \left( g^{\mu\alpha}g^{\nu\beta}-g^{\mu\beta}g^{\nu\alpha} \right)
+\end{align}
+where $\mu$ and $\nu$ label which of the six matrices we want, while $\alpha$ and $\beta$ label components of the matrices. These matrices satisfy the commutations relations \eqref{eq:lrtalg}, and generate the three boosts and three rotations of the ordinary Lorentz 4-vectors:
+\begin{align}
+  {\Lambda^\alpha}_\beta\approx{\delta^\alpha}_\beta-\frac{i}{2}\omega_{\mu\nu}{\left(J^{\mu\nu}\right)^\alpha}_\beta\,.
+\end{align}
+%ver programa mathematica
+En particular
+\begin{align*}
+  (J^{ij})_{lm}=&i\epsilon^{ij\rho\sigma}\epsilon_{\rho\sigma lm}\\
+             =&i\epsilon^{ij\rho 0}\epsilon_{\rho 0 lm}\\
+             =&-i\epsilon^{ijk}\epsilon_{klm}\\
+             =&\epsilon^{ijk}(L_{k})_{lm}
+\end{align*}
+o, en términos matriciales
+\begin{align}
+  L^{i}=\tfrac{1}{2}\epsilon^{ijk}J_{jk}
+\end{align}
+De modo que
+\begin{align}
+\label{eq:klkl}
+  i\sum_i \theta^{i}L^{i}=-&i\theta^iL_i\nonumber\\
+=&- \frac{i}{2}\epsilon^{ikl}\omega_{kl}\frac{1}{2}\epsilon_{imn}J^{mn}\nonumber\\
+=&- \frac{i}{4}(\delta^k_m\delta^l_n-\delta^k_n\delta^l_m)\omega_{kl}J^{mn}\nonumber\\
+=&- \frac{i}{4}(\omega_{kl}J^{kl}-\omega_{kl}J^{lk})\nonumber\\
+=&- \frac{i}{4}(\omega_{kl}J^{kl}+\omega_{kl}J^{kl})\nonumber\\
+=&- \frac{i}{2}\omega_{kl}J^{kl}\,.
+\end{align}
+
+usando la notación de \cite{0812.1594}, definimos también
+\begin{align}
+  K^i\equiv J^{0i}=-J^{i0}\,,
+\end{align}
+Entonces
+\begin{align}
+-i\omega_{\mu\nu}\frac{{J}^{\mu\nu}}{2} =&-i\omega_{0\nu}\frac{{J}^{0\nu}}{2}
+-i\omega_{i\nu}\frac{{J}^{i\nu}}{2}\nonumber\\
+=&-i\omega_{0i}\frac{{J}^{0i}}{2}
+-i\omega_{i0}\frac{{J}^{i0}}{2}
+-i\omega_{ij}\frac{{J}^{ij}}{2}\nonumber\\
+=&  -i\omega_{i0}{J}^{i0}
+-i\omega_{ij}\frac{{J}^{ij}}{2}\nonumber\\
+=&  i\omega_{i0}{J}^{0i}
+-i\omega_{ij}\frac{{J}^{ij}}{2}\,,
+\end{align}
+y usando \eqref{eq:klkl}
+\begin{align}
+=&  -i\xi_{i}K^{i}-i\omega_{ij}\frac{{J}^{ij}}{2}\nonumber\\
+=&\sum_i \left(i\xi^i K^i+i\theta^i L^i  \right)\,.
+\end{align}
+\begin{frame}
+Entonces
+\begin{align}
+  \{\Lambda\}=\exp\left(-i\omega_{\mu\nu}\frac{{J}^{\mu\nu}}{2}\right)=
+\exp\left( i\boldsymbol{\xi}\cdot\mathbf{K}+i\boldsymbol{\theta}\cdot\mathbf{L} \right)\,.
+\end{align}
+
+
+%ver programa mathematica
+\end{frame}
+
+\section{2 representaciones $2\times 2$ del Grupo de Lorentz}
+\begin{frame}[fragile,allowframebreaks]
+Here we focus on the simplest non-trivial irreducible representations of the Lorentz algebra. These are the two-dimensional (inequivalent) representations: $(\frac{1}{2},0)$ and $(0,\frac{1}{2})$. 
+
+\begin{align}
+  S(\Lambda)_{\left( \frac{1}{2},0 \right)}=&\exp\left(-i \omega_{\mu\nu}\frac{\sigma^{\mu\nu}}{2}\right)\nonumber
+\end{align}
+\begin{align}
+  \sigma^{\mu\nu}=\frac{i}{4}\left[\sigma^\mu,\overline{\sigma}^\nu\right]\,.
+\end{align}
+where
+\begin{align}
+  \sigma^0=&\mathbf{1}_{2\times2},& \sigma^{i}\to \boldsymbol{\sigma}=&(\sigma^1,\sigma^2,\sigma^3)\nonumber\\
+  \overline{\sigma}^0=&\mathbf{1}_{2\times2},& \overline{\sigma}^{i}\to \overline{\boldsymbol{\sigma}}=&(-\sigma^1,-\sigma^2,-\sigma^3)
+\end{align}
+include the Pauli matrices \eqref{eq:paulimatr}.
+
+\end{frame}
+\begin{frame}[fragile,allowframebreaks]
+Eq. \eqref{eq:4lt}, which yields
+\begin{align}
+\label{eq:SLet}
+  S(\Lambda)_{\left( \frac{1}{2},0 \right)}\equiv S(\Lambda)=
+\exp\left( \boldsymbol{\xi}\cdot \frac{\boldsymbol{\sigma}}{2}+i\boldsymbol{\theta}\cdot \frac{\boldsymbol{\sigma}}{2} \right)\,,
+\end{align}
+
+La otra representación independiente es
+\begin{align}
+\label{eq:SLet}
+\left[S(\Lambda)\right]^{*} = S(\Lambda)_{\left(0,\frac{1}{2} \right)}\equiv S^{*}(\Lambda)=&
+\exp\left( \boldsymbol{\xi}\cdot \frac{\boldsymbol{\sigma}}{2}+i\boldsymbol{\theta}\cdot \frac{\boldsymbol{\sigma}}{2} \right)^{*}\nonumber\\
+=&\exp\left( \boldsymbol{\xi}\cdot \frac{\boldsymbol{\sigma}^{*}}{2}-i\boldsymbol{\theta}\cdot \frac{\boldsymbol{\sigma}^{*}}{2} \right)\,.
+\end{align}
+ 
+The components of $S(\Lambda)$ will be denoted as ${\left[ S(\Lambda) \right]_{\alpha}}^{\beta}$. In such a case, $S^{*}$ is another independent $2\times2$ representation of the Lorentz Group. It is denoted by $\left( 0,\frac{1}{2}\right)$, and, in order to emphasize the difference, it is convenient to denote their components with dotted indices $\dot{\alpha},\dot{\beta},\cdots$. We can get $S^{*}$ from $S^{\dagger}$.
+\end{frame}
+
+
+\section{Leyes de Kirchhoff generalizadas}
+
+
+En el caso de un doblete de fermiónes $\Xi$, el símbolo  $\dagger$ se usa para denotar el conjugado de fermiones de Weyl. El doblete adjunto en ese caso se puede definir como
+\begin{align}
+\label{eq:Xiadj}
+ \widetilde{\Xi}=i\tau_2 \begin{pmatrix}
+                  \Xi_1^{\dagger}\\
+                  \Xi_2^{\dagger}\\
+                \end{pmatrix}
+=& \begin{pmatrix}
+                  \Xi_2^{\dagger}\\
+                 -\Xi_1^{\dagger}\\
+                \end{pmatrix}
+\end{align}
+Para evitar confusiones con los invariantes $SU(2)$, usaremos entonces la definición de producto escalar en el espacio $SU(2)$ para escribir los correspondientes invariantes, por ejemplo
+\begin{align}
+  \widetilde{\Xi}\cdot \overline{\sigma}^{\mu}\Xi=\epsilon_{ab}\,\widetilde{\Xi}^{a}\overline{\sigma}^{\mu}\Xi^{b}\,.
+\end{align}
+
+Para evitar confusión con el conjugado de espinores de Weyl, usaremos el producto escalar con la métrica $SU(2)$ para escribir los correspondientes invariantes.
+
+
+\subsection{Resumén de productos escalares}
+
+\begin{frame}[fragile,allowframebreaks]
+
+\begin{table}
+  \centering
+   \begin{tabular}{lll}
+    Nombre & Símbolo & $\operatorname{SU(N)}$ \\\hline
+    $N$-plete escalar & $\Psi$ & $U \Psi$ \\
+    anti-$N$-plete escalar & $\Psi^\dagger $ & $\Psi^\dagger U^\dagger $ \\\hline
+    \end{tabular}\hspace{3cm}
+   \begin{tabular}{lll}
+    Nombre & Símbolo & Lorentz \\\hline
+    fotón & $A^\mu$ & ${\Lambda^\mu}_\nu A^\nu$ \\
+    derivada & $\partial_\mu$ & $\partial_\nu {\left(\Lambda^{-1}\right)^\nu}_\mu$ \\\hline
+  \end{tabular}
+  \caption{
+       Productos escalares: $\Psi^\dagger \Psi$,  \hspace{5cm}
+      $\partial_\mu A^\nu \partial^\mu A_\nu=g^{\mu\alpha}g_{\nu \beta} \partial_\mu A^\nu \partial_{\alpha} A^{\beta} $
+}
+  \label{tab:fermionlr}
+\end{table}
+donde,
+ $g_{\alpha\beta}={\Lambda^{\mu}}_{\alpha}\,g_{\mu\nu}{\Lambda^{\nu}}_{\beta}\,$,
+  $g^{\mu\nu}={\left( \Lambda^{-1} \right)^{\mu}}_{\alpha}\,g^{\alpha\beta} {\left( \Lambda^{-1} \right)^{\nu}}_{\beta}\,$.
+
+
+\begin{table}
+  \centering
+  \begin{tabular}{llll}
+    Nombre & Símbolo & Lorentz & $U(1)$\\\hline\hline
+    $e_L$: electrón izquierdo & $\xi_{\alpha}$ & ${\left[ S \right]_{\alpha}}^{\beta}\xi_{\beta}$ & $e^{i\theta}\xi$\\
+   $\left( e_R \right)^{\dagger}=e^{\dagger}_L$: positrón izquierdo&$\eta^{\alpha}$& $\eta^\beta{\left[  S^{-1}  \right]_{\beta}}^{\alpha}$ & $\eta\, e^{-i\theta}$\\ \hline    
+    $\left( e_L \right)^{\dagger}=e^{\dagger}_R$: positrón derecho   & $\left( \xi_{\alpha} \right)^{\dagger}=\xi^{\dagger}_{\dot{\alpha}}$ &
+     $\xi^{\dagger}_{\dot{\beta}}{\left[{S^{\dagger}}\right]^{\dot{\beta}}}_{\dot{\alpha}}$ & $\xi^\dagger e^{-i\theta}$\\
+   $e_R$: electrón derecho   & $\left( \eta^{\alpha} \right)^{\dagger}=\eta^{\dagger\;\dot{\alpha}}$ & ${\left[ \left( S^{-1} \right)^\dagger \right]^{\dot{\alpha}}}_{\dot{\beta}}\eta^{\dagger\;\dot{\beta}}$& $e^{i\theta}\eta^\dagger$\\\hline\hline
+  \end{tabular}
+  \caption{Escalar de Dirac: $\eta^{\alpha}\xi_{\alpha}+ \xi^{\dagger}_{\dot{\alpha}}\eta^{\dagger\;\dot{\alpha  }} $. Ya que: $ S^\dagger\overline{\sigma}^\mu S={\Lambda^\mu}_\nu\overline{\sigma}^\nu$:
+  $i\xi_{\dot{\alpha}} \overline{\sigma}^{\dot{\alpha} \alpha} \partial_{\mu} \xi_{\alpha} $}
+  \label{tab:fermionlr}
+\end{table}
+
+\end{frame}
+
+\includegraphics[scale=0.1]{tabla}
+
+\includegraphics[scale=0.1]{circuito}
+
+
+%\subsection{Productos escalares}
+
+%\subsection{Diagramas de flujos de cargas}
+
+
+
 
 \section{Principio de M\'\i nima Acci\'on}
 \label{sec:la}
