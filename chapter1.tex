@@ -1230,6 +1230,8 @@ El ${\Lambda^\mu}_{\nu}$ definido en la ec.~\eqref{eq:147} satisface la condici\
 \end{align}
 \end{frame}
 
+\textbf{Ejercicio:} Muestre que bajo los cambios $\xi\to i\theta$ y $t\to it$, la transformación de Lorentz se puede escribir como una matriz de rotación convencional.
+
 Note que el orden de los índices es importante porque, recuperando la dependencias en el parámetro de transformación
 \begin{align}
   {\Lambda(\xi)^{\mu}}_{\nu}\ne {\Lambda(\xi)_{\nu}}^{\mu}={\Lambda(-\xi)^{\mu}}_{\nu}\,,
@@ -1336,7 +1338,7 @@ El operador cuadrático es, usando la ec.~\eqref{eq:146}
 Por consiguiente la ecuaci\'on de onda para un campo $\phi(t,x,y,z)$  con velocidad de propagación $c^2=1$
 \begin{equation}
   \left(
-\frac{\partial^2}{\partial t^2}-\nabla^2+m^2
+\frac{\partial^2}{\partial t^2}-\nabla^2
   \right)\phi=0\,,
 \end{equation}
 es también invariante de Lorentz
@@ -1352,6 +1354,23 @@ con $\widehat H$, y $\hat{\mathbf{p}}$ dados en la ec.~\eqref{eq:151}. Entonces
   \label{eq:cv_hatpmu}
   \hat{p}^\mu=i\partial^\mu=i(\partial^0,\partial^i)=i(\frac{\partial}{\partial t},-\boldsymbol{\nabla})
 \end{equation}
+
+Por lo tanto, una posible ecuación mecánico cuántico relativista se puede obtener a partir de interpretar la ecuación de conservación de energía-momentum en términos de operadores
+\begin{align}
+  \label{eq:KG}
+\left(\hat{p}_\mu  \hat{p}^\mu -m^2  \right)\phi=&0 \nonumber\\
+  \left(-\partial_{\mu}\partial^{\mu} -m^2  \right)\phi=&0 \nonumber\\
+  \left(\partial_{\mu}\partial^{\mu} +m^2  \right)\phi=&0 \,,
+\end{align}
+Que es conocida como la ecuación de Klein-Gordon para un campo $\phi$ de masa $m$. A diferencia de la ecuación de Scr\"odinger, está ecuación no puede interpretarse directamente en términos de mecánica cuántica porque no tiene asociada una probabilida positivo-definida debido a la segunda derivada con resptecto al tiempo:
+\begin{align}
+  \left(\partial_0\partial^0+\partial_i\partial^i +m^2  \right)\phi=&0 \nonumber\\
+  \left(\partial_0\partial^0-\sum_i\partial_i\partial_i +m^2  \right)\phi=&0 \nonumber\\
+  \left(\partial_0\partial^0-\sum_i\partial_i\partial_i +m^2  \right)\phi=&0 \nonumber\\
+\left(   \frac{\partial^2}{\partial t^2}-\nabla^2+m^2  \right)\phi\,.
+\end{align}
+
+La interpretación correcta se debe hacer en el marco de la Teoría Cuántica de Campos donde se cuantiza $\phi$ y su varibale canónica conjugada (a definir posteriormente) en lugar de cuantizar $x$ y $p_x$.
 \end{frame}
 
 
@@ -2025,8 +2044,7 @@ Para sistemas continuos es conveniente usar la densidad Lagrangiana. Abordaremos
 El método de la Acción es conveniente cuando necesitamos observar de forma integral, es decir, de formal completa. En el caso anterior, la trayectoria completa y sus posibles variaciones.
 
 
-Es claro que para una problema con modos de oscilación, nos interesa caracterizar el modo de oscilación en su manifestación completa. En el siguiente capítulo mostraremos las dos formas y veremos que para
-le versión completa podemos abstraer el problema a estudiar la Acción del modo de oscilación completo.
+Es claro que para una problema con modos de oscilación, nos interesa caracterizar el modo de oscilación en su manifestación completa. En el siguiente capítulo mostraremos las dos formas y veremos que  podremos  estudiar la Acción asociada al modo de oscilación completo.
 
 A nivel física fundamental, sabemos que el objeto físico más importante es el campo, que al igual que un modo de oscilación es un objeto completo que ocupa todo el espacio.
 Como resulta que al final las partículas son excitaciones de esos campos, entonces sólo nos tenemos que preocupar de describir los campos y la forma más adecuada es
@@ -2073,8 +2091,9 @@ entonces el Lagrangiano del sistema de $N$ particulas y resortes es:
   \right)^2-\frac{1}{2}k\sum_{i=0}^{N-1}
   \left(
 \bar\phi_{i+1}-\bar\phi_{i}
-  \right)^2.
+  \right)^2,
 \end{align}
+donde $\bar\phi_{i+1}-\bar\phi_{i}$ es el desplazamiento relativo entre un par de resortes.
 Si $\mu$ es la densidad de la cuerda, $T$ la tensi\'on y $v$ la velocidad, entonces
 \begin{align}
   \label{eq:micromacro}
@@ -2332,10 +2351,11 @@ La generalización de la densidad Lagrangiana a tres dimensiones esta dada por
   \frac{1}{v^2}\left(\frac{\partial\phi}{\partial t}\right)^2-\left(\frac{\partial\phi}{\partial x}\right)^2-\left(\frac{\partial\phi}{\partial y}\right)^2-\left(\frac{\partial\phi}{\partial z}\right)^2
 \right],
 \end{align}
+O en forma más compacta:
 \begin{align}
-  \mathcal{L}(\partial_{\mu} \phi)=  \frac{1}{2}{\partial_\mu\phi}\,{\partial^\mu\phi}
+  \mathcal{L}(\partial_{\mu} \phi)=  \frac{1}{2}{\partial_\mu\phi}\,{\partial^\mu\phi}\,.
 \end{align}
-
+Note que para una onda mecánica con velocidad de propagación $v$, la ecuación anterior se usa sólo a modo de notación. Sólo cuando la velocidad de propagación es la velocidad de la luz la densidad Lagrangiana contiene una producto escalar bien definido correspondiente al módulo al cuadrado del cuadrivector $\partial_{\mu}\phi$.
 \end{frame}
 
 
@@ -2346,7 +2366,7 @@ La generalización de la densidad Lagrangiana a tres dimensiones esta dada por
 Un sistema binario de estrellas conserva la energía globalmente, pero un sistema binario de estrellas de neutrones donde los efectos relativistas sean importante violan la energía globalmente, es decir, el sistema se vuelve inestable. ¿Qué pasa con la conservación de la energía en ese último caso?
 
 \section{Principio de mínima acción}
-
+\label{sec:principio-de-minima-call}
 
 
 Seguiremos la discusión basada en \cite{Brading:2000hc,Brading:2003nv,Sundermeyer:2014kha}.
@@ -2357,7 +2377,7 @@ Cuando se escriben las ecuaciones de Maxwell en términos del cuadrivector de po
   A^{\mu}(x)\to A^{\prime\mu}(x)= &  A^{\mu}(x) +\partial^{\mu} \theta(x) \nonumber\\
     \delta A^{\mu}(x)\equiv A^{\prime\mu}(x) -A^{\mu}(x)=& \partial^{\mu} \theta(x)\,.
 \end{align}
-donde $\theta(x)$ es una función arbitraria que se conoce como parámetro de la transformación. La Acción que de Lugar a las ecuaciones de Maswell ser también invariante bajo esta misma transformación. 
+donde $\theta(x)$ es una función arbitraria que se conoce como parámetro de la transformación. La Acción que de lugar a las ecuaciones de Maxwell debe ser también invariante bajo esta misma transformación. 
 
 Para $N$ campos asociados a un parámetro de transformación $\theta$ , la dependencia explicita e implicita de la densidad Lagrangiana da lugar al funcional de Acción
 \begin{equation}
@@ -2365,7 +2385,7 @@ Para $N$ campos asociados a un parámetro de transformación $\theta$ , la depen
 \end{equation}
 El problema variacional de Noether, que es diferente al principio de Hamilton, puede ser establecido en los siguientes términos
 
-¿Cuales son las condiciones generales que se deben satisfacer para que una dada variación en la variables explícitas e implicitas dejen a la Acción invariante, y de aquí $\delta S=0$, donde $\delta S$ puede o no contener un término de frontera?
+¿Cuales son las condiciones generales que se deben satisfacer para que una dada variación en la variables explícitas e implicitas permitan que la Acción pueda quedar invariante, y de aquí $\delta S=0$, donde $\delta S$ puede o no contener un término de frontera?
 
 Definiendo el cambio interno en el campo como en \eqref{eq:deltaphi}
 \begin{align}
@@ -2381,7 +2401,11 @@ tenemos que la variación en las variables dependientes e independientes de la A
    \delta S=&\int_{R}d^4x'\,\mathcal{L} \left( \phi_{i}',\partial_{\mu}\phi'_i;x' \right)- \int_{R}d^4x\,\mathcal{L} \left( \phi_{i}(x),\partial_{\mu}\phi_i(x);x \right) \nonumber\\
      =&\int_{R}\frac{\partial x'}{\partial x}d^4x\,\mathcal{L} \left( \phi_{i}+\delta\phi_i,\partial_{\mu}(\phi_i+\delta\phi_i);x+\delta x \right)- \int_{R}d^4x\,\mathcal{L} \left( \phi_{i},\partial_{\mu}\phi_i;x \right)\,
 \end{align}
-Derivando \eqref{eq:deltax},
+Derivando \eqref{eq:deltax}, y reemplazadando
+\begin{align}
+  \frac{\partial x^{\prime \mu}}{\partial x^{\mu}}=1+\partial_{\mu} \left( \delta x^{\mu} \right),
+\end{align}
+en la expresión anterior, tenemos que
 \begin{align}
      \delta S =&\int_{R} \left[ 1+\partial_{\mu} \left( \delta x^{\mu}  \right)\right]  d^4x\,\left\{ \mathcal{L}(\phi_i,\partial_{\mu}\phi_i;x)+\sum_i \left[ \frac{\partial\mathcal{L}}{\partial\phi_i}\delta\phi_{i} +\frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}\partial_{\mu}(\delta\phi_{i}) \right]+\left( \partial_{\mu}\mathcal{L} \right)\delta x^{\mu} \right\}\nonumber\\
       &- \int_{R}d^4x\,\mathcal{L} \left( \phi_{i},\partial_{\mu}\phi_i;x \right) \nonumber\\
@@ -2464,12 +2488,53 @@ las ecuaciones de Euler-Lagrange~\eqref{eq:eelcallfmu}
 \end{align}
 que corresponde a la ec.~\eqref{eq:econda1}.
 
-Generalizando a tres dimensiones vemos que la ecuaci\'on para una onda propagandose a una velocidad $v$, eq.~\eqref{eq:econda3},  
+Generalizando a tres dimensiones vemos que la ecuación de Euler-Lagrange para la densidad Lagrangiana de una onda propagandose a una velocidad $v$, eq.~\eqref{eq:econda3},
+\begin{align}
+  \mathcal{L}(\partial_{\mu} \phi)=  \frac{1}{2}{\partial_\mu\phi}\,{\partial^\mu\phi}
+  =& \frac{1}{2}g^{\mu\nu}{\partial_\mu\phi}\,{\partial_{\nu}\phi}\,,
+\end{align}
+se puede calcular a partir de
+\begin{align}
+  \frac{\partial\mathcal{L}}{\partial(\partial_{\sigma}\phi)}=&
+                                                                \frac{\partial}{\partial(\partial_{\sigma}\phi)} \left( \frac{1}{2}g^{\mu\nu}{\partial_\mu\phi}\,{\partial_{\nu}\phi} \right) \nonumber\\
+    =&\frac{1}{2} \left\{  g^{\mu\nu}\left[ \frac{\partial \left( \partial_{\mu}\phi \right)}{\partial \left( \partial_{\sigma}\phi \right)} \right]\partial_{\nu}\phi
+     +g^{\mu\nu} \partial_{\mu}\phi \left[ \frac{\partial \left( \partial_{\nu}\phi \right)}{\partial \left( \partial_{\sigma}\phi \right)} \right] \right\} \nonumber\\
+    =&\frac{1}{2}\left(  g^{\mu\nu}\delta^{\sigma}_{\mu}\partial_{\nu}\phi
+     +  g^{\mu\nu}\partial_{\mu}\phi \delta ^{\sigma}_{\nu}\right) \nonumber\\
+    =&\frac{1}{2}\left(  g^{\sigma\nu}\partial_{\nu}\phi
+       +  g^{\mu\sigma}\partial_{\mu}\phi \right) \nonumber\\
+           =&\frac{1}{2}\left(  \partial^{\sigma}\phi
+     + \partial^{\sigma}\phi \right) \nonumber\\
+=& \partial^{\sigma}\phi\,.
+\end{align}
+De modo que
+\begin{align}
+   \partial_{\sigma} \left[ \frac{\partial\mathcal{L}}{\partial(\partial_{\sigma}\phi)}\right]-\frac{\partial\mathcal{L}}{\partial\phi}=&0 \nonumber\\
+  \partial_{\sigma} \left[ \frac{\partial\mathcal{L}}{\partial(\partial_{\sigma}\phi)}\right]=&0 \nonumber\\
+       \partial_{\sigma}\partial^{\sigma}\phi=&0 \,.
+\end{align}
+Teniendo en cuenta que $\sigma$ es un índice modo, podemos escribir la ecuación de onda en la forma conocida:
 \begin{align}
      \partial_{\mu}\partial^{\mu}\phi=&0 \nonumber\\
-     \frac{1}{v^2}\frac{\partial^2\phi}{\partial t^2}-\nabla^2\phi=&0\,,
+     \frac{1}{v^2}\frac{\partial^2\phi}{\partial t^2}-\nabla^2\phi=&0\,.
 \end{align}
-proviene de la densidad Lagrangiana (hasta derivadas totales) dada por la ec.~\eqref{eq:Lpr}.
+
+\textbf{Ejercicio:} Demuestre que la ecuación de Klein-Gordon en \eqref{eq:KG} proviende de una densidad Lagragiana del tipo
+\begin{align}
+  \mathcal{L}(\phi,\partial_{\mu} \phi)=  \frac{1}{2}{\partial_\mu\phi}\,{\partial^\mu\phi}-V(\phi)\,,
+\end{align}
+donde
+\begin{align}
+  V(\phi)=\frac{1}{2}m^2 \phi^2\,.
+\end{align}
+
+En el ejercicio anterio el gráfico del \emph{potencial} escalar $V(\phi)$ corresponde a la parábola mostrada en la figura XX
+%% grafico here
+
+La interpretación tomada de la teoría cuántica de campos completa, nos permite visualizar la excitación del campo como una partícula rodando a través de las paredes del potencial como se muestra en la figrua. La masa del campo corresponde a las oscilaciones alrededor del mínimo que suben las parades y que por consiguiente \emph{cuestan energía}. Esta interpretación la usaremos en el Capítulo~\ref{rupt-espont-de} para enteder el mecánismo de Higgs.
+
+El potencial escalar se puede modelar para que el campo escalar $\phi$ pueda interpretarse por ejemplo como el inflatón en el Universo primitivo. Mientras la partícula rueda hacía el mínimo el Universo sufre una expansión exponencial y cuando termina oscilando alrededor del mismo el universo sufre una fase de \emph{recalentamiento} mediante la cual la energía del inflaton genera todas las partículas y antipartículas del modelo estándar en cantidades de $10^{90}$. La radiación cósmica de fondo esta compuesta de esos $10^{90}$ fotones de primigéneos y las anisotropías observadas en ella proviened de las fluctuaciones cuánticas del inflaton magnificadas por la expansión exponencial.
+
 
 \section{Simetrías internas}
 
