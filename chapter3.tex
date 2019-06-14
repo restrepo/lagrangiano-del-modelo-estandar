@@ -32,340 +32,6 @@
 Para detalles adicionales ver por ejemplo \url{https://indico.cern.ch/event/243629}
 
 
-\subsection{Representación  de operadores}
-La representación adjunta se puede obtener a partir de las propiedades de los operadores en mecánica cuántica.
-
-\begin{english}
-First, let us consider a simpler group, corresponding to the rotation group in tree dimensions. The generators are the angular momentum operators $J^i$, which satisfy the commutation relations
-\end{english}
-\begin{spanish}
-Consideremos primero un grupo más simple, el correspondiente a las rotaciones en tres dimensiones $\operatorname{SO(3)}$. 
-\end{spanish}
-Para conocer las relaciones de conmutación de los generadores del grupo de rotaciones, podemos escribir los generadores como operadores diferenciales; de la expresión 
-\begin{align}
-  \mathbf{J}=&\mathbf{r}\times \mathbf{p}=\mathbf{r}\times (-i\boldsymbol{\nabla})
-\end{align}
-o en componentes
-\begin{align}
-\label{eq:rxpi}
-  J^k=\left[\mathbf{x}\times (-i\boldsymbol{\nabla})\right]^k=&
--i\sum_j\epsilon_{ijk}x^i\partial_j=i\epsilon_{ijk}x^i\partial^j\,.
-\end{align}
-
-Las relaciones de conmutación del momento angular \eqref{eq:rotgr} se obtienen de forma directa
-\begin{align*}
-  \left[ J^i,J^j \right]\psi=&-\left[ \epsilon_{ilm}x^{l}\partial_m ,\epsilon_{jpq}x^{p}\partial_q \right]\psi \nonumber\\
-=&-\epsilon_{ilm}\epsilon_{jpq}\left[ x^{l}\partial_m ,x^{p}\partial_q \right]\psi \nonumber\\
-=&-\epsilon_{ilm}\epsilon_{jpq}\left[ x^{l}\partial_m \left(x^{p}\partial_q\psi  \right)-x^{p}\partial_q \left( x^{l}\partial_m\psi \right) \right] \nonumber\\
-   =&-\epsilon_{ilm}\epsilon_{jpq}\left( x^{l}\delta_{mp}\partial_q\psi +x^{l}x^{p}\partial_m \partial_q\psi  -x^{p}\delta_{ql}\partial_m\psi-x^{p}  x^{l}\partial_q\partial_m\psi \right)\,,
-\end{align*}
-cancelando las derivadas cruzadas
-\begin{align*}
-\phantom{\left[ J^i,J^j \right]\psi}   =&-\epsilon_{ilm}\epsilon_{jpq}\left( x^{l}\delta_{mp}\partial_q\psi   -x^{p}\delta_{ql}\partial_m\psi \right) \nonumber\\
-   =&-\epsilon_{ilm}\epsilon_{jpq} x^{l}\delta_{mp}\partial_q\psi +i\epsilon_{ilm}\epsilon_{jpq}x^{p}\delta_{ql}\partial_m\psi \nonumber\\
-   =&-\epsilon_{ilm}\epsilon_{jmq} x^{l}\partial_q\psi +i\epsilon_{ilm}\epsilon_{jpl}x^{p}\partial_m\psi \nonumber\\
-   =&-\epsilon_{ilm}\epsilon_{jmq} x^{l}\partial_q\psi +i\epsilon_{iml}\epsilon_{jqm}x^{q}\partial_l\psi \qquad (l\leftrightarrow m)\ \text{in 2nd term}\nonumber\\
-   =&-\epsilon_{ilm}\epsilon_{jmq} x^{l}\partial_q\psi +i\epsilon_{imq}\epsilon_{jlm}x^{l}\partial_q\psi  \qquad (l\leftrightarrow q)\ \text{in 2nd term}\,,
-\end{align*}
-y finalmente
-\begin{align*}
-  \left[ J^i,J^j \right]\psi  =& \left(-\epsilon_{ilm}\epsilon_{jmq}+\epsilon_{imq}\epsilon_{jlm}  \right) x^{l}\partial_q\psi \nonumber\\
-   =& \left(\epsilon_{ilm}\epsilon_{jqm}-\epsilon_{iqm}\epsilon_{jlm}  \right) x^{l}\partial_q\psi \nonumber\\
-   =& \left(\cancel{\delta_{ij}\delta_{lq}}-\delta_{iq}\delta_{lj}-\cancel{\delta_{ij}\delta_{ql}}+\delta_{il}\delta_{qj}  \right) x^{l}\partial_q\psi \nonumber\\
-  =& \left(\delta_{il}\delta_{qj}-\delta_{iq}\delta_{lj}  \right) x^{l}\partial_q\psi \nonumber\\
-  =& \epsilon_{kij}\epsilon_{klq} x^{l}\partial_q\psi \nonumber\\
-  =&i \epsilon_{kij}\left(-i\epsilon_{klq} x^{l}\partial_q  \right)\psi \nonumber\\
-  =&i \epsilon_{kij}J^{k}\psi \,.
-\end{align*}
-
-Por consiguiente, Los generadores son los operadores de momento angular $ J^i$, que satisfacen las relaciones de conmutación
-\begin{align}
-\label{eq:rotgr}
-  \left[J^i,J^j\right]=i\epsilon_{ijk}J^k\,.
-\end{align}
-donde $\epsilon_{ijk}$ son las constantes de estructura del Grupo $SU(2)$
-
-\section{Grupo de Lorentz }
-Para estudiar otros posibles tipos de campos además de los escalares y vectoriales, debemos explorar las representaciones del Grupo de Lorentz en $n$ dimensiones. El grupo de Lorentz es un subgrupo del Grupo de Poincaré que además incluye el subgrupo de las traslaciones en el espacio y el tiempo.
-
-Seguiremos el mismo método de encontrar representaciones matriciales a partir del algebra  de los generadores del Grupo (los cuales deben satisfacer la relaciones de conmutación apropiadas) para luego exponenciar estas representaciones infinitesimales.
-
-\begin{frame}[fragile,allowframebreaks]
-Para el presente problema, necesitamos conocer las relaciones de conmutación de los generadores del grupo de transformaciones de Lorentz. Hemos mostrado en la ec.~ \eqref{eq:rotgr}  que, a partir de la relación (haciendo expícito el caracter de operadores)
-\begin{align}
-\label{eq:rxp}
-  \widehat{\mathbf{J}}=&\widehat{\mathbf{r}}\times \widehat{\mathbf{p}}=
-\widehat{\mathbf{r}}\times (-i\boldsymbol{\nabla})
-\end{align}
-la parte correspondiente al grupo de rotaciones es
-\begin{align*}
-  \left[\widehat{J}^i,\widehat{J}^j\right]=i\epsilon_{ijk}\widehat{J}^k\,.
-\end{align*}
-
-La ecuación \eqref{eq:rxp} en términos de componentes esta dada en~\eqref{eq:rxpi} y corresponde a
-\begin{align}
-  \widehat{J}^k=i\epsilon_{ijk}x^i\partial^j
-\end{align}
-Definimos una representación matricial de los operadores de momento angular como
-\begin{align}
-  \widehat{J}^{l m}\equiv\epsilon_{lmk}\widehat{J}^k=&i\epsilon_{lmk}\epsilon_{ijk}x^i\partial^j\nonumber\\
-=&i(\delta_{li}\delta_{mj}-\delta_{lj}\delta_{mi})x^i\partial^j\nonumber\\
-=&i(x^l\partial^m-x^m\partial^l)\,.
-\end{align}
-  Que involucran tres generadores. La generalización a cuatro dimensiones da lugar a generadores adicionales $\widehat{J}^{0i}$:
-\begin{align}
-  \widehat{J}^{\mu\nu}=i(x^\mu\partial^\nu-x^\nu\partial^\mu)\,.
-\end{align}
-\end{frame}
-\begin{frame}[fragile,allowframebreaks]
-Los seis generadores satisfacen el álgebra
-\begin{align}
-\label{eq:lrtalg}
-  \left[\widehat{J}^{\mu\nu},\widehat{J}^{\rho\sigma}\right]=&
-i(g^{\nu\rho}\widehat{J}^{\mu\sigma}-g^{\mu\rho}\widehat{J}^{\nu\sigma}-g^{\nu\sigma}\widehat{J}^{\mu\rho}+g^{\mu\sigma}\widehat{J}^{\nu\rho})\,.
-\end{align}
-%From \cite{Peskin}:
-Cualquier representación matricial de esta álgebra debe obedecer las mismas reglas de conmutación.
-
-
-\noindent
-\textbf{Teorema}:
-  La representación $4\times 4$ del Grupo de Lorentz se puede obtener de la exponenciación de los generadores matriciales $4\times 4$ $J^{\mu\nu}$ y los parámetros $\omega_{\mu\nu}$
-\begin{align}
-  {\Lambda}=\exp\left(-i\omega_{\mu\nu}\frac{{J}^{\mu\nu}}{2}\right)\,,
-\end{align}
-tal que,
-\begin{align}
-   \left(J^{\mu\nu}\right)_{\alpha\beta}=&i\epsilon^{\mu\nu\rho\sigma}\epsilon_{\rho\sigma\alpha\beta}\,,
-\end{align}
-$\omega_{\mu\nu}=0$ para $\mu\ne\nu$, y
-\begin{align}
-\xi^i=&\omega^{i0}=-\omega^{0i}&\theta^i=&\frac{1}{2}\epsilon^{ijk}\omega_{jk}\,.  
-\end{align}
-
-Antes de la demostración, recordemos que
-para encontrar una representación matricial de los boosts (que son básicamente rotaciones entre el espacio y el tiempo), tenemos
-\begin{align}
-  \left\{x^\mu\right\}=\begin{pmatrix}
-    t\\
-    x\\
-    y\\
-    z
-  \end{pmatrix}\to
-  \begin{pmatrix}
-    t'\\
-    x'\\
-    y'\\
-    z'
-  \end{pmatrix}=
-  \begin{pmatrix}
-    \frac{t+vx}{\sqrt{1-v^2}}\\
-    \frac{x+vt}{\sqrt{1-v^2}}\\
-    y\\
-    z
-  \end{pmatrix}=&
-  \begin{pmatrix}
-    \cosh\xi&\sinh\xi&0&0\\
-    \sinh\xi&\cosh\xi&0&0\\
-    0     &  0  &1&0\\
-    0     &  0  &0&1
-  \end{pmatrix}
-  \begin{pmatrix}
-    t\\
-    x\\
-    y\\
-    z
-  \end{pmatrix}\nonumber\\
-=&\left\{{\Lambda^\mu}_{\nu}\right\}\left\{x^\nu\right\}\,,
-\end{align}
-  Ya que
-\begin{align}
-  \cosh\xi=&\sum_{n=0}^{\infty}\frac{\xi^{2n}}{2n!}\approx 1+\mathcal{O}(\xi^2)\nonumber\\
-  \sinh\xi=&\sum_{n=0}^{\infty}\frac{\xi^{2n+1}}{(2n+1)!}\approx \xi+\mathcal{O}(\xi^2)\,,
-\end{align}
-  Un boost infinitesimal a lo largo de $x$ es
-\begin{align}
-  \left\{{\Lambda^\mu}_{\nu}\right\}_{x-\text{boost }}\approx
-  \begin{pmatrix}
-    1&\xi&0&0\\
-    \xi&1&0&0\\
-    0&0&1&0\\
-    0&0&0&1
-  \end{pmatrix}=\exp \left( i\xi  K^1 \right),
-\end{align}
-donde el generador de boost es
-\begin{align}
- K^1= \begin{pmatrix}
-    0 & -i & 0 & 0\\
-   -i & 0  & 0 & 0\\
-   0 & 0 &  0 & 0\\
-    0 & 0 &  0 & 0\\ 
-  \end{pmatrix}.
-\end{align}
-
-  Similarmente una rotación por un ángulo infinitesimal $\theta=\theta_3$ alrededor del plano $xy$ (o sobre el eje $z$)
-\begin{align}
-  \left\{{\Lambda^\mu}_{\nu}\right\}_{xy-\text{rotation }}\approx
-  \begin{pmatrix}
-    1&0&0&0\\
-    0&1&\theta&0\\
-    0&-\theta&1&0\\
-    0&0&0&1
-  \end{pmatrix}.
-\end{align}
-Que como hemos visto, puede obtenerse a partir de los generadores del Grupo de rotaciones $SO(3)$, generalizados a matrices $4\times4$
-\begin{align}
-  \{L^{i}\}\equiv
-  \begin{pmatrix}
-    1 & 0 & 0& 0\\
-    0 &   &  &  \\
-    0 &   & L^i_{3\times3}  &  \\
-    0 &   &  &  \\
-  \end{pmatrix}
-\end{align}
-\begin{align*}
-  L^1_{3\times3}=&
-  \begin{pmatrix}
-   0 & 0 & 0\\
-   0 & 0 & -i\\
-   0 & i & 0 \\
-  \end{pmatrix}&
- L^2_{3\times3}=&
- \begin{pmatrix}
-  0 & 0  & i \\ 
-  0 & 0  & 0 \\
- -i & 0  & 0 \\
- \end{pmatrix}&
- L^3_{3\times3}=&
- \begin{pmatrix}
-   0 & -i & 0\\
-   i & 0  & 0\\
-   0 & 0 & 0\\
- \end{pmatrix}
-\end{align*}.
-
-
-\end{frame}
-En general definimos los seis parámetros independientes del Grupo de Lorentz
-\begin{align}
-  \omega_{i0}=-\omega_{0i}\equiv&\xi_{i} \nonumber\\
-  \omega_{12}=-\omega_{21}\equiv&2\theta^3 &   \omega_{32}=-\omega_{23}\equiv&-2\theta^2 &   \omega_{13}=-\omega_{31}\equiv&2\theta^1\,.
-\end{align}
-Por lo tanto
-\begin{align}
-\xi^i=&\omega^{i0}=-\omega^{0i}&\theta^i=&\frac{1}{2}\epsilon^{ijk}\omega_{jk}\,.  
-\end{align}
-
-Las  matrices $4\times 4$ 
-\begin{align}
-   \left(J^{\mu\nu}\right)_{\alpha\beta}=&i\epsilon^{\mu\nu\rho\sigma}\epsilon_{\rho\sigma\alpha\beta}\nonumber\\
-   \left(J^{\mu\nu}\right)^{\alpha}_{\beta}=g^{\gamma\alpha}\left(J^{\mu\nu}\right)_{\gamma\beta}= &i\epsilon^{\mu\nu\rho\sigma}\epsilon_{\rho\sigma\gamma\beta}g^{\gamma\alpha}\nonumber\\
-\end{align}
-\begin{align}
-  \left(J^{\mu\nu}\right)_{\alpha\beta}  =&i\left({\delta^\mu}_\alpha{\delta^\nu}_\beta-{\delta^\mu}_\beta{\delta^\nu}_\alpha\right)\nonumber\\
- {\left(J^{\mu\nu}\right)^{\alpha}}_{\beta}=&ig^{\gamma\alpha}\left({\delta^{\mu}}_{\gamma}{\delta^\nu}_\beta-{\delta^\mu}_\beta{\delta^{\nu}}_\gamma\right) \nonumber\\
- =&i\left(g^{\mu\alpha}{\delta^\nu}_\beta-{\delta^\mu}_\beta g^{\nu\alpha}\right)\nonumber\\
-{\left(J^{\mu\nu}\right)^{\alpha\beta}}=&i \left( g^{\mu\alpha}g^{\nu\beta}-g^{\mu\beta}g^{\nu\alpha} \right)
-\end{align}
-where $\mu$ and $\nu$ label which of the six matrices we want, while $\alpha$ and $\beta$ label components of the matrices. These matrices satisfy the commutations relations \eqref{eq:lrtalg}, and generate the three boosts and three rotations of the ordinary Lorentz 4-vectors:
-\begin{align}
-  {\Lambda^\alpha}_\beta\approx{\delta^\alpha}_\beta-\frac{i}{2}\omega_{\mu\nu}{\left(J^{\mu\nu}\right)^\alpha}_\beta\,.
-\end{align}
-%ver programa mathematica
-En particular
-\begin{align*}
-  (J^{ij})_{lm}=&i\epsilon^{ij\rho\sigma}\epsilon_{\rho\sigma lm}\\
-             =&i\epsilon^{ij\rho 0}\epsilon_{\rho 0 lm}\\
-             =&-i\epsilon^{ijk}\epsilon_{klm}\\
-             =&\epsilon^{ijk}(L_{k})_{lm}
-\end{align*}
-o, en términos matriciales
-\begin{align}
-  L^{i}=\tfrac{1}{2}\epsilon^{ijk}J_{jk}
-\end{align}
-De modo que
-\begin{align}
-\label{eq:klkl}
-  i\sum_i \theta^{i}L^{i}=-&i\theta^iL_i\nonumber\\
-=&- \frac{i}{2}\epsilon^{ikl}\omega_{kl}\frac{1}{2}\epsilon_{imn}J^{mn}\nonumber\\
-=&- \frac{i}{4}(\delta^k_m\delta^l_n-\delta^k_n\delta^l_m)\omega_{kl}J^{mn}\nonumber\\
-=&- \frac{i}{4}(\omega_{kl}J^{kl}-\omega_{kl}J^{lk})\nonumber\\
-=&- \frac{i}{4}(\omega_{kl}J^{kl}+\omega_{kl}J^{kl})\nonumber\\
-=&- \frac{i}{2}\omega_{kl}J^{kl}\,.
-\end{align}
-
-usando la notación de \cite{0812.1594}, definimos también
-\begin{align}
-  K^i\equiv J^{0i}=-J^{i0}\,,
-\end{align}
-Entonces
-\begin{align}
--i\omega_{\mu\nu}\frac{\widehat{J}^{\mu\nu}}{2} =&-i\omega_{0\nu}\frac{\widehat{J}^{0\nu}}{2}
--i\omega_{i\nu}\frac{\widehat{J}^{i\nu}}{2}\nonumber\\
-=&-i\omega_{0i}\frac{\widehat{J}^{0i}}{2}
--i\omega_{i0}\frac{\widehat{J}^{i0}}{2}
--i\omega_{ij}\frac{\widehat{J}^{ij}}{2}\nonumber\\
-=&  -i\omega_{i0}\widehat{J}^{i0}
--i\omega_{ij}\frac{\widehat{J}^{ij}}{2}\nonumber\\
-=&  i\omega_{i0}\widehat{J}^{0i}
--i\omega_{ij}\frac{\widehat{J}^{ij}}{2}\,,
-\end{align}
-y usando \eqref{eq:klkl}
-\begin{align}
-=&  -i\xi_{i}K^{i}-i\omega_{ij}\frac{\widehat{J}^{ij}}{2}\nonumber\\
-=&\sum_i \left(i\xi^i K^i+i\theta^i L^i  \right)\,.
-\end{align}
-\begin{frame}
-Entonces
-\begin{align}
-  \{\Lambda\}=\exp\left(-i\omega_{\mu\nu}\frac{\widehat{J}^{\mu\nu}}{2}\right)=
-\exp\left( i\boldsymbol{\xi}\cdot\mathbf{K}+i\boldsymbol{\theta}\cdot\mathbf{L} \right)\,.
-\end{align}
-
-
-%ver programa mathematica
-\end{frame}
-
-\section{2 representaciones $2\times 2$ del Grupo de Lorentz}
-\begin{frame}[fragile,allowframebreaks]
-Here we focus on the simplest non-trivial irreducible representations of the Lorentz algebra. These are the two-dimensional (inequivalent) representations: $(\frac{1}{2},0)$ and $(0,\frac{1}{2})$. 
-
-\begin{align}
-  S(\Lambda)_{\left( \frac{1}{2},0 \right)}=&\exp\left(-i \omega_{\mu\nu}\frac{\sigma^{\mu\nu}}{2}\right)\nonumber
-\end{align}
-\begin{align}
-  \sigma^{\mu\nu}=\frac{i}{4}\left[\sigma^\mu,\overline{\sigma}^\nu\right]\,.
-\end{align}
-where
-\begin{align}
-  \sigma^0=&\mathbf{1}_{2\times2},& \sigma^{i}\to \boldsymbol{\sigma}=&(\sigma^1,\sigma^2,\sigma^3)\nonumber\\
-  \overline{\sigma}^0=&\mathbf{1}_{2\times2},& \overline{\sigma}^{i}\to \overline{\boldsymbol{\sigma}}=&(-\sigma^1,-\sigma^2,-\sigma^3)
-\end{align}
-include the Pauli matrices \eqref{eq:paulimatr}.
-
-\end{frame}
-\begin{frame}[fragile,allowframebreaks]
-Eq. \eqref{eq:4lt}, which yields
-\begin{align}
-\label{eq:SLet}
-  S(\Lambda)_{\left( \frac{1}{2},0 \right)}\equiv S(\Lambda)=
-\exp\left( \boldsymbol{\xi}\cdot \frac{\boldsymbol{\sigma}}{2}+i\boldsymbol{\theta}\cdot \frac{\boldsymbol{\sigma}}{2} \right)\,,
-\end{align}
-
-La otra representación independiente es
-\begin{align}
-\label{eq:SLet}
-\left[S(\Lambda)\right]^{*} = S(\Lambda)_{\left(0,\frac{1}{2} \right)}\equiv S^{*}(\Lambda)=&
-\exp\left( \boldsymbol{\xi}\cdot \frac{\boldsymbol{\sigma}}{2}+i\boldsymbol{\theta}\cdot \frac{\boldsymbol{\sigma}}{2} \right)^{*}\nonumber\\
-=&\exp\left( \boldsymbol{\xi}\cdot \frac{\boldsymbol{\sigma}^{*}}{2}-i\boldsymbol{\theta}\cdot \frac{\boldsymbol{\sigma}^{*}}{2} \right)\,.
-\end{align}
- 
-The components of $S(\Lambda)$ will be denoted as ${\left[ S(\Lambda) \right]_{\alpha}}^{\beta}$. In such a case, $S^{*}$ is another independent $2\times2$ representation of the Lorentz Group. It is denoted by $\left( 0,\frac{1}{2}\right)$, and, in order to emphasize the difference, it is convenient to denote their components with dotted indices $\dot{\alpha},\dot{\beta},\cdots$. We can get $S^{*}$ from $S^{\dagger}$.
-\end{frame}
-
-
-
-
 \section{Lorentz transformation of the fields}
 
 Note again, that a term like
@@ -1263,7 +929,104 @@ donde
 Antes de intentar tomar el límite no relativista, y para ser consistentes con relatividad espacial, anse debe cambiar el Lagangiano por uno que tenga la invarianza de fase local. En tal caso el Hamiltoniano resultando se debe reducir al Hamiltoniano de  Sch\"odinger en presencia de un campo electrómagnético (ver Apéndice \ref{sec:limite-no-relat}).
 
 
+\begin{subappendices}
+  
+\subsection{Representación  de operadores}
+La representación adjunta se puede obtener a partir de las propiedades de los operadores en mecánica cuántica.
 
+\begin{english}
+First, let us consider a simpler group, corresponding to the rotation group in tree dimensions. The generators are the angular momentum operators $J^i$, which satisfy the commutation relations
+\end{english}
+\begin{spanish}
+Consideremos primero un grupo más simple, el correspondiente a las rotaciones en tres dimensiones $\operatorname{SO(3)}$. 
+\end{spanish}
+Para conocer las relaciones de conmutación de los generadores del grupo de rotaciones, podemos escribir los generadores como operadores diferenciales; de la expresión 
+\begin{align}
+  \mathbf{J}=&\mathbf{r}\times \mathbf{p}=\mathbf{r}\times (-i\boldsymbol{\nabla})
+\end{align}
+o en componentes
+\begin{align}
+\label{eq:rxpi}
+  J^k=\left[\mathbf{x}\times (-i\boldsymbol{\nabla})\right]^k=&
+-i\sum_j\epsilon_{ijk}x^i\partial_j=i\epsilon_{ijk}x^i\partial^j\,.
+\end{align}
+
+Las relaciones de conmutación del momento angular \eqref{eq:rotgr} se obtienen de forma directa
+\begin{align*}
+  \left[ J^i,J^j \right]\psi=&-\left[ \epsilon_{ilm}x^{l}\partial_m ,\epsilon_{jpq}x^{p}\partial_q \right]\psi \nonumber\\
+=&-\epsilon_{ilm}\epsilon_{jpq}\left[ x^{l}\partial_m ,x^{p}\partial_q \right]\psi \nonumber\\
+=&-\epsilon_{ilm}\epsilon_{jpq}\left[ x^{l}\partial_m \left(x^{p}\partial_q\psi  \right)-x^{p}\partial_q \left( x^{l}\partial_m\psi \right) \right] \nonumber\\
+   =&-\epsilon_{ilm}\epsilon_{jpq}\left( x^{l}\delta_{mp}\partial_q\psi +x^{l}x^{p}\partial_m \partial_q\psi  -x^{p}\delta_{ql}\partial_m\psi-x^{p}  x^{l}\partial_q\partial_m\psi \right)\,,
+\end{align*}
+cancelando las derivadas cruzadas
+\begin{align*}
+\phantom{\left[ J^i,J^j \right]\psi}   =&-\epsilon_{ilm}\epsilon_{jpq}\left( x^{l}\delta_{mp}\partial_q\psi   -x^{p}\delta_{ql}\partial_m\psi \right) \nonumber\\
+   =&-\epsilon_{ilm}\epsilon_{jpq} x^{l}\delta_{mp}\partial_q\psi +i\epsilon_{ilm}\epsilon_{jpq}x^{p}\delta_{ql}\partial_m\psi \nonumber\\
+   =&-\epsilon_{ilm}\epsilon_{jmq} x^{l}\partial_q\psi +i\epsilon_{ilm}\epsilon_{jpl}x^{p}\partial_m\psi \nonumber\\
+   =&-\epsilon_{ilm}\epsilon_{jmq} x^{l}\partial_q\psi +i\epsilon_{iml}\epsilon_{jqm}x^{q}\partial_l\psi \qquad (l\leftrightarrow m)\ \text{in 2nd term}\nonumber\\
+   =&-\epsilon_{ilm}\epsilon_{jmq} x^{l}\partial_q\psi +i\epsilon_{imq}\epsilon_{jlm}x^{l}\partial_q\psi  \qquad (l\leftrightarrow q)\ \text{in 2nd term}\,,
+\end{align*}
+y finalmente
+\begin{align*}
+  \left[ J^i,J^j \right]\psi  =& \left(-\epsilon_{ilm}\epsilon_{jmq}+\epsilon_{imq}\epsilon_{jlm}  \right) x^{l}\partial_q\psi \nonumber\\
+   =& \left(\epsilon_{ilm}\epsilon_{jqm}-\epsilon_{iqm}\epsilon_{jlm}  \right) x^{l}\partial_q\psi \nonumber\\
+   =& \left(\cancel{\delta_{ij}\delta_{lq}}-\delta_{iq}\delta_{lj}-\cancel{\delta_{ij}\delta_{ql}}+\delta_{il}\delta_{qj}  \right) x^{l}\partial_q\psi \nonumber\\
+  =& \left(\delta_{il}\delta_{qj}-\delta_{iq}\delta_{lj}  \right) x^{l}\partial_q\psi \nonumber\\
+  =& \epsilon_{kij}\epsilon_{klq} x^{l}\partial_q\psi \nonumber\\
+  =&i \epsilon_{kij}\left(-i\epsilon_{klq} x^{l}\partial_q  \right)\psi \nonumber\\
+  =&i \epsilon_{kij}J^{k}\psi \,.
+\end{align*}
+
+Por consiguiente, Los generadores son los operadores de momento angular $ J^i$, que satisfacen las relaciones de conmutación
+\begin{align}
+\label{eq:rotgr}
+  \left[J^i,J^j\right]=i\epsilon_{ijk}J^k\,.
+\end{align}
+donde $\epsilon_{ijk}$ son las constantes de estructura del Grupo $SU(2)$
+
+\section{Grupo de Lorentz }
+Para estudiar otros posibles tipos de campos además de los escalares y vectoriales, debemos explorar las representaciones del Grupo de Lorentz en $n$ dimensiones. El grupo de Lorentz es un subgrupo del Grupo de Poincaré que además incluye el subgrupo de las traslaciones en el espacio y el tiempo.
+
+Seguiremos el mismo método de encontrar representaciones matriciales a partir del algebra  de los generadores del Grupo (los cuales deben satisfacer la relaciones de conmutación apropiadas) para luego exponenciar estas representaciones infinitesimales.
+
+Para el presente problema, necesitamos conocer las relaciones de conmutación de los generadores del grupo de transformaciones de Lorentz. Hemos mostrado en la ec.~ \eqref{eq:rotgr}  que, a partir de la relación (haciendo expícito el caracter de operadores)
+\begin{align}
+\label{eq:rxp}
+  \widehat{\mathbf{J}}=&\widehat{\mathbf{r}}\times \widehat{\mathbf{p}}=
+\widehat{\mathbf{r}}\times (-i\boldsymbol{\nabla})
+\end{align}
+la parte correspondiente al grupo de rotaciones es
+\begin{align*}
+  \left[\widehat{J}^i,\widehat{J}^j\right]=i\epsilon_{ijk}\widehat{J}^k\,.
+\end{align*}
+
+La ecuación \eqref{eq:rxp} en términos de componentes esta dada en~\eqref{eq:rxpi} y corresponde a
+\begin{align}
+  \widehat{J}^k=i\epsilon_{ijk}x^i\partial^j
+\end{align}
+Definimos una representación matricial de los operadores de momento angular como
+\begin{align}
+  \widehat{J}^{l m}\equiv\epsilon_{lmk}\widehat{J}^k=&i\epsilon_{lmk}\epsilon_{ijk}x^i\partial^j\nonumber\\
+=&i(\delta_{li}\delta_{mj}-\delta_{lj}\delta_{mi})x^i\partial^j\nonumber\\
+=&i(x^l\partial^m-x^m\partial^l)\,.
+\end{align}
+  Que involucran tres generadores. La generalización a cuatro dimensiones da lugar a generadores adicionales $\widehat{J}^{0i}$:
+\begin{align}
+  \widehat{J}^{\mu\nu}=i(x^\mu\partial^\nu-x^\nu\partial^\mu)\,.
+\end{align}
+
+
+Los seis generadores satisfacen el álgebra
+\begin{align}
+\label{eq:lrtalg}
+  \left[\widehat{J}^{\mu\nu},\widehat{J}^{\rho\sigma}\right]=&
+i(g^{\nu\rho}\widehat{J}^{\mu\sigma}-g^{\mu\rho}\widehat{J}^{\nu\sigma}-g^{\nu\sigma}\widehat{J}^{\mu\rho}+g^{\mu\sigma}\widehat{J}^{\nu\rho})\,.
+\end{align}
+%From \cite{Peskin}:
+Cualquier representación matricial de esta álgebra debe obedecer las mismas reglas de conmutación.
+
+
+\end{subappendices}
 
 
 %

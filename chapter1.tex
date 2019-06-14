@@ -2430,6 +2430,8 @@ donde
 \end{align}
 \end{frame}
 
+
+
 \section{Ecuaciones de Euler-Lagrange}
 %%TODO: Mejorar
 El teorema de Gauss establece que
@@ -2535,12 +2537,117 @@ La interpretación tomada de la teoría cuántica de campos completa, nos permit
 
 El potencial escalar se puede modelar para que el campo escalar $\phi$ pueda interpretarse por ejemplo como el inflatón en el Universo primitivo. Mientras la partícula rueda hacía el mínimo el Universo sufre una expansión exponencial y cuando termina oscilando alrededor del mismo el universo sufre una fase de \emph{recalentamiento} mediante la cual la energía del inflaton genera todas las partículas y antipartículas del modelo estándar en cantidades de $10^{90}$. La radiación cósmica de fondo esta compuesta de esos $10^{90}$ fotones de primigéneos y las anisotropías observadas en ella proviened de las fluctuaciones cuánticas del inflaton magnificadas por la expansión exponencial.
 
+\section{Simetrías externas}
+Un desplazamienot infinitesimal, que equivale a repeterir un experimento en laboratorio desplazado en el tiempo o en el espacio,
+puede parametrizarse sin perdida de generalidad como
+\begin{align}
+  x^\mu\to{x'}^\mu=&x^\mu+\delta x^{\mu}\nonumber\\
+\end{align}
+
+Para visualizar más fácilmente la situación para un campo escalar, supongamos de momento que $\delta x^{\mu}$ corresponde  traslaci\'on espacio--temporal.
+
+Tenemos
+\begin{align}
+  \phi'(x')&=\phi'(x+\delta x)\\
+  &\approx\phi'(x)+\frac{\partial\phi'(x)}{\partial x^\mu}\delta x^\mu\\
+  &=[\phi(x)+\delta\phi(x)]+\frac{\partial}{\partial x^\mu}[\phi(x)+\delta\phi(x)]\delta x^\mu\\
+  &\approx\phi(x)+\delta\phi(x)+\frac{\partial\phi(x)}{\partial x^\mu}\delta x^\mu,
+\end{align}
+donde, por simplicidad, $\phi$ es un campo real. Entonces,
+\begin{equation}
+  \label{eq:Deltaf}
+  \Delta\phi(x)\equiv\phi'(x')-\phi(x)=\delta\phi(x)+\frac{\partial\phi(x)}{\partial x^\mu}\delta x^\mu.
+\end{equation}
+Para una traslaci\'on, $\Delta\phi(x)=0$, ver figura 
+\ref{fig:trasla}. %noinstiki([trasla](#fig:trasla)).
+De modo que
+\begin{equation}
+  \label{eq:dmuxmu}
+  \delta\phi=-(\partial_\mu\phi)\delta x^\mu,
+\end{equation}
+y la transformaci\'on del campo $\phi$ como consecuencia de la traslaci\'on es
+\begin{align}
+  \phi(x)\to\phi'(x)=\phi(x)-\delta\phi(x)=\phi(x)+(\partial_\mu\phi(x))\delta x^\mu\,.
+\end{align}
+%noinstiki
+
+\begin{figure} %noinstiki
+  \centering %noinstiki
+  \includegraphics{trasla} %noinstiki
+  \caption{Traslaci\'on de funci\'on y coordenadas en una dimensi\'on: $\phi(x)=\phi'(x')$ } %noinstiki
+  \label{fig:trasla} %noinstiki
+\end{figure} %noinstiki<div id="fig:trasla">Figura trasla:Traslaci\'on de funci\'on y coordenadas $\phi(x)=\phi(x')$ </div>
+%noinstiki![trasla](http://gfif.udea.edu.co/figfs/trasla.png)
+%noinstiki
+
+
+
+
+
+Consideremos el caso en el cual el campo es sólo afectado en su dependencia espacio-temporal como ocurre para un campo escalar de Lotentz en la ec.~\eqref{eq:dmuxmu}, es decir,
+ $\delta\phi_{i}=-\left( \partial_{\nu}\phi \right)\delta x^{\nu}$,
+\begin{align}
+   \sum_i    B^{\mu}_i= - T^{\mu}_{\nu} \delta x^{\nu}\,,
+\end{align}
+donde, de la ecuación~\ref{eq:master2}
+\begin{align}
+  T^{\mu}_{\nu}=\sum_i \frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}\partial_{\nu}\phi_i-\delta^{\mu}_{\nu}\mathcal{L}
+\end{align}
+si los campos $\phi_{i}$ satisfacen la ecuaciones de Euler-Lagrange, $\mathcal{E}_i=0\,$, tenemos que
+\begin{align}
+  \partial_{\mu} \left( T^{\mu}_{\nu} \delta x^{\nu}\right)=0\,.
+\end{align}
+Si $\delta x^{\nu}$ es constante, como se espera en el caso de sistemas inerciales, se satisfacen las cuatro  ecuaciones de continuidad (una para cada $\nu$)
+\begin{align}
+  \partial_{\mu} T^{\mu}_{\nu}=0\,.
+\end{align}
+El tensor $T^\mu_\nu$ proviene de asumir la homogeneidad del espacio y el tiempo y es llamado el tensor de momentum--energ\'\i a. 
+La densidad Hamiltonina se obtiene de $T^0_0$
+\begin{align}
+  \label{eq:3}
+\mathcal{H}&=T^0_0=\frac{\partial\mathcal{L}}{\partial\dot{\phi}}\dot{\phi}
+      -\mathcal{L}\\
+      &=\pi(x)\frac{\partial\phi(x)}{\partial t}-\mathcal{L}.
+\end{align}
+Comparando con la expresi\'on correspondiente en la formulaci\'on
+Lagrangiana de la Mec\'anica Cl\'asica, tenemos que si $\phi(x)$ es la
+variable can\'onica, la variable can\'onica conjugada es $\pi(x)$
+\begin{equation}
+  \label{eq:4}
+  \pi(x)=\frac{\partial\mathcal{L}}{\partial(\partial\phi(x)/\partial t)}.
+\end{equation}
+El teorema de Noether en este caso establece que la invarianza de la Acci\'on bajo traslaciones temporales da lugar a la ecuaci\'on de continuidad (\ref{eq:131}) para $\nu=0$
+\begin{align}
+\label{eq:122}
+  \partial_\mu T^\mu_0=0
+\end{align}
+cuya carga conservada corresponde a la energ\'\i a
+\begin{align}
+  H=\int_V d^3x\, T^0_0=\int_V d^3x\,\mathcal{H}.
+\end{align}
+De igual forma la invarianza bajo traslaciones espaciales de lugar a ecuaciones de continuidad para cada componente $\nu=i$
+ ($i=1,2,3$)
+ \begin{align}
+   \label{eq:235}
+   \partial_\mu T^\mu_i=0,
+ \end{align}
+cuyas densidad de cargas conservadas, $T^0_i$, que en forma vectorial escribiremos como $\mathbf{T}^0$, dan lugar a la conservaci\'on del momentum
+\begin{align}
+  \mathbf{P}=\int_V d^3x\,\mathbf{T}^0\,.
+\end{align}
+Generalizando a un campo complejo
+\begin{equation}
+  \label{eq:138}
+     T^\mu_\nu=\frac{\partial\mathcal{L}}{\partial(\partial_\mu\phi)}(\partial_\nu\phi)+(\partial_\nu\phi^*)\frac{\partial\mathcal{L}}{\partial(\partial_\mu\phi^*)}
+      -\delta^\mu_\nu\mathcal{L}
+\end{equation}
+
 
 \section{Simetrías internas}
 
 Las simetrías internas van a estar relacionadas con cargas conservadas. A continuación definiremos con un ejemplo conocido que es una carga conservada.
 
-Para entender el significado físico de la ecuación de continuidad consideremos la cuadri-corriente asociada a un único parámetro constante $\theta$, como en el caso de un campo escalar complejo y su correspondiente conjugado. Expandiendo la ecuación de continuidad en sus componentes espaciales y temporales tenemos que
+Para entender el significado físico de la ecuación de continuidad consideremos una cuadri-corriente asociada por ejemplo a la densidad de carga y corriente eléctricas. Expandiendo la ecuación de continuidad en sus componentes espaciales y temporales tenemos que
 \begin{align}
   \partial_0 j^0+ \partial_i j^i=&0\,,&\text{suma sobre $i$}\nonumber\\
   \frac{\partial j^0}{\partial t}+ \boldsymbol{\nabla}\cdot\boldsymbol{j}=&0\,.
@@ -2922,111 +3029,6 @@ Note que las ecuaciones de Euler-Lagrange surgen del Problema variacional de Noe
 \end{align}
 
 
-\section{Simetrías externas}
-Un desplazamienot infinitesimal, que equivale a repeterir un experimento en laboratorio desplazado en el tiempo o en el espacio,
-puede parametrizarse sin perdida de generalidad como
-\begin{align}
-  x^\mu\to{x'}^\mu=&x^\mu+\delta x^{\mu}\nonumber\\
-\end{align}
-
-Para visualizar más fácilmente la situación para un campo escalar, supongamos de momento que $\delta x^{\mu}$ corresponde  traslaci\'on espacio--temporal.
-
-Tenemos
-\begin{align}
-  \phi'(x')&=\phi'(x+\delta x)\\
-  &\approx\phi'(x)+\frac{\partial\phi'(x)}{\partial x^\mu}\delta x^\mu\\
-  &=[\phi(x)+\delta\phi(x)]+\frac{\partial}{\partial x^\mu}[\phi(x)+\delta\phi(x)]\delta x^\mu\\
-  &\approx\phi(x)+\delta\phi(x)+\frac{\partial\phi(x)}{\partial x^\mu}\delta x^\mu,
-\end{align}
-donde, por simplicidad, $\phi$ es un campo real. Entonces,
-\begin{equation}
-  \label{eq:Deltaf}
-  \Delta\phi(x)\equiv\phi'(x')-\phi(x)=\delta\phi(x)+\frac{\partial\phi(x)}{\partial x^\mu}\delta x^\mu.
-\end{equation}
-Para una traslaci\'on, $\Delta\phi(x)=0$, ver figura 
-\ref{fig:trasla}. %noinstiki([trasla](#fig:trasla)).
-De modo que
-\begin{equation}
-  \label{eq:dmuxmu}
-  \delta\phi=-(\partial_\mu\phi)\delta x^\mu,
-\end{equation}
-y la transformaci\'on del campo $\phi$ como consecuencia de la traslaci\'on es
-\begin{align}
-  \phi(x)\to\phi'(x)=\phi(x)-\delta\phi(x)=\phi(x)+(\partial_\mu\phi(x))\delta x^\mu\,.
-\end{align}
-%noinstiki
-
-\begin{figure} %noinstiki
-  \centering %noinstiki
-  \includegraphics{trasla} %noinstiki
-  \caption{Traslaci\'on de funci\'on y coordenadas en una dimensi\'on: $\phi(x)=\phi'(x')$ } %noinstiki
-  \label{fig:trasla} %noinstiki
-\end{figure} %noinstiki<div id="fig:trasla">Figura trasla:Traslaci\'on de funci\'on y coordenadas $\phi(x)=\phi(x')$ </div>
-%noinstiki![trasla](http://gfif.udea.edu.co/figfs/trasla.png)
-%noinstiki
-
-
-
-
-
-Consideremos el caso en el cual el campo es sólo afectado en su dependencia espacio-temporal como ocurre para un campo escalar de Lotentz en la ec.~\eqref{eq:dmuxmu}, es decir,
- $\delta\phi_{i}=-\left( \partial_{\nu}\phi \right)\delta x^{\nu}$,
-\begin{align}
-   \sum_i    B^{\mu}_i= - T^{\mu}_{\nu} \delta x^{\nu}\,,
-\end{align}
-donde, de la ecuación~\ref{eq:master2}
-\begin{align}
-  T^{\mu}_{\nu}=\sum_i \frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}\partial_{\nu}\phi_i-\delta^{\mu}_{\nu}\mathcal{L}
-\end{align}
-si los campos $\phi_{i}$ satisfacen la ecuaciones de Euler-Lagrange, $\mathcal{E}_i=0\,$, tenemos que
-\begin{align}
-  \partial_{\mu} \left( T^{\mu}_{\nu} \delta x^{\nu}\right)=0\,.
-\end{align}
-Si $\delta x^{\nu}$ es constante, como se espera en el caso de sistemas inerciales, se satisfacen las cuatro  ecuaciones de continuidad (una para cada $\nu$)
-\begin{align}
-  \partial_{\mu} T^{\mu}_{\nu}=0\,.
-\end{align}
-El tensor $T^\mu_\nu$ proviene de asumir la homogeneidad del espacio y el tiempo y es llamado el tensor de momentum--energ\'\i a. 
-La densidad Hamiltonina se obtiene de $T^0_0$
-\begin{align}
-  \label{eq:3}
-\mathcal{H}&=T^0_0=\frac{\partial\mathcal{L}}{\partial\dot{\phi}}\dot{\phi}
-      -\mathcal{L}\\
-      &=\pi(x)\frac{\partial\phi(x)}{\partial t}-\mathcal{L}.
-\end{align}
-Comparando con la expresi\'on correspondiente en la formulaci\'on
-Lagrangiana de la Mec\'anica Cl\'asica, tenemos que si $\phi(x)$ es la
-variable can\'onica, la variable can\'onica conjugada es $\pi(x)$
-\begin{equation}
-  \label{eq:4}
-  \pi(x)=\frac{\partial\mathcal{L}}{\partial(\partial\phi(x)/\partial t)}.
-\end{equation}
-El teorema de Noether en este caso establece que la invarianza de la Acci\'on bajo traslaciones temporales da lugar a la ecuaci\'on de continuidad (\ref{eq:131}) para $\nu=0$
-\begin{align}
-\label{eq:122}
-  \partial_\mu T^\mu_0=0
-\end{align}
-cuya carga conservada corresponde a la energ\'\i a
-\begin{align}
-  H=\int_V d^3x\, T^0_0=\int_V d^3x\,\mathcal{H}.
-\end{align}
-De igual forma la invarianza bajo traslaciones espaciales de lugar a ecuaciones de continuidad para cada componente $\nu=i$
- ($i=1,2,3$)
- \begin{align}
-   \label{eq:235}
-   \partial_\mu T^\mu_i=0,
- \end{align}
-cuyas densidad de cargas conservadas, $T^0_i$, que en forma vectorial escribiremos como $\mathbf{T}^0$, dan lugar a la conservaci\'on del momentum
-\begin{align}
-  \mathbf{P}=\int_V d^3x\,\mathbf{T}^0\,.
-\end{align}
-Generalizando a un campo complejo
-\begin{equation}
-  \label{eq:138}
-     T^\mu_\nu=\frac{\partial\mathcal{L}}{\partial(\partial_\mu\phi)}(\partial_\nu\phi)+(\partial_\nu\phi^*)\frac{\partial\mathcal{L}}{\partial(\partial_\mu\phi^*)}
-      -\delta^\mu_\nu\mathcal{L}
-\end{equation}
-
 
 \section{Campo escalar complejo}
 %% Mover al otro capítulo
@@ -3059,6 +3061,67 @@ Note que la conservación de la carga en este caso no requiere imponer que $\mat
 Cuando la conservación de la carga requiera de que las ecuaciones de Euler-Lagrange se satisifagan, diremos que la conservación de la carga es \emph{propia}.
 
 
+
+\begin{subappendices}
+  
+
+\section{Ecuación de Klein-Gordon}
+
+
+Si modificamos el Lagrangiano en ec.~\eqref{eq:call2}, para incluir un
+t\'ermino adicional ($v=c=1$)
+\begin{equation}
+  \label{eq:14}
+  \mathcal{L}(\partial\phi/\partial t,\partial\phi/\partial z)=\frac{1}{2}
+\left[
+  \left(\frac{\partial\phi}{\partial t}\right)^2-\left(\frac{\partial\phi}{\partial z}\right)^2-m^2\phi^2
+\right].
+\end{equation}
+entonces, la ec.~\eqref{eq:12} es soluci\'on a la ecuaci\'on resultante de
+aplicar las ecuaciones de Euler-Lagrange:
+\begin{align}
+\label{eq:150}
+      \frac{\partial^2\phi}{\partial t^2}-\frac{\partial^2\phi}{\partial z^2}+m^2\phi=&0\nonumber\\
+      \left(\frac{\partial^2}{\partial t^2}-\frac{\partial^2}{\partial z^2}+m^2
+      \right)\phi=&0,
+\end{align}
+
+Generalizando a 3 dimensiones tenemos el Lagrangiano de Klein-Gordon
+\begin{align}
+  \label{eq:15}
+  \mathcal{L}=&\frac12 \partial_{\mu}\phi\partial^{\mu}\phi-\frac12 m^2\phi^{2}\nonumber\\
+=&\frac{1}{2}
+  \left(
+\frac{\partial\phi}{\partial t}
+  \right)^2-\tfrac{1}{2}\boldsymbol{\nabla}\phi\cdot\boldsymbol{\nabla}\phi-\tfrac{1}{2}m^2\phi^2,
+\end{align}
+que dan lugar a la ecuaci\'on de Klein-Gordon
+
+\begin{equation}
+\label{eq:152}
+  \left(
+\frac{\partial^2}{\partial t^2}-\nabla^2+m^2
+  \right)\phi=0.
+\end{equation}
+
+Una forma de derivar la ecuación de Schr\"odinger es usar escribir la ecuación de conservación de la energía mecánica en términos de operadores aplicados a la función de onda
+\begin{align}
+  \widehat{H}\psi=\left( \frac{1}{2m}\widehat{\mathbf{p}}^{2}+v \right)\psi\,,
+\end{align}
+
+De esta manera, la versión mecánico cuántica de la conservación de momentum-energía de la relatividad especial se podría obtener de
+\begin{align}
+  \widehat{p}_{\mu}\widehat{p}\;^{\mu}\psi=&\left( \widehat{H}^{2}-\sum_{i}\widehat{p}\;^i\widehat{p}\;^i \right)\psi \nonumber\\
+=&\left( -\partial_0^2+\nabla^2 \right)\psi \nonumber\\
+=& m^2 \psi\,,
+\end{align}
+de donde obtenemos precisamente la ecuación~\eqref{eq:152}
+\begin{align}
+  \left(
+\frac{\partial^2}{\partial t^2}-\nabla^2+m^2
+  \right)\psi=0.
+\end{align}
+Aunque la interpretación en mecánica cuántica de la ecuación de momentum-energía requiere promover también el campo a un operador, una vez se establece la teoría cuántica de campos correspondiente, el coeficiente $m$ se puede interpretar como la masa del campo $\psi$.
 
 
 
@@ -3782,65 +3845,7 @@ donde $\theta(x)$ suele ser una expansión en ondas planas en términos de frecu
 \end{align}
 equivale a un cambio en la energía y la cantidad de movimiento del electrón. Por consiguiente el papel de los cuatros campos $A_{\mu}(x)$ es muy importante porque están permanente compensando los cambios en la energía y las tres cantidades de movimiento del electrón de manera que la Acción invariante gauge local, con la densidad Lagrangiana modificada con derivadas covariantes, pueda conservar la energía y la cantidad de movimiento en cualquier punto del espacio tiempo. En la práctica esto implica que el electrón desnudo no es un observable físico. Lo que llamamos electrón es realmente al combinación del electrón como tal y su propio campo electromagnético que garantiza la conservación apropiada de la energía y cantidad de movimiento. 
 
-
-\section{Ecuación de Klein-Gordon}
-
-
-Si modificamos el Lagrangiano en ec.~\eqref{eq:call2}, para incluir un
-t\'ermino adicional ($v=c=1$)
-\begin{equation}
-  \label{eq:14}
-  \mathcal{L}(\partial\phi/\partial t,\partial\phi/\partial z)=\frac{1}{2}
-\left[
-  \left(\frac{\partial\phi}{\partial t}\right)^2-\left(\frac{\partial\phi}{\partial z}\right)^2-m^2\phi^2
-\right].
-\end{equation}
-entonces, la ec.~\eqref{eq:12} es soluci\'on a la ecuaci\'on resultante de
-aplicar las ecuaciones de Euler-Lagrange:
-\begin{align}
-\label{eq:150}
-      \frac{\partial^2\phi}{\partial t^2}-\frac{\partial^2\phi}{\partial z^2}+m^2\phi=&0\nonumber\\
-      \left(\frac{\partial^2}{\partial t^2}-\frac{\partial^2}{\partial z^2}+m^2
-      \right)\phi=&0,
-\end{align}
-
-Generalizando a 3 dimensiones tenemos el Lagrangiano de Klein-Gordon
-\begin{align}
-  \label{eq:15}
-  \mathcal{L}=&\frac12 \partial_{\mu}\phi\partial^{\mu}\phi-\frac12 m^2\phi^{2}\nonumber\\
-=&\frac{1}{2}
-  \left(
-\frac{\partial\phi}{\partial t}
-  \right)^2-\tfrac{1}{2}\boldsymbol{\nabla}\phi\cdot\boldsymbol{\nabla}\phi-\tfrac{1}{2}m^2\phi^2,
-\end{align}
-que dan lugar a la ecuaci\'on de Klein-Gordon
-
-\begin{equation}
-\label{eq:152}
-  \left(
-\frac{\partial^2}{\partial t^2}-\nabla^2+m^2
-  \right)\phi=0.
-\end{equation}
-
-Una forma de derivar la ecuación de Schr\"odinger es usar escribir la ecuación de conservación de la energía mecánica en términos de operadores aplicados a la función de onda
-\begin{align}
-  \widehat{H}\psi=\left( \frac{1}{2m}\widehat{\mathbf{p}}^{2}+v \right)\psi\,,
-\end{align}
-
-De esta manera, la versión mecánico cuántica de la conservación de momentum-energía de la relatividad especial se podría obtener de
-\begin{align}
-  \widehat{p}_{\mu}\widehat{p}\;^{\mu}\psi=&\left( \widehat{H}^{2}-\sum_{i}\widehat{p}\;^i\widehat{p}\;^i \right)\psi \nonumber\\
-=&\left( -\partial_0^2+\nabla^2 \right)\psi \nonumber\\
-=& m^2 \psi\,,
-\end{align}
-de donde obtenemos precisamente la ecuación~\eqref{eq:152}
-\begin{align}
-  \left(
-\frac{\partial^2}{\partial t^2}-\nabla^2+m^2
-  \right)\psi=0.
-\end{align}
-Aunque la interpretación en mecánica cuántica de la ecuación de momentum-energía requiere promover también el campo a un operador, una vez se establece la teoría cuántica de campos correspondiente, el coeficiente $m$ se puede interpretar como la masa del campo $\psi$.
-
+\end{subappendices}
 
 %\appendix
 % \section{Principio de M\'\i nima Acci\'on para $\mathcal{L}$}
