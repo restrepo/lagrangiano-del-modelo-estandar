@@ -37,3 +37,6 @@ Puede clone/editar/push directamente de:
 
 https://www.overleaf.com/2407528pjqwrc
 
+NOTAS:
+* [1/(100 GeV) to s](https://www.wolframalpha.com/input/?i=1%2F(100+GeV)++to+s)
+
