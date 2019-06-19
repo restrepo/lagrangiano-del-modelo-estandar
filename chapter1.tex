@@ -1901,11 +1901,12 @@ donde,
   \centering
   \begin{tabular}{llll}
     Nombre & Símbolo & Lorentz & $U(1)$\\\hline\hline
-    $e_L$: electrón izquierdo & $\xi_{\alpha}$ & ${\left[ S \right]_{\alpha}}^{\beta}\xi_{\beta}$ & $e^{i\theta}\xi$\\
-   $\left( e_R \right)^{\dagger}=e^{\dagger}_L$: positrón izquierdo&$\eta^{\alpha}$& $\eta^\beta{\left[  S^{-1}  \right]_{\beta}}^{\alpha}$ & $\eta\, e^{-i\theta}$\\ \hline    
+    $e_L$: electrón izquierdo & $\xi_{\alpha}$ & ${\left[ S \right]_{\alpha}}^{\beta}\xi_{\beta}$ & $e^{i\theta}\xi_\alpha$\\
+    $e_R$: electrón derecho   & $\left( \eta^{\alpha} \right)^{\dagger}=\eta^{\dagger\;\dot{\alpha}}$ & ${\left[ \left( S^{-1} \right)^\dagger \right]^{\dot{\alpha}}}_{\dot{\beta}}\eta^{\dagger\;\dot{\beta}}$& $e^{i\theta}\eta^{\dagger\dot{\alpha}}$\\
+    \hline    
     $\left( e_L \right)^{\dagger}=e^{\dagger}_R$: positrón derecho   & $\left( \xi_{\alpha} \right)^{\dagger}=\xi^{\dagger}_{\dot{\alpha}}$ &
-     $\xi^{\dagger}_{\dot{\beta}}{\left[{S^{\dagger}}\right]^{\dot{\beta}}}_{\dot{\alpha}}$ & $\xi^\dagger e^{-i\theta}$\\
-   $e_R$: electrón derecho   & $\left( \eta^{\alpha} \right)^{\dagger}=\eta^{\dagger\;\dot{\alpha}}$ & ${\left[ \left( S^{-1} \right)^\dagger \right]^{\dot{\alpha}}}_{\dot{\beta}}\eta^{\dagger\;\dot{\beta}}$& $e^{i\theta}\eta^\dagger$\\\hline\hline
+     $\xi^{\dagger}_{\dot{\beta}}{\left[{S^{\dagger}}\right]^{\dot{\beta}}}_{\dot{\alpha}}$ & $\xi^\dagger_{\dot{\alpha}} e^{-i\theta}$\\
+   $\left( e_R \right)^{\dagger}=e^{\dagger}_L$: positrón izquierdo&$\eta^{\alpha}$& $\eta^\beta{\left[  S^{-1}  \right]_{\beta}}^{\alpha}$ & $\eta^\alpha\, e^{-i\theta}$\\\hline\hline
   \end{tabular}
   \caption{Definición de transformaciones de Lorentz}
   \label{tab:fermionlr}
@@ -3060,11 +3061,6 @@ Note que la conservación de la carga en este caso no requiere imponer que $\mat
 
 Cuando la conservación de la carga requiera de que las ecuaciones de Euler-Lagrange se satisifagan, diremos que la conservación de la carga es \emph{propia}.
 
-
-
-\begin{subappendices}
-  
-
 \section{Ecuación de Klein-Gordon}
 
 
@@ -3122,6 +3118,12 @@ de donde obtenemos precisamente la ecuación~\eqref{eq:152}
   \right)\psi=0.
 \end{align}
 Aunque la interpretación en mecánica cuántica de la ecuación de momentum-energía requiere promover también el campo a un operador, una vez se establece la teoría cuántica de campos correspondiente, el coeficiente $m$ se puede interpretar como la masa del campo $\psi$.
+
+
+
+
+\begin{subappendices}
+  
 
 
 
