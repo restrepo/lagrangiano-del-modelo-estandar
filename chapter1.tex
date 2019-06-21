@@ -648,6 +648,37 @@ La representación adjunta para $\operatorname{SU}(N)$ esta definida por
   \left[ \widetilde{\Lambda}_a \right]_{bc}=-i f_{abc}\,.
 \end{align}
 
+Definiendo $\Sigma_i$ como las matrices $3\times3$ generadores de $\operatorname{SU}(2)$ en la representaci\'on adjunta
+\begin{align}
+  (\Sigma_i)_{jk}=-i\epsilon_{ijk}\,,
+\end{align}
+hemos comprobado en la ec.~\eqref{eq:adjrepsu2} que
+\begin{align}
+  \left[{\Sigma_i},{\Sigma_j}\right]&=i\epsilon_{ijk}{\Sigma_k}\nonumber\\
+  \left[{\Sigma_i},{\Sigma_j}\right]_{lm}&=i\epsilon_{ijk}(\Sigma_k)_{lm}\,.
+\end{align}
+
+Debemos comprobar que
+\begin{align}
+  \left[{\Sigma_i},{\Sigma_j}\right]&=i\epsilon_{ijk}{\Sigma_k}\nonumber\\
+  \left[{\Sigma_i},{\Sigma_j}\right]_{lm}&=i\epsilon_{ijk}(\Sigma_k)_{lm}\,.
+\end{align}
+
+Ya que
+\begin{align}
+  \label{eq:167}
+  (\Sigma_i\Sigma_j)_{lm}&=(\Sigma_i)_{lk}(\Sigma_j)_{km}=-\epsilon_{ilk}\epsilon_{jkm}=\epsilon_{ilk}\epsilon_{jmk}=\delta_{ij}\delta_{lm}-\delta_{im}\delta_{lj}\nonumber\\
+  -(\Sigma_j\Sigma_i)_{lm}&=-(\Sigma_j)_{lk}(\Sigma_i)_{km}=\epsilon_{jlk}\epsilon_{ikm}=-\epsilon_{jlk}\epsilon_{imk}=-\delta_{ji}\delta_{lm}+\delta_{jm}\delta_{li}\,,
+\end{align}
+entonces
+\begin{align}
+\label{eq:adjrepsu2}
+[\Sigma_i,\Sigma_j]_{lm}=& (\Sigma_i\Sigma_j-\Sigma_j\Sigma_i)_{lm}\nonumber\\
+=&\delta_{il}\delta_{jm}-\delta_{im}\delta_{jl}\nonumber\\
+=&\epsilon_{ijk}\epsilon_{lmk}\nonumber\\
+=&i\epsilon_{ijk}(-i\epsilon_{klm})\nonumber\\
+=&i\epsilon_{ijk}(\Sigma_k)_{lm}\,.
+\end{align}
 
 
 

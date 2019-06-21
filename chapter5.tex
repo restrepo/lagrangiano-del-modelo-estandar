@@ -520,29 +520,13 @@ La representación adjunta de $\operatorname{SU}(3)$, consiste en las 8 matrices
 \noindent
 \textbf{Ejemplo:} Definiendo $\Sigma_i$ como las matrices $3\times3$ generadores de $\operatorname{SU}(2)$ en la representaci\'on adjunta
 \begin{align}
-  (\Sigma_i)_{jk}=-i\epsilon_{ijk}
+  (\Sigma_i)_{jk}=-i\epsilon_{ijk}\,,
 \end{align}
-Debemos comprobar que
+hemos comprobado en la ec.~\eqref{eq:adjrepsu2} que
 \begin{align}
   \left[{\Sigma_i},{\Sigma_j}\right]&=i\epsilon_{ijk}{\Sigma_k}\nonumber\\
   \left[{\Sigma_i},{\Sigma_j}\right]_{lm}&=i\epsilon_{ijk}(\Sigma_k)_{lm}\,.
 \end{align}
-
-Ya que
-\begin{align}
-  \label{eq:167}
-  (\Sigma_i\Sigma_j)_{lm}&=(\Sigma_i)_{lk}(\Sigma_j)_{km}=-\epsilon_{ilk}\epsilon_{jkm}=\epsilon_{ilk}\epsilon_{jmk}=\delta_{ij}\delta_{lm}-\delta_{im}\delta_{lj}\nonumber\\
-  -(\Sigma_j\Sigma_i)_{lm}&=-(\Sigma_j)_{lk}(\Sigma_i)_{km}=\epsilon_{jlk}\epsilon_{ikm}=-\epsilon_{jlk}\epsilon_{imk}=-\delta_{ji}\delta_{lm}+\delta_{jm}\delta_{li}\,,
-\end{align}
-entonces
-\begin{align}
-[\Sigma_i,\Sigma_j]_{lm}=& (\Sigma_i\Sigma_j-\Sigma_j\Sigma_i)_{lm}\nonumber\\
-=&\delta_{il}\delta_{jm}-\delta_{im}\delta_{jl}\nonumber\\
-=&\epsilon_{ijk}\epsilon_{lmk}\nonumber\\
-=&i\epsilon_{ijk}(-i\epsilon_{klm})\nonumber\\
-=&i\epsilon_{ijk}(\Sigma_k)_{lm}\,.
-\end{align}
-
 \noindent
 \textbf{Ejercicio:} Demostar que la representación adjunta satisface el álgebra de $\operatorname{SU}(3)$.
 
@@ -648,49 +632,10 @@ y usando \eqref{eq:Dmup} da lugar a
 \end{align}
 Esto es justo lo que se espera de la transformación de un tensor para un grupo de simetría continuo. 
 
-
-En efecto, para el campo electromagnético invariante bajo $\operatorname{U}(1)_Q$, podemos considerar como campo fundamental al tensor de campo electromagnético, que bajo el Grupo de Lorentz transforma como
-\begin{align}
-  F_{\mu\nu} \to F'_{\mu\nu}=&\partial'_{\mu} A'_{\nu} -\partial'_{\nu} A'_{\mu} \nonumber\\
-=&g_{\nu\alpha}\partial'_{\mu} A^{\alpha} -\partial'_{\nu} {A'}_{\mu} \nonumber\\
-=&g_{\nu\alpha} { \Lambda_{\mu}}^{\beta}\partial_{\beta} {\Lambda^{\alpha}}_{\gamma} {A}^{\gamma} -\partial'_{\nu} {A'}_{\mu} \nonumber\\
-=&g_{\nu\alpha} { \Lambda_{\mu}}^{\beta}\partial_{\beta} {\Lambda^{\alpha}}_{\gamma} g^{\gamma\delta} A_{\delta} -\partial'_{\nu} A'_{\mu} \nonumber\\
-  =& { \Lambda_{\mu}}^{\beta}\partial_{\beta}   A_{\delta}{\Lambda_{\nu}}^{\delta} -\partial'_{\nu} A'_{\mu} \nonumber\\
-  =& { \Lambda_{\mu}}^{\beta}\partial_{\beta}   A_{\delta}{\left( \Lambda^{-1} \right)^{\delta}}_{\nu} -\partial'_{\nu} A'_{\mu} \,.
-\end{align}
-Aplicando el resultado al segundo término
-\begin{align}
-  F_{\mu\nu} \to F'_{\mu\nu} =& { \Lambda_{\mu}}^{\beta}\partial_{\beta}   A_{\delta}{\left( \Lambda^{-1} \right)^{\delta}}_{\nu} 
-     - { \Lambda_{\nu}}^{\delta}\partial_{\delta} A_{\beta}{\left( \Lambda^{-1} \right)^{\beta}}_{\mu}  \nonumber\\
-  =& { \Lambda_{\mu}}^{\beta} \left( \partial_{\beta}   A_{\delta}-      \partial_{\delta} A_{\beta} \right)
-{\left( \Lambda^{-1} \right)^{\delta}}_{\nu} \,.
-\end{align}
-Finalmente
+Como hemos visto en el caso electromagnético, para demostrar la invarianza del Lagragiano electromagnético en la ec.~\eqref{eq:invlorff}, es necesario que en efecto el tensor electromagnético transforme como un tensor en el espacio de Lorentz:
 \begin{align}
   F_{\mu\nu}(x) \to F'_{\mu\nu}(x)  =& { \Lambda_{\mu}}^{\alpha}F_{\alpha\beta}\left( \Lambda^{-1}x \right)\,
                    {\left( \Lambda^{-1} \right)^{\beta}}_{\nu} \,.
-\end{align}
-que tiene la misma forma que la tranformación $\operatorname{SU}(3)$ de la matrix de tensores de campos de gluones en la ec.~\eqref{eq:ugum}.
-
-De esta forma
-\begin{align}
-  F_{\mu\nu}F^{\mu\nu}\to   g^{\mu\gamma}g^{\nu\delta} F'_{\mu\nu} F'_{\gamma\delta}=&
-  g^{\mu\gamma}g^{\nu\delta} { \Lambda_{\mu}}^{\alpha}  {\left( \Lambda^{-1} \right)^{\beta}}_{\nu}
-{ \Lambda_{\gamma}}^{\sigma}  {\left( \Lambda^{-1} \right)^{\rho}}_{\delta}
-F_{\alpha\beta}F_{\sigma\rho} \nonumber\\
-  =&
-   { \Lambda_{\mu}}^{\alpha}  {\left( \Lambda^{-1} \right)^{\beta}}_{\nu}
-{ \Lambda^{\mu}}_{\xi}g^{\xi\sigma}  {\left( \Lambda^{-1} \right)_{\eta}}^{\nu}g^{\eta\rho}
-F_{\alpha\beta}F_{\sigma\rho}  \nonumber\\
-  =& {\left( \Lambda^{-1} \right)^{\alpha}}_{\mu} { \Lambda^{\mu}}_{\xi}
-    {\left( \Lambda^{-1} \right)^{\beta}}_{\nu}
- {\Lambda^{\nu}}_{\eta} g^{\xi\sigma}  g^{\eta\rho}
-F_{\alpha\beta}F_{\sigma\rho} \nonumber\\
-  =& \delta^{\alpha}_{\xi}\delta^{\beta}_{\eta}g^{\xi\sigma}  g^{\eta\rho}
-F_{\alpha\beta}F_{\sigma\rho} \nonumber\\
-  =& g^{\alpha\sigma}  g^{\beta\rho}
-F_{\alpha\beta}F_{\sigma\rho} \nonumber\\
-  =& F_{\alpha\beta}F^{\alpha\beta}\,.
 \end{align}
 
 
@@ -1072,9 +1017,31 @@ donde
 \end{align}
 
 El primer término corresponde a las autointeracciones y el segundo a la corriente de color generada por los quarks.
+
 \end{frame}
 
+De otro lado
+\begin{align}
+  \mathcal{D}_\mu{\boldsymbol{G}}^{\mu\nu}
+=&\boldsymbol{J}^{\nu}\nonumber\\
+U\mathcal{D}_\mu U^\dagger U {\boldsymbol{G}}^{\mu\nu}
+=&U\boldsymbol{J}^{\nu}\nonumber\\
+\mathcal{D}_\mu  U {\boldsymbol{G}}^{\mu\nu}
+=&U\boldsymbol{J}^{\nu}\,,
+\end{align}
+y haciendo la expansión infinitesimal
+\begin{align}
+\mathcal{D}_\mu  (\boldsymbol{1}-i\Lambda_a \theta^a) {\boldsymbol{G}}^{\mu\nu}
+=&(\boldsymbol{1}-i\Lambda_a \theta^a)\boldsymbol{J}^{\nu}\,,
+\end{align}
+e igualando coeficientes, tenemos
+\begin{align}
+\label{eq:matrixform}
+  \mathcal{D}_\mu{{G}}^{\mu\nu}
+=&{J}^{\nu}\,.
+\end{align}
 \subsection{Corrientes conservadas}
+
 
 \begin{align}
   \mathcal{E}_1 a_1 + \mathcal{E}_2 a_2 + \mathcal{E}_3 a_3=& \partial_{\mu} \left( \mathcal{E}_1 b_1^{\mu} + \mathcal{E}_2 b_2^{\mu} + \mathcal{E}_3 b_3^{\mu}   \right) \,.
@@ -1089,6 +1056,14 @@ Como $a_{3}=f_{a}^{bc} G^{\mu}_{c} $, $b_{3}^{\mu}=\delta^{\mu}_{\nu}/g_{s}$, en
   \left\{ \partial_\mu\left[\frac{\partial\mathcal{L}}{\partial\left(\partial_\mu G_\nu^a\right)}\right]-\frac{\partial\mathcal{L}}{\partial G_\nu^a} \right\} f_{a}^{bc} G^{\mu}_{c} =&
 \frac{1}{g_s}\partial_{\mu} \left\{\left(   \partial_\mu\left[\frac{\partial\mathcal{L}}{\partial\left(\partial_\mu G_\nu^a\right)}\right]-\frac{\partial\mathcal{L}}{\partial G_\nu^a} \right)\delta_{\nu}^{\rho}  \right\}
 \end{align}
+después de algunos pasos adicionales deberíamos llegar a la derivada de  la ecuación de movimiento de forma matricial
+\eqref{eq:matrixform}
+\begin{align}
+\label{eq:matrixform}
+  \partial_\nu\mathcal{D}_\mu{{G}}^{\mu\nu}
+=&0\,.
+\end{align}
+donde $\partial_\nu{J}^{\nu}=0$
 
 \subsection{Anotaciones finales}
 

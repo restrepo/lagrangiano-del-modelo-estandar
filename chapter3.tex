@@ -1,4 +1,235 @@
 %instiki:category: FisicaSubatomica
+\chapter{Escalares}
+
+Se mostrará como la invarianza de la Acción bajo transformaciones es el punto de partida en la construcción de densidades Lagrangianas únicas.
+
+%\subsection{Transformaciones de Lorentz}
+%\label{sec:transf-de-lorentz}
+
+
+
+ 
+
+\section{Construción de Lagrangianos covariantes}
+En está sección vamos a conectar la discusión sobre el Lagrangiano de las vibraciones de la cuerda con las tranformaciones de Lorentz de la relatividad especial. Dicho Lagrangiano tiene hasta ahora la siguiente dependencia funcional $\mathcal{L}(\partial_{\mu}\phi)$.
+
+En la formulación de la teoría clásica de campos debemos asegurarnos de que todos los términos posibles perimtidos por la simetrías asociadas al campo estén presentes en la densidad Lagrangiana. De inmediato surge la pregunta: ¿Qué posibles términos de la forma $\partial_{\mu}\phi$ podrían estar presentes en Lagrangiano?. Antes de responder está pregunta, abordemos el problema algo más general donde la densidad Lagrangiana también depende del campo como mismo
+\begin{align*}
+  \mathcal{L}(\phi,\partial_\mu \phi)\,.
+\end{align*}
+En la ecuación~\eqref{eq:dlc3d}, teníamos un Lagragiano en función de $\partial_{\mu}\phi$, y haciendo $v\to c=1$, tenemos
+\begin{align}
+\label{eq:Lpr}
+  \mathcal{L}(\partial_{\mu}\phi)
+    =&\frac{1}{2}\left[
+      {\partial_0\phi}\,{\partial_0\phi}-\sum_i{\partial_i\phi}\,{\partial_i\phi}
+   \right]\nonumber\\
+    =&\frac{1}{2}\left[
+      {\partial_0\phi}\,{\partial^0\phi}+{\partial_i\phi}\,{\partial^i\phi}
+   \right]\nonumber\\
+   =&\frac{1}{2}{\partial_\mu\phi}\,{\partial^\mu\phi}\,.
+\end{align}
+donde se ha usado la convención de suma para índices repetidos. Note que para que la velocidad de propagación sea independiente del sistema de coordenadas se requiere su identificación con la velocidad de la luz. De modo que la queremos interpretar los términos de la densidad Lagrangiana como objetos invariantes, necesariamente se tiene que hacer en el contexto de la relatividad especial.
+
+
+\section{Transformación de Lorentz para campos escalares}
+
+El campo escalar esta definido por sus propiedades bajo transformaciones de Lorentz. Vamos a estudiar el comportamiento de un campo escalar bajo una transformación general de Lorentz:
+\begin{align}
+\label{eq:179qft}
+  x^\mu\to {x'}^\mu={\Lambda^\mu}_\nu x^\nu\,,
+\end{align}
+Por definición, el campo escalar no cambia bajo la transformación de Lorentz, es decir, su forma funcional queda inalterada. Por consiguiente el campo escalar debe satisfacer que
+\begin{align}
+ \phi(x)\to  \phi'(x')=\phi(x)\,,
+\end{align}
+como se ilustró en la Fig.~\ref{fig:trasla}. La prima en $\phi$ representa el cambio intrínseco en el campo $\phi$ como consecuencia de la transformación.
+
+
+Usando la ec.~\eqref{eq:179qft}, tenemos que
+\begin{align}
+    \phi'(x')=\phi(\Lambda^{-1}x')\,.
+\end{align}
+Esto es, el campo transformado, evaluado en el punto transformado, da el mismo valor que el campo evaluado en el punto antes de la transformación. 
+
+\begin{frame}[fragile,allowframebreaks]
+
+%Therefore, for an arbitrary space-time point we have that the scalar field transforms under a Lorentz transformation as
+Por consiguiente, para un punto del espacio tiempo arbitrario tenemos
+que el campo escalar transforma bajo una transformación de Lorentz como
+\begin{align}
+  \label{eq:scalarlorentz}
+ \phi(x)\to  \phi'(x)=\phi(\Lambda^{-1}x)\,.
+\end{align}
+\end{frame}
+
+
+
+% Definimos el cambio correspondiente como
+% \begin{align}
+%   \delta \phi(x)=\phi'(x)-\phi(x)\,.
+% \end{align}
+
+
+
+
+Para comprobar la invarianza de Lorentz de la Acción para el campo escalar, necesitamos las propiedades de transformación para $\partial_\mu$ dada por la ec.~\eqref{dmulrtran}
+\begin{align}
+  {\left(\Lambda^{-1}\right)^\mu}_\alpha{x'}^\alpha=&{\left(\Lambda^{-1}\right)^\mu}_\alpha{\Lambda^\alpha}_\nu x^\nu\nonumber\\
+=&\delta^\mu_\nu x^\nu\nonumber\\
+=&x^\mu\,,
+\end{align}
+\begin{align}
+  \frac{1}{{x'}^\nu}= {\left(\Lambda^{-1}\right)^\mu}_\nu\frac{1}{x^\mu}\,,
+\end{align}
+o
+\begin{align}
+  \label{eq:183qft}
+    \frac{1}{{x'}^\mu}= {\left(\Lambda^{-1}\right)^\nu}_\mu\frac{1}{x^\nu}\,,
+\end{align}
+de modo que la transformación de Lorentz para $\partial_\mu=\partial/\partial x^\mu$, es
+\begin{align}
+  \label{dmulrtran}
+   \frac{\partial}{{\partial x'}^\mu}=& {\left(\Lambda^{-1}\right)^\nu}_\mu\frac{\partial}{\partial x^\nu}\nonumber\\
+   {\partial\,}'_\mu=& {\left(\Lambda^{-1}\right)^\nu}_\mu\partial_\nu\,,
+\end{align}
+Podemos ahora demostrar que la Acción obtenida del Lagrangiano en la ec.\eqref{eq:Lpr} es invariante bajo transformaciones de Lorentz haciendo uso de la ec.~(\ref{eq:Lambdacontra}). Para hacer la demostración más general, podemos agregar una función general que solo dependa del campo $\phi$ pero no de sus derivadas, $V(\phi)$
+\begin{align}
+  \mathcal{L}(\phi(x),\partial_{\mu}\phi(x))\to  \mathcal{L}'=& \frac{1}{2}\partial'_\mu\phi'(x)\partial^{'\mu}\phi'(x)-V(\phi'), \nonumber\\
+  =&{\left(\Lambda^{-1}\right)^\nu}_\mu g^{\mu \rho}{\left(\Lambda^{-1}\right)^\sigma}_\rho \partial_\nu\phi(\Lambda^{-1}x) \partial_\sigma \phi(\Lambda^{-1}x) -V(\phi')\nonumber\\
+  =& g^{\nu \sigma}\partial_\nu\phi(\Lambda^{-1}x) \partial_\sigma \phi(\Lambda^{-1}x) -V(\phi(\Lambda^{-1}x))\nonumber\\
+  =& \partial_\nu\phi(\Lambda^{-1}x) \partial^{\nu} \phi(\Lambda^{-1}x) -V(\phi(\Lambda^{-1}x)) \nonumber\\
+  =&\mathcal{L}(\phi(\Lambda^{-1}x),\partial_{\mu}\phi(\Lambda^{-1}x))\,.
+\end{align}
+Ya que la Acción involucra la integración sobre todos los puntos, esta es invariante bajo transformaciones de Lorentz. Explícitamente
+\begin{align}
+  S\to S'=\int d^4x\, \mathcal{L}
+\end{align}
+
+Note que en unidades naturales
+\begin{align}
+  [S]=[\hbar]=1,
+\end{align}
+y ya que $[d^4x]=E^{-4}$, entonces
+\begin{align}
+  [\mathcal{L}]=E^{4}\,.
+\end{align}
+Como $[\partial_{\mu}]=E$, entonces
+\begin{align}
+  [\phi]=E\,.
+\end{align}
+
+
+ 
+\section{Principio de mínima acción para campos}
+Hemos visto que la acción para una oscilación mecánica en tres dimensiones se puede escribir en una notación similar a la del producto escalar de un cuadrivector de Lorentz $\partial_\mu\phi$. Cuando dicho campo se interpreta como un campo fundamental, es decir, que su velocidad de propagación es independiente de los sistemas de referencia inerciales, entonces la Acción queda invariante bajo dicho producto escalar. También hemos visto que adicionar una función del campo $V(\phi)$, la invarianza de la acción se mantiene.
+
+Establecemos el \emph{principio de mínima acción para campos} de la siguiente manera: La acción más general posible para un conjunto de campos contiene todos los posibles productos escalares entres los campos y sus derivadas, con las siguientes restricciones
+\begin{enumerate}
+\item La dimensión de los campos y derivadas en cada término de la correspondiente densidad lagrangiana debe ser menor o igual a cuatro.
+\item La densidad Lagrangiana no debe contener derivadas altas (máximo dos derivadas)
+\item Los campos fundamentales se deben anular a espacio infinito.
+\end{enumerate}
+Con estas restricciones es suficiente mantener los primeros cuatro términos de la expansión de Taylor de $V(\phi)$ (el término constante se puede remover redefiniendo el estado de mínima energía)
+\begin{align}
+  \label{eq:fullV}
+  V(\phi)=a \phi + b\phi^2+c\phi^3+d\phi^4\,,
+\end{align}
+
+La última condición excluye términos del tipo
+\begin{align}
+  \partial_\mu \partial^\mu \phi\,,   \phi\partial_\mu \partial^\mu \phi\,.
+\end{align}
+De modo que la densidad Lagrangiana más general posible para un campo escalar real es
+\begin{align}
+  \frac{1}{2}{\partial_\mu\phi}\,{\partial^\mu\phi}-V(\phi)\,.
+\end{align}
+La ecuación de movimiento es
+\begin{align}
+  \left( \partial_\mu \partial^{\mu} +2b \right)\phi= J(\phi)\,,
+\end{align}
+donde
+\begin{align}
+  J(\phi)=- \left( a + 3c\phi^3 + 4d\phi^4 \right),
+\end{align}
+es el término de fuente. En ausencia de fuentes el campo $\phi$ se propaga libremente a través de la ecuación
+\begin{align}
+  \left( \partial_\mu \partial^{\mu} +2b \right)\phi= 0.
+\end{align}
+
+A continuación procedemos a encontrar una interpretación física al coeficiente $2b$
+\subsection{Ecuaciones covariantes}
+\label{sec:ecuac-covar}
+
+
+Con el cuadrivector \eqref{eq:cv_hatpmu} podemos construir la
+siguiente ecuaci\'on
+\begin{align}
+  \hat{p}_\mu\hat{p}^\mu\phi&=m^2\phi\nonumber\\
+  i\partial_\mu i\partial^\mu\phi&=m^2\phi\nonumber\\
+  -\partial_\mu\partial^\mu\phi&=m^2\phi\nonumber\\
+  \label{eq:waveec}
+  \left(\frac{\partial^2}{\partial t^2}-\nabla^2+m^2\right)\phi&=0.
+\end{align}
+Que corresponde a la ecuaci\'on de Klein-Gordon \eqref{eq:152}. Una expresi\'on escrita en t\'erminos de productos escalares de Lorentz se dice que esta en \emph{forma covariante}. El Lagrangiano covariante que da lugar a
+\'esta ecuaci\'on es (ver ec. \eqref{eq:150}
+\eqref{eq:15}). %noinstiki[in Cap. I](/wiki/show/Cap%C3%ADtulo+I#eq:15)). 
+
+\begin{equation}
+  \label{eq:wavelagtrue}
+  \mathcal{L}=\frac{1}{2}\partial_\mu\phi\partial^\mu\phi-\frac{1}{2}m^2\phi^2
+\end{equation}
+El Lagrangiano m\'as general posible para el campo $\phi$ es en general bastante arbitrario:
+\begin{equation}
+  \mathcal{L}=\frac{1}{2}\partial_\mu\phi\partial^\mu\phi-V(\phi)\,,
+\end{equation}
+donde $f(\phi)$ es una función de campos escalar real $\phi$. Si $V(\phi)$ es una función polinómica del campo $\phi$, tenemos por ejemplo.
+\begin{equation}
+  \label{eq:wavelag}
+  \mathcal{L}=\frac{1}{2}\partial_\mu\phi\partial^\mu\phi-\frac{1}{2}m^2\phi^2-\frac{1}{4}\lambda\phi^4-a\phi+b\phi^3.
+\end{equation}
+
+En asencia de fuentes $a=c=d=0$ en la ec.~\eqref{eq:fullV}, y usando las
+ecuaciones de Euler-Lagrange \eqref{eq:eelcallfmu}, se obtiene
+\begin{align}
+  (\hat{p}_\mu\hat{p}^\mu-m^2)\phi&=0\nonumber\\
+  \label{eq:k-gpmu} %noinstiki
+(\hat{E}^2-\hat{\mathbf{P}}^2-m^2)\phi&=0\\
+\label{eq:kg} 
+  (\Box+m^2)\phi&=0,
+\end{align}
+donde
+\begin{equation}
+  \label{eq:dalambertiano}
+  \Box\equiv\partial_\mu\partial^\mu=\frac{\partial^2}{\partial t^2}-\nabla^2. 
+\end{equation}
+Es el D'Alembartiano~\cite{daelembertiano}. 
+Ec.~\eqref{eq:k-gpmu} %noinstikiEc.~\eqref{eq:kg}
+corresponde a la forma de operadores de la
+ecuaci\'on de energ\'\i a-momentum relativista. La
+ec.~\eqref{eq:kg} se conoce como la ecuaci\'on de Klein-Gordon, con
+Lagrangiano
+\begin{equation}
+  \label{eq:kglag}
+  \mathcal{L}=\frac{1}{2}\partial_\mu\phi\partial^\mu\phi-\frac{1}{2}m^2\phi^2, 
+\end{equation}
+Una expresi\'on escrita en t\'erminos de productos escalares de
+Lorentz se dice que esta en \emph{forma covariante}. Por lo tanto la
+ecuaci\'on de Klein--Gordon y su correspondiente Lagrangiano est\'an
+en forma covariante. Tambi\'en tienen la simetr\'\i a
+$\phi\to-\phi$. A $\phi$ se le denomina \emph{campo escalar}.
+
+Hemos identificado que el término $2a=m^2$ se podría interpretar como la masa al cuadrado del campo escalar. Dicha interpretación surge de analizar la segunda cuantización del campo $\phi$ que se traduce en una interpretación en términos del oscilador armónico.
+%TODO: FALTA
+
+Realizaciones propuestas para este campo escalar incluye el de un campo de materia oscura con un potencial tipo oscilador armónico.
+% figura
+Pero una realización ya encontrada en la naturaleza corresponde al campo de Higgs con un potencial tipo ruptura expontánea de vacio
+
+Una realización física para la acción del campo escalar real con un potencia escalar tipo ``slow-roll''  corresponde al campo del inflatón en cosmología.
+
+
+
 \chapter{Fermiones}
 \label{cha:princ-gauge-local} %noinstiki
 %instiki:
