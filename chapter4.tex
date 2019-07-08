@@ -52,7 +52,7 @@ Es bien conocido que dos cargas eléctricas de signos opuestos se atraen, mientr
 
 Este tipo de condensados de bosones, que ocurren por debajo de una cierta temperatura crítica, tiene todas las características de un éter lumínico: cuando la luz se propaga a través del condensado adquiere una masa emergente que hace que su velocidad sea menor que la velocidad límite de la relatividad especial. Esta nueva velocidad ya si depende de la velocidad del observador que la mida. Si se pudiese repetir el experimento de Michelson y Morley dentro de un superconductor: ¡daría un resultado positivo!
 
-Pero, ¿cómo es posible que un fotón adquiera inercia?. Al tiempo en el que Clerk Maxwell estableció las ecuaciones del electromagnetismo, ya se conocía la Ley de Faraday que establece que los campos eléctricos en movimiento (las corrientes eléctricas) producen campos magnéticos. Usando principios de simetría, Maxwell completo las leyes electromagnéticas prediciendo que los campos magnéticos en movimiento producen también campos eléctricos. Como los campos eléctricos en movimiento producen campos magnéticos en movimiento, que a su vez producen de nuevo campos eléctricos en movimiento, entonces se genera un movimiento ondulatorio y las ecuaciones de Maxwell automáticamente predicen la existencia de ondas electromagnéticas. Una consecuencia inmediata es que la luz visible es simplemente un tipo especial de onda electromagnética en un rango de frecuencias determinado. Una onda electromagnética se puede representar entonces con un vector oscilante que representa el campo magnético, asociado con otro vector oscilante y perpendicular de campo eléctrico. La luz se propaga a la velocidad límite de la relatividad especial en una dirección perpendicular al plano definido por los dos vectores como se ilustra en la figura~\ref{fig:2}(a). Cuando la onda electromagnética se propaga dentro de un condensado sobre la superficie de un superconductor, una componente del par de Cooper se puede acoplar a los vectores magnético y eléctrico en la dirección de propagación de la onda, causando un efecto de frenado. En el lenguaje de la ruptura espontánea de simetría, que explica la formación del condensado por debajo de una temperatura crítica, se dice que fotón se come una componente del par de Cooper para así adquirir masa, como se muestra en la figura~\ref{fig:2}(b). Una vez la luz adquiere masa, las interacciones electromagnéticas se convierten en interacciones de rango finito. Es decir, que a partir de cierta separación entre las cargas eléctricas dentro de un superconductor, desaparecen las fuerzas eléctricas entre ellas. Aunque cuantitativamente estos efectos son pequeños pues la masa del fotón dentro de un superconductor es del orden de una billonésima de electron-voltio~\cite{beamline} (similar a las masas de neutrinos), cualitativamente el comportamiento cambia drásticamente: se pasa de una interacción de rango infinito mediada por fotones de masa cero, a una interacción de \emph{alcance restringido} mediada por fotones masivos. 
+Pero, ¿cómo es posible que un fotón adquiera inercia?. Al tiempo en el que Clerk Maxwell estableció las ecuaciones del electromagnetismo, ya se conocía la Ley de Faraday que establece que los campos eléctricos en movimiento (las corrientes eléctricas) producen campos magnéticos. Usando principios de simetría, Maxwell completo las leyes electromagnéticas prediciendo que los campos magnéticos en movimiento producen también campos eléctricos. Como los campos eléctricos en movimiento producen campos magnéticos en movimiento, que a su vez producen de nuevo campos eléctricos en movimiento, entonces se genera un movimiento ondulatorio y las ecuaciones de Maxwell automáticamente predicen la existencia de ondas electromagnéticas. Una consecuencia inmediata es que la luz visible es simplemente un tipo especial de onda electromagnética en un rango de frecuencias determinado. Una onda electromagnética se puede representar entonces con un vector oscilante que representa el campo magnético, asociado con otro vector oscilante y perpendicular de campo eléctrico. La luz se propaga a la velocidad límite de la relatividad especial en una dirección perpendicular al plano definido por los dos vectores como se ilustra en la figura~\ref{fig:2}(a). Cuando la onda electromagnética se propaga dentro de un condensado sobre la superficie de un superconductor, una componente del par de Cooper se puede acoplar a los vectores magnético y eléctrico en la dirección de propagación de la onda, causando un efecto de frenado. En el lenguaje de la ruptura espontánea de simetría (RES), que explica la formación del condensado por debajo de una temperatura crítica, se dice que fotón se come una componente del par de Cooper para así adquirir masa, como se muestra en la figura~\ref{fig:2}(b). Una vez la luz adquiere masa, las interacciones electromagnéticas se convierten en interacciones de rango finito. Es decir, que a partir de cierta separación entre las cargas eléctricas dentro de un superconductor, desaparecen las fuerzas eléctricas entre ellas. Aunque cuantitativamente estos efectos son pequeños pues la masa del fotón dentro de un superconductor es del orden de una billonésima de electron-voltio~\cite{beamline} (similar a las masas de neutrinos), cualitativamente el comportamiento cambia drásticamente: se pasa de una interacción de rango infinito mediada por fotones de masa cero, a una interacción de \emph{alcance restringido} mediada por fotones masivos. 
 
 \begin{figure}
   \centering
@@ -270,7 +270,7 @@ It is now only natural to consider a fourth possibility: What happens if we incl
 \end{quote}
 
 \begin{frame}[fragile,allowframebreaks]
-La ruptura espontánea de simetría se puede parametrizar convenientemente en este caso en coordenadas polares:
+La ruptura espontánea de simetría (RES) se puede parametrizar convenientemente en este caso en coordenadas polares:
 \begin{align}
   \phi(x)=\frac{\eta(x)}{\sqrt{2}} \operatorname{e}^{i\bar{G}(x)}\,,
 \end{align}
@@ -418,9 +418,9 @@ by LANCE DIXON \url{http://www.slac.stanford.edu/pubs/beamline/26/1/26-1-dixon.p
 
 
 
-\section{SU(2) escalar}
+\section{SU(2) escalar con RES}
 \begin{frame}[fragile,allowframebreaks]
-Para construir la teoría gauge no Abeliana $SU(2)$ para campos escalares, usaremos los mismos métodos desarrollados para SU(3) del capítulo pasado con los siguientes cambios de notación
+Para construir la teoría gauge no Abeliana $SU(2)$ para campos escalares con ruptura espontánea de simetría (RES), usaremos los mismos métodos desarrollados para SU(3) de la Sección~\ref{sec:inter-fuert} con los siguientes cambios de notación
 \begin{align}
   G_{\mu}^a \to& W_{\mu}^{i}\,,\qquad i=1,2,3 \nonumber\\
   G_{\mu\nu}^a \to& W_{\mu\nu}^{i}\,.
@@ -434,10 +434,11 @@ Consideremos un doblete escalar bajo SU(2) compuesto de dos escalares complejos
 \end{align}
 con un Lagrangiano gauge local
 \begin{align}
-  \mathcal{L}&=\mathcal{L}_\Phi-\frac{1}{4}W_{\mu\nu}^{i}W^{\mu\nu}\,,
+  \mathcal{L}&=\mathcal{L}_\Phi-\frac{1}{4}W_{\mu\nu}^{i}W^{\mu\nu}_i\,,
 \end{align}
 donde
 \begin{align}
+  \label{eq:lagsu2scalar}
  \mathcal{L}_\Phi= \left( \mathcal{D}_{\mu} \Phi\right)^{\dagger}\mathcal{D}^{\mu} \Phi-
 \mu^2 \left( \Phi^{\dagger} \Phi\right)-\lambda \left( \Phi^{\dagger} \Phi\right)^2\,,\ \text{con $\mu^2<0,\ \lambda>0$}\,,
 \end{align}
@@ -493,15 +494,143 @@ ec.~\eqref{eq:93qft} sobre el campo $\Phi$, tal que
     {\Phi}\to{\Phi}'=&\operatorname{e}^{i \theta_i(x) T_i}\operatorname{e}^{i G_i(x) T_i}
   \begin{pmatrix}
     0\\
-    \frac{1}{\sqrt{2}}(H(x)+v)
+    \frac{1}{\sqrt{2}}[H(x)+v]
   \end{pmatrix}\nonumber\\
   =&\begin{pmatrix}
     0\\
-    \frac{1}{\sqrt{2}}(H(x)+v)
+    \frac{1}{\sqrt{2}}[H(x)+v]
   \end{pmatrix}
 \end{align}
 que define el \emph{gauge unitario}: $\theta_i(x)=-G_i(x)$. En adelante sin embargo omitiremos las primas sobre los campos transformados ${\Phi}'$ y $W'_{\mu\nu}$.
 \end{frame}
+Además
+\begin{align}
+\mathcal{D}_{\mu} \Phi =& \left( \boldsymbol{1}\partial_{\mu}-i\,g\,T_i W^i_{\mu} \right)\Phi \nonumber\\
+=&  \partial_{\mu}\Phi -i\,g\,T_i W^i_{\mu}\Phi \,.
+\end{align}
+De este modo
+\begin{align}
+  \left( \mathcal{D}^{\mu} \Phi \right)^{\dagger}  \mathcal{D}_{\mu} \Phi
+=&\left(\partial_{\mu}\Phi -i\,g\,T_i W^i_{\mu}\Phi \right)^{\dagger}
+\left( \partial^{\mu}\Phi -i\,g\,T_j W^{j\mu}\Phi \right) \nonumber\\
+=&\left( \partial_{\mu}\Phi^{\dagger} +i\,g\,\Phi^{\dagger}T_i^{\dagger} W^i_{\mu} \right)
+\left( \partial^{\mu}\Phi -i\,g\,T_j W^{j\mu}\Phi \right) \nonumber\\
+=&\left(\partial_{\mu}\Phi^{\dagger} +i\,g\,\Phi^{\dagger}T_i W^i_{\mu} \right)
+\left( \partial^{\mu}\Phi -i\,g\,T_j W^{j\mu}\Phi \right) \nonumber\\
+ =& \partial_{\mu}\Phi^{\dagger} \partial^{\mu}\Phi -ig \partial_{\mu}\Phi^{\dagger} T_j W^{j\mu} \Phi
+     +i\,g\,\Phi^{\dagger}T_i W^i_{\mu} \partial^{\mu}\Phi
+   +g^2 \Phi^{\dagger} T_i W^i_{\mu}  T_j W^{j\mu} \Phi\,.
+\end{align}
+Ya que
+\begin{align}
+  T_i W^i_{\mu}  T_j W^{j\mu} = &\frac{1}{2}\left( T_i W^i_{\mu}  T_j W^{j\mu} +T_i W^i_{\mu}  T_j W^{j\mu}    \right)\nonumber\\
+  = &\frac{1}{2}\left( T_i W^i_{\mu}  T_j W^{j\mu} +T_j W^j_{\mu}  T_i W^{i\mu}    \right)\nonumber\\
+  = &\frac{1}{2}\left( T_i W^i_{\mu}  T_j W^{j\mu} +T_j W^{j\mu}  T_i W^{i}_{\mu}    \right)\nonumber\\
+  = &\frac{1}{2}\left( T_i  T_j  +T_j T_i \right)W^i_{\mu}W^{j\mu}\nonumber\\
+   = &\frac{1}{8} \left\{ \tau_i , \tau_j \right\} W^i_{\mu}W^{j\mu}\nonumber\\
+  = &\frac{1}{8}\left( 2 \delta_{ij} \boldsymbol{1} \right)W^i_{\mu}W^{j\mu}\nonumber\\
+  = &\frac{1}{4}W^i_{\mu}W^{\mu}_{i}\,,
+\end{align}
+y de la ec. \eqref{eq:123qft} tenemos $\Phi=
+\begin{pmatrix}
+  0 & \Phi_2
+\end{pmatrix}^{\operatorname{T}}
+$ con $\Phi_2=\left( H(x)+v \right)/\sqrt{2}$ y real. De manera que
+\begin{align}
+   \left( \mathcal{D}^{\mu} \Phi \right)^{\dagger}  \mathcal{D}_{\mu} \Phi
+=& \partial_{\mu}\Phi_2 \partial^{\mu}\Phi_2 -ig
+   \begin{pmatrix}
+      0 & \partial_{\mu}\Phi_2
+   \end{pmatrix}
+   \begin{pmatrix}
+     \left( T_j W^{j\mu} \right)_{12} \Phi_2 \\
+         \left( T_j W^{j\mu} \right)_{22} \Phi_2 \\        
+    \end{pmatrix}
+     +i\,g\,   \begin{pmatrix}
+      0 & \Phi_2
+   \end{pmatrix}
+   \begin{pmatrix}
+     \left( T_j W^{j\mu} \right)_{12} \partial^{\mu} \Phi_2 \\
+         \left( T_j W^{j\mu} \right)_{22} \partial^{\mu} \Phi_2 \\        
+    \end{pmatrix} \nonumber\\
+  & +g^2 \Phi_2^2 W^i_{\mu}W^{\mu}_{i} \nonumber\\
+ =& \partial_{\mu}\Phi_2 \partial^{\mu}\Phi_2
+  -ig \partial_{\mu}\Phi_2 \left( T_j W^{j\mu} \right)_{22} \Phi_2
+    +ig \Phi_2 \left( T_j W^{j\mu} \right)_{22}\partial_{\mu} \Phi_2  +\frac{g^2}{4} \Phi_2^2 W^i_{\mu}W^{\mu}_{i} \nonumber\\
+ =& \partial_{\mu}\Phi_2 \partial^{\mu}\Phi_2 +\frac{g^2}{4} \Phi_2^2 W^i_{\mu}W^{\mu}_{i}\,.
+\end{align}
+Reemplazando en ec.~\eqref{eq:lagsu2scalar}
+\begin{align}
+  \label{eq:su2wwh}
+  \mathcal{L}= &\left( \mathcal{D}_{\mu} \Phi\right)^{\dagger}\mathcal{D}^{\mu} \Phi-
+                      \mu^2 \left( \Phi^{\dagger} \Phi\right)-\lambda \left( \Phi^{\dagger} \Phi\right)^2
+                      -\frac{1}{4}W_{\mu\nu}^{i}W^{\mu\nu}_i \nonumber\\
+=&\frac{1}{2} \partial_{\mu} H \partial^{\mu}H -V(H) -\frac{1}{4}W_{\mu\nu}^{i}W^{\mu\nu}_i +\frac{g^2}{8} W^i_{\mu}W^{\mu}_{i}\left( H+v \right)^2\,,
+\end{align}
+donde hemos usado
+\begin{align}
+  V(H)=&\mu^2 \left( \Phi^{\dagger} \Phi\right)+\lambda \left( \Phi^{\dagger} \Phi\right)^2 \nonumber\\
+  =&\mu^2  \Phi_2^2+\lambda  \Phi_2^4 \nonumber\\
+  =&\frac{1}{2}\mu^2 \left[ H(x)+v \right]+\frac{1}{4}\lambda \left[ H(x)+v \right]^2\,,
+\end{align}
+el cual da lugar de nuevo a la ec.~\eqref{eq:higgspot} correspondiente al potencial de Higgs
+\begin{align}
+  \label{eq:vhfinal}
+V(H)=& \frac{1}{2}m_H^2H^2+\frac{1}{2}\frac{m_H^2}{v}H^3+\frac{1}{8}\frac{m_H^2}{v^2} H^4 \nonumber\\
+=&\frac{1}{2}m_H^2H^2\left(1+\frac{H}{v}+\frac{H^2}{4v^2}\right)\,,
+\end{align}
+que incluye el término de masa para el bosón de Higgs \eqref{eq:higgsmass}:
+\begin{equation}
+  m_H^2=2\left|\mu^2\right|=2\lambda v^2\,.
+\end{equation}
+
+De este modo el el último término en el Lagrangiano de la ec.~\eqref{eq:su2wwh} se puede interpretar como la interacción de un campo escalar real de Higgs, $H(x)$, con los campos gauge de $\operatorname{SU}(2)$, $W_{\mu}^{i}$.  Procediendo de forma similar a como se hizo con el potencial del Higgs, tenemos 
+\begin{align}
+   \frac{g^2}{8} W^i_{\mu}W^{\mu}_{i}\left( H+v \right)^2
+=&\frac{g^2}{8} W^i_{\mu}W^{\mu}_{i}\left( H+2vH +v^2 \right) \,.
+\end{align}
+Si además definimos
+\begin{align}
+m_W=\frac{gv}{2}\,,   
+\end{align}
+como la masa degenerada de los tres bosones gauge $W_{i}^{\mu}$,
+entonces
+\begin{align}
+ \frac{g^2}{8} W^i_{\mu}W^{\mu}_{i}\left( H+v \right)^2
+  =&\frac{1}{2}m_W^2 W^i_{\mu}W^{\mu}_{i}+ \frac{m_W^2}{v} W^i_{\mu}W^{\mu}_{i} H
+     +\frac{1}{2} \frac{m_W^2}{v^2} W^i_{\mu}W^{\mu}_{i} H^2\,.
+\end{align}
+De modo que el resultado final para la ec.~\eqref{eq:lagsu2scalar}, es
+\begin{align}
+  \label{eq:su2wwh}
+  \mathcal{L}= &\left( \mathcal{D}_{\mu} \Phi\right)^{\dagger}\mathcal{D}^{\mu} \Phi-
+                      \mu^2 \left( \Phi^{\dagger} \Phi\right)-\lambda \left( \Phi^{\dagger} \Phi\right)^2
+                      -\frac{1}{4}W_{\mu\nu}^{i}W^{\mu\nu}_i \nonumber\\
+  =&\frac{1}{2} \partial_{\mu} H \partial^{\mu}H -V(H) -\frac{1}{4}W_{\mu\nu}^{i}W^{\mu\nu}_i
+    + \frac{1}{2}m_W^2 W^i_{\mu}W^{\mu}_{i}+ \frac{m_W^2}{v} W^i_{\mu}W^{\mu}_{i} H
+     +\frac{1}{2} \frac{m_W^2}{v^2} W^i_{\mu}W^{\mu}_{i} H^2.
+\end{align}
+
+En el primera ecuación anterior hay 10 grados de libertad independientes (g.l.i) correspondientes a los 4 g.l.i del doblete escalar complejo $\Phi$ y los $2\times 3$ g.l.i para tres bosones gauge sin masa. Estos mismos 10 g.l.i se ven reflejados en la segunda ecuación para el g.l.i asociado al campo escalar real $H$ y los $3\times 3$ g.l.i asociados a tres bosones gauge con masa $W_i^{\mu}$. En el lenguaje de la ruptura espontánea de simetría se dice que los bosones gauge sin masas (con 2 g.l.i cada uno) se comen los tres bosones de Goldstone $G_i(x)$, asociados a los tres generadores espontáneamente rotos, para así adquirir las masas degeneradas $m_W$. Las masas emergen de está manera si y sólo sí el Higgs interacciona con los bosones gauge a través de
+\begin{align}
+  \mathcal{L}_{\text{int}}=\frac{m_W^2}{v} W^i_{\mu}W^{\mu}_{i} H
+     +\frac{1}{2} \frac{m_W^2}{v^2} W^i_{\mu}W^{\mu}_{i} H^2\,.
+\end{align}
+% TODO: Dibujar los diagramas de Feynman
+Esto es de nuevo la predicción del mecanismo de mecanismo de Brout–Englert–Higgs que permite su
+comprobación en aceleradores de partículas. Para el primer término del
+Lagragiano de interacción, $\mathcal{L}_{\text{int}}$, esto quiere
+decir por ejemplo, que una vez producido el Higgs en un acelerador de
+partículas este puede decaer con alguna probabilidad a cualquier par
+de bosones gauge a los que les haya dado masa
+
+Esta teoría escalar gauge $\operatorname{SU}(2)$ con RES, se puede aplicar tanto para explicar el surgimiento de la masa de los tres piones en la física nuclear, como para explicar las masas de los tres bosones gauge de la interacción débiles de una forma compatible con el principio gauge local, ya que la Acción mantiene la simetría $\operatorname{SU}(2)$: el análisis de las masas sólo es válido alrededor del mínimo después de la RES que permite la formación del condensado de campo de Higgs. El caso de la interacción débil será explicado en el capítulo~\ref{cha:modelo-estandar}.
+
+\bigskip
+
+\noindent
+\textbf{Ejemplo}. Estudie el espectro de masas en el Gauge unitario, expandiendo explícitamente la Derivada covariante.
+
 Comenzaremos analizando la parte escalar del Lagrangiano del Modelo dada en la ec.~\eqref{eq:smscalar}
 \begin{equation}
   \mathcal{L}_{W}=\frac{1}{2}\left[\mathcal{D}^\mu \begin{pmatrix}
@@ -510,12 +639,10 @@ Comenzaremos analizando la parte escalar del Lagrangiano del Modelo dada en la e
   \end{pmatrix}\right]^{\dagger} \mathcal{D}_\mu\begin{pmatrix}
     0\\
     H(x)+v
-  \end{pmatrix}-V(H)\,,
+  \end{pmatrix}-V(H)-\frac{1}{4}W_{\mu\nu}^i W_i^{\mu\nu}\,,
 \end{equation}
-donde $V(H)$ dado en la ec.~\eqref{eq:higgspot}, incluye el término de masa para el bosón de Higgs \eqref{eq:higgsmass}:
-\begin{equation}
-  m_H^2=2\left|\mu^2\right|=2\lambda v^2
-\end{equation}
+donde $V(H)$ dado en la ec.~\eqref{eq:vhfinal}.
+
 Como
 \begin{align}
 \label{eq:w22}
@@ -629,13 +756,7 @@ donde:
   m_W=m_3=\frac{gv}{2}\,.
 \end{equation}
 Note que todas las masas son degeneradas.
-\item
-  \begin{align}
-    V(H)=&\tfrac{1}{2}m_H^2H^2+\lambda vH^3+\tfrac{1}{4}\lambda H^4\nonumber\\
-    =&\frac{1}{2}m_H^2H^2+\frac{m_H^2}{2v}H^3+\frac{1}{4}\frac{m_H^2}{2v^2} H^4\nonumber\\
-    =&\frac{1}{2}m_H^2H^2\left(1+\frac{H}{v}+\frac{H^2}{4v^2}\right)\,.
-  \end{align}
-con
+\item Masa del Higgs
 \begin{equation}
   m_H^2=-2\mu^2=2\lambda v^2.
 \end{equation}
