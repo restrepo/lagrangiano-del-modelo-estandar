@@ -772,7 +772,7 @@ Entonces
 \begin{align}
   \label{eq:96qft}
   \mathcal{L}_{WBH}=&\frac{1}{2}\partial^\mu H\partial_\mu H-V(H)\nonumber\\
-  &+\left(\frac{gv}{4}\right)^2{W^\mu}^-W_\mu^++\frac{1}{4}g^2{W^\mu}^-W_\mu^+H^2+\frac{1}{2}vg^2{W^\mu}^-W_\mu^+H+\mathcal{L}_{Z A H}\,,
+  &+\frac{g^2v^2}{4}{W^\mu}^-W_\mu^+ \left( \frac{H}{v}+1 \right)^2+\mathcal{L}_{Z A H}\,,
 \end{align}
 donde
 \begin{align}
@@ -781,7 +781,7 @@ donde
 \end{align}
 Haciendo $Y_{\widetilde{\Phi}} =1/2$ como en la ec.~\eqref{eq:yyy},
 \begin{align}
-  \mathcal{L}_{ZAH}=\frac{1}{8}
+  \mathcal{L}_{ZAH}=\frac{1}{2}\frac{v^2}{4}
   \begin{pmatrix}
     W^\mu_3 & B^\mu
   \end{pmatrix}
@@ -793,7 +793,7 @@ Haciendo $Y_{\widetilde{\Phi}} =1/2$ como en la ec.~\eqref{eq:yyy},
     W^3_\mu\\
     B_\mu
   \end{pmatrix}
-\left(H^2+2vH+v^2\right)
+\left(\frac{H}{v}+1\right)^2\,.
 \end{align}
 Sea
 \begin{equation}
@@ -829,7 +829,7 @@ Note que $V$ es una matrix ortogonal que satisface $VV^T=V^TV=\mathbf{1}$. Si (v
 \end{align}
 entonces
 \begin{align}
-  \mathcal{L}_{ZAH}=&\frac{1}{8}
+  \mathcal{L}_{ZAH}=&\frac{1}{2}\frac{v^2}{4}
   \begin{pmatrix}
     W^{3\mu} & B^\mu
   \end{pmatrix}VV^T
@@ -841,8 +841,8 @@ entonces
     W^3_\mu\\
     B_\mu
   \end{pmatrix}
-\left(H^2+2vH+v^2\right)\nonumber\\
-=&\frac{1}{8}
+\left(\frac{H}{v}+1\right)^2\nonumber\\
+=&\frac{1}{2}\frac{v^2}{4}
   \begin{pmatrix}
     Z^\mu & A^\mu
   \end{pmatrix}\left[V^T
@@ -854,7 +854,7 @@ entonces
     Z_\mu\\
     A_\mu
   \end{pmatrix}
-\left(H^2+2vH+v^2\right)
+\left(\frac{H}{v}+1\right)^2
 \end{align}
 \begin{align}
   V^T
@@ -892,12 +892,11 @@ entonces
 De este modo
 
 \begin{align}
-  \mathcal{L}_{ZAH}&=\frac{1}{2}\left(\frac{g_2^2+g_1^2}{4}\right)Z^\mu Z_\mu
-  \left(H^2+2vH+v^2\right)\nonumber\\
-  &=\frac{1}{2}\left(\frac{g_2}{2}\right)^2\left(1+\tan^2\theta_W\right)Z^\mu Z_\mu\left(H^2+2vH+v^2\right)\nonumber\\
-  &=\frac{1}{2}\left(\frac{g_2}{2\cos\theta_W}\right)^2Z^\mu Z_\mu\left(H^2+2vH+v^2\right)\nonumber\\
-  &=\frac{1}{2}\left(\frac{g_2v}{2\cos\theta_W}\right)^2Z^\mu Z_\mu+\frac{1}{2}\left(\frac{g}{2\cos\theta_W}\right)^2Z^\mu Z_\mu H^2
-  +\left(\frac{g_2}{2\cos\theta_W}\right)^2vZ^\mu Z_\mu H
+  \mathcal{L}_{ZAH}&=\frac{1}{2}\frac{v^2}{4}\left(g_2^2+g_1^2\right)Z^\mu Z_\mu
+  \left(\frac{H}{v}+1\right)^2\nonumber\\
+ &=\frac{1}{2}\left(\frac{g_2v}{2}\right)^2\left(1+\tan^2\theta_W\right)Z^\mu Z_\mu
+             \left(\frac{H}{v}+1\right)^2\nonumber\\
+   &=\frac{1}{2}\left(\frac{g_2v}{2\cos\theta_W}\right)^2Z^\mu Z_\mu\left(\frac{H}{v}+1\right)^2\,.
 \end{align}
 Retornando a la ec.~(\ref{eq:96qft}), tenemos
 tenemos
@@ -905,11 +904,12 @@ tenemos
   \label{eq:lwbhfin}
   \mathcal{L}_{W B H}=&\widetilde{\left( \mathcal{D}_\mu{\Phi} \right)}\cdot\mathcal{D}^\mu\Phi-\mu^2\widetilde{\Phi}\cdot\Phi-\lambda \left( \widetilde{\Phi}\cdot\Phi \right)^2 \nonumber\\
   =&\frac{1}{2}\partial^\mu H\partial_\mu H-V(H)\nonumber\\
-&+\frac{1}{4}g_2^2{W^\mu}^-W_\mu^+H^2+\frac{1}{2}vg_2^2{W^\mu}^-W_\mu^+H\nonumber\\
-  &+\frac{1}{2}\left(\frac{g_2}{2\cos\theta_W}\right)^2Z^\mu Z_\mu H^2+\left(\frac{g_2}{2\cos\theta_W}\right)^2v\,Z^\mu Z_\mu H\nonumber\\
-  &+\frac{1}{2}m_W^2{W^\mu}^-W_\mu^++\frac{1}{2}m_W^2{W^\mu}^-W_\mu^+ +\frac{1}{2}m_Z^2Z^\mu Z_\mu\,,
+  &+\frac{1}{2}m_W^2{W^\mu}^-W_\mu^+ \left(\frac{H}{v}+1 \right)^2
+    +\frac{1}{2}m_W^2{W^\mu}^-W_\mu^+\left(\frac{H}{v}+1 \right)^2
+    +\frac{1}{2}m_Z^2Z^\mu Z_\mu\left(\frac{H}{v}+1 \right)^2\,,
 \end{align}
-donde:
+donde el termino $1$ en la expansión binomial $\left({H}/{v}+1 \right)^2$ corresponde al
+término de masa en cada caso:
 %instiki:
 \begin{itemize} %noinstiki
 \item Masas gauge:
@@ -924,17 +924,16 @@ y
 \label{eq:mwzw}
   m_Z=\frac{m_W}{\cos\theta_W}.
 \end{equation}
-\item
+\item Ver eq.~\eqref{eq:higgspot}
   \begin{align}
     V(H)=&\tfrac{1}{2}m_H^2H^2+\lambda vH^3+\tfrac{1}{4}\lambda H^4\nonumber\\
-    =&\frac{1}{2}m_H^2H^2+\frac{m_H^2}{2v}H^3+\frac{1}{4}\frac{m_H^2}{2v^2} H^4\nonumber\\
-    =&\frac{1}{2}m_H^2H^2\left(1+\frac{H}{v}+\frac{H^2}{4v^2}\right)\,.
+    =&\frac{1}{2}m_H^2 H^2\left( \frac{H}{2v}+ 1 \right)^2\,,
   \end{align}
 con
 \begin{equation}
-  m_H^2=-2\mu^2=2\lambda v^2.
+  m_H^2=-2\mu^2=2\lambda v^2,
 \end{equation}
-
+además:
 \item 
 \begin{equation}
 \label{eq:azmix}
