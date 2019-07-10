@@ -193,8 +193,8 @@ Podemos escribir el potencial en términos del  nuevo campo como
 \begin{align}
 \label{eq:higgspot}
   \mathcal{L}_H=\tfrac{1}{2}\partial^\mu H\partial_\mu H- V(H)
-  =&\frac{1}{2}\partial^\mu H\partial_\mu H-\frac{1}{2}m_H^2 H^2
-\left( \frac{H}{2v}+ 1 \right)^2\nonumber\\
+  =&\frac{1}{2}\partial^\mu H\partial_\mu H
+     -\frac{1}{2}m_H^2 H^2\left( \frac{H}{2v}+ 1 \right)^2\nonumber\\
   =&\frac{1}{2}\partial^\mu H\partial_\mu H-\frac{1}{2}m_H^2H^2-\frac{1}{2}\frac{m_H^2}{v}H^3-\frac{1}{8}\frac{m_H^2}{v^2} H^4 
 \,.
 \end{align}
@@ -582,42 +582,35 @@ donde hemos usado
 el cual da lugar de nuevo a la ec.~\eqref{eq:higgspot} correspondiente al potencial de Higgs
 \begin{align}
   \label{eq:vhfinal}
-V(H)=& \frac{1}{2}m_H^2H^2+\frac{1}{2}\frac{m_H^2}{v}H^3+\frac{1}{8}\frac{m_H^2}{v^2} H^4 \nonumber\\
-=&\frac{1}{2}m_H^2H^2\left(1+\frac{H}{v}+\frac{H^2}{4v^2}\right)\,,
+V(H)=& \frac{1}{2}m_H^2 H^2\left( \frac{H}{2v}+ 1 \right)^2\,,
 \end{align}
 que incluye el término de masa para el bosón de Higgs \eqref{eq:higgsmass}:
 \begin{equation}
   m_H^2=2\left|\mu^2\right|=2\lambda v^2\,.
 \end{equation}
 
-De este modo el el último término en el Lagrangiano de la ec.~\eqref{eq:su2wwh} se puede interpretar como la interacción de un campo escalar real de Higgs, $H(x)$, con los campos gauge de $\operatorname{SU}(2)$, $W_{\mu}^{i}$.  Procediendo de forma similar a como se hizo con el potencial del Higgs, tenemos 
+De este modo el último término en el Lagrangiano de la ec.~\eqref{eq:su2wwh} se puede interpretar como la interacción de un campo escalar real de Higgs, $H(x)$, con los campos gauge de $\operatorname{SU}(2)$, $W_{\mu}^{i}$.  Procediendo de forma similar a como se hizo con el potencial del Higgs, tenemos 
 \begin{align}
    \frac{g^2}{8} W^i_{\mu}W^{\mu}_{i}\left( H+v \right)^2
-=&\frac{g^2}{8} W^i_{\mu}W^{\mu}_{i}\left( H+2vH +v^2 \right) \,.
+=&\frac{g^2v^2}{8} W^i_{\mu}W^{\mu}_{i}\left( \frac{H}{v}+1 \right)^2.
 \end{align}
 Si además definimos
 \begin{align}
 m_W=\frac{gv}{2}\,,   
 \end{align}
 como la masa degenerada de los tres bosones gauge $W_{i}^{\mu}$,
-entonces
+el resultado final para la ec.~\eqref{eq:lagsu2scalar}, es
 \begin{align}
- \frac{g^2}{8} W^i_{\mu}W^{\mu}_{i}\left( H+v \right)^2
-  =&\frac{1}{2}m_W^2 W^i_{\mu}W^{\mu}_{i}+ \frac{m_W^2}{v} W^i_{\mu}W^{\mu}_{i} H
-     +\frac{1}{2} \frac{m_W^2}{v^2} W^i_{\mu}W^{\mu}_{i} H^2\,.
-\end{align}
-De modo que el resultado final para la ec.~\eqref{eq:lagsu2scalar}, es
-\begin{align}
-  \label{eq:su2wwh}
+  \label{eq:su2wwh1}
   \mathcal{L}= &\left( \mathcal{D}_{\mu} \Phi\right)^{\dagger}\mathcal{D}^{\mu} \Phi-
                       \mu^2 \left( \Phi^{\dagger} \Phi\right)-\lambda \left( \Phi^{\dagger} \Phi\right)^2
-                      -\frac{1}{4}W_{\mu\nu}^{i}W^{\mu\nu}_i \nonumber\\
+                 -\frac{1}{4}W_{\mu\nu}^{i}W^{\mu\nu}_i \\
+    \label{eq:su2wwh2}
   =&\frac{1}{2} \partial_{\mu} H \partial^{\mu}H -V(H) -\frac{1}{4}W_{\mu\nu}^{i}W^{\mu\nu}_i
-    + \frac{1}{2}m_W^2 W^i_{\mu}W^{\mu}_{i}+ \frac{m_W^2}{v} W^i_{\mu}W^{\mu}_{i} H
-     +\frac{1}{2} \frac{m_W^2}{v^2} W^i_{\mu}W^{\mu}_{i} H^2.
+    + \frac{1}{2}m_W^2 W^i_{\mu}W^{\mu}_{i}\left( \frac{H}{v}+1 \right)^2\,.
 \end{align}
 
-En el primera ecuación anterior hay 10 grados de libertad independientes (g.l.i) correspondientes a los 4 g.l.i del doblete escalar complejo $\Phi$ y los $2\times 3$ g.l.i para tres bosones gauge sin masa. Estos mismos 10 g.l.i se ven reflejados en la segunda ecuación para el g.l.i asociado al campo escalar real $H$ y los $3\times 3$ g.l.i asociados a tres bosones gauge con masa $W_i^{\mu}$. En el lenguaje de la ruptura espontánea de simetría se dice que los bosones gauge sin masas (con 2 g.l.i cada uno) se comen los tres bosones de Goldstone $G_i(x)$, asociados a los tres generadores espontáneamente rotos, para así adquirir las masas degeneradas $m_W$. Las masas emergen de está manera si y sólo sí el Higgs interacciona con los bosones gauge a través de
+En el primera ecuación anterior \eqref{eq:su2wwh1} hay 10 grados de libertad independientes (g.l.i) correspondientes a los 4 g.l.i del doblete escalar complejo $\Phi$ y los $2\times 3$ g.l.i para tres bosones gauge sin masa. Estos mismos 10 g.l.i se ven reflejados en la segunda ecuación \eqref{eq:su2wwh2} para el g.l.i asociado al campo escalar real $H$ y los $3\times 3$ g.l.i asociados a tres bosones gauge con masa $W_i^{\mu}$. En el lenguaje de la ruptura espontánea de simetría se dice que los bosones gauge sin masas (con 2 g.l.i cada uno) se comen los tres bosones de Goldstone $G_i(x)$, asociados a los tres generadores espontáneamente rotos, para así adquirir las masas degeneradas $m_W$. Las masas emergen de está manera si y sólo sí el Higgs interacciona con los bosones gauge a través de
 \begin{align}
   \mathcal{L}_{\text{int}}=\frac{m_W^2}{v} W^i_{\mu}W^{\mu}_{i} H
      +\frac{1}{2} \frac{m_W^2}{v^2} W^i_{\mu}W^{\mu}_{i} H^2\,.

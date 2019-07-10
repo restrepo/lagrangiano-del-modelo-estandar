@@ -368,9 +368,9 @@ Resumiendo
   \label{eq:smscalar}
 \mathcal{L}_{\text{fermion}}=&i\widetilde{Q}\cdot \overline{\sigma}^\mu\mathcal{D}_\mu Q+i\widetilde{L}\cdot \overline{\sigma}^\mu\mathcal{D}_\mu L \nonumber\\
 &+i(e_R)^{\dagger}\sigma^\mu\mathcal{D}_\mu {e_R}+i(d_R)^{\dagger}\sigma^\mu\mathcal{D}_\mu {d_R}+i(u_R)^{\dagger}\sigma^\mu\mathcal{D}_\mu {u_R}\nonumber\\
-\mathcal{L}_{\text{gauge}}=& -\tfrac{1}{4}G^{\mu\nu}_a G_{\mu\nu}^a-\tfrac{1}{4}W^{\mu\nu}_i W_{\mu\nu}^i-\tfrac{1}{4}B^{\mu\nu} B_{\mu\nu}\nonumber\\
   \mathcal{L}_{WBH}=&\widetilde{\left( \mathcal{D}_\mu{\Phi} \right)}\cdot\mathcal{D}^\mu\Phi-\mu^2\widetilde{\Phi}\cdot\Phi-\lambda \left( \widetilde{\Phi}\cdot\Phi \right)^2 \nonumber\\
-%=&(\mathcal{D}_\mu\Phi)^\dagger\mathcal{D}^\mu\Phi-\mu^2\Phi^\dagger\Phi-\lambda(\Phi^\dagger\Phi)^2\nonumber\\
+\mathcal{L}_{\text{gauge}}=& -\tfrac{1}{4}G^{\mu\nu}_a G_{\mu\nu}^a-\tfrac{1}{4}W^{\mu\nu}_i W_{\mu\nu}^i-\tfrac{1}{4}B^{\mu\nu} B_{\mu\nu}\nonumber\\
+  % =&(\mathcal{D}_\mu\Phi)^\dagger\mathcal{D}^\mu\Phi-\mu^2\Phi^\dagger\Phi-\lambda(\Phi^\dagger\Phi)^2\nonumber\\
 %=&(\mathcal{D}_\mu\widetilde{\Phi})^\dagger\mathcal{D}^\mu\widetilde{\Phi}-\mu^2\widetilde{\Phi}^\dagger\widetilde{\Phi}-\lambda(\widetilde{\Phi}^\dagger\widetilde{\Phi})^2\nonumber\\
 -\mathcal{L}_{\text{Yukawa}}=&  h_e \left( e_R \right)^{\dagger}\,L\cdot \widetilde{\Phi}_b +
       h_d \left( d_R \right)^{\dagger}\,Q\cdot \widetilde{\Phi} +
@@ -392,7 +392,18 @@ con $\mu^2<0$ y $\lambda>0$. % se reduce a
 El modelo estándar es entonces una combinación de una teoría gauge local $\operatorname{SU}(3)_{c}$ con una simetría gauge local con ruptura espontánea de simetría (RES) $\operatorname{SU}(2)_L\times \operatorname{U}(1)_Y$. A continuación nos enfocaremos de momento en la parte leptónica de  $\operatorname{SU}(2)_L\times \operatorname{U}(1)_Y$ con RES.
 
 \section{Una teoría para leptones}
-
+Comenzaremos analizando el de sólo leptones de la primera de la primera generación, 
+\begin{align}
+  \label{eq:smscalarlep}
+\mathcal{L}_{\text{fermion}}^{\text{lepton}}=&i\widetilde{L}\cdot \overline{\sigma}^\mu\mathcal{D}_\mu L 
++i(e_R)^{\dagger}\sigma^\mu\mathcal{D}_\mu {e_R}\nonumber\\
+  \mathcal{L}_{WBH}=&\widetilde{\left( \mathcal{D}_\mu{\Phi} \right)}\cdot\mathcal{D}^\mu\Phi-\mu^2\widetilde{\Phi}\cdot\Phi-\lambda \left( \widetilde{\Phi}\cdot\Phi \right)^2 \nonumber\\
+\mathcal{L}_{\text{gauge}}=& -\tfrac{1}{4}G^{\mu\nu}_a G_{\mu\nu}^a-\tfrac{1}{4}W^{\mu\nu}_i W_{\mu\nu}^i-\tfrac{1}{4}B^{\mu\nu} B_{\mu\nu}\nonumber\\
+  % =&(\mathcal{D}_\mu\Phi)^\dagger\mathcal{D}^\mu\Phi-\mu^2\Phi^\dagger\Phi-\lambda(\Phi^\dagger\Phi)^2\nonumber\\
+%=&(\mathcal{D}_\mu\widetilde{\Phi})^\dagger\mathcal{D}^\mu\widetilde{\Phi}-\mu^2\widetilde{\Phi}^\dagger\widetilde{\Phi}-\lambda(\widetilde{\Phi}^\dagger\widetilde{\Phi})^2\nonumber\\
+-\mathcal{L}_{\text{Yukawa}}^{\text{lepton}}=&  h_e \left( e_R \right)^{\dagger}\,L\cdot \widetilde{\Phi}_b +\text{h.c}
+\end{align}
+sin perdida de generalidad para $\mathcal{L}_{\text{gauge}}$ y $ \mathcal{L}_{WBH}\,$.
 
 \subsection{Interacciónes débiles fermión-gauge para leptones}
 
@@ -401,7 +412,7 @@ Nos enfocaremos de momento en la parte leptónica pues las interacciones para qu
 Los términos de interacción generados por la simetría gauge para el sector leptónico son:
 \begin{align}
 \label{eq:devLW}
-  i \widetilde{L}\cdot\overline{\sigma}^\mu\mathcal{D}_\mu L+  i \left( e_R \right)^{\dagger}{\sigma}^\mu\mathcal{D}_\mu e_R
+ \mathcal{L}_{\text{fermion}}^{\text{lepton}}=& i \widetilde{L}\cdot\overline{\sigma}^\mu\mathcal{D}_\mu L+  i \left( e_R \right)^{\dagger}{\sigma}^\mu\mathcal{D}_\mu e_R \nonumber\\
 =&i \widetilde{L}\cdot\overline{\sigma}^\mu\partial_\mu L+i \left(e_R  \right)^{\dagger}\sigma^\mu\partial_\mu {e_R} \nonumber\\
 &+ i \widetilde{L}\cdot\overline{\sigma}^\mu(-i g_2 T_iW_\mu^i-i {g_1}\,Y_LB_\mu) L + i \left( e_R \right)^{\dagger}\sigma^\mu \left( -i{g_1} Y_E B_{\mu} \right) {e_R}\,.
 \end{align}
@@ -688,16 +699,18 @@ ec.~\eqref{eq:93qft} sobre el campo $\widetilde{\Phi}$, tal que
 \end{equation}
 que define el \emph{gauge unitario}. En adelante sin embargo omitiremos las primas sobre los campos transformados ${\Phi}'$ y $W'_{\mu\nu}$.
 
-Comenzaremos analizando la parte escalar del Lagrangiano del Modelo dada en la ec.~\eqref{eq:smscalar}
-\begin{equation}
-  \mathcal{L}_{WBH}=\frac{1}{2}\widetilde{\left[\mathcal{D}^\mu \begin{pmatrix}
+Comenzaremos analizando la parte escalar del Lagrangiano del Modelo dada en la ec.~\eqref{eq:smscalar} en el gauge unitario
+\begin{align}
+  \mathcal{L}_{WBH}
+  =&\widetilde{\left( \mathcal{D}_\mu{\Phi} \right)}\cdot\mathcal{D}^\mu\Phi-\mu^2\widetilde{\Phi}\cdot\Phi-\lambda \left( \widetilde{\Phi}\cdot\Phi \right)^2 \nonumber\\
+  =&\frac{1}{2}\widetilde{\left[\mathcal{D}^\mu \begin{pmatrix}
     0\\
     H(x)+v
   \end{pmatrix}\right]}\cdot \mathcal{D}_\mu\begin{pmatrix}
     0\\
     H(x)+v
   \end{pmatrix}-V(H)\,,
-\end{equation}
+\end{align}
 donde $V(H)$ dado en la ec.~\eqref{eq:higgspot}, incluye el término de masa para el bosón de Higgs \eqref{eq:higgsmass}:
 \begin{equation}
   m_H^2=2\left|\mu^2\right|=2\lambda v^2
@@ -733,8 +746,7 @@ Entonces
   \end{pmatrix}.
 \end{align}
 
-De modo que, como se mostro en 
-
+El correspondiente productor escalar $\operatorname{SU}(2)_L$ es:
 \begin{align}
   \mathcal{L}_{WBH}=&\frac{1}{2}\widetilde{\begin{pmatrix}
     -\frac{i}{\sqrt{2}}g{W^\mu}^+(H+v)\\
@@ -771,13 +783,13 @@ donde la última línea corresponde a la magnitud del ``número'' complejo:
 Entonces
 \begin{align}
   \label{eq:96qft}
-  \mathcal{L}_{WBH}=&\frac{1}{2}\partial^\mu H\partial_\mu H-V(H)\nonumber\\
-  &+\frac{g^2v^2}{4}{W^\mu}^-W_\mu^+ \left( \frac{H}{v}+1 \right)^2+\mathcal{L}_{Z A H}\,,
+  \mathcal{L}_{WBH}=&\frac{1}{2}\partial^\mu H\partial_\mu H-V(H)
+  +\frac{g^2v^2}{4}{W^\mu}^-W_\mu^+ \left( \frac{H}{v}+1 \right)^2+\mathcal{L}_{Z A H}\,,
 \end{align}
 donde
 \begin{align}
-  \mathcal{L}_{ZAH}=\frac{1}{2}&\left(\tfrac{1}{4}g^2W_3^\mu W^3_\mu-\tfrac{1}{2}g{g_1}Y_{\widetilde{\Phi}} W_3^\mu B_\mu-\tfrac{1}{2}g{g_1}Y_{\widetilde{\Phi}} W_3^\mu B_\mu+{{g_1}}^2Y_{\widetilde{\Phi}} ^2B^\mu B_\mu\right)\times\nonumber\\
-&\left(H^2+2vH+v^2\right)
+  \mathcal{L}_{ZAH}=\frac{1}{2}&\left(\tfrac{1}{4}g^2W_3^\mu W^3_\mu-\tfrac{1}{2}g{g_1}Y_{\widetilde{\Phi}} W_3^\mu B_\mu-\tfrac{1}{2}g{g_1}Y_{\widetilde{\Phi}} W_3^\mu B_\mu+{{g_1}}^2Y_{\widetilde{\Phi}} ^2B^\mu B_\mu\right)
+\left(H+v\right)^2.
 \end{align}
 Haciendo $Y_{\widetilde{\Phi}} =1/2$ como en la ec.~\eqref{eq:yyy},
 \begin{align}
@@ -968,28 +980,58 @@ tal que
 \end{align}
 dados en ecs.~\eqref{eq:knt}, \eqref{eq:lwl}, y~\eqref{eq:lazlf}, usando directamente la expresión para la derivada covariante para un doblete, en esta caso $L$, dada  en la ec.~\eqref{eq:dercovsu2L}.
 
-\subsection{Lagrangiano  de Yukawa }
+
+\subsection{Auto interacciones}
+
+\begin{frame}[fragile,allowframebreaks]
+El Lagrangiano gauge
+\begin{align}
+  \mathcal{L}_{\text{gauge}}=& -\tfrac{1}{4}G^{\mu\nu}_a G_{\mu\nu}^a-\tfrac{1}{4}W^{\mu\nu}_i W_{\mu\nu}^i-\tfrac{1}{4}B^{\mu\nu} B_{\mu\nu}\,,
+\end{align}
+Se debe expresar en la base de $Z_\mu$, $A_\mu$. Los detalles están en \url{https://www.overleaf.com/read/pxkqqdhrqyrk}
+\begin{align}
+\label{eq:lgaguefin}
+\mathcal{L}_{\text{gauge}}=&  -\tfrac{1}{4}F^{\mu\nu} F_{\mu\nu}-\tfrac{1}{4}Z^{\mu\nu} Z_{\mu\nu}-\tfrac{1}{2}(F_W^\dagger)^{\mu\nu} (F_W)_{\mu\nu}
+- \tfrac{1}{4}\widetilde{G}^{\mu\nu}_a \widetilde{G}_{\mu\nu}^a\nonumber\\
+&-ie\cot\theta_W\left[(F_W^\dagger)^{\mu\nu}W_\mu^+ Z_\nu-(F_W)^{\mu\nu}W_\mu^- Z_\nu+W_\mu^-W_\nu^+Z^{\mu\nu}\right]\nonumber\\
+&-ie\left[(F_W^\dagger)^{\mu\nu}W_\mu^+ A_\nu-(F_W)^{\mu\nu}W_\mu^- A_\nu+W_\mu^-W_\nu^+F^{\mu\nu}\right]\nonumber\\
+&-\frac{e^2}{2\sin^2\theta_W}\left[\left(W_\mu^+{W^\mu}^-\right)^2-W_\mu^+{W^\mu}^+W_\nu^-{W^\nu}^-\right] \nonumber\\
+&-e^2\cot^2\theta_W\left(W_\mu^+{W^\mu}^-Z_\nu Z^\nu-W_\mu^+Z^\mu W_\nu^-Z^\nu\right)\nonumber\\
+&-e^2\cot^2\theta_W\left(2W_\mu^+{W^\mu}^-A_\nu Z^\nu-W_\mu^+A^\mu W_\nu^-Z^\nu-W_\mu^+Z^\mu W_\nu^-A^\nu\right)\nonumber\\
+&-e^2\left(W_\mu^+{W^\mu}^-A_\nu A^\nu-W_\mu^+A^\mu W_\nu^-A^\nu\right)\nonumber\\
+&- \frac{1}{4}\left(g_s\widetilde{G}^{\mu\nu}_af_{a d e}G^d_\mu G^e_\nu
+    +g_sf^{a b c}G_b^\mu G_c^\nu\widetilde{G}_{\mu\nu}^a
+    +g_s^2f^{a b c}f_{a d e}G_b^\mu G_c^\nu G^d_\mu G^e_\nu\right)\,,
+\end{align}
+donde
+\begin{align}
+  {F}^{\mu\nu}=&\partial^\mu A^\nu_a-\partial^\nu A^\mu\,, &  (F_W)_{\mu\nu}=&\partial_\mu W^+_\nu-\partial_\nu W^+_\mu\nonumber\\
+  {Z}^{\mu\nu}=&\partial^\mu Z^\nu_a-\partial^\nu Z^\mu\,,&  \widetilde{G}^{\mu\nu}=&\partial^\mu G^\nu_a-\partial^\nu G^\mu\,.
+\end{align}
+
+\end{frame}
+
+
+\subsection{Lagrangiano  de Yukawa para leptones}
 
 \begin{frame}[fragile,allowframebreaks]
 En el gauge unitario
 \begin{align}
-  \mathcal{L}_{\text{Yukawa}}=& h_e \left( e_R \right)^{\dagger}\,\epsilon^{ab}L_a\widetilde{\Phi}_b +
-      h_d \left( d_R \right)^{\dagger}\,\epsilon^{ab}Q_a\widetilde{\Phi}_b +
-      h_u \left( u_R \right)^{\dagger}\,\epsilon_{ab}Q_a{\Phi}_{b}+\text{h.c}\nonumber\\
-=&\frac{1}{\sqrt{2}}\left[h_e((e_L)^{\dagger}e_R+(e_R)^{\dagger}e_L)+
-h_d((d_L)^{\dagger}d_R+(d_R)^{\dagger}d_L)
-+h_u((u_L)^{\dagger}u_R+(u_R)^{\dagger}u_L)\right]\times\nonumber\\
-&\qquad\left[H(x)+v\right]\,.
+  \mathcal{L}_{\text{Yukawa}}=& h_e \left( e_R \right)^{\dagger}\,\epsilon^{ab}L_a\widetilde{\Phi}_b+\text{h.c}\nonumber\\
+=&\frac{h_e}{\sqrt{2}}\left[\left( e_L \right)^{\dagger}e_R+\left( e_R \right)^{\dagger}e_L\right]
+\left[H(x)+v\right]\nonumber\\
+=&\frac{h_ev}{\sqrt{2}}\left[\left( e_L \right)^{\dagger}e_R+\left( e_R \right)^{\dagger}e_L\right]
+\left[\frac{H(x)}{v}+1\right].
 \end{align}
 Definiendo
 \begin{align}
-  m_f=\frac{h_fv}{\sqrt{2}}
+  m_e=\frac{h_ev}{\sqrt{2}}
 \end{align}
 tenemos
 \begin{align}
 \label{eq:lyuklr}
-  \mathcal{L}_{\text{Yukawa}}=&m_e (e_L)^{\dagger}e_R+m_d (d_L)^{\dagger}d_R+m_u(u_L)^{\dagger}u_R
-\frac{m_e}{v}  (e_L)^{\dagger}e_RH+\frac{m_d}{v}  (d_L)^{\dagger}d_RH+\frac{m_u}{v} (u_L)^{\dagger}u_RH
+  \mathcal{L}_{\text{Yukawa}}=&m_e (e_L)^{\dagger}e_R
++\frac{m_e}{v}  (e_L)^{\dagger}e_RH
 +\text{h.c}\,.
 \end{align}
 
@@ -999,40 +1041,23 @@ Definiendo los fermiones de Dirac, términos de espinores de Weyl como
   \begin{pmatrix}
     e_L\\
     e_R
-  \end{pmatrix},\qquad d=
-  \begin{pmatrix}
-    d_L\\
-    d_R
-  \end{pmatrix},\qquad u=
-  \begin{pmatrix}
-    u_L\\
-    u_R
-  \end{pmatrix}
+  \end{pmatrix},
 \end{align}
 y usando la ec.~\eqref{eq:mwd}, podemos escribir
 \begin{align*}
-\mathcal{L}=&\frac{v}{\sqrt{2}}\left(h_e\overline{e}e+h_d\overline{d}d
-+h_u\overline{u}u\right)
-\left[\frac{H(x)}{v}+1\right].
+\mathcal{L}=&m_e\,\overline{e}e
+\left[\frac{H(x)}{v}+1\right] \nonumber\\
+=&m_e\overline{e}e+
+  \frac{m_e}{v}\overline{e}e H
 \end{align*}
-
-Definiendo
-\begin{align}
-  m_f=\frac{h_fv}{\sqrt{2}}
-\end{align}
-tenemos
-\begin{align}
-\label{eq:lyukfin}
- \mathcal{L}_{\text{Yukawa}}=&m_e\overline{e}e+m_d\overline{d}d
-+m_u\overline{u}u+
-  \frac{m_e}{v}\overline{e}e H+\frac{m_d}{v}\overline{d}d H
-+\frac{m_u}{v}\overline{u}u H\,.
-\end{align}
 Vemos entonces que si la masa de los fermiónes no es fundamental sino
 emergente, necesariamente se predice la existencia de interacciones
-entre fermiones y el Higgs!
+entre fermiones y el Higgs que son proporcionales a la masa del ferión
+que recibe la masa desde la RES!
 
 \end{frame}
+
+
 
 \section{Una teoría para la primera generación}
 
@@ -1136,35 +1161,73 @@ De este modo, es consistente interpretar los superíndices de $\phi^+$ y $\phi^0
 
 \end{frame}
 
-\subsection{Auto interacciones}
+\subsection{Lagrangiano  de Yukawa }
 
 \begin{frame}[fragile,allowframebreaks]
-El Lagrangiano gauge
+En el gauge unitario
 \begin{align}
-  \mathcal{L}_{\text{gauge}}=& -\tfrac{1}{4}G^{\mu\nu}_a G_{\mu\nu}^a-\tfrac{1}{4}W^{\mu\nu}_i W_{\mu\nu}^i-\tfrac{1}{4}B^{\mu\nu} B_{\mu\nu}\,,
+  \mathcal{L}_{\text{Yukawa}}=& h_e \left( e_R \right)^{\dagger}\,\epsilon^{ab}L_a\widetilde{\Phi}_b +
+      h_d \left( d_R \right)^{\dagger}\,\epsilon^{ab}Q_a\widetilde{\Phi}_b +
+      h_u \left( u_R \right)^{\dagger}\,\epsilon_{ab}Q_a{\Phi}_{b}+\text{h.c}\nonumber\\
+=&\frac{1}{\sqrt{2}}\left[h_e((e_L)^{\dagger}e_R+(e_R)^{\dagger}e_L)+
+h_d((d_L)^{\dagger}d_R+(d_R)^{\dagger}d_L)
++h_u((u_L)^{\dagger}u_R+(u_R)^{\dagger}u_L)\right]\times\nonumber\\
+&\qquad\left[H(x)+v\right]\,.
 \end{align}
-Se debe expresar en la base de $Z_\mu$, $A_\mu$. Los detalles están en \url{https://www.overleaf.com/read/pxkqqdhrqyrk}
+Definiendo
 \begin{align}
-\label{eq:lgaguefin}
-\mathcal{L}_{\text{gauge}}=&  -\tfrac{1}{4}F^{\mu\nu} F_{\mu\nu}-\tfrac{1}{4}Z^{\mu\nu} Z_{\mu\nu}-\tfrac{1}{2}(F_W^\dagger)^{\mu\nu} (F_W)_{\mu\nu}
-- \tfrac{1}{4}\widetilde{G}^{\mu\nu}_a \widetilde{G}_{\mu\nu}^a\nonumber\\
-&-ie\cot\theta_W\left[(F_W^\dagger)^{\mu\nu}W_\mu^+ Z_\nu-(F_W)^{\mu\nu}W_\mu^- Z_\nu+W_\mu^-W_\nu^+Z^{\mu\nu}\right]\nonumber\\
-&-ie\left[(F_W^\dagger)^{\mu\nu}W_\mu^+ A_\nu-(F_W)^{\mu\nu}W_\mu^- A_\nu+W_\mu^-W_\nu^+F^{\mu\nu}\right]\nonumber\\
-&-\frac{e^2}{2\sin^2\theta_W}\left[\left(W_\mu^+{W^\mu}^-\right)^2-W_\mu^+{W^\mu}^+W_\nu^-{W^\nu}^-\right] \nonumber\\
-&-e^2\cot^2\theta_W\left(W_\mu^+{W^\mu}^-Z_\nu Z^\nu-W_\mu^+Z^\mu W_\nu^-Z^\nu\right)\nonumber\\
-&-e^2\cot^2\theta_W\left(2W_\mu^+{W^\mu}^-A_\nu Z^\nu-W_\mu^+A^\mu W_\nu^-Z^\nu-W_\mu^+Z^\mu W_\nu^-A^\nu\right)\nonumber\\
-&-e^2\left(W_\mu^+{W^\mu}^-A_\nu A^\nu-W_\mu^+A^\mu W_\nu^-A^\nu\right)\nonumber\\
-&- \frac{1}{4}\left(g_s\widetilde{G}^{\mu\nu}_af_{a d e}G^d_\mu G^e_\nu
-    +g_sf^{a b c}G_b^\mu G_c^\nu\widetilde{G}_{\mu\nu}^a
-    +g_s^2f^{a b c}f_{a d e}G_b^\mu G_c^\nu G^d_\mu G^e_\nu\right)\,,
+  m_f=\frac{h_fv}{\sqrt{2}}
 \end{align}
-donde
+tenemos
 \begin{align}
-  (F_W)_{\mu\nu}=&\partial_\mu W^+_\nu-\partial_\nu W^+_\mu\nonumber\\
-  \widetilde{G}^{\mu\nu}=&\partial^\mu G^\nu_a-\partial^\nu G^\mu\,.
+\label{eq:lyuklr}
+  \mathcal{L}_{\text{Yukawa}}=&m_e (e_L)^{\dagger}e_R+m_d (d_L)^{\dagger}d_R+m_u(u_L)^{\dagger}u_R
++\frac{m_e}{v}  (e_L)^{\dagger}e_RH+\frac{m_d}{v}  (d_L)^{\dagger}d_RH+\frac{m_u}{v} (u_L)^{\dagger}u_RH
++\text{h.c}\,.
 \end{align}
 
+Definiendo los fermiones de Dirac, términos de espinores de Weyl como
+\begin{align}
+  e=
+  \begin{pmatrix}
+    e_L\\
+    e_R
+  \end{pmatrix},\qquad d=
+  \begin{pmatrix}
+    d_L\\
+    d_R
+  \end{pmatrix},\qquad u=
+  \begin{pmatrix}
+    u_L\\
+    u_R
+  \end{pmatrix}
+\end{align}
+y usando la ec.~\eqref{eq:mwd}, podemos escribir
+\begin{align*}
+\mathcal{L}=&\frac{v}{\sqrt{2}}\left(h_e\overline{e}e+h_d\overline{d}d
++h_u\overline{u}u\right)
+\left[\frac{H(x)}{v}+1\right].
+\end{align*}
+
+Definiendo
+\begin{align}
+  m_f=\frac{h_fv}{\sqrt{2}}
+\end{align}
+tenemos
+\begin{align}
+\label{eq:lyukfin}
+ \mathcal{L}_{\text{Yukawa}}=&m_e\overline{e}e+m_d\overline{d}d
++m_u\overline{u}u+
+  \frac{m_e}{v}\overline{e}e H+\frac{m_d}{v}\overline{d}d H
++\frac{m_u}{v}\overline{u}u H\,.
+\end{align}
+Vemos entonces que si la masa de los fermiónes no es fundamental sino
+emergente, necesariamente se predice la existencia de interacciones
+entre fermiones y el Higgs!
+
 \end{frame}
+
+
 
 \section{Lagrangiano completo en el gauge unitario}
 
