@@ -1,4 +1,4 @@
-%instiki:category: FisicaSubatomica
+instiki:category: FisicaSubatomica
 \chapter{Modelo Estándar}
 \label{cha:modelo-estandar} %noinstiki
 %instiki:
@@ -89,21 +89,21 @@ Dicho decaimiento debe involucrar un término de interacción del tipo
 
 Este tipo de interacción significa que en el contexto de las interacciones débiles un $e_L$ debe ser completamente
 equivalente a un campo $\nu_L$. Es decir, el Lagrangiano debe ser
-invariante bajo una transformación $SU(2)_L$ de esos campos. A las energías normales, a las que se encuentra por ejemplo un neutrón dentro de un núcleo de Uranio, dicha simetría permanece oculta pues un electrón izquierdo y un neutrino izquierdo son campos completamente diferentes.
+invariante bajo una transformación $\operatorname{SU}(2)_L$ de esos campos. A las energías normales, a las que se encuentra por ejemplo un neutrón dentro de un núcleo de Uranio, dicha simetría permanece oculta pues un electrón izquierdo y un neutrino izquierdo son campos completamente diferentes.
 La
-diferencia entre ellos está en sus respectivas cargas electricas y sus
+diferencia entre no sólo está en sus respectivas cargas eléctricas sino también
 masas, pues la masa del neutrino es mucho más pequeña que la del electrón. 
 
-Para poder explicar dicha interacción en el contexto de una simetría gauge local $SU(2)_L$, debemos asumir que dicha simetría es explicita en alguna otra escala de energía donde en efecto  $e_L$ sea completamente
+Para poder explicar dicha interacción en el contexto de una simetría gauge local $\operatorname{SU}(2)_L$, debemos asumir que dicha simetría es explicita en alguna otra escala de energía donde en efecto  $e_L$ sea completamente
 equivalente a $\nu_L$.
 
 Debemos asumir entonces que ambos campos tienen una misma hipercarga,
 asociada a una nueva simetría Abeliana $\operatorname{U}(1)_Y$ que sea la precursora de la simetría Abeliana de carga eléctrica $\operatorname{U}(1)_Q$. En tal caso, podríamos esperar que
 la corriente electromagnética apropiada pueda obtenerse a partir del
-Grupo semisimple $SU(2)_L\times U(1)_Y$. Además. la respectiva masa para $W_{\mu}^{-}$
+Grupo semisimple $\operatorname{SU}(2)_L\times U(1)_Y$. Además. la respectiva masa para $W_{\mu}^{-}$
 se podría obtener a partir del mecanismo de Higgs.
 
-La simetría $SU(2)_L$ entre las partes izquierdas del neutrino y el electrón, y entre las partes izquierdas de los quarks up y down, se establece  definiendo los dobletes:
+La simetría $\operatorname{SU}(2)_L$ entre las partes izquierdas del neutrino y el electrón, y entre las partes izquierdas de los quarks up y down, se establece  definiendo los dobletes:
   \begin{align}
     L\equiv\begin{pmatrix}
       \nu_L\\
@@ -118,13 +118,30 @@ De otro lado, La invarianza bajo $U(1)_Y$ requiere que
   Y_L=&Y_{\nu_L}=Y_{e_L}\nonumber\\
   Y_Q=&Y_{u_L}=Y_{d_L}\,.
 \end{align}
-El generador de carga eléctrica $\widehat{Q}$, se va obtener a partir de una combinación lineal del generador diagonal de $SU(2)_L$, $T_3$, y del generador de hipercarga, $\widehat{Y}$.
+El generador de carga eléctrica $\widehat{Q}$, se va obtener a partir de una combinación lineal del generador diagonal de $\operatorname{SU}(2)_L$, $T_3$, y del generador de hipercarga, $\widehat{Y}$.
 
-Para considerar las interacciones débiles en conjunto con las interacciones electromágneticas y fuertes, es conveniente definir los campos de la primera generación en términos de los espinores ($\xi_{\alpha}$) y anti-espinores ($\eta^{\alpha}$) de Weyl izquierdos, de acuerdo a las convenciones de la Tabla~\ref{tab:electron}. El contenido de partículas con sus propiedades de transformación bajo el Grupo semisimple $SU(3)_c\times SU(2)_L\times U(1)_Y$ está dado en la Tabla~\ref{tab:fgw}
+Para considerar las interacciones débiles en conjunto con las interacciones electromágneticas y fuertes, es conveniente definir los campos de la primera generación en términos de los espinores ($\xi_{\alpha}$) y anti-espinores ($\eta^{\alpha}$) de Weyl izquierdos, de acuerdo a las convenciones de la Tabla~\ref{tab:electron}. El contenido de partículas con sus propiedades de transformación bajo el Grupo semisimple $\operatorname{SU}(3)_c\times \operatorname{SU}(2)_L\times U(1)_Y$ está dado en la Tabla~\ref{tab:fgw}, donde el $\mathbf{3}$ o el $\overline{\mathbf{3}}$ de $\operatorname{SU}(3)_c$ quieren decir que, además, para cada quark
+\begin{align}
+u_L=&
+\begin{pmatrix}
+  {u_{L}}_1\\
+  {u_{L}}_2\\
+  {u_{L}}_3
+\end{pmatrix}&
+  \left( u_R \right)^{\dagger}=&
+  \begin{pmatrix}
+    \left( u_R \right)^{\dagger}_1&
+        \left( u_R \right)^{\dagger}_2&    \left( u_R \right)^{\dagger}_3
+  \end{pmatrix},
+\end{align}
+etc.
+
+
+
 \begin{table}
   \centering
   \begin{tabular}{l|c|c}\hline
-    Nombre & Símbolo & $\left( SU(3)_c, SU(2)_L, U(1)_Y \right)$\\\hline
+    Nombre & Símbolo & $\left( \operatorname{SU}(3)_c, \operatorname{SU}(2)_L, U(1)_Y \right)$\\\hline
     $\Xi_{1\alpha}$: Doblete leptónico & $L=\displaystyle{\begin{pmatrix}
       \nu_L\\
       e_L      
@@ -141,23 +158,8 @@ Para considerar las interacciones débiles en conjunto con las interacciones ele
   \label{tab:fgw}
 \end{table}
 
-Donde el $\mathbf{3}$ o el $\overline{\mathbf{3}}$ de $SU(3)_c$ quieren decir que, además, para cada quark
-\begin{align}
-u_L=&
-\begin{pmatrix}
-  {u_{L}}_1\\
-  {u_{L}}_2\\
-  {u_{L}}_3
-\end{pmatrix}&
-  \left( u_R \right)^{\dagger}=&
-  \begin{pmatrix}
-    \left( u_R \right)^{\dagger}_1&
-        \left( u_R \right)^{\dagger}_2&    \left( u_R \right)^{\dagger}_3
-  \end{pmatrix},
-\end{align}
-etc.
 
-Bajo la simetría $SU(2)_L$, los campos transforman como:
+Bajo la simetría $\operatorname{SU}(2)_L$, los campos transforman como:
  \begin{align}
   L\to L'=&\exp(i T^i \theta_i)L\approx(1+i T^i\theta_i)L\nonumber\\
   Q\to Q'=&\exp(i T^i \theta_i)Q\approx(1+i T^i\theta_i)Q\nonumber\\
@@ -175,15 +177,15 @@ y $\tau^i$ son las matrices de Pauli dadas en la ec.~\eqref{eq:paulimatr}.
 
 
 
-\section{Simetría gauge local $SU(3)_c\times  SU(2)_L\times  U(1)_Y$}
+\section{Simetría gauge local $\operatorname{SU}(3)_c\times  \operatorname{SU}(2)_L\times  U(1)_Y$}
 \begin{frame}[fragile,allowframebreaks]
 Los términos de masa de Dirac, usando las convenciones de la
-Tabla~\ref{tab:fgw} no son invariantes bajo la simetría $SU(2)_L$ porque
+Tabla~\ref{tab:fgw} no son invariantes bajo la simetría $\operatorname{SU}(2)_L$ porque
 no hay forma de escribir términos escalares usando combinaciones los
-campos $\Xi$ y $\eta$.  De la ec.~\eqref{eq:dwlag}, y usando la definición para los dobletes adjuntos de $SU(2)_L$ en la ec.~\eqref{eq:Xiadj}, el Lagrangiano más
+campos $\Xi$ y $\eta$.  De la ec.~\eqref{eq:dwlag}, y usando la definición para los dobletes adjuntos de $\operatorname{SU}(2)_L$ en la ec.~\eqref{eq:Xiadj}, el Lagrangiano más
 general posible para los campos de la Tabla~\ref{tab:fgw} compatibles
-con las simetría de Lorentz y el grupo global $SU(3)_c\times
-SU(2)_L\times U(1)_Y$ es
+con las simetría de Lorentz y el grupo global $\operatorname{SU}(3)_c\times
+\operatorname{SU}(2)_L\times U(1)_Y$ es
 \begin{align}
   \mathcal{L}=&\sum_{i=1}^2i\epsilon_{ab}\widetilde{\Xi}_i^{a}\overline{\sigma}^{\mu}\partial_{\mu}\Xi_i^{b}
 +\sum_{i=1}^3i\eta_{i}\sigma^{\mu}\partial_{\mu} \eta^{\dagger}_i\nonumber\\
@@ -237,11 +239,11 @@ donde
 \end{align}
 y además
 \begin{align*}
-  \Lambda^a\equiv\frac{\lambda^a}{2},\ a=1,2,\ldots,8 &\qquad\text{8 generadores de $SU(3)_c$}\\
-  T^i\equiv\frac{\tau^i}{2},\ i=1,2,3 &\qquad\text{3 generadores de $SU(2)_L$}\\
+  \Lambda^a\equiv\frac{\lambda^a}{2},\ a=1,2,\ldots,8 &\qquad\text{8 generadores de $\operatorname{SU}(3)_c$}\\
+  T^i\equiv\frac{\tau^i}{2},\ i=1,2,3 &\qquad\text{3 generadores de $\operatorname{SU}(2)_L$}\\
   Y &\qquad\text{generador de $U(1)_Y$},
 \end{align*}
-A este nivel, tanto los 15 fermiones de Weyl (cada quark iquierdo y derecho viene en tres colores), como los 12 bosones gauge, \emph{tienen masa nula}. Necesitamos entonces un mecanismo de ruptura espontánea de simetría para generar por lo menos masa para los tres bosones gauge asociados a la interacción débil, el cual será abordado en la Sección~\ref{sec:rupt-espont-de}.
+A este nivel, tanto los 15 fermiones de Weyl (cada quark izquierdo y derecho viene en tres colores), como los 12 bosones gauge, \emph{tienen masa nula}. Necesitamos entonces un mecanismo de ruptura espontánea de simetría para generar por lo menos masas para los tres bosones gauge asociados a la interacción débil, el cual será abordado en la Sección~\ref{sec:rupt-espont-de}.
 
 
 
@@ -251,9 +253,9 @@ Además,
   W_{\mu \nu}^i=&\partial_\mu W_\nu^i -\partial_\mu W_\mu^i+ g \epsilon_{ijk}W_\mu^j W_\nu^k \nonumber\\
   B_{\mu \nu}=&\partial_\mu B_\nu -\partial_\mu B_\mu\,.
 \end{align}
-y $G_{\mu\nu}^a$ en ec.~\eqref{eq:258qft}.
+y $G_{\mu\nu}^a$ está dado en la ec.~\eqref{eq:258qft}.
 
-Bajo una transformación gauge local las derivadas covariantes de los campos (y por consiguiente los campos) transforman como:
+Bajo una transformación gauge local, las derivadas covariantes de los campos (y por consiguiente los campos) transforman como:
 \begin{align}
   \mathcal{D}_\mu L&\to\left(\mathcal{D}_\mu L\right)'=\exp\left(-i\theta_iT^i-i\beta Y_L\right)\mathcal{D}_\mu L\nonumber\\
   \mathcal{D}_\mu Q&\to\left(\mathcal{D}_\mu Q\right)'=\exp\left(-i\alpha_a\Lambda^a-i\theta_iT^i-i\beta Y_Q\right)\mathcal{D}_\mu Q\nonumber\\
@@ -271,7 +273,7 @@ donde $Q_{e}=-1$, etc, son las cargas eléctricas asociadas a los campos.
 \begin{frame}[fragile,allowframebreaks]
 Todas las partículas en este lagrangiano son no masivas. Esto funciona sólo para los gluones y uno de los bosones gauge abelianos, pero no es realista para los bosones gauge cargados. 
 Para solucionar este problema se postula la existencia de un nuevo doblete escalar complejo
-( y su correspondiente adjunto de $SU(2)$) con cuatro grados de libertad:
+( y su correspondiente adjunto de $\operatorname{SU}(2)$) con cuatro grados de libertad:
 \begin{align}
 \label{eq:Phi}
   \Phi=&
@@ -295,10 +297,10 @@ El  ``$\pm$'' y el superíndice 0, se ponen de forma conveniente para obtener ex
 
 
 
-Es posible ahora construir invariantes $SU(2)$ con las siguientes combinaciones de campos similares al del término de masa de Dirac en~\eqref{eq:dwlag}
+Es posible ahora construir invariantes $\operatorname{SU}(2)$ con las siguientes combinaciones de campos similares al del término de masa de Dirac en~\eqref{eq:dwlag}
 \begin{align}
- -\eta_1\,\Xi_1^{a}\cdot\widetilde{\Phi}-\left(\eta_1\,\Xi_1^{a}\cdot\widetilde{\Phi}  \right)^{\dagger}
- =& -\eta_1\,\Xi_1^{a}\cdot\widetilde{\Phi}-\text{h.c}\nonumber\\
+ -\eta_1\,\Xi_1\cdot\widetilde{\Phi}-\left(\eta_1\,\Xi_1\cdot\widetilde{\Phi}  \right)^{\dagger}
+ =& -\eta_1\,\Xi_1\cdot\widetilde{\Phi}-\text{h.c}\nonumber\\
  =& -\eta^{b}_1\,\epsilon_{ab}\,\Xi_1^{a}\cdot\widetilde{\Phi}^{b}-\text{h.c} \nonumber\\
    =&-\left( e_R \right)^{\dagger}\epsilon_{ab}L^a\widetilde{\Phi}^b -\text{h.c} \nonumber\\
    =&\left( e_R \right)^{\dagger}L^1\widetilde{\Phi}^2+\left( e_R \right)^{\dagger}L^1\widetilde{\Phi}^2 +\text{h.c} \nonumber\\
@@ -376,8 +378,25 @@ Resumiendo
       h_d \left( d_R \right)^{\dagger}\,Q\cdot \widetilde{\Phi} +
       h_u \left( u_R \right)^{\dagger}\,Q\cdot {\Phi}+\text{h.c}
 \end{align}
-Para el potencial escalar usaremos la forma más conveniente del producto matricial para el invariante de $SU(2)_L$ por que no hay ambiguedad con el conjugado de un campo escalar.
+Para el potencial escalar usaremos la forma más conveniente del producto matricial para el invariante de $\operatorname{SU}(2)_L$ por que no hay ambigüedad con el conjugado de un campo escalar.
 
+Para los campos del Lagrangiano, debemos asegurarnos de que todos los términos invariantes gauge locales y renormalizables sean considerados. De hecho, términos de interacción entre fermiones y el campo escalar, correspondiente a una interacción de Yukawa, son invariantes bajo transformaciones $SU(3)_c\times  SU(2)_L\times  U(1)_Y$ si
+\begin{align*}
+  Y_L+Y_{\widetilde{\Phi}}-Q_{e}=&0\\
+  Y_Q+Y_{\widetilde{\Phi}}-Q_{d}=&0\\
+  Y_Q+Y_{\Phi}-Y_{u}=Y_Q-Y_{\widetilde{\Phi}}-Q_{u}=&0\,,
+\end{align*}
+donde hemos fijado $Y_{\widetilde{\Phi}}=-Y_\Phi$. Solucionado para las hipercargas de los dobletes tenemos
+\begin{align}
+\label{eq:yyy}
+Y_L=&\frac{1}{2}\left( -Q_d+2Q_e+Q_u \right)=-\frac{1}{2}  \nonumber\\
+Y_Q=&\frac{1}{2}\left( Q_d+Q_u \right)=\frac{1}{6} \nonumber\\
+Y_{\widetilde{\Phi}}=-Y_{\Phi}=&\frac{1}{2}\left( Q_d-Q_u \right)=-\frac{1}{2}\,.
+\end{align}
+
+De este modo, es consistente interpretar los superíndices de $\phi^+$ y $\phi^0$ en la ec.~\eqref{eq:Phi} como las cargas eléctricas de las componentes del doblete de Higgs, $\Phi$.
+
+\end{frame}
 
 El potencial escalar contiene los términos
 \begin{align}
@@ -391,8 +410,13 @@ con $\mu^2<0$ y $\lambda>0$. % se reduce a
 
 El modelo estándar es entonces una combinación de una teoría gauge local $\operatorname{SU}(3)_{c}$ con una simetría gauge local con ruptura espontánea de simetría (RES) $\operatorname{SU}(2)_L\times \operatorname{U}(1)_Y$. A continuación nos enfocaremos de momento en la parte leptónica de  $\operatorname{SU}(2)_L\times \operatorname{U}(1)_Y$ con RES.
 
-\section{Una teoría para leptones}
-Comenzaremos analizando una versión simplificada del Lagrangiano con sólo los leptones de la primera de la primera generación, 
+\section{Una teoría para leptones de la primera generación}
+Comenzaremos analizando una versión simplificada del Lagrangiano con sólo los leptones de la primera de generación,
+\begin{align}
+  \mathcal{L}^{\text{lepton}}=\mathcal{L}_{\text{fermion}}^{\text{lepton}}+
+   \mathcal{L}_{WBH}+\mathcal{L}_{\text{gauge}}-\mathcal{L}_{\text{Yukawa}}^{\text{lepton}}\,,
+\end{align}
+donde
 \begin{align}
   \label{eq:smscalarlep}
 \mathcal{L}_{\text{fermion}}^{\text{lepton}}=&i\widetilde{L}\cdot \overline{\sigma}^\mu\mathcal{D}_\mu L 
@@ -494,21 +518,22 @@ donde
 \left( e_L \right)^{\dagger}\overline{\sigma}^\mu\nu_L W_\mu^-\right].
 \end{align}
 
-El prinicipal problema con $\mathcal{L}_{AZL}$ en la ec.~\eqref{eq:lazl} es que el neutrino izquierdo $\nu_L$ presente en $L$ se acopla a los dos bosones gauge neutros $W_3^{\mu}$ y $B^{\mu}$. Debemos buscar una base en la cual recuperar la interacción electromagnética en la cual el fotón $A_{\mu}$ no se acopla a partículas neutras como el $\nu_L$. Definimos entonces el posible fotón a partir de la rotación
+El principal problema con $\mathcal{L}_{AZL}$ en la ec.~\eqref{eq:lazl} es que el neutrino izquierdo $\nu_L$ presente en $L$ se acopla a los dos bosones gauge neutros $W_3^{\mu}$ y $B^{\mu}$. Debemos buscar una base en la cual se pueda recuperar la interacción electromagnética de tal forma que el fotón $A_{\mu}$ no se acople a partículas neutras como el neutrino, $\nu_L$. Definimos entonces el posible fotón a partir de la rotación
 \begin{equation}
 \label{eq:rottw}
   \begin{pmatrix}
-    W^3_\mu\\
-    B_\mu
+    W_3^\mu\\
+    B^\mu
   \end{pmatrix}=\begin{pmatrix}
     \cos\theta_W & \sin\theta_W\\
     -\sin\theta_W& \cos\theta_W
   \end{pmatrix}
   \begin{pmatrix}
-    Z_\mu\\
-    A_\mu
+    Z^\mu\\
+    A^\mu
   \end{pmatrix}.
 \end{equation}
+donde $\theta_{W}$, es el ángulo de rotación débil (Weak de sus siglas en inglés) y $Z^{\mu}$ es el otro campo que resulta de la rotación a la nueva base que define al fotón $A^{\mu}$.
 Aplicando esta rotación a~\eqref{eq:lazl}, tenemos que
 \begin{align}
 \label{eq:brot}
@@ -548,7 +573,7 @@ Usando la definición de $L$ tenemos que
  \left(  -\frac{1}{2}g_2 s_W +g_1 c_W Y_L \right) e_L
   \end{pmatrix}
 \end{align}
-Igualando los coeficientes que acompañanan los campos resultan las dos condiciones
+Igualando los coeficientes que acompañan los campos resultan las dos condiciones
 \begin{align}
   \label{eq:g2sw}
   0= & \frac{1}{2}g_2 s_W +g_1 c_W Y_L  \\
@@ -561,10 +586,10 @@ una tercera condición surge de imponer que el electrón derecho se acople aprop
  e\widehat{Q} e_R =& \left(g_2 s_W T_3+{g_1}c_W\,\widehat{Y}\right) e_R\nonumber\\  
 e Q_e e_R=& g_1 c_W\,Y_R \, e_R\,.
 \end{align}
-con estas condiciones podemos despejar tres incognitas que corresponden a $g_1c_W$, $g_2s_W$ y $Y_L$.
+con estas condiciones podemos despejar tres incógnitas que corresponden a $g_1c_W$, $g_2s_W$ y $Y_L$.
 La primera de ellas la podemos obtener de 
-igualar los coeficientes que acompañanam los campos para la tercera condición, teniendo en cuenta que $\widehat{Q}=\widehat{Y}$ para los campos que no sienten la interacción
-debil asociada a $\operatorname{SU}(2)_L$
+igualar los coeficientes que acompañan los campos para la tercera condición, teniendo en cuenta que $\widehat{Q}=\widehat{Y}$ para los campos derechos los cuales no participan de la interacción
+débil asociada a $\operatorname{SU}(2)_L$
 \begin{align}
   e=g_1 c_W\,.
 \end{align}
@@ -572,7 +597,7 @@ Reemplazando en \eqref{eq:g2sw}
 \begin{align}
   g_2 s_W = -2e Y_L\,,
 \end{align}
-y reemplzando ambos resultado en \eqref{eq:YL}
+y reemplazando ambos resultado en \eqref{eq:YL}, obtenemos
 \begin{align}
   eQ_e=-\frac{1}{2} e+eY_L\,,
 \end{align}
@@ -580,8 +605,6 @@ de donde podemos despejar $Y_L$
 \begin{align}
   Y_L=Q_e+\frac{1}{2}=-1+\frac{1}{2}=-\frac{1}{2}\,.
 \end{align}
-
-
 
 El resultado final es entonces
 \begin{align}
@@ -594,7 +617,13 @@ La segunda ecuación se puede usara en la ec.~\eqref{eq:relgn} para obtener la p
  \widehat{Q}=&T_3+\widehat{Y}\,.
 \end{align}
 
-La ec. \eqref{eq:gn}, se conoce como la relación de Gell-Mann--Nishijima, y junto con~\eqref{eq:esc}, establece las condiciones que se deben satisfacer para obtener apropiadamente la QED a partir de la interacción electrodébil asociada al grupo semisimple $SU(2)_L\times  U(1)_Y$.
+La ec. \eqref{eq:gn}, se conoce como la relación de Gell-Mann--Nishijima, y junto con~\eqref{eq:esc}, establece las condiciones que se deben satisfacer para obtener apropiadamente la QED a partir de la interacción electrodébil asociada al grupo semisimple $\operatorname{SU}(2)_L\times  U(1)_Y$.
+
+\noindent
+\textbf{Ejercicio}: Demostrar que los valores numéricos de las hipercargas en \eqref{eq:yyy} son consistentes con la relación de Gell-Mann--Nishijima \eqref{eq:gn}:
+\begin{align}
+ \widehat{Q}=&T_3+\widehat{Y}\,.
+\end{align}
 
 
 De la segunda ecuación  \eqref{eq:esc}, podemos expresar el ángulo $\theta_W$ en términos de $g_1$ y $g_2$ como
@@ -603,49 +632,7 @@ De la segunda ecuación  \eqref{eq:esc}, podemos expresar el ángulo $\theta_W$ 
   \tan\theta_W=\frac{g_1}{g_2}\,.
 \end{align}
 
-
-Usando la relación entre $g_2$ y ${g_1}$~\eqref{eq:twa} en ~\eqref{eq:brot}
-\begin{align}
-    \mathcal{L}_{A Z L}
-=&g_2 s_W \widetilde{L}\cdot\overline{\sigma}^\mu\left[\left(\cot\theta_WT_3- \tan\theta_W\,Y_L\right)Z_\mu
-       +\left(T_3+Y_L\right) A_\mu\right]L \nonumber\\
-&+g_2 s_W \left(e_R \right)^{\dagger}\sigma^\mu \left[ \left(0 -\tan\theta_W  Y_R  \right) Z_{\mu}  +\left( 0+ Y_R \right)  A_{\mu} \right]{e_R}\,,
-\end{align}
-donde hemos puesto explícitamente el cero correspondiente a: $T_3 e_R= 0 \,e_R$.
-
-Como el generador asociado a $A_\mu$ debe ser el generador de carga eléctrica, podemos usar la primera ecuación en \eqref{eq:esc}:
-\begin{align}
-  e=g_2\sin\theta_W\,,
-\end{align}
-y si además definimos
-\begin{align}
-  \mathcal{L}_{E}=g_2 s_W \left(e_R \right)^{\dagger}\sigma^\mu \left[ \left(0 -\tan\theta_W  Y_R  \right) Z_{\mu}  +\left( 0+ Y_R \right)  A_{\mu} \right]{e_R}\,,
-\end{align}
-tenemos que
-\begin{align}
-\label{eq:lazlf}
-    \mathcal{L}_{A Z L}
-=&e \widetilde{L}\cdot\overline{\sigma}^\mu\left(\cot\theta_W T_3-\tan\theta_W\,Y_L\right)L Z_\mu
-       +e \widetilde{L}\cdot\gamma^\mu \widehat{Q} L A_\mu+\mathcal{L}_E\nonumber\\
-=&e \widetilde{L}\cdot\overline{\sigma}^\mu\left[\cot\theta_W T_3-\tan\theta_W\left(\widehat{Q}-T_3\right)\right]L Z_\mu
-       +e \widetilde{L}\cdot\overline{\sigma}^\mu \widehat{Q} L A_\mu + \mathcal{L}_E\nonumber\\
-=&\phantom{+}\frac{e}{2c_W s_W} \widetilde{L}\cdot\overline{\sigma}^\mu\left[ \tau_3-2s_W^2\widehat{Q}\right]L Z_\mu
-       +e \widetilde{L}\cdot\overline{\sigma}^\mu \widehat{Q} L A_\mu \nonumber\\
-&+\frac{e}{2c_W s_W} \left( e_R \right)^{\dagger}{\sigma}^\mu\left[ 0-2s_W^2\widehat{Q}\right]e_R\, Z_\mu
-       +e \left( e_R \right)^{\dagger}{\sigma}^\mu \widehat{Q} e_R\, A_\mu \nonumber\\
-=&\mathcal{L}_{ZL}+\mathcal{L}^{\text{int}}_{\text{QED}} \,,
-\end{align}
-donde
-\begin{align}
-  \label{eq:LQED}
-     \mathcal{L}^{\text{int}}_{\text{QED}}=&e \widetilde{L}\cdot\overline{\sigma}^\mu \widehat{Q} L A_\mu+
-e \left( e_R \right)^{\dagger}{\sigma}^\mu \widehat{Q} e_R\, A_\mu \\
-\mathcal{L}_{ZL}=&\frac{e}{2c_W s_W} \widetilde{L}\cdot\overline{\sigma}^\mu\left[ \tau_3-2s_W^2\widehat{Q}\right]L Z_\mu
-+\frac{e}{2c_W s_W} \left( e_R \right)^{\dagger}{\sigma}^\mu\left[ 0-2s_W^2\widehat{Q}\right]e_R\, Z_\mu\,.
-\end{align}
-Como las expresiones están en términos de los generadores sin evaluar deben ser válidas para los otros conjuntos apropiados de fermiones.
-
-A modo de ilustración, podemos comprobar
+A modo de ilustración podemos comprobar
 los valores numéricos para $Y_L$ y $Y_R$ usando directamente la relación de Gell-Mann--Nishijima \eqref{eq:gn}
 \begin{align}
   \widehat{Q}L=&(T_3+Y_L)L \nonumber\\
@@ -683,6 +670,49 @@ De la misma forma
 \end{align}
 Note que para campos derechos la hipercarga coincide con la carga eléctrica.
 
+
+Usando la relación entre $g_2$ y ${g_1}$~\eqref{eq:twa} en ~\eqref{eq:brot}
+\begin{align}
+    \mathcal{L}_{A Z L}
+=&g_2 s_W \widetilde{L}\cdot\overline{\sigma}^\mu\left[\left(\cot\theta_WT_3- \tan\theta_W\,Y_L\right)Z_\mu
+       +\left(T_3+Y_L\right) A_\mu\right]L \nonumber\\
+&+g_2 s_W \left(e_R \right)^{\dagger}\sigma^\mu \left[ \left(0 -\tan\theta_W  Y_R  \right) Z_{\mu}  +\left( 0+ Y_R \right)  A_{\mu} \right]{e_R}\,,
+\end{align}
+donde hemos puesto explícitamente el cero correspondiente a: $T_3 e_R= 0 \,e_R$.
+
+Como el generador asociado a $A_\mu$ debe ser el generador de carga eléctrica, podemos usar la primera ecuación en~\eqref{eq:esc}:
+\begin{align}
+  e=g_2\sin\theta_W\,,
+\end{align}
+y si además definimos
+\begin{align}
+  \mathcal{L}_{E}=g_2 s_W \left(e_R \right)^{\dagger}\sigma^\mu \left[ \left(0 -\tan\theta_W  Y_R  \right) Z_{\mu}  +\left( 0+ Y_R \right)  A_{\mu} \right]{e_R}\,,
+\end{align}
+tenemos que
+\begin{align}
+\label{eq:lazlf}
+    \mathcal{L}_{A Z L}
+=&e \widetilde{L}\cdot\overline{\sigma}^\mu\left(\cot\theta_W T_3-\tan\theta_W\,Y_L\right)L Z_\mu
+       +e \widetilde{L}\cdot\gamma^\mu \widehat{Q} L A_\mu+\mathcal{L}_E\nonumber\\
+=&e \widetilde{L}\cdot\overline{\sigma}^\mu\left[\cot\theta_W T_3-\tan\theta_W\left(\widehat{Q}-T_3\right)\right]L Z_\mu
+       +e \widetilde{L}\cdot\overline{\sigma}^\mu \widehat{Q} L A_\mu + \mathcal{L}_E\nonumber\\
+=&\phantom{+}\frac{e}{2c_W s_W} \widetilde{L}\cdot\overline{\sigma}^\mu\left[ \tau_3-2s_W^2\widehat{Q}\right]L Z_\mu
+       +e \widetilde{L}\cdot\overline{\sigma}^\mu \widehat{Q} L A_\mu \nonumber\\
+&+\frac{e}{2c_W s_W} \left( e_R \right)^{\dagger}{\sigma}^\mu\left[ 0-2s_W^2\widehat{Q}\right]e_R\, Z_\mu
+       +e \left( e_R \right)^{\dagger}{\sigma}^\mu \widehat{Q} e_R\, A_\mu \nonumber\\
+=&\mathcal{L}_{ZL}+\mathcal{L}^{\text{int}}_{\text{QED}} \,,
+\end{align}
+donde
+\begin{align}
+  \label{eq:LQED}
+     \mathcal{L}^{\text{int}}_{\text{QED}}=&e \widetilde{L}\cdot\overline{\sigma}^\mu \widehat{Q} L A_\mu+
+e \left( e_R \right)^{\dagger}{\sigma}^\mu \widehat{Q} e_R\, A_\mu \\
+\mathcal{L}_{ZL}=&\frac{e}{2c_W s_W} \widetilde{L}\cdot\overline{\sigma}^\mu\left[ \tau_3-2s_W^2\widehat{Q}\right]L Z_\mu
++\frac{e}{2c_W s_W} \left( e_R \right)^{\dagger}{\sigma}^\mu\left[ 0-2s_W^2\widehat{Q}\right]e_R\, Z_\mu\,.
+\end{align}
+Como las expresiones están en términos de los generadores como operadores, deberían ser válidas para otros conjuntos apropiados de fermiones para ser definidos más adelante.
+
+
 De  la ecuación \eqref{eq:LQED}
 \begin{align}
      \mathcal{L}^{\text{int}}_{\text{QED}}=&e \widetilde{L}\cdot\overline{\sigma}^\mu \widehat{Q} L A_\mu+
@@ -691,25 +721,45 @@ e \left( e_R \right)^{\dagger}{\sigma}^\mu \widehat{Q} e_R\, A_\mu \nonumber\\
 \end{align}
 y la interacción de la electrodinámica cuántica se recupera satisfactoriamente.
 
-Resumiendo
+Para obtener la interacción requerida de los $W^{\pm}$ con el $\nu_L$ y $e_L$ dada en la ec~\eqref{eq:lwl} y genera el fotón con las propiedades adecuadas resumidas en la ec.~\eqref{eq:LQED}, el modelo gauge local $\operatorname{SU}(2)_L\times \operatorname{U}(1)_Y$ predice entonces la existencia de nuevas interacciones con un nuevo bosón gauge $Z_{\mu}$ dadas por
 \begin{align}
-    i \widetilde{L}\cdot\overline{\sigma}^\mu\mathcal{D}_\mu L+  i \left( e_R \right)^{\dagger}{\sigma}^\mu\mathcal{D}_\mu e_R=&\mathcal{L}_{\text{kinetic}}+
-\mathcal{L}_{WL}+ \mathcal{L}_{A Z L}\,,
-\end{align}
-dados en las ecs.~\eqref{eq:knt}, \eqref{eq:lwl} y \eqref{eq:lazlf}. Para obtener la interacción reqierida de los $W^{\pm}$ con el $\nu_L$ y $e_L$, el modelo gauge local $\operatorname{SU}(2)_L\times \operatorname{U}(1)_Y$ predice la existencia de nuevas interacciones con un nuevo bosón gauge $Z_{\mu}$ dadas por
-\begin{align}
-\mathcal{L}_{ZL}=&\mathcal{L}_{AZL}-\mathcal{L}^{\text{int}}_{\text{QED}} \nonumber\\
+  \label{eq:zneus}
+\mathcal{L}_{ZL}
 =&\frac{e}{2c_W s_W} \widetilde{L}\cdot\overline{\sigma}^\mu\left[ \tau_3-2s_W^2\widehat{Q}\right]L Z_\mu
-+\frac{e}{2c_W s_W} \left( e_R \right)^{\dagger}{\sigma}^\mu\left[ 0-2s_W^2\widehat{Q}\right]e_R\, Z_\mu\,.
++\frac{e}{2c_W s_W} \left( e_R \right)^{\dagger}{\sigma}^\mu\left[ 0-2s_W^2\widehat{Q}\right]e_R\, Z_\mu \nonumber\\
+  =&\frac{e}{2c_W s_W} \left\{ \left( \nu_L \right)^{*}\overline{\sigma}^\mu \nu_L
+    + \left( e_L \right)^{*}\overline{\sigma}^\mu\left[ -1+2s_W^2\right]e_L
+     +2s_W^2 \left( e_R \right)^{\dagger}{\sigma}^\mu e_R 
+     \right\}Z_\mu \nonumber\\
+ =&\frac{e}{2c_W s_W} \left\{ \left( \nu_L \right)^{*}\overline{\sigma}^\mu \nu_L
+    - \left( e_L \right)^{*}\overline{\sigma}^\mu e_L 
+    +2s_W^2 \left[\left( e_L \right)^{*}\overline{\sigma}^\mu e_L+
+    \left( e_R \right)^{\dagger}{\sigma}^\mu e_R    \right]  
+     \right\}Z_\mu\,.     
 \end{align}
+Vemos entonces que el $Z_{\mu}$ tiene acoplamientos a las partes izquierdas
+de los leptones y otro acoplamiento que no diferencia partes izquierdas y derechas similar al del fotón, pero
+suprimido por $2\sin^2\theta_W$.
+
+
 Una predicción bastante concreta es que los neutrinos izquierdos se acoplan con el nuevo bosón gage neutro a través del término de interacción
 \begin{align}
-\mathcal{L}_{Z\nu}=  \frac{e}{4c_W s_W}\left( \nu_L \right)^{\dagger} \overline{\sigma}^{\mu} \nu_L Z_\mu\,,
+\mathcal{L}_{Z\nu}=  \frac{e}{2c_W s_W}\left( \nu_L \right)^{\dagger} \overline{\sigma}^{\mu} \nu_L Z_\mu\,,
 \end{align}
-que implica la existencia de corrientes neutras en carga eléctrica y por lo tanto abren la posibilidad de un desbalance de energía completo en colisiones electrón positron. Dichas corrientes fueron medidas en 1971 y permitieron una primera determinación del valor de  $\theta_W$.
+que implica la existencia de corrientes neutras en carga eléctrica y por lo tanto abren la posibilidad de un desbalance de energía completo en colisiones electrón positrón. Dichas corrientes fueron medidas en 1971 y permitieron una primera determinación de los valores experimentales para $g_2$ y $\theta_W$.
 
 
-No te que a este nivel el bosón gauge $Z_{\mu}$ es no masivo. Sin embargo para explicar porque dicha interacción no había sido observada al momento de su predicción se tiene que asumir que el bosón gauge $Z_{\mu}$ debe ser muy masivo para que la interacción sea de corto alcance y por consiguiente suprimida con respecto a la de bosones gauge sin masa. 
+Resumiendo
+\begin{align}
+  \label{eq:fermlep}
+  \mathcal{L}_{\text{fermion}}^{\text{lepton}}=& i \widetilde{L}\cdot\overline{\sigma}^\mu\mathcal{D}_\mu L+  i \left( e_R \right)^{\dagger}{\sigma}^\mu\mathcal{D}_\mu e_R \nonumber\\
+ =&\mathcal{L}_{\text{kinetic}}+
+\mathcal{L}_{WL}+\mathcal{L}^{\text{int}}_{\text{QED}}+ \mathcal{L}_{ZL}\,,
+\end{align}
+dados en las ecs.~\eqref{eq:knt}, \eqref{eq:lwl}, \eqref{eq:LQED} y \eqref{eq:zneus}.
+
+
+Note que a este nivel el bosón gauge $Z_{\mu}$ es no masivo. Sin embargo para explicar porque dicha interacción no había sido observada al momento de su predicción se tiene que asumir que el bosón gauge $Z_{\mu}$ debe ser muy masivo para que la interacción sea de corto alcance y por consiguiente suprimida con respecto a la de bosones gauge sin masa. 
 
 Por lo tanto, para obtener una teoría realista se debe adicionar un mecanismo de ruptura espontánea de simetría para dar masa a los tres bosones $W_{\mu}^{+}$, $W_{\mu}^{-}$ y $Z_{\mu}$. Dicho mecanismo será discutido en la Sección~\ref{sec:el-gauge-unitario}.
 
@@ -719,7 +769,7 @@ Por lo tanto, para obtener una teoría realista se debe adicionar un mecanismo d
 \label{sec:el-gauge-unitario}
 
 \begin{frame}[fragile,allowframebreaks]
-Retornando al doblete de Higgs del modelo estándar en la ec.~\eqref{eq:polarhiggs}, los cuatro grados de libertad de $\Phi$, pueden escribirse en forma polar con la parte real neutra desplazada para generar la ruptura espontánea de la simetría $SU(2)_L\times  U(1)_Y$. De este modo, y sin perdida de generalidad
+Retornando al doblete de Higgs del modelo estándar en la ec.~\eqref{eq:polarhiggs}, los cuatro grados de libertad de $\Phi$, pueden escribirse en forma polar con la parte real neutra desplazada para generar la ruptura espontánea de la simetría $\operatorname{SU}(2)_L\times  U(1)_Y$. De este modo, y sin perdida de generalidad
 \begin{align}
 \label{eq:92qft}
   {\Phi}=&e^{i G_j(x)T^j}
@@ -729,9 +779,9 @@ Retornando al doblete de Higgs del modelo estándar en la ec.~\eqref{eq:polarhig
   \end{pmatrix}.
 \end{align}
 
-Para $SU(2)_L\times  U(1)_Y$ tenemos cuatro generadores y cuatro bosones gauge. De acuerdo a la parametrización en ec.~\eqref{eq:92qft} esperamos que aparezcan tres bosones de Goldstone y un campo de Higgs con masa, de manera que quedará un generador no roto correspondiente a una simetría remanente del vacío $U(1)_Q$
+Para $\operatorname{SU}(2)_L\times  U(1)_Y$ tenemos cuatro generadores y cuatro bosones gauge. De acuerdo a la parametrización en ec.~\eqref{eq:92qft} esperamos que aparezcan tres bosones de Goldstone y un campo de Higgs con masa, de manera que quedará un generador no roto correspondiente a una simetría remanente del vacío $U(1)_Q$
 \begin{equation}
-  SU(2)_L\times  U(1)_Y\overset{\langle\widetilde{\Phi}\rangle}{\longrightarrow}U(1)_Q.
+  \operatorname{SU}(2)_L\times  U(1)_Y\overset{\langle\widetilde{\Phi}\rangle}{\longrightarrow}U(1)_Q.
 \end{equation}
 
 Se espera entonces que el espectro consista de un bosón de Higgs, tres bosones gauge masivos, y un bosón gauge sin masa.
@@ -796,7 +846,7 @@ Entonces
   \end{pmatrix}.
 \end{align}
 
-El correspondiente productor escalar $\operatorname{SU}(2)_L$ es:
+El correspondiente productor escalar $\operatorname{\operatorname{SU}}(2)_L$ es:
 \begin{align}
   \mathcal{L}_{WBH}=&\frac{1}{2}\widetilde{\begin{pmatrix}
     -\frac{i}{\sqrt{2}}g{W^\mu}^+(H+v)\\
@@ -968,7 +1018,7 @@ tenemos
   =&\frac{1}{2}\partial^\mu H\partial_\mu H-V(H)\nonumber\\
   &+\frac{1}{2}m_W^2{W^\mu}^-W_\mu^+ \left(\frac{H}{v}+1 \right)^2
     +\frac{1}{2}m_W^2{W^\mu}^-W_\mu^+\left(\frac{H}{v}+1 \right)^2
-    +\frac{1}{2}m_Z^2Z^\mu Z_\mu\left(\frac{H}{v}+1 \right)^2\,,
+    +\frac{1}{2}m_Z^2Z^\mu Z_\mu\left(\frac{H}{v}+1 \right)^2,
 \end{align}
 donde el termino $1$ en la expansión binomial $\left({H}/{v}+1 \right)^2$ corresponde al
 término de masa en cada caso:
@@ -1023,12 +1073,14 @@ tal que
 
 \bigskip
 \noindent
-\textbf{Ejercicio}: Demostrar
+\textbf{Ejercicio}: Demostrar que
+
 \begin{align}
-\mathcal{L}_{\text{leptons}}= &   i \widetilde{L}\cdot\overline{\sigma}^\mu\mathcal{D}_\mu L+i \left( e_R \right)^{\dagger}{\sigma}^\mu\mathcal{D}_\mu e_R \nonumber\\
-=&\mathcal{L}_{\text{kinetic}}+\mathcal{L}_{W L}+  \mathcal{L}_{A Z L}\,,
+  \mathcal{L}_{\text{fermion}}^{\text{lepton}}=& i \widetilde{L}\cdot\overline{\sigma}^\mu\mathcal{D}_\mu L+  i \left( e_R \right)^{\dagger}{\sigma}^\mu\mathcal{D}_\mu e_R \nonumber\\
+ =&\mathcal{L}_{\text{kinetic}}+
+\mathcal{L}_{WL}+\mathcal{L}^{\text{int}}_{\text{QED}}+ \mathcal{L}_{ZL}\,,
 \end{align}
-dados en ecs.~\eqref{eq:knt}, \eqref{eq:lwl}, y~\eqref{eq:lazlf}, usando directamente la expresión para la derivada covariante para un doblete, en esta caso $L$, dada  en la ec.~\eqref{eq:dercovsu2L}.
+dados en las ecs.~\eqref{eq:knt}, \eqref{eq:lwl}, \eqref{eq:LQED} y \eqref{eq:zneus}, usando directamente la expresión para la derivada covariante para un doblete, en esta caso $L$, dada  en la ec.~\eqref{eq:dercovsu2L}.
 
 
 \subsection{Auto interacciones}
@@ -1067,12 +1119,19 @@ donde
 \begin{frame}[fragile,allowframebreaks]
 En el gauge unitario
 \begin{align}
-  \mathcal{L}_{\text{Yukawa}}=& h_e \left( e_R \right)^{\dagger}\,\epsilon^{ab}L_a\widetilde{\Phi}_b+\text{h.c}\nonumber\\
+  \label{eq:lyuklep}
+  \mathcal{L}_{\text{Yukawa}}^{\text{lepton}}=& h_e \left( e_R \right)^{\dagger}\,\epsilon^{ab}L_a\widetilde{\Phi}_b+\text{h.c}\nonumber\\
 =&\frac{h_e}{\sqrt{2}}\left[\left( e_L \right)^{\dagger}e_R+\left( e_R \right)^{\dagger}e_L\right]
 \left[H(x)+v\right]\nonumber\\
 =&\frac{h_ev}{\sqrt{2}}\left[\left( e_L \right)^{\dagger}e_R+\left( e_R \right)^{\dagger}e_L\right]
 \left[\frac{H(x)}{v}+1\right].
 \end{align}
+Note que de forma autoconsistente
+\begin{align}
+ -Y_R+ Y_L-Y_{\Phi}= -Q_e+ Y_L-Y_{\Phi}=1-1/2-1/2=0\,.
+\end{align}
+
+
 Definiendo
 \begin{align}
   m_e=\frac{h_ev}{\sqrt{2}}
@@ -1102,227 +1161,38 @@ y usando la ec.~\eqref{eq:mwd}, podemos escribir
 \end{align*}
 Vemos entonces que si la masa de los fermiónes no es fundamental sino
 emergente, necesariamente se predice la existencia de interacciones
-entre fermiones y el Higgs que son proporcionales a la masa del ferión
-que recibe la masa desde la RES!
-
+entre fermiones y el Higgs que son proporcionales a la masa del fermión
+que recibe la masa desde la RES.
 \end{frame}
 
-
-
-\section{Una teoría para la primera generación}
-
-
-
-
-\subsection{Interacciones débiles Fermión-gauge }
-
-\begin{frame}[fragile,allowframebreaks]
-De la ec.~\eqref{eq:L0} tenemos
-\begin{align}
-  \label{eq:lfermion}
-  \mathcal{L}_{\text{fermion}}=&i \widetilde{Q}\cdot\overline{\sigma}^\mu\mathcal{D}_\mu Q+i \widetilde{L}\cdot\overline{\sigma}^\mu\mathcal{D}_\mu L+
-i(e_R)^{\dagger}\sigma^\mu\mathcal{D}_\mu {e_R}+i(d_R)^{\dagger}\sigma^\mu\mathcal{D}_\mu {d_R}+i(u_R)^{\dagger}\sigma^\mu\mathcal{D}_\mu {u_R}\,.
-\end{align}
-Donde, 
-\begin{align}
-  \widetilde{Q}\cdot\overline{\sigma}^\mu\mathcal{D}_\mu Q=&
-  \epsilon_{ab}\widetilde{Q}^a\overline{\sigma}^\mu \left( \mathcal{D}_\mu Q \right)^b \nonumber\\
-  \widetilde{L}\cdot\overline{\sigma}^\mu\mathcal{D}_\mu L=&
-  \epsilon_{ab}\widetilde{L}^a\overline{\sigma}^\mu \left( \mathcal{D}_\mu L \right)^b\,.
-\end{align}
-
-Note que las partes derechas involucran necesesariamente una simetría $\operatorname{U}(1)_Y$ de la que debemos obtener la interacción electromagnética entre fermiones derechos. Por eso la implementación la simetría $\operatorname{SU(2)}_L$ debe hacerce en el contexto del Grupo Gauge semisimple $\operatorname{SU(2)}_L\times \operatorname{U}(1)_Y$.
-
-
-\subsection{Interacciones fermiónicas para la primera generación}
-
-
-Generalizando para los otros campos, tenemos
-\begin{align}
-  \label{eq:azl}
-      \mathcal{L}_{A Z L}\to\sum_{F=Q,L,e_R,d_R,u_R}
-\left\{  \frac{e}{2c_W s_W}\widetilde{F}\cdot\overline{\sigma}^{\mu}\left[ \tau_3-2s_W^2 Q_F\right]F Z_\mu
-       +e\widetilde{F}\cdot\overline{\sigma}^\mu Q_F F A_\mu\right\},
-\end{align}
-con
-\begin{align}
-  \widetilde{F}\cdot\overline{\sigma}^{\mu} \to F^{\dagger}\sigma^{\mu} \qquad \text{for}\quad F=e_R,d_R,u_R\,.
-\end{align}
-
-
-
-
-Generalizando para todos los campos:
-\begin{align}
-  \label{eq:wl}
-   \mathcal{L}_{W L}\to&\frac{g_2}{\sqrt{2}}\left[{\nu_L}^{\dagger}\overline{\sigma}^\mu e_LW_\mu^++
-{u_L}^{\dagger}\overline{\sigma}^\mu d_LW_\mu^++\text{h.c}\right]\,.
-\end{align}
-
-
-
-Usando los acoplamientos gauge de los quarks con los gluones \eqref{eq:qcdgauge}, de los fermiones con el $W_\mu^\pm$  \eqref{eq:wl} y  con $Z_\mu$ y $A_\mu$ \eqref{eq:azl} para expandir $\mathcal{L}_{\text{fermion}}$ en \eqref{eq:lfermion}, tenemos
-\begin{align}
-\label{eq:sm1g2}
- \mathcal{L}_{\text{fermion}}=&i \widetilde{Q}\cdot \overline{\sigma}^\mu\mathcal{D}_\mu Q+i \widetilde{L}\cdot\overline{\sigma}^\mu\mathcal{D}_\mu L+
-i\left(e_R \right)^{\dagger}\sigma^\mu\mathcal{D}_\mu {e_R}+i(d_R)^\dagger \sigma^\mu\mathcal{D}_\mu {d_R}+i(u_R)^\dagger \sigma^\mu\mathcal{D}_\mu {u_R}\nonumber\\
-  =&i(u_L)^\dagger \overline{\sigma}^\mu\partial_\mu u_L+i(u_R)^\dagger \sigma^\mu{\partial}_\mu {u_R}+i(d_L)^\dagger \overline{\sigma}^\mu\partial_\mu d_L+i(d_R)^\dagger \sigma^\mu{\partial}_\mu {d_R}\nonumber\\
-&+i(e_L)^\dagger \overline{\sigma}^\mu{\partial}_\mu e_L
-+i\left(e_R \right)^{\dagger}\sigma^\mu{\partial}_\mu {e_R}+i(\nu_L)^\dagger \overline{\sigma}^\mu{\partial}_\mu \nu_L\nonumber\\
-&+g_s \left((u_L)^\dagger \overline{\sigma}^\mu\frac{\lambda^a}{2}u_L+(u_R)^\dagger {\sigma}^{\mu}\frac{\lambda^a}{2}u_R
-+(d_L)^\dagger \overline{\sigma}^{\mu}\frac{\lambda^a}{2}d_L+ (d_R)^\dagger \sigma^{\mu}\frac{\lambda^a}{2}d_R\right)G_{\mu}^a\nonumber\\
-&+\frac{g_2}{\sqrt{2}}\left[(\nu_L)^\dagger \overline{\sigma}^\mu e_LW_\mu^++
-(u_L)^\dagger \overline{\sigma}^\mu d_LW_\mu^++\text{h.c}\right]\nonumber\\
-&+\sum_{F=Q,L,e_R,d_R,u_R}\frac{e}{2c_W s_W}\widetilde{F}\cdot\overline{\sigma}^\mu\left[ \tau_3-2s_W^2\widehat{Q}_L\right]F Z_\mu\nonumber\\
-&+e\left[(e_L)^\dagger \overline{\sigma}^\mu \widehat{Q}_e e_L+\left(e_R \right)^{\dagger}\sigma^\mu \widehat{Q}_e e_R\right.\nonumber\\
-  &\qquad\left.+(u_L)^\dagger \overline{\sigma}^\mu \widehat{Q}_u u_L+(u_R)^\dagger {\sigma}^\mu \widehat{Q}_u u_R
-+(d_L)^\dagger \overline{\sigma}^\mu \widehat{Q}_d d_L+(d_R)^\dagger \sigma^\mu \widehat{Q}_d d_R\right] A_\mu\,.
-\end{align}
-\end{frame}
-
-
-\subsection{Simetría remanente}
-
-
-
-Para los campos del Lagrangiano, debemos asegurarnos de que todos los términos invariantes gauge locales y renormalizables sean considerados. De hecho, términos de interacción entre fermiones y el campo escalar, correspondiente a una interacción de Yukawa, son invariantes bajo transformaciones $SU(3)_c\times  SU(2)_L\times  U(1)_Y$ si
-\begin{align*}
-  Y_L+Y_{\widetilde{\Phi}}-Q_{e}=&0\\
-  Y_Q+Y_{\widetilde{\Phi}}-Q_{d}=&0\\
-  Y_Q+Y_{\Phi}-Y_{u}=Y_Q-Y_{\widetilde{\Phi}}-Q_{u}=&0\,,
-\end{align*}
-donde hemos fijado $Y_{\widetilde{\Phi}}=-Y_\Phi$. Solucionado para las hipercargas de los dobletes tenemos
-\begin{align}
-\label{eq:yyy}
-Y_L=&\frac{1}{2}\left( -Q_d+2Q_e+Q_u \right)=-\frac{1}{2}  \nonumber\\
-Y_Q=&\frac{1}{2}\left( Q_d+Q_u \right)=\frac{1}{6} \nonumber\\
-Y_{\widetilde{\Phi}}=-Y_{\Phi}=&\frac{1}{2}\left( Q_d-Q_u \right)=-\frac{1}{2}\,.
-\end{align}
-
-\noindent
-\textbf{Ejercicio}: Demostrar que los valores numéricos de las hipercargas en \eqref{eq:yyy} son consistentes con la relación de Gell-Mann--Nishijima \eqref{eq:gn}:
-\begin{align}
- \widehat{Q}=&T_3+\widehat{Y}\,.
-\end{align}
-
-De este modo, es consistente interpretar los superíndices de $\phi^+$ y $\phi^0$ en la ec.~\eqref{eq:Phi} como las cargas eléctricas de las componentes del doblete de Higgs, $\Phi$.
-
-
-
-\end{frame}
-
-\subsection{Lagrangiano  de Yukawa }
-
-\begin{frame}[fragile,allowframebreaks]
-En el gauge unitario
-\begin{align}
-  \mathcal{L}_{\text{Yukawa}}=& h_e \left( e_R \right)^{\dagger}\,\epsilon^{ab}L_a\widetilde{\Phi}_b +
-      h_d \left( d_R \right)^{\dagger}\,\epsilon^{ab}Q_a\widetilde{\Phi}_b +
-      h_u \left( u_R \right)^{\dagger}\,\epsilon_{ab}Q_a{\Phi}_{b}+\text{h.c}\nonumber\\
-=&\frac{1}{\sqrt{2}}\left[h_e((e_L)^{\dagger}e_R+(e_R)^{\dagger}e_L)+
-h_d((d_L)^{\dagger}d_R+(d_R)^{\dagger}d_L)
-+h_u((u_L)^{\dagger}u_R+(u_R)^{\dagger}u_L)\right]\times\nonumber\\
-&\qquad\left[H(x)+v\right]\,.
-\end{align}
-Definiendo
-\begin{align}
-  m_f=\frac{h_fv}{\sqrt{2}}
-\end{align}
-tenemos
-\begin{align}
-\label{eq:lyuklr}
-  \mathcal{L}_{\text{Yukawa}}=&m_e (e_L)^{\dagger}e_R+m_d (d_L)^{\dagger}d_R+m_u(u_L)^{\dagger}u_R
-+\frac{m_e}{v}  (e_L)^{\dagger}e_RH+\frac{m_d}{v}  (d_L)^{\dagger}d_RH+\frac{m_u}{v} (u_L)^{\dagger}u_RH
-+\text{h.c}\,.
-\end{align}
-
-Definiendo los fermiones de Dirac, términos de espinores de Weyl como
-\begin{align}
-  e=
-  \begin{pmatrix}
-    e_L\\
-    e_R
-  \end{pmatrix},\qquad d=
-  \begin{pmatrix}
-    d_L\\
-    d_R
-  \end{pmatrix},\qquad u=
-  \begin{pmatrix}
-    u_L\\
-    u_R
-  \end{pmatrix}
-\end{align}
-y usando la ec.~\eqref{eq:mwd}, podemos escribir
-\begin{align*}
-\mathcal{L}=&\frac{v}{\sqrt{2}}\left(h_e\overline{e}e+h_d\overline{d}d
-+h_u\overline{u}u\right)
-\left[\frac{H(x)}{v}+1\right].
-\end{align*}
-
-Definiendo
-\begin{align}
-  m_f=\frac{h_fv}{\sqrt{2}}
-\end{align}
-tenemos
-\begin{align}
-\label{eq:lyukfin}
- \mathcal{L}_{\text{Yukawa}}=&m_e\overline{e}e+m_d\overline{d}d
-+m_u\overline{u}u+
-  \frac{m_e}{v}\overline{e}e H+\frac{m_d}{v}\overline{d}d H
-+\frac{m_u}{v}\overline{u}u H\,.
-\end{align}
-Vemos entonces que si la masa de los fermiónes no es fundamental sino
-emergente, necesariamente se predice la existencia de interacciones
-entre fermiones y el Higgs!
-
-\end{frame}
-
-
-
-\section{Lagrangiano completo en el gauge unitario}
-
-Recopilando los resultados para $\mathcal{L}_{WBH}$
-\eqref{eq:lwbhfin}, $\mathcal{L}_{\text{Yukawa}}$ \eqref{eq:lyuklr},
-$\mathcal{L}_{\text{fermion}}$ \eqref{eq:azl}, y
-$\mathcal{L}_{\text{gauge}}$ \eqref{eq:lgaguefin}, tenemos para
-$f=\nu_L,e_L,e_R,u_L,u_R,d_L,d_R$; $q=u_{L,R},d_{L,R}$ con
-\begin{align}
-f'=&
-\begin{cases}
-  e &\text{for}\quad f=\nu\\
-  d &\text{for}\quad f=u\\
-\end{cases}\,,&
-\widetilde{f}\cdot\overline{\sigma}^{\mu}=&
-  \begin{cases}
-    f^{\dagger}\overline{\sigma}^{\mu} & \text{for}\quad f=\nu_L,e_L,d_L,u_L\\
-    f^{\dagger}{\sigma}^{\mu} & \text{for}\quad f=e_R,d_R,u_R\\
-  \end{cases},
-\end{align}
-\begin{align}
-  t_f=
-  \begin{cases}
-   1 & \text{for}\quad   f=\nu_L,u_L\\
-   -1 & \text{for}\quad f=e_L,d_L,\\
-   0 & \text{for}\quad f_R
-  \end{cases}
-\end{align}
-que
+\subsection{Lagrangiano completo para leptones}
+Recopilando los resultados para 
+$\mathcal{L}_{\text{fermion}}^{\text{lepton}}$ \eqref{eq:fermlep}, $\mathcal{L}_{WBH}$
+\eqref{eq:lwbhfin}, $\mathcal{L}_{\text{gauge}}$ \eqref{eq:lgaguefin}, $\mathcal{L}_{\text{Yukawa}}$ \eqref{eq:lyuklep}, y
+ tenemos
 \begin{frame}[fragile,allowframebreaks]
 \begin{align}
-\label{eq:lsmw}
-   \mathcal{L}_{\text{1 gen}}=&
-\sum_f  i \widetilde{f}\cdot\overline{\sigma}^\mu\partial_\mu f 
-+\sum_{g=e,u,d} m_g \left[ \left( g_L \right)^{\dagger} g_R+\text{h.c} \right]
+\label{eq:lsmwl}
+   \mathcal{L}^{\text{lepton}}=&
+  i \widetilde{L}\cdot\overline{\sigma}^\mu\partial_\mu L
+  +i \left( e_R \right)^{*} {\sigma}^\mu\partial_\mu e_R 
++m_e \left[ \left( e_L \right)^{\dagger} e_R+\text{h.c} \right]\left( \frac{H}{v}+1\right)
 \nonumber\\
 &-\tfrac{1}{4}F^{\mu\nu} F_{\mu\nu}-\tfrac{1}{4}Z^{\mu\nu} Z_{\mu\nu}-\tfrac{1}{2}(F_W^\dagger)^{\mu\nu} (F_W)_{\mu\nu}
-- \tfrac{1}{4}\widetilde{G}^{\mu\nu}_a \widetilde{G}_{\mu\nu}^a\nonumber\\
+\nonumber\\
 &+\tfrac{1}{2}\partial^\mu H\partial_\mu H
--\frac{1}{2}m_H^2H^2\left(1+\frac{H}{v}+\frac{H^2}{4v^2}\right)\nonumber\\
-&+\left(m_W^2{W^\mu}^-W_\mu^++\frac{1}{2}m_Z^2Z^\mu Z_\mu\right)\left(1+2\frac{H}{v}+\frac{H^2}{v^2}\right)\nonumber\\
-&+g_s\sum_q  \widetilde{q}\cdot\overline{\sigma}^\mu \left( \frac{\lambda_a}{2} \right) q\, G_\mu^a+e\sum_f  \widetilde{f}\cdot\overline{\sigma}^\mu Q_f f\, A_\mu \nonumber\\
-&+\frac{e}{2\cos\theta_W \sin\theta_W} \sum_f\widetilde{f}\cdot\overline{\sigma}^{\mu}\left[t_f-2s_W^2Q_f\right]f Z_\mu \nonumber\\
-&+\frac{g_2}{\sqrt{2}}\left[\sum_{f=\nu,u}(f_L)^\dagger \overline{\sigma}^\mu f'_LW_\mu^++\text{h.c}\right]
-+\sum_{g=e,u,d} \frac{m_g}{v} \left[ \left( g_L \right)^{\dagger} g_R+\text{h.c} \right]H\nonumber\\
+-\frac{1}{2}m_H^2H^2\left(\frac{H}{2v}+1\right)^2\nonumber\\
+&+\left(m_W^2{W^\mu}^-W_\mu^++\frac{1}{2}m_Z^2Z^\mu Z_\mu\right)\left(\frac{H}{v}+1\right)^2\nonumber\\
+ &+e \left( e_L \right)^{*}\cdot\overline{\sigma}^\mu e_L\, A_\mu
++e \left( e_R \right)^{*}{\sigma}^\mu e_R\, A_\mu \nonumber\\
+&+\frac{e}{2\cos\theta_W \sin\theta_W}
+\left\{
+ \left( \nu_L \right)^{*}\overline{\sigma}^{\mu}\nu_L
+-\left( e_L \right)^{*}\overline{\sigma}^{\mu}e_L
++2\sin^2\theta_W \left[\left( e_L \right)^{*}\overline{\sigma}^{\mu}e_L
++\left( e_R \right)^{*}{\sigma}^{\mu}e_R\right]
+\right\} Z_\mu \nonumber\\
+&+\frac{g_2}{\sqrt{2}}\left[(\nu_L)^* \overline{\sigma}^\mu e_LW_\mu^++\text{h.c}\right] \nonumber\\
 %\end{align*}
 %\begin{align*}
 %  \phantom{\mathcal{L}_{\text{1 gen}}=}
@@ -1331,15 +1201,11 @@ que
 &-\frac{e^2}{2\sin^2\theta_W}\left[\left(W_\mu^+{W^\mu}^-\right)^2-W_\mu^+{W^\mu}^+W_\nu^-{W^\nu}^-\right]\nonumber\\
 &-e^2\cot^2\theta_W\left(W_\mu^+{W^\mu}^-Z_\nu Z^\nu-W_\mu^+Z^\mu W_\nu^-Z^\nu\right)\nonumber\\
 &-e^2\cot^2\theta_W\left(2W_\mu^+{W^\mu}^-A_\nu Z^\nu-W_\mu^+A^\mu W_\nu^-Z^\nu-W_\mu^+Z^\mu W_\nu^-A^\nu\right)\nonumber\\
-&-e^2\left(W_\mu^+{W^\mu}^-A_\nu A^\nu-W_\mu^+A^\mu W_\nu^-A^\nu\right)\nonumber\\
-&- \frac{1}{4}\left(g_s\widetilde{G}^{\mu\nu}_af_{a d e}G^d_\mu G^e_\nu
-    +g_sf^{a b c}G_b^\mu G_c^\nu\widetilde{G}_{\mu\nu}^a
-    +g_s^2f^{a b c}f_{a d e}G_b^\mu G_c^\nu G^d_\mu G^e_\nu\right)\,.
+&-e^2\left(W_\mu^+{W^\mu}^-A_\nu A^\nu-W_\mu^+A^\mu W_\nu^-A^\nu\right).
 \end{align}
 \end{frame}
 
-\section{Notación de Dirac para la primera generación}
-
+\subsection{Notación de Dirac}
 
 Para escribir los campos de Weyl en términos de espinores de Dirac, debemos definir
 \begin{align}
@@ -1386,18 +1252,18 @@ Para escribir los campos de Weyl en términos de espinores de Dirac, debemos def
 0 &\sigma_1\sigma_2\sigma_3\\
 \end{pmatrix}\nonumber\\
 =&\begin{pmatrix}
-\sigma_4 & 0 \\
-0 &-\sigma_4\\
+-\sigma_0 & 0 \\
+0 &\sigma_0\\
 \end{pmatrix}
 \end{align}
 donde
 \begin{align}
-  \sigma_4=i\sigma_1\sigma_2\sigma_3\,,
+  -\sigma_0=i\sigma_1\sigma_2\sigma_3\,,
 \end{align}
 
 Teniendo en cuenta que
 \begin{align}
-  \sigma_4=i\sigma_1\sigma_2\sigma_3=&
+  -\sigma_0=i\sigma_1\sigma_2\sigma_3=&
   i\begin{pmatrix}
     0 & 1 \\
     1 & 0 
@@ -1481,11 +1347,29 @@ as matrices $P_{L,R}$ tienen las propiedades
 \end{align}
 Usando la ec.~(\ref{eq:218qft})
 \begin{align}
+  \label{eq:LRgammamu}
   P_{L,R}\gamma^\mu=\frac{1\mp\gamma_5}{2}\gamma^\mu=\gamma^\mu\frac{1\pm\gamma_5}{2}=\gamma^\mu P_{R,L}
 \end{align}
+Por consiguiente
+\begin{align}
+  \overline{\Psi_{L,R}}=&\left(\Psi_{L,R} \right)^{\dagger}\gamma^0 \nonumber\\
+  =&\left(P_{L,R}\Psi \right)^{\dagger}\gamma^0 \nonumber\\
+  =&\Psi^{\dagger}P_{L,R}\gamma^0 \,,
+\end{align}
+y usando \eqref{eq:LRgammamu}
+\begin{align}
+  \overline{\Psi_{L,R}}=& \Psi^{\dagger}\gamma^0 P_{R,L} \nonumber\\
+=&\overline{\Psi} P_{R,L}\,.
+\end{align}
+
+
+
 
 De modo que
 \begin{align}
+  \overline{\Psi_L}\gamma^{\mu}\Psi_L=
+    \overline{\Psi}P_R\gamma^{\mu}P_{L}\Psi=
+  \overline{\Psi}\gamma^{\mu}P_L^2\Psi=
   \overline{\Psi}\gamma^{\mu}P_{L}\Psi=&\Psi^{\dagger}\gamma^0\gamma^{\mu}P_L \Psi \nonumber\\
 =&  \begin{pmatrix}
      \psi_L^{\dagger} & \psi_R^{\dagger}  
@@ -1524,7 +1408,7 @@ De modo que
 \end{align}
 Similarmente
 \begin{align}
-\overline{\Psi}\gamma^{\mu}P_{R}\Psi=&   \psi_R^{\dagger} {\sigma}^{\mu}\psi_R\,.
+\overline{\Psi_R}\gamma^{\mu}\Psi_R=\overline{\Psi}\gamma^{\mu}P_{R}\Psi=&   \psi_R^{\dagger} {\sigma}^{\mu}\psi_R\,.
 \end{align}
 
 
@@ -1533,16 +1417,16 @@ Podemos extender ahora los resultados de la ec.~\eqref{eq:mwd} para corrientes e
 \begin{align}
 \label{eq:8}
 \color{red}\text{S:} &&  \overline{\Psi}\Psi =& \left( \psi_R \right)^\dagger \psi_L+\left( \psi_L \right)^{\dagger}\psi_R \nonumber\\
-\text{P:} &&  \overline{\Psi}\gamma_5\Psi =& \left( \psi_R \right)^\dagger \psi_L-\left( \psi_L \right)^{\dagger}\psi_R \nonumber\\
+\text{P:} &&  \overline{\Psi}\gamma_5\Psi =& \left( \psi_L \right)^{\dagger}\psi_R-\left( \psi_R \right)^\dagger \psi_L \nonumber\\
 \color{red}\text{V:}& &  \overline{\Psi}\gamma^{\mu}\Psi=& \psi_L^{\dagger}\overline{\sigma}^{\mu}\psi_L+\psi_R^{\dagger}\sigma^{\mu}\psi_{R}\nonumber\\
-\text{A:}& &  \overline{\Psi}\gamma^{\mu}\gamma_5\Psi=& \psi_L^{\dagger}\overline{\sigma}^{\mu}\psi_L-\psi_R^{\dagger}\sigma^{\mu}\psi_{R}\nonumber\\
+\text{A:}& &  \overline{\Psi}\gamma^{\mu}\gamma_5\Psi=&\psi_R^{\dagger}\sigma^{\mu}\psi_{R}- \psi_L^{\dagger}\overline{\sigma}^{\mu}\psi_L\nonumber\\
 \color{red}\text{V-A:} && \overline{\Psi}\gamma^{\mu}P_L\Psi=& \psi_L^{\dagger}\overline{\sigma}^{\mu}\psi_L\nonumber\\
 \text{V+A:} && \overline{\Psi}\gamma^{\mu}P_R\Psi=& \psi_R^{\dagger}{\sigma}^{\mu}\psi_R\,.
 \end{align}
 
-Para escribir este Lagrangiano en terminos de espinores de 4 componentes, tomemos algunos casos específicos:
-\begin{itemize}
-\item 
+
+Para escribir el Lagrangiano en términos de espinores de 4 componentes, debemos reescribir los acoplamientos
+fermiónicos del Lagrangiano en~\eqref{eq:lsmwl}. Entonces
 \begin{align}
 \label{eq:wf4}
   \overline{\nu_L}\gamma^\mu e_LW_\mu^+&=\overline{\nu}P_R\gamma^\mu P_LeW_\mu^+\nonumber\\
@@ -1550,7 +1434,282 @@ Para escribir este Lagrangiano en terminos de espinores de 4 componentes, tomemo
 &=\overline{\nu}\gamma^\mu P_LeW_\mu^+\nonumber\\
 &=\frac{1}{2}\overline{\nu}\gamma^\mu(1-\gamma_5)eW_\mu^+\,,
 \end{align}
+y además la parte $\mathcal{L}_{ZL}$ dada en la ec.~\eqref{eq:zneus}. Para poder tener las corrientes en términos de la ec. \eqref{eq:8}, debemos sumar y restar
+$\frac{1}{2}\left( e_R \right)^{\dagger}{\sigma}^\mu e_R $ 
+\begin{align}
+  \mathcal{L}_{ZL}
+  =&\frac{e}{2c_W s_W} \left\{ \left( \nu_L \right)^{*}\overline{\sigma}^\mu \nu_L
+     \phantom{\frac{1}{}2}\right. \nonumber\\
+& \left. 
+  +\frac{1}{2}\left[\left( e_R \right)^{\dagger}{\sigma}^\mu e_R-\left( e_L \right)^{*}\overline{\sigma}^\mu e_L
+      \right]
+      + \left( -\frac{1}{2} +2s_W^2 \right) \left[\left( e_L \right)^{*}\overline{\sigma}^\mu e_L+
+    \left( e_R \right)^{\dagger}{\sigma}^\mu e_R    \right]  
+     \right\}Z_\mu 
+\end{align}
+Claramente la corriente de neutrinos es del tipo $\text{V-A}$, pero la corriente
+de electrones tiene dos contribuciones: una tipo $\text{A}$ con coeficiente $1/2$
+y una tipo $\text{V}$ con coeficiente $-1/2+2\sin^2\theta_W$, como se muestra en la Tabla~\ref{tab:zcoup}.
+Entonces
+\begin{align}
+    \mathcal{L}_{ZL}
+  =&\frac{e}{2c_W s_W} \left\{ \overline{\nu}\gamma^{\mu}P_L\nu
+       +\frac{1}{2} \overline{e} \gamma^{\mu} \gamma_5 e
+      + \left( -\frac{1}{2} +2s_W^2 \right) \overline{e} \gamma^{\mu} e  
+     \right\}Z_\mu \nonumber\\
+  =&\frac{e}{2c_W s_W} \left\{
+     \overline{\nu}\gamma^{\mu}\frac{\left( 1 -\gamma_5 \right)}{2}\nu
++ \overline{e} \gamma^{\mu} \left[ \left(- \frac{1}{2}+ 2s_W^2 \right) +\frac{1}{2}\gamma_5\right] e
+     \right\}Z_\mu \nonumber\\
+ =&\frac{e}{2c_W s_W} \left\{
+     \overline{\nu}\gamma^{\mu}\frac{\left( 1 -\gamma_5 \right)}{2}\nu
++ \overline{e} \gamma^{\mu} \left[ \frac{\left( -1+4s_W^2 \right)+\gamma_5}{2}\right] e
+     \right\}Z_\mu  \,,
+\end{align}
+Las otras corrientes del modelo con leptones son la corriente tipo $\text{S}$ generada por el Higgs, la tipo $\text{V}$ generada por el fotón
+y la  $\text{V-A}$ generada por los bosones gauge cargados $W_{\mu}^{\pm}$.
 
+\subsection{Lagrangiano completo para leptones en notación de Dirac}
+\begin{frame}[fragile,allowframebreaks]
+\begin{align}
+\label{eq:lsmw}
+  \mathcal{L}_{\text{1 gen}}=&
+  i\overline{\nu}\gamma^\mu\partial_\mu\nu                               
++  \overline{e}\left(i\gamma^\mu\partial_\mu-m_e\right)e
+ +\frac{m_e}{v}\overline{e}e H
+\nonumber\\
+&-\tfrac{1}{4}F^{\mu\nu} F_{\mu\nu}-\tfrac{1}{4}Z^{\mu\nu} Z_{\mu\nu}-\tfrac{1}{2}(F_W^\dagger)^{\mu\nu} (F_W)_{\mu\nu}
+\nonumber\\
+&+\tfrac{1}{2}\partial^\mu H\partial_\mu H
+-\frac{1}{2}m_H^2H^2\left(\frac{H}{2v}+1\right)^2\nonumber\\
+&+\left(m_W^2{W^\mu}^-W_\mu^++\frac{1}{2}m_Z^2Z^\mu Z_\mu\right)\left(\frac{H}{v}+1\right)^2\nonumber\\
+ &+e\, \overline{e}\gamma^{\mu}e\, A_\mu \nonumber\\
+ &+\frac{e}{2\cos\theta_W \sin\theta_W}                             
+\left\{
+\overline{\nu}\gamma^{\mu}\frac{\left( 1 -\gamma_5 \right)}{2}\nu
+   + \overline{e} \gamma^{\mu} \left[ \frac{\left(-1+ 4s_W^2 \right)+\gamma_5}{2}\right]e
+ \right\} Z_\mu \nonumber\\
+ &+\frac{g_2}{2\sqrt{2}}\left[
+\overline{\nu}\gamma^\mu(1-\gamma_5)eW_\mu^++\text{h.c}\right] \nonumber\\
+%\end{align*}
+%\begin{align*}
+%  \phantom{\mathcal{L}_{\text{1 gen}}=}
+&-ie\cot\theta_W\left[(F_W^\dagger)^{\mu\nu}W_\mu^+ Z_\nu-(F_W)^{\mu\nu}W_\mu^- Z_\nu+W_\mu^-W_\nu^+Z^{\mu\nu}\right]\nonumber\\
+&-ie\left[(F_W^\dagger)^{\mu\nu}W_\mu^+ A_\nu-(F_W)^{\mu\nu}W_\mu^- A_\nu+W_\mu^-W_\nu^+F^{\mu\nu}\right]\nonumber\\
+&-\frac{e^2}{2\sin^2\theta_W}\left[\left(W_\mu^+{W^\mu}^-\right)^2-W_\mu^+{W^\mu}^+W_\nu^-{W^\nu}^-\right]\nonumber\\
+&-e^2\cot^2\theta_W\left(W_\mu^+{W^\mu}^-Z_\nu Z^\nu-W_\mu^+Z^\mu W_\nu^-Z^\nu\right)\nonumber\\
+&-e^2\cot^2\theta_W\left(2W_\mu^+{W^\mu}^-A_\nu Z^\nu-W_\mu^+A^\mu W_\nu^-Z^\nu-W_\mu^+Z^\mu W_\nu^-A^\nu\right)\nonumber\\
+&-e^2\left(W_\mu^+{W^\mu}^-A_\nu A^\nu-W_\mu^+A^\mu W_\nu^-A^\nu\right).
+\end{align}
+\end{frame}
+Una vez fijados los acoplamientos fundamentales: $g_1$, $g_2$, $v$ y $\lambda$, los acoplamientos del Lagrangiano pasan a ser predicciones. Es de anotar que la mayoría de ellos ya han sido medidos en los valores predichos por el Lagrangiano anterior. Algunos de los observables asociados con dichos acoplamientos serán discutidos en la Sección~\ref{sec:fenom-electr}.
+
+
+\section{Una teoría para la primera generación}
+
+\subsection{Interacciones débiles Fermión-gauge }
+
+\begin{frame}[fragile,allowframebreaks]
+De la ec.~\eqref{eq:L0} tenemos
+\begin{align}
+  \label{eq:lfermion}
+  \mathcal{L}_{\text{fermion}}=&i \widetilde{Q}\cdot\overline{\sigma}^\mu\mathcal{D}_\mu Q+i \widetilde{L}\cdot\overline{\sigma}^\mu\mathcal{D}_\mu L+
+i(e_R)^{\dagger}\sigma^\mu\mathcal{D}_\mu {e_R}+i(d_R)^{\dagger}\sigma^\mu\mathcal{D}_\mu {d_R}+i(u_R)^{\dagger}\sigma^\mu\mathcal{D}_\mu {u_R}\,.
+\end{align}
+Donde, 
+\begin{align}
+  \widetilde{Q}\cdot\overline{\sigma}^\mu\mathcal{D}_\mu Q=&
+  \epsilon_{ab}\widetilde{Q}^a\overline{\sigma}^\mu \left( \mathcal{D}_\mu Q \right)^b \nonumber\\
+  \widetilde{L}\cdot\overline{\sigma}^\mu\mathcal{D}_\mu L=&
+  \epsilon_{ab}\widetilde{L}^a\overline{\sigma}^\mu \left( \mathcal{D}_\mu L \right)^b\,.
+\end{align}
+
+Note que las partes derechas involucran necesesariamente una simetría $\operatorname{U}(1)_Y$ de la que debemos obtener la interacción electromagnética entre fermiones derechos. Por eso la implementación la simetría $\operatorname{SU(2)}_L$ debe hacerce en el contexto del Grupo Gauge semisimple $\operatorname{SU(2)}_L\times \operatorname{U}(1)_Y$.
+
+
+\subsection{Interacciones fermiónicas para la primera generación}
+
+
+Generalizando para los otros campos, tenemos
+\begin{align}
+  \label{eq:azl}
+      \mathcal{L}_{A Z L}\to\sum_{F=Q,L,e_R,d_R,u_R}
+\left\{  \frac{e}{2c_W s_W}\widetilde{F}\cdot\overline{\sigma}^{\mu}\left[ \tau_3-2s_W^2 Q_F\right]F Z_\mu
+       +e\widetilde{F}\cdot\overline{\sigma}^\mu Q_F F A_\mu\right\},
+\end{align}
+con
+\begin{align}
+  \widetilde{F}\cdot\overline{\sigma}^{\mu} \to F^{\dagger}\sigma^{\mu} \qquad \text{for}\quad F=e_R,d_R,u_R\,.
+\end{align}
+
+
+
+
+Generalizando para todos los campos:
+\begin{align}
+  \label{eq:wl}
+   \mathcal{L}_{W L}\to&\frac{g_2}{\sqrt{2}}\left[{\nu_L}^{\dagger}\overline{\sigma}^\mu e_LW_\mu^++
+{u_L}^{\dagger}\overline{\sigma}^\mu d_LW_\mu^++\text{h.c}\right]\,.
+\end{align}
+
+
+
+Usando los acoplamientos gauge de los quarks con los gluones \eqref{eq:qcdgauge}, de los fermiones con el $W_\mu^\pm$  \eqref{eq:wl} y  con $Z_\mu$ y $A_\mu$ \eqref{eq:azl} para expandir $\mathcal{L}_{\text{fermion}}$ en \eqref{eq:lfermion}, tenemos
+\begin{align}
+\label{eq:sm1g2}
+ \mathcal{L}_{\text{fermion}}=&i \widetilde{Q}\cdot \overline{\sigma}^\mu\mathcal{D}_\mu Q+i \widetilde{L}\cdot\overline{\sigma}^\mu\mathcal{D}_\mu L+
+i\left(e_R \right)^{\dagger}\sigma^\mu\mathcal{D}_\mu {e_R}+i(d_R)^\dagger \sigma^\mu\mathcal{D}_\mu {d_R}+i(u_R)^\dagger \sigma^\mu\mathcal{D}_\mu {u_R}\nonumber\\
+  =&i(u_L)^\dagger \overline{\sigma}^\mu\partial_\mu u_L+i(u_R)^\dagger \sigma^\mu{\partial}_\mu {u_R}+i(d_L)^\dagger \overline{\sigma}^\mu\partial_\mu d_L+i(d_R)^\dagger \sigma^\mu{\partial}_\mu {d_R}\nonumber\\
+&+i(e_L)^\dagger \overline{\sigma}^\mu{\partial}_\mu e_L
++i\left(e_R \right)^{\dagger}\sigma^\mu{\partial}_\mu {e_R}+i(\nu_L)^\dagger \overline{\sigma}^\mu{\partial}_\mu \nu_L\nonumber\\
+&+g_s \left((u_L)^\dagger \overline{\sigma}^\mu\frac{\lambda^a}{2}u_L+(u_R)^\dagger {\sigma}^{\mu}\frac{\lambda^a}{2}u_R
++(d_L)^\dagger \overline{\sigma}^{\mu}\frac{\lambda^a}{2}d_L+ (d_R)^\dagger \sigma^{\mu}\frac{\lambda^a}{2}d_R\right)G_{\mu}^a\nonumber\\
+&+\frac{g_2}{\sqrt{2}}\left[(\nu_L)^\dagger \overline{\sigma}^\mu e_LW_\mu^++
+(u_L)^\dagger \overline{\sigma}^\mu d_LW_\mu^++\text{h.c}\right]\nonumber\\
+&+\sum_{F=Q,L,e_R,d_R,u_R}\frac{e}{2c_W s_W}\widetilde{F}\cdot\overline{\sigma}^\mu\left[ \tau_3-2s_W^2\widehat{Q}_L\right]F Z_\mu\nonumber\\
+&+e\left[(e_L)^\dagger \overline{\sigma}^\mu \widehat{Q}_e e_L+\left(e_R \right)^{\dagger}\sigma^\mu \widehat{Q}_e e_R\right.\nonumber\\
+  &\qquad\left.+(u_L)^\dagger \overline{\sigma}^\mu \widehat{Q}_u u_L+(u_R)^\dagger {\sigma}^\mu \widehat{Q}_u u_R
++(d_L)^\dagger \overline{\sigma}^\mu \widehat{Q}_d d_L+(d_R)^\dagger \sigma^\mu \widehat{Q}_d d_R\right] A_\mu\,.
+\end{align}
+\end{frame}
+
+
+
+
+
+
+
+
+\subsection{Lagrangiano  de Yukawa }
+
+\begin{frame}[fragile,allowframebreaks]
+En el gauge unitario
+\begin{align}
+  \mathcal{L}_{\text{Yukawa}}=& h_e \left( e_R \right)^{\dagger}\,\epsilon^{ab}L_a\widetilde{\Phi}_b +
+      h_d \left( d_R \right)^{\dagger}\,\epsilon^{ab}Q_a\widetilde{\Phi}_b +
+      h_u \left( u_R \right)^{\dagger}\,\epsilon_{ab}Q_a{\Phi}_{b}+\text{h.c}\nonumber\\
+=&\frac{1}{\sqrt{2}}\left[h_e((e_L)^{\dagger}e_R+(e_R)^{\dagger}e_L)+
+h_d((d_L)^{\dagger}d_R+(d_R)^{\dagger}d_L)
++h_u((u_L)^{\dagger}u_R+(u_R)^{\dagger}u_L)\right]\times\nonumber\\
+&\qquad\left[H(x)+v\right]\,.
+\end{align}
+Definiendo
+\begin{align}
+  m_f=\frac{h_fv}{\sqrt{2}}
+\end{align}
+tenemos
+\begin{align}
+\label{eq:lyuklr}
+  \mathcal{L}_{\text{Yukawa}}=&m_e (e_L)^{\dagger}e_R+m_d (d_L)^{\dagger}d_R+m_u(u_L)^{\dagger}u_R
++\frac{m_e}{v}  (e_L)^{\dagger}e_RH+\frac{m_d}{v}  (d_L)^{\dagger}d_RH+\frac{m_u}{v} (u_L)^{\dagger}u_RH
++\text{h.c}\,.
+\end{align}
+
+Definiendo los fermiones de Dirac, términos de espinores de Weyl como
+\begin{align}
+  e=
+  \begin{pmatrix}
+    e_L\\
+    e_R
+  \end{pmatrix},\qquad d=
+  \begin{pmatrix}
+    d_L\\
+    d_R
+  \end{pmatrix},\qquad u=
+  \begin{pmatrix}
+    u_L\\
+    u_R
+  \end{pmatrix}
+\end{align}
+y usando la ec.~\eqref{eq:mwd}, podemos escribir
+\begin{align*}
+\mathcal{L}=&\frac{v}{\sqrt{2}}\left(h_e\overline{e}e+h_d\overline{d}d
++h_u\overline{u}u\right)
+\left[\frac{H(x)}{v}+1\right].
+\end{align*}
+
+Definiendo
+\begin{align}
+  m_f=\frac{h_fv}{\sqrt{2}}
+\end{align}
+tenemos
+\begin{align}
+\label{eq:lyukfin}
+ \mathcal{L}_{\text{Yukawa}}=&m_e\overline{e}e+m_d\overline{d}d
++m_u\overline{u}u+
+  \frac{m_e}{v}\overline{e}e H+\frac{m_d}{v}\overline{d}d H
++\frac{m_u}{v}\overline{u}u H\,.
+\end{align}
+Vemos entonces que si la masa de los fermiónes no es fundamental sino
+emergente, necesariamente se predice la existencia de interacciones
+entre fermiones y el Higgs!
+
+\end{frame}
+
+
+
+\subsection{Lagrangiano completo  para al primera generación en el gauge unitario}
+
+Recopilando los resultados para $\mathcal{L}_{WBH}$
+\eqref{eq:lwbhfin}, $\mathcal{L}_{\text{Yukawa}}$ \eqref{eq:lyuklr},
+$\mathcal{L}_{\text{fermion}}$ \eqref{eq:azl}, y
+$\mathcal{L}_{\text{gauge}}$ \eqref{eq:lgaguefin}, tenemos para
+$f=\nu_L,e_L,e_R,u_L,u_R,d_L,d_R$; $q=u_{L,R},d_{L,R}$ con
+\begin{align}
+f'=&
+\begin{cases}
+  e &\text{for}\quad f=\nu\\
+  d &\text{for}\quad f=u\\
+\end{cases}\,,&
+\widetilde{f}\cdot\overline{\sigma}^{\mu}=&
+  \begin{cases}
+    f^{\dagger}\overline{\sigma}^{\mu} & \text{for}\quad f=\nu_L,e_L,d_L,u_L\\
+    f^{\dagger}{\sigma}^{\mu} & \text{for}\quad f=e_R,d_R,u_R\\
+  \end{cases},
+\end{align}
+\begin{align}
+  t_f=
+  \begin{cases}
+   1 & \text{for}\quad   f=\nu_L,u_L\\
+   -1 & \text{for}\quad f=e_L,d_L,\\
+   0 & \text{for}\quad f_R
+  \end{cases}
+\end{align}
+que
+\begin{frame}[fragile,allowframebreaks]
+\begin{align}
+\label{eq:lsmw}
+   \mathcal{L}_{\text{1 gen}}=&
+\sum_f  i \widetilde{f}\cdot\overline{\sigma}^\mu\partial_\mu f 
++\sum_{g=e,u,d} m_g \left[ \left( g_L \right)^{\dagger} g_R+\text{h.c} \right]
+\nonumber\\
+&-\tfrac{1}{4}F^{\mu\nu} F_{\mu\nu}-\tfrac{1}{4}Z^{\mu\nu} Z_{\mu\nu}-\tfrac{1}{2}(F_W^\dagger)^{\mu\nu} (F_W)_{\mu\nu}
+- \tfrac{1}{4}\widetilde{G}^{\mu\nu}_a \widetilde{G}_{\mu\nu}^a\nonumber\\
+&+\tfrac{1}{2}\partial^\mu H\partial_\mu H
+-\frac{1}{2}m_H^2H^2\left(1+\frac{H}{v}+\frac{H^2}{4v^2}\right)\nonumber\\
+&+\left(m_W^2{W^\mu}^-W_\mu^++\frac{1}{2}m_Z^2Z^\mu Z_\mu\right)\left(1+2\frac{H}{v}+\frac{H^2}{v^2}\right)\nonumber\\
+&+g_s\sum_q  \widetilde{q}\cdot\overline{\sigma}^\mu \left( \frac{\lambda_a}{2} \right) q\, G_\mu^a+e\sum_f  \widetilde{f}\cdot\overline{\sigma}^\mu Q_f f\, A_\mu \nonumber\\
+&+\frac{e}{2\cos\theta_W \sin\theta_W} \sum_f\widetilde{f}\cdot\overline{\sigma}^{\mu}\left[t_f-2s_W^2Q_f\right]f Z_\mu \nonumber\\
+&+\frac{g_2}{\sqrt{2}}\left[\sum_{f=\nu,u}(f_L)^\dagger \overline{\sigma}^\mu f'_LW_\mu^++\text{h.c}\right]
++\sum_{g=e,u,d} \frac{m_g}{v} \left[ \left( g_L \right)^{\dagger} g_R+\text{h.c} \right]H\nonumber\\
+%\end{align*}
+%\begin{align*}
+%  \phantom{\mathcal{L}_{\text{1 gen}}=}
+&-ie\cot\theta_W\left[(F_W^\dagger)^{\mu\nu}W_\mu^+ Z_\nu-(F_W)^{\mu\nu}W_\mu^- Z_\nu+W_\mu^-W_\nu^+Z^{\mu\nu}\right]\nonumber\\
+&-ie\left[(F_W^\dagger)^{\mu\nu}W_\mu^+ A_\nu-(F_W)^{\mu\nu}W_\mu^- A_\nu+W_\mu^-W_\nu^+F^{\mu\nu}\right]\nonumber\\
+&-\frac{e^2}{2\sin^2\theta_W}\left[\left(W_\mu^+{W^\mu}^-\right)^2-W_\mu^+{W^\mu}^+W_\nu^-{W^\nu}^-\right]\nonumber\\
+&-e^2\cot^2\theta_W\left(W_\mu^+{W^\mu}^-Z_\nu Z^\nu-W_\mu^+Z^\mu W_\nu^-Z^\nu\right)\nonumber\\
+&-e^2\cot^2\theta_W\left(2W_\mu^+{W^\mu}^-A_\nu Z^\nu-W_\mu^+A^\mu W_\nu^-Z^\nu-W_\mu^+Z^\mu W_\nu^-A^\nu\right)\nonumber\\
+&-e^2\left(W_\mu^+{W^\mu}^-A_\nu A^\nu-W_\mu^+A^\mu W_\nu^-A^\nu\right)\nonumber\\
+&- \frac{1}{4}\left(g_s\widetilde{G}^{\mu\nu}_af_{a d e}G^d_\mu G^e_\nu
+    +g_sf^{a b c}G_b^\mu G_c^\nu\widetilde{G}_{\mu\nu}^a
+    +g_s^2f^{a b c}f_{a d e}G_b^\mu G_c^\nu G^d_\mu G^e_\nu\right)\,.
+\end{align}
+\end{frame}
+
+\section{Notación de Dirac para la primera generación}
+Para escribir este Lagrangiano en terminos de espinores de 4 componentes, tomemos algunos casos específicos:
+\begin{itemize}
 \item
   \begin{align}
 \label{eq:zf4}
