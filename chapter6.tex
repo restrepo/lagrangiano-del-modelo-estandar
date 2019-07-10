@@ -392,7 +392,7 @@ con $\mu^2<0$ y $\lambda>0$. % se reduce a
 El modelo estándar es entonces una combinación de una teoría gauge local $\operatorname{SU}(3)_{c}$ con una simetría gauge local con ruptura espontánea de simetría (RES) $\operatorname{SU}(2)_L\times \operatorname{U}(1)_Y$. A continuación nos enfocaremos de momento en la parte leptónica de  $\operatorname{SU}(2)_L\times \operatorname{U}(1)_Y$ con RES.
 
 \section{Una teoría para leptones}
-Comenzaremos analizando el de sólo leptones de la primera de la primera generación, 
+Comenzaremos analizando una versión simplificada del Lagrangiano con sólo los leptones de la primera de la primera generación, 
 \begin{align}
   \label{eq:smscalarlep}
 \mathcal{L}_{\text{fermion}}^{\text{lepton}}=&i\widetilde{L}\cdot \overline{\sigma}^\mu\mathcal{D}_\mu L 
@@ -403,7 +403,7 @@ Comenzaremos analizando el de sólo leptones de la primera de la primera generac
 %=&(\mathcal{D}_\mu\widetilde{\Phi})^\dagger\mathcal{D}^\mu\widetilde{\Phi}-\mu^2\widetilde{\Phi}^\dagger\widetilde{\Phi}-\lambda(\widetilde{\Phi}^\dagger\widetilde{\Phi})^2\nonumber\\
 -\mathcal{L}_{\text{Yukawa}}^{\text{lepton}}=&  h_e \left( e_R \right)^{\dagger}\,L\cdot \widetilde{\Phi}_b +\text{h.c}
 \end{align}
-sin perdida de generalidad para $\mathcal{L}_{\text{gauge}}$ y $ \mathcal{L}_{WBH}\,$.
+y sin perdida de generalidad para las partes del Lagrangiano $\mathcal{L}_{\text{gauge}}$ y $ \mathcal{L}_{WBH}\,$ que no involucran fermiones.
 
 \subsection{Interacciónes débiles fermión-gauge para leptones}
 
@@ -524,6 +524,7 @@ donde $c_W=\cos\theta_W$, $s_W=\sin\theta_W$.
 
 Para identificar $A_{\mu}$ con el fotón, debemos imponer la condición
 \begin{align}
+  \label{eq:relgn}
 e\widehat{Q}=g_2 s_W T_3+{g_1}c_W\,\widehat{Y}\,.
 \end{align}
 De este modo
@@ -536,59 +537,67 @@ Usando la definición de $L$ tenemos que
  e
   \begin{pmatrix}
     Q_{\nu} \nu_L\\
-       Q_e e_L^{-} 
+       Q_e e_L 
  \end{pmatrix}=
-    \begin{pmatrix}
+    e\begin{pmatrix}
    0\\
-      Q_e e_L^{-} \\
+      Q_e e_L \\
   \end{pmatrix}=
   \begin{pmatrix}
    \left( \frac{1}{2}g_2 s_W +g_1 c_W Y_L \right) \nu_L\\ 
  \left(  -\frac{1}{2}g_2 s_W +g_1 c_W Y_L \right) e_L
   \end{pmatrix}
 \end{align}
-Igualando campos, tenemos las condiciones
+Igualando los coeficientes que acompañanan los campos resultan las dos condiciones
 \begin{align}
-  0= & \frac{1}{2}g_2 s_W +g_1 c_W Y_L  \nonumber\\
+  \label{eq:g2sw}
+  0= & \frac{1}{2}g_2 s_W +g_1 c_W Y_L  \\
+    \label{eq:YL}
 e Q_e=& \left(  -\frac{1}{2}g_2 s_W +g_1 c_W Y_L \right)
 \end{align}
-
-
-Además
+una tercera condición surge de imponer que el electrón derecho se acople apropiadamente al fotón
 \begin{align}
   \label{eq:erel}
  e\widehat{Q} e_R =& \left(g_2 s_W T_3+{g_1}c_W\,\widehat{Y}\right) e_R\nonumber\\  
 e Q_e e_R=& g_1 c_W\,Y_R \, e_R\,.
 \end{align}
-E igualando de nuevo los campos teniendo en cuenta que $e_R=Y$
+con estas condiciones podemos despejar tres incognitas que corresponden a $g_1c_W$, $g_2s_W$ y $Y_L$.
+La primera de ellas la podemos obtener de 
+igualar los coeficientes que acompañanam los campos para la tercera condición, teniendo en cuenta que $\widehat{Q}=\widehat{Y}$ para los campos que no sienten la interacción
+debil asociada a $\operatorname{SU}(2)_L$
 \begin{align}
   e=g_1 c_W\,.
 \end{align}
-
-
-Ya que las partículas derechas no participan de la interacción débil generada por $\operatorname{SU}(2)_L$, su carga eléctrica debe coincidir con la hipercarga, es decir,
-$Q_e=Y_R$. Por lo tanto, de la ec.\eqref{eq:erel}
+Reemplazando en \eqref{eq:g2sw}
 \begin{align}
-  e=g_1\cos\theta_W\,.
+  g_2 s_W = -2e Y_L\,,
+\end{align}
+y reemplzando ambos resultado en \eqref{eq:YL}
+\begin{align}
+  eQ_e=-\frac{1}{2} e+eY_L\,,
+\end{align}
+de donde podemos despejar $Y_L$ 
+\begin{align}
+  Y_L=Q_e+\frac{1}{2}=-1+\frac{1}{2}=-\frac{1}{2}\,.
 \end{align}
 
 
-Separando las condiciones sobre los coeficientes de las condiciones sobre los generadores, tenemos las dos condiciones equivalentes
+
+El resultado final es entonces
 \begin{align}
 \label{eq:esc}
-    e=&g_2\sin\theta_W=g_1 \cos\theta_W\,,
+ Y_L=&-\frac{1}{2}\,,&   e=&g_2\sin\theta_W=g_1 \cos\theta_W\,.
 \end{align}
-y
+La segunda ecuación se puede usara en la ec.~\eqref{eq:relgn} para obtener la predicción en término de los generadores diagonales válida para cualquier campo fermiónico
 \begin{align}
 \label{eq:gn}
  \widehat{Q}=&T_3+\widehat{Y}\,.
 \end{align}
-donde $e$ es la carga eléctrica del electrón, y $\widehat{Q}$ es el generador de carga elétrica conservada asociada a la simetría gauge local $\operatorname{U}(1)_Q$. 
 
 La ec. \eqref{eq:gn}, se conoce como la relación de Gell-Mann--Nishijima, y junto con~\eqref{eq:esc}, establece las condiciones que se deben satisfacer para obtener apropiadamente la QED a partir de la interacción electrodébil asociada al grupo semisimple $SU(2)_L\times  U(1)_Y$.
 
 
-De \eqref{eq:esc}, podemos expresar el ángulo $\theta_W$ en términos de $g_1$ y $g_2$ como
+De la segunda ecuación  \eqref{eq:esc}, podemos expresar el ángulo $\theta_W$ en términos de $g_1$ y $g_2$ como
 \begin{align}
 \label{eq:twa}
   \tan\theta_W=\frac{g_1}{g_2}\,.
@@ -628,15 +637,16 @@ tenemos que
 \end{align}
 donde
 \begin{align}
+  \label{eq:LQED}
      \mathcal{L}^{\text{int}}_{\text{QED}}=&e \widetilde{L}\cdot\overline{\sigma}^\mu \widehat{Q} L A_\mu+
-e \left( e_R \right)^{\dagger}{\sigma}^\mu \widehat{Q} e_R\, A_\mu \nonumber\\
+e \left( e_R \right)^{\dagger}{\sigma}^\mu \widehat{Q} e_R\, A_\mu \\
 \mathcal{L}_{ZL}=&\frac{e}{2c_W s_W} \widetilde{L}\cdot\overline{\sigma}^\mu\left[ \tau_3-2s_W^2\widehat{Q}\right]L Z_\mu
 +\frac{e}{2c_W s_W} \left( e_R \right)^{\dagger}{\sigma}^\mu\left[ 0-2s_W^2\widehat{Q}\right]e_R\, Z_\mu\,.
 \end{align}
+Como las expresiones están en términos de los generadores sin evaluar deben ser válidas para los otros conjuntos apropiados de fermiones.
 
-
-Para mostrar explícitamente que el neutrino izquierdo no se acopla al fotón y que la QED se puede recuperar, 
-debemos encontrar los valores numérico para $Y_L$ y $Y_R$. Partiendo de la relación de Gell-Mann--Nishijima \eqref{eq:gn}
+A modo de ilustración, podemos comprobar
+los valores numéricos para $Y_L$ y $Y_R$ usando directamente la relación de Gell-Mann--Nishijima \eqref{eq:gn}
 \begin{align}
   \widehat{Q}L=&(T_3+Y_L)L \nonumber\\
   \begin{pmatrix}
@@ -659,7 +669,7 @@ debemos encontrar los valores numérico para $Y_L$ y $Y_R$. Partiendo de la rela
     e_L
   \end{pmatrix} \,,
 \end{align}
-podemos establecer que
+de modo que
 \begin{align}
   Q_{\nu}&=0=\frac{1}{2}+Y_L\,, & Q_e&=-1=-\frac{1}{2}+Y_L\,,
 \end{align}
@@ -673,7 +683,7 @@ De la misma forma
 \end{align}
 Note que para campos derechos la hipercarga coincide con la carga eléctrica.
 
-Entonces
+De  la ecuación \eqref{eq:LQED}
 \begin{align}
      \mathcal{L}^{\text{int}}_{\text{QED}}=&e \widetilde{L}\cdot\overline{\sigma}^\mu \widehat{Q} L A_\mu+
 e \left( e_R \right)^{\dagger}{\sigma}^\mu \widehat{Q} e_R\, A_\mu \nonumber\\
@@ -694,9 +704,12 @@ dados en las ecs.~\eqref{eq:knt}, \eqref{eq:lwl} y \eqref{eq:lazlf}. Para obtene
 \end{align}
 Una predicción bastante concreta es que los neutrinos izquierdos se acoplan con el nuevo bosón gage neutro a través del término de interacción
 \begin{align}
-\mathcal{L}_{Z\nu}=  \frac{e}{4c_W s_W}\left( \nu_L \right)^{\dagger} \overline{\sigma}^{\mu} \nu_L Z_\mu\,.
+\mathcal{L}_{Z\nu}=  \frac{e}{4c_W s_W}\left( \nu_L \right)^{\dagger} \overline{\sigma}^{\mu} \nu_L Z_\mu\,,
 \end{align}
-Note que a este nivel el bosón gauge $Z_{\mu}$ es no masivo. Sin embargo para explicar porque dicha interacción no había sido observada al momento de su predicción se tiene que asumir que el bosón gauge $Z_{\mu}$ debe ser muy masivo para que la interacción sea de corto alcance y por consiguiente suprimida con respecto a la de bosones gauge sin masa. 
+que implica la existencia de corrientes neutras en carga eléctrica y por lo tanto abren la posibilidad de un desbalance de energía completo en colisiones electrón positron. Dichas corrientes fueron medidas en 1971 y permitieron una primera determinación del valor de  $\sin\theta_W$.
+
+
+No te que a este nivel el bosón gauge $Z_{\mu}$ es no masivo. Sin embargo para explicar porque dicha interacción no había sido observada al momento de su predicción se tiene que asumir que el bosón gauge $Z_{\mu}$ debe ser muy masivo para que la interacción sea de corto alcance y por consiguiente suprimida con respecto a la de bosones gauge sin masa. 
 
 Por lo tanto, para obtener una teoría realista se debe adicionar un mecanismo de ruptura espontánea de simetría para dar masa a los tres bosones $W_{\mu}^{+}$, $W_{\mu}^{-}$ y $Z_{\mu}$. Dicho mecanismo será discutido en la Sección~\ref{sec:el-gauge-unitario}.
 
