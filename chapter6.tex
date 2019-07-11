@@ -1828,6 +1828,203 @@ donde  $v_f$, $a_f$ estan definidos en la ec.~\eqref{eq:vfaf} y evaluados en la 
 \section{Dinámica de sabor}
 \label{sec:dinamica-de-sabor}
 
+\subsection{Dos generaciones leptónicas}
+\begin{align}
+L_i=&
+\begin{pmatrix}
+  \nu^i_L\\
+  e^i_L
+\end{pmatrix}:&
+  L_1=&
+  \begin{pmatrix}
+    \nu^e_L\\
+    e_L
+  \end{pmatrix},&  L_2=&
+  \begin{pmatrix}
+    \nu^\mu_L\\
+    \mu_L
+  \end{pmatrix}&  e_R^i:\;e_R,\;\mu_R\,.
+\end{align}
+Las interacciones de Yukawa necesitan explicar 2 autovalores correspondientes a las masas del electrón y el muón y las interacciones de corrientes cargadas no involucran observables adicionales pues hay implícita una hipótesis de universalidad cuando se define el neutrino electrónico como el que se acopla al electrón y el neutrino muónico como el que se acopla al muón. Por lo tanto el Lagrangiano más general se obtien simplemente  adicionando una segunda familia que no tiene nigún tipo de mezclas con la primera en nigún sector de Lagrangino. Lo mismo aplica al caso de tres generaciones que se discutirá en detalle más adelante. Por lo tanto postpondremos la discusión al caso de tres generaciones.
+
+\subsection{Dos generaciones de quarks}
+
+
+\begin{align}
+  Q_i^\alpha=&
+\begin{pmatrix}
+  u^{i\alpha}_L\\
+  d^{i\alpha}_L
+\end{pmatrix}:&
+  Q_1^\alpha=&
+  \begin{pmatrix}
+    u^\alpha_L\\
+    d^\alpha_L
+  \end{pmatrix},&  Q_2^\alpha=&
+  \begin{pmatrix}
+    c^\alpha_L\\
+    s^\alpha_L
+  \end{pmatrix},& u_R^i:\;u_R,\;c_R,\nonumber\\
+&&&&&&d_R^i:d_R,\;s_R\,.
+\end{align}
+Cuando la teoría fue formulada por Sheldon Glashow, John Iliopoulos and Luciano Maiani in 1970 (y conocido como el mecanismo GIM~\cite{} ) se predijo la existencia del quark $c$, el cual se descubrió finalmente en 1974. En este caso el potencial de Yukawa deber dar cuenta de las cuatro masas para los quarks y en principio dejar abierta la
+posibilidad que cualquier quark de isospín débil hacía arriba pueda convertirse en cualquier quark de isospín hacia abajo a través de las corrientes cargadas.
+
+Para ilustrar la situación consideremos mezclas sólo en el sector down (El caso más general se tratara más adelante en el contexto de tres generaciones)
+\begin{align}
+  \mathcal{L}_{\text{Yuk}}^{ud}=& \left[ m_u\left( u_R \right)^{\dagger} u_L+m_c \left( c_R \right)^{\dagger}c_L
++  M^{d}_{11}\left( d_R \right)^{\dagger} d_L'+M^d_{12}\left( d_R \right)^{\dagger}s_L' +
+  M^d_{21}\left( s_R \right)^{\dagger}d_L'+M^d_{22}\left( s_R \right)^{\dagger}s_L'      \right]\times \nonumber\\
+& \left( \frac{H}{v} +1\right) \nonumber\\
+=&\left\{ m_u\left( u_R \right)^{\dagger} u_L+m_c \left( c_R \right)^{\dagger}c_L
++\begin{bmatrix}
+     \left( d_R \right)^{\dagger} &  \left( s_R \right)^{\dagger}
+   \end{bmatrix}
+   \begin{bmatrix}
+     M^{d}_{11} & M^{d}_{12} \\
+     M^{d}_{21} & M^{d}_{22} \\                                      
+  \end{bmatrix}
+  \begin{pmatrix}
+    d_L'\\
+    s_L'\\
+  \end{pmatrix}
+     \right\}
+   \left( \frac{H}{v} +1\right) 
+\end{align}
+Una matriz no simétrica es más simple diagonalizar pues requiere una única multiplicación matricial con una matriz de rotación
+\begin{align}
+  V_c= \begin{bmatrix}
+    \cos\theta_c & \sin\theta_c\\
+     -\sin\theta_c & \cos\theta_c  \\
+  \end{bmatrix},
+\end{align}
+bien sea a izquierda o a derecha, es decir la otra matriz que en el caso simétrico corresponde a la transpuesta de la matriz de rotación, en el caso no simétrico se puede escoger como la identidad. Si escogemos multiplicar a derecha, no se generan mezclas en ningún otro sector de Lagrangiano. En la matriz anterior, $\theta_c$ es el ángulo de Cabibbo~\cite{}. Por lo tanto escogeremos el caso más interesante de multiplicación a derecha, es decir
+\begin{align}
+   \begin{bmatrix}
+     M^{d}_{11} & M^{d}_{12} \\
+     M^{d}_{21} & M^{d}_{22} \\                                      
+  \end{bmatrix}
+  \begin{bmatrix}
+    \cos\theta_c & \sin\theta_c\\
+     -\sin\theta_c & \cos\theta_c  \\
+  \end{bmatrix}=
+  \begin{bmatrix}
+    m_d & 0\\
+    0  & m_s\\
+  \end{bmatrix}.
+\end{align}
+El problema se puede invertir de manera que podemos determinar las entradas de la matriz en términos de los autovalores $m_{d}$, $m_s$ y el ángulo de mezcla
+\begin{align}
+  M_{11}=&\frac{m_d\cos\theta_c}{\cos^2\theta_c+\sin^2\theta_c}\,,&
+   M_{12}=&-\frac{m_d\sin\theta_c}{\cos^2\theta_c+\sin^2\theta_c} \nonumber\\
+  M_{21}=&\frac{m_s\sin\theta_c }{\cos^2\theta_c+\sin^2\theta_c}\,,&
+   M_{22}=&\frac{m_s\cos\theta_c }{\cos^2\theta_c+\sin^2\theta_c} \,.
+\end{align}
+
+Haciendo explícitamente la rotación de la base de interacción a la base de autoestados de masa
+\begin{align}
+  \begin{bmatrix}
+    d_L'\\
+    s_L'\\
+  \end{bmatrix}= V_c
+  \begin{bmatrix}
+    d_L\\
+    s_L\\
+  \end{bmatrix}=\begin{bmatrix}
+    \cos\theta_c & \sin\theta_c\\
+    - \sin\theta_c & \cos\theta_c  \\
+  \end{bmatrix}  \begin{bmatrix}
+    d_L\\
+    s_L\\
+  \end{bmatrix},
+\end{align}
+\begin{align}
+  \mathcal{L}_{\text{Yuk}}^{ud}
+=&\left\{ m_u\left( u_R \right)^{\dagger} u_L+m_c \left( c_R \right)^{\dagger}c_L
++\begin{bmatrix}
+     \left( d_R \right)^{\dagger} &  \left( s_R \right)^{\dagger}
+   \end{bmatrix}
+   \begin{bmatrix}
+     M^{d}_{11} & M^{d}_{12} \\
+     M^{d}_{21} & M^{d}_{22} \\                                      
+  \end{bmatrix} V_c V_c^T
+  \begin{pmatrix}
+    d_L'\\
+    s_L'\\
+  \end{pmatrix}
+     \right\}
+   \left( \frac{H}{v} +1\right) \nonumber\\
+=&\left\{ m_u\left( u_R \right)^{\dagger} u_L+m_c \left( c_R \right)^{\dagger}c_L
++\begin{bmatrix}
+     \left( d_R \right)^{\dagger} &  \left( s_R \right)^{\dagger}
+   \end{bmatrix}
+   \begin{bmatrix}
+     m_d & 0 \\
+     0 & m_s \\                                      
+  \end{bmatrix} 
+  \begin{pmatrix}
+    d_L\\
+    s_L\\
+  \end{pmatrix}
+     \right\}
+   \left( \frac{H}{v} +1\right) \nonumber\\
+=&\left[ m_u\left( u_R \right)^{\dagger} u_L+m_c \left( c_R \right)^{\dagger}c_L
++m_d\left( d_R \right)^{\dagger}d_L+ m_s \left( s_R \right)^{\dagger}s_L 
+     \right]
+   \left( \frac{H}{v} +1\right).
+\end{align}
+
+El único sector afectado por la rotación (ver la demostración general más adelante) es el de las corrientes cargadas
+\begin{align}
+  \mathcal{L}_{WQ}=&\frac{g_2}{\sqrt{2}}\left[(u_L)^\dagger \overline{\sigma}^\mu d_L'W_\mu^++
+  (c_L)^\dagger \overline{\sigma}^\mu s_L'W_\mu^++\text{h.c}\right] \nonumber\\
+=&\frac{g_2}{\sqrt{2}}\left\{
+  \begin{bmatrix}
+ (u_L)^\dagger &  (c_L)^\dagger
+  \end{bmatrix}
+ \overline{\sigma}^\mu
+  \begin{bmatrix}
+    d_L' \\
+    s_L'\\
+  \end{bmatrix}
+W_\mu^++\text{h.c}\right\} \nonumber\\
+=&\frac{g_2}{\sqrt{2}}\left\{
+  \begin{bmatrix}
+ (u_L)^\dagger &  (c_L)^\dagger
+  \end{bmatrix}
+ \overline{\sigma}^\mu
+  V_c\begin{bmatrix}
+    d_L \\
+    s_L\\
+  \end{bmatrix}
+W_\mu^++\text{h.c}\right\}\nonumber\\
+=&\frac{g_2}{\sqrt{2}}\left\{
+  \begin{bmatrix}
+ (u_L)^\dagger &  (c_L)^\dagger
+  \end{bmatrix}
+ \overline{\sigma}^\mu
+  \begin{bmatrix}
+    \cos\theta_c d_L+\sin\theta_c S_L\\
+    -\sin\theta_c d_L \cos\theta_c s_L\\
+  \end{bmatrix}
+W_\mu^++\text{h.c}\right\} \nonumber\\
+=&\frac{g_2}{\sqrt{2}}\left\{
+ \left[    \cos\theta_c(u_L)^\dagger  \overline{\sigma}^\mu  d_L
+   + \sin\theta_c (u_L)^\dagger  \overline{\sigma}^\mu s_L
+   - \sin\theta_c (c_L)^\dagger  \overline{\sigma}^\mu d_L
+   + \cos\theta_c (c_L)^\dagger \overline{\sigma}^\mu    s_L
+\right]W_\mu^++\text{h.c}\right\}
+\end{align}
+De hecho, la constante de Fermi asociada a los quarks también es conocida y resulta ser diferente a la constante de Fermi asociada al muón. Sin embargo, la posibilidad de la mezcla nos permite mantener una única constante de Fermi tal que
+\begin{align}
+  G_\beta=G_F V_{c11}=G_F\cos\theta_c\,.
+\end{align}
+
+Esta expresión será discutida más en detalle en la sección de fenomenología~\ref{sec:fenom-electr}. Es de anotar que usar una segunda matriz de rotación diferente a la identidad no afecta el resultado.
+
+\subsection{Tres generaciones}
+
+
 
 \begin{frame}[fragile,allowframebreaks]
 El Modelo Estándar esta compuesto de las siguientes tres familias de fermiones $i=1,2,3$. A cada familia se le asigna una carga de \emph{sabor} diferente
