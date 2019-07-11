@@ -381,6 +381,8 @@ Resumiendo
 Para el potencial escalar usaremos la forma más conveniente del producto matricial para el invariante de $\operatorname{SU}(2)_L$ por que no hay ambigüedad con el conjugado de un campo escalar.
 
 Para los campos del Lagrangiano, debemos asegurarnos de que todos los términos invariantes gauge locales y renormalizables sean considerados. De hecho, términos de interacción entre fermiones y el campo escalar, correspondiente a una interacción de Yukawa, son invariantes bajo transformaciones $SU(3)_c\times  SU(2)_L\times  U(1)_Y$ si
+\end{frame}
+\begin{frame}[fragile,allowframebreaks]
 \begin{align*}
   Y_L+Y_{\widetilde{\Phi}}-Q_{e}=&0\\
   Y_Q+Y_{\widetilde{\Phi}}-Q_{d}=&0\\
@@ -411,6 +413,7 @@ con $\mu^2<0$ y $\lambda>0$. % se reduce a
 El modelo estándar es entonces una combinación de una teoría gauge local $\operatorname{SU}(3)_{c}$ con una simetría gauge local con ruptura espontánea de simetría (RES) $\operatorname{SU}(2)_L\times \operatorname{U}(1)_Y$. A continuación nos enfocaremos de momento en la parte leptónica de  $\operatorname{SU}(2)_L\times \operatorname{U}(1)_Y$ con RES.
 
 \section{Una teoría para leptones de la primera generación}
+\begin{frame}[fragile,allowframebreaks]
 Comenzaremos analizando una versión simplificada del Lagrangiano con sólo los leptones de la primera de generación,
 \begin{align}
   \mathcal{L}^{\text{lepton}}=\mathcal{L}_{\text{fermion}}^{\text{lepton}}+
@@ -422,12 +425,13 @@ donde
 \mathcal{L}_{\text{fermion}}^{\text{lepton}}=&i\widetilde{L}\cdot \overline{\sigma}^\mu\mathcal{D}_\mu L 
 +i(e_R)^{\dagger}\sigma^\mu\mathcal{D}_\mu {e_R}\nonumber\\
   \mathcal{L}_{WBH}=&\widetilde{\left( \mathcal{D}_\mu{\Phi} \right)}\cdot\mathcal{D}^\mu\Phi-\mu^2\widetilde{\Phi}\cdot\Phi-\lambda \left( \widetilde{\Phi}\cdot\Phi \right)^2 \nonumber\\
-\mathcal{L}_{\text{gauge}}=& -\tfrac{1}{4}G^{\mu\nu}_a G_{\mu\nu}^a-\tfrac{1}{4}W^{\mu\nu}_i W_{\mu\nu}^i-\tfrac{1}{4}B^{\mu\nu} B_{\mu\nu}\nonumber\\
+\mathcal{L}_{\text{gauge}}=& -\tfrac{1}{4}W^{\mu\nu}_i W_{\mu\nu}^i-\tfrac{1}{4}B^{\mu\nu} B_{\mu\nu}\nonumber\\
   % =&(\mathcal{D}_\mu\Phi)^\dagger\mathcal{D}^\mu\Phi-\mu^2\Phi^\dagger\Phi-\lambda(\Phi^\dagger\Phi)^2\nonumber\\
 %=&(\mathcal{D}_\mu\widetilde{\Phi})^\dagger\mathcal{D}^\mu\widetilde{\Phi}-\mu^2\widetilde{\Phi}^\dagger\widetilde{\Phi}-\lambda(\widetilde{\Phi}^\dagger\widetilde{\Phi})^2\nonumber\\
 -\mathcal{L}_{\text{Yukawa}}^{\text{lepton}}=&  h_e \left( e_R \right)^{\dagger}\,L\cdot \widetilde{\Phi}_b +\text{h.c}
 \end{align}
 y sin perdida de generalidad para las partes del Lagrangiano $\mathcal{L}_{\text{gauge}}$ y $ \mathcal{L}_{WBH}\,$ que no involucran fermiones.
+\end{frame}
 
 \subsection{Interacciónes débiles fermión-gauge para leptones}
 
@@ -721,6 +725,7 @@ e \left( e_R \right)^{\dagger}{\sigma}^\mu \widehat{Q} e_R\, A_\mu \nonumber\\
 \end{align}
 y la interacción de la electrodinámica cuántica se recupera satisfactoriamente.
 
+\begin{frame}[fragile,allowframebreaks]
 Para obtener la interacción requerida de los $W^{\pm}$ con el $\nu_L$ y $e_L$ dada en la ec~\eqref{eq:lwl} y genera el fotón con las propiedades adecuadas resumidas en la ec.~\eqref{eq:LQED}, el modelo gauge local $\operatorname{SU}(2)_L\times \operatorname{U}(1)_Y$ predice entonces la existencia de nuevas interacciones con un nuevo bosón gauge $Z_{\mu}$ dadas por
 \begin{align}
   \label{eq:zneus}
@@ -737,6 +742,7 @@ Para obtener la interacción requerida de los $W^{\pm}$ con el $\nu_L$ y $e_L$ d
     \left( e_R \right)^{\dagger}{\sigma}^\mu e_R    \right]  
      \right\}Z_\mu\,.     
 \end{align}
+\end{frame}
 Vemos entonces que el $Z_{\mu}$ tiene acoplamientos a las partes izquierdas
 de los leptones y otro acoplamiento que no diferencia partes izquierdas y derechas similar al del fotón, pero
 suprimido por $2\sin^2\theta_W$.
@@ -1100,15 +1106,12 @@ Se debe expresar en la base de $Z_\mu$, $A_\mu$. Los detalles están en \url{htt
 &-\frac{e^2}{2\sin^2\theta_W}\left[\left(W_\mu^+{W^\mu}^-\right)^2-W_\mu^+{W^\mu}^+W_\nu^-{W^\nu}^-\right] \nonumber\\
 &-e^2\cot^2\theta_W\left(W_\mu^+{W^\mu}^-Z_\nu Z^\nu-W_\mu^+Z^\mu W_\nu^-Z^\nu\right)\nonumber\\
 &-e^2\cot^2\theta_W\left(2W_\mu^+{W^\mu}^-A_\nu Z^\nu-W_\mu^+A^\mu W_\nu^-Z^\nu-W_\mu^+Z^\mu W_\nu^-A^\nu\right)\nonumber\\
-&-e^2\left(W_\mu^+{W^\mu}^-A_\nu A^\nu-W_\mu^+A^\mu W_\nu^-A^\nu\right)\nonumber\\
-&- \frac{1}{4}\left(g_s\widetilde{G}^{\mu\nu}_af_{a d e}G^d_\mu G^e_\nu
-    +g_sf^{a b c}G_b^\mu G_c^\nu\widetilde{G}_{\mu\nu}^a
-    +g_s^2f^{a b c}f_{a d e}G_b^\mu G_c^\nu G^d_\mu G^e_\nu\right)\,,
+&-e^2\left(W_\mu^+{W^\mu}^-A_\nu A^\nu-W_\mu^+A^\mu W_\nu^-A^\nu\right),
 \end{align}
 donde
 \begin{align}
   {F}^{\mu\nu}=&\partial^\mu A^\nu_a-\partial^\nu A^\mu\,, &  (F_W)_{\mu\nu}=&\partial_\mu W^+_\nu-\partial_\nu W^+_\mu\nonumber\\
-  {Z}^{\mu\nu}=&\partial^\mu Z^\nu_a-\partial^\nu Z^\mu\,,&  \widetilde{G}^{\mu\nu}=&\partial^\mu G^\nu_a-\partial^\nu G^\mu\,.
+  {Z}^{\mu\nu}=&\partial^\mu Z^\nu_a-\partial^\nu Z^\mu\,,& &% \widetilde{G}^{\mu\nu}=&\partial^\mu G^\nu_a-\partial^\nu G^\mu\,.
 \end{align}
 
 \end{frame}
@@ -1291,6 +1294,7 @@ Teniendo en cuenta que
   \end{pmatrix}\nonumber\\
   =&-\mathbf{1}\,.
 \end{align}
+\begin{frame}[fragile,allowframebreaks]
 Entonces
 \begin{align}
   \gamma_5=&
@@ -1468,7 +1472,7 @@ Entonces
 \end{align}
 Las otras corrientes del modelo con leptones son la corriente tipo $\text{S}$ generada por el Higgs, la tipo $\text{V}$ generada por el fotón
 y la  $\text{V-A}$ generada por los bosones gauge cargados $W_{\mu}^{\pm}$.
-
+\end{frame}
 \subsection{Lagrangiano completo para leptones en notación de Dirac}
 \begin{frame}[fragile,allowframebreaks]
 \begin{align}
@@ -1750,7 +1754,7 @@ donde
 Los valores explícitos para  $v_f$ y $a_f$ en el modelo estándar, están dados en la Tabla~\ref{tab:zcoup}. 
 \end{itemize}
 
-
+\begin{frame}[fragile,allowframebreaks]
 %noinstiki
 \begin{table}  %noinstiki
   \centering %noinstiki
@@ -1763,7 +1767,7 @@ $2a_f$&$1$&$-1$&$1$&$-1$\\
 \label{tab:zcoup}
 \end{table} %noinstiki
 %noinstiki
-
+\end{frame}
 
 Usando las expresiones para pasar de fermiones $L,R$ a los fermiones de Dirac de cuatro compomentes, y las ecuaciones~\eqref{eq:wf4}, \eqref{eq:zf4} tenemos
 \begin{align}
@@ -1849,7 +1853,7 @@ Las interacciones de Yukawa necesitan explicar 2 autovalores correspondientes a 
 
 \subsection{Dos generaciones de quarks}
 
-
+\begin{frame}[fragile,allowframebreaks]
 \begin{align}
   Q_i^\alpha=&
 \begin{pmatrix}
@@ -1867,10 +1871,12 @@ Las interacciones de Yukawa necesitan explicar 2 autovalores correspondientes a 
   \end{pmatrix},& u_R^i:\;u_R,\;c_R,\nonumber\\
 &&&&&&d_R^i:d_R,\;s_R\,.
 \end{align}
-Cuando la teoría fue formulada por Sheldon Glashow, John Iliopoulos and Luciano Maiani in 1970 (y conocido como el mecanismo GIM~\cite{} ) se predijo la existencia del quark $c$, el cual se descubrió finalmente en 1974. En este caso el potencial de Yukawa deber dar cuenta de las cuatro masas para los quarks y en principio dejar abierta la
+\end{frame}
+Cuando el modelo electrodébil para dos generaciones de quarks fue formulada por Sheldon Glashow, John Iliopoulos and Luciano Maiani in 1970 (y conocido como el mecanismo GIM~\cite{} ) se predijo la existencia del quark $c$, el cual se descubrió finalmente en 1974. En este caso el potencial de Yukawa deber dar cuenta de las cuatro masas para los quarks y en principio dejar abierta la
 posibilidad que cualquier quark de isospín débil hacía arriba pueda convertirse en cualquier quark de isospín hacia abajo a través de las corrientes cargadas.
 
 Para ilustrar la situación consideremos mezclas sólo en el sector down (El caso más general se tratara más adelante en el contexto de tres generaciones)
+\begin{frame}[fragile,allowframebreaks]
 \begin{align}
   \mathcal{L}_{\text{Yuk}}^{ud}=& \left[ m_u\left( u_R \right)^{\dagger} u_L+m_c \left( c_R \right)^{\dagger}c_L
 +  M^{d}_{11}\left( d_R \right)^{\dagger} d_L'+M^d_{12}\left( d_R \right)^{\dagger}s_L' +
@@ -2016,13 +2022,13 @@ W_\mu^++\text{h.c}\right\} \nonumber\\
    + \cos\theta_c (c_L)^\dagger \overline{\sigma}^\mu    s_L
 \right]W_\mu^++\text{h.c}\right\}
 \end{align}
-De hecho, la constante de Fermi asociada a los quarks también es conocida y resulta ser diferente a la constante de Fermi asociada al muón. Sin embargo, la posibilidad de la mezcla nos permite mantener una única constante de Fermi tal que
+De hecho, la constante de Fermi asociada a al decaimiento débil del quark down, $G_{\beta}$, también es conocida y resulta ser diferente a la constante de Fermi asociada al decaimiento del muón, $G_F$. Sin embargo, la posibilidad de la mezcla nos permite mantener una única constante de Fermi tal que
 \begin{align}
   G_\beta=G_F V_{c11}=G_F\cos\theta_c\,.
 \end{align}
 
 Esta expresión será discutida más en detalle en la sección de fenomenología~\ref{sec:fenom-electr}. Es de anotar que usar una segunda matriz de rotación diferente a la identidad no afecta el resultado.
-
+\end{frame}
 \subsection{Tres generaciones}
 
 
