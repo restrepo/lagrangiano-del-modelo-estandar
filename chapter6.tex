@@ -1903,7 +1903,15 @@ Para ilustrar la situación consideremos mezclas sólo en el sector down (El cas
     s_L'\\
   \end{pmatrix}
      \right\}
-   \left( \frac{H}{v} +1\right) 
+   \left( \frac{H}{v} +1\right)\,.
+\end{align}
+Defimos entonces la matriz de masa del sector down para dos familias como
+\begin{align}
+  M=
+  \begin{bmatrix}
+     M^{d}_{11} & M^{d}_{12} \\
+     M^{d}_{21} & M^{d}_{22} \\                                      
+  \end{bmatrix}.
 \end{align}
 Una matriz general es más simple de diagonalizar que una matriz simétrica, pues es suficiente usar una única multiplicación matricial con una matriz de rotación\footnote{donde $\theta_c$ es el ángulo de Cabibbo~\cite{}}
 \begin{align}
@@ -1912,8 +1920,9 @@ Una matriz general es más simple de diagonalizar que una matriz simétrica, pue
      -\sin\theta_c & \cos\theta_c  \\
   \end{bmatrix},
 \end{align}
-bien sea a izquierda o a derecha, es decir, la otra matriz que en el caso simétrico corresponde a la transpuesta de la matriz de rotación, en el caso general se puede escoger como la identidad. Si escogemos multiplicar a derecha, no se generan mezclas en ningún otro sector de Lagrangiano. Por lo tanto escogeremos el caso más interesante de multiplicación a derecha, es decir
+bien sea a izquierda o a derecha, es decir, la otra matriz que en el caso simétrico corresponde a la transpuesta de la matriz de rotación, en el caso general se puede escoger como la identidad. Si escogemos multiplicar a izquierda, no se generarían mezclas en ningún otro sector de Lagrangiano. Por lo tanto escogeremos el caso más interesante de multiplicación a derecha, es decir
 \begin{align}
+  M\cdot V=
    \begin{bmatrix}
      M^{d}_{11} & M^{d}_{12} \\
      M^{d}_{21} & M^{d}_{22} \\                                      
@@ -1927,13 +1936,19 @@ bien sea a izquierda o a derecha, es decir, la otra matriz que en el caso simét
     0  & m_s\\
   \end{bmatrix}.
 \end{align}
-El problema se puede invertir de manera que podemos determinar las entradas de la matriz en términos de los autovalores $m_{d}$, $m_s$ y el ángulo de mezcla
+El problema se puede invertir, de manera que podemos determinar las entradas de la matriz en términos de los autovalores $m_{d}$, $m_s$ y el ángulo de mezcla de Cabibbo $\theta_c$
 \begin{align}
-  M_{11}=&\frac{m_d\cos\theta_c}{\cos^2\theta_c+\sin^2\theta_c}\,,&
-   M_{12}=&-\frac{m_d\sin\theta_c}{\cos^2\theta_c+\sin^2\theta_c} \nonumber\\
-  M_{21}=&\frac{m_s\sin\theta_c }{\cos^2\theta_c+\sin^2\theta_c}\,,&
-   M_{22}=&\frac{m_s\cos\theta_c }{\cos^2\theta_c+\sin^2\theta_c} \,.
+  M=  \begin{bmatrix}
+     M^{d}_{11} & M^{d}_{12} \\
+     M^{d}_{21} & M^{d}_{22} \\                                      
+  \end{bmatrix}=
+  \begin{bmatrix}
+    {m_d\cos\theta_c}&  -{m_d\sin\theta_c} \\
+   {m_s\sin\theta_c } & {m_s\cos\theta_c } \\
+  \end{bmatrix}.
 \end{align}
+
+
 
 Haciendo explícitamente la rotación de la base de interacción a la base de autoestados de masa
 \begin{align}
@@ -1989,7 +2004,7 @@ obtenemos
    \left( \frac{H}{v} +1\right).
 \end{align}
 
-El único sector afectado por la rotación (ver la demostración general más adelante) es el de las corrientes cargadas
+El único sector afectado por la rotación (ver la demostración general más adelante en la Sección~\ref{sec:tres-generaciones}) es el de las corrientes cargadas
 \begin{align}
   \mathcal{L}_{WQ}=&\frac{g_2}{\sqrt{2}}\left[(u_L)^\dagger \overline{\sigma}^\mu d_L'W_\mu^++
   (c_L)^\dagger \overline{\sigma}^\mu s_L'W_\mu^++\text{h.c}\right] \nonumber\\
@@ -2030,15 +2045,18 @@ W_\mu^++\text{h.c}\right\} \nonumber\\
    + \cos\theta_c (c_L)^\dagger \overline{\sigma}^\mu    s_L
 \right]W_\mu^++\text{h.c}\right\}
 \end{align}
-De hecho, la constante de Fermi asociada a al decaimiento débil del quark down, $G_{\beta}$, también es conocida y resulta ser diferente a la constante de Fermi asociada al decaimiento del muón, $G_F$. Sin embargo, la posibilidad de la mezcla nos permite mantener una única constante de Fermi tal que
+De hecho, la constante de Fermi asociada al decaimiento débil del quark down, $G_{\beta}$, también es conocida y resulta ser diferente a la constante de Fermi asociada al decaimiento del muón, $G_F$. Sin embargo, la posibilidad de la mezcla nos permite mantener una única constante de Fermi tal que
 \begin{align}
   G_\beta=G_F V_{c11}=G_F\cos\theta_c\,.
 \end{align}
+Esta expresión será discutida más en detalle en la sección de fenomenología~\ref{sec:fenom-electr}.
 
-Esta expresión será discutida más en detalle en la sección de fenomenología~\ref{sec:fenom-electr}. Es de anotar que usar una segunda matriz de rotación diferente a la identidad no afecta el resultado.
+La explicación que hemos presentado de porque la constante $G_\beta$ asociada al decaimiento del protón es menor que la correspondiente constante $G_F$ asociada al decaimiento del muon recibe el nombre de mecanismo GIM~\cite{}. Este mecanismo predice las transiciones integeneracionales $s \to u \,W_\mu^-$ y $c \to d \,W_\mu^-$ las cuales se han medido con las probabilidades esperadas.
+
+ Es de anotar que usar una segunda matriz de rotación diferente a la identidad no afecta el resultado, como demostraremos a continuación en la Sección~\ref{sec:tres-generaciones} para el caso de tres generaciones.
 \end{frame}
 \subsection{Tres generaciones}
-
+\label{sec:tres-generaciones}
 
 
 \begin{frame}[fragile,allowframebreaks]
@@ -2193,8 +2211,8 @@ Para las diferentes combinaciones de términos de corrientes
 Donde hemos definido la matriz de Cabibbo--Kobayashi--Maskawa (CKM) como
 \begin{align}
   \label{eq:230qft}
-  V=&{V^U_L}^\dagger V^D_L\nonumber\\
-  V^\dagger V=&{V^D_L}^\dagger{V^U_L}{V^U_L}^\dagger V^D_L=\mathbf{1}\Rightarrow \sum_jV^\dagger_{ij}V_{jk}=\delta_{ik}\Rightarrow\sum_jV^*_{ji}V_{jk}=\delta_{ik}\Rightarrow\sum_j|V_{ji}|^2=\sum_j|V_{ij}|^2=1
+  V_{\text{CKM}}=&{V^U_L}^\dagger V^D_L\nonumber\\
+  V^\dagger_{\text{CKM}} V_{\text{CKM}}=&{V^D_L}^\dagger{V^U_L}{V^U_L}^\dagger V^D_L=\mathbf{1}\Rightarrow \sum_jV^\dagger_{ij}V_{jk}=\delta_{ik}\Rightarrow\sum_jV^*_{ji}V_{jk}=\delta_{ik}\Rightarrow\sum_j|V_{ji}|^2=\sum_j|V_{ij}|^2=1
 \end{align}
 y los autoestados débiles de los neutrinos como
 \begin{align}
@@ -2222,7 +2240,7 @@ Teniendo en cuenta estos resultados podemos escribir finalmente el Lagrangiano c
 &+\left(m_W^2{W^\mu}^-W_\mu^++\frac{1}{2}m_Z^2Z^\mu Z_\mu\right)\left(1+2\frac{H}{v}+\frac{H^2}{v^2}\right)\nonumber\\
 &+g_s\sum_q\bar{q}\gamma^\mu\left(\frac{\lambda_a}{2}\right)q\,G_\mu^a+e\sum_f \bar{f}\gamma^\mu Q_f f A_\mu\nonumber\\
 &+\frac{e}{2\cos\theta_W\sin\theta_W}\sum_{f}\bar{f}\gamma^\mu(v_f-a_f\gamma_5)f Z_\mu\nonumber\\
-&+\frac{g_2}{2\sqrt{2}}\left[\sum_{l=e}^{\tau}\bar{\nu_l}\gamma^\mu(1-\gamma_5)l W_\mu^++\sum_{ij}{\color{red}V_{ij}}\,\bar{u}_i\gamma^\mu(1-\gamma_5)d_j W_\mu^++\text{h.c}\right]
+&+\frac{g_2}{2\sqrt{2}}\left[\sum_{l=e}^{\tau}\bar{\nu_l}\gamma^\mu(1-\gamma_5)l W_\mu^++\sum_{ij}{\color{red}V^{ij}_{\text{CKM}}}\,\bar{u}_i\gamma^\mu(1-\gamma_5)d_j W_\mu^++\text{h.c}\right]
 +\sum_f \frac{m_f}{v} \bar{f}f H\nonumber\\
 % \end{align}
 % \end{frame}
@@ -2244,6 +2262,12 @@ donde $m_{\nu_l}=0$.
 
 \end{frame}
 
+El caso de tres generaciones predice entonces tres ángulos de mezcla $\theta_{12}$, $\theta_{23}$, $\theta_{13}$, y una fase compleja $\delta$, asociadas a la matrix de rotación unitaria $V_{\text{CKM}}$
+\begin{align} 
+V_{\mathrm{CKM}} &=\left(\begin{array}{ccc}{1} & {0} & {0} \\ {0} & {c_{23}} & {s_{23}} \\ {0} & {-s_{23}} & {c_{23}}\end{array}\right)\left(\begin{array}{ccc}{c_{13}} & {0} & {s_{13} e^{-i \delta}} \\ {0} & {1} & {0} \\ {-s_{13} e^{i \delta}} & {0} & {c_{13}}\end{array}\right)\left(\begin{array}{ccc}{c_{12}} & {s_{12}} & {0} \\ {-s_{12}} & {c_{12}} & {0} \\ {0} & {0} & {1}\end{array}\right) \\ &=\left(\begin{array}{cccccc}{c_{12} c_{13}} & {} & {s_{12} c_{13}} & {s_{13} e^{-i \delta}} \\ {-s_{12} c_{23}-c_{12} s_{23} s_{13} e^{i \delta}} & {c_{12} c_{23}-s_{12} s_{23} s_{13} e^{i \delta}} & {s_{23} c_{13}} \\ {s_{12} s_{23}-c_{12} c_{23} s_{13} e^{i \delta}} & {-c_{12} s_{23}-s_{12} c_{23} s_{13} e^{i \delta}} & {c_{23} c_{13}}\end{array}\right) 
+\end{align}
+
+donde $s_{i j}=\sin \theta_{i j}$, $c_{i j}=\cos \theta_{i j}$.
 
 \section{Fenomenología Electrodébil}
 \label{sec:fenom-electr}
