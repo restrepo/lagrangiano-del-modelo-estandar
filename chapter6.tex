@@ -2265,10 +2265,10 @@ donde $m_{\nu_l}=0$.
 \end{frame}
 
 El caso de tres generaciones predice entonces tres ángulos de mezcla $\theta_{12}$, $\theta_{23}$, $\theta_{13}$, y una fase compleja $\delta$, asociadas a la matrix de rotación unitaria $V_{\text{CKM}}$
-\begin{align} 
-V_{\mathrm{CKM}} &=\left(\begin{array}{ccc}{1} & {0} & {0} \\ {0} & {c_{23}} & {s_{23}} \\ {0} & {-s_{23}} & {c_{23}}\end{array}\right)\left(\begin{array}{ccc}{c_{13}} & {0} & {s_{13} e^{-i \delta}} \\ {0} & {1} & {0} \\ {-s_{13} e^{i \delta}} & {0} & {c_{13}}\end{array}\right)\left(\begin{array}{ccc}{c_{12}} & {s_{12}} & {0} \\ {-s_{12}} & {c_{12}} & {0} \\ {0} & {0} & {1}\end{array}\right) \\ &=\left(\begin{array}{cccccc}{c_{12} c_{13}} & {} & {s_{12} c_{13}} & {s_{13} e^{-i \delta}} \\ {-s_{12} c_{23}-c_{12} s_{23} s_{13} e^{i \delta}} & {c_{12} c_{23}-s_{12} s_{23} s_{13} e^{i \delta}} & {s_{23} c_{13}} \\ {s_{12} s_{23}-c_{12} c_{23} s_{13} e^{i \delta}} & {-c_{12} s_{23}-s_{12} c_{23} s_{13} e^{i \delta}} & {c_{23} c_{13}}\end{array}\right) 
+\begin{align}
+\label{eq:vckm}
+V_{\text{CKM}} &=\left(\begin{array}{ccc}{1} & {0} & {0} \\ {0} & {c_{23}} & {s_{23}} \\ {0} & {-s_{23}} & {c_{23}}\end{array}\right)\left(\begin{array}{ccc}{c_{13}} & {0} & {s_{13} e^{-i \delta}} \\ {0} & {1} & {0} \\ {-s_{13} e^{i \delta}} & {0} & {c_{13}}\end{array}\right)\left(\begin{array}{ccc}{c_{12}} & {s_{12}} & {0} \\ {-s_{12}} & {c_{12}} & {0} \\ {0} & {0} & {1}\end{array}\right) \\ &=\left(\begin{array}{cccccc}{c_{12} c_{13}} & {} & {s_{12} c_{13}} & {s_{13} e^{-i \delta}} \\ {-s_{12} c_{23}-c_{12} s_{23} s_{13} e^{i \delta}} & {c_{12} c_{23}-s_{12} s_{23} s_{13} e^{i \delta}} & {s_{23} c_{13}} \\ {s_{12} s_{23}-c_{12} c_{23} s_{13} e^{i \delta}} & {-c_{12} s_{23}-s_{12} c_{23} s_{13} e^{i \delta}} & {c_{23} c_{13}}\end{array}\right) 
 \end{align}
-
 donde $s_{i j}=\sin \theta_{i j}$, $c_{i j}=\cos \theta_{i j}$.
 
 \section{Fenomenología Electrodébil}
@@ -2508,9 +2508,9 @@ con $G_F$ dado en la ec.~\eqref{eq:233qft} y $G_\beta=1.10\times 10^{-5}\,\text{
 \begin{align}
     \mathcal{L}=\frac{G_F}{\sqrt{2}}V_{11}\left[\bar{u}\gamma^\mu(1-\gamma_5)d\right]\left[\bar{e}\gamma_\mu(1-\gamma_5)\nu_e\right]\,.
 \end{align}
-De modo que $G_\beta=G_F V_{11}=G_F\cos\theta_C$, donde $\theta_C$ es el ángulo de Cabbibo. Una vez se tienen en cuenta correcciones electrodébiles se obtiene el valor $|V_{11}|=0.97418(27)$\cite{PDG}. Las magnitudes de los elementos de la matriz CKM son\cite{PDG}
+De modo que $G_\beta=G_F V_{11}=G_F\cos\theta_C$, donde $\theta_C$ es el ángulo de Cabbibo. Una vez se tienen en cuenta correcciones electrodébiles se obtiene el valor $|V_{11}|=0.97418(27)$\cite{PDG}. Las magnitudes de los elementos de la matriz CKM~\eqref{eq:vckm} son~\cite{PDG}
 \begin{align}
-  V\approx\begin{pmatrix}
+  V_{\text{CKM}}\approx\begin{pmatrix}
     0.97419&0.2257&0.0359\\
     0.2256&0.97334&0.0415\\
     0.00874&0.0407&0.999133
