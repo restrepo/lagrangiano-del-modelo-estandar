@@ -1,0 +1,9 @@
+,Cédula,Semestre,PP,SP,T[1],T[2],T[3],T[4],T[5],T[6],T[7],T[8],Tareas,descripción,TT
+0,1233192753,2019-1,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,T[1],Exponencial de sigma_2,0.0
+1,1152208162,2019-1,4.5,5.0,5.0,5.0,5.0,5.0,5.0,5.0,5.0,5.0,T[2],rotación real,5.0
+2,1045018237,2019-1,4.5,5.0,3.0,5.0,5.0,5.0,5.0,0.0,5.0,5.0,T[3],Ec. continuidad,4.125
+3,1044508251,2019-1,4.5,5.0,5.0,0.0,5.0,5.0,5.0,5.0,5.0,5.0,T[4],Klein-Gordon para fermión de Weyl,4.375
+4,1152205919,2019-1,4.5,4.0,5.0,5.0,5.0,0.0,5.0,5.0,5.0,3.0,T[5],Euler-Lagrange para escalar,4.125
+5,,,,,,,,,,,,,T[6],Yukawa para el electrón,0.0
+6,,,,,,,,,,,,,T[7],Diagrama a un loop QED,0.0
+7,,,,,,,,,,,,,T[8],Postulados mecánica cuántica para lagrangianos de Dirac,0.0
