@@ -1059,12 +1059,8 @@ Las transformaciones de Lorentz se definen como la transformaciones que dejan in
   \label{eq:146}
  x\cdot x= x^2=g_{\mu\nu}x^\mu x^\nu={x^0}^2-x^i x^i={a^0}^2-\mathbf{x}\cdot\mathbf{x}
 \end{equation}
-donde $\mu,\nu=0,1,2,3$, $i=1,2,3$ y se asume suma sobre \'\i ndices repetidos. Adem\'as
-\begin{equation}
-\label{eq:149}
-  x_\nu\equiv g_{\mu\nu}x^\mu
-\end{equation}
- Finalmente la m\'etrica usada se define como
+donde $\mu,\nu=0,1,2,3$, $i=1,2,3$ y se asume suma sobre \'\i ndices repetidos.
+Finalmente la métrica usada se define como
 \begin{equation}
   \label{eq:gmunu}
   \left\{ g_{\mu\nu} \right\}=
@@ -1093,7 +1089,7 @@ tal que
   g^{\mu\alpha}g_{\alpha\nu}=\delta^\mu_\nu\,.
 \end{equation}
 
-Bajo una transformaci\'on de Lorentz.
+Bajo una transformación de Lorentz.
 \begin{equation}
   \label{eq:xx5}
   x^\mu\to {x'}^\mu={\Lambda^\mu}_{\nu}x^\nu.
@@ -1105,7 +1101,7 @@ La invarianza del producto escalar en ec.~\eqref{eq:157}
 implica que
 \begin{align}
 \label{eq:Lambdasteps}
-{x'}\cdot{y'}_\mu\to  {x'}\cdot{y'}_\mu&=g_{\mu\nu}{x'}^\mu{y'}^{\nu}\nonumber\\
+{x}\cdot{y}\to  {x'}\cdot{y'}&=g_{\mu\nu}{x'}^\mu{y'}^{\nu}\nonumber\\
   &=g_{\mu\nu}{\Lambda^{\mu}}_{\alpha}x^{\alpha}{\Lambda^{\nu}}_{\beta}y^{\beta}\nonumber\\
  &={\Lambda^{\mu}}_{\alpha}g_{\mu\nu}{\Lambda^{\nu}}_{\beta}x^{\alpha}y^{\beta}\,.
 \end{align}
@@ -1171,9 +1167,14 @@ pero para la métrica contravariante
 g^{\mu\nu}= {\left(\Lambda^{-1}\right)^\mu}_\alpha g^{\alpha \beta}{\left(\Lambda^{-1}\right)^\nu}_\beta\,, 
 \end{align}
 
-Si además imponemos que está nueva métrica baje los índices
+Como una forma de acortar las operaciones, podemos definir que la métrica permita bajar los indices
+\begin{equation}
+\label{eq:149}
+  x_\nu\equiv g_{\mu\nu}x^\mu\,,
+\end{equation}
+y de igual manera imponemos que la  métrica inversa suba  los índices
 \begin{align}
-  x_{\nu}=g^{\mu\nu}x_{\nu}\,,
+  x^{\mu}=g^{\mu\nu}x_{\nu}\,.
 \end{align}
 de la ec.~\eqref{eq:lrinv} tenemos que
 \begin{align}
@@ -1248,6 +1249,22 @@ Invarianza de Lorentz
 \end{example}
 
 \end{frame}
+
+En el libro de A.~Zee sobre teoría de grupos~\cite{Zee:2016fuk} se resumen este tipo de cálculos de la siguiente manera
+\begin{quote}
+  It follows that the shorthand $\partial_{\mu}$  for  $\frac{\partial}{\partial x^{\mu}}$  has to carry a lower index, because
+  \begin{align}
+  {\partial_{\mu} x^{\nu}=\frac{\partial x^{\nu}}{\partial x^{\mu}}=\delta_{\mu}^{\nu}}\,.  
+  \end{align}
+  In other words, for the indices to match, $\partial_{\mu}$  must be written with a lower index. This makes sense, since the coordinates $x^{\mu}$
+  carry an upper index but in $\frac{\partial}{\partial x^{\mu}}$  it appears in the denominator, so to speak.
+  We will use this important fact later. It follows that
+  \begin{align}
+  {\partial_{\mu} x_{\nu}=g_{\mu \nu}}\,.  
+  \end{align}
+\end{quote}
+
+
 
 \begin{frame}[fragile,allowframebreaks]
 
@@ -1702,7 +1719,7 @@ A medida que el mu\'on se acerca m\'as a la velocidad de la luz, $L_\mu'$ coinci
 
 \end{frame}
 
-\subsection{Grupo de Lorentz: $SO(1,3)$}
+\subsection{Grupo de Lorentz: $\operatorname{SO}(1,3)$}
 
 \begin{frame}[fragile,allowframebreaks]
   Los seis generadores independientes del Grupo de Lorentz (GL) se pueden definir a partir del tensor antisimétrico
@@ -1856,7 +1873,7 @@ Las  matrices $4\times 4$
  =&i\left(g^{\mu\alpha}{\delta^\nu}_\beta-{\delta^\mu}_\beta g^{\nu\alpha}\right)\nonumber\\
 {\left(J^{\mu\nu}\right)^{\alpha\beta}}=&i \left( g^{\mu\alpha}g^{\nu\beta}-g^{\mu\beta}g^{\nu\alpha} \right)
 \end{align}
-where $\mu$ and $\nu$ label which of the six matrices we want, while $\alpha$ and $\beta$ label components of the matrices. These matrices satisfy the commutations relations \eqref{eq:lrtalg}, and generate the three boosts and three rotations of the ordinary Lorentz 4-vectors:
+donde $\nu$ y $\nu$ rotula cual de las dieciséis matrices se desea, mientras que $\alpha$ y $\beta$ rotulan las componentes de las matrices. Estas matrices satisfacen la relaciones de conmutación \eqref{eq:lrtalg}, y generan los tres boosts y las tres rotaciones de los cuadrivectores ordinarios de Lorentz:
 \begin{align}
   {\Lambda^\alpha}_\beta\approx{\delta^\alpha}_\beta-\frac{i}{2}\omega_{\mu\nu}{\left(J^{\mu\nu}\right)^\alpha}_\beta\,.
 \end{align}
@@ -1915,26 +1932,47 @@ Entonces
 %ver programa mathematica
 \end{frame}
 
-\section{representaciones $2\times 2$ del Grupo de Lorentz: $\operatorname{SL}(2)$}
+\section{Representaciones $2\times 2$ del Grupo de Lorentz: $\operatorname{SL}(2,C)$}
 \begin{frame}[fragile,allowframebreaks]
-Here we focus on the simplest non-trivial irreducible representations of the Lorentz algebra. These are the two-dimensional (inequivalent) representations: $(\frac{1}{2},0)$ and $(0,\frac{1}{2})$. 
 
+Seguiremos la misma filosofía de la referencia~\cite{Zee:2016fuk}
+\begin{quote}
+  One of the great advances in theoretical physics over the past half-century or so is the
+understanding that the Weyl spinors are more fundamental than Dirac spinors; the world
+appears to be constructed out of them.
+\end{quote}
+
+Aquí nos enfocaremos en la representaciones más simples no triviales del Grupo de Lorentz. Estas corresponde a las representaciones no equivalentes $2\times2$: $(\frac{1}{2},0)$ y $(0,\frac{1}{2})$ del grupo $\operatorname{SL}(2,C)$ con elementos 
 \begin{align}
+  \label{eq:slamo}
   S(\Lambda)_{\left( \frac{1}{2},0 \right)}=&\exp\left(-i \omega_{\mu\nu}\frac{\sigma^{\mu\nu}}{2}\right)\nonumber
 \end{align}
+donde los seis generadores independientes están dados por
 \begin{align}
   \sigma^{\mu\nu}=\frac{i}{4}\left[\sigma^\mu,\overline{\sigma}^\nu\right]\,.
 \end{align}
-where
+tal que
 \begin{align}
-  \sigma^0=&\mathbf{1}_{2\times2},& \sigma^{i}\to \boldsymbol{\sigma}=&(\sigma^1,\sigma^2,\sigma^3)\nonumber\\
-  \overline{\sigma}^0=&\mathbf{1}_{2\times2},& \overline{\sigma}^{i}\to \overline{\boldsymbol{\sigma}}=&(-\sigma^1,-\sigma^2,-\sigma^3)
+  \sigma^{\mu}=&\begin{pmatrix}
+    \sigma^0 & \boldsymbol{\sigma}
+\end{pmatrix}, & 
+  \overline{\sigma}^{\mu}=&\begin{pmatrix}
+    \sigma^0 & \overline{\boldsymbol{\sigma}}
+\end{pmatrix}, & 
 \end{align}
-include the Pauli matrices \eqref{eq:paulimatr}.
+con
+\begin{align}
+  \sigma^0=&\mathbf{1}_{2\times2},& \boldsymbol{\sigma}\to \sigma^{i} =&(\sigma^1,\sigma^2,\sigma^3)\nonumber\\
+  \overline{\sigma}^0=&\mathbf{1}_{2\times2},&\overline{\boldsymbol{\sigma}}\to \overline{\sigma}^{i} =&(-\sigma^1,-\sigma^2,-\sigma^3)
+\end{align}
+que incluyen las tres matrices de  Pauli \eqref{eq:paulimatr}.
 
 \end{frame}
+
+Cada uno de los dos $\operatorname{SL}(2,C)$ cubre doblemente al grupo $\operatorname{SO}(1,3)$ de la misma manera que el grupo $\operatorname{SU}(2)$ es una cobertura doble del grupo $\operatorname{SO}(3)$.
+
 \begin{frame}[fragile,allowframebreaks]
-Eq. \eqref{eq:4lt}, which yields
+La ecuación \eqref{eq:slamo} se puede escribir en términos de los seis generadores independientes correspondientes a los boosts y las rotaciones
 \begin{align}
 \label{eq:SLet}
   S(\Lambda)_{\left( \frac{1}{2},0 \right)}\equiv S(\Lambda)=
@@ -1949,8 +1987,54 @@ La otra representación independiente es
 =&\exp\left( \boldsymbol{\xi}\cdot \frac{\boldsymbol{\sigma}^{*}}{2}-i\boldsymbol{\theta}\cdot \frac{\boldsymbol{\sigma}^{*}}{2} \right)\,.
 \end{align}
  
-The components of $S(\Lambda)$ will be denoted as ${\left[ S(\Lambda) \right]_{\alpha}}^{\beta}$. In such a case, $S^{*}$ is another independent $2\times2$ representation of the Lorentz Group. It is denoted by $\left( 0,\frac{1}{2}\right)$, and, in order to emphasize the difference, it is convenient to denote their components with dotted indices $\dot{\alpha},\dot{\beta},\cdots$. We can get $S^{*}$ from $S^{\dagger}$.
+Las componentes de $S(\Lambda)$ serán denotadas como  ${\left[ S(\Lambda) \right]_{\alpha}}^{\beta}$. En tal caso, $S^{*}(\Lambda)$ es otra representación diferente $2\times 2$ de $\operatorname{SL}(2,C)$. Ésta se denota con $\left( 0,\frac{1}{2}\right)$, y con el fin de enfatizar la diferencia, sus componentes se denotan con índices acentuados con puntos  $\dot{\alpha},\dot{\beta},\cdots$.
 \end{frame}
+
+\begin{frame}[fragile,allowframebreaks]
+Las dos posibilidades de vectores en $\operatorname{SL}(2,C)$, los cuales reciben el nombre de \emph{espinores de Weyl}~\cite{Dreiner:2008tw}, pueden definirse como espinores que transforman con índices arriba y espinores que transforman con índices abajo
+\begin{align}
+\xi_{\alpha} \to \xi_{\alpha}'=&{\left[ S(\Lambda) \right]_{\alpha}}^{\beta}\xi_{\beta} \nonumber\\
+\eta^{\alpha}\to {\eta'}^{\alpha} =&\eta^\beta{\left[  S^{-1}(\Lambda)  \right]_{\beta}}^{\alpha}\,.
+\end{align}
+donde $\alpha,\beta=1,2$. Estos dos espinores de Weyl independientes están asociados a la representación $(\frac{1}{2},0)$  de $\operatorname{SL}(2,C)$. Los correspondientes espinores conjugados, o simplemente anti-espinores de Weyl, pertenecen a la representación $\left( 0,\frac{1}{2}\right)$
+\begin{align}
+  \left( \xi_{\alpha} \right)^{*} \to \left( \xi_{\alpha}' \right)^{*}=&
+\left( \xi_{\beta} \right)^{*} \left\{ {\left[ S(\Lambda) \right]_{\alpha}}^{\beta} \right\}^{*} \nonumber\\
+\left( \eta^{\alpha} \right)^{*}\to \left( {\eta'}^{\alpha} \right)^{*} =&\left\{ {\left[  S^{-1}(\Lambda)  \right]_{\beta}}^{\alpha} \right\}^{*} \left( \eta^\beta \right)^{*}\,.
+\end{align}
+Para simplificar la notación en la representación $(\frac{1}{2},0)$ definimos
+\begin{align}
+\xi_{\dot{\alpha}}^{*}\equiv  \left( \xi_{\alpha} \right)^{*}\,.
+\end{align}
+
+De esta manera
+\begin{align}
+  \xi_{\dot{\alpha}}^{*}\to \xi_{\dot{\alpha}}^{\prime *}
+  =&\xi_{\dot{\beta}}^{*}{\left[ S^{*} \right]_{\dot{\alpha}}}^{\dot{\beta}}
+  =\xi_{\dot{\beta}}^{*}{\left[ S^{\dagger}\right]^{\dot{\beta}}}_{\dot{\alpha}} \nonumber\\
+  \eta^{*\dot{\alpha}}\to \eta^{\prime *\dot{\alpha}}
+  =& {\left[ \left( S^{-1} \right)^{*} \right]_{\dot{\beta}}}^{\dot{\alpha}}\eta^{*\dot{\beta}}={\left[ \left( S^{-1} \right)^{\dagger} \right]^{\dot{\alpha}}}_{\dot{\beta}}\eta^{*\dot{\beta}}\,.
+\end{align}
+
+Para evitar hacer uso explícito de la métrica en cada una de las dos representaciones de $\operatorname{SL}(2,C)$, definimos el producto escalar directamente entre índices contraídos con la condición de que sea entre espinores o anti-espinores de Weyl que pertenezcan a la misma representación de $\operatorname{SL}(2,C)$ y que tengan un orden \emph{diagonal}, ${}^{\alpha}\ {}_{\alpha}$, para los espinores y un orden \emph{anti-diagonal}, ${}_{\dot{\alpha}}\ {}^{\dot{\alpha}}$, para los anti-espinores, a saber
+\begin{align}
+  \eta\cdot\xi\equiv& \eta^{\alpha} \cdot \xi_{\alpha} \,,&
+  \xi\cdot \xi\equiv&\xi^{\alpha}\xi_{\alpha}\,, &
+  \eta\cdot\eta\equiv &\eta^{\alpha}\eta_{\alpha}\,,\nonumber\\
+  \xi^{*}\cdot \eta^{*}\equiv & \xi^{*}_{\dot{\alpha}}\cdot \eta^{*\dot{\alpha}}\,,&
+  \xi^{*}\cdot \xi^{*}\equiv & \xi^{*}_{\dot{\alpha}}\cdot \xi^{*\dot{\alpha}}\,,&
+  \eta^{*}\cdot \eta^{*}\equiv & \eta^{*}_{\dot{\alpha}}\cdot \eta^{*\dot{\alpha}}\,.
+\end{align}
+\end{frame}
+
+
+
+La teoría completa de espinores de Weyl, incluyendo la definición apropiada de la métrica, puede puede encontrarse en~\cite{Dreiner:2008tw}.
+
+En un abuso de notación la operación de hermítico conjugado cuando se aplique a un espinor de Weyl se entenderá como conjugado a nivel del grupo $\operatorname{SL}(2,C)$, es decir
+\begin{align}
+  \xi_{\dot{\alpha}}^{\dagger}=\xi_{\dot{\alpha}}^{*}\,.
+\end{align}
 
 
 \section{Leyes de Kirchhoff generalizadas}
@@ -1967,10 +2051,6 @@ En el caso de un doblete de fermiónes $\Xi$, el símbolo  $\dagger$ se usa para
                   \Xi_2^{\dagger}\\
                  -\Xi_1^{\dagger}\\
                 \end{pmatrix}
-\end{align}
-Para evitar confusiones con los invariantes $SU(2)$, usaremos entonces la definición de producto escalar en el espacio $SU(2)$ para escribir los correspondientes invariantes, por ejemplo
-\begin{align}
-  \widetilde{\Xi}\cdot \Xi=\epsilon_{ab}\,\widetilde{\Xi}^{a}\Xi^{b}\,.
 \end{align}
 
 Para evitar confusión con el conjugado de espinores de Weyl, usaremos el producto escalar con la métrica $SU(2)$ para escribir los correspondientes invariantes.
@@ -2024,9 +2104,9 @@ Productos escalares
 \item Escalar de Dirac: $\eta^{\alpha}\xi_{\alpha}+ \xi^{\dagger}_{\dot{\alpha}}\eta^{\dagger\;\dot{\alpha  }} $
 
 
- \item Escalar subgrupo $\operatorname{SL}(2)$ pero vector bajo $\operatorname{SO}(1,3)$: $ S^\dagger\overline{\sigma}^\mu S={\Lambda^\mu}_\nu\overline{\sigma}^\nu$:
-  $i\xi_{\dot{\alpha}} \overline{\sigma}^{\dot{\alpha} \alpha} \partial_{\mu} \xi_{\alpha} $
-
+ \item Escalar subgrupo $\operatorname{SL}(2,C)$ pero vector bajo $\operatorname{SO}(1,3)$: $ S^\dagger\overline{\sigma}^\mu S={\Lambda^\mu}_\nu\overline{\sigma}^\nu$: Esta identidad aparece en la combinación de productos escalares
+  $i\xi_{\dot{\alpha}} \overline{\sigma}^{\mu\dot{\alpha} \alpha} \partial_{\mu} \xi_{\alpha} \,,$
+como se vera posteriormente en detalle.
 \end{itemize}
 
 
@@ -2044,7 +2124,7 @@ En la siguiente Tabla y figura se asignan los espinores (antiespinores) de Weyl 
      $H$  &-&$\color{red}\mathbf{2}$&$\color{red}1/2$&$H=\color{red}0$\\
      $\sigma_1^-$ &-&$\mathbf{1}$&$\color{red}-1$&$\sigma_1=\color{red}-2$\\
      $\sigma_2^-$ &-&$\color{red}\mathbf{1}$&$\color{red}-1$&$\sigma_2=\color{red}-s-2$\\
-     $S$ &-&$\color{red}\mathbf{1}$&$\color{red}0$&$\phantom{-}s$\\\hline
+     $S$ &-&$\color{red}\mathbf{1}$&${\color{red}0}$&$\phantom{-}s$\\\hline
   \end{tabular}\hspace{1cm} \includegraphics[scale=0.5]{zee}
 
   \begin{itemize}
@@ -2343,7 +2423,7 @@ Entonces
 =&-2\left(\bar\phi_{i}-\bar\phi_{i-1}\right)-2\left(\bar\phi_{i+1}-\bar\phi_{i}\right)\times(-1)\nonumber\\
 =&2l\left[\frac{\bar\phi_{i+1}-\bar\phi_{i}}{l}-\frac{\bar\phi_{i}-\bar\phi_{i-1}}{l}\right].\nonumber
 \end{align}
-Si $\bar{z}_i$ es el punto medio del intervalo entre $z_{i-1}$ y $z_i$, entonces en el l\'\i mite de $l\to0$,
+Si $\bar{z}_i$ es el punto medio del intervalo entre $z_{i-1}$ y $z_i$, entonces en el límite de $l\to0$,
 \begin{align}
   -\frac{\partial}{\partial\bar\phi_i}  \sum_{i=0}^{N-1}\left(\bar\phi_{i+1}-\bar\phi_{i}\right)^2
   =&2l^2\left\{\frac{[\bar\phi(z_{i+1},t)-\bar\phi(z_{i},t)]/l}{l}-\frac{[\bar\phi(z_{i},t)-\bar\phi(z_{i-1},t)]/l}{l}\right\}\nonumber\\
