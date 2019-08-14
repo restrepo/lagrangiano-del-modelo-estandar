@@ -32,8 +32,8 @@
 %instiki:* [Aplicaci\'on a la cuerda unidimenisonal](#aplicacion-la-cuerda)
 %instiki:
 %instiki:***
-Mostraremos la conexión entre teoría clásica de campos y relatividad especial.
-Se hará un repaso de las nociones de relatividad especial para mostrar como se transforman los campos escalares y vectoriales bajo transformaciones de Lorentz.
+Mostraremos la conexión entre teoría clásica de campos y relatividad
+especial.  
 %instiki:
 
 \section{Preliminares}
@@ -45,7 +45,14 @@ Antes de entrar en materia, se sentarán las bases teóricas necesarias sobre el
 Ver \url{https://indico.cern.ch/event/243629}
 
 \subsection{$\operatorname{SO}(2)$ y $\operatorname{U}(1)$}
-Considere el grupo de rotaciones de dos ejes reales $SO(2)$. Una representación matricial corresponde al Grupo de matrices $2\times 2$ ortogonales de determinante 1
+
+\subsubsection{$\operatorname{SO}(2)$}
+
+
+
+$\operatorname{SO}(2)$ es el grupo de rotaciones de dos ejes reales .
+\begin{frame}[fragile,allowframebreaks]
+Una representación matricial corresponde al Grupo de matrices $2\times 2$ ortogonales de determinante 1
 \begin{align*}
   R(\theta)=
   \begin{pmatrix}
@@ -63,7 +70,21 @@ donde
   \end{pmatrix}, & \det[R(\theta)]=&\cos^2\theta+\sin^2\theta=1\,.
 \end{align*}
 
-Considere el generador del Grupo de Rotaciones en dos dimensiones
+Éste es  un grupo continuo. Por lo tanto se puede generar a partir de transformaciones infinitesimales.
+% \end{frame}
+% \begin{frame}[fragile,allowframebreaks]
+Para ello,
+considere el generador del Grupo de Rotaciones en dos dimensiones
+\begin{align}
+  \label{eq:ieab}
+(\tau)_{ab}=-i \epsilon_{ab}\,, 
+\end{align}
+tal que
+\begin{align*}
+\epsilon_{ac}\epsilon_{cb}=-\delta_{ab}\,.
+\end{align*}
+Entonces  
+
 \begin{align}
   \label{eq:so2g}
   \tau=
@@ -72,6 +93,7 @@ Considere el generador del Grupo de Rotaciones en dos dimensiones
    i & 0 \\    
   \end{pmatrix},
 \end{align}
+\end{frame}
 con álgebra
 \begin{align}
   \tau^2=&\boldsymbol{1}_{2\times2}=
@@ -88,8 +110,11 @@ Por consiguiente
   \end{pmatrix}=\tau\,.
 \end{align*}
 
+\begin{frame}[fragile,allowframebreaks]
 
-Definimos una representación matricial del Grupo de la rotaciones como
+  
+
+Definimos una representación matricial del Grupo de las rotaciones como
 \begin{align}
   \label{eq:tye}
   R(\theta)=&\exp \left(i \tau \theta  \right) \nonumber\\
@@ -107,8 +132,6 @@ y además
   \operatorname{det}[R(\theta)]=\operatorname{det} \left[ \exp \left(i \tau \theta  \right)  \right]
   =\exp \left[ i \operatorname{Tr}(\tau) \right]=\operatorname{e}^0=1\,.
 \end{align}
-
-
 
 
 
@@ -163,15 +186,9 @@ Este grupo es Abeliano, ya que
 \begin{align}
   R(\theta_1)R(\theta_2)=R(\theta_2)R(\theta_1)
 \end{align}
-De otro lado el Grupo $U(1)$ corresponde a las rotaciones de un eje complejo y tiene elementos
-\begin{align}
-  U(\theta)=e^{i \theta Y}\,,
-\end{align}
-donde $Y$ es el generador de los elementos del Grupo y su representación es un número real. 
+\end{frame}
 
-Estos dos grupos son isomorfos: para un elemento complejo $U(\theta)$ el correspondiente elemento en $SO(2)$ es la rotación por el ángulo el cual es el argumento de $U(\theta)$.
-
-El producto escalar entre dos vectores con respecto a un sistema inicial $(x,y)$  y un sistema final rotado  $(x', y')$ se puede obtener a partir de la rotación del sistema incial al sistema final
+El producto escalar entre dos vectores con respecto a un sistema inicial $(x,y)$  y un sistema final rotado  $(x', y')$ se puede obtener a partir de la rotación del sistema inercial al sistema final
 \begin{align}
 \begin{bmatrix}
     x\\
@@ -184,7 +201,7 @@ El producto escalar entre dos vectores con respecto a un sistema inicial $(x,y)$
     y\\
   \end{bmatrix} ,
 \end{align}
-o equvalentemente 
+o equivalentemente 
 \begin{align}
 \begin{bmatrix}
     x^1\\
@@ -198,17 +215,17 @@ o equvalentemente
   \end{bmatrix}.
 \end{align}
 
-En componentes y usando la convención de suma sobre índices repetidos, tenemos
+En componentes, tenemos
 \begin{align}
   \label{eq:rso2}
   x^i\to x^{\prime i}=\sum_j{R^i}_j x^j\,.
 \end{align}
 
-Entonces, para el producto escalar
+Definiendo el producto escalar como
 \begin{align}
-  \boldsymbol{x}\cdot \boldsymbol{y}=\sum_{ij}\delta_{ij} x^i y^j. 
+  \boldsymbol{x}\cdot \boldsymbol{y}=\sum_{ij}\delta_{ij} x^i y^j,
 \end{align}
-Bajo una rotación del sistema de coordenas el producto escalar que invariante. Para demostarlo aplicamos la rotación~\eqref{eq:rso2} sobre el producto escalar rotado:
+podemos demostrar que es invariante bajo rotaciones. Para demostrarlo aplicamos la rotación~\eqref{eq:rso2} sobre el producto escalar rotado:
 \begin{align}
   \boldsymbol{x}\cdot \boldsymbol{y}\to  \boldsymbol{x}'\cdot \boldsymbol{y}'
                      =&\sum_{ij} \delta_{ij} x^{\prime i}  y^{\prime j} \nonumber\\
@@ -223,6 +240,8 @@ Bajo una rotación del sistema de coordenas el producto escalar que invariante. 
 \end{align}
 
 En forma compacta, usando \eqref{eq:xrtrx}, tenemos que
+\begin{frame}[fragile,allowframebreaks]
+  si $\boldsymbol{x}$ es un vector en $\operatorname{SO(2)}$
 \begin{align}
   \boldsymbol{x}\to \boldsymbol{x}'=&R \boldsymbol{x}\,,&
   \boldsymbol{x}^{\operatorname{T}}\to \boldsymbol{x}^{\prime {\operatorname{T}}}=& \boldsymbol{x}^{\operatorname{T}} R^{\operatorname{T}}\,,
@@ -230,23 +249,44 @@ En forma compacta, usando \eqref{eq:xrtrx}, tenemos que
 \begin{align}
   \label{eq:psso2}
   \boldsymbol{x}\cdot \boldsymbol{x}= \boldsymbol{x}^{\operatorname{T}} \boldsymbol{x}\to \boldsymbol{x}^{\prime\operatorname{T}} \boldsymbol{x}'
-  =\boldsymbol{x}^{\operatorname{T}}R^{\boldsymbol{T}} R \boldsymbol{x}=\boldsymbol{x}^{\operatorname{T}} \boldsymbol{x}=  \boldsymbol{x}\cdot \boldsymbol{x}\,.
+  =\boldsymbol{x}^{\operatorname{T}}R^{\boldsymbol{T}} R \boldsymbol{x}=\boldsymbol{x}^{\operatorname{T}} \boldsymbol{x}\equiv  \boldsymbol{x}\cdot \boldsymbol{x}\,.
+\end{align}
+
+\end{frame}
+
+\begin{frame}[fragile,allowframebreaks]
+  En mecánica clásica el Lagrangiano es una función de escalares y por lo tanto un vector debe aparecer en forma de producto escalar, como en el caso de la energía cinética que es proporcional a $\boldsymbol{v}\cdot \boldsymbol{v}$
+\end{frame}
+
+La formulación Lagrangiana de la teoría clásica de campos que desarrollaremos a continuación hace uso también de productos escalares. Por lo tanto es conveniente definir el producto escalar en todos los espacios posibles para su uso posterior.  Comencemos con el grupo $\operatorname{U}(1)$
+
+\subsubsection{$\operatorname{U}(1)$}
+ El Grupo $U(1)$ corresponde a las rotaciones de un eje complejo. Tiene como elementos a los números complejos de módulo 1, los cuales en coordenadas polares se puede representar como
+\begin{align}
+  U(\theta)=\operatorname{e}^{i \theta Y}\,,
+\end{align}
+donde $Y$ es el generador de los elementos del Grupo y su representación es un número real (arbitrario)\footnote{Se suele asumir que es racional}.  En este grupo, $U^{*}(\theta)=U(-\theta)$ es el inverso y $U(0)$ es la identidad.
+
+Estos dos grupos son isomorfos: para un elemento complejo $U(\theta)$ el correspondiente elemento en $SO(2)$ es la rotación por el ángulo de cambio de fase de $U(\theta)$.
+
+\begin{frame}[fragile,allowframebreaks]
+Sea $\psi$ un \emph{vector} en el espacio $\operatorname{U}(1)$, en el sentido que puede sufrir transformaciones de cambio de fase del tipo
+\begin{align}
+  \psi\to \psi'=& U(\theta)\psi= \operatorname{e}^{i \theta Y}\psi \nonumber\\
+  \psi^{*}\to {\psi'}^{*}=&\psi^{*} U^{*}(\theta)=\psi^{*}\operatorname{e}^{-i \theta Y}\,.
 \end{align}
 
 
-Note que
-\begin{align*}
-\tau=-i \epsilon_{ab}\,, 
-\end{align*}
-tal que
-\begin{align*}
-\epsilon_{ac}\epsilon_{cb}=-\delta_{ab}
-\end{align*}
-
-
+Podemos definir el producto escalar como
+\begin{align}
+  \psi\cdot \psi\equiv\psi^{*} \psi
+  \to {\psi'}^{*} \psi'=\psi^{*} U^{*}(\theta) U(\theta) \psi=\psi^{*} \psi=\psi\cdot \psi\,.
+\end{align}
+\end{frame}
 
 \subsection{$\operatorname{SO}(3)$}
-Una representación matricial de esta álgebra se puede obtener con la llamada representación adjunta del Grupo de rotaciones en 3 dimensiones, $SO(3)$, definida a partir de las constantes de estructura \cite{Veltman}
+Una representación matricial de esta álgebra se puede obtener con la llamada representación adjunta del Grupo de rotaciones en 3 dimensiones, $\operatorname{SO}(3)$, definida a partir de las constantes de estructura \cite{Veltman}
+\begin{frame}[fragile,allowframebreaks]
 \begin{align}
   \label{eq:so3adj}
   (L^i)_{jk}=-i\epsilon_{ijk}\,.
@@ -273,6 +313,12 @@ Explícitamente
  \end{pmatrix}
 \end{align*}
 
+Estos generadores satisfacen el álgebra (suma sobre índices repetidos)
+\begin{align}
+  %the summation only includes a term
+  \left[ L^i,L^j \right]=& i \epsilon_{ijk}L^{k}\,.
+\end{align}
+\end{frame}
 Estos generan los elementos de $SO(3)$
 \begin{align}
   R(\boldsymbol{\theta})=&\exp(i \theta_j L^{j}),\qquad\text{sum in $j$}\nonumber\\
@@ -283,6 +329,7 @@ Para aislar los subgrupos de un parámetro definimos:
 \begin{align}
   R_i\equiv R(\theta_i)
 \end{align}
+\begin{frame}[fragile,allowframebreaks]
 donde, haciendo los mismos pasos que para $SO(2)$ en \eqref{eq:so2},
 \begin{align}
   R(\theta_1)=&
@@ -302,11 +349,13 @@ donde, haciendo los mismos pasos que para $SO(2)$ en \eqref{eq:so2},
       0         &     0     &1\\
   \end{pmatrix}\,,
 \end{align}
+\end{frame}
 que corresponden respectivamente a rotaciones sobre el eje $x$ por un ángulo $\theta_1$, sobre el eje $y$ por un ángulo $\theta_2$, sobre el eje $z$ por un ángulo $\theta_3$.
 
-Sin perdida de generalidad, un elemento del grupo $\operatorname{SO}(3)$, es decir, una matriz $3\times3$ ortogonal de determinante 1, $A$, se puede definir como el producto de las anteriores matrices de rotación de un parámetro
+Sin perdida de generalidad, un elemento del grupo $\operatorname{SO}(3)$, es decir, una matriz $3\times3$ ortogonal de determinante 1, $R(\boldsymbol{\theta})$, se puede definir como el producto de las anteriores matrices de rotación de un parámetro
+\begin{frame}[fragile,allowframebreaks]
 \begin{align}
- A =&R(\theta_1)R(\theta_2)R(\theta_3) \nonumber\\
+ R(\boldsymbol{\theta}) =&R(\theta_1)R(\theta_2)R(\theta_3) \nonumber\\
 =&
   \begin{pmatrix}
     c_1 c_2-c_3 s_1 s_2    & c_1 c_2 + c_3 c_1 s_2  & s_3 s_2 \\
@@ -316,17 +365,21 @@ Sin perdida de generalidad, un elemento del grupo $\operatorname{SO}(3)$, es dec
 \end{align}
 donde $c_i=\cos \theta_i$,  $s_i=\sin \theta_i$.
 
-Claramente, el Grupo $SO(3)$ es no Abeliano, es decir
+
+Claramente, el Grupo $\operatorname{SO}(3)$ es no Abeliano, es decir
 \begin{align*}
   R(\boldsymbol{\theta}_1)R(\boldsymbol{\theta}_2)\ne R(\boldsymbol{\theta}_2)R(\boldsymbol{\theta}_1)
 \end{align*}
+\end{frame}
 
-El producto escalar bajo es invariante:
+\begin{frame}[fragile,allowframebreaks]
+El producto escalar bajo $\operatorname{SO}(3)$ es invariante:
 \begin{align}
   \label{eq:psso3}
   \boldsymbol{x}\cdot \boldsymbol{x}= \boldsymbol{x}^{\operatorname{T}} \boldsymbol{x}\to \boldsymbol{x}^{\prime\operatorname{T}} \boldsymbol{x}'
   =\boldsymbol{x}^{\operatorname{T}}R^{\boldsymbol{T}} R \boldsymbol{x}=\boldsymbol{x}^{\operatorname{T}} \boldsymbol{x}=  \boldsymbol{x}\cdot \boldsymbol{x}\,.
 \end{align}
+\end{frame}
 
 Note que la combinación lineal se puede expresar como
 \begin{align}
@@ -365,19 +418,21 @@ entonces
 \end{align}
 done $I$ es la matriz identidad. En \cite{rodriguez} se encuentra la demostración.
 
-
+En general, Los objetos que sufren transformaciones en $\operatorname{SO}(N)$ son vectores en ese espacio, $\boldsymbol{x}$, que dejan el producto escalar bajo la métrica $\delta_{ij}$ del tipo~\eqref{eq:psso3} invariante.
 
 \subsection{$\operatorname{SU}(2)$} 
 
-La representación matricial isomorfa a $SO(3)$ pero con matrices $2\times2$ corresponde al Grupo $SU(2)$ de rotaciones de dos ejes complejos.
+La representación matricial isomorfa a $\operatorname{SO}(3)$ pero con matrices $2\times2$ corresponde al Grupo $SU(2)$ de rotaciones de dos ejes complejos.
 \begin{english}
   The Pauli matrices are set of matrices satisfying this commutation relations:
 \end{english}
 \begin{spanish}
-Las matrices de Pauli son un conjunto de matrices que satisfacen estas mismas condiciones de conmutación: 
+Las matrices de Pauli son un conjunto de matrices que satisfacen la misma álgebra de $\operatorname{SU}(2)$
 \end{spanish}
+\begin{frame}[fragile,allowframebreaks]
 \begin{equation}
   \label{eq:paulialg}
+  %summation only includes a term!
   \left[\frac{\tau^i}{2},\frac{\tau^j}{2} \right]=i\,\epsilon_{ijk}\frac{\tau^k}{2}
 \end{equation}
 donde $\tau^i$ 
@@ -387,22 +442,24 @@ donde $\tau^i$
   \begin{pmatrix}
     0&1\\
     1&0
-  \end{pmatrix} \qquad
+  \end{pmatrix}, \qquad
  \tau_2=
   \begin{pmatrix}
     0&-i\\
     i&0
-  \end{pmatrix}\qquad 
+  \end{pmatrix},\qquad 
  \tau_3=
   \begin{pmatrix}
     1&0\\
     0&-1
-  \end{pmatrix}
+  \end{pmatrix},
  \end{equation}
+
 dividas por dos, corresponden a los generadores del Grupo. Las constantes de estructura del Grupo corresponden a $\epsilon_{ijk}$. Como los generadores no conmutan, $SU(2)$ es un Grupo de Lie no Abeliano. Definiendo los generadores de $SU(2)$ como
 \begin{equation}
   T^i=\frac{\tau_i}{2},
 \end{equation}
+\end{frame}
 
 Las matrices de Pauli y por consiguiente $T_i$ satisfacen 
 \begin{align}
@@ -425,6 +482,7 @@ Además
 \tau_i\tau_j&=i\epsilon_{ijk}\tau_k+\delta_{ij}\,.
 \end{align}
 
+\begin{frame}[fragile,allowframebreaks]
 Un elemento del Grupo puede escribirse como
 \begin{equation}
   \label{eq:63qft}
@@ -448,17 +506,27 @@ la identidad $2\times 2$.
   \end{align*}
 \end{enumerate}
 De esta manera $T_i$ genera el grupo de matrices $2\times 2$ unitarias y de determinante 1: $SU(2)$. 
+\end{frame}
 
 El grupo $SU(2)$ de rotaciones de dos ejes complejos, es isomorfo al Grupo $SO(3)$ de rotaciones sobre tres ejes reales.
 
 Estas relaciones se pueden generalizar a rotaciones en mayores dimensiones.
 
-El momentum angular total de la tierra es la suma vectorial del momentum angular orbital (alrededor del sol) y el momentum angular intrínsico (la rotación de la tierra sobre eje). Ambos vectores transforman bajo rotaciones de $\operatorname{SO}(3)$.
+En la fig.~\ref{fig:ee} se ilustra el momento angular total para la tierra y un electrón no relativista. El momento angular total de la tierra es la suma vectorial del momento angular orbital (alrededor del sol) y el momento angular intrínseco (la rotación de la tierra sobre eje). Ambos vectores transforman bajo rotaciones de $\operatorname{SO}(3)$.
 
-El momentum angular total del electrón en el átomo de Higdrógeno es a su vez la suma vectorial del momentum angular orbital (alrededor del protón) y el momentum angular intrínsico del electrón.  Éste último sin embargo, transforma bajo rotaciones de $\operatorname{SU}(3)$, de manera que el campo asociado con el electrón debe ser un campo complejo: con magnitud y fase.
+El momento angular total del electrón (no relativista) en el átomo de Higdrógeno es a su vez la suma vectorial del momento angular orbital (alrededor del protón) y el momento angular intrínseco del electrón.  Éste último sin embargo, transforma bajo rotaciones de $\operatorname{SU}(3)$, de manera que el campo asociado con el electrón debe ser un campo complejo: con magnitud y fase.
 
-Los objetos que sufren transformaciones en $\operatorname{SO}(N)$ son vectores en ese espacio, $\boldsymbol{x}$, que dejan el producto escalar bajo la métrica $\delta_{ij}$ del tipo~\eqref{eq:psso3} invariante.
+\begin{frame}[fragile,allowframebreaks]
+\begin{figure}
+  \centering
+  \includegraphics[scale=0.6]{JLS}
+  \caption[tierra electrón]{momento angular total para la tierra y un electrón no relativista. \tiny{Créditos \url{https://www.flaticon.com/authors/smashicons} y Wikipedia}}
+  \label{fig:ee}
+\end{figure}
+\end{frame}
 
+
+\begin{frame}[fragile,allowframebreaks]
 Los objetos más simples que pueden sufrir transformaciones  $\operatorname{SU}(2)$, corresponden a vectores columnas de dos objetos complejos, como dos funciones de ondas, donde cada función de onda puede tener una de dos posibilidades de carga (una carga más que en $\operatorname{U}(1)$)
 \begin{align}
   \Psi=&
@@ -478,10 +546,11 @@ La transformación de este \emph{doblete} bajo $\operatorname{SU}(2)$ es
   \Psi\to \Psi'=& U(\boldsymbol{\theta}) \Psi \nonumber\\
   \Psi^{\dagger}\to \Psi^{\prime\dagger} =& \Psi^{\dagger}U^{\dagger}(\boldsymbol{\theta}).
 \end{align}
+\end{frame}
 
 La definición del producto escalar es
 \begin{align}
-  | \Psi |^2 \equiv \Psi^{\dagger}\Psi\,. 
+   \Psi\cdot \Psi \equiv \Psi^{\dagger}\Psi\,. 
 \end{align}
 
 \textbf{Ejercicio:} Mostrar la invarianza del producto escalar.
@@ -490,10 +559,7 @@ La definición del producto escalar es
 El producto escalar de $\operatorname{SU}(2)$ también se puede definir en términos de una métrica.
 
 \begin{frame}[fragile,allowframebreaks]
-  Sean $\Psi$ y $B$ $C$, dobletes $SU(2)$. En el Lagrangiano \eqref{eq:L0}, hemos construido invariantes $SU(2)$ de la forma $C^{\dagger}B$, por ejemplo. Pero hay otra forma de construir el producto invariante
-  
-
-Para los dobletes  $SU(2)_L$ 
+  Sean $\Psi$ y $\Upsilon$, dobletes $\operatorname{SU}(2)$. Hemos definido el producto escalar $SU(2)$ de la forma $\Psi^{\dagger}\Upsilon$, por ejemplo. Pero hay otra forma de construir el producto escalar para $\operatorname{SU}(2)$. Más específicamente, tenemos
 \begin{align}
   \Psi=&
   \begin{pmatrix}
@@ -504,28 +570,30 @@ Para los dobletes  $SU(2)_L$
   \begin{pmatrix}
     \Upsilon_1\\
     \Upsilon_2\\
-  \end{pmatrix},
+  \end{pmatrix}.
 \end{align}
-podemos definir un producto que es invariante bajo $SU(2)$ como el producto escalar bajo la ``métrica'' de $SU(2)$
+Podemos definir un producto que es invariante bajo $\operatorname{SU}(2)$ como el producto escalar bajo la ``métrica'' de $\operatorname{SU}(2)$ (suma sobre índices repetidos)
 \begin{align}
 \epsilon^{ab}\Psi_a \Upsilon_b\to \epsilon_{ab}\Psi'_a \Upsilon'_b=&\epsilon_{ab}U_{ac}U_{bd}\Psi_c \Upsilon_d\nonumber\\
   =&\left( U_{11}U_{22}-U_{12}U_{21} \right)\left(\Psi_1\Upsilon_2-\Psi_2\Upsilon_1  \right)\nonumber\\
-  =&\epsilon^{ab}\det\mathbf{U} \Psi_a \Upsilon_b\nonumber\\
+  =&\epsilon^{ab}\left( \det\mathbf{U} \right) \Psi_a \Upsilon_b\nonumber\\
   =&\epsilon^{ab} \Psi_a \Upsilon_b\,.
 \end{align}
-Teniendo en cuenta que
+Es claro además que
 \begin{align}
   \epsilon^{ab}\Psi_a \Upsilon_b=&\Psi_1 \Upsilon_2-\Psi_2 \Upsilon_1 \,.
  \end{align}
-Con el contenido de campos de $\Psi$, siempre es posible definir un nuevo doblete adjunto de $SU(2)$, definido como 
+
+
+ Con el contenido de campos de $\Psi$, siempre es posible definir el doblete adjunto de $\operatorname{SU}(2)$ como 
 \begin{align}
 \label{eq:conjA}
- \widetilde{\Psi}=& \begin{pmatrix}
+ \widetilde{\Psi}\equiv & \begin{pmatrix}
                   \Psi_2^{*}\\
                  -\Psi_1^{*}\\
                 \end{pmatrix}
 \end{align}
-En tal caso es posible escribir el producto escalar $SU(2)$ es una forma matricial, la cual muestra una invarianza más evidente
+En tal caso es posible escribir el producto escalar $\operatorname{SU}(2)$ es una forma matricial, la cual muestra una invarianza más evidente
 \begin{align}
 \widetilde{\Psi}\cdot \Upsilon\equiv \epsilon^{ab}\widetilde{\Psi}_a \Upsilon_b=&\widetilde{\Psi}_1 \Upsilon_2-\widetilde{\Psi}_2 \Upsilon_1 \nonumber\\
                      =&\Psi_2^{*}\Upsilon_2 -(-\Psi_1^{*}) \Upsilon_1 \nonumber\\
@@ -535,7 +603,7 @@ En tal caso es posible escribir el producto escalar $SU(2)$ es una forma matrici
                      =&\Psi^{\dagger} \Upsilon\,.
  \end{align}
 
-Por lo tanto, el producto escalres entre dos dobletes de $SU(2)$ se puede escribir en cualquiera de las dos formas
+Por lo tanto, el producto escalar entre dos dobletes de $\operatorname{SU}(2)$ se puede escribir en cualquiera de las dos formas
 \begin{align}
   \widetilde{\Psi}\cdot \Upsilon\,, \qquad\text{or}   \qquad \Psi^{\dagger}\Upsilon\,.
 \end{align}
@@ -583,7 +651,7 @@ En forma matricial, tenemos
 
 \subsection{$SU(N)$}
 
-
+\begin{frame}[fragile,allowframebreaks]
 En general, si $N^{2}-1$ generadores $\Lambda_a$, satisfacen el álgebra
 \begin{align}
   \left[ \Lambda_a,\Lambda_b \right]=f_{abc}\Lambda_{c}\,,
@@ -597,6 +665,7 @@ entonces las matrices $N\times N$
   U(\boldsymbol{\theta})=\exp\left( i \Lambda_{a}\theta_{a} \right)
 \end{align}
 son unitarias y de determinante 1, y constituyen la representación fundamental de $SU(N)$.
+\end{frame}
 
 En el caso de $U(1)$, el único generador conmutativo satisface trivialmente el álgebra y da lugar al elemento de grupo
 \begin{align}
@@ -607,8 +676,8 @@ que automáticamente tienen norma 1
 |U(\theta)|^2= U^{*}(\theta)U(\theta)=1\,.
 \end{align*}
 
-
-Los objetos más simples que pueden sufrir transformaciones  $\operatorname{SU}(N)$, corresponden a vectores columnas de dos objetos complejos, como dos funciones de ondas, donde cada función de onda puede tener una de $N$ posibilidades de carga ($N-1$ cargas más que en $\operatorname{U}(1)$)
+\begin{frame}[fragile,allowframebreaks]
+Los objetos más simples que pueden sufrir transformaciones  $\operatorname{SU}(N)$, corresponden a vectores columnas de $N$ objetos complejos, como $N$ funciones de ondas por ejemplo, donde cada función de onda puede tener una de $N$ posibilidades de carga ($N-1$ cargas más que en $\operatorname{U}(1)$)
 \begin{align}
   \Psi=&
   \begin{pmatrix}
@@ -624,7 +693,7 @@ Los objetos más simples que pueden sufrir transformaciones  $\operatorname{SU}(
   \end{pmatrix}.                  
 \end{align}
 
-La transformación de este \emph{doblete} bajo $\operatorname{SU}(N)$ es
+La transformación de este \emph{multiplete} bajo $\operatorname{SU}(N)$ es
 \begin{align}
   \Psi\to \Psi'=& U(\boldsymbol{\theta}) \Psi \nonumber\\
   \Psi^{\dagger}\to \Psi^{\prime\dagger} =& \Psi^{\dagger}U^{\dagger}(\boldsymbol{\theta}),
@@ -636,19 +705,21 @@ donde
 
 La definición del producto escalar es
 \begin{align}
-  | \Psi |^2 \equiv \Psi^{\dagger}\Psi\,. 
+   \Psi \cdot \Psi \equiv \Psi^{\dagger}\Psi\,. 
 \end{align}
+\end{frame}
 
 \textbf{Ejercicio:} Mostrar la invarianza del producto escalar.
 
 
-
+\begin{frame}[fragile,allowframebreaks]
 La representación adjunta para $\operatorname{SU}(N)$ esta definida por
 \begin{align}
   \left[ \widetilde{\Lambda}_a \right]_{bc}=-i f_{abc}\,.
 \end{align}
+\end{frame}
 
-Definiendo $\Sigma_i$ como las matrices $3\times3$ generadores de $\operatorname{SU}(2)$ en la representaci\'on adjunta
+Definiendo $\Sigma_i$ como las matrices $3\times3$ generadores de $\operatorname{SU}(2)$ en la representación adjunta
 \begin{align}
   (\Sigma_i)_{jk}=-i\epsilon_{ijk}\,,
 \end{align}
@@ -706,9 +777,12 @@ De este modo, estas unidades son naturales debido a que el origen de su definici
   G_N=1,\qquad \hbar=1,\qquad c=1,\qquad K=\frac{1}{4\pi\epsilon_0}=1,\qquad k=1,
 \end{equation}
 est\'an basadas s\'olo en las propiedades del espacio libre, y no en las propiedades (tales como carga, masa, tama\~no o radio) de alg\'un objeto o part\'\i cula elemental. 
+\begin{frame}[fragile,allowframebreaks]
+En 2018 se presentó el borrador de la resolución, efectiva a partir del 20 de mayo  de 2019, en la cual la humanidad adopta como base el sistema natural de unidades.
+\end{frame}
+Ver\footnote{\url{http://blog.wolfram.com/2018/11/16/as-of-today-the-fundamental-constants-of-physics-c-h-e-k-na-are-finally-constant/}}. De este modo, el sistema internacional  de unidades, el SI, es el sistema de unidades basado en la medida de la frecuencia de la transición hiperfina no perturbada del átomo de cesio 133 (9~192~631~770~Hz), la velocidad de la luz $c$, la constante de Planck $\hbar$, la carga elemental $e$, la consante de Boltzman $k$, el número de Avogadro $N_A=6.022~140~76\times 10^{23}\,,\text{mol}^{-1}$ y la eficacia luminosa de la radiación monocromática de frecuencia $540\times 10^{12}\,,\text{Hz}$, $K_{\text{cd}}$. Ver\footnote{\url{https://www.bipm.org/utils/en/pdf/CGPM/Draft-Resolution-A-EN.pdf}: ``Basing our units on some of the most important fundamental constants of physics bases them on the deepest quantifying properties of our universe, and at the same time defines them for all times and for all people.''}.
 
-En 2018 se presentó el borrador de la resolución, efectiva a partir del 20 de mayo  de 2019, en la cual la humanidad adopta como base el sistema natural de unidades. Ver\footnote{\url{http://blog.wolfram.com/2018/11/16/as-of-today-the-fundamental-constants-of-physics-c-h-e-k-na-are-finally-constant/}}. De este modo, el sistema internacional  de unidades, el SI, es el sistema de unidades basado en la medida de la frecuencia de la transición hiperfina no perturbada del átomo de cesio 133 (9~192~631~770~Hz), la velocidad de la luz $c$, la constante de Planck $\hbar$, la carga elemental $e$, la consante de Boltzman $k$, el número de Avogadro $N_A=6.022~140~76\times 10^{23}\,,\text{mol}^{-1}$ y la eficacia luminosa de la radiación monocromática de frecuencia $540\times 10^{12}\,,\text{Hz}$, $K_{\text{cd}}$. Ver\footnote{\url{https://www.bipm.org/utils/en/pdf/CGPM/Draft-Resolution-A-EN.pdf}: ``Basing our units on some of the most important fundamental constants of physics bases them on the deepest quantifying properties of our universe, and at the same time defines them for all times and for all people.''}.
-
+\begin{frame}[fragile,allowframebreaks]
 Lo que esto significa es que ahora en adelante los valores de estas constantes tendrán un valor exacto para siempre:
 \begin{align*}
     \Delta\nu_{\text{Cs}}=& \SI{9 192 631 770}{Hz}\,,\\
@@ -720,6 +794,7 @@ Lo que esto significa es que ahora en adelante los valores de estas constantes t
 \end{align*}
 
 El error se pasa a la medida de la correspondiente cantidad SI.
+\end{frame}
 
 Las constantes físicas que suelen normalizarse se escogen del conjunto dado por la ec.~\eqref{eq:144} y
 \begin{equation}
@@ -1627,7 +1702,7 @@ A medida que el mu\'on se acerca m\'as a la velocidad de la luz, $L_\mu'$ coinci
 
 \end{frame}
 
-\subsection{Grupo de Lorentz}
+\subsection{Grupo de Lorentz: $SO(1,3)$}
 
 \begin{frame}[fragile,allowframebreaks]
   Los seis generadores independientes del Grupo de Lorentz (GL) se pueden definir a partir del tensor antisimétrico
@@ -1840,7 +1915,7 @@ Entonces
 %ver programa mathematica
 \end{frame}
 
-\section{2 representaciones $2\times 2$ del Grupo de Lorentz}
+\section{representaciones $2\times 2$ del Grupo de Lorentz: $\operatorname{SL}(2)$}
 \begin{frame}[fragile,allowframebreaks]
 Here we focus on the simplest non-trivial irreducible representations of the Lorentz algebra. These are the two-dimensional (inequivalent) representations: $(\frac{1}{2},0)$ and $(0,\frac{1}{2})$. 
 
@@ -1933,11 +2008,11 @@ donde,
   \begin{tabular}{llll}
     Nombre & Símbolo & Lorentz & $U(1)$\\\hline\hline
     $e_L$: electrón izquierdo & $\xi_{\alpha}$ & ${\left[ S \right]_{\alpha}}^{\beta}\xi_{\beta}$ & $e^{i\theta}\xi_\alpha$\\
-    $e_R$: electrón derecho   & $\left( \eta^{\alpha} \right)^{\dagger}=\eta^{\dagger\;\dot{\alpha}}$ & ${\left[ \left( S^{-1} \right)^\dagger \right]^{\dot{\alpha}}}_{\dot{\beta}}\eta^{\dagger\;\dot{\beta}}$& $e^{i\theta}\eta^{\dagger\dot{\alpha}}$\\
+   $\left( e_R \right)^{\dagger}$: positrón izquierdo&$\eta^{\alpha}$& $\eta^\beta{\left[  S^{-1}  \right]_{\beta}}^{\alpha}$ & $\eta^\alpha\, e^{-i\theta}$\\
     \hline    
-    $\left( e_L \right)^{\dagger}=e^{\dagger}_R$: positrón derecho   & $\left( \xi_{\alpha} \right)^{\dagger}=\xi^{\dagger}_{\dot{\alpha}}$ &
+    $\left( e_L \right)^{\dagger}$: positrón derecho   & $\left( \xi_{\alpha} \right)^{\dagger}=\xi^{\dagger}_{\dot{\alpha}}$ &
      $\xi^{\dagger}_{\dot{\beta}}{\left[{S^{\dagger}}\right]^{\dot{\beta}}}_{\dot{\alpha}}$ & $\xi^\dagger_{\dot{\alpha}} e^{-i\theta}$\\
-   $\left( e_R \right)^{\dagger}=e^{\dagger}_L$: positrón izquierdo&$\eta^{\alpha}$& $\eta^\beta{\left[  S^{-1}  \right]_{\beta}}^{\alpha}$ & $\eta^\alpha\, e^{-i\theta}$\\\hline\hline
+   $e_R$: electrón derecho   & $\left( \eta^{\alpha} \right)^{\dagger}=\eta^{\dagger\;\dot{\alpha}}$ & ${\left[ \left( S^{-1} \right)^\dagger \right]^{\dot{\alpha}}}_{\dot{\beta}}\eta^{\dagger\;\dot{\beta}}$& $e^{i\theta}\eta^{\dagger\dot{\alpha}}$ \\\hline\hline
   \end{tabular}
   \caption{Definición de transformaciones de Lorentz}
   \label{tab:fermionlr}
@@ -1955,15 +2030,7 @@ Productos escalares
 \end{itemize}
 
 
-
 \end{frame}
-
-\subsection{Productos escalares}
-\includegraphics[scale=0.1]{tabla}
-
-\subsection{Diagramas de flujos de cargas}
-\includegraphics[scale=0.1]{circuito}
-
 
 \noindent
 \textbf{Ejemplo:} 
