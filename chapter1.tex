@@ -2059,6 +2059,20 @@ Para evitar confusión con el conjugado de espinores de Weyl, usaremos el produc
 \subsection{Resumén de productos escalares}
 
 \begin{frame}[fragile,allowframebreaks]
+Tenemos los siguientes objetos que transforman bajo las representaciones del Grupo de Lorentz
+\begin{align}
+   \phi\to \phi'=&\phi && \text{Scalar field,}\nonumber\\
+   A^\mu\to {A'}^\mu=&{\Lambda^\mu}_\nu A^\nu&&\text{Vector field,}\nonumber\\
+  \xi_\alpha\to\xi'_\alpha=&{\left[ S(\Lambda) \right]_\alpha}^\beta\xi_\beta
+&& \text{Left-handed spinor field,}\nonumber\\
+\eta^{\alpha}\to {\eta'}^{\alpha} =&\eta^\beta{\left[  S^{-1}(\Lambda)  \right]_{\beta}}^{\alpha}&&
+ \text{Left-handed anti-spinor field,}\,.
+ \end{align}
+\end{frame}
+
+
+
+\begin{frame}[fragile,allowframebreaks]
 
 \begin{table}
   \centering
@@ -2114,24 +2128,105 @@ como se vera posteriormente en detalle.
 
 \noindent
 \textbf{Ejemplo:} 
-En la siguiente Tabla y figura se asignan los espinores (antiespinores) de Weyl izquierdos (derechos) $\xi_{i\alpha}$ ($\eta^{\alpha}_i$)  y las cargas  (en términos de y $s$ en la última columna) para que dichas cargas fluyan en la figura de forma consistente. Las cargas en rojo se pueden obtener a partir de las cargas en negro.
-  
-  \begin{tabular}{|l|c|c|c|l|}\hline
-    Campos &Lorentz& SU(2) & U(1)$_Y$ & U(1)$_X$\\\hline
+En la siguiente Tabla y figura se asignan los espinores (anti-espinores) de Weyl izquierdos (derechos) $\xi_{i\alpha}$ ($\eta^{\alpha}_i$)  y las cargas bajo diferentes simetrías especificadas en las columnas.
+
+
+\begin{frame}[fragile,allowframebreaks]
+
+\begin{table}
+  \centering
+    \begin{tabular}{|l|c|c|c|l|}\hline
+    Campos &Lorentz& SU(2)$_{L}$ & U(1)$_Y$ & U(1)$_{B-L}$\\\hline
     $L_1,L_2$ & $\xi_{\alpha}$& $\mathbf{2}$ & $-1/2$&$-1$\\
-    $\left(e_R\right)^{*}$ & $\eta_1^\alpha$& $\mathbf{1}$ & $1$&$\phantom{-}1$\\
-    $\left(\nu_R\right)^{*}$ &$\eta_2^\alpha$ & $\mathbf{1}$ & $0$&$\bar{\nu}=$\\
+    $\left(e_R^{-}\right)^{\dagger}$ & $\eta_1^\alpha$& $\mathbf{1}$ & $1$&$\phantom{-}1$\\
+    $\left(\nu_R\right)^{\dagger}$ &$\eta_2^\alpha$ & $\mathbf{1}$ & $0$&$\bar{\nu}$\\
      $H$  &-&$\color{red}\mathbf{2}$&$\color{red}1/2$&$H=\color{red}0$\\
      $\sigma_1^-$ &-&$\mathbf{1}$&$\color{red}-1$&$\sigma_1=\color{red}-2$\\
-     $\sigma_2^-$ &-&$\color{red}\mathbf{1}$&$\color{red}-1$&$\sigma_2=\color{red}-s-2$\\
-     $S$ &-&$\color{red}\mathbf{1}$&${\color{red}0}$&$\phantom{-}s$\\\hline
-  \end{tabular}\hspace{1cm} \includegraphics[scale=0.5]{zee}
+     $\sigma_2^-$ &-&$\color{red}\mathbf{1}$&$\color{red}-1$&$\sigma_2=-\bar{\nu}-1$\\
+     $S$ &-&$\color{red}\mathbf{1}$&${\color{red}0}$&$\phantom{-}s=\bar{\nu}-1$\\\hline
+  \end{tabular}\hspace{1cm} 
+  \caption{Fermiones y escalares. El signo en la primera columna denota la carga eléctrica }
+  \label{tab:fs}
+\end{table}
+
+
+Evite
+\begin{align}
+  \left( \nu_R \right)^{\dagger} L\cdot H\,,\qquad\text{y }\qquad \nu_R \nu_R\,.
+\end{align}
+\end{frame}
+
+\begin{frame}[fragile,allowframebreaks]
+Permita
+
+
+\begin{figure}
+  \centering
+  \includegraphics[scale=0.5]{T1-3-D} \hspace{1cm}
+  \includegraphics[scale=0.5]{zee}
+  \caption{Verde: $L$, amarillo: $\nu_R$, rojo: $X_4$  }
+  \label{fig:gg}
+\end{figure}
+\end{frame}
+
+\begin{frame}[fragile,allowframebreaks]
+Para $\operatorname{U(1)}_Y$:
+\begin{align}
+   \text{(a)}:&\  -\frac{1}{2}-\frac{1}{2}=-1 \nonumber\\
+   \text{(b)}:&\ \phantom{-} \frac{1}{2}-1=-\frac{1}{2} \nonumber\\
+  \text{(c)}:&\ -1=-1+0  \nonumber\\
+  \text{(d)}:&\  -1=-1+0  \,.
+\end{align}
+
+Para $\operatorname{U}(1)_{B-L}$
+\begin{align}
+  \text{(a)}:&\  -1 -1=\sigma_1 \nonumber\\
+  \text{(b)}:&\  -1 +0=-1 \nonumber\\
+  \text{(c)}:&\  \sigma_2=-\bar{\nu}-1 \nonumber\\
+  \text{(d)}:&\ \sigma_1=\sigma_2+s\,.
+\end{align}
+Combinado con $\operatorname{SU}_L$ y Lorentz
+\begin{align}
+  \text{(a)}:&\  L_i\cdot L_j \sigma_1^{*} \nonumber\\
+  \text{(b)}:&\  \left( e_R \right)^{\dagger} \widetilde{H} \cdot L \nonumber\\
+  \text{(c)}:&\  \nu_R e_R^- \sigma_2^+  \nonumber\\
+  \text{(d)}:&\ \sigma_1^+\sigma_2^{-} S\,.
+\end{align}
+
+La condiciones de consistencia son
+\begin{align}
+  \sigma_1=&-2 \nonumber\\
+   \sigma_1-s=&-\bar{\nu}-1\,,
+\end{align}
+
+\begin{align}
+  \sigma_1=&-2 \nonumber\\
+   s=&\sigma_1+\bar{\nu}+1=\bar{\nu}-1\,.
+\end{align}
+Para evitar
+\begin{align}
+ \left( \nu_R \right)^{\dagger}  L\cdot H\,,\qquad \nu_R \nu_R\,,
+\end{align}
+requerimos que
+\begin{align}
+  \bar{\nu} -1 +0 \ne& 0\,, & -2 \bar{\nu}\ne& 0\,.
+\end{align}
+de modo que
+\begin{align}
+  \bar{\nu}\ne& 1,0\,.
+\end{align}
+
+A modo de ejemplo,
+para $\bar{\nu}=4$, entonces $s=3$ y $\sigma_2=-5$.
+
+
 
   \begin{itemize}
   \item Demuestre que el producto escalar $SU(2)$ entre $L_i$ iguales es cero ($i=1,2$) 
   \item   Establezca las condiciones para que $\sigma_1^-=\sigma_2^-$.
   \end{itemize}
 
+\end{frame}
 
 \section{Principio de M\'\i nima Acci\'on}
 \label{sec:la}
