@@ -771,7 +771,7 @@ Las \emph{unidades naturales} son unidades f\'\i sicas de medida definidas en t\
 %instiki: natural units
 \end{quotation} %noinstiki
 %instiki:
-De este modo, estas unidades son naturales debido a que el origen de su definici\'on proviene solo de propiedades de la naturaleza y no de alguna construcci\'on humana. A diferencia de otros conjuntos de unidades naturales las unidades de Planck donde
+De este modo, estas unidades son naturales debido a que el origen de su definici\'on proviene solo de propiedades de la naturaleza y no de alguna construcci\'on humana. A diferencia de otros conjuntos de unidades naturales, las unidades de Planck donde
 \begin{equation}
 \label{eq:144}
   G_N=1,\qquad \hbar=1,\qquad c=1,\qquad K=\frac{1}{4\pi\epsilon_0}=1,\qquad k=1,
@@ -783,7 +783,7 @@ En 2018 se presentó el borrador de la resolución, efectiva a partir del 20 de 
 Ver\footnote{\url{http://blog.wolfram.com/2018/11/16/as-of-today-the-fundamental-constants-of-physics-c-h-e-k-na-are-finally-constant/}}. De este modo, el sistema internacional  de unidades, el SI, es el sistema de unidades basado en la medida de la frecuencia de la transición hiperfina no perturbada del átomo de cesio 133 (9~192~631~770~Hz), la velocidad de la luz $c$, la constante de Planck $\hbar$, la carga elemental $e$, la consante de Boltzman $k$, el número de Avogadro $N_A=6.022~140~76\times 10^{23}\,,\text{mol}^{-1}$ y la eficacia luminosa de la radiación monocromática de frecuencia $540\times 10^{12}\,,\text{Hz}$, $K_{\text{cd}}$. Ver\footnote{\url{https://www.bipm.org/utils/en/pdf/CGPM/Draft-Resolution-A-EN.pdf}: ``Basing our units on some of the most important fundamental constants of physics bases them on the deepest quantifying properties of our universe, and at the same time defines them for all times and for all people.''}.
 
 \begin{frame}[fragile,allowframebreaks]
-Lo que esto significa es que ahora en adelante los valores de estas constantes tendrán un valor exacto para siempre:
+Lo que esto significa es que de ahora en adelante los valores de estas constantes tendrán un valor exacto para siempre:
 \begin{align*}
     \Delta\nu_{\text{Cs}}=& \SI{9 192 631 770}{Hz}\,,\\
     c=&\SI{ 299 792 458 }{m/s}\,,\\
@@ -906,7 +906,7 @@ De la constante de Fuerza electrost\'atica $K=1/(4\pi\epsilon_0)$, podemos obten
   \approx&2.84\times10^{35}\text{C}^{-2}\hbar c\\
   \approx&2.84\times10^{35}\text{C}^{-2}\times
   \left(
-    \frac{1.602\times10^{-19}}{e^2}
+    \frac{1.602\times10^{-19}\,\text{C}}{e^2}
   \right)^2\hbar c\\
   =&\frac{7.296\times10^{-3}}{e^2}\hbar c
 \end{align*}
@@ -1270,7 +1270,7 @@ En el libro de A.~Zee sobre teoría de grupos~\cite{Zee:2016fuk} se resumen este
 
 
 Como un ejemplo de Transformaci\'on de Lorentz considere un desplazamiento a lo largo del eje $x$
-\begin{equation}
+\begin{align}
 \label{eq:147}
   \left\{x^\mu\right\}=\begin{pmatrix}
     t\\
@@ -1283,13 +1283,26 @@ Como un ejemplo de Transformaci\'on de Lorentz considere un desplazamiento a lo 
     x'\\
     y'\\
     z'
-  \end{pmatrix}=
+  \end{pmatrix}=&
   \begin{pmatrix}
     \frac{t+vx}{\sqrt{1-v^2}}\\
     \frac{x+vt}{\sqrt{1-v^2}}\\
     y\\
     z
-  \end{pmatrix}=
+  \end{pmatrix} \nonumber\\
+=&\begin{pmatrix}
+  \gamma   & v \gamma & 0 & 0 \\
+  v \gamma & \gamma & 0 & 0\\
+  0 & 0 & 1 & 0 \\
+    0 & 0 & 0 & 1 \\
+   \end{pmatrix} 
+\begin{pmatrix}
+    t\\
+    x\\
+    y\\
+    z
+  \end{pmatrix}\nonumber\\
+  =&
   \begin{pmatrix}
     \cosh\xi&\sinh\xi&0&0\\
     \sinh\xi&\cosh\xi&0&0\\
@@ -1301,8 +1314,9 @@ Como un ejemplo de Transformaci\'on de Lorentz considere un desplazamiento a lo 
     x\\
     y\\
     z
-  \end{pmatrix}=\left\{{\Lambda^\mu}_{\nu}\right\}\left\{x^\nu\right\},
-\end{equation}
+  \end{pmatrix} \nonumber\\
+=&\left\{{\Lambda^\mu}_{\nu}\right\}\left\{x^\nu\right\},
+\end{align}
 donde
 \begin{equation}
   \cosh\xi=\gamma\qquad\sinh\xi=v\gamma,\qquad\text{and}\qquad \gamma=\frac{1}{\sqrt{1-v^2}}.
@@ -1311,7 +1325,7 @@ y, por ejemplo:
 \begin{align}
   t\cosh{\xi}+x\sinh\xi=\gamma(t+v x)=\frac{t+v x}{\sqrt{1-v^2}}\,.
 \end{align}
-El ${\Lambda^\mu}_{\nu}$ definido en la ec.~\eqref{eq:147} satisface la condici\'on en ec.~\eqref{eq:lrinv}, 
+El ${\Lambda^\mu}_{\nu}$ definido en la ec.~\eqref{eq:147} satisface la condición en ec.~\eqref{eq:lrinv}, 
 \begin{align}
   \Lambda^T g \Lambda=&\begin{pmatrix}
     \cosh\xi&\sinh\xi&0&0\\
