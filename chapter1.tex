@@ -756,16 +756,17 @@ entonces
 
 
 \section{Grupo de Lorentz: $\operatorname{SO}(1,3)$}
+\label{sec:glso13}
 
 \begin{frame}[fragile,allowframebreaks]
   Los seis generadores independientes del Grupo de Lorentz $\operatorname{SO}(1,3)$ se pueden definir a partir del tensor antisimétrico
 \begin{align}
-   \left(J^{\mu\nu}\right)_{\alpha\beta}=&-i\epsilon^{\mu\nu\rho\sigma}\epsilon_{\rho\sigma\alpha\beta}\,,
+   \left(J^{\mu\nu}\right)_{\alpha\beta}=&i\epsilon^{\mu\nu\rho\sigma}\epsilon_{\rho\sigma\alpha\beta}\,,
 \end{align}
-donde se usa la convención de suma sobre indices repetidos que esten contraidos (uno como superindice y el otro como subindice): $\mu,\nu,\alpha,\beta=0,1,2,3$, aún en el caso de que sean indices latinos: $i,j,k=1,2,3$. 
+donde se usa la convención de suma sobre índices repetidos que estén contraídos (uno como superíndice y el otro como subíndice): $\mu,\nu,\alpha,\beta=0,1,2,3$, aún en el caso de que sean índices latinos: $i,j,k=1,2,3$. 
 
 
-Los seis generadores indpendientes satisfacen el álgebra del grupo $\operatorname{SO(1,3)}$
+Los seis generadores independientes satisfacen el álgebra del grupo $\operatorname{SO(1,3)}$
 \begin{align}
 \label{eq:lrtalg}
   \left[{J}^{\mu\nu},{J}^{\rho\sigma}\right]=&
@@ -786,13 +787,13 @@ denota la forma matricial del tensor $g^{\mu\nu}$.
 
 Cualquier representación matricial de esta álgebra debe obedecer las mismas reglas de conmutación.
 
-De las Las  matrices $4\times 4$ 
+De las las  matrices $4\times 4$ 
 \begin{align}
-   \left(J^{\mu\nu}\right)_{\alpha\beta}=&-i\epsilon^{\mu\nu\rho\sigma}\epsilon_{\rho\sigma\alpha\beta}\,,
+   \left(J^{\mu\nu}\right)_{\alpha\beta}=&i\epsilon^{\mu\nu\rho\sigma}\epsilon_{\rho\sigma\alpha\beta}\,,
 \end{align}
-Nos interesan realmente las componentes definidas como
+nos interesan realmente las componentes definidas como
 \begin{align}
-    { \left(J^{\mu\nu}\right)^{\alpha}}_{\beta}\equiv g^{\gamma\alpha}\left(J^{\mu\nu}\right)_{\gamma\beta}= &-i\epsilon^{\mu\nu\rho\sigma}\epsilon_{\rho\sigma\gamma\beta}g^{\gamma\alpha}\,,
+    { \left(J^{\mu\nu}\right)^{\alpha}}_{\beta}\equiv g^{\gamma\alpha}\left(J^{\mu\nu}\right)_{\gamma\beta}= &i\epsilon^{\mu\nu\rho\sigma}\epsilon_{\rho\sigma\gamma\beta}g^{\gamma\alpha}\,,
 \end{align}
 Teniendo en cuenta la identidad
 \begin{align}
@@ -802,9 +803,9 @@ Teniendo en cuenta la identidad
 podemos escribir
 \begin{align}
   \label{eq:44rep}
-  \left(J^{\mu\nu}\right)_{\alpha\beta}  =&-i\left({\delta^\mu}_\alpha{\delta^\nu}_\beta-{\delta^\mu}_\beta{\delta^\nu}_\alpha\right)\nonumber\\
- {\left(J^{\mu\nu}\right)^{\alpha}}_{\beta}=&-ig^{\gamma\alpha}\left({\delta^{\mu}}_{\gamma}{\delta^\nu}_\beta-{\delta^\mu}_\beta{\delta^{\nu}}_\gamma\right),% \nonumber\\
- %  &-i\left(g^{\mu\alpha}{\delta^\nu}_\beta-{\delta^\mu}_\beta g^{\nu\alpha}\right)\\
+  \left(J^{\mu\nu}\right)_{\alpha\beta}  =&i\left({\delta^\mu}_\alpha{\delta^\nu}_\beta-{\delta^\mu}_\beta{\delta^\nu}_\alpha\right)\nonumber\\
+ {\left(J^{\mu\nu}\right)^{\alpha}}_{\beta}=&ig^{\gamma\alpha}\left({\delta^{\mu}}_{\gamma}{\delta^\nu}_\beta-{\delta^\mu}_\beta{\delta^{\nu}}_\gamma\right) \nonumber\\
+ =  &i\left(g^{\mu\alpha}{\delta^\nu}_\beta-{\delta^\mu}_\beta g^{\nu\alpha}\right)
  % \left(J^{\mu\nu}\right)^{\alpha\beta}}=&-i \left( g^{\mu\alpha}g^{\nu\beta}-g^{\mu\beta}g^{\nu\alpha} \right) \nonumber\\
 \end{align}
 donde $\mu$ y $\nu$ rotulan cual de las dieciséis matrices se desea, mientras que $\alpha$ y $\beta$ rotulan las componentes de las matrices. Estas matrices satisfacen la relaciones de conmutación \eqref{eq:lrtalg}.
@@ -812,12 +813,12 @@ donde $\mu$ y $\nu$ rotulan cual de las dieciséis matrices se desea, mientras q
 Usando la ec.~\eqref{eq:44rep}
 \begin{align}
   {\left( J^{0i} \right)^{\alpha}}_{\beta}=
-  -i\left(g^{0\alpha}{\delta^i}_\beta-{\delta^0}_\beta g^{i\alpha}\right).
+  i\left(g^{0\alpha}{\delta^i}_\beta-{\delta^0}_\beta g^{i\alpha}\right).
 \end{align}
 Las únicas componentes diferente de cero son
 \begin{align}
-  {\left( J^{0i} \right)^{0}}_{i}=-ig^{00}{\delta^i}_i=&-i\,,&
-  {\left( J^{0i} \right)^{i}}_{0}=i {\delta^0}_0 g^{ii}=&-i\,.
+  {\left( J^{0i} \right)^{0}}_{i}=ig^{00}{\delta^i}_i=&i\,,&
+  {\left( J^{0i} \right)^{i}}_{0}=-i {\delta^0}_0 g^{ii}=&i\,.
 \end{align}
 
 Entonces
@@ -851,30 +852,20 @@ Definimos
 Además
 \begin{align}
   {\left(J^{ij}\right)^{\alpha}}_{\beta}=
-  -i\left(g^{i\alpha}{\delta^j}_\beta-{\delta^i}_\beta g^{j\alpha}\right).
+  i\left(g^{i\alpha}{\delta^j}_\beta-{\delta^i}_\beta g^{j\alpha}\right).
 \end{align}
 Las únicas componentes diferente cero son
 \begin{align}
-  {\left(J^{ij}\right)^{i}}_{j}=&-ig^{ii}{\delta^j}_j=i\,,&
-  {\left(J^{ij}\right)^{j}}_{i}=&i{\delta^i}_i g^{jj}=-i\,.
+  {\left(J^{ij}\right)^{i}}_{j}=&ig^{ii}{\delta^j}_j=-i\,,&
+  {\left(J^{ij}\right)^{j}}_{i}=&-i{\delta^i}_i g^{jj}=i\,.
 \end{align}
 Por consiguiente
 \begin{align}
   \label{eq:ljij}
   {\left( L_i  \right)^{j}}_{k}\equiv \epsilon_{ijk}{\left( J^{jk}\right)^{j}}_{k}
-  = i\epsilon_{ijk}\,,
+  = -i\epsilon_{ijk}\,,
 \end{align}
-donde, $L^i=g^{ij}L_j$ son los generadores de $\operatorname{SO}(3)$ en ec.~\eqref{eq:so3adj}, escritos como matrices $4\times 4$ con la primera fila y la primera columna nulas
-%
-\begin{align}
- L^i\equiv
-  \begin{pmatrix}
-    0 & 0 & 0& 0\\
-    0 &   &  &  \\
-    0 &   & L^i_{3\times3}  &  \\
-    0 &   &  &  \\
-  \end{pmatrix}.
-\end{align}
+donde, $L_i$ son los generadores de $\operatorname{SO}(3)$ en ec.~\eqref{eq:so3adj}, escritos como matrices $4\times 4$ con la primera fila y la primera columna nulas.
 
 Escribiendo~\eqref{eq:ljij} en términos matriciales, obtenemos
 \begin{align}
@@ -922,13 +913,13 @@ Mientras que para la suma completa tenemos
   {\Lambda}=\exp\left(i\omega_{\mu\nu}\frac{{J}^{\mu\nu}}{2}\right)\,,
 \end{align}
 
-The components are definided as ${\Lambda^{\alpha}}_{\beta}$, and ${\left( J^{\mu\nu}\right)^{\alpha}}_{\beta}$. Además, de ec.~\eqref{eq:wjexp} 
+Las componentes están definidas como  ${\Lambda^{\alpha}}_{\beta}$, y ${\left( J^{\mu\nu}\right)^{\alpha}}_{\beta}$. Además, de ec.~\eqref{eq:wjexp} 
 \begin{align}
   \Lambda=\exp \left(i \xi_i K^i+ i\theta_i L^i \right)
 \end{align}
 
 Ya hemos desarrollado la parte de $\operatorname{SO}(3)$ correspondiente a los generadores $L^i$.
-Cada $L^i$ genera una matriz de rotación ortogonal como en las ecs.~\eqref{eq:lirot}
+Cada $L^i$ genera una matriz de rotación ortogonal como en las ecs.~\eqref{eq:lirot}.
 A continuación mostraremos el tipo de matriz que genera un boost $\xi_i$ asociado  a un generador $K^i$.
 
   Recordemos que
@@ -938,13 +929,13 @@ A continuación mostraremos el tipo de matriz que genera un boost $\xi_i$ asocia
 \end{align}
   Un boost infinitesimal a lo largo de $x$ es
 \begin{align}
-  \left\{{\Lambda^\mu}_{\nu}\right\}_{x-\text{boost }}\approx
+  \left\{{\Lambda^\mu}_{\nu}\right\}_{x-\text{boost }}=\exp \left( i\xi  K^1 \right)\approx
   \begin{pmatrix}
     1&\xi&0&0\\
     \xi&1&0&0\\
     0&0&1&0\\
     0&0&0&1
-  \end{pmatrix}=\exp \left( i\xi  K^1 \right),
+  \end{pmatrix},
 \end{align}
 donde el generador de boost es
 \begin{align}
@@ -956,9 +947,9 @@ donde el generador de boost es
   \end{pmatrix}.
 \end{align}
 
-Para realizar la expansión de Taylor, definimos
+Para realizar la expansión de Taylor, definimos la submatriz
 \begin{align*}
-  K^{0}=&\boldsymbol{1}\,,&K=&
+  K^{0}=&\boldsymbol{1}_{2\times2}\,,&K=&
   \begin{pmatrix}
    0 &-i\\ %0 &-i\\
    -i &0\\  %i &0\\ 
@@ -969,7 +960,7 @@ Para realizar la expansión de Taylor, definimos
    0 &i\\
    i &0\\ 
   \end{pmatrix}. \nonumber\\
-  K^{n}=&(-1)^{n}\boldsymbol{1}\,,&&
+  K^{n}=&(-1)^{n}\boldsymbol{1}_{2\times2}\,,&&
 &&&K^{2n+1}=& (-1)^{n} \begin{pmatrix}
    0 &-i\\
    -i &0\\ 
@@ -1045,7 +1036,7 @@ de modo que
 \end{align}
 
 
-  Similarmente una rotación por un ángulo infinitesimal $\theta=\theta_3$ alrededor del plano $xy$ (o sobre el eje $z$)
+  Similarmente, una rotación por un ángulo infinitesimal $\theta=\theta_3$ alrededor del plano $xy$ (o sobre el eje $z$)
 \begin{align}
   \left\{{\Lambda^\mu}_{\nu}\right\}_{xy-\text{rotation }}\approx
   \begin{pmatrix}
@@ -1116,13 +1107,13 @@ Como
     0 &   &  &  \\
   \end{pmatrix},                  
 \end{align}
-esta condición automaticamente incluye
+esta condición automáticamente incluye
 \begin{align}
   R_{3\times3}^{\operatorname{T}} R_{3\times3}=\boldsymbol{1}_{3\times3}\,.
 \end{align}
 
 \noindent
-\textbf{Ejercicio:} Demostrar que $\Lambda(\xi_1)$ dada en la primera ec.~\eqref{eq:Lximunu}, automaticamente cumple la condición de ortogonalidad generalizada~\eqref{eq:cdeog}.
+\textbf{Ejercicio:} Demostrar que $\Lambda(\xi_1)$ dada en la primera ec.~\eqref{eq:Lximunu}, automáticamente cumple la condición de ortogonalidad generalizada~\eqref{eq:cdeog}.
 
 
 \section{Representaciones $2\times 2$ del Grupo de Lorentz: $\operatorname{SL}(2,C)$}
@@ -1566,8 +1557,9 @@ o, reorganizando los índices mudos
 \end{equation}
 En notaci\'on matricial
 \begin{align}
- g=\Lambda^T g \Lambda\,. 
+ g=\Lambda^T g \Lambda\,,
 \end{align}
+que define el conjunto de matrices $\Lambda$ que forma el Grupo de Lorentz $\operatorname{SO}(1,3)$ estudiado en la sec.~\ref{sec:glso13}.
 
 Introducimos ahora un cuadrivector que lleva intrínsicamente el índice abajo
 \begin{align}
@@ -1768,7 +1760,7 @@ y, por ejemplo:
 \begin{align}
   t\cosh{\xi}+x\sinh\xi=\gamma(t+v x)=\frac{t+v x}{\sqrt{1-v^2}}\,.
 \end{align}
-El ${\Lambda^\mu}_{\nu}$ definido en la ec.~\eqref{eq:147} satisface la condición en ec.~\eqref{eq:lrinv}, 
+Podemos ver que las transformaciónes de Lorentz para un boost en $x$, dan lugar a una de las matrices de boost que definen el grupo de Lorentz, $\operatorname{SO}(1,3)$, dadas en la ec.~\eqref{eq:Lximunu}. En efecto, el ${\Lambda^\mu}_{\nu}$ definido en la ec.~\eqref{eq:147} satisface la condición en ec.~\eqref{eq:lrinv}, 
 \begin{align}
   \Lambda^T g \Lambda=&\begin{pmatrix}
     \cosh\xi&\sinh\xi&0&0\\
