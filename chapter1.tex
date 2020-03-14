@@ -856,34 +856,35 @@ Además
 \end{align}
 Las únicas componentes diferente cero son
 \begin{align}
-  {\left(J^{ij}\right)^{i}}_{j}=&ig^{ii}{\delta^j}_j=-i\,,&
-  {\left(J^{ij}\right)^{j}}_{i}=&-i{\delta^i}_i g^{jj}=i\,.
+  {\left(J^{ij}\right)^{l}}_{m}=&i \left( g^{il}{\delta^j}_m -\delta^i_m g^{jl}\right)\,.
 \end{align}
-Por consiguiente\footnote{falta un factor 2 al final}
+Definiendo
 \begin{align}
-  \label{eq:ljij}
-  {\left( {L}_i  \right)^{j}}_{k}\equiv \frac{1}{2}\epsilon_{ijk}{\left( J^{jk}\right)^{j}}_{k}
-  = -i\epsilon_{ijk}\,, %%Demostration must be improved: missing factor 2 at the end
+  \label{eq:lijjk}
+  L_i\equiv \frac{1}{2}\epsilon_{ijk} J^{jk}\,,
+\end{align}
+tenemos en términos de componentes que
+\begin{align}
+  \left( L_i \right)^l_m=&\frac{1}{2} \epsilon_{ijk} \left( J^{jk} \right)^l_m \nonumber\\
+             =&\frac{i}{2} \epsilon_{ijk}  \left( g^{jl}{\delta^k}_m -\delta^j_m g^{kl}\right) \nonumber\\
+             =&\frac{i}{2}   \left( \epsilon_{ijk} g^{jl}{\delta^k}_m -\epsilon_{ijk}\delta^j_m g^{kl}\right) \nonumber\\
+             =&\frac{i}{2}   \left( {{\epsilon_i}^{l}}_{m}-{{\epsilon_{im}}}^{l}\right) \nonumber\\
+            =&i {{\epsilon_i}^{l}}_{m} \nonumber\\
+             =&-i \epsilon_{ilm}\,,
 \end{align}
 donde, $L_i$ son los generadores de $\operatorname{SO}(3)$ en ec.~\eqref{eq:so3adj}, escritos como matrices $4\times 4$ con la primera fila y la primera columna nulas.
 
-Escribiendo~\eqref{eq:ljij} en términos matriciales, obtenemos
-\begin{align}
-  L_i=\epsilon_{ijk} J^{jk}\,.
-\end{align}
-
-
 Tomando en cuenta además que
 \begin{align}
+\label{eq:thijk}
 \theta^i\equiv&\frac{1}{2}\epsilon^{ijk}\omega_{jk}
 \end{align}
-podemos invertir las expresiones anteriores para obtener
-
+podemos invertir las expresiones anteriores, ecs~\eqref{eq:lijjk} y~\eqref{eq:thijk}, para obtener
 \begin{align}
 \epsilon^{ilm}L_i=&\frac{1}{2}\epsilon^{ilm}\epsilon_{ijk}J^{jk}               \,,&\epsilon_{ilm}\theta^i=&\frac{1}{2}\epsilon_{ilm}\epsilon^{ijk}\omega_{jk}         \nonumber\\
   =&\frac{1}{2}\left( \delta_j^l\delta_k^m-\delta_k^l\delta_j^m \right)J^{jk} \,,& =&\frac{1}{2}\left( \delta_l^j\delta_m^k-\delta_l^k\delta_m^j \right)\omega_{jk} \nonumber\\
-  =&\frac{1}{2}\left(J^{lm}-J^{ml} \right)J^{jk}                              \,,& =&\frac{1}{2}\left(\omega_{lm}-\omega_{ml} \right)\omega_{jk}                    \nonumber\\
-  =&\frac{1}{2}\left(J^{lm}+J^{lm} \right)J^{jk}                              \,,& =&\frac{1}{2}\left(\omega_{lm}+\omega_{lm} \right)\omega_{jk}                     \nonumber\\
+  =&\frac{1}{2}\left(J^{lm}-J^{ml} \right)                                   \,,& =&\frac{1}{2}\left(\omega_{lm}-\omega_{ml} \right)                         \nonumber\\
+  =&\frac{1}{2}\left(J^{lm}+J^{lm} \right)                                   \,,& =&\frac{1}{2}\left(\omega_{lm}+\omega_{lm} \right)                     \nonumber\\
   =&J^{lm}\,.                                                                \,,&  =&\omega_{lm}\,.
 \end{align}
 
@@ -898,11 +899,12 @@ De este modo, podemos escribir
 Mientras que para la suma completa tenemos
 \begin{align}
   \label{eq:wjexp}
-  \omega_{\mu\nu}J^{\mu\nu}=&\omega_{0\nu}J^{0\nu}+\omega_{i\nu}J^{i\nu} \nonumber\\
-                          =&\omega_{0i}J^{0i}+\omega_{i0}J^{i0}+\omega_{ij}J^{ij} \nonumber\\
-                          =&\omega_{0i}J^{0i}+\omega_{i0}J^{i0}+\omega_{ij}J^{ij} \nonumber\\
-                          =&2\omega_{0i}J^{0i}+\omega_{ij}J^{ij} \nonumber\\
-                          =&2\xi_i K^i+2\theta_i L^i\,,\qquad\text{sum upon $i$}\,.
+  \omega_{\mu\nu}J^{\mu\nu}=&\omega_{0\nu}J^{0\nu}+\omega_{i\nu}J^{i\nu}\,,&& \mu=0,i \nonumber\\
+                          =&\omega_{0i}J^{0i}+\omega_{i0}J^{i0}+\omega_{ij}J^{ij}\,,&&\nu=0,j \nonumber\\
+                          =&\omega_{0i}J^{0i}+\omega_{0i}J^{0i}+\omega_{ij}J^{ij}&& \nonumber\\
+                          =&2\omega_{0i}J^{0i}+\omega_{ij}J^{ij}&& \nonumber\\
+                          =&2\omega_{0k}J^{0k}+\omega_{ij}J^{ij}&& {}_{0i}\to {}_{0k}\nonumber\\
+                          =&2\xi_k K^k+2\theta_k L^k\,,&&\text{sum upon $k$}\,.
 \end{align}
 
 
@@ -1048,7 +1050,7 @@ de modo que
 \end{align}
 Que como hemos visto, puede obtenerse a partir de los generadores del Grupo de rotaciones $SO(3)$, generalizados a matrices $4\times4$
 \begin{align}
-  \{L^{i}\}\equiv
+  \{L_i\}\equiv
   \begin{pmatrix}
     0 & 0 & 0& 0\\
     0 &   &  &  \\
@@ -1113,7 +1115,7 @@ esta condición automáticamente incluye
 \end{align}
 
 \noindent
-\textbf{Ejercicio:} Demostrar que $\Lambda(\xi_1)$ dada en la primera ec.~\eqref{eq:Lximunu}, automáticamente cumple la condición de ortogonalidad generalizada~\eqref{eq:cdeog}.
+\textbf{Ejercicio:} Demostrar que $\Lambda(\xi_1)$ dada en la primera ec.~\eqref{eq:Lximunu},  cumple la condición de ortogonalidad generalizada~\eqref{eq:cdeog}.
 
 
 \section{Representaciones $2\times 2$ del Grupo de Lorentz: $\operatorname{SL}(2,C)$}
