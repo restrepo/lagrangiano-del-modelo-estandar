@@ -823,6 +823,7 @@ Las únicas componentes diferente de cero son
 
 Entonces
 \begin{align}
+  \label{eq:xii}
  \{ J^{01}\}=& \begin{pmatrix}
      0 & i & 0 & 0\\
      i & 0 & 0 & 0\\
@@ -870,14 +871,14 @@ tenemos en términos de componentes que
              =&\frac{i}{2}   \left( \epsilon_{ijk} g^{jl}{\delta^k}_m -\epsilon_{ijk}\delta^j_m g^{kl}\right) \nonumber\\
              =&\frac{i}{2}   \left( {{\epsilon_i}^{l}}_{m}-{{\epsilon_{im}}}^{l}\right) \nonumber\\
             =&i {{\epsilon_i}^{l}}_{m} \nonumber\\
-             =&-i \epsilon_{ilm}\,,
+   \left( L_i \right)^l_m =&-i \epsilon_{ilm}\,,
 \end{align}
 donde, $L_i$ son los generadores de $\operatorname{SO}(3)$ en ec.~\eqref{eq:so3adj}, escritos como matrices $4\times 4$ con la primera fila y la primera columna nulas.
 
-Tomando en cuenta además que
+Tomando en cuenta además que, incluyendo la definición  en la ec.~\eqref{eq:xii}:
 \begin{align}
 \label{eq:thijk}
-\theta^i\equiv&\frac{1}{2}\epsilon^{ijk}\omega_{jk}
+\omega_{i0}\equiv&\xi_i\,,&\theta^i\equiv&\frac{1}{2}\epsilon^{ijk}\omega_{jk}
 \end{align}
 podemos invertir las expresiones anteriores, ecs~\eqref{eq:lijjk} y~\eqref{eq:thijk}, para obtener
 \begin{align}
@@ -885,7 +886,7 @@ podemos invertir las expresiones anteriores, ecs~\eqref{eq:lijjk} y~\eqref{eq:th
   =&\frac{1}{2}\left( \delta_j^l\delta_k^m-\delta_k^l\delta_j^m \right)J^{jk} \,,& =&\frac{1}{2}\left( \delta_l^j\delta_m^k-\delta_l^k\delta_m^j \right)\omega_{jk} \nonumber\\
   =&\frac{1}{2}\left(J^{lm}-J^{ml} \right)                                   \,,& =&\frac{1}{2}\left(\omega_{lm}-\omega_{ml} \right)                         \nonumber\\
   =&\frac{1}{2}\left(J^{lm}+J^{lm} \right)                                   \,,& =&\frac{1}{2}\left(\omega_{lm}+\omega_{lm} \right)                     \nonumber\\
-  =&J^{lm}\,.                                                                \,,&  =&\omega_{lm}\,.
+\epsilon^{ilm}L_i=&J^{lm}\,.                                                                \,,&\epsilon_{ilm}\theta^i=&\omega_{lm}\,.
 \end{align}
 
 De este modo, podemos escribir
@@ -894,7 +895,7 @@ De este modo, podemos escribir
              =&\epsilon_{ijk} \epsilon^{ijl} \theta^k L_l \nonumber\\
              =&2 \delta_k^l\theta^k L_l \nonumber\\
              =&2 \theta^k L_k \nonumber\\
-             =&2 \theta_k L^k \,.
+    \omega_{ij} J^{ij} =&2 \theta_k L^k \,.
 \end{align}
 Mientras que para la suma completa tenemos
 \begin{align}
@@ -904,7 +905,7 @@ Mientras que para la suma completa tenemos
                           =&\omega_{0i}J^{0i}+\omega_{0i}J^{0i}+\omega_{ij}J^{ij}&& \nonumber\\
                           =&2\omega_{0i}J^{0i}+\omega_{ij}J^{ij}&& \nonumber\\
                           =&2\omega_{0k}J^{0k}+\omega_{ij}J^{ij}&& {}_{0i}\to {}_{0k}\nonumber\\
-                          =&2\xi_k K^k+2\theta_k L^k\,,&&\text{sum upon $k$}\,.
+ \omega_{\mu\nu}J^{\mu\nu}   =&2\xi_k K^k+2\theta_k L^k\,,&&\text{sum upon $k$}\,.
 \end{align}
 
 
@@ -912,12 +913,22 @@ Mientras que para la suma completa tenemos
 \textbf{Teorema}:
   La representación $4\times 4$ del Grupo de Lorentz se puede obtener de la exponenciación de los generadores matriciales $4\times 4$ $J^{\mu\nu}$ y los parámetros $\omega_{\mu\nu}$
 \begin{align}
-  {\Lambda}=\exp\left(i\omega_{\mu\nu}\frac{{J}^{\mu\nu}}{2}\right)\,,
+  {\Lambda}=\exp\left(-i\omega_{\mu\nu}\frac{{J}^{\mu\nu}}{2}\right)\,,
 \end{align}
 
-Las componentes están definidas como  ${\Lambda^{\alpha}}_{\beta}$, y ${\left( J^{\mu\nu}\right)^{\alpha}}_{\beta}$. Además, de ec.~\eqref{eq:wjexp} 
+Las componentes están definidas como  ${\Lambda^{\alpha}}_{\beta}$, y ${\left( J^{\mu\nu}\right)^{\alpha}}_{\beta}$.
+A continuación vamos a usar la notación de subir el índice con la métrica
+\begin{align*}
+  \xi^i\equiv g^{ij}\xi_j=g^{ii}\xi_i=-\xi_i\,.
+\end{align*}
+Además, de la  ec.~\eqref{eq:wjexp} 
 \begin{align}
-  \Lambda=\exp \left(i \xi_i K^i+ i\theta_i L^i \right)
+  \label{eq:boostrot}
+  \Lambda=&\exp\left(-i\omega_{\mu\nu}\frac{{J}^{\mu\nu}}{2}\right)\nonumber\\
+=  &\exp \left(-i \xi_i K^i- i\theta_i L^i \right) \nonumber\\
+=  &\exp \left[i \sum_i\left(   \xi^i K^i- i\theta^i L^i \right)\right] \nonumber\\
+=&\exp \left(i\boldsymbol{\xi}\cdot \boldsymbol{K}
+   + i\boldsymbol{\theta}\cdot \boldsymbol{L}\right)\,.
 \end{align}
 
 Ya hemos desarrollado la parte de $\operatorname{SO}(3)$ correspondiente a los generadores $L_i$.
@@ -1125,11 +1136,11 @@ esta condición automáticamente incluye
 Aquí nos enfocaremos en la representaciones más simples no triviales del Grupo de Lorentz. Estas corresponde a las representaciones no equivalentes $2\times2$: $(\frac{1}{2},0)$ y $(0,\frac{1}{2})$ del grupo $\operatorname{SL}(2,C)$ con elementos 
 \begin{align}
   \label{eq:slamo}
-  S(\Lambda)_{\left( \frac{1}{2},0 \right)}=&\exp\left(i \omega_{\mu\nu}\frac{\sigma^{\mu\nu}}{2}\right)\nonumber
+  S(\Lambda)_{\left( \frac{1}{2},0 \right)}=&\exp\left(-i \omega_{\mu\nu}\frac{\sigma^{\mu\nu}}{2}\right)\nonumber
 \end{align}
 donde los seis generadores independientes están dados por
 \begin{align}
-  \sigma^{\mu\nu}=\frac{i}{4}\left[\sigma^\mu,\overline{\sigma}^\nu\right]\,.
+  \sigma^{\mu \nu}=\frac{i}{4}\left(\sigma^{\mu} \overline{\sigma}^{\nu}-\sigma^{\nu} \overline{\sigma}^{\mu}\right)\,.
 \end{align}
 tal que
 \begin{align}
@@ -1149,7 +1160,46 @@ que incluyen las tres matrices de  Pauli \eqref{eq:paulimatr}.
 
 \end{frame}
 
-Cada uno de los dos $\operatorname{SL}(2,C)$ cubre doblemente al grupo $\operatorname{SO}(1,3)$ de la misma manera que el grupo $\operatorname{SU}(2)$ es una cobertura doble del grupo $\operatorname{SO}(3)$.
+\begin{align*}
+\sigma^{0\nu} &=\frac{1}{4}\left(\sigma^{0} \overline{\sigma}^{\nu}-\sigma^{\nu} \overline{\sigma}^{0}\right),                                         &\sigma^{ij} &=\frac{i}{4}\left(\sigma^{i} \overline{\sigma}^{j}-\overline{\sigma}^{j} \overline{\sigma}^{i}\right)\\
+              &=\frac{1}{4}\left(\overline{\sigma}^{\nu}-\sigma^{\nu}\right)=\begin{cases}0 & \nu=0\\\frac{i}{4}(-\sigma^i-\sigma^i) & \nu=i\end{cases}\,,&&=-\frac{i}{4}\left(\sigma^{i} \sigma^{j}-\sigma^{j} \sigma^{i}\right)\\                                            
+               &=-\frac{i}{2} \sigma^{i}\,.                                                                                                            &&=-\frac{i}{4} i \epsilon_{i j k} \sigma^{\kappa}\\                                                                 
+              &                                                                                                                                        &&=\frac{1}{4} \epsilon_{i j k} \sigma^{k}                                                                         
+\end{align*}
+
+usando además la ec.~\eqref{eq:thijk}, tenemos que
+\begin{align*}
+\omega_{\mu \nu} \sigma^{\mu \nu} &=\omega_{0 \nu} \sigma^{0 \nu}+\omega_{ij} \sigma^{i j} \\
+&=\omega_{0 i} \sigma^{0i}+\omega_{i 0} \sigma^{i 0}+\omega_{i j} \sigma^{i j} \\
+&=2 \omega_{0 i} \sigma^{0 i}+\omega_{i j} \sigma^{i} \\
+&=2 \xi_{i}\left(\frac{i}{2} \sigma^{i}\right)+\omega_{i j}\left(\frac{1}{2} \epsilon^{i j k} \sigma^{k}\right) \\
+&=i \xi_{i} \sigma^{i}+\left(\frac{1}{2} \omega_{i j} \epsilon^{i j k}\right) \sigma^{k}\,,\quad\text{sum also on $k$}\\
+                                  &=i \xi_{i} \sigma^{i}+\sum_k\theta^{k} \sigma^{k}\\
+                                  &=\sum_i \left(  -i \xi^{i} \sigma^{i}+\theta^{i} \sigma^{i}\right)\\
+  \omega_{\mu \nu} \sigma^{\mu \nu} &=-i \boldsymbol{\xi}\cdot \boldsymbol{\sigma}+
+                                      \boldsymbol{\theta}\cdot \boldsymbol{\sigma}\,.
+\end{align*}
+Aquí hemos usado la notación de subir el índice con la métrica
+\begin{align*}
+  \xi^i\equiv g^{ij}\xi_j=g^{ii}\xi_i=-\xi_i\,.
+\end{align*}
+
+Por consiguiente
+\begin{align*}
+  i \omega_{\mu\nu} \frac{\sigma^{\mu \nu} }{2}= \boldsymbol{\xi}\cdot \frac{\boldsymbol{\sigma}}{2}+
+                                      i\boldsymbol{\theta}\cdot \frac{\boldsymbol{\sigma}}{2}\,.
+\end{align*}
+Comparando con la expresión general~\eqref{eq:boostrot}
+\begin{align*}
+  -i\omega_{\mu\nu}\frac{{J}^{\mu\nu}}{2} =i\boldsymbol{\xi}\cdot \boldsymbol{K}
+    +i\boldsymbol{\theta}\cdot \boldsymbol{L}\,,
+\end{align*}
+tenemos que los generadores para la representación $(\frac{1}{2},0)$ del subgrupo $\operatorname{SL}(2,C)$ son
+\begin{align*}
+\boldsymbol{K}_{2\times2}=&-i \frac{\boldsymbol{\sigma}}{2}\,,&
+\boldsymbol{L}_{2\times2}=& \frac{\boldsymbol{\sigma}}{2}\,.&
+\end{align*}
+
 
 
 
@@ -1161,6 +1211,7 @@ La ecuación \eqref{eq:slamo} se puede escribir en términos de los seis generad
 \exp\left( \boldsymbol{\xi}\cdot \frac{\boldsymbol{\sigma}}{2}+i\boldsymbol{\theta}\cdot \frac{\boldsymbol{\sigma}}{2} \right)\,,
 \end{align}
 
+
 La otra representación independiente es
 \begin{align}
 \label{eq:SLet}
@@ -1171,6 +1222,8 @@ La otra representación independiente es
  
 Las componentes de $S(\Lambda)$ serán denotadas como  ${\left[ S(\Lambda) \right]_{\alpha}}^{\beta}$. En tal caso, $S^{*}(\Lambda)$ es otra representación diferente $2\times 2$ de $\operatorname{SL}(2,C)$. Ésta se denota con $\left( 0,\frac{1}{2}\right)$, y con el fin de enfatizar la diferencia, sus componentes se denotan con índices acentuados con puntos  $\dot{\alpha},\dot{\beta},\cdots$.
 \end{frame}
+
+Cada uno de los dos $\operatorname{SL}(2,C)$ cubre doblemente al grupo $\operatorname{SO}(1,3)$ de la misma manera que el grupo $\operatorname{SU}(2)$ es una cobertura doble del grupo $\operatorname{SO}(3)$.
 
 
 
