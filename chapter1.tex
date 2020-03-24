@@ -1142,7 +1142,7 @@ donde los seis generadores independientes están dados por
 \begin{align}
   \sigma^{\mu \nu}=\frac{i}{4}\left(\sigma^{\mu} \overline{\sigma}^{\nu}-\sigma^{\nu} \overline{\sigma}^{\mu}\right)\,.
 \end{align}
-tal que
+satisfacen el álgebra de Lorentz, eq~\eqref{eq:lrtalg}, tal que
 \begin{align}
   \sigma^{\mu}=&\begin{pmatrix}
     \sigma^0 & \boldsymbol{\sigma}
@@ -1156,16 +1156,22 @@ con
   \sigma^0=&\mathbf{1}_{2\times2},& \boldsymbol{\sigma}\to \sigma^{i} =&(\sigma^1,\sigma^2,\sigma^3)\nonumber\\
   \overline{\sigma}^0=&\mathbf{1}_{2\times2},&\overline{\boldsymbol{\sigma}}\to \overline{\sigma}^{i} =&(-\sigma^1,-\sigma^2,-\sigma^3)
 \end{align}
-que incluyen las tres matrices de  Pauli \eqref{eq:paulimatr}.
-
+que incluyen las tres matrices de  Pauli \eqref{eq:paulimatr}, con álgebra~\eqref{eq:paulialg}
 \end{frame}
 
 \begin{align*}
-\sigma^{0\nu} &=\frac{1}{4}\left(\sigma^{0} \overline{\sigma}^{\nu}-\sigma^{\nu} \overline{\sigma}^{0}\right),                                         &\sigma^{ij} &=\frac{i}{4}\left(\sigma^{i} \overline{\sigma}^{j}-\overline{\sigma}^{j} \overline{\sigma}^{i}\right)\\
-              &=\frac{1}{4}\left(\overline{\sigma}^{\nu}-\sigma^{\nu}\right)=\begin{cases}0 & \nu=0\\\frac{i}{4}(-\sigma^i-\sigma^i) & \nu=i\end{cases}\,,&&=-\frac{i}{4}\left(\sigma^{i} \sigma^{j}-\sigma^{j} \sigma^{i}\right)\\                                            
-               &=-\frac{i}{2} \sigma^{i}\,.                                                                                                            &&=-\frac{i}{4} i \epsilon_{i j k} \sigma^{\kappa}\\                                                                 
-              &                                                                                                                                        &&=\frac{1}{4} \epsilon_{i j k} \sigma^{k}                                                                         
+  \left[\frac{\sigma^i}{2},\frac{\sigma^j}{2} \right]
+ = \frac{1}{4}\left( \sigma^{i} \sigma^{j}-\sigma^{j} \sigma^{i}  \right)
+=  i\,\epsilon^{ijk}\frac{\sigma^k}{2}
+\
 \end{align*}
+\begin{align}
+  \label{eq:sigijsi}
+\sigma^{0\nu} &=\frac{1}{4}\left(\sigma^{0} \overline{\sigma}^{\nu}-\sigma^{\nu} \overline{\sigma}^{0}\right),                                         &\sigma^{ij} &=\frac{i}{4}\left(\sigma^{i} \overline{\sigma}^{j}-\overline{\sigma}^{j} \overline{\sigma}^{i}\right) \nonumber\\
+              &=\frac{1}{4}\left(\overline{\sigma}^{\nu}-\sigma^{\nu}\right)=\begin{cases}0 & \nu=0\\\frac{i}{4}(-\sigma^i-\sigma^i) & \nu=i\end{cases}\,,&&=-\frac{i}{4}\left(\sigma^{i} \sigma^{j}-\sigma^{j} \sigma^{i}\right) \nonumber\\
+      \sigma^{0i}  &=-\frac{i}{2} \sigma^{i}\,.                                                                                                            &&=-\frac{i}{2} i \epsilon^{i j k} \sigma^{\kappa}\\                                                                 
+              &                                                                                                                                  &\sigma^{ij}&=\frac{1}{2} \epsilon^{i j k} \sigma^{k}                                          
+\end{align}
 
 usando además la ec.~\eqref{eq:thijk}, tenemos que
 \begin{align*}
@@ -1225,6 +1231,27 @@ Las componentes de $S(\Lambda)$ serán denotadas como  ${\left[ S(\Lambda) \righ
 
 Cada uno de los dos $\operatorname{SL}(2,C)$ cubre doblemente al grupo $\operatorname{SO}(1,3)$ de la misma manera que el grupo $\operatorname{SU}(2)$ es una cobertura doble del grupo $\operatorname{SO}(3)$.
 
+La componentes de las matrices de Pauli se definen como $\sigma^{\mu}_{\alpha\dot{\beta}}$ y $\overline{\sigma}^{\mu\dot{\alpha}\beta}$, tal que
+\begin{align*}
+  {\left(\sigma^{\mu \nu}\right)_{\alpha}}^{\beta} \equiv & \frac{i}{4}\left(\sigma_{\alpha \dot{\gamma}}^{\mu} \bar{\sigma}^{\nu \dot{\gamma} \beta}-\sigma_{\alpha \dot{\gamma}}^{\nu} \bar{\sigma}^{\mu \dot{\gamma} \beta}\right) \nonumber\\
+=&\frac{i}{4}{\left[\sigma^{\mu} \bar{\sigma}^{\nu}-\sigma^{\nu} \bar{\sigma}^{\mu}\right]_{\alpha}}^{\beta}\,.
+\end{align*}
+
+Por ejemplo, de la ec.~\eqref{eq:sigijsi}
+\begin{align*}
+  {\left(\sigma^{01}\right)_{\alpha}}^{\beta} =
+  {\left[ -\frac{i}{2}
+  \begin{pmatrix}
+    0 & 1\\
+    1 & 0\\
+  \end{pmatrix}
+\right]_{\alpha}}^{\beta}\,,
+\end{align*}
+de modo que
+\begin{align*}
+  {\left(\sigma^{0 1}\right)_{1}}^{1} =   {\left(\sigma^{0 1}\right)_{2}}^{2}=&0\,,
+  &{\left(\sigma^{0 1}\right)_{1}}^{2} =   {\left(\sigma^{0 1}\right)_{2}}^{1}=&-\frac{i}{2}\,.
+\end{align*}
 
 
 \begin{frame}[fragile,allowframebreaks]
