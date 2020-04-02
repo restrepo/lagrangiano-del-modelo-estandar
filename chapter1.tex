@@ -2421,10 +2421,11 @@ Tenemos los siguientes objetos que transforman bajo las representaciones del Gru
 \begin{align}
    \phi\to \phi'=&\phi && \text{Scalar field,}\nonumber\\
    A^\mu\to {A'}^\mu=&{\Lambda^\mu}_\nu A^\nu&&\text{Vector field,}\nonumber\\
+  \partial_{\mu}\to \partial'_{\mu}=&\partial_{\nu} {\left( \Lambda^{-1} \right)^{\nu}}_{\mu}&&\text{Cuadridivergencia,}\nonumber\\
   \xi_\alpha\to\xi'_\alpha=&{\left[ S(\Lambda) \right]_\alpha}^\beta\xi_\beta
-&& \text{Left-handed spinor field,}\nonumber\\
+&& \text{Left-handed spinor field + ${}^{*}$,}\nonumber\\
 \eta^{\alpha}\to {\eta'}^{\alpha} =&\eta^\beta{\left[  S^{-1}(\Lambda)  \right]_{\beta}}^{\alpha}&&
- \text{Left-handed anti-spinor field,}\,.
+ \text{Left-handed anti-spinor field + ${}^{*}$,}\,.
  \end{align}
 \end{frame}
 
@@ -2543,7 +2544,7 @@ Para $\operatorname{U}(1)_{B-L}$
   \text{(c)}:&\  &\sigma_2=&\nu+e \nonumber\\
   \text{(d)}:&\ &\sigma_1=&\sigma_2+s\,.
 \end{align}
-Combinado con $\operatorname{SU}_L$ y Lorentz
+Combinado con $\operatorname{SU}(2)_L$ y Lorentz
 \begin{align}
   \text{(a)}:&\  L_i\cdot L_j \sigma_1^{*} \nonumber\\
   \text{(b)}:&\  \left( e_R \right)^{\dagger} \widetilde{H} \cdot L \nonumber\\
@@ -2599,8 +2600,8 @@ $\widetilde{\left({\Psi}_{R}\right)} \cdot L S$ y por lo tanto las masas de neut
 \section{Principio de M\'\i nima Acci\'on}
 \label{sec:la}
 
-El Principio de M\'\i nima acci\'on establece, una vez fijado el espacio de
-coordenadas generalizadas sobre el espacio de configuraci\'on, que de
+El Principio de Mínima acción establece, una vez fijado el espacio de
+coordenadas generalizadas sobre el espacio de configuración, que de
 todas las trayectorias posibles que transcurren entre $t_1$ y $t_2$,
 el sistema escoger\'a aquella que minimice la acci\'on $S$
 \cite{ActionPhysics}.  La magnitud de la acci\'on viene dada para cada
@@ -2666,7 +2667,7 @@ y usando la transformada de Legendre
 \end{align}
 
 Para visualizar el principio de m\'\i nimo de acci\'on se recomienda seguir las actividades del programa interactivo en \texttt{Java} disponible online en \cite{JavaAP}. 
-Una versión implementada como Notebook de IPython puede encontrarse aqui: \url{http://nbviewer.ipython.org/gist/rescolo/2259833f5ad640f6aeef}.
+Una versión implementada como Notebook de IPython puede encontrarse aqui: \url{https://github.com/restrepo/ComputationalMethods/blob/master/material/least_action.ipynb}.
 
 All\'\i{} se considera el problema de un objeto de 0.2Kg lanzado hacia arriba y retornado al punto de partida 3 segundos despues. Si dividimos la trayectoria en tres intervalos como se muestra en la Fig.~\ref{fig:apple1}, teniendo en cuenta que la velocidad es la pendiente del segmento, para $\Delta t=0.75\,$s $x_1=11.13\,$m, $t_1=0.75\,$s, $x_2=0\,$m, $t_2=1.5\,$s, tenemos que para la trayectoria mostrada
 \begin{align}
@@ -2703,11 +2704,18 @@ Para sistemas continuos es conveniente usar la densidad Lagrangiana. Abordaremos
 El método de la Acción es conveniente cuando necesitamos observar de forma integral, es decir, de formal completa. En el caso anterior, la trayectoria completa y sus posibles variaciones.
 
 
-Es claro que para una problema con modos de oscilación, nos interesa caracterizar el modo de oscilación en su manifestación completa. En el siguiente capítulo mostraremos las dos formas y veremos que  podremos  estudiar la Acción asociada al modo de oscilación completo.
+Es claro que para una problema con modos de oscilación, nos interesa caracterizar el modo de oscilación en su manifestación completa. En la siguiente sección mostraremos las dos formas y veremos que  podremos  estudiar la Acción asociada al modo de oscilación completo.
 
 A nivel física fundamental, sabemos que el objeto físico más importante es el campo, que al igual que un modo de oscilación es un objeto completo que ocupa todo el espacio.
 Como resulta que al final las partículas son excitaciones de esos campos, entonces sólo nos tenemos que preocupar de describir los campos y la forma más adecuada es
 a través de la Acción.
+
+Para resaltar la importancia de los campos en el mundo subatómico recomendamos la lectura del sigiente artículo y el siguiente video
+\begin{itemize}
+\item Video en YouTube: \href{kk.org}{\includegraphics[scale=0.3]{np}}
+\item Artículo de divulgación \url{https://www.discovermagazine.com/the-sciences/the-standard-model}
+\end{itemize}
+
 
 
 \section{La cuerda cl\'asica unidimensional}
@@ -3010,11 +3018,19 @@ La generalización de la densidad Lagrangiana a tres dimensiones esta dada por
   \frac{1}{v^2}\left(\frac{\partial\phi}{\partial t}\right)^2-\left(\frac{\partial\phi}{\partial x}\right)^2-\left(\frac{\partial\phi}{\partial y}\right)^2-\left(\frac{\partial\phi}{\partial z}\right)^2
 \right],
 \end{align}
-O en forma más compacta:
+O en forma más compacta, cambiando a un sistema de unidades en el cual $v=1$:
 \begin{align}
   \mathcal{L}(\partial_{\mu} \phi)=  \frac{1}{2}{\partial_\mu\phi}\,{\partial^\mu\phi}\,.
 \end{align}
-Note que para una onda mecánica con velocidad de propagación $v$, la ecuación anterior se usa sólo a modo de notación. Sólo cuando la velocidad de propagación es la velocidad de la luz la densidad Lagrangiana contiene una producto escalar bien definido correspondiente al módulo al cuadrado del cuadrivector $\partial_{\mu}\phi$.
+Note que para una onda mecánica con velocidad de propagación $v$, la ecuación anterior se usa sólo a modo de notación. Sólo cuando la velocidad de propagación es la velocidad de la luz la densidad Lagrangiana contiene una producto escalar bien definido, el cual es invariante bajo transformaciones de Lorentz. En este caso el producto escalar corresponde al módulo al cuadrado del cuadrivector $\partial_{\mu}\phi$.
+
+De hecho $\partial_{\mu}$ hace las veces de la coordena generalizada $\dot{q}$ en el Lagrangiano convencional. La coordenada generaliza $q$ para a ser $\phi$ de modo que en general se espera que la densidad Lagrangiana también dependa en $\phi$
+
+
+\begin{align}
+  \mathcal{L}(\phi,\partial_{\mu} \phi)=  \frac{1}{2}{\partial_\mu\phi}\,{\partial^\mu\phi}\,.
+\end{align}
+
 \end{frame}
 
 
