@@ -2812,7 +2812,8 @@ con
 y
 \begin{equation}
   \label{eq:Scall}
-  S=\int\mathcal{L}\,dtdz.
+  S=\int_{t_1}^{t_2}\int_0^{2\pi R}\mathcal{L}\left( \partial\bar\phi/\partial t,\partial\bar\phi/\partial z
+  \right)\,\operatorname{d}t\operatorname{d}z.
 \end{equation}
 Definiendo
 \begin{equation}
@@ -3023,13 +3024,32 @@ O en forma más compacta, cambiando a un sistema de unidades en el cual $v=1$:
   \mathcal{L}(\partial_{\mu} \phi)=  \frac{1}{2}{\partial_\mu\phi}\,{\partial^\mu\phi}\,.
 \end{align}
 Note que para una onda mecánica con velocidad de propagación $v$, la ecuación anterior se usa sólo a modo de notación. Sólo cuando la velocidad de propagación es la velocidad de la luz la densidad Lagrangiana contiene una producto escalar bien definido, el cual es invariante bajo transformaciones de Lorentz. En este caso el producto escalar corresponde al módulo al cuadrado del cuadrivector $\partial_{\mu}\phi$.
+\end{frame}
 
+\begin{frame}[fragile,allowframebreaks]
 De hecho $\partial_{\mu}$ hace las veces de la coordena generalizada $\dot{q}$ en el Lagrangiano convencional. La coordenada generaliza $q$ para a ser $\phi$ de modo que en general se espera que la densidad Lagrangiana también dependa en $\phi$
 
 
 \begin{align}
+  \label{eq:Lpdp}
   \mathcal{L}(\phi,\partial_{\mu} \phi)=  \frac{1}{2}{\partial_\mu\phi}\,{\partial^\mu\phi}\,.
 \end{align}
+
+En tres dimensiones, la densidad Lagrangiana debe ser ahora integrada en un volumen, $V$, para obtener la Lagrangiana
+\begin{align}
+  L=\int_V \mathcal{L}\left( \phi,\partial_{\mu}\phi \right) \operatorname{d}x\operatorname{d}y\operatorname{d}z\,,
+\end{align}
+Como $L$ tiene unidades de Energía, en el sistema de unidades naturales las coordenadas tienen unidades de inverso de Energía y por consiguiente la densidad Lagrangiana debe tener unidades de Energía a la cuarta. Finalmente, ya que la cuadridivergencia $\partial_{\mu}=\partial/\partial x^{\mu}$, tiene unidades de Energía, de la ec.~\eqref{eq:Lpdp} podemos concluir entonces que el campo $\phi$,  tiene unidades de Energía:
+\begin{align}
+ [\mathcal{L}]=E^4 \text{ and } [\partial_{\mu}]=E \to [\phi]=E\,.
+\end{align}
+La Acción para el campo es entonces
+\begin{align}
+  S[\phi,\partial_{\mu}]=\int_{t_1}^{t_2} L\left( \phi,\partial_{\mu}\phi \right)=\int_{R} \mathcal{L}\left( \phi,\partial_{\mu}\phi \right) \operatorname{d}t\operatorname{d}x\operatorname{d}y\operatorname{d}z=\int_{R} \mathcal{L}\left( \phi,\partial_{\mu}\phi \right) \operatorname{d}^{4}x\,,
+\end{align}
+donde los corchete en $S$ significan que la Acción es un \emph{funcional} de las coordenadas generalizadas $\phi,\partial_{\mu}$, $\operatorname{d}^4 x$ es el cuadrivolumen diferencial y $R$ es el cuadrivolumen en el cual se integra la densidad Laggrangiana para obtener la Acción.
+
+
 
 \end{frame}
 
@@ -3046,17 +3066,44 @@ Un sistema binario de estrellas conserva la energía globalmente, pero un sistem
 
 Seguiremos la discusión basada en \cite{Brading:2000hc,Brading:2003nv,Sundermeyer:2014kha}.
 
+\begin{frame}[fragile,allowframebreaks]
 %motivar mejor la necesidad de un parámetro de transformación
-Cuando se escriben las ecuaciones de Maxwell en términos del cuadrivector de potencial $A^{\mu}(x)$, veremos que estás resultan invariantes bajo la transformación
+Estamos interesados en los cambios que sufre la Acción cuando se transforman los campos. Por ejemplo, bajo una transformación de cambio de fase
+\begin{align}
+  \psi \to \psi'=\operatorname{e}^{i \theta}\psi\,,
+\end{align}
+si consideremos una transformación de fase pequeña
+\begin{align}
+  \psi \to \psi'\approx& (1+i\theta)\psi \nonumber\\
+                      =&  \psi+i\theta\psi\,.
+\end{align} 
+
+Podemos definir el cambio en el campo como
+\begin{align}
+  \delta \psi\equiv \psi'-\psi=(i\psi) \theta\,,
+\end{align}
+de modo que el cambio en el campo es lineal en el parámetro de la transformación $\theta$.
+\end{frame}
+
+\begin{frame}[fragile,allowframebreaks]
+De otro lado, cuando se escriben las ecuaciones de Maxwell en términos del cuadrivector de potencial $A^{\mu}(x)$, veremos que estás resultan invariantes bajo la transformación
 \begin{align}
   A^{\mu}(x)\to A^{\prime\mu}(x)= &  A^{\mu}(x) +\partial^{\mu} \theta(x) \nonumber\\
     \delta A^{\mu}(x)\equiv A^{\prime\mu}(x) -A^{\mu}(x)=& \partial^{\mu} \theta(x)\,.
 \end{align}
-donde $\theta(x)$ es una función arbitraria que se conoce como parámetro de la transformación. La Acción que de lugar a las ecuaciones de Maxwell debe ser también invariante bajo esta misma transformación. 
+donde $\theta(x)$ es una función arbitraria que se conoce como parámetro de la transformación. En este caso el cambio del campo va con al cuadriderivada del párametro de la transformación.
 
+La Acción  debe ser también invariante bajo este tipo de transformación, es decir, para el cambio en la Acción
+\begin{align}
+  \delta S=0\,.
+\end{align}
+\end{frame}
+
+
+\begin{frame}[fragile,allowframebreaks]
 Para $N$ campos asociados a un parámetro de transformación $\theta$ , la dependencia explicita e implicita de la densidad Lagrangiana da lugar al funcional de Acción
 \begin{equation}
-  S[\phi_i,\partial_\mu\phi_i;x]=\int_{R}d^4x\,\mathcal{L}(\phi_i,\partial_\mu\phi_i;x)
+  S[\phi_i,\partial_\mu\phi_i;x]=\int_{R}\operatorname{d}^4x\,\mathcal{L}(\phi_i,\partial_\mu\phi_i;x)
 \end{equation}
 El problema variacional de Noether, que es diferente al principio de Hamilton, puede ser establecido en los siguientes términos
 
@@ -3087,16 +3134,18 @@ en la expresión anterior, tenemos que
      =&\int_{R} d^4x\,\left[ \partial_{\mu} \left( \delta x^{\mu}  \right)\right] \mathcal{L} + \int_{R}d^4x\,\left\{\sum_i \left[ \frac{\partial\mathcal{L}}{\partial\phi_i}\delta\phi_{i} +\frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}\partial_{\mu}(\delta\phi_{i}) \right]+\left( \partial_{\mu}\mathcal{L} \right)\delta x^{\mu} \right\}+\mathcal{O} \left( \delta^2 \right)\nonumber\\
      \approx&\int_{R} d^4x\,\partial_{\mu} \left(\mathcal{L} \delta x^{\mu}  \right)  + \int_{R}d^4x\,\sum_i \left\{ \frac{\partial\mathcal{L}}{\partial\phi_i}\delta\phi_{i} +\partial_{\mu} \left[ \frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}\delta\phi_{i} \right]-\partial_{\mu} \left[ \frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}\right]\delta\phi_{i}  \right\}\nonumber\\
 \end{align}
+\end{frame}
+
 \begin{frame}[fragile,allowframebreaks]
 La condición $\delta S=0$ implica que
 \begin{align}
 \label{eq:masterint}
-\int \operatorname{d}^4x  \sum_i \mathcal{E}_i \delta\phi_i =\int \operatorname{d}^4x \sum_i \partial_{\mu} B^{\mu}_{i}\,,
+\int_R \operatorname{d}^4x  \sum_i \mathcal{E}_i \delta\phi_i =\int_R \operatorname{d}^4x \sum_i \partial_{\mu} B^{\mu}_{i}\,,
 \end{align}
 o
 
 \begin{align}
-  \sum_i \mathcal{E}_i \delta\phi_i = \sum_i \partial_{\mu} B^{\mu}_{i}\,,
+ \int_R \operatorname{d}^4x \sum_i \mathcal{E}_i \delta\phi_i =\int_R \operatorname{d}^4x \sum_i \partial_{\mu} B^{\mu}_{i}\,,
 \end{align}
 donde
 \begin{align}
@@ -3108,7 +3157,8 @@ donde
 
 
 \section{Ecuaciones de Euler-Lagrange}
-%%TODO: Mejorar
+%% TODO: Mejorar
+\begin{frame}[fragile,allowframebreaks]
 El teorema de Gauss establece que
 \begin{equation}
 \int_V\boldsymbol{\nabla}\cdot\mathbf{A}\,d^3x=
@@ -3116,10 +3166,12 @@ El teorema de Gauss establece que
 \end{equation}
 Generalizado a cuatro dimensiones, tenemos
 \begin{align}
-\int_{\mathcal{V}} \operatorname{d}^4x\,\partial_{\mu} \eta^{\mu}=
+\int_{R} \operatorname{d}^4x\,\partial_{\mu} \eta^{\mu}=
 \int_{\sigma} \operatorname{d}\sigma_{\mu} \eta^{\mu}\,,   
 \end{align}
-donde $\mathcal{V}$ es el volumen en cuatro dimensiones (4D) y $\sigma$ la correspondiente hipersuperficie en tres dimensiones.
+donde $\mathcal{R}$ es el volumen en cuatro dimensiones (4D) y $\sigma$ la correspondiente hipersuperficie en tres dimensiones.
+\end{frame}
+
 
 Aplicando las condiciones de Frontera usando  el teorema de Gauss en 4D en el lado derecho de \eqref{eq:masterint},
 %detalles
@@ -3165,11 +3217,15 @@ las ecuaciones de Euler-Lagrange~\eqref{eq:eelcallfmu}
 \end{align}
 que corresponde a la ec.~\eqref{eq:econda1}.
 
-Generalizando a tres dimensiones vemos que la ecuación de Euler-Lagrange para la densidad Lagrangiana de una onda propagandose a una velocidad $v$, eq.~\eqref{eq:econda3},
+
+Generalizando a tres dimensiones vemos que la ecuación de Euler-Lagrange para la
+\begin{frame}[fragile,allowframebreaks]
+densidad Lagrangiana de una onda propagandose a una velocidad $v$, eq.~\eqref{eq:econda3},
 \begin{align}
   \mathcal{L}(\partial_{\mu} \phi)=  \frac{1}{2}{\partial_\mu\phi}\,{\partial^\mu\phi}
   =& \frac{1}{2}g^{\mu\nu}{\partial_\mu\phi}\,{\partial_{\nu}\phi}\,,
 \end{align}
+\end{frame}
 se puede calcular a partir de
 \begin{align}
   \frac{\partial\mathcal{L}}{\partial(\partial_{\sigma}\phi)}=&
@@ -3190,11 +3246,13 @@ De modo que
   \partial_{\sigma} \left[ \frac{\partial\mathcal{L}}{\partial(\partial_{\sigma}\phi)}\right]=&0 \nonumber\\
        \partial_{\sigma}\partial^{\sigma}\phi=&0 \,.
 \end{align}
+\begin{frame}[fragile,allowframebreaks]
 Teniendo en cuenta que $\sigma$ es un índice modo, podemos escribir la ecuación de onda en la forma conocida:
 \begin{align}
      \partial_{\mu}\partial^{\mu}\phi=&0 \nonumber\\
      \frac{1}{v^2}\frac{\partial^2\phi}{\partial t^2}-\nabla^2\phi=&0\,.
 \end{align}
+\end{frame}
 
 \textbf{Ejercicio:} Demuestre que la ecuación de Klein-Gordon en \eqref{eq:KG} proviende de una densidad Lagragiana del tipo
 \begin{align}
@@ -3213,7 +3271,8 @@ La interpretación tomada de la teoría cuántica de campos completa, nos permit
 El potencial escalar se puede modelar para que el campo escalar $\phi$ pueda interpretarse por ejemplo como el inflatón en el Universo primitivo. Mientras la partícula rueda hacía el mínimo el Universo sufre una expansión exponencial y cuando termina oscilando alrededor del mismo el universo sufre una fase de \emph{recalentamiento} mediante la cual la energía del inflaton genera todas las partículas y antipartículas del modelo estándar en cantidades de $10^{90}$. La radiación cósmica de fondo esta compuesta de esos $10^{90}$ fotones de primigéneos y las anisotropías observadas en ella proviened de las fluctuaciones cuánticas del inflaton magnificadas por la expansión exponencial.
 
 \section{Simetrías externas}
-Un desplazamienot infinitesimal, que equivale a repeterir un experimento en laboratorio desplazado en el tiempo o en el espacio,
+\begin{frame}[fragile,allowframebreaks]
+Un desplazamiento infinitesimal, que equivale a repeterir un experimento en laboratorio desplazado en el tiempo o en el espacio,
 puede parametrizarse sin perdida de generalidad como
 \begin{align}
   x^\mu\to{x'}^\mu=&x^\mu+\delta x^{\mu}\nonumber\\
@@ -3317,6 +3376,7 @@ Generalizando a un campo complejo
       -\delta^\mu_\nu\mathcal{L}
 \end{equation}
 
+\end{frame}
 
 \section{Simetrías internas}
 
