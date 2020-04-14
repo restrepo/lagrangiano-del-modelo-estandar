@@ -2663,7 +2663,7 @@ El Hamiltoniano del sistema se obtiene definiendo la variable can\'onica conjuga
 \end{align}
 y usando la transformada de Legendre
 \begin{align}
-  H=p \dot{x}-L=\frac{\partial\mathcal{L}}{\partial\dot{x}}\dot{x}-L=\frac{1}{2}m\dot{x}^2+V=T+V
+  H=p \dot{x}-L=\frac{\partial{L}}{\partial\dot{x}}\dot{x}-L=\frac{1}{2}m\dot{x}^2+V=T+V
 \end{align}
 
 Para visualizar el principio de m\'\i nimo de acci\'on se recomienda seguir las actividades del programa interactivo en \texttt{Java} disponible online en \cite{JavaAP}. 
@@ -3070,6 +3070,7 @@ Seguiremos la discusión basada en \cite{Brading:2000hc,Brading:2003nv,Sundermey
 %motivar mejor la necesidad de un parámetro de transformación
 Estamos interesados en los cambios que sufre la Acción cuando se transforman los campos. Por ejemplo, bajo una transformación de cambio de fase
 \begin{align}
+  \label{eq:phchg}
   \psi \to \psi'=\operatorname{e}^{i \theta}\psi\,,
 \end{align}
 si consideremos una transformación de fase pequeña
@@ -3080,7 +3081,7 @@ si consideremos una transformación de fase pequeña
 
 Podemos definir el cambio en el campo como
 \begin{align}
-  \delta \psi\equiv \psi'-\psi=(i\psi) \theta\,,
+  \delta \psi\equiv \psi'-\psi=&(i\psi) \theta &\to&  & \delta \psi^{*}\equiv \psi^{\prime *}-\psi=&(-i\psi^{*}) \theta \,,
 \end{align}
 de modo que el cambio en el campo es lineal en el parámetro de la transformación $\theta$.
 \end{frame}
@@ -3263,12 +3264,72 @@ donde
   V(\phi)=\frac{1}{2}m^2 \phi^2\,.
 \end{align}
 
-En el ejercicio anterio el gráfico del \emph{potencial} escalar $V(\phi)$ corresponde a la parábola mostrada en la figura XX
-%% grafico here
+En el ejercicio anterio el gráfico del \emph{potencial} escalar $V(\phi)$ corresponde a la parábola mostrada en la figura~\ref{fig:x2ini}
+
+
+\begin{figure} %noinstiki
+  \centering %noinstiki
+  \includegraphics[scale=0.8]{vphi2}
+  \caption{$V(\phi)=\frac{1}{2}m^2 \phi^2$ con $m^2\gt 0$} %noinstiki
+  \label{fig:x2ini} %noinstiki
+\end{figure} %n
+
 
 La interpretación tomada de la teoría cuántica de campos completa, nos permite visualizar la excitación del campo como una partícula rodando a través de las paredes del potencial como se muestra en la figrua. La masa del campo corresponde a las oscilaciones alrededor del mínimo que suben las parades y que por consiguiente \emph{cuestan energía}. Esta interpretación la usaremos en el Capítulo~\ref{rupt-espont-de} para enteder el mecánismo de Higgs.
 
 El potencial escalar se puede modelar para que el campo escalar $\phi$ pueda interpretarse por ejemplo como el inflatón en el Universo primitivo. Mientras la partícula rueda hacía el mínimo el Universo sufre una expansión exponencial y cuando termina oscilando alrededor del mismo el universo sufre una fase de \emph{recalentamiento} mediante la cual la energía del inflaton genera todas las partículas y antipartículas del modelo estándar en cantidades de $10^{90}$. La radiación cósmica de fondo esta compuesta de esos $10^{90}$ fotones de primigéneos y las anisotropías observadas en ella proviened de las fluctuaciones cuánticas del inflaton magnificadas por la expansión exponencial.
+
+\begin{frame}[fragile,allowframebreaks]
+\textbf{Ejercicio:}
+\begin{enumerate}
+\item  Demuestre que los terminos con derivada para un campo escalar complejo
+\begin{align}
+  \phi\equiv&\frac{\phi_1+i\phi_2}{\sqrt{2}} &\to&&   \phi^{*}=&\frac{\phi_1-i\phi_2}{\sqrt{2}}\,,
+\end{align}
+que sea invariante bajo el Grupo $U(1)$ de sus cambios de fase~\eqref{eq:phchg}, se puede escribir de forma única como
+\begin{align}
+  \mathcal{L}(\partial_{\mu} \phi,\partial_{\mu} \phi^{*})=  {\partial_\mu\phi^{*}}\,{\partial^\mu\phi}=\frac{1}{2}\partial_{\mu}\phi_1 \partial^{\mu}\phi_1+\frac{1}{2}\partial_{\mu}\phi_2 \partial^{\mu}\phi_2\,,
+\end{align}
+es decir, como la suma de la densidad Lagrangiana para dos campos reales independientes.
+\item Cambiando a las variables generalizadas $\phi_1\to \phi$, $\phi_2\to \phi^{*}$, encuentre las ecuaciones de Euler Lagrange para $\phi$ y $\phi^{*}$
+\end{enumerate}
+\end{frame}
+
+
+\section{Ecuación de continuidad}
+\begin{frame}[fragile,allowframebreaks]
+Las transformaciones que bajo algunas condiciones dejan invariante a la acción, van a estar relacionadas con cargas conservadas. A continuación definiremos con un ejemplo conocido que es una carga conservada.
+
+Para entender el significado físico de la ecuación de continuidad consideremos una cuadri-corriente asociada por ejemplo a la densidad de carga y corriente eléctricas. Expandiendo la ecuación de continuidad en sus componentes espaciales y temporales tenemos que
+\begin{align}
+  \partial_\mu j^\mu=&0&\nonumber\\
+  \partial_0 j^0+ \partial_i j^i=&0\,,&\text{suma sobre $i$}\nonumber\\
+  \frac{\partial j^0}{\partial t}+ \boldsymbol{\nabla}\cdot\boldsymbol{j}=&0\,.
+\end{align}
+Integrando sobre el volumen y aplicando el teorema de Gauss
+\begin{align}
+  \int_V \operatorname{d}^3x\,\frac{\partial j^0}{\partial t}
++\int_S \boldsymbol{j}\cdot \boldsymbol{S}=&0\,.
+\end{align}
+Si interpretamos $j^0$ como la densidad, $\rho$, de una cierta carga $Q$, tal que
+\begin{align}
+  Q=\int_{V} \operatorname{d}^3x\, j^0= \int_{V} \operatorname{d}^3x\, \rho\,,
+\end{align}
+entonces, si escogemos $S$ como una superficie suficientemente grande para contener toda la distribución de carga $Q$ en su interior, tendremos que la integral sobre la superficie se anula
+\begin{align}
+  \int_S \boldsymbol{j}\cdot \boldsymbol{S}=&0\,,
+\end{align}
+y por consiguiente
+\begin{align}
+  \int_V \operatorname{d}^3x\,\frac{\partial j^0}{\partial t}=&
+\frac{\operatorname{d}}{\operatorname{d}t}\int_V \operatorname{d}^3x\,\rho \nonumber\\
+=&\frac{\operatorname{d}Q}{\operatorname{d}t}\nonumber\\
+  =&0\,.
+\end{align}
+Es decir, que la carga es independiente del tiempo, y por lo tanto se conserva.
+\end{frame}
+
+
 
 \section{Simetrías externas}
 \begin{frame}[fragile,allowframebreaks]
@@ -3379,31 +3440,6 @@ Generalizando a un campo complejo
 \end{frame}
 
 \section{Simetrías internas}
-
-Las simetrías internas van a estar relacionadas con cargas conservadas. A continuación definiremos con un ejemplo conocido que es una carga conservada.
-
-Para entender el significado físico de la ecuación de continuidad consideremos una cuadri-corriente asociada por ejemplo a la densidad de carga y corriente eléctricas. Expandiendo la ecuación de continuidad en sus componentes espaciales y temporales tenemos que
-\begin{align}
-  \partial_0 j^0+ \partial_i j^i=&0\,,&\text{suma sobre $i$}\nonumber\\
-  \frac{\partial j^0}{\partial t}+ \boldsymbol{\nabla}\cdot\boldsymbol{j}=&0\,.
-\end{align}
-Integrando sobre el volumen y aplicando el teorema de Gauss
-\begin{align}
-  \int_V \operatorname{d}^3x\,\frac{\partial j^0}{\partial t}
-+\int_S \boldsymbol{j}\cdot \boldsymbol{S}=&0\,.
-\end{align}
-Si interpretamos $j^0$ como la densidad, $\rho$, de una cierta carga $Q$, tal que
-\begin{align}
-  Q=\int_{V} \operatorname{d}^3x\, j^0= \int_{V} \operatorname{d}^3x\, \rho\,,
-\end{align}
-entonces, si escogemos $S$ como una superficie suficientemente grande para contener toda la distribución de carga $Q$ en su interior, tendremos que la integral sobre la superficie se anula y por consiguiente
-\begin{align}
-  \int_V \operatorname{d}^3x\,\frac{\partial j^0}{\partial t}=&
-\frac{\operatorname{d}}{\operatorname{d}t}\int_V \operatorname{d}^3x\,\rho \nonumber\\
-=&\frac{\operatorname{d}Q}{\operatorname{d}t}\nonumber\\
-  =&0\,.
-\end{align}
-Es decir, que la carga es independiente del tiempo, y por lo tanto se conserva.
 
 Una consecuencia del primer teorema de Noether es que por cada simetría global de la Acción existe una carga conservada. 
 
