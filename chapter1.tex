@@ -3689,8 +3689,8 @@ Extrayendo la derivada total del término de lado izquierdo
 \begin{align}
 \label{eq:tn1}
    &   \sum_i \int {d^4}x\, \mathcal{E}_ia_i \theta+\sum_i \int {d^4}x\, \left[ \partial_{\mu} \left(  \mathcal{E}_i b^{\mu}_i \theta \right)-\partial_{\mu} \left(  \mathcal{E}_i b^{\mu}_i  \right) \theta \right]  =  \sum_i \int {d^4}x\, \partial_{\mu} \left\{ \left[ \frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}\right] \left( a_i \theta +b^{\nu}_i \partial_{\nu}\theta \right)  \right\}\nonumber\\
-&        \sum_i \int {d^4}x\, \mathcal{E}_ia_i \theta-\sum_i \int {d^4}x\, \left[ \partial_{\mu}   \left(  \mathcal{E}_i b^{\mu}_i  \right) \right] \theta   =-  \sum_i \int {d^4}x\, \partial_{\mu} \left\{ \left[ \frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}\right] \left( a_i \theta +b^{\nu}_i \partial_{\nu}\theta \right) -\mathcal{E}_i b^{\mu}_i \theta  \right\} \nonumber\\
-&        \sum_i\int {d^4}x \left[ \mathcal{E}_ia_i -  \partial_{\mu}   \left(  \mathcal{E}_i b^{\mu}_i  \right) \right]  \theta   =-  \sum_i \int {d^4}x\, \partial_{\mu} \left\{ \left[ \frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}\right] \left( a_i \theta +b^{\nu}_i \partial_{\nu}\theta \right) -\mathcal{E}_i b^{\mu}_i \theta  \right\}.
+&        \sum_i \int {d^4}x\, \mathcal{E}_ia_i \theta-\sum_i \int {d^4}x\, \left[ \partial_{\mu}   \left(  \mathcal{E}_i b^{\mu}_i  \right) \right] \theta   =  \sum_i \int {d^4}x\, \partial_{\mu} \left\{ \left[ \frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}\right] \left( a_i \theta +b^{\nu}_i \partial_{\nu}\theta \right) -\mathcal{E}_i b^{\mu}_i \theta  \right\} \nonumber\\
+&        \sum_i\int {d^4}x \left[ \mathcal{E}_ia_i -  \partial_{\mu}   \left(  \mathcal{E}_i b^{\mu}_i  \right) \right]  \theta   =  \sum_i \int {d^4}x\, \partial_{\mu} \left\{ \left[ \frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}\right] \left( a_i \theta +b^{\nu}_i \partial_{\nu}\theta \right) -\mathcal{E}_i b^{\mu}_i \theta  \right\}.
 \end{align}
 
 Por consiguiente, si escogemos (sin perdidad de generalidad) un parámetro de transformación gauge $\theta(x)$ que se desvanezca en la frontera
@@ -3724,25 +3724,30 @@ En particular mostraremos luego  que la cuadricorriente asociada al cambio de fa
 
 
 \subsection{Generalización del Teorema 1 para simetrías internas}
+\begin{frame}[fragile,allowframebreaks]
 Si no imponemos que los campos satisfagan las ecuaciones de Euler-Lagrange, podemos formular:
 
 \textbf{Teorema 1 generalizado}: Para un conjunto de $\alpha$ parametros constantes $\theta_{\alpha}$, existen $\alpha$ relaciones
 \begin{align}
-  a
+     \sum_i \mathcal{E}_ia_i     
+ =&-  \partial_{\mu} j^{\mu}\,.
 \end{align}
 
 \emph{Demostración}:  Ya que $\theta=\text{cte}$, de modo que $b_i^{\mu}=0$, la ec.~\eqref{eq:tn1} se reduce a
 \begin{align*}
-  \sum_i\int {d^4}x \left[ \mathcal{E}_ia_i  \right]  \theta    =&-  \sum_i \int {d^4}x\, \partial_{\mu} \left\{ \left[ \frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}\right] a_i \theta   \right\} \nonumber\\
- =&-   \int {d^4}x\, \partial_{\mu} \left\{ \sum_i\left[ \frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}\right] a_i    \right\}\theta\,,
+  \sum_i\int {d^4}x \left[ \mathcal{E}_ia_i  \right]  \theta    =&  \sum_i \int {d^4}x\, \partial_{\mu} \left\{ \left[ \frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}\right] a_i \theta   \right\} \nonumber\\
+ =&   \int {d^4}x\, \partial_{\mu} \left\{ \sum_i\left[ \frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}\right] a_i    \right\}\theta\,,
 \end{align*}
 de modo que, usando \eqref{eq:thn1s}
 \begin{align}
+  \label{eq:th1ng}
     \sum_i \mathcal{E}_ia_i     
- =&-  \partial_{\mu} j^{\mu}\,.
+ =&  \partial_{\mu} j^{\mu}\,.
 \end{align}
+\end{frame}
 
 Como era de esperarse, cuando los campos satistacen las ecuaciones de Euler-Lagrange la cuadricorriente se conserva.
+
 
 % \subsection{Teorema de Noether para simetr\'\i as externas}
 % \begin{frame}[fragile,allowframebreaks]
@@ -3884,12 +3889,19 @@ Note que las ecuaciones de Euler-Lagrange surgen del Problema variacional de Noe
 \section{Campo escalar complejo}
 %% Mover al otro capítulo
 
-En el caso de un campo de materia complejo, $a_1=-a_2$ y $b_1=b_2=0$. Entonces
+\begin{frame}[fragile,allowframebreaks]
+En el caso de un campo de materia complejo, invariante bajo una simetría local $U(1)$ con parámetro $\theta(x)$, tenemos que $\phi_1\to \phi$, $\phi_2\to \phi^{*}$, de modo que $a_2=a_1^{*}$ y $b_1=b_2=0$. Entonces, el Teorema 2  de Noether aplicado a los campos $\phi$ y $\phi^{*}$ queda
 \begin{align}
- \sum_i \mathcal{E}_ia_i=\sum_i \left\{ \partial_{\mu} \left[ \frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}\right]-\frac{\partial\mathcal{L}}{\partial\phi_i} \right\}a_i=&0 \nonumber\\
-\sum_i \left\{ \partial_{\mu} \left[ \frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}\right]a_i-\frac{\partial\mathcal{L}}{\partial\phi_i}a_i \right\}=&0 \nonumber\\
-\sum_i \left\{ \partial_{\mu} \left[ \frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}a_i\right]-\frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}\partial_{\mu}a_i-\frac{\partial\mathcal{L}}{\partial\phi_i}a_i \right\}=&0 \,.
+  \label{eq:th2mf}
+   \sum_i \mathcal{E}_ia_i=&\sum_i  \partial_{\mu}   \left(  \mathcal{E}_i b^{\mu}_i  \right) =& 0\,.
 \end{align}
+De modo que
+\begin{align}
+ \sum_i \mathcal{E}_ia_i=&\sum_i \left\{ \partial_{\mu} \left[ \frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}\right]-\frac{\partial\mathcal{L}}{\partial\phi_i} \right\}a_i \nonumber\\
+=&\sum_i \left\{ \partial_{\mu} \left[ \frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}\right]a_i-\frac{\partial\mathcal{L}}{\partial\phi_i}a_i \right\} \nonumber\\
+=&\sum_i \left\{ \partial_{\mu} \left[ \frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}a_i\right]-\frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}\partial_{\mu}a_i-\frac{\partial\mathcal{L}}{\partial\phi_i}a_i \right\}\,.
+\end{align}
+\end{frame}
 
 \begin{frame}[fragile,allowframebreaks]
 Teniendo en cuenta que como veremos más adelante, para un campo complejo
@@ -3898,14 +3910,23 @@ Teniendo en cuenta que como veremos más adelante, para un campo complejo
 \end{align}
 Entonces, 
 \begin{align}
-\sum_i \partial_{\mu} \left[ \frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}a_i\right]=&0\,.
+\sum_i \mathcal{E}_ia_i=\partial_{\mu} j^{\mu}\,,
 \end{align}
-Este resultado particular para campos complejos se mantiene en general para el conjunto de campos que dependan sólo del parámetro y no de la derivada del parámetro, es decir, el conjunto de campos de materia con $b_i^\mu=0$: ver Teorema 3 de \cite{Brading:2000hc}. En tal caso, las corrientes conservadas son
+donde
 \begin{align}
 \label{eq:tnoeth2}
-j^\mu=\frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}a_{i}\,.
+j^\mu=\sum_i\frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}a_{i}\,.
 \end{align}
-Note que la conservación de la carga en este caso no requiere imponer que $\mathcal{E}_i=0$. Por lo tanto el caso de la conservación de carga \emph{impropia} se puede considerar más fundamental e inviolable. Esto nos permite formular el \emph{principio gauge} como la necesidad de establecer Lagrangianos que respetan las simetría internas a nivel local.
+Además, debido a la ec.~\eqref{eq:th2mf},
+\begin{align}
+  \partial_{\mu} j^{\mu}=0\,.
+\end{align}
+
+
+Este resultado particular para campos complejos se mantiene en general para el conjunto de campos que dependan sólo del parámetro y no de la derivada del parámetro, es decir, el conjunto de campos de materia con $b_i^\mu=0$: ver Teorema 3 de \cite{Brading:2000hc}. Note que la corriente conservada para el campo de materia asociada a una transformación local coincide con la corriente conservada para una transformación global dada en la ec.~\eqref{eq:th1ng}.
+
+
+Sin embargo, la conservación de la carga en este caso no requiere imponer que $\mathcal{E}_i=0$. Por lo tanto el caso de la conservación de carga \emph{impropia} se puede considerar más fundamental e inviolable. Esto nos permite formular el \emph{principio gauge} como la necesidad de establecer Lagrangianos que respetan las simetría internas a nivel local.
 \end{frame}
 
 
