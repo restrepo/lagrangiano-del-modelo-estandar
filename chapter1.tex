@@ -3133,7 +3133,12 @@ en la expresión anterior, tenemos que
      \delta S =&\int_{R} \left[ 1+\partial_{\mu} \left( \delta x^{\mu}  \right)\right]  d^4x\,\left\{ \mathcal{L}(\phi_i,\partial_{\mu}\phi_i;x)+\sum_i \left[ \frac{\partial\mathcal{L}}{\partial\phi_i}\delta\phi_{i} +\frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}\partial_{\mu}(\delta\phi_{i}) \right]+\left( \partial_{\mu}\mathcal{L} \right)\delta x^{\mu} \right\}\nonumber\\
       &- \int_{R}d^4x\,\mathcal{L} \left( \phi_{i},\partial_{\mu}\phi_i;x \right) \nonumber\\
      =&\int_{R} d^4x\,\left[ \partial_{\mu} \left( \delta x^{\mu}  \right)\right] \mathcal{L} + \int_{R}d^4x\,\left\{\sum_i \left[ \frac{\partial\mathcal{L}}{\partial\phi_i}\delta\phi_{i} +\frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}\partial_{\mu}(\delta\phi_{i}) \right]+\left( \partial_{\mu}\mathcal{L} \right)\delta x^{\mu} \right\}+\mathcal{O} \left( \delta^2 \right)\nonumber\\
-     \approx&\int_{R} d^4x\,\partial_{\mu} \left(\mathcal{L} \delta x^{\mu}  \right)  + \int_{R}d^4x\,\sum_i \left\{ \frac{\partial\mathcal{L}}{\partial\phi_i}\delta\phi_{i} +\partial_{\mu} \left[ \frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}\delta\phi_{i} \right]-\partial_{\mu} \left[ \frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}\right]\delta\phi_{i}  \right\}\nonumber\\
+     \approx&\int_{R} d^4x\,\partial_{\mu} \left(\mathcal{L} \delta x^{\mu}  \right)  + \int_{R}d^4x\,\sum_i \left\{ \frac{\partial\mathcal{L}}{\partial\phi_i}\delta\phi_{i} +\partial_{\mu} \left[ \frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}\delta\phi_{i} \right]-\partial_{\mu} \left[ \frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}\right]\delta\phi_{i}  \right\}\,,
+\end{align}
+y reordenando los términos con derivada total
+\begin{align}
+  \delta S =&
+\int_{R} d^4x\,\partial_{\mu} \left[\mathcal{L} \delta x^{\mu} + \frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}\delta\phi_{i} \right]  + \int_{R}d^4x\,\sum_i \left\{ \frac{\partial\mathcal{L}}{\partial\phi_i} -\partial_{\mu} \left[ \frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}\right]  \right\}\delta\phi_{i}\,,              
 \end{align}
 \end{frame}
 
@@ -3141,17 +3146,12 @@ en la expresión anterior, tenemos que
 La condición $\delta S=0$ implica que
 \begin{align}
 \label{eq:masterint}
-\int_R \operatorname{d}^4x  \sum_i \mathcal{E}_i \delta\phi_i =\int_R \operatorname{d}^4x \sum_i \partial_{\mu} B^{\mu}_{i}\,,
-\end{align}
-o
-
-\begin{align}
- \int_R \operatorname{d}^4x \sum_i \mathcal{E}_i \delta\phi_i =\int_R \operatorname{d}^4x \sum_i \partial_{\mu} B^{\mu}_{i}\,,
+\int_R \operatorname{d}^4x  \sum_i \mathcal{E}_i \delta\phi_i =\int_R \operatorname{d}^4x  \partial_{\mu} B^{\mu}\,,
 \end{align}
 donde
 \begin{align}
 \label{eq:master2}
-  \mathcal{E}_i=&\partial_{\mu} \left[ \frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}\right]-\frac{\partial\mathcal{L}}{\partial\phi_i} & B^{\mu}_i=\mathcal{L} \delta x^{\mu} + \frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}\delta\phi_{i} 
+  \mathcal{E}_i=&\partial_{\mu} \left[ \frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}\right]-\frac{\partial\mathcal{L}}{\partial\phi_i} & B^{\mu}=\mathcal{L} \delta x^{\mu} +\sum_i \frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}\delta\phi_{i}\,. 
 \end{align}
 \end{frame}
 
@@ -3269,7 +3269,7 @@ En el ejercicio anterio el gráfico del \emph{potencial} escalar $V(\phi)$ corre
 
 \begin{figure} %noinstiki
   \centering %noinstiki
-  \includegraphics[scale=0.8]{vphi2}
+  \includegraphics[scale=0.8]{vphi2roll}
   \caption{$V(\phi)=\frac{1}{2}m^2 \phi^2$ con $m^2\gt 0$} %noinstiki
   \label{fig:x2ini} %noinstiki
 \end{figure} %n
@@ -3331,12 +3331,13 @@ Es decir, que la carga es independiente del tiempo, y por lo tanto se conserva.
 
 
 
-\section{Simetrías externas}
+\section{Tranformaciones externas}
+\label{sec:tranf-extern}
 \begin{frame}[fragile,allowframebreaks]
 Un desplazamiento infinitesimal, que equivale a repeterir un experimento en laboratorio desplazado en el tiempo o en el espacio,
 puede parametrizarse sin perdida de generalidad como
 \begin{align}
-  x^\mu\to{x'}^\mu=&x^\mu+\delta x^{\mu}\nonumber\\
+  x^\mu\to{x'}^\mu=&x^\mu+\delta x^{\mu}\,.
 \end{align}
 
 Para visualizar más fácilmente la situación para un campo escalar, supongamos de momento que $\delta x^{\mu}$ corresponde  traslaci\'on espacio--temporal.
@@ -3375,71 +3376,11 @@ y la transformaci\'on del campo $\phi$ como consecuencia de la traslaci\'on es
 %noinstiki![trasla](http://gfif.udea.edu.co/figfs/trasla.png)
 %noinstiki
 
-
-
-
-
-Consideremos el caso en el cual el campo es sólo afectado en su dependencia espacio-temporal como ocurre para un campo escalar de Lotentz en la ec.~\eqref{eq:dmuxmu}, es decir,
- $\delta\phi_{i}=-\left( \partial_{\nu}\phi \right)\delta x^{\nu}$,
-\begin{align}
-   \sum_i    B^{\mu}_i= - T^{\mu}_{\nu} \delta x^{\nu}\,,
-\end{align}
-donde, de la ecuación~\ref{eq:master2}
-\begin{align}
-  T^{\mu}_{\nu}=\sum_i \frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}\partial_{\nu}\phi_i-\delta^{\mu}_{\nu}\mathcal{L}
-\end{align}
-si los campos $\phi_{i}$ satisfacen la ecuaciones de Euler-Lagrange, $\mathcal{E}_i=0\,$, tenemos que
-\begin{align}
-  \partial_{\mu} \left( T^{\mu}_{\nu} \delta x^{\nu}\right)=0\,.
-\end{align}
-Si $\delta x^{\nu}$ es constante, como se espera en el caso de sistemas inerciales, se satisfacen las cuatro  ecuaciones de continuidad (una para cada $\nu$)
-\begin{align}
-  \partial_{\mu} T^{\mu}_{\nu}=0\,.
-\end{align}
-El tensor $T^\mu_\nu$ proviene de asumir la homogeneidad del espacio y el tiempo y es llamado el tensor de momentum--energ\'\i a. 
-La densidad Hamiltonina se obtiene de $T^0_0$
-\begin{align}
-  \label{eq:3}
-\mathcal{H}&=T^0_0=\frac{\partial\mathcal{L}}{\partial\dot{\phi}}\dot{\phi}
-      -\mathcal{L}\\
-      &=\pi(x)\frac{\partial\phi(x)}{\partial t}-\mathcal{L}.
-\end{align}
-Comparando con la expresi\'on correspondiente en la formulaci\'on
-Lagrangiana de la Mec\'anica Cl\'asica, tenemos que si $\phi(x)$ es la
-variable can\'onica, la variable can\'onica conjugada es $\pi(x)$
-\begin{equation}
-  \label{eq:4}
-  \pi(x)=\frac{\partial\mathcal{L}}{\partial(\partial\phi(x)/\partial t)}.
-\end{equation}
-El teorema de Noether en este caso establece que la invarianza de la Acci\'on bajo traslaciones temporales da lugar a la ecuaci\'on de continuidad (\ref{eq:131}) para $\nu=0$
-\begin{align}
-\label{eq:122}
-  \partial_\mu T^\mu_0=0
-\end{align}
-cuya carga conservada corresponde a la energ\'\i a
-\begin{align}
-  H=\int_V d^3x\, T^0_0=\int_V d^3x\,\mathcal{H}.
-\end{align}
-De igual forma la invarianza bajo traslaciones espaciales de lugar a ecuaciones de continuidad para cada componente $\nu=i$
- ($i=1,2,3$)
- \begin{align}
-   \label{eq:235}
-   \partial_\mu T^\mu_i=0,
- \end{align}
-cuyas densidad de cargas conservadas, $T^0_i$, que en forma vectorial escribiremos como $\mathbf{T}^0$, dan lugar a la conservaci\'on del momentum
-\begin{align}
-  \mathbf{P}=\int_V d^3x\,\mathbf{T}^0\,.
-\end{align}
-Generalizando a un campo complejo
-\begin{equation}
-  \label{eq:138}
-     T^\mu_\nu=\frac{\partial\mathcal{L}}{\partial(\partial_\mu\phi)}(\partial_\nu\phi)+(\partial_\nu\phi^*)\frac{\partial\mathcal{L}}{\partial(\partial_\mu\phi^*)}
-      -\delta^\mu_\nu\mathcal{L}
-\end{equation}
-
 \end{frame}
 
-\section{Simetrías internas}
+
+
+\section{Transformaciones internas}
 
 Una consecuencia del primer teorema de Noether es que por cada simetría global de la Acción existe una carga conservada. 
 
@@ -3486,121 +3427,150 @@ Ademas, para este caso
   b_1^\nu=b_2^\nu=0\,.
 \end{align}
 
-
-\section{Segundo teorema de Noether}
-
-Estudiaremos  una versión del segundo teorema de Noether aplicable sólo a simetrías internas~\cite{La version general del teorema incluye el caso de la relatividad general}. Como veremos más adelante, La invarianza de la Acción de Scrhödinger bajo una transformación de fase global, da lugar a una conservación global de la probabilidad: la probabilidad se conserva en todos los puntos del espacio simultáneamente. Esto no es incompatible con relatividad especial por que no involucra intercambio de información, pero si permite, en particular, que por ejemplo la teletransportación cuántica sea instantánea.
-
-Si imponemos que el cambio de fase sea local, es decir, dependiente de cada punto  del espacio tiempo, tendremos que para un campo $\phi_{i}=\phi,\phi^{*}$,
-\begin{align}
-  \phi_i\to \phi'_i=\operatorname{e}^{i \theta(x)}\phi_i\approx (1+i\theta(x))\phi_i \,,
-\end{align}
-de modo que
-\begin{align}
-  \delta\phi_i=i  \phi_i\,\theta(x)\,.
-\end{align}
-
-En el caso en el que el parámetro de la transformación, $\theta(x)$ sea constante, recuperamos el caso de la invarianza global, que en mecánica cuántica dará lugar a la conservación global de la probabilidad. Note que la carga conservada con una transformación local de fase aún no se ha analizado.
-
-Una transformación local interesante es la que ocurre en el caso electromagnético. La siguientes transformaciones locales del potencial eléctrico y el vector de potencial electromagnético, dejan invariante las ecuaciones de Maxwell\footnote{La demostración se hará en el siguiente capítulo.}
-\begin{align}
-  \phi \to \phi'=\phi+\frac{\partial}{\partial t}\theta(x)\,,\nonumber\\
-  \mathbf{A} \to \mathbf{A}'=\mathbf{A}- \boldsymbol{\nabla}\theta(x)\,,
-\end{align}
-o, si definimos el cuadrivector de potencial electromagnético
-\begin{align}
-  A^{\mu}=(A^0,\mathbf{A})=(\phi,\mathbf{A}),
-\end{align}
-entonces %faltan detalles
-\begin{align}
-  \delta A^{\mu}=A^{\prime\mu}-A^{\mu}=\partial_\mu \theta(x)\,.
-\end{align}
-
-\begin{frame}[fragile,allowframebreaks]
-Tanto la transformación del campo $\phi$ como la del $A^{\mu}$ se pueden escribir en términos de una transformación en términos del parámetro infinitesimal local $\theta(x)$ y su derivada como
-\begin{align}
-\label{eq:dfi}
-  \delta\phi_i= a_{i}\left( \phi_{i},\partial_{\mu}\phi_{i} \right) \theta(x)+b^{\nu}_i \left( \phi_{i},\partial_{\mu}\phi_{i} \right) \partial_{\nu}\theta(x),\qquad \text{para $\phi_{i}=\phi,\phi^{*},A^{\mu}$}\,.
-\end{align}
-\end{frame}
-%TODO: Check si U(1) esta definido.
-\textbf{Ejercicio:} Encontrar los $a_i$, $b_i$ y  $\theta(x)$ para cada $\phi_i$ bajo el Grupo U(1).
-
-Diremos que un campo es de \emph{materia} si su transformación interna es proporcional al parámetro de transformación ($b^{\nu}=0$), o de radiación si su transformación interna es proporcional a la derivada del parámetro de transformación ($a=0$). Bajo estas definiciones $\phi$ es un campo de materia bajo el Grupo U(1), mientras que $A^{\mu}$ es un campo de radiación bajo algún grupo a especificar más adelante. 
-
-\textbf{Resultado general}
-Expandiendo la ecuación resultante para el principio de mínima Acción en términos de $\theta$ y $\partial_\mu\theta$, tenemos que:
-La haremos en el caso de un sólo parámetro. La generación a $\rho$ parámetros es directa. Partiendo de la ecuación \eqref{eq:varprin} recordando que proviene de una integral y sustituyendo la expresión para $\delta\phi_i$ en \eqref{eq:dfi}, tenemos
-\begin{frame}[fragile,allowframebreaks]
-\begin{align}
-    \sum_i\int {d^4}x\, \mathcal{E}_i \delta\phi_i = & \sum_{i}\int {d^4}x\, \partial_{\mu} \left[  \frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}\delta\phi_i \right]\nonumber\\
-      \sum_i \int {d^4}x\, \mathcal{E}_i \left( a_i \theta +b^{\mu}_i \partial_{\mu}\theta \right) =&  \sum_i \int {d^4}x\, \partial_{\mu} \left\{ \left[ \frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}\right] \left( a_i \theta +b^{\nu}_i \partial_{\nu}\theta \right)  \right\}\nonumber\\
-      \sum_i \int {d^4}x\, \mathcal{E}_ia_i \theta+\sum_i \int {d^4}x\, \mathcal{E}_i b^{\mu}_i \partial_{\mu}\theta  =&  \sum_i \int {d^4}x\, \partial_{\mu} \left\{ \left[ \frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}\right] \left( a_i \theta +b^{\nu}_i \partial_{\nu}\theta \right)  \right\}.
-\end{align}
-Extrayendo la derivada total del término de lado izquierdo 
-\begin{align}
-\label{eq:tn1}
-   &   \sum_i \int {d^4}x\, \mathcal{E}_ia_i \theta+\sum_i \int {d^4}x\, \left[ \partial_{\mu} \left(  \mathcal{E}_i b^{\mu}_i \theta \right)-\partial_{\mu} \left(  \mathcal{E}_i b^{\mu}_i  \right) \theta \right]  =  \sum_i \int {d^4}x\, \partial_{\mu} \left\{ \left[ \frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}\right] \left( a_i \theta +b^{\nu}_i \partial_{\nu}\theta \right)  \right\}\nonumber\\
-&        \sum_i \int {d^4}x\, \mathcal{E}_ia_i \theta-\sum_i \int {d^4}x\, \left[ \partial_{\mu}   \left(  \mathcal{E}_i b^{\mu}_i  \right) \right] \theta   =-  \sum_i \int {d^4}x\, \partial_{\mu} \left\{ \left[ \frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}\right] \left( a_i \theta +b^{\nu}_i \partial_{\nu}\theta \right) -\mathcal{E}_i b^{\mu}_i \theta  \right\} \nonumber\\
-&        \sum_i\int {d^4}x \left[ \mathcal{E}_ia_i -  \partial_{\mu}   \left(  \mathcal{E}_i b^{\mu}_i  \right) \right]  \theta   =-  \sum_i \int {d^4}x\, \partial_{\mu} \left\{ \left[ \frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}\right] \left( a_i \theta +b^{\nu}_i \partial_{\nu}\theta \right) -\mathcal{E}_i b^{\mu}_i \theta  \right\}.
-\end{align}
-\end{frame}
-
-
-\begin{frame}[fragile,allowframebreaks]
-\textbf{Teorema 2} Si la acción $S$ es invariante bajo un Grupo gauge continuo, entonces existen $\rho$ relaciones
-\begin{align}
-  \sum_{i}\mathcal{E}_{i} a_{\alpha i}=\sum_{i} \partial_{\mu} \left( \mathcal{E}_{i} b^{\mu}_{\alpha i} \right)
-\end{align}
-\end{frame}
-\emph{Demostración}:
-
-Usando el Teorema de Gauss y escogiendo los $\theta(x)$ y $\partial_{\mu}\theta(x)$ de modo que se desvanezcan en la frontera, obtenemos de la ec.~\eqref{eq:tn1} que
-\begin{align*}
-\int {d^4}x \left[    \sum_i  \mathcal{E}_ia_i -\sum_i  \left[ \partial_{\mu}   \left(  \mathcal{E}_i b^{\mu}_i  \right) \right] \right]\theta   =0\,,
-\end{align*}
-y ya que $\theta(x)$ es una función arbitraria:
-\begin{align}
-  \sum_i \mathcal{E}_ia_i=\sum_i  \partial_{\mu}   \left(  \mathcal{E}_i b^{\mu}_i  \right) \,.
-\end{align}
-Entonces, dada una densidad Lagrangiana para un conjunto de campos y el conjunto de transformaciones internas de los campos que dejan invarianta la Acción, el resultado anterior nos dice como las ecuaciones de continuidad en el lado izquierdo de la ecuación se ven afectadas por el caracter local de las transformaciones.
-
-En particular mostraremos luego  que la cuadricorriente asociada al cambio de fase de un campo complejo no depende de que la transformación sea gloabal o local.
-
-
-
-
 \section{Primer teorema de Noether}
+El primer teorema de Noether surge al asumir que
+\begin{itemize}
+\item Los parámetros de transformación son globales, es decir, que los parámetros de la transformación no dependen del punto del espacio tiempo.
+\item El conjunto de campos satisface las ecuaciones de Euler-Lagrange.
+\end{itemize}
 
-Consideremos primero el caso en el que el parámetro de la transformación $\theta=\text{cte}$. Como $\partial_{\nu}\theta=0$ en ese caso
+Por consiguiente, la ecuación~\eqref{eq:deltaSeq0} se reduce a
+\begin{align}
+\int_R \operatorname{d}^4x \, \partial_{\mu} B^{\mu}=0\,.
+\end{align}
+Por lo tanto:
+
+\subsubsection{Teorema 1}
+Por  cada parámetro asociado a una transformación global  existe una ecuación de continuidad del tipo
+\begin{align}
+  \label{eq:dmubmu}
+   \partial_{\mu} B^{\mu}=0\,,
+\end{align}
+con $B^{\mu}_i$ dado por la ecuación~\eqref{eq:deltaSeq0}.
+
+
+\subsection{Simetrías externas}
+
+\begin{frame}[fragile,allowframebreaks]
+  Consideremos el caso en el cual el campo es sólo afectado en su dependencia espacio-temporal. Como ocurre para una la transformación externa de traslación global
+  discutida en la Sección~\ref{sec:tranf-extern}. Allí, un desplazamiento constante
+\begin{align}
+  x^\mu\to{x'}^\mu=&x^\mu+\delta x^{\mu}\,,
+\end{align}
+ocasiona un cambio en
+  un campo escalar de Lorentz dado por la ec.~\eqref{eq:dmuxmu}
+  \begin{align}
+    \delta\phi_{i}=-\left( \partial_{\nu}\phi_i \right)\delta x^{\nu}\,.
+  \end{align}
+
+  De acuerdo al Teorema 1 de Noether, los cuatro posibles parámetros de desplazamiento deben dar lugar a cuatro ecuaciones de continuidad para (suma sobre indices repetidos)
+\begin{align}
+     B^{\mu}=& \mathcal{L} \delta x^{\mu} + \frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}\delta\phi_{i} \nonumber\\
+  =&\delta_{\nu}^{\mu} \mathcal{L} \delta x^{\nu} - \frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)} \left( \partial_{\nu}\phi_i \right)\delta x^{\nu}   \nonumber\\
+  =&- \left[\frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)} \left( \partial_{\nu}\phi_i \right) - \delta_{\nu}^{\mu} \mathcal{L} \right] \delta x^{\nu}   \nonumber\\
+  =&    - T^{\mu}_{\nu} \delta x^{\nu}\,,
+\end{align}
+donde, hemos definido
+\begin{align}
+  T^{\mu}_{\nu}\equiv\sum_i \frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}\partial_{\nu}\phi_i-\delta^{\mu}_{\nu}\mathcal{L}
+\end{align}
+si los campos $\phi_{i}$ satisfacen la ecuaciones de Euler-Lagrange, $\mathcal{E}_i=0\,$, tenemos que
+\begin{align}
+  \partial_{\mu} \left( T^{\mu}_{\nu} \delta x^{\nu}\right)=0\,.
+\end{align}
+Si $\delta x^{\nu}$ es constante, como se espera en el caso de sistemas inerciales, se satisfacen las cuatro  ecuaciones de continuidad (una para cada $\nu$)
+\begin{align}
+  \partial_{\mu} T^{\mu}_{\nu}=0\,.
+\end{align}
+El tensor $T^\mu_\nu$ proviene de asumir la homogeneidad del espacio y el tiempo y es llamado el tensor de momentum--energía. 
+La densidad Hamiltonina se obtiene de $T^0_0$
+\begin{align}
+  \label{eq:3}
+\mathcal{H}&=T^0_0=\frac{\partial\mathcal{L}}{\partial\dot{\phi}}\dot{\phi}
+      -\mathcal{L}\\
+      &=\pi(x)\frac{\partial\phi(x)}{\partial t}-\mathcal{L}.
+\end{align}
+Comparando con la expresi\'on correspondiente en la formulaci\'on
+Lagrangiana de la Mec\'anica Cl\'asica, tenemos que si $\phi(x)$ es la
+variable can\'onica, la variable can\'onica conjugada es $\pi(x)$
+\begin{equation}
+  \label{eq:4}
+  \pi(x)=\frac{\partial\mathcal{L}}{\partial(\partial\phi(x)/\partial t)}.
+\end{equation}
+El teorema de Noether en este caso establece que la invarianza de la Acci\'on bajo traslaciones temporales da lugar a la ecuación de continuidad (\ref{eq:131}) para $\nu=0$
+\begin{align}
+\label{eq:122}
+  \partial_\mu T^\mu_0=0
+\end{align}
+cuya carga conservada corresponde a la energía
+\begin{align}
+  H=\int_V d^3x\, T^0_0=\int_V d^3x\,\mathcal{H}.
+\end{align}
+De igual forma la invarianza bajo traslaciones espaciales de lugar a ecuaciones de continuidad para cada componente $\nu=i$
+ ($i=1,2,3$)
+ \begin{align}
+   \label{eq:235}
+   \partial_\mu T^\mu_i=0,
+ \end{align}
+cuyas densidad de cargas conservadas, $T^0_i$, que en forma vectorial escribiremos como $\mathbf{T}^0$, dan lugar a la conservaci\'on del momentum
+\begin{align}
+  \mathbf{P}=\int_V d^3x\,\mathbf{T}^0\,.
+\end{align}
+Generalizando a un campo complejo
+\begin{equation}
+  \label{eq:138}
+     T^\mu_\nu=\frac{\partial\mathcal{L}}{\partial(\partial_\mu\phi)}(\partial_\nu\phi)+(\partial_\nu\phi^*)\frac{\partial\mathcal{L}}{\partial(\partial_\mu\phi^*)}
+      -\delta^\mu_\nu\mathcal{L}
+\end{equation}
+
+\end{frame}
+
+
+
+\subsection{Simetrías internas}
+
+Consideremos primero el caso en el que el parámetro de la transformación $\theta=\text{cte}$. Como $\partial_{\nu}\theta=0$ (y también $\delta x^{\mu}=0$) en ese caso
 \begin{align}
 \label{eq:infdt}
- \delta\phi_i= a_{i}\left( \phi_{i},\partial_{\mu}\phi_{i} \right) \theta\,.
+  \delta\phi_i= &a_{i}\left( \phi_{i},\partial_{\mu}\phi_{i} \right) \theta\,,&
+   \theta=&\text{cte}\,.
 \end{align}
 
+Reemplazando en \eqref{eq:master2}
+\begin{align}
+  B^{\mu}  =& \sum_{i}  \frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)} \delta \phi_i\nonumber\\
+  =&\sum_{i}  \frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}a_{i}\, \theta \nonumber\\
+=& j^{\mu} \theta\,,
+\end{align}
+donde
+\begin{align}
+ \label{eq:thn1s}
+  j^{\mu}\equiv \frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}a_{i}\,.
+\end{align}
+Tenemos entonces que la corriente del Teorema 1 dada en la ec.~\eqref{eq:dmubmu}, puede escribirse como
+\begin{align}
+  \partial_{\mu} B^{\mu}=&0 \nonumber\\
+  \partial_{\mu} j^{\mu}=&0 \,.
+\end{align}
+de modo que $j^{\mu}$ es la cuadricorriente conservada asociada a la transformación con parámetro $\theta$.
 
-
-%Demostrar el primer teorema de Noether
 
 Generalizando al caso de una transformación con varios parámetros, tendremos la formulación del primer teorema de Noether para simetrías internas:
 
 \begin{frame}[fragile,allowframebreaks]
-\textbf{Teorema 1}: Si la acción $S$ es invariante bajo un grupo continuo de simetrías globales que dependen suavemente de $\rho$ parámetros independientes $\theta_{\alpha}=\text{cte}$ ($\alpha=1,2,\ldots, \rho$), tal que $\delta\phi_i=a_{\alpha i}\theta^{\alpha}$, entonces existen las $\rho$ relaciones
+\textbf{Teorema 1}: Si la acción $S$ es invariante bajo un grupo continuo de simetrías globales que dependen suavemente de $\rho$ parámetros independientes $\theta_{\alpha}=\text{cte}$ ($\alpha=1,2,\ldots, \rho$), tal que $\delta\phi_i=a_{\alpha i}\theta^{\alpha}$, y los campos satisfacen las ecuaciones de Euler Lagrange, entonces existen las $\rho$ relaciones
 \begin{align}
-\sum_{i}\mathcal{E}_i a_{\alpha i}\equiv \partial_{\mu} j^{\mu}_{\alpha}\,,  
+  % \sum_{i}\mathcal{E}_i a_{\alpha i}\equiv
+  \partial_{\mu} j^{\mu}_{\alpha}=0\,,  
 \end{align}
 donde
 \begin{align}
   \label{eq:thn1}
-j^{\mu}_{\alpha}\equiv \sum_{i}B^{\mu}_i=\sum_{i}  \frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}a_{\alpha i}
+j^{\mu}_{\alpha}\equiv B^{\mu}/\theta_{\alpha}=\sum_{i}  \frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}a_{\alpha i}
 \end{align}
 Y genera exactamente el mismo término de corriente conservada que en el caso del simetrías continuas locales internas.
 \end{frame}
 
-\emph{Demostración}:  Ya que $\theta=\text{cte}$, la ec.~\eqref{eq:tn1} se reduce a
-\begin{align*}
-  \sum_i\int {d^4}x \left[ \mathcal{E}_ia_i -  \partial_{\mu}   \left(  \mathcal{E}_i b^{\mu}_i  \right) \right]  \theta    =-  \sum_i \int {d^4}x\, \partial_{\mu} \left\{ \left[ \frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}\right] a_i \theta  -\mathcal{E}_i b^{\mu}_i \theta  \right\}.
-\end{align*}
 % De la ec.~\eqref{eq:master2}
 % \begin{align}
 % \label{eq:varprin}
@@ -3663,6 +3633,116 @@ obtenemos $\alpha$-\emph{ecuaciones de continuidad}
 % \end{align}
 
 
+
+
+\section{Segundo teorema de Noether}
+
+Estudiaremos  una versión del segundo teorema de Noether aplicable sólo a simetrías internas~\footnote{El análisis de simestrías externas que generelizan la transfornaciones de Lorentz con velocidad constante, $v$, a sistemas acelerados con el parámetro local $v(t)$, corresponde al caso de la relatividad general}. Como veremos más adelante, La invarianza de la Acción de Scrhödinger bajo una transformación de fase global, da lugar a una conservación global de la probabilidad: la probabilidad se conserva en todos los puntos del espacio simultáneamente. Esto no es incompatible con relatividad especial por que no involucra intercambio de información, pero si permite, en particular, que por ejemplo la teletransportación cuántica sea instantánea.
+
+Si imponemos que el cambio de fase sea local, es decir, dependiente de cada punto  del espacio tiempo, tendremos que para un campo $\phi_{i}=\phi,\phi^{*}$,
+\begin{align}
+  \phi_i\to \phi'_i=\operatorname{e}^{i \theta(x)}\phi_i\approx (1+i\theta(x))\phi_i \,,
+\end{align}
+de modo que
+\begin{align}
+  \delta\phi_i=i  \phi_i\,\theta(x)\,.
+\end{align}
+
+En el caso en el que el parámetro de la transformación, $\theta(x)$ sea constante, recuperamos el caso de la invarianza global, que en mecánica cuántica dará lugar a la conservación global de la probabilidad. Note que la carga conservada con una transformación local de fase aún no se ha analizado.
+
+Una transformación local interesante es la que ocurre en el caso electromagnético. La siguientes transformaciones locales del potencial eléctrico y el vector de potencial electromagnético, dejan invariante las ecuaciones de Maxwell\footnote{La demostración se hará en el siguiente capítulo.}
+\begin{align}
+  \phi \to \phi'=\phi+\frac{\partial}{\partial t}\theta(x)\,,\nonumber\\
+  \mathbf{A} \to \mathbf{A}'=\mathbf{A}- \boldsymbol{\nabla}\theta(x)\,,
+\end{align}
+o, si definimos el cuadrivector de potencial electromagnético
+\begin{align}
+  A^{\mu}=(A^0,\mathbf{A})=(\phi,\mathbf{A}),
+\end{align}
+entonces %faltan detalles
+\begin{align}
+  \delta A^{\mu}=A^{\prime\mu}-A^{\mu}=\partial_\mu \theta(x)\,.
+\end{align}
+
+\begin{frame}[fragile,allowframebreaks]
+Tanto la transformación del campo $\phi$ como la del $A^{\mu}$ se pueden escribir en términos de una transformación en términos del parámetro infinitesimal local $\theta(x)$ y su derivada como
+\begin{align}
+\label{eq:dfi}
+  \delta\phi_i= a_{i}\left( \phi_{i},\partial_{\mu}\phi_{i} \right) \theta(x)+b^{\nu}_i \left( \phi_{i},\partial_{\mu}\phi_{i} \right) \partial_{\nu}\theta(x),\qquad \text{para $\phi_{i}=\phi,\phi^{*},A^{\mu}$}\,.
+\end{align}
+\end{frame}
+%TODO: Check si U(1) esta definido.
+\textbf{Ejercicio:} Encontrar los $a_i$, $b_i$ y  $\theta(x)$ para cada $\phi_i$ bajo el Grupo U(1).
+
+Diremos que un campo es de \emph{materia} si su transformación interna es proporcional al parámetro de transformación ($b^{\nu}=0$), o de radiación si su transformación interna es proporcional a la derivada del parámetro de transformación ($a=0$). Bajo estas definiciones $\phi$ es un campo de materia bajo el Grupo U(1), mientras que $A^{\mu}$ es un campo de radiación bajo algún grupo a especificar más adelante. 
+
+\textbf{Resultado general}
+Expandiendo la ecuación resultante para el principio de mínima Acción en términos de $\theta$ y $\partial_\mu\theta$, tenemos que:
+La haremos en el caso de un sólo parámetro. La generación a $\rho$ parámetros es directa. Partiendo de la ecuación \eqref{eq:varprin} recordando que proviene de una integral y sustituyendo la expresión para $\delta\phi_i$ en \eqref{eq:dfi}, tenemos
+\begin{frame}[fragile,allowframebreaks]
+\begin{align}
+    \sum_i\int {d^4}x\, \mathcal{E}_i \delta\phi_i = & \sum_{i}\int {d^4}x\, \partial_{\mu} \left[  \frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}\delta\phi_i \right]\nonumber\\
+      \sum_i \int {d^4}x\, \mathcal{E}_i \left( a_i \theta +b^{\mu}_i \partial_{\mu}\theta \right) =&  \sum_i \int {d^4}x\, \partial_{\mu} \left\{ \left[ \frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}\right] \left( a_i \theta +b^{\nu}_i \partial_{\nu}\theta \right)  \right\}\nonumber\\
+      \sum_i \int {d^4}x\, \mathcal{E}_ia_i \theta+\sum_i \int {d^4}x\, \mathcal{E}_i b^{\mu}_i \partial_{\mu}\theta  =&  \sum_i \int {d^4}x\, \partial_{\mu} \left\{ \left[ \frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}\right] \left( a_i \theta +b^{\nu}_i \partial_{\nu}\theta \right)  \right\}.
+\end{align}
+Extrayendo la derivada total del término de lado izquierdo 
+\begin{align}
+\label{eq:tn1}
+   &   \sum_i \int {d^4}x\, \mathcal{E}_ia_i \theta+\sum_i \int {d^4}x\, \left[ \partial_{\mu} \left(  \mathcal{E}_i b^{\mu}_i \theta \right)-\partial_{\mu} \left(  \mathcal{E}_i b^{\mu}_i  \right) \theta \right]  =  \sum_i \int {d^4}x\, \partial_{\mu} \left\{ \left[ \frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}\right] \left( a_i \theta +b^{\nu}_i \partial_{\nu}\theta \right)  \right\}\nonumber\\
+&        \sum_i \int {d^4}x\, \mathcal{E}_ia_i \theta-\sum_i \int {d^4}x\, \left[ \partial_{\mu}   \left(  \mathcal{E}_i b^{\mu}_i  \right) \right] \theta   =-  \sum_i \int {d^4}x\, \partial_{\mu} \left\{ \left[ \frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}\right] \left( a_i \theta +b^{\nu}_i \partial_{\nu}\theta \right) -\mathcal{E}_i b^{\mu}_i \theta  \right\} \nonumber\\
+&        \sum_i\int {d^4}x \left[ \mathcal{E}_ia_i -  \partial_{\mu}   \left(  \mathcal{E}_i b^{\mu}_i  \right) \right]  \theta   =-  \sum_i \int {d^4}x\, \partial_{\mu} \left\{ \left[ \frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}\right] \left( a_i \theta +b^{\nu}_i \partial_{\nu}\theta \right) -\mathcal{E}_i b^{\mu}_i \theta  \right\}.
+\end{align}
+
+Por consiguiente, si escogemos (sin perdidad de generalidad) un parámetro de transformación gauge $\theta(x)$ que se desvanezca en la frontera
+\begin{align}
+  \label{eq:preteo2}
+\sum_i\int {d^4}x \left[ \mathcal{E}_ia_i -  \partial_{\mu}   \left(  \mathcal{E}_i b^{\mu}_i  \right) \right]  \theta   =0\,.
+\end{align}
+
+\end{frame}
+
+
+\begin{frame}[fragile,allowframebreaks]
+\textbf{Teorema 2} Si la acción $S$ es invariante bajo un Grupo gauge continuo, entonces existen $\rho$ relaciones
+\begin{align}
+  \sum_{i}\mathcal{E}_{i} a_{\alpha i}=\sum_{i} \partial_{\mu} \left( \mathcal{E}_{i} b^{\mu}_{\alpha i} \right)
+\end{align}
+\end{frame}
+\emph{Demostración}:
+
+Usando el Teorema de Gauss y escogiendo los $\theta(x)$ y $\partial_{\mu}\theta(x)$ de modo que se desvanezcan en la frontera, obtenemos de la ec.~\eqref{eq:preteo2} que
+\begin{align*}
+\int {d^4}x \left[    \sum_i  \mathcal{E}_ia_i -\sum_i  \left[ \partial_{\mu}   \left(  \mathcal{E}_i b^{\mu}_i  \right) \right] \right]\theta   =0\,,
+\end{align*}
+y ya que $\theta(x)$ es una función arbitraria:
+\begin{align}
+  \sum_i \mathcal{E}_ia_i=\sum_i  \partial_{\mu}   \left(  \mathcal{E}_i b^{\mu}_i  \right) \,.
+\end{align}
+Entonces, dada una densidad Lagrangiana para un conjunto de campos y el conjunto de transformaciones internas de los campos que dejan invarianta la Acción, el resultado anterior nos dice como las ecuaciones de continuidad en el lado izquierdo de la ecuación se ven afectadas por el caracter local de las transformaciones.
+
+En particular mostraremos luego  que la cuadricorriente asociada al cambio de fase de un campo complejo no depende de que la transformación sea gloabal o local.
+
+
+\subsection{Generalización del Teorema 1 para simetrías internas}
+Si no imponemos que los campos satisfagan las ecuaciones de Euler-Lagrange, podemos formular:
+
+\textbf{Teorema 1 generalizado}: Para un conjunto de $\alpha$ parametros constantes $\theta_{\alpha}$, existen $\alpha$ relaciones
+\begin{align}
+  a
+\end{align}
+
+\emph{Demostración}:  Ya que $\theta=\text{cte}$, de modo que $b_i^{\mu}=0$, la ec.~\eqref{eq:tn1} se reduce a
+\begin{align*}
+  \sum_i\int {d^4}x \left[ \mathcal{E}_ia_i  \right]  \theta    =&-  \sum_i \int {d^4}x\, \partial_{\mu} \left\{ \left[ \frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}\right] a_i \theta   \right\} \nonumber\\
+ =&-   \int {d^4}x\, \partial_{\mu} \left\{ \sum_i\left[ \frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}\right] a_i    \right\}\theta\,,
+\end{align*}
+de modo que, usando \eqref{eq:thn1s}
+\begin{align}
+    \sum_i \mathcal{E}_ia_i     
+ =&-  \partial_{\mu} j^{\mu}\,.
+\end{align}
+
+Como era de esperarse, cuando los campos satistacen las ecuaciones de Euler-Lagrange la cuadricorriente se conserva.
 
 % \subsection{Teorema de Noether para simetr\'\i as externas}
 % \begin{frame}[fragile,allowframebreaks]
