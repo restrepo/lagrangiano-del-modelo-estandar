@@ -1787,6 +1787,11 @@ Invarianza de Lorentz
     =&x_\nu y^\nu \nonumber\,.
   \end{align}
 
+  Entonces, el producto escalar se puede escribir como
+\begin{equation}
+  x_\mu y^\mu=x^0y^0-x^1y^1-x^2y^2-x^3y^3=x^0y^0-\sum_{i}x^i y^i=x^0y^0-\boldsymbol{x}\cdot \boldsymbol{y}\,.
+\end{equation}
+
 \end{example}
 
 \end{frame}
@@ -1999,13 +2004,10 @@ Por consiguiente:
   \label{eq:nabla}
   \boldsymbol{\nabla}=\frac{\partial}{\partial\mathbf{x}}
 \end{equation}
-Producto escalar:
+Entonces, para un cuadrivector $J^{\mu}$
 \begin{equation}
-  a_\mu b^\mu=g_{\mu\nu}a_\mu b^\nu=a^0b^0-a^1b^1-a^2b^2-a^3b^3=a^0b^0-a^i b^i=a^0b^0-\mathbf{a}\cdot \mathbf{b}
-\end{equation}
-Entonces
-\begin{equation}
-  \partial_\mu a^\mu=\frac{\partial a^0}{\partial t}+\boldsymbol{\nabla}\cdot\mathbf{a}
+  \label{eq:ecncontiJ}
+  \partial_\mu J^\mu=\frac{\partial J^0}{\partial t}+\boldsymbol{\nabla}\cdot\boldsymbol{J}
 \end{equation}
 Esta expresión es conocida como la ecuaci\'on de continuidad $\partial_\mu J^\mu=0$, y al provenir de un producto escalar entre dos cuadrivectores resulta ser un invariante de Lorentz.
 El operador cuadrático es, usando la ec.~\eqref{eq:146}
@@ -2286,7 +2288,7 @@ appears to be constructed out of them.
 \end{quote}
 
 \begin{frame}[fragile,allowframebreaks]
-  Hasta ahora hemos definido la representación ${[S(\Lambda)]_{\alpha}}^{\beta}$ del subgrupo de Lorentz $(\frac{1}{2},0)$ y su correspondiente conjugado en el subgrupo $(0,\frac{1}{2})$. Para definir el producto escalar en este subespacio debemos introducir un objeto de dos componentes $\alpha=1,2$ que transforma bajo está representación el cual recibe el nombre de \emph{espinor de Weyl}~\cite{Dreiner:2008tw}. Sea entonces el espinor de Weyl, $\xi_{\alpha}$, tal que
+  Hasta ahora hemos definido la representación ${[S(\Lambda)]_{\alpha}}^{\beta}$ del subgrupo de Lorentz $(\frac{1}{2},0)$ y su correspondiente conjugado en el subgrupo $(0,\frac{1}{2})$. Para definir el producto escalar en este subespacio debemos introducir un objeto de dos componentes $\alpha=1,2$ que transforma bajo está representación el cual recibe el nombre de \emph{espinor de Weyl}~\cite{Dreiner:2008tw,Quevedo:2010ui}. Sea entonces el espinor de Weyl, $\xi_{\alpha}$, tal que
 \begin{align*}
     \xi_{\alpha} \to \xi_{\alpha}'=&{\left[ S(\Lambda) \right]_{\alpha}}^{\beta}\xi_{\beta} \nonumber\\
   \xi_{\dot{\alpha}}^{*}\to \xi_{\dot{\alpha}}^{\prime *}
@@ -3434,7 +3436,7 @@ El primer teorema de Noether surge al asumir que
 \item El conjunto de campos satisface las ecuaciones de Euler-Lagrange.
 \end{itemize}
 
-Por consiguiente, la ecuación~\eqref{eq:deltaSeq0} se reduce a
+Por consiguiente, la ecuación~\eqref{eq:masterint} se reduce a
 \begin{align}
 \int_R \operatorname{d}^4x \, \partial_{\mu} B^{\mu}=0\,.
 \end{align}
@@ -3446,7 +3448,7 @@ Por  cada parámetro asociado a una transformación global  existe una ecuación
   \label{eq:dmubmu}
    \partial_{\mu} B^{\mu}=0\,,
 \end{align}
-con $B^{\mu}_i$ dado por la ecuación~\eqref{eq:deltaSeq0}.
+con $B^{\mu}$ dado por la ecuación~\eqref{eq:master2}.
 
 
 \subsection{Simetrías externas}
@@ -3497,7 +3499,7 @@ variable can\'onica, la variable can\'onica conjugada es $\pi(x)$
   \label{eq:4}
   \pi(x)=\frac{\partial\mathcal{L}}{\partial(\partial\phi(x)/\partial t)}.
 \end{equation}
-El teorema de Noether en este caso establece que la invarianza de la Acci\'on bajo traslaciones temporales da lugar a la ecuación de continuidad (\ref{eq:131}) para $\nu=0$
+El teorema de Noether en este caso establece que la invarianza de la Acci\'on bajo traslaciones temporales da lugar a la ecuación de continuidad (\ref{eq:ecncontiJ}) para $\nu=0$
 \begin{align}
 \label{eq:122}
   \partial_\mu T^\mu_0=0
@@ -3893,7 +3895,7 @@ Note que las ecuaciones de Euler-Lagrange surgen del Problema variacional de Noe
 En el caso de un campo de materia complejo, invariante bajo una simetría local $U(1)$ con parámetro $\theta(x)$, tenemos que $\phi_1\to \phi$, $\phi_2\to \phi^{*}$, de modo que $a_2=a_1^{*}$ y $b_1=b_2=0$. Entonces, el Teorema 2  de Noether aplicado a los campos $\phi$ y $\phi^{*}$ queda
 \begin{align}
   \label{eq:th2mf}
-   \sum_i \mathcal{E}_ia_i=&\sum_i  \partial_{\mu}   \left(  \mathcal{E}_i b^{\mu}_i  \right) =& 0\,.
+   \sum_i \mathcal{E}_ia_i=&\sum_i  \partial_{\mu}   \left(  \mathcal{E}_i b^{\mu}_i  \right) = 0\,.
 \end{align}
 De modo que
 \begin{align}
@@ -3904,7 +3906,7 @@ De modo que
 \end{frame}
 
 \begin{frame}[fragile,allowframebreaks]
-Teniendo en cuenta que como veremos más adelante, para un campo complejo
+Teniendo en cuenta que como veremos más adelante en el capítulo~\ref{}, sec.~\ref{sec:invarianza-de-fase}, para un campo complejo
 \begin{align}
 \sum_i \left[\frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}\partial_{\mu}a_i+\frac{\partial\mathcal{L}}{\partial\phi_i}a_i \right]=0
 \end{align}
@@ -4002,7 +4004,7 @@ Aunque la interpretación en mecánica cuántica de la ecuación de momentum-ene
 \label{sec:aplic-mecan-cuant}
 %% Mover a apéndice.
 
-\begin{frame}[fragile,allowframebreaks]
+%\begin{frame}[fragile,allowframebreaks]
 Haciendo $\hbar=1$, el Lagrangiano que da lugar a la ecuaci\'on de Schr\"odinger es~\cite{0712.1608}\footnote{A simple version is discussed in 
 \url{http://physics.stackexchange.com/questions/55622/how-would-a-lagrangian-be-used-to-recover-the-schrodinger-equation}}
 \begin{align}
@@ -4034,7 +4036,7 @@ Como
   &\frac{\partial\mathcal{L}}{\partial(\partial_i\psi)}=\frac{1}{2m}\partial_i\psi^*&&\frac{\partial\mathcal{L}}{\partial(\partial_i\psi^*)}=\frac{1}{2m}\partial_i\psi\\
   &\frac{\partial\mathcal{L}}{\partial\psi}=\frac{i}{2}\partial_0\psi^*+\psi^*V&&\frac{\partial\mathcal{L}}{\partial\psi^*}=-\frac{i}{2}\partial_0\psi+V\psi.\nonumber
 \end{align}
-\end{frame}
+%\end{frame}
 Entonces, reemplazando la ec.~(\ref{eq:136}) en la ec.~(\ref{eq:137}), tenemos
 \begin{align}
  0=\partial_\mu\left[\frac{\partial\mathcal{L}}{\partial(\partial_\mu\psi^*)}\right]-\frac{\partial\mathcal{L}}{\partial\psi^*}
@@ -4087,13 +4089,13 @@ Entonces, normalizando apropiadamente la corriente escogiendo $\theta=1$, tenemo
     \psi\boldsymbol{\nabla}\psi^*-\psi^*\boldsymbol{\nabla}\psi
   \right).
 \end{align}
-\begin{frame}[fragile,allowframebreaks]
+%\begin{frame}[fragile,allowframebreaks]
 De acuerdo a la ec.~(\ref{eq:7}), la cantidad conservada corresponde a la probabilidad de la funci\'on de onda y normalizando apropiadamente la ec.~(\ref{eq:qcons})
 \begin{equation}
   \label{eq:57}
 Q_\rho=  \int_V \psi^*\psi \,d^3x=1.
 \end{equation}
-\end{frame}
+%\end{frame}
 
 En cuanto a las simetr\'\i as externas, tenemos de la ec.~(\ref{eq:tmunu}) que
 da lugar a las ecuaciones de continuidad (\ref{eq:122})(\ref{eq:235})
@@ -4133,7 +4135,7 @@ Integrando en el volumen
 \begin{equation}
   \int_V \mathbf{T}^0\, d^3x=-i\int_V \psi^*\boldsymbol{\nabla}\psi\, d^3x+\frac{i}{2}\boldsymbol{\nabla}\int_V\psi^*\psi\,d^3x
 \end{equation}
-\begin{frame}[fragile,allowframebreaks]
+%\begin{frame}[fragile,allowframebreaks]
 De acuerdo a la ec.~(\ref{eq:57}), la \'ultima integral es una constante y
 \begin{align}
   \label{eq:140}
@@ -4148,7 +4150,7 @@ En general, el valor esperado de un operador $ \widehat{\cal O}$, se define en m
 \begin{align*}
   \langle\widehat{\cal O}\rangle=\int_V d^3x\,\psi^{*}\widehat{\cal O}\psi\,.
 \end{align*}
-\end{frame}
+%\end{frame}
 \subsection{Conservación de la energía}
 De otro lado
 \begin{align}
@@ -4205,7 +4207,7 @@ la condici\'on de normalizaci\'on en ec.~\eqref{eq:57} implica que $|A|^2=1/L^3$
   \int_V \mathbf{T}^0\, d^3x&=\mathbf{k}.
 \end{align}
 
-\begin{frame}[fragile,allowframebreaks]
+%\begin{frame}[fragile,allowframebreaks]
 Los dos operadores se pueden combinar en relatividad especial definiendo el operador de cuadrimomentum
 \begin{align}
   \widehat{p}\;^{\mu}=i\partial^{\mu}=
@@ -4214,7 +4216,7 @@ Los dos operadores se pueden combinar en relatividad especial definiendo el oper
     i\partial^i=-i\partial_i=\widehat{p}\;^{i} & \mu=i\\
   \end{cases}
 \end{align}
-\end{frame}
+%\end{frame}
 
 
 \begin{itemize}
@@ -4333,7 +4335,7 @@ Las propiedades de transformación de  $A_\mu$ pueden ser obtenidas de las de  $
 
 \subsection{Derivadas covariantes}
 \label{sec:dv}
-\begin{frame}[fragile,allowframebreaks]
+%\begin{frame}[fragile,allowframebreaks]
 Para obtener las propiedades de la transformación de la derivada covariante misma, podemos comenzar de la definición
 \begin{align}
     \mathcal{D}_\mu \psi\to\left(\mathcal{D}_\mu \psi\right)'=&U(\theta)\left(\mathcal{D}_\mu \psi\right) \nonumber\\
@@ -4356,7 +4358,7 @@ $U_{\text{identity}}=e^{0}$.
 Como $U(\theta_1)U_2(\theta_2)=U(\theta_2)U_1(\theta_1)$, el grupo es Abeliano. Este grupo Abeliano de números complejos de módulo 1 es llamado el grupo $U(1)$, 
 y es isomorgo al grupo de rotaciones en dos dimensiones por un ángulo  $\theta$. 
 
-\end{frame}
+%\end{frame}
 
 Para un elemento $U$ de un grupo general, tenemos como definición de derivada covariante que la correspondiente derivada del campo transforme como el campo. En este caso general el campo transforma como
 \begin{align}
@@ -4400,7 +4402,7 @@ Esta expresión es completamente general y será usada posteriormente en el cont
 
 Definimos la \emph{invarianza gauge local} como una forma arbitraria de escoger el factor de fase complejo de un campo cargado\footnote{como el electrón descrito por la ecuación usual de  Scrödinger.} en todos los puntos del espacio tiempo.
 
-\begin{frame}
+%\begin{frame}
 De esta forma, podemos cambiar el Lagrangiano libre original por uno nuevo que sea invariante bajo transformaciones de fase locales, asegurándonos de considerar todos los término extra posibles, en particular los asociados al nuevo campo $A_{\mu}$:
 \begin{align}
    \mathcal{L}(\psi,\psi^*,\partial_\mu\psi,\partial_\mu\psi^*,A_\nu,\partial_{\mu} A_{\nu} )
@@ -4412,7 +4414,7 @@ donde
 \label{eq:167qft}
   A_\mu\to A'_\mu=A_\mu-\frac{1}{q}\partial_\mu\theta(x)\,.
 \end{align}
-\end{frame}
+%\end{frame}
 Esta es justamente la transformación que deja el campo electromagnético invariante, y como veremos, el Lagrangiano faltante $\mathcal{L}_{\text{EM}}=\mathcal{L}\left( A_{\nu},\partial_{\mu} A_{\nu} \right)$ dará lugar precisamente a las ecuaciones de Maxwell!. El nuevo Lagrangiano es ahora invariante bajo transformaciones de fase (y deberemos imponer que $\mathcal{L}_{\text{EM}}$ también lo sea). De hecho:
 \begin{align}
   \mathcal{L}\to \mathcal{L}'=&
@@ -4628,7 +4630,7 @@ y la derivada covariante del campo transforma como el campo. Tenemos entonces qu
 \end{align}
 \end{itemize}
 
-\begin{frame}
+%\begin{frame}
   En resumen, para 
 \begin{equation}
   \mathcal{D}^\mu=\partial^\mu+iqA^\mu
@@ -4641,13 +4643,13 @@ y reemplazando $\theta\to q\theta$ tenemos
   \mathcal{D}^\mu\psi&\to {\mathcal{D}'}^\mu\psi'=e^{iq\theta(x)}(\mathcal{D}^\mu\psi)\,.
 \end{align}
 En esta convención $q$ corresponde al \emph{generador} de la transformación y $\theta$ al parámetro de la transformación.
-\end{frame}
+%\end{frame}
 %\left(\right)
 
 
 \subsection{Corrientes conservadas}
 \label{ref:cc}
-\begin{frame}[fragile,allowframebreaks]
+%\begin{frame}[fragile,allowframebreaks]
 Aplicamos el segundo teorema de Noether con (con el reemplazo $\theta\to q\theta$
 \begin{align}
 \label{eq:dpa}
@@ -4683,14 +4685,14 @@ Es importante hacer notar que para  $T^0_0$, y $T^0_i$ deberíamos obtener
   \widehat{H}=& i\frac{\partial}{\partial t}-q\phi & \widehat{\mathbf{p}}=&-i\boldsymbol{\nabla}-q\mathbf{A}\,.
 \end{align}
 
-\end{frame}
+%\end{frame}
 
 
 The approach to change the Action for a new one invariant under local phase  transformations, is that the electron cannot be longer considered as an isolated \emph{naked} particle. The electron must be always surrounded by some cloud of virtual particles associated with the electromagnetic field in order to guarantee the conservation of the energy and momentum of the system. In general the wave function of the electron can be represented as the exponential of $iEt$ and $i \mathbf{p}\cdot \mathbf{x}$, so that a local phase transformation will change the energy $E$ and the momentum $\mathbf{p}$ of the electron. This changes must be compensated with the corresponding changes in $A_{\mu}$.
 
 Moreover, to be consistent, we could start with the free Lagrangian before the change of the normal derivative by the covariant derivative. The interactions are not longer imposed by hand but a consequence of the improved Action. 
 
-\begin{frame}
+%\begin{frame}
 Combinando todos los resultados, podemos escribir el Lagrangiano final como %DEBUG: Check signs
 \begin{align}
   \mathcal{L}=&\frac{1}{2m}\sum_i\partial_i\psi^*\partial_i\psi
@@ -4704,7 +4706,7 @@ Combinando todos los resultados, podemos escribir el Lagrangiano final como %DEB
 % \begin{align}
 % \mathcal{L}_{A_\nu} = -\frac{1}{4}F_{\mu\nu}F^{\mu\nu} - j^\nu A_\nu\,,
 % \end{align}
-\end{frame}
+%\end{frame}
 como se mostrará en el próximo capítulo.
 
 \subsection{Interpretación física}

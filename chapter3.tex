@@ -11,6 +11,7 @@ Se mostrará como la invarianza de la Acción bajo transformaciones es el punto 
  
 
 \section{Construción de Lagrangianos covariantes}
+\begin{frame}[fragile,allowframebreaks]
 En está sección vamos a conectar la discusión sobre el Lagrangiano de las vibraciones de la cuerda con las tranformaciones de Lorentz de la relatividad especial. Dicho Lagrangiano tiene hasta ahora la siguiente dependencia funcional $\mathcal{L}(\partial_{\mu}\phi)$.
 
 En la formulación de la teoría clásica de campos debemos asegurarnos de que todos los términos posibles perimtidos por la simetrías asociadas al campo estén presentes en la densidad Lagrangiana. De inmediato surge la pregunta: ¿Qué posibles términos de la forma $\partial_{\mu}\phi$ podrían estar presentes en Lagrangiano?. Antes de responder está pregunta, abordemos el problema algo más general donde la densidad Lagrangiana también depende del campo como mismo
@@ -30,10 +31,11 @@ En la ecuación~\eqref{eq:dlc3d}, teníamos un Lagragiano en función de $\parti
    =&\frac{1}{2}{\partial_\mu\phi}\,{\partial^\mu\phi}\,.
 \end{align}
 donde se ha usado la convención de suma para índices repetidos. Note que para que la velocidad de propagación sea independiente del sistema de coordenadas se requiere su identificación con la velocidad de la luz. De modo que si queremos interpretar los términos de la densidad Lagrangiana como objetos invariantes, necesariamente se tiene que hacer en el contexto de la relatividad especial.
-
+\end{frame}
 
 \section{Transformación de Lorentz para campos escalares}
 
+\begin{frame}[fragile,allowframebreaks]
 El campo escalar esta definido por sus propiedades bajo transformaciones de Lorentz. Vamos a estudiar el comportamiento de un campo escalar bajo una transformación general de Lorentz:
 \begin{align}
 \label{eq:179qft}
@@ -50,7 +52,8 @@ Usando la ec.~\eqref{eq:179qft}, tenemos que
 \begin{align}
     \phi'(x')=\phi(\Lambda^{-1}x')\,.
 \end{align}
-Esto es, el campo transformado, evaluado en el punto transformado, da el mismo valor que el campo evaluado en el punto antes de la transformación. 
+Esto es, el campo transformado, evaluado en el punto transformado, da el mismo valor que el campo evaluado en el punto antes de la transformación.
+\end{frame}
 
 \begin{frame}[fragile,allowframebreaks]
 
@@ -72,7 +75,7 @@ que el campo escalar transforma bajo una transformación de Lorentz como
 
 
 
-
+\begin{frame}[fragile,allowframebreaks]
 Para comprobar la invarianza de Lorentz de la Acción para el campo escalar, necesitamos las propiedades de transformación para $\partial_\mu$ dada por la ec.~\eqref{dmulrtran}
 \begin{align}
   {\left(\Lambda^{-1}\right)^\mu}_\alpha{x'}^\alpha=&{\left(\Lambda^{-1}\right)^\mu}_\alpha{\Lambda^\alpha}_\nu x^\nu\nonumber\\
@@ -103,7 +106,7 @@ Podemos ahora demostrar que la Acción obtenida del Lagrangiano en la ec.\eqref{
 \end{align}
 Ya que la Acción involucra la integración sobre todos los puntos, esta es invariante bajo transformaciones de Lorentz. Explícitamente
 \begin{align}
-  S\to S'=\int d^4x\, \mathcal{L}
+  S\to S'=\int \operatorname{d}^4x\, \mathcal{L}
 \end{align}
 
 Note que en unidades naturales
@@ -119,12 +122,13 @@ Como $[\partial_{\mu}]=E$, entonces
   [\phi]=E\,.
 \end{align}
 
-
+\end{frame}
  
 \section{Principio de mínima acción para campos}
 Hemos visto que la acción para una oscilación mecánica en tres dimensiones se puede escribir en una notación similar a la del producto escalar de un cuadrivector de Lorentz $\partial_\mu\phi$. Cuando dicho campo se interpreta como un campo fundamental, es decir, que su velocidad de propagación es independiente de los sistemas de referencia inerciales, entonces la Acción queda invariante bajo dicho producto escalar. También hemos visto que adicionar una función del campo $V(\phi)$, la invarianza de la acción se mantiene.
 
 Establecemos el \emph{principio de mínima acción para campos} de la siguiente manera: La acción más general posible para un conjunto de campos contiene todos los posibles productos escalares entres los campos y sus derivadas, con las siguientes restricciones
+\begin{frame}[fragile,allowframebreaks]
 \begin{enumerate}
 \item La dimensión de los campos y derivadas en cada término de la correspondiente densidad lagrangiana debe ser menor o igual a cuatro.
 \item La densidad Lagrangiana no debe contener derivadas altas (máximo dos derivadas)
@@ -136,13 +140,13 @@ Con estas restricciones es suficiente mantener los primeros cuatro términos de 
   V(\phi)=a \phi + b\phi^2+c\phi^3+d\phi^4\,,
 \end{align}
 
-La última condición excluye términos del tipo
+La invarianza de la Acción bajo términos con derivadas totales excluye términos del tipo
 \begin{align}
-  \partial_\mu \partial^\mu \phi\,,   \phi\partial_\mu \partial^\mu \phi\,.
+    \phi\partial_\mu \partial^\mu \phi\,.
 \end{align}
 De modo que la densidad Lagrangiana más general posible para un campo escalar real es
 \begin{align}
-  \frac{1}{2}{\partial_\mu\phi}\,{\partial^\mu\phi}-V(\phi)\,.
+  \frac{1}{2}{\partial_\mu\phi}\,{\partial^\mu\phi}-\left( a \phi + b\phi^2+c\phi^3+d\phi^4 \right)\,.
 \end{align}
 La ecuación de movimiento es
 \begin{align}
@@ -158,6 +162,7 @@ es el término de fuente. En ausencia de fuentes el campo $\phi$ se propaga libr
 \end{align}
 
 A continuación procedemos a encontrar una interpretación física al coeficiente $2b$
+\end{frame}
 \subsection{Ecuaciones covariantes}
 \label{sec:ecuac-covar}
 
@@ -230,6 +235,90 @@ Una realización física para la acción del campo escalar real con un potencia 
 
 
 
+\section{Campos escalares complejos}
+Entre más simetrías posea una Acción menos arbitraría es. Podemos
+ilustrar esta afirmación si consideramos una Acción para un campo escalar
+complejo que además de ser invariante de Lorentz, es además invariante
+bajo transformaciónes de fase.
+
+El sistema que podríamos describir es el de los pares de Cooper de carga eléctrica $-2$ y dos veces la masa del electrón en el interior de un superconductor de Tipo-I.
+
+
+
+\begin{frame}[fragile,allowframebreaks]
+
+
+En ese caso la Acción, y la correspondiente densidad Lagrangiana son
+únicas y están dadas por una función polinómica de $\phi^{*}\phi$
+\begin{align}
+  \mathcal{L}=\partial_{\mu}\phi^{*} \partial^{\mu}\phi-m^2\phi^{*}\phi+\lambda \left(\phi^{*}\phi \right)^2\,.
+\end{align}
+Términos de orden superior se pueden obtener a partir de esa
+Lagrangiana única y por eso no se consideran. 
+\end{frame}
+
+
+Por lo tanto
+\begin{align}
+  \left[ m \right]=&E& \left[ \lambda \right]=&1\,.
+\end{align}
+
+
+
+
+
+
+De las ecuaciones de Euler-Lagrange para $\phi^*$, usando el Lagrangiano en ec.~(\ref{eq:41qft})
+\begin{align}
+  \partial_\mu\left[
+      \frac{\partial\mathcal{L}}{\partial(\partial_\mu\phi^*)}\right]-\frac{\partial\mathcal{L}}{\partial\phi^*}&=0\nonumber\\
+    \partial_\mu\partial^\mu\phi+m^2\phi&=0\nonumber\\
+    \label{eq:43qft}
+    (\Box+m^2)\phi&=0,
+\end{align}
+y de la ecuaciones de Euler-Lagrange para $\phi$,
+\begin{equation}
+  \label{eq:44qft}
+    (\Box+m^2)\phi^*=0.
+\end{equation}
+De este modo tanto $\phi$, como $\phi^*$, satisfacen la ecuación de Klein-Gordon. Cada campo además corresponde a una partícula de masa $m$ como en el caso de $\phi_1$ y $\phi_2$
+
+Además de la invarianza de Lorentz, el Lagrangiano en ec,~(\ref{eq:41qft}) también es invariante bajo el grupo de transformaciones U(1) definido en las sección~\ref{sec:lagr-electr}, pero con una fase constante
+\begin{equation*}
+  U=e^{i\theta}\approx1+i\theta.
+\end{equation*}
+Entonces
+\begin{align}
+  \phi\overset{U}{\longrightarrow}\phi'&=e^{i\theta}\phi\approx(1+i\theta)\phi\nonumber\\
+  &=\phi+i\theta\phi.
+\end{align}
+Para $\theta$ infinitesimal
+\begin{align}
+\label{eq:deltaphi}
+  \delta\phi=&\phi'-\phi=i\theta\phi\,,&  \delta\phi^*=&{\phi'}^*-\phi^*=-i\theta\phi^*\,,
+\end{align}
+Comparando con la expresión para la transformación de un conjunto de campos $\phi_i$, eq.~\eqref{eq:dfi}, con la identificación $\phi_1\to \phi$ y $\phi_2\to \phi^{*}$, tenemos que
+\begin{align}
+  a_1=& i\phi\,, & a_2 =-i\phi^{*}\,.
+\end{align}
+Reemplazando en la expresión para el Teorema 1 de Noether relacionado con simetrías internas globales,eq.~\eqref{eq:thn1} tenemos que:
+\begin{align}
+  J^\mu=&\frac{\partial\mathcal{L}}{\partial(\partial_\mu\phi)}i\phi-i \phi^{*}\frac{\partial\mathcal{L}}{\partial(\partial_\mu\phi^*)}\nonumber\\
+  \label{eq:45qft}
+  J^\mu=&i\partial^\mu\phi^*\phi+\text{h.c}\,.
+\end{align}
+Y por lo tanto la corriente es real.
+Como $\rho=J^{0}$ puede ser negativo, entonces no puede interpretarse como una
+probalidad, como se hizo con la función de onda de la ecuación de
+Scrödinger. Esto presentó un obstaculo en la interpretación inicial de
+la ecuación de Klein-Gordon. Sin embargo una vez se cuantiza el
+campo escalar la probabilidad de los estados cuánticos queda bien
+definida \cite{Gross}.
+
+Al interpretarse como carga eléctrica se predice la existencia de antipartículas!
+
+
+
 \chapter{Fermiones}
 \label{cha:princ-gauge-local} %noinstiki
 %instiki:
@@ -265,28 +354,30 @@ Para detalles adicionales ver por ejemplo \url{https://indico.cern.ch/event/2436
 
 \section{Lorentz transformation of the fields}
 
-Note again, that a term like
+Para un campo escalar, un término en la densidad Lagrangiana con sólo una derivada de primer orden de la forma
 \begin{align}
 \label{eq:nolor}
   \phi^*(x)a^\mu\partial_\mu\phi(x)\,,
 \end{align}
-does not left the Action invariant. To have a proper formulation of the quantum mechanics through the general equation
+no deja a la Acción invariante. Un término de ese tipo con una derivada temporal de primer orden se requiere para tener una probabilidad bien definida en mecánica cuántica.
+Para tener una formulación de la mecánica cuántica necesitamos garantizar la siguiente ecuación general
 \begin{align}
   i\frac{\partial}{\partial t}\psi=\hat{H} \psi\,,  
 \end{align}
-with some, to be determined, relativistic Hamiltonian operator $\widehat{H}$, we should be able to build a Lagrangian with temporal derivatives of order one. Therefore, the Lorentz invariant requires all the derivatives of order one.
+con algún operador Hamiltoniano relativista  $\widehat{H}$ a determinar luego. Si dicha ecuación corresponde a una ecuación de Euler-Lagrange para el campo $\psi$,
+entonces la Acción debe contener una densidad Lagrangiana con derivadas temporales de primer orden. Por consiguiente, la invarianza bajo transformaciones de Lorentz require que todas la derivadas en la densidad Lagrangiana sean de orden uno.
 
 Ver \url{http://www.damtp.cam.ac.uk/user/examples/3P7.pdf}
 
 \begin{frame}[fragile,allowframebreaks]
-Consider spinor fields, which transforms as
+Considere los campos espinoriales, que se transforma como
 \begin{align}
 \label{eq:184qft}
   \psi_\alpha(x)\to\psi'_\alpha(x)={\left[ S(\Lambda) \right]_\alpha}^\beta\psi_\beta(\Lambda^{-1}x)\,, 
 \end{align}
-where $S(\Lambda)$ is some spinorial representation of the Lorentz Group. 
+donde $S(\Lambda)$ es la representación espinorial $(\frac{1}{2},0)$ del grupo de Lorentz. 
 \end{frame}
-In matricial form, if $\Psi(x)$ is a two-component column vector, 
+En forma matricial, si $\Psi(x)$ es un vector columna de dos componentes,
 \begin{align*}
   \Psi=
   \begin{pmatrix}
@@ -294,7 +385,7 @@ In matricial form, if $\Psi(x)$ is a two-component column vector,
    \psi_2\\
   \end{pmatrix}
 \end{align*}
-then, one representation $2\times2$ of the Lorentz Group, denoted with $(\frac{1}{2},0)$, can be written as
+entonces, una representación $2\times2$ del grupo de Lorentz, denotado con $(\frac{1}{2},0)$, puede ser escrita como
 \begin{align}
   \Psi(x)\to \Psi'(x)=S\Psi \left(\Lambda^{-1}x  \right).
 \end{align}
@@ -302,20 +393,23 @@ In such a case, $S^{*}$ is another independent $2\times2$ representation of the 
 \begin{align}
     \Psi^{\dagger}\to \Psi'^{\dagger}=\Psi^{\dagger}S^{\dagger}.
 \end{align}
-In components, and anticipating the dotted indices for $S^{*}$, we have
+En  componentes, y
+anticipando los índices con puntos
+para $S^{*}$, tenemos
 \begin{align}
   \left( \psi'_\alpha \right)^{\dagger}=&\left( \psi_\beta \right)^{\dagger}{\left( S^\dagger\right)^{\dot{\beta}}}_{\dot{\alpha}}\nonumber\\
 =&\left( \psi_\beta \right)^{\dagger}{\left( S^*\right)_{\dot{\alpha}}}^{\dot{\beta}}\nonumber\\
 =&\left( \psi_\beta \right)^{\dagger}{\left( S^*\right)_{\dot{\alpha}}}^{\dot{\beta}}\,,
 \end{align}
 \begin{frame}[fragile,allowframebreaks]
-If we interpret $\left( \psi_\beta \right)^{\dagger}$ as the components of a new column vector transforming under $S^{*}(\Lambda)$, with dotted components
+Si interpretamos  $\left( \psi_\beta \right)^{\dagger}$ como las componentes de un nuevo vector fila transformando bajo la representación $(0,\frac{1}{2})$,
+ $S^{*}(\Lambda)$, con componentes con puntos
 \begin{align}
  \psi_{\dot{\alpha}}^{\dagger}\equiv \left( \psi_\alpha \right)^{\dagger}
 \end{align}
-then we have
+entonces tenemos que 
 \begin{align}
-  {\psi'}_{\dot{\alpha}}^{\dagger}=&{\left[ S^*(\Lambda)\right]_{\dot{\alpha}}}^{\dot{\beta}} \psi_{\dot{\beta}}^{\dagger}\,,
+{\psi}_{\dot{\alpha}}^{\dagger}\to  {\psi'}_{\dot{\alpha}}^{\dagger}=& \psi_{\dot{\beta}}^{\dagger}{\left[{S^{\dagger}}\right]^{\dot{\beta}}}_{\dot{\alpha}}\,,
 \end{align}
 \end{frame}
 or in matricial form
@@ -339,44 +433,40 @@ In summary we have the following Lorentz's transformation properties for the fie
    A^\mu(x)\to {A'}^\mu(x)=&{\Lambda^\mu}_\nu A^\nu(\Lambda^{-1}x)&&\text{Vector field,}\nonumber\\
   \psi_\alpha(x)\to\psi'_\alpha(x)=&{\left[ S(\Lambda) \right]_\alpha}^\beta\psi_\beta(\Lambda^{-1}x)
 && \text{Left-handed spinor field,}\nonumber\\
- {\psi'}_{\dot{\alpha}}^{\dagger}(x)\to  {\psi'}_{\dot{\alpha}}^{\dagger}(x)=&{\left[ S^*(\Lambda)\right]_{\dot{\alpha}}}^{\dot{\beta}} \psi_{\dot{\beta}}^{\dagger}(\Lambda^{-1}x)&& \text{Rigth-handed anti-spinor field,}\,,
+  {\psi'}_{\dot{\alpha}}^{\dagger}(x)\to  {\psi'}_{\dot{\alpha}}^{\dagger}(x)=&
+\psi_{\dot{\beta}}^{\dagger}{\left[{S^{\dagger}(\Lambda)}\right]^{\dot{\beta}}}_{\dot{\alpha}}&& \text{Rigth-handed anti-spinor field,}\,,
  \end{align}
 \end{frame}
 
 
-
-In the following we use only the dotted and undotted components for
-spinors but not the matricial form. 
+En lo siguiente usaremos la notación con puntos y sin puntos para los espinores de Lorentz, pero no su forma matricial.
 \begin{frame}[fragile,allowframebreaks]
-There are two additional spin-1/2
-irreducible representations of the Lorentz group. $\left( S^{-1}
-\right)^T$ and $\left( S^{-1} \right)^{\dagger}$, but these are
-equivalent to the $\left( \frac{1}{2},0 \right)$ and the $\left(
-  0,\frac{1}{2}\right)$ representations repectively. The spinors that
-  transform under these representations have raised spinor indices,
-  $\psi^{\alpha}$ and $\psi^{\dagger\dot{\alpha}}$, with
-  transformation laws
+Hay otras dos representaciones adicionales del grupo de Lorentz: $\left( S^{-1}
+\right)^T$ and $\left( S^{-1} \right)^{\dagger}$, pero estas son equivalentes a las representaciones $\left( \frac{1}{2},0 \right)$ y  $\left(
+  0,\frac{1}{2}\right)$  respectivamente.
+Los espinores que transforman bajo estas representaciones tienen los índices arriba,
+  $\psi^{\alpha}$ and $\psi^{\dagger\dot{\alpha}}$, con las leyes de transformación
 \begin{align}
   \psi^{\alpha}\to {\psi'}^{\alpha}=&{\left[ \left( S^{-1} \right)^T \right]^{\alpha}}_{\beta}\psi^{\beta}\nonumber\\
-  \psi^{\dagger\dot{\alpha}}\to {\psi'}^{\dagger\dot{\alpha}}=&{\left[ \left( S^{-1} \right)^\dagger \right]^{\dot{\alpha}}}_{\dot{\beta}}\psi^{\dagger\dot{\beta}}
+  \psi^{\dagger\dot{\alpha}}\to {\psi'}^{\dagger\dot{\alpha}}=&\psi^{\dagger\dot{\beta}}{\left[ \left( S^{-1} \right)^\dagger \right]^{\dot{\alpha}}}_{\dot{\beta}}\,,
 \end{align}
-where
+donde
 \begin{align}
   \psi^{\dagger\dot{\alpha}}\equiv \left( \psi^\alpha \right)^{\dagger}
 \end{align}
-If we interpret $\psi$ and $\psi^{\dagger}$ as two-component vectors in this internal space, we can define the scalar product by using the convention of \emph{descending} contracted indices and \emph{ascending} contracted dotted indices
+Al interpretar  $\psi$ and $\psi^{\dagger}$ como espinores de dos componentes en este espacio interno, hemos definido el producto escalar usando la convención índices contraídos  \emph{descendiendo} e índices con puntos contrídos \emph{ascendiendo}
 \begin{align}
 \label{eq:conven}
   {{}^{\alpha}}\,{}_{\alpha}\qquad \text{and}\qquad {{}_{\dot{\alpha}}}\,{}^{\dot{\alpha}}\,.
 \end{align}
-In this way the we can define the scalar product between two spinors as
+De esta forma podemos definir el producto escalar entre dos espinores como
 \begin{align}
 \psi\psi\equiv  \psi^{\alpha}\psi_{\alpha}\to {\psi'}^{\alpha}{\psi'}_{\alpha}=& {\left[ \left( S^{-1} \right)^T \right]^{\alpha}}_{\beta}\psi^{\beta} {S_\alpha}^\gamma\psi_\gamma \nonumber\\
  =& {\left( S^{-1} \right)_{\beta}}^{\alpha}{S_\alpha}^\gamma\psi^{\beta}\psi_\gamma \nonumber\\
   =& \delta_{\beta}^{\gamma}\psi^{\beta}\psi_\gamma \nonumber\\
   =& \psi^{\beta}\psi_\beta\,.
 \end{align}
-and similarly
+and similarmente el producto escalar de dos anti-espinores como
 \begin{align}
   \psi^{\dagger}\psi^{\dagger}\equiv {\psi}^{\dagger}_{\dot{\alpha}}{\psi}^{\dagger\dot{\alpha}}
 \to &{\psi'}^{\dagger}_{\dot{\alpha}}{\psi'}^{\dagger\dot{\alpha}}\nonumber\\
@@ -388,21 +478,25 @@ When constructing Lorentz  tensors from fermion fields the lowered indices must 
 
 \section{Lagrangian}
 \label{sec:dirac-equation}
-The Scrodinger equation can be written as
+La ecuación de Scrödinger puede escribirse como
 \begin{align}
     i\frac{\partial}{\partial t}\psi=\hat{H}_{S} \psi\,,  
 \end{align}
-where
+donde
 \begin{align}
   \hat{H}_{S}=\frac{1}{2m}\hat p^2+\widehat V\,.
 \end{align}
 
 
-In order to have a well defined probabilty in relativistic quantum mechanics it is necessary that Lagrangian be linear in the time derivative, in order to obtain the general Sccödinger equation:
+Para tener una probabilidad bien definida en Mecánica cuántica relativista es necesario que la densidad Lagrangiana sea lineal en sus derivadas temporales.
+Definimos entonces una ecuación general mecánico-cuántica como
 \begin{align}
-  i\frac{\partial}{\partial t}\psi=\hat{H} \psi\,,  
+  i\frac{\partial}{\partial t}\psi=\hat{H} \psi\,.
 \end{align}
-like the Scrödinger Lagrangian. However, this automatically imply that the Lagrangian will be also linear in the spacial derivatives. A pure scalar field cannot involve a Lorentz invariant term of only first derivatives (see eq.~\eqref{eq:nolor}). Therefore the proposed field must have some internal structure associated with some representation of the Lorentz Group. Therefore we build the Lagrangian for a field of several components
+
+La relatividad especial implica automáticamente que la densidad Lagrangian también tine que ser lineal en las derivadas espaciales.
+Como un campo escalar no permite escribir un término en la densidad Lagrangiana con derivadas de primer orden (see eq.~\eqref{eq:nolor}), debemos usar
+un campo que se vea afectado por las transformaciones de Lorentz. Por consiguiente el campo debe estar formado por campos componentes
 \begin{align}
   \psi=  \begin{pmatrix}
 \psi_1\\
@@ -412,58 +506,33 @@ like the Scrödinger Lagrangian. However, this automatically imply that the Lagr
   \end{pmatrix}
 \end{align}
 
-\subsection{Lorentz transformation}
-
-If the field is to describe the electron. it must have spin and in this way it must transform under some spin representation of the Lorentz Group
-\begin{align}
-  \psi(x)\to \psi'(x)=S(\Lambda)\psi\left(\Lambda^{-1}x\right)\,.
-\end{align}
-We work in the simpler case of $2\times2$ representation of the
-Lorentz Group. As the electron has both spin and electric charge, we
-need at least 4 degrees of freedom to describe it, or equivalently two
-complex numbers: We assume for the following discussion that $\psi$ is
-one of this complex numbers.
- 
-Returning back to the space-time Lorentz transformation 
-\begin{align}
-\label{eq:4lt}
-  \{\Lambda\}=\exp\left(-i\omega_{\mu\nu}\frac{\widehat{J}^{\mu\nu}}{2}\right)=
-\exp\left( i\boldsymbol{\xi}\cdot\mathbf{K}+i\boldsymbol{\theta}\cdot\mathbf{L} \right)\,,
-\end{align}
-Here we focus on the simplest non-trivial irreducible representations of the Lorentz algebra. These are the two-dimensional (inequivalent) representations: $(\frac{1}{2},0)$ and $(0,\frac{1}{2})$. In the $(\frac{1}{2},0)$ representation, $\mathbf{L}=\boldsymbol{\sigma}/2$ and $\mathbf{K}=-i\boldsymbol{\sigma}/2$ in
-Eq. \eqref{eq:4lt}, which yields
-\begin{align}
-\label{eq:SLet}
-  S(\Lambda)_{\left( \frac{1}{2},0 \right)}\equiv S(\Lambda)=
-\exp\left( \boldsymbol{\xi}\cdot \frac{\boldsymbol{\sigma}}{2}+i\boldsymbol{\theta}\cdot \frac{\boldsymbol{\sigma}}{2} \right)\,,
-\end{align}
-where $\boldsymbol{\sigma}=(\sigma_1,\sigma_2,\sigma_3)$ are the Pauli matrices \eqref{eq:paulimatr}.
-
 \begin{frame}[fragile,allowframebreaks]
 We could need a new representation acting in and internal space upon a
 two-component field $\psi_a$ ($a=1,2$). An Action with a Lagrangian term linear in the derivatives, could be Lorentz invariant if, taking into account the convention in eq.~(\ref{eq:conven}) and the dotted-undotted structure of the tensor in this internal space, we have that if $a^{\mu}$ is to be a 2th rank tensor of the internal space, it must have components, e.g, $\left( a^{\mu} \right)^{\dot{\alpha}\beta}$. Therefore, a posible Lorentz invariant with a single derivative could be 
  \begin{align}
-   {\psi}^{\dagger}a^\mu\partial_\mu\psi\to  {\psi'}^{\dagger}(x)a^\mu\partial'_\mu\psi'
-&={\psi'}^{\dagger}_{\dot{\alpha}}a^{\mu\dot{\alpha}\gamma}{\left(\Lambda^{-1}\right)^\rho}_\mu\partial_\rho \psi'_{\gamma}\,,
+   {\psi}^{\dagger}(x)a^\mu\partial_\mu\psi(x)\to  {\psi'}^{\dagger}(x)a^\mu\partial'_\mu\psi'(x)
+&={\psi'}^{\dagger}_{\dot{\alpha}}(\Lambda^{-1}x)a^{\mu\dot{\alpha}\gamma}{\left(\Lambda^{-1}\right)^\rho}_\mu\partial_\rho \psi'_{\gamma}(\Lambda^{-1}x)\,,
 \end{align}
-with the first letters of the Greek alphabet are used to denote the indices of the internal Lorentz space, and the others the external one. 
+with the first letters of the Greek alphabet are used to denote the indices of the internal Lorentz space, and the others the external one.
+Para suavizar la notación, vamos a ignorar en adelante la dependencia en las coordenadas transformadas las cuales serán integradas en el cálculo de la Acción
 \begin{align}
 {\psi}^{\dagger}a^\mu\partial_\mu\psi\to  {\psi'}^{\dagger}(x)a^\mu\partial_\mu\psi'
 &=
  {S^*_{\dot{\alpha}}}^{\dot{\beta}}{\psi}^{\dagger}_{\dot{\beta}}a^{\mu\dot{\alpha\gamma}}{\left(\Lambda^{-1}\right)^\rho}_\mu\partial_\rho \left( {S_{\gamma}}^{\delta}\psi_\delta \right)\,.
  \end{align} 
-As the coordinates $\eta_i$ and $\theta_i$ in eq.~\eqref{eq:SLet} are in the internal Lorentz space, the corresponding Lorentz transformation is constant in the external Lorentz space and
+ Como los parámtetros de la transformación, $\xi_i$ y $\theta_i$, en la ec.~\eqref{eq:SLet} están en el espacio interno de Lorentz, 
+ del conjunto de cuatro matrices constantes $\sigma^{\mu}$ no cambia bajo una transofrmación de Lorentz asociada a cambios de las coordenadas externas
 \begin{align}
   {\psi}^{\dagger}a^\mu\partial_\mu\psi\to  {\psi'}^{\dagger}(x)a^\mu\partial_\mu\psi'&=
 {\psi}^{\dagger}_{\dot{\beta}}{\left(\Lambda^{-1}\right)^\rho}_\mu {S^{\dagger\dot{\beta}}}_{\dot{\alpha}}a^{\mu\dot{\alpha\gamma}}{S_{\gamma}}^{\delta} \partial_\rho  \psi_\delta \nonumber\\
 &=\psi^\dagger {\left(\Lambda^{-1}\right)^\rho}_\mu \left(S^\dagger a^\mu S\right)\partial_\rho\psi\nonumber\\
 &=\psi^{\dagger}a^\rho\partial_\rho\psi\,,
 \end{align}
-if the following condition is satisfied:
+De este modo, el término permanece invariante si la siguiente condición se satisface
 \begin{align}
  {\left(\Lambda^{-1}\right)^\rho}_\mu  S^{\dagger}a^\mu S=a^\rho\,,
 \end{align}
-or
+o
 \begin{align}
 \label{eq:ltrincond}
 {\left(\Lambda\right)^\nu}_\rho{\left(\Lambda^{-1}\right)^\rho}_\mu   S^{\dagger}a^\mu S=&
@@ -472,12 +541,12 @@ or
 {\left(\Lambda\right)^\nu}_\rho a^\rho \nonumber\\
 S^{\dagger}a^\nu S=&{\left(\Lambda\right)^\nu}_\rho a^\rho\,,
 \end{align}
-The only solution is expressed in terms of the $2\times2$ identity and the Pauli matrices
+La solución para esta identidad es única y puede expresarse en términos de las matries  $2\times2$ de Pauli más la identidad
    \begin{align} 
  a^{\mu}=\overline{\sigma}^{\mu}=& \left( \mathbf{1}_{2\times2},\overline{\boldsymbol{\sigma}} \right) \nonumber\\
  =& \left( \sigma^0,\overline{\boldsymbol{\sigma}} \right)\,, 
 \end{align}
-where
+donde
 \begin{align}
 \sigma^0=& \mathbf{1} & \overline{\boldsymbol{\sigma}}=&-\boldsymbol{\sigma}=\left(-\sigma^1,-\sigma^2,-\sigma^3\right)\,.
 \end{align}
