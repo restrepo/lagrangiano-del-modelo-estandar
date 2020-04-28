@@ -317,6 +317,8 @@ definida \cite{Gross}.
 
 Al interpretarse como carga eléctrica se predice la existencia de antipartículas!
 
+\textbf{Ejercicio}: Calcular el Hamiltoniano para el campo escalar complejo. (Ver Sec. 1.2 de \cite{Greiner:1990tz}).
+
 
 
 \chapter{Fermiones}
@@ -352,7 +354,7 @@ Al interpretarse como carga eléctrica se predice la existencia de antipartícul
 Para detalles adicionales ver por ejemplo \url{https://indico.cern.ch/event/243629}
 
 
-\section{Lorentz transformation of the fields}
+\section{Tranformaciones de Lorentz para los campos}
 
 Para un campo escalar, un término en la densidad Lagrangiana con sólo una derivada de primer orden de la forma
 \begin{align}
@@ -377,30 +379,35 @@ Considere los campos espinoriales, que se transforma como
 \end{align}
 donde $S(\Lambda)$ es la representación espinorial $(\frac{1}{2},0)$ del grupo de Lorentz. 
 \end{frame}
-En forma matricial, si $\Psi(x)$ es un vector columna de dos componentes,
-\begin{align*}
-  \Psi=
-  \begin{pmatrix}
-   \psi_1\\
-   \psi_2\\
-  \end{pmatrix}
-\end{align*}
-entonces, una representación $2\times2$ del grupo de Lorentz, denotado con $(\frac{1}{2},0)$, puede ser escrita como
-\begin{align}
-  \Psi(x)\to \Psi'(x)=S\Psi \left(\Lambda^{-1}x  \right).
-\end{align}
-In such a case, $S^{*}$ is another independent $2\times2$ representation of the Lorentz Group. It is denoted by $\left( 0,\frac{1}{2}\right)$, and, in order to emphasize the difference, it is convenient to denote their components with dotted indices $\dot{\alpha},\dot{\beta},\cdots$. We can get $S^{*}$ from $S^{\dagger}$. In fact, writing out the fields without arguments to avoid clutter, 
-\begin{align}
-    \Psi^{\dagger}\to \Psi'^{\dagger}=\Psi^{\dagger}S^{\dagger}.
-\end{align}
-En  componentes, y
-anticipando los índices con puntos
-para $S^{*}$, tenemos
-\begin{align}
-  \left( \psi'_\alpha \right)^{\dagger}=&\left( \psi_\beta \right)^{\dagger}{\left( S^\dagger\right)^{\dot{\beta}}}_{\dot{\alpha}}\nonumber\\
-=&\left( \psi_\beta \right)^{\dagger}{\left( S^*\right)_{\dot{\alpha}}}^{\dot{\beta}}\nonumber\\
-=&\left( \psi_\beta \right)^{\dagger}{\left( S^*\right)_{\dot{\alpha}}}^{\dot{\beta}}\,,
-\end{align}
+% En forma matricial, si $\Psi(x)$ es un vector columna de dos componentes,
+% \begin{align*}
+%   \Psi=
+%   \begin{pmatrix}
+%    \psi_1\\
+%    \psi_2\\
+%   \end{pmatrix}
+% \end{align*}
+% entonces, una representación $2\times2$ del grupo de Lorentz, denotado con $(\frac{1}{2},0)$, puede ser escrita como
+% \begin{align}
+%   \Psi(x)\to \Psi'(x)=S\Psi \left(\Lambda^{-1}x  \right).
+% \end{align}
+% In such a case,
+
+% $S^{*}$ es otra representación independiente $2\times 2$ del Grupo de Lorentz.
+% Esta se denota por 
+% $\left( 0,\frac{1}{2}\right)$, y para enfatizar su diferencia se tiene la convención de denotar sus componentes con índices con puntos, $\dot{\alpha},\dot{\beta},\cdots$.
+% %We can get $S^{*}$ from $S^{\dagger}$. In fact, writing out the fields without arguments to avoid clutter, 
+% % \begin{align}
+% %     \Psi^{\dagger}\to \Psi'^{\dagger}=\Psi^{\dagger}S^{\dagger}.
+% % \end{align}
+% En  componentes, y
+% anticipando los índices con puntos
+% para $S^{*}$, tenemos
+% \begin{align}
+%   \left( \psi'_\alpha \right)^{\dagger}=&\left( \psi_\beta \right)^{\dagger}{\left( S^\dagger\right)^{\dot{\beta}}}_{\dot{\alpha}}\nonumber\\
+% =&\left( \psi_\beta \right)^{\dagger}{\left( S^*\right)_{\dot{\alpha}}}^{\dot{\beta}}\nonumber\\
+% =&\left( \psi_\beta \right)^{\dagger}{\left( S^*\right)_{\dot{\alpha}}}^{\dot{\beta}}\,,
+% \end{align}
 \begin{frame}[fragile,allowframebreaks]
 Si interpretamos  $\left( \psi_\beta \right)^{\dagger}$ como las componentes de un nuevo vector fila transformando bajo la representación $(0,\frac{1}{2})$,
  $S^{*}(\Lambda)$, con componentes con puntos
@@ -409,34 +416,36 @@ Si interpretamos  $\left( \psi_\beta \right)^{\dagger}$ como las componentes de 
 \end{align}
 entonces tenemos que 
 \begin{align}
-{\psi}_{\dot{\alpha}}^{\dagger}\to  {\psi'}_{\dot{\alpha}}^{\dagger}=& \psi_{\dot{\beta}}^{\dagger}{\left[{S^{\dagger}}\right]^{\dot{\beta}}}_{\dot{\alpha}}\,,
+{\psi}_{\dot{\alpha}}^{\dagger}\to  {\psi'}_{\dot{\alpha}}^{\dagger}=& \psi_{\dot{\beta}}^{\dagger}{\left[{S^{\dagger}}\right]^{\dot{\beta}}}_{\dot{\alpha}}\,.
 \end{align}
 \end{frame}
-or in matricial form
-\begin{align}
-{{\Psi'}^{\dagger}}^{T}=S^{*}{{\Psi}^{\dagger}}^{T}
-\end{align}
-\begin{align}
-  K=&\begin{pmatrix}
-    0 & 1\\
-    1 & 0\\
-  \end{pmatrix}& K^2=&\begin{pmatrix}
-    1 & 0\\
-    0 & 1\\
-  \end{pmatrix}
-\end{align}
+% or in matricial form
+% \begin{align}
+% {{\Psi'}^{\dagger}}^{T}=S^{*}{{\Psi}^{\dagger}}^{T}
+% \end{align}
+% \begin{align}
+%   K=&\begin{pmatrix}
+%     0 & 1\\
+%     1 & 0\\
+%   \end{pmatrix}& K^2=&\begin{pmatrix}
+%     1 & 0\\
+%     0 & 1\\
+%   \end{pmatrix}
+% \end{align}
 
 \begin{frame}[fragile,allowframebreaks]
 In summary we have the following Lorentz's transformation properties for the fields
 \begin{align}
-   \phi(x)\to \phi'(x')=&\phi(x) && \text{Scalar field,}\nonumber\\
+   \phi(x)\to \phi'(x)=&\phi(\Lambda^{-1}x) && \text{Scalar field,}\nonumber\\
    A^\mu(x)\to {A'}^\mu(x)=&{\Lambda^\mu}_\nu A^\nu(\Lambda^{-1}x)&&\text{Vector field,}\nonumber\\
   \psi_\alpha(x)\to\psi'_\alpha(x)=&{\left[ S(\Lambda) \right]_\alpha}^\beta\psi_\beta(\Lambda^{-1}x)
 && \text{Left-handed spinor field,}\nonumber\\
-  {\psi'}_{\dot{\alpha}}^{\dagger}(x)\to  {\psi'}_{\dot{\alpha}}^{\dagger}(x)=&
-\psi_{\dot{\beta}}^{\dagger}{\left[{S^{\dagger}(\Lambda)}\right]^{\dot{\beta}}}_{\dot{\alpha}}&& \text{Rigth-handed anti-spinor field,}\,,
+  {\psi}_{\dot{\alpha}}^{\dagger}(x)\to  {\psi'}_{\dot{\alpha}}^{\dagger}(x)=&
+\psi_{\dot{\beta}}^{\dagger}(\Lambda^{-1}x){\left[{S^{\dagger}(\Lambda)}\right]^{\dot{\beta}}}_{\dot{\alpha}}&& \text{Rigth-handed anti-spinor field,}\,,
  \end{align}
 \end{frame}
+
+
 
 
 En lo siguiente usaremos la notación con puntos y sin puntos para los espinores de Lorentz, pero no su forma matricial.
@@ -476,6 +485,7 @@ and similarmente el producto escalar de dos anti-espinores como
 To construct Lorentz invariant Lagrangians, one needs to first combine products of spinors to make objects that transforms as Lorentz tensors.
 When constructing Lorentz  tensors from fermion fields the lowered indices must only be contracted with raised indices following the same convention established in eq.~(\ref{eq:conven}). A contravariant  Lorentz tensor of rank $(n\times n)$  in this space must have an index structure with $n$ undotted (dotted) indices follow by $n$ dotted (undotted) indices, as for example,   $\alpha_1\alpha_2\ldots\alpha_n\dot{\alpha}_1\dot{\alpha}_2\ldots\dot{\alpha}_n$.
 
+
 \section{Lagrangian}
 \label{sec:dirac-equation}
 La ecuación de Scrödinger puede escribirse como
@@ -495,7 +505,7 @@ Definimos entonces una ecuación general mecánico-cuántica como
 \end{align}
 
 La relatividad especial implica automáticamente que la densidad Lagrangian también tine que ser lineal en las derivadas espaciales.
-Como un campo escalar no permite escribir un término en la densidad Lagrangiana con derivadas de primer orden (see eq.~\eqref{eq:nolor}), debemos usar
+Como un campo escalar no permite escribir un término en la densidad Lagrangiana con derivadas de primer orden (ver ec.~\eqref{eq:nolor}) (ver Sec. 1.6 de~\cite{Greiner:1990tz}), debemos usar
 un campo que se vea afectado por las transformaciones de Lorentz. Por consiguiente el campo debe estar formado por campos componentes
 \begin{align}
   \psi=  \begin{pmatrix}
@@ -505,6 +515,8 @@ un campo que se vea afectado por las transformaciones de Lorentz. Por consiguien
 \psi_n    
   \end{pmatrix}
 \end{align}
+
+%\end{document}
 
 \begin{frame}[fragile,allowframebreaks]
 We could need a new representation acting in and internal space upon a
@@ -552,43 +564,52 @@ donde
 \end{align}
 \end{frame}
 \begin{frame}[fragile,allowframebreaks]
-Therefore  the most general Lagrangian for two-component spinors contains at least
+Por consiguiente, el Lagrangiano más general posible para espinores de dos componentes contiene al menos
 \begin{align}
     \mathcal{L}\supset&\frac{i}{2}{\psi}^{\dagger}_{\dot{\alpha}}\left(\overline{\sigma}^{\mu}\right)^{\dot{\alpha}\alpha}\partial_\mu\psi_{\alpha}-m\,\psi^{\alpha}\psi_{\alpha} \nonumber\\
-\supset&\frac{i}{2}{\psi}^{\dagger}\overline{\sigma}^\mu\partial_\mu\psi-m\,\psi\psi
+\supset&\frac{i}{2}{\psi}^{\dagger}\overline{\sigma}^\mu\partial_\mu\psi-m\,\psi\psi\,.
 \end{align}
-To guarantee that $\mathcal{L}^{\dagger}=\mathcal{L}$ so that the Action will be real, the easiest way is to add the hermitian conjugate (h.c) of each of the terms. So that, the most general Lagrangian for one left spinor field is
+Los coeficientes $i/2$ y $m$ se han escogido para que las ecuaciones de Euler-Lagrange den lugar a las ecuaciones de movimiento apropiadas.
+Para garantizar que la Acción sea un real, debemos imponer que  $\mathcal{L}^{\dagger}=\mathcal{L}$. La forma más simple de Lograrlo es simplemente adicionar el hermítico conjugado de cada uno de los términos (h.c de las siglas en inglés). De modo que el Lagrangiano más general posible para espinores de dos componentes es
 \begin{align*}
   \mathcal{L}=&\frac{i}{2}{\psi}^{\dagger}\overline{\sigma}^\mu\partial_\mu\psi-m\,\psi\psi+
 \text{h.c} \nonumber\\
 =&\frac{i}{2}{\psi}^{\dagger}\overline{\sigma}^\mu\partial_\mu\psi-m\,\psi\psi+
 \left(\frac{i}{2} {\psi}^{\dagger}\overline{\sigma}^\mu\partial_\mu\psi \right)^{\dagger}-m \left(\psi\psi  \right)^{\dagger}\,,
 \end{align*}
-and the coefficients have been choosing before hand to give the proper equations of motion. Then,
+Entonces
 \begin{align*}
   \mathcal{L}=&\frac{i}{2}{\psi}^{\dagger}\overline{\sigma}^\mu\partial_\mu\psi-\frac{i}{2} \partial_\mu\psi^{\dagger}{\overline{\sigma}^\mu}^{\dagger}\psi-m \left( \psi\psi+\psi^{\dagger}\psi^{\dagger} \right)
 \end{align*}
-Since
+Ya que, de la hermiticidad de las matrices de Paulo
 \begin{align}
-{\overline{\sigma}^\mu}^{\dagger}=\overline{\sigma}^\mu
+{\overline{\sigma}^\mu}^{\dagger}=\overline{\sigma}^\mu\,.
 \end{align}
-as expected to the going to be Pauli matrices, then
+De modo que
 \begin{align}
 \mathcal{L}=&\frac{i}{2}{\psi}^{\dagger}\overline{\sigma}^\mu\partial_\mu\psi-\frac{i}{2} \partial_\mu \left(  \psi^{\dagger} \overline{\sigma}^\mu\psi\right)
 +\frac{i}{2}{\psi}^{\dagger}\overline{\sigma}^\mu\partial_\mu\psi
--m \left( \psi\psi+\psi^{\dagger}\psi^{\dagger} \right)\,,
+-m \left( \psi\psi+\psi^{\dagger}\psi^{\dagger} \right)\,.
 \end{align}
-and dropping out the total derivative, we have finally the most general Action for two-component spinors:
+Descartando la derivada total que no altera la Acción, podemos obtener la forma final de la densidad Lagrangiana para un campo espinorial de dos componentes
 \begin{align}
   \mathcal{L}=&i{\psi}^{\dagger}\overline{\sigma}^\mu\partial_\mu\psi-
 m \left( \psi\psi+\psi^{\dagger}\psi^{\dagger} \right)\,.
 \end{align}
-If $\psi$ have a continuos charge such that
+Teniendo en cuenta de nuevo que la Acción es adimensional, que implica $[\mathcal{L}]=E^4$, y considerando además que $\sigma^{\mu}$ son matrices constantes adimensionales,entonces
+\begin{align*}
+  [\psi]=&E^{3/2}&\to&& [m]=&E\,.
+\end{align*}
+
+
+
+Si al campo $\psi$ se la asocia además una carga conservada asociada a una simetría continua tipo $U(1)$, tal que
 \begin{align}
-  \psi\to\psi'=e^{-i\alpha}\psi
+  \psi\to\psi'=e^{-i\alpha}\psi\,,
 \end{align}
-we can impose that the Lagrangian be invariant under changes of phase of $\psi$. In such a case the mass of the field must be zero and
+podemos imponer que el Lagrangiano sea invariante bajo cambios de fase $\psi$. En tal caso, el término con coeficiente $m$ debe se ser cero y la densidad Lagrangiana se simplifica a
 \begin{align}
+  \label{eq:masslesweylL}
    \mathcal{L}=&i{\psi}^{\dagger}\overline{\sigma}^\mu\partial_\mu\psi.
 \end{align}
 
@@ -623,7 +644,21 @@ Que podemos interpretar como una densidad de probabilidad. Por consiguiente, la 
 \subsection{Tensor momento-energía}
 \label{sec:tens-momento-energi}
 \begin{frame}[fragile,allowframebreaks]
-Usando $\sigma^{0}=\mathbf{1}$,
+
+
+Para el Lagrangiano
+\begin{align*}
+    \mathcal{L}=i \psi^{\dagger} \overline{\sigma}^{\mu} \partial_{\mu} \psi\,,
+\end{align*}
+calcular $T^{\mu}_{\nu}$ y a partir de  las densidades of carga conservadas demostrar que
+\begin{align*}
+  \langle\hat{H}_{W}\rangle=&\int_{V} \operatorname{d}^{3} x \psi^{\dagger} \hat{H}_{W} \psi \\
+ \langle\hat{\boldsymbol{p}}\rangle=&\int_{V} \operatorname{d}^{3} x \psi^{\dagger}\hat{\boldsymbol{p}} \psi\,. 
+\end{align*}
+donde $\hat{H}_{W}=-\boldsymbol{\sigma} \cdot \hat{\boldsymbol{p}}$ y $\hat{\boldsymbol{p}}=-i \boldsymbol{\nabla}$
+
+
+  Usando $\sigma^{0}=\mathbf{1}$,
 \begin{align}
   T^0_0&=\frac{\partial\mathcal{L}}{\partial\left(\partial_0\psi\right)}\partial_0\psi+\partial_0\psi^\dagger\frac{\partial\mathcal{L}}{\partial\left(\partial_0\psi^\dagger\right)}-\mathcal{L}\nonumber\\
   &=i\psi^\dagger\partial_0\psi-\mathcal{L}\nonumber\\
@@ -662,40 +697,10 @@ de modo que
 \langle\hat{\mathbf{p}}\rangle=\int\psi^\dagger\hat{\mathbf{p}}\psi\,d^3 x
 \end{align}
 \end{frame}
-\subsection{Rigth-handed fermion}
-
-\begin{frame}[fragile,allowframebreaks]
-For the right handed two-component field ${\eta^{\dagger}}^{\dot{\alpha}}$ ($\dot{\alpha}=\dot{1},\dot{2}$). a posible Lorentz invariant with a single derivative could be 
- \begin{align}
-   {\eta}a^\mu\partial_\mu\eta^{\dagger}\to  {\eta'}\left(a^\mu\right)\partial'_\mu{\eta^{\dagger}}'
-&={\eta'}^{\alpha}\left( a^\mu \right)_{\alpha\dot{\alpha}}{\left(\Lambda^{-1}\right)^\nu}_\mu\partial_\nu \,{\eta'}^{\dagger\dot{\alpha}}\nonumber\\
-&={\left[ \left( S^{-1} \right)^T \right]^{\alpha}}_{\beta}{\eta}^{\beta}\left( a^\mu \right)_{\alpha\dot{\alpha}}{\left(\Lambda^{-1}\right)^\nu}_\mu {\left[ \left( S^{-1} \right)^\dagger \right]^{\dot{\alpha}}}_{\dot{\beta}}\partial_\nu \,{\eta}^{\dagger\dot{\alpha}}\nonumber\\
-&={\left(\Lambda^{-1}\right)^\nu}_\mu{\left[ \left( S^{-1} \right) \right]_{\beta}}^{\alpha}\left( a^\mu \right)_{\alpha\dot{\alpha}}{\left[ \left( S^{-1} \right)^\dagger \right]^{\dot{\alpha}}}_{\dot{\beta}} {\eta}^{\beta}\partial_\nu \,{\eta}^{\dagger\dot{\alpha}}\,.
-\end{align}
-if the following condition is satisfied:
-\begin{align}
-\label{eq:ltrincond}
-S^{-1}a^\mu \left( S^{-1} \right)^{\dagger}=&{\left(\Lambda\right)^\mu}_\nu a^\nu\,,
-\end{align}
-The only solution is expressed in terms of the $2\times2$ identity and the Pauli matrices
-   \begin{align} 
- a^{\mu}={\sigma}^{\mu} =& \left( \sigma^0,{\boldsymbol{\sigma}} \right)\,, 
-\end{align}
-and dropping out the total derivative, we have finally the most general Action for two-component spinors:
-\begin{align}
-  \mathcal{L}=&i{\eta}{\sigma}^\mu\partial_\mu\eta^{\dagger}-
-m \left( \eta\eta+\eta^{\dagger}\eta^{\dagger} \right)\,.
-\end{align}
-con donde hemos definido el Hamiltoniano de Weyl como
-\begin{equation}
-  \label{eq:denshal}
-  \hat{H}_W= \mathbf{\sigma}\cdot\widehat{\mathbf{p}}
-\end{equation}
-Que corresponde a la proyección del espín en la dirección de movimiento. El signo más justica la definción de $\eta^{\dot{\alpha}}$ como un espinor de Weyl derecho.
-\end{frame}
 
 \subsection{Ecuaciones de Euler-Lagrange}
 \label{sec:ecuaciones-de-euler}
+
 Queremos que el Lagrangiano de lugar a la ecuación de Scröndinger de validez general
 \begin{equation}
   \label{eq:grlsch}
@@ -708,25 +713,32 @@ De hecho, aplicando las ecuaciones de Euler-Lagrange para el campo $\psi^\dagger
   \partial_\mu\left[\frac{\partial\mathcal{L}}{\partial\left(\partial_\mu\psi^\dagger\right)}\right]-\frac{\partial\mathcal{L}}{\partial\psi^\dagger}&=0\nonumber\\
   \frac{\partial\mathcal{L}}{\partial\psi^\dagger}&=0\nonumber\\
   \label{eq:114qftm}
-  i a^\mu\partial_\mu\psi&=0.
+  i \overline{\sigma}^\mu\partial_\mu\psi&=0.
 \end{align}
 Expandiendo
 \begin{align*}
-  i \sigma^0\partial_0\psi+i \sigma^i\partial_i\psi&=0\\
-  i \sigma^0\partial_0\psi-\boldsymbol\sigma\cdot(-i\boldsymbol{\nabla})\psi&=0,\\
-  i \sigma^0\partial_0\psi&=(\boldsymbol\sigma\cdot\hat{\mathbf{p}})\psi,
+    i \sigma^0\partial_0\psi+i \overline{\sigma}^i\partial_i\psi&=0\\
+  i \sigma^0\partial_0\psi-i \sigma^i\partial_i\psi&=0\\
+  i \sigma^0\partial_0\psi+\boldsymbol\sigma\cdot(-i\boldsymbol{\nabla})\psi&=0,\\
+  i \sigma^0\partial_0\psi&=-(\boldsymbol\sigma\cdot\hat{\mathbf{p}})\psi,
 \end{align*}
 Como $\sigma^0=\mathbf{1}$,
 \begin{equation}
-    i\frac{\partial}{\partial t}\psi=\boldsymbol\sigma\cdot\mathbf{p}\psi.
+  \label{eq:wspinorL}
+    i\frac{\partial}{\partial t}\psi=-\boldsymbol\sigma\cdot\mathbf{p}\psi.
 \end{equation}
 De la ec.~(\ref{eq:denshal})
 \begin{equation}
   \label{eq:186qft}
-  \hat{H}= \boldsymbol\sigma\cdot\mathbf{p},
+  \hat{H}= -\boldsymbol\sigma\cdot\mathbf{p}.
 \end{equation}
-A este punto, sólo nos queda por determinar los parámetros $a^\mu$. 
+Si identificamos a $\boldsymbol{\sigma}/2$, como el operador de espín, el signo menos del Hamiltoniano quiere decir que el espín del campo $\psi$ se proyecta en la dirección opuesta a su momentum. 
+De esta forma podemos interpretar el espinor de Weyl de dos components $\psi$ como un espinor de Weyl izquierdo
 
+
+A este punto, podemos comprobar la consistencia relacionada con que las matrices $\overline{\sigma}^\mu$ corresponden a las matrices de Pauli más la identidad $2\times2$.
+
+\begin{frame}[fragile,allowframebreaks]
 La ec.~(\ref{eq:grlsch}) puede escribirse como
 \begin{equation}
   \left(i\frac{\partial}{\partial t}-\hat{H}\right)\psi=0.
@@ -737,7 +749,7 @@ El campo $\psi$ también debe satisfacer la ecuación de Klein-Gordon. Podemos d
 \end{equation*}
 De modo que, teniendo en cuenta que $\partial\hat H/\partial t=0$,
 \begin{align}
-  \label{eq:105qft}
+  \label{eq:2qftw}
  \left(-i\frac{\partial}{\partial t}-\hat{H}\right)\left(i\frac{\partial}{\partial t}-\hat{H}\right)\psi&=0\nonumber\\
  \left(-i\frac{\partial}{\partial t}-\hat{H}\right)\left(i\frac{\partial\psi}{\partial t}-\hat{H}\psi\right)&=0\nonumber\\
  \frac{\partial^2\psi}{\partial t^2}+i\left(\frac{\partial\hat{H}}{\partial t}\right)\psi
@@ -750,12 +762,15 @@ De la ec.~(\ref{eq:186qft}), y usando la condición en ec.~(\ref{eq:gamma02}), t
 \label{eq:106qft}
 \hat{H}^2&=(\boldsymbol\sigma\cdot\mathbf{p})(\boldsymbol\sigma\cdot\mathbf{p})\,.
 \end{align}
+\end{frame}
 
+\begin{frame}[fragile,allowframebreaks]
 Sea $A$ una matriz y $\theta$ en un escalar. Entonces tenemos la identidad
 \begin{align}
-  \label{eq:206qft}
+  \label{eq:206qftw}
   (\mathbf{A}\cdot\boldsymbol{\theta})^2=\sum_i {A^i}^2 {\theta^i}^2+\sum_{i\lt j}\left\{A^i,A^j  \right\}\theta^i \theta^j 
 \end{align}
+\end{frame}
 \begin{itemize}
 \item \textbf{Demostración}
   \begin{align}
@@ -771,6 +786,8 @@ Sea $A$ una matriz y $\theta$ en un escalar. Entonces tenemos la identidad
   \end{align}
 
 \end{itemize}
+
+\begin{frame}[fragile,allowframebreaks]
 Entonces
 \begin{align}
   \hat{H}^2=& \sigma_i^2p_i^2+\sum_{i\lt j}\left\{ \sigma_i, \sigma_j\right\}p_i p_j
@@ -785,16 +802,17 @@ que se puede resumir en
 \begin{align}
   \left\{ \sigma^i,\sigma^j \right\}=&2\delta_{ij} \mathbf{1}\,.
 \end{align}
-todo consistente con las propiedas de las matrices de Pauli en  \eqref{eq:64qft}. 
+todo consistente con las propiedades de las matrices de Pauli en  \eqref{eq:64qftw}. 
 De modo que
 \begin{equation}
   \hat{H}^2=-\boldsymbol{\nabla}^2\,,
 \end{equation}
-y reemplazando en la ec.~\eqref{eq:105qft} llegamos a la ecuación de Klein-Gordon para $\psi$
+y reemplazando en la ec.~\eqref{eq:2qftw} llegamos a la ecuación de Klein-Gordon para $\psi$
 \begin{align}
    \left(\frac{\partial^2}{\partial t^2}-\boldsymbol{\nabla}^2\right)\psi&=0\nonumber\\
    \Box\psi&=0
 \end{align}
+\end{frame}
 Debido a la ambigüedad  en el signo, podemos construir dos cuadrivectores independientes
    \begin{align}
  \sigma^{\mu}=& \left( \mathbf{1}_{2\times2},\boldsymbol{\sigma} \right)&
@@ -805,7 +823,7 @@ donde
   \overline{\boldsymbol{\sigma}}=-\boldsymbol{\sigma}=\left(-\sigma^1,-\sigma^2,-\sigma^3\right)\,.
 \end{align}
 Como hemos visto, las componentes en el espacio interno son
-$\sigma^{\mu}_{\alpha\dot{\alpha}}$ y $\overline{\sigma}^{\mu\;\alpha\dot{\alpha}}$, de modo que  las matrices apropiadas son $\overline{\sigma}^\mu$, y el Lagrangiano  y la ecuación de Weyl, son respectivamente de las ecs.~(\ref{eq:100qft}) y (\ref{eq:114qft})
+$\sigma^{\mu}_{\alpha\dot{\alpha}}$ y $\overline{\sigma}^{\mu\;\alpha\dot{\alpha}}$, de modo que  las matrices apropiadas son $\overline{\sigma}^\mu$, y el Lagrangiano  y la ecuación para un espinor de Weyl izquierdo, son respectivamente de las ecs.~(\ref{eq:masslesweylL}) y (\ref{eq:wspinorL})
 \begin{align}
   \label{eq:115qft}
   \mathcal{L}=&i\psi^\dagger\overline{\sigma}^\mu\partial_\mu\psi \nonumber\\
@@ -821,37 +839,9 @@ Si $\psi$ no tiene ninguna carga continua se puede adicionar un término de masa
   \mathcal{L}=& i\psi^\dagger\overline{\sigma}^\mu\partial_\mu\psi -m \left( \psi\psi+\psi^{\dagger}\psi^{\dagger} \right)\,.
 \end{align}
 
-\subsection*{Ejercicio}
-
-Considere un espinor de Weyl que además tiene una carga continua $U(1)$
-  \begin{align}
-    \psi\to \psi'=e^{i\alpha}\psi\,,
-  \end{align}
-de modo que su término de masa esta prohíbido.
-
-Escriba el Lagrangiano más general posible para el campo $\psi$ y un campo escalar complejo $\phi$ que transforma como
-\begin{align}
-  \phi\to \phi'=e^{-2i\alpha}\phi\,.
-\end{align}
-con un potencial escalar $V(\phi)$ con ruptura espontánea de la simetría continua $U(1)$. Especifique explícitamente las dimensiones y el carácter positivo o negativo de cada uno de los coeficientes. 
-
-Ayuda: sólo hay un término de interacción posible entre los campos fermiónicos y el campo escalar (más el correspondiente hermítico conjugado).
-
-\hrulefill{}$\blacksquare$
-
-\subsection{Ejercicio}
-
-Para el Lagrangiano del punto anterior, encuentre el espectro de partículas cuando la parte real del campo escalar complejo adquiera un valor esperado de vacío, $v$:
-  \begin{align*}
-    \phi=\frac{H(x)+v+i J(x)}{\sqrt{2}}
-  \end{align*}
-y especifique cuales son los campos masivos y cuales quedan sin masas. Note entonces que un fermión sin masa también puede adquirir una masa después de la ruptura espontánea de la simetría, como consecuencia de su interacción con un campo escalar.
-\label{item:ssb}
-
-\hrulefill{}$\blacksquare$
-
-
 \subsection{Lorentz invariance of the Weyl Action}
+
+\begin{frame}[fragile,allowframebreaks]
 To show that $S(\Lambda)$ is in fact a Lorentz transformation, it is convinient to write this in covariant form. If we define
 \begin{align}
   \sigma^{\mu\nu}=\frac{i}{4}\left[\sigma^\mu,\overline{\sigma}^\nu\right]\,.
@@ -954,50 +944,41 @@ Para $\mu=l$
  i\epsilon_{lik}{\sigma^{k}}=&i\epsilon_{lik}  \sigma^{k}\,.
 \end{align*}
 
+\end{frame}
 
-\section{Masas para fermiones de Weyl}
-Es interesante notar que el mismo mecanismo que funciona para dar masa a un bosón gauge también puede permitir la aparición de un término de masa para un fermión de Weyl. Considere un fermión de Weyl izquierdo $\psi$ con una cierta carga, que por simplicidad, consideraremos conservada globalmente. Si ademas permitimos la presencia de un escalar complejo, $\phi$, con el doble de dicha carga, tal que
-\begin{align}
-  \psi\to \psi'=&e^{i\alpha}\psi \nonumber\\
-  \phi\to \phi'=&e^{-2i\alpha}\phi\,,
+
+\subsection{Rigth-handed fermion}
+
+\begin{frame}[fragile,allowframebreaks]
+Para el campo de dos componentes derecho  ${\eta^{\dagger}}^{\dot{\alpha}}$ ($\dot{\alpha}=\dot{1},\dot{2}$), el término invariante de Lorentz con derivada de primer orden debería ser
+ \begin{align}
+   {\eta}a^\mu\partial_\mu\eta^{\dagger}\to  {\eta'}\left(a^\mu\right)\partial'_\mu{\eta^{\dagger}}'
+&={\eta'}^{\alpha}\left( a^\mu \right)_{\alpha\dot{\alpha}}{\left(\Lambda^{-1}\right)^\nu}_\mu\partial_\nu \,{\eta'}^{\dagger\dot{\alpha}}\nonumber\\
+&={\left[ \left( S^{-1} \right)^T \right]^{\alpha}}_{\beta}{\eta}^{\beta}\left( a^\mu \right)_{\alpha\dot{\alpha}}{\left(\Lambda^{-1}\right)^\nu}_\mu {\left[ \left( S^{-1} \right)^\dagger \right]^{\dot{\alpha}}}_{\dot{\beta}}\partial_\nu \,{\eta}^{\dagger\dot{\alpha}}\nonumber\\
+&={\left(\Lambda^{-1}\right)^\nu}_\mu{\left[ \left( S^{-1} \right) \right]_{\beta}}^{\alpha}\left( a^\mu \right)_{\alpha\dot{\alpha}}{\left[ \left( S^{-1} \right)^\dagger \right]^{\dot{\alpha}}}_{\dot{\beta}} {\eta}^{\beta}\partial_\nu \,{\eta}^{\dagger\dot{\alpha}}\,.
 \end{align}
-entonce el Lagrangiano más general posible para los dos campos es
+siempre y cuando la siguiente propiedad se satisfaga
 \begin{align}
-  \mathcal{L}=i\psi^{\dagger}\overline{\sigma}^{\mu}\partial_{\mu}\psi-h \left( \psi\psi\phi+\phi^{*}\psi^{\dagger}\psi^{\dagger} \right)
-+\partial^{\mu}\phi\partial_{\mu}\phi-\mu^2 \phi^{*}\phi-\lambda \left( \phi^{*}\phi \right)^{2}\,.
+\label{eq:ltrincond}
+S^{-1}a^\mu \left( S^{-1} \right)^{\dagger}=&{\left(\Lambda\right)^\mu}_\nu a^\nu\,.
 \end{align}
-Es importante notar a este punto que el acomplamiento $h$, llamado acoplamiento de Yukawa, es adimensional. Si imponemos además las condiciones $\mu^2<0$ y $\lambda>0$. podemos analizar el espectro de la teoría cerca al mínimo $\left\langle \phi \right\rangle=v$, haciendo el cambio de variables a
+De hecho, la única solución se puede expresar en términos de las matrices $2\times2$
+   \begin{align} 
+ a^{\mu}={\sigma}^{\mu} =& \left( \sigma^0,{\boldsymbol{\sigma}} \right)\,, 
+\end{align}
+y siguiendo un método similar al anterior, podemos arribar a la densidad Lagrangiana más general para un espinor derecho de dos componentes
 \begin{align}
-  \phi(x)=\frac{H(x)+v+i J(x)}{\sqrt{2}}\,,
+  \mathcal{L}=&i{\eta}{\sigma}^\mu\partial_\mu\eta^{\dagger}-
+m \left( \eta\eta+\eta^{\dagger}\eta^{\dagger} \right)\,.
 \end{align}
-\begin{align*}
-   \mathcal{L}=&i\psi^{\dagger}\overline{\sigma}^{\mu}\partial_{\mu}\psi-\frac{h v}{\sqrt{2}} \left( \psi\psi +\psi^{\dagger}\psi^{\dagger} \right)
--\frac{h }{\sqrt{2}} \left( \psi\psi +\psi^{\dagger}\psi^{\dagger} \right)H-i\frac{h }{\sqrt{2}} \left( \psi\psi -\psi^{\dagger}\psi^{\dagger} \right)J \nonumber\\
-&+\frac{1}{2}\partial^{\mu} H\partial_{\mu} H+\frac{1}{2}\partial^{\mu} J\partial_{\mu} J-\frac{\mu^2}{2} \left[(H+v)^2+J^2\right]-\frac{\lambda}{4} \left[(H+v)^2+J^2\right]^2 \nonumber\\
-               =&i\psi^{\dagger}\overline{\sigma}^{\mu}\partial_{\mu}\psi-m \left( \psi\psi +\psi^{\dagger}\psi^{\dagger} \right)-\frac{m}{v} \left( \psi\psi H  +\psi^{\dagger}\psi^{\dagger}H +i\psi\psi J -i\psi^{\dagger}\psi^{\dagger}J \right) \nonumber\\
-&+\tfrac{1}{2}\partial^{\mu} H\partial_{\mu} H-\tfrac{1}{2}\mu^2(H+v)^2-\tfrac{1}{4}\lambda (H+v)^4  \nonumber\\
-&+\tfrac{1}{2}\partial^{\mu} J\partial_{\mu} J+\frac{1}{2}\left| \mu^2 \right| J^2-\tfrac{1}{4}\lambda \left[2J^2 \left( H^2+2vH+v^2 \right)+J^4\,\right],
-\end{align*}
-Usando 
-\begin{align*}
-  m_H^2=2\left|\mu^2\right|=2\lambda v^2  >0\,,
-\end{align*}
-tenemos
-\begin{align}
-   \mathcal{L}=&i\psi^{\dagger}\overline{\sigma}^{\mu}\partial_{\mu}\psi-m \left( \psi\psi +\psi^{\dagger}\psi^{\dagger} \right)-\frac{m}{v} \left( \psi\psi H  +\psi^{\dagger}\psi^{\dagger}H +i\psi\psi J -i\psi^{\dagger}\psi^{\dagger}J \right) \nonumber\\
-&+\frac{1}{2}\partial^{\mu} H\partial_{\mu} H-\frac{1}{2}m_H^2H^2-\frac{1}{2}\frac{m_H^2}{v}H^3-\frac{1}{8}\frac{m_H^2}{v^2} H^4 \nonumber\\
-&+\frac{1}{2}\partial^{\mu} J\partial_{\mu} J+\cancel{\frac{1}{4} m_H^2 J^2}-\cancel{\frac{1}{4} m_H^2 J^2}- \frac{1}{8}\frac{m_H^2}{v^2} J^4 
--\frac{1}{2}\frac{m_H^2}{v} J^2H -\frac{1}{4}\frac{m_H^2}{v^2} J^2H^2 \nonumber\\
-=&i\psi^{\dagger}\overline{\sigma}^{\mu}\partial_{\mu}\psi-m \left( \psi\psi +\psi^{\dagger}\psi^{\dagger} \right)-\frac{m}{v} \left( \psi\psi H  +\psi^{\dagger}\psi^{\dagger}H +i\psi\psi J -i\psi^{\dagger}\psi^{\dagger}J \right) \nonumber\\
-&+\frac{1}{2}\partial^{\mu} H\partial_{\mu} H-\frac{1}{2}m_H^2H^2-\frac{1}{2}\frac{m_H^2}{v}H^3-\frac{1}{8}\frac{m_H^2}{v^2} H^4 \nonumber\\
-&+\frac{1}{2}\partial^{\mu} J\partial_{\mu} J-\frac{1}{8}\frac{m_H^2}{v^2} J^4 \nonumber\\
-&-\frac{1}{2}\frac{m_H^2}{v} J^2H -\frac{1}{4}\frac{m_H^2}{v^2} J^2H^2\,.
-\end{align}
-El espectro de partículas alrededor del mínimo asociado a la ruptura espontánea de la simetría corresponde a fermión de Weyl con masa (como podría ser por ejemplo un neutrino izquierdo masivo)
-\begin{align*}
-  m=\frac{hv}{\sqrt{2}}\,,
-\end{align*}
-un Higgs con masa $m_H^2$ y un bosón de Goldston sin masa $J(x)$. Cuando el bosón de Goldstone no puede ser reabsorvido como la masa de un bosón gauge, corresponde a una partícula física que se suele llamar el Majoron. El término de interacción $\psi \psi J$ implica que un par de fermiones de Weyl se pueden aniquilar en un Majoron (sin masa). Este tipo de procesos están fuertemente suprimidos a partir de observaciones astrofísicas pues podrían implicar por ejemplo un enfriamiento demasiado rápido de una supernova por energía perdida a través de Majorones provenientes de la aniquilación de neutrinos. 
+El cálculo del tensor de momento energía en este caso, nos permite  definir el Hamiltoniano de Weyl para un espinor de Weyl derecho como
+\begin{equation}
+  \label{eq:denshal}
+  \hat{H}_W= \mathbf{\sigma}\cdot\widehat{\mathbf{p}}\,,
+\end{equation}
+que corresponde, en efecto, a la proyección del espín en la dirección de movimiento. El signo positivo justica la definción de $\eta^{\dot{\alpha}}$ como un espinor de Weyl derecho.
+\end{frame}
+
 
 
 \section{Espinores de Dirac}
@@ -1229,9 +1210,9 @@ donde
   \widehat{H}_D=\gamma^0\left( \boldsymbol{\gamma}\cdot \widehat{\mathbf{p}} +m \right)
 \end{align}
 \end{frame}
-Antes de intentar tomar el límite no relativista, y para ser consistentes con relatividad espacial, anse debe cambiar el Lagangiano por uno que tenga la invarianza de fase local. En tal caso el Hamiltoniano resultando se debe reducir al Hamiltoniano de  Sch\"odinger en presencia de un campo electrómagnético (ver Apéndice \ref{sec:limite-no-relat}).
+Antes de intentar tomar el límite no relativista, y para ser consistentes con relatividad espacial, se debe cambiar el Lagangiano por uno que tenga la invarianza de fase local. En tal caso, el Hamiltoniano resultante se debe reducir al Hamiltoniano de  Sch\"odinger en presencia de un campo electrómagnético (ver Apéndice \ref{sec:limite-no-relat}).
 
-
+\textbf{Ejercicio} Calcule la corriente de carga conservada asociada la corriente $\operatorname{U}(1)$ y el tensor de energía-momentum para el Lagrangiano de Dirac.
 \begin{subappendices}
   
 \subsection{Representación  de operadores}
@@ -1331,6 +1312,40 @@ Cualquier representación matricial de esta álgebra debe obedecer las mismas re
 
 \end{subappendices}
 
+
+\section{Problemas}
+
+
+\subsection{Escalares}
+
+\begin{enumerate}
+\item  Demuestre que los terminos con derivada de la densidad Lagrangiana para un campo escalar complejo
+\begin{align}
+  \phi\equiv&\frac{\phi_1+i\phi_2}{\sqrt{2}} &\to&&   \phi^{*}=&\frac{\phi_1-i\phi_2}{\sqrt{2}}\,,
+\end{align}
+que sea invariante bajo el Grupo $U(1)$ de sus cambios de fase~\eqref{eq:phchg}, se puede escribir de forma única como
+\begin{align}
+  \mathcal{L}(\partial_{\mu} \phi,\partial_{\mu} \phi^{*})=  {\partial_\mu\phi^{*}}\,{\partial^\mu\phi}=\frac{1}{2}\partial_{\mu}\phi_1 \partial^{\mu}\phi_1+\frac{1}{2}\partial_{\mu}\phi_2 \partial^{\mu}\phi_2\,,
+\end{align}
+es decir, como la suma de la densidad Lagrangiana para dos campos reales independientes.
+
+  
+\item Calcular el Hamiltoniano para el campo escalar complejo. (Ver Sec. 1.2 de \cite{Greiner:1990tz}).
+  
+\item Calcular el Tensor de Momento energía para el campo escalar complejo. (Ver Sec. 1.2 de \cite{Greiner:1990tz}).
+\end{enumerate}
+
+
+\subsection{Fermiones}
+
+
+\begin{enumerate}
+ \item \textquestiondown Que cambios se requieren al Lagrangiano de la ecuaci\'on de Dirac para que la Acci\'on sea invariante bajo transformaciones Gauge Locales?. Ver secci\'on \ref{sec:aplic-la-mecan}.
+
+
+\label{item:pch1.3} %noinstiki
+
+\end{enumerate}
 
 %
 %%% Local Variables: 

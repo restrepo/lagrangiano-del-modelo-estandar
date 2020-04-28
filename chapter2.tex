@@ -37,6 +37,7 @@
 
  
 \section{Lagrangiano electromagnético}
+\begin{frame}[fragile,allowframebreaks]
 Las ecuaciones de Maxwell tienen la simetría obtenida en la ec.~\eqref{eq:aphicov}
 \begin{align}
   \label{eq:aphicovch2}
@@ -58,7 +59,7 @@ De hecho, si aplicamos el segundo teorema de Noether al campo de radiación
    0=&
  \partial_{\mu} \partial_{\rho}\left[ \frac{\partial \mathcal{L}}{\partial \left(  \partial_{\rho} A_{\mu}\right)}  \right] - \partial_{\mu} \frac{\partial \mathcal{L}}{\partial A_{\mu}} \,.
 \end{align}
-El segundo témrino da lugar a la misma corriente conservada fermiónica
+El segundo término da lugar a la misma corriente conservada fermiónica
 \begin{align}
   \partial_{\mu} \frac{\partial \mathcal{L}}{\partial A_{\mu}}=&
 \partial_{\mu} j^{\mu}=0\,,
@@ -69,13 +70,13 @@ Por consiguiente, la identidad resultante
 \end{align}
 se puede interpretar como la necesidad de introducir el tensor antisimétrico
 \begin{align}
-  F_{\mu\nu}=\frac{\partial \mathcal{L}}{\partial \left(\partial  \partial_{\nu} A_{\mu}\right)}\,,
+  F_{\mu\nu}=\frac{\partial \mathcal{L}}{\partial \left(  \partial_{\nu} A_{\mu}\right)}\,,
 \end{align}
 tal que
 \begin{align}
   \partial_{\mu}\partial_{\nu}F^{\mu\nu}=0\,.
 \end{align}
-Para obtener una forma para $F_{\mu\nu}$, es conveniente imponer que la densidad Lagrangiana asociada sólo a las nuevas contribuciones de los campos $A_{\nu}$ y sus derivadas $\partial_{\mu}A_{\nu}$, denotada como $\mathcal{L}_{\text{EM}}$ 
+Para obtener una forma para $F_{\mu\nu}$, es conveniente imponer que la densidad Lagrangiana asociada sólo a las nuevas contribuciones de los campos $A_{\nu}$ y sus derivadas $\partial_{\mu}A_{\nu}$, denotada como $\mathcal{L}_{\text{EM}}$,
 %en la ec.
 sea invariante gauge local bajo la transformación del campo $A_{\mu}$ en \eqref{eq:tfgl}. Esto implíca que $\mathcal{L}_{\text{EM}}$  solo puede depender de las derivadas de las campos, y por consiguiente $F^{\mu\nu}$ debe ser una combinación antisimétrica de las derivadas de los campos
 \begin{align}
@@ -200,7 +201,7 @@ auto consistente.
 
 
 En resumen, si la corriente electromagnética, $J^\mu$ se conserva, entonces la Acción es invariante bajo la transformación gauge \eqref{eq:aphicovch2}. Note que la densidad Lagrangiana no es localmente invariante gauge. Sin embargo, la Acción (y por consiguiente la teoría) es invariante gauge.
-
+\end{frame}
 
 \begin{frame}[fragile,allowframebreaks]
 Por lo tanto, el Lagrangiano
@@ -1027,32 +1028,6 @@ Además, el Lagrangiano libre se puede reescribir como la suma de cuatro lagrang
 
 
 
-\section{Problemas}
-\label{sec:problemas2}
-\renewcommand{\labelenumi}{\thechapter.\theenumi} %noinstiki
-
-\begin{enumerate} %noinstiki
-\item Muestre que
-  \begin{equation*}
-    {\Lambda^{\mu}}_{\nu}{\Lambda_\mu}^{\rho}={\Lambda_{\mu}}^{\nu}{\Lambda^{\mu}}_{\rho}=\delta^\rho_\nu
-  \end{equation*}
-Compruebe esta identidad para la transformaci\'on de Lorentz de la ec.~\eqref{eq:147}
-\label{item:pch2.1} %noinstiki
-
-\item Muestre que el Lagrangiano electromagn\'etico en ausencia de corrientes
-  \begin{equation}
-    \mathcal{L}=-\frac{1}{4}F^{\mu\nu}F_{\mu\nu}=\frac{1}{2}\left(\mathbf{E}^2-\mathbf{B}^2\right)
-  \end{equation}
-\label{item:pch2.2} %noinstiki
-
-\item Calcule el rango de la interacci\'on d\'ebil mediada por la part\'\i cula $W^{-}$ de masa
-  \begin{equation}
-    m_W\approx80\;GeV
-  \end{equation}
-\label{item:pch2.3} %noinstiki
-\end{enumerate} %noinstiki
-\renewcommand{\labelenumi}{\theenumi} %noinstiki
-
 
 
 \begin{subappendices}
@@ -1144,6 +1119,28 @@ $K_\nu(x)A^\nu(x)A_\mu(x)A^\mu(x)$ is Lorentz invariant %but not gauge-invariant
 
 
 \end{subappendices}
+
+
+
+\section{Problemas}
+\label{sec:problemas2}
+\renewcommand{\labelenumi}{\thechapter.\theenumi} %noinstiki
+
+\begin{enumerate}
+\item Muestre que el Lagrangiano electromagn\'etico en ausencia de corrientes
+  \begin{equation}
+    \mathcal{L}=-\frac{1}{4}F^{\mu\nu}F_{\mu\nu}=\frac{1}{2}\left(\mathbf{E}^2-\mathbf{B}^2\right)
+  \end{equation}
+\label{item:pch2.2} %noinstiki
+
+\item Calcule el rango de la interacci\'on d\'ebil mediada por la part\'\i cula $W^{-}$ de masa
+  \begin{equation}
+    m_W\approx80\;GeV
+  \end{equation}
+\label{item:pch2.3} %noinstiki
+\end{enumerate} %noinstiki
+\renewcommand{\labelenumi}{\theenumi} %noinstiki
+
 
 
 %\begin{frame}[fragile,allowframebreaks]

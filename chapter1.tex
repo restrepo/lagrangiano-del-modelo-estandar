@@ -471,7 +471,7 @@ Las matrices de Pauli y por consiguiente $T_i$ satisfacen
 \end{align}
 Además
 \begin{align}
-  \label{eq:64qft}
+  \label{eq:64qftw}
   \det
   \left(
     \tau_i
@@ -3284,7 +3284,7 @@ El potencial escalar se puede modelar para que el campo escalar $\phi$ pueda int
 \begin{frame}[fragile,allowframebreaks]
 \textbf{Ejercicio:}
 \begin{enumerate}
-\item  Demuestre que los terminos con derivada para un campo escalar complejo
+\item  Demuestre que los terminos con derivada de la densidad Lagrangiana para un campo escalar complejo
 \begin{align}
   \phi\equiv&\frac{\phi_1+i\phi_2}{\sqrt{2}} &\to&&   \phi^{*}=&\frac{\phi_1-i\phi_2}{\sqrt{2}}\,,
 \end{align}
@@ -4906,22 +4906,60 @@ equivale a un cambio en la energía y la cantidad de movimiento del electrón. P
 \label{sec:problemas-2}
 \renewcommand{\labelenumi}{\thechapter.\theenumi} %noinstiki
 \begin{enumerate}
+\item  Mostrar la invarianza del producto escalar para la definición del producto escalar $\operatorname{SU}(2)$
+\begin{align}
+   \Psi\cdot \Psi \equiv \Psi^{\dagger}\Psi\,.
+\end{align}
+
+\item Demostrar que $\Lambda(\xi_1)$ dada en la primera ec.~\eqref{eq:Lximunu},  cumple la condición de ortogonalidad generalizada~\eqref{eq:cdeog}.
+
+\item Muestre que bajo los cambios $\xi\to i\theta$ y $t\to it$, la transformación de Lorentz se puede escribir como una matriz de rotación convencional.
+
+\item  Demuestre que la ecuación de Klein-Gordon en \eqref{eq:KG} proviende de una densidad Lagragiana del tipo
+\begin{align}
+  \mathcal{L}(\phi,\partial_{\mu} \phi)=  \frac{1}{2}{\partial_\mu\phi}\,{\partial^\mu\phi}-V(\phi)\,,
+\end{align}
+donde
+\begin{align}
+  V(\phi)=\frac{1}{2}m^2 \phi^2\,.
+\end{align}
+
+  
+  
+\item Muestre que
+  \begin{equation*}
+    {\Lambda^{\mu}}_{\nu}{\Lambda_\mu}^{\rho}={\Lambda_{\mu}}^{\nu}{\Lambda^{\mu}}_{\rho}=\delta^\rho_\nu
+  \end{equation*}
+Compruebe esta identidad para la transformaci\'on de Lorentz de la ec.~\eqref{eq:147}
+\label{item:pch2.1} %noinstiki
+
+  
 \item Obtenga el Hamiltoniano a partir de Lagrangiano en\eqref{eq:238} y encuentre la expresi\'on para la densidad Lagrangiana en t\'erminos de $\phi$.
 \label{item:pch1.0} %noinstiki
-\item Demuestre las ecuaciones (\ref{eq:237})(\ref{eq:236}).
-\label{item:pch1.1} %noinstiki
-
-\item \textquestiondown Que cambios se requieren al Lagrangiano de la ecuaci\'on de Dirac para que la Acci\'on sea invariante bajo transformaciones Gauge Locales?. Ver secci\'on \ref{sec:aplic-la-mecan}.
+% \item Demuestre las ecuaciones (\ref{eq:237})(\ref{eq:236}).
+% \label{item:pch1.1} %noinstiki
 
 
 
-\label{item:pch1.3} %noinstiki
+% \item A partir del Lagrangiano de la Mec\'anica Cu\'antica invariante bajo transformaciones de fase local encuentre la ecuaci\'on de Schr\"odinger en presencia del campo electromagn\'etico. Ver secci\'on \ref{sec:aplic-la-mecan}.
 
-\item A partir del Lagrangiano de la Mec\'anica Cu\'antica invariante bajo transformaciones de fase local encuentre la ecuaci\'on de Schr\"odinger en presencia del campo electromagn\'etico. Ver secci\'on \ref{sec:aplic-la-mecan}.
- 
+\item Para la densidad Lagrangiana de Scrödinger
+    \begin{align}
+      \mathcal{L}(\psi,\psi^*,\partial_\mu\psi,\partial_\mu\psi^*)
+&=\frac{1}{2m}\boldsymbol{\nabla}\psi^*\cdot\boldsymbol{\nabla}\psi-\frac{i}{2}
+  \left(
+\psi^*\frac{\partial\psi}{\partial t}-\frac{\partial\psi^*}{\partial t}\psi
+  \right)+\psi^*V\psi\,.
+  \end{align}
 
+\begin{enumerate}
+\item Calcule las ecuaciones de Euler-Lagrange 
+\item Calcule la carga de corriente conservada asociada al cambio de fase 
 
+\item Calcule el tensor de momento energía
 
+\end{enumerate}
+  
 \item Calcule $T^i_0$ para el Lagrangiano de Schr\"odinger
   \begin{align}
     T^i_0=&\frac{\partial\mathcal{L}}{\partial(\partial_i \psi)}\partial_0\psi+\partial_0\psi^*\frac{\partial\mathcal{L}}{\partial(\partial_i \psi^*)}\nonumber\\
