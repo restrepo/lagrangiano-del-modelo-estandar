@@ -45,12 +45,12 @@ Las ecuaciones de Maxwell tienen la simetría obtenida en la ec.~\eqref{eq:aphic
 \end{align}
  que cuando fue descubierta parecía ser una simple curiosidad matemática de dichas ecuaciones.
 
-Comparando con la transformación más general de un campo vemos que para el campo vectorial con dicha invarianza $a_i=0$ y $b^{\mu_i}=1$ en la ec.\eqref{eq:infdt}. 
+Comparando con la transformación más general de un campo vemos, que para un campo vectorial con dicha invarianza: $a_i=0$ y $b^{\mu_i}=1$ en la ec.\eqref{eq:infdt}. 
 
 Ya estamos en capacidad de responder la siguiente pregunta: ¿Cual es el Lagrangiano más general posible para el campo de cuatro componentes $A^{\mu}(x)$ compatible con la invarianza de Lorentz y la invarianza bajo transformaciones gauge?
 
 
-De hecho, si aplicamos el segundo teorema de Noether al campo de radiación
+De hecho, si aplicamos el segundo teorema de Noether al campo de radiación $A^\mu(x)$
 \begin{align}
   0=&\partial_{\mu} \left( \mathcal{E}_3 b^{\mu}_3 \right) \nonumber\\
    0=&\partial_{\mu} \left( \mathcal{E}_3 \delta^{\mu}_\nu \right) \nonumber\\
@@ -59,12 +59,17 @@ De hecho, si aplicamos el segundo teorema de Noether al campo de radiación
    0=&
  \partial_{\mu} \partial_{\rho}\left[ \frac{\partial \mathcal{L}}{\partial \left(  \partial_{\rho} A_{\mu}\right)}  \right] - \partial_{\mu} \frac{\partial \mathcal{L}}{\partial A_{\mu}} \,.
 \end{align}
-El segundo término da lugar a la misma corriente conservada fermiónica
+
+Podemos definir el cuadrivector
+\begin{align}
+  j^\mu(x)\equiv \frac{\partial \mathcal{L}}{\partial A_{\mu}}\,.
+\end{align}
+Si asumimos que este corresponde a un cuadricorriente conservada, tenemos
 \begin{align}
   \partial_{\mu} \frac{\partial \mathcal{L}}{\partial A_{\mu}}=&
 \partial_{\mu} j^{\mu}=0\,,
 \end{align}
-Por consiguiente, la identidad resultante
+Por consiguiente, la identidad resultante 
 \begin{align}
    \partial_{\mu} \partial_{\rho}\left[ \frac{\partial \mathcal{L}}{\partial \left(  \partial_{\rho} A_{\mu}\right)}  \right]=0\,,
 \end{align}
@@ -78,7 +83,7 @@ tal que
 \end{align}
 Para obtener una forma para $F_{\mu\nu}$, es conveniente imponer que la densidad Lagrangiana asociada sólo a las nuevas contribuciones de los campos $A_{\nu}$ y sus derivadas $\partial_{\mu}A_{\nu}$, denotada como $\mathcal{L}_{\text{EM}}$,
 %en la ec.
-sea invariante gauge local bajo la transformación del campo $A_{\mu}$ en \eqref{eq:tfgl}. Esto implíca que $\mathcal{L}_{\text{EM}}$  solo puede depender de las derivadas de las campos, y por consiguiente $F^{\mu\nu}$ debe ser una combinación antisimétrica de las derivadas de los campos
+sea invariante gauge local bajo la transformación del campo $A_{\mu}$ en \eqref{eq:tfgl}. Esto implíca que $\mathcal{L}_{\text{EM}}$  solo puede depender de las derivadas de las campos, y por consiguiente $F^{\mu\nu}$ debe ser una combinación antisimétrica sus derivadas
 \begin{align}
   F_{\mu\nu}\equiv\partial_{\mu}A_{\nu}-\partial_{\nu}A_{\mu}\,.
 \end{align}
