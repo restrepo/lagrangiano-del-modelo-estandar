@@ -49,6 +49,60 @@ Comparando con la transformación más general de un campo vemos, que para un ca
 
 Ya estamos en capacidad de responder la siguiente pregunta: ¿Cual es el Lagrangiano más general posible para el campo de cuatro componentes $A^{\mu}(x)$ compatible con la invarianza de Lorentz y la invarianza bajo transformaciones gauge?
 
+Para abordar estas preguntas podemos comenzar por resaltar algunas propiedades que debe tener el Lagragiano
+\begin{itemize}
+\item Al igual que con el caso escalar el Lagrangiano no puede dependender en una única derivada  de primer de orden, por lo que el termino cinético debe contener una doble derivada del tipo $\partial^{\mu}A^{\nu}\partial_{\mu}A_{\nu}$. Sin perdidad de generalidad, usaremos la convención que la derivada con índice superior (inferio) actúa un cuadrivector con índice superior (inferior).
+\item La parte del Lagrangiano que depende de la otra variable generalizada correspondiente al camplo explícito $A^{\nu}(x)$ no puede ser una única función de $A^{\nu}$ del tipo $A_{\nu}A^{\nu}$, pues dicho término no es invariante gauge. Por tanto, dicha parte del Lagrangiano, de existir, debe ir acompañada de términos de interacción con otros campos. Por consiguiente, la forma más general posible para una densidad Lagrangiana que dependa en los campos $A^{\mu}$ y sus derivadas, debe ser del tipo
+  \begin{align}
+  \mathcal{L}(\partial_{\mu}A_{\nu},A_{\nu},\phi_i)=  \mathcal{L}(\partial_{\mu}A_{\nu})+\mathcal{L}(A_{\nu},\phi_i)\,.
+  \end{align}
+  Por lo tanto
+  \begin{align}
+    \frac{\partial }{\partial A_{\nu}} \mathcal{L}(\partial_{\mu}A_{\nu},A_{\nu},\phi_i)=\frac{\partial }{\partial A_{\nu}} \mathcal{L}(A_{\nu},\phi_i)\,.
+  \end{align}
+
+  Por lo tanto podremos definir la parte áun por determinar en capítulos posteriores sobre la parte de Lagrangianao que depende de los campos extras como
+  \begin{align}
+    j^{\nu}\equiv\frac{\partial \mathcal{L}}{\partial A_{\nu}}\,,
+  \end{align}
+que debe transformar como un campo vectorial de Lorentz:
+\begin{align}
+  j^{\mu}(x)\to j^{\prime\mu}(x) ={\Lambda^{\mu}}_{\nu}\, j^{\nu}(\Lambda^{-1}x)\,.
+\end{align}
+
+
+
+\end{itemize}
+Sin poner explícitamente la transformación en las variables internas, las posibles derivadas de campo vectorial de Lorentz, $A^{\mu}$, transforman bajo Lorentz como
+\begin{align}
+  \partial_{\mu}A_{\nu}\to \partial'_{\mu}A'_{\nu}=& {\left( \Lambda^{-1}  \right)^{\alpha}}_{\mu}\partial_{\alpha} \left[ {\left( \Lambda^{-1} \right)^{\beta}}_{\nu} A_{\beta}  \right]\nonumber\\
+  \partial_{\mu}A_{\nu}\to \partial'_{\mu}A'_{\nu}=& {\left( \Lambda^{-1}  \right)^{\alpha}}_{\mu}\partial_{\alpha} A_{\beta} {\left( \Lambda^{-1} \right)^{\beta}}_{\nu}\,.
+\end{align}
+Entonces
+\begin{align}
+  \partial_{\mu}A_{\nu}\to \partial'_{\mu}A'_{\nu}=& {\left( \Lambda^{-1}  \right)^{\alpha}}_{\mu}\partial_{\alpha} A_{\beta} {\left( \Lambda^{-1} \right)^{\beta}}_{\nu}\,,&          \partial_{\nu}A_{\mu}\to \partial'_{\nu}A'_{\mu}=& {\left( \Lambda^{-1}  \right)^{\alpha}}_{\nu}\partial_{\alpha} A_{\beta} {\left( \Lambda^{-1} \right)^{\beta}}_{\mu} \nonumber\\
+  \partial^{\mu}A^{\nu}\to \partial^{\prime\mu}A^{\prime\nu}=& {\Lambda^{\mu}}_{\alpha}\partial^{\alpha} A^{\beta} {\Lambda^{\nu}}_{\beta}\,,&
+\partial^{\nu}A^{\mu}\to \partial^{\prime\nu}A^{\prime\mu}=& {\Lambda^{\nu}}_{\alpha}\partial^{\alpha} A^{\beta} {\Lambda^{\mu}}_{\beta}\,.
+\end{align}
+
+Para construir términos invariantes que pueden ir en el Lagrangiano, tenemos las dos posibilidades relevantes
+\begin{align}
+  \partial_{\mu}A_{\nu}  \partial^{\mu}A^{\nu}\to\partial'_{\mu}A'_{\nu} \partial^{\prime\mu}A^{\prime\nu}
+  =& {\left( \Lambda^{-1}  \right)^{\alpha}}_{\mu}\partial_{\alpha} A_{\beta} {\left( \Lambda^{-1} \right)^{\beta}}_{\nu}
+     {\Lambda^{\mu}}_{\gamma}\partial^{\gamma} A^{\delta} {\Lambda^{\nu}}_{\delta}\nonumber\\
+=& \delta^{\alpha}_{\gamma}\delta^{\beta}_{\delta} \partial_{\alpha} A_{\beta}\partial^{\gamma} A^{\delta} \nonumber\\
+=&\partial_{\alpha} A_{\beta}\partial^{\alpha} A^{\beta}\,,
+\end{align}
+y
+\begin{align}
+  \partial_{\mu}A_{\nu}\partial^{\nu}A^{\mu}\to \partial'_{\mu}A'_{\nu} \partial^{\prime\nu} A^{\prime\mu}
+  =&  {\left( \Lambda^{-1}  \right)^{\alpha}}_{\mu}\partial_{\alpha} A_{\beta} {\left( \Lambda^{-1} \right)^{\beta}}_{\nu}
+     {\Lambda^{\nu}}_{\gamma}\partial^{\gamma} A^{\delta} {\Lambda^{\mu}}_{\delta} \nonumber\\
+=&\delta^{\alpha}_{\delta} \delta^{\beta}_{\gamma} \partial_{\alpha} A_{\beta}\partial^{\gamma} A^{\delta} \nonumber\\
+=& \partial_{\alpha} A_{\beta} \partial^{\beta} A^{\alpha}\,.
+\end{align}
+
+
 
 De hecho, si aplicamos el segundo teorema de Noether al campo de radiación $A^\mu(x)$
 \begin{align}
@@ -92,7 +146,7 @@ Con esta definición, bajo la transformación  \eqref{eq:tfgl}
   F_{\mu\nu}\to F_{\mu\nu}'=F_{\mu\nu}\,.
 \end{align}
 
-En efecto, para el campo electromagnético invariante bajo $\operatorname{U}(1)_Q$, podemos considerar como campo fundamental al tensor de campo electromagnético, que bajo el Grupo de Lorentz transforma como
+En efecto, para el campo electromagnético invariante bajo $\operatorname{U}(1)_Q$, podemos considerar como campo fundamental al tensor de campo electromagnético. Para análisis posteriores, repetiremos la demostración de invarianza pero relajando nuestra notación de usar transformaciones de Lorentz inversas para cuadrivectores con indices abajo y transformaciones de Lorentz normales para cuadrivectores con índice arriba. De esta forma podemos definir la transformación de un tensor  bajo el Grupo de Lorentz  como
 \begin{align}
   F_{\mu\nu} \to F'_{\mu\nu}=&\partial'_{\mu} A'_{\nu} -\partial'_{\nu} A'_{\mu} \nonumber\\
 =&g_{\nu\alpha}\partial'_{\mu} A^{\alpha} -\partial'_{\nu} {A'}_{\mu} \nonumber\\
@@ -113,7 +167,7 @@ Finalmente
   F_{\mu\nu}(x) \to F'_{\mu\nu}(x)  =& { \Lambda_{\mu}}^{\alpha}F_{\alpha\beta}\left( \Lambda^{-1}x \right)\,
                    {\left( \Lambda^{-1} \right)^{\beta}}_{\nu} \,.
 \end{align}
-que tiene la misma forma que la tranformación $\operatorname{SU}(3)$ de la matrix de tensores de campos de gluones en la ec.~\eqref{eq:ugum}.
+que tiene la misma forma que tendrá la tranformación $\operatorname{SU}(3)$ de la matrix de tensores de campos de gluones en la ec.~\eqref{eq:ugum}.
 
 De esta forma
 \begin{align}
