@@ -45,7 +45,7 @@ Las ecuaciones de Maxwell son invariantes bajo la \emph{transformación gauge lo
       \delta A^\mu(x)=&b\,\partial^\mu\theta(x)
 \end{align}
  que cuando fue descubierta parecía ser una simple curiosidad matemática de dichas ecuaciones.
-
+\end{frame}
 Comparando con la transformación más general de un campo vemos, que para un campo vectorial con dicha invarianza: $a=0$ y $b=-1$ en la ec.~\eqref{eq:infdt}. 
 
 Ya estamos en capacidad de responder la siguiente pregunta: ¿Cual es el Lagrangiano más general posible para el campo de cuatro componentes $A^{\mu}(x)$ compatible con la invarianza de Lorentz y la invarianza bajo transformaciones gauge?
@@ -54,11 +54,14 @@ Para abordar estas preguntas podemos comenzar por resaltar algunas propiedades q
 \begin{itemize}
 \item Al igual que con el caso escalar el Lagrangiano no puede dependender en una única derivada  de primer de orden, por lo que el termino cinético debe contener una doble derivada del tipo $\partial^{\mu}A^{\nu}\partial_{\mu}A_{\nu}$. Sin perdidad de generalidad, usaremos la convención que la derivada con índice superior (inferio) actúa un cuadrivector con índice superior (inferior).
 \item La parte del Lagrangiano que depende de la otra variable generalizada correspondiente al camplo explícito $A^{\nu}(x)$ no puede ser una única función de $A^{\nu}$ del tipo $A_{\nu}A^{\nu}$, pues dicho término no es invariante gauge. Por tanto, dicha parte del Lagrangiano, de existir, debe ir acompañada de términos de interacción con otros campos. Por consiguiente, la forma más general posible para una densidad Lagrangiana que dependa en los campos $A^{\mu}$ y sus derivadas, debe ser del tipo
+\begin{frame}[fragile,allowframebreaks]
   \begin{align}
   \mathcal{L}(\partial_{\mu}A_{\nu},A_{\nu},\phi_i)=  \mathcal{L}_{\text{EM}}(\partial_{\mu}A_{\nu})+\mathcal{L}_{\text{int}}(A_{\nu},\phi_i)\,.
   \end{align}
-  \end{itemize}
-  
+\end{frame}
+\end{itemize}
+
+\begin{frame}[fragile,allowframebreaks]
   Por lo tanto
   \begin{align}
     \frac{\partial }{\partial A_{\nu}} \mathcal{L}(\partial_{\mu}A_{\nu},A_{\nu},\phi_i)=\frac{\partial }{\partial A_{\nu}} \mathcal{L}_{\text{int}}(A_{\nu},\phi_i)\,.
@@ -68,7 +71,10 @@ Para abordar estas preguntas podemos comenzar por resaltar algunas propiedades q
   \begin{align}
               \label{eq:thnfmunu0}
      j^{\nu}\propto&\frac{\partial \mathcal{L}}{\partial A_{\nu}}\,,&\text{with}&&j^{\nu}\equiv&-\frac{\partial \mathcal{L}}{\partial A_{\nu}}\,,
-  \end{align}%
+  \end{align}
+
+\end{frame}
+  % 
 que debe transformar como un campo vectorial de Lorentz:
 \begin{align}
   j^{\mu}(x)\to j^{\prime\mu}(x) ={\Lambda^{\mu}}_{\nu}\, j^{\nu}(\Lambda^{-1}x)\,.
@@ -129,6 +135,7 @@ Si asumimos que $j^\nu$ corresponde a un cuadricorriente conservada
 \partial_{\mu} j^{\mu}=0\,,
 \end{align}
 tendremos como resultado la identidad
+\begin{frame}[fragile,allowframebreaks]
 \begin{align}
    \partial_{\nu} \partial_{\mu}\left[ \frac{\partial \mathcal{L}_{\text{EM}}}{\partial \left(  \partial_{\mu} A_{\nu}\right)}  \right]=0\,.
 \end{align}
@@ -141,6 +148,7 @@ tal que
 \begin{align}
   \partial_{\nu}\partial_{\mu}F^{\nu\mu}=\partial_{\mu}\partial_{\nu}F^{\nu\mu}=0\,.
 \end{align}
+\end{frame}
 Para obtener una forma para $F_{\mu\nu}$, es conveniente imponer que la densidad Lagrangiana asociada sólo a las nuevas contribuciones de los campos $A_{\nu}$ y sus derivadas $\partial_{\mu}A_{\nu}$, denotada como $\mathcal{L}_{\text{EM}}$,
 %en la ec.
 sea invariante gauge local bajo la transformación del campo $A_{\mu}$ en \eqref{eq:tfgl}. Esto implíca que $\mathcal{L}_{\text{EM}}$  solo puede depender de las derivadas de las campos, y por consiguiente $F^{\mu\nu}$ debe ser una combinación antisimétrica sus derivadas
@@ -210,6 +218,7 @@ Note que este resultado se puede obtener directamente con las transformaciones u
 Por consiguiente, el único término posible que a la vez es invariante de Lorentz e invariante gauge local
 para
 el Lagragiano electromagnético
+\begin{frame}[fragile,allowframebreaks]
 \begin{align}
   \label{eq:lemfree}
   \mathcal{L}_{\text{EM}}=-\frac{1}{4}F_{\mu\nu}F^{\mu\nu}\,,
@@ -248,6 +257,7 @@ Por lo tanto
 \begin{align}
 \frac{\partial\mathcal{L}_{\text{EM}}}{\partial(\partial_\mu A_\nu)}=-F^{\mu\nu}=F^{\nu\mu}\,,
 \end{align}
+\end{frame}
 y en efecto, como hemos defindo en la ec.~\eqref{eq:thnfmunu}
 \begin{align}
   F^{\mu\nu}=&\frac{\partial \mathcal{L}_{\text{EM}}}{\partial \left(  \partial_{\nu} A_{\mu}\right)}\,,
@@ -257,7 +267,7 @@ tal que
   \partial_{\mu}\partial_{\nu}F^{\mu\nu}=0\,.
 \end{align}
 
-
+\begin{frame}[fragile,allowframebreaks]
 El Lagrangiano en ec.~\eqref{eq:lemfree} admite un término adicional:
 \begin{align}
     \mathcal{L}=-\frac{1}{4}F^{\mu\nu}F_{\mu\nu}-j^\nu A_\nu\,,
