@@ -38,14 +38,15 @@
  
 \section{Lagrangiano electromagnético}
 \begin{frame}[fragile,allowframebreaks]
-Las ecuaciones de Maxwell tienen la simetría obtenida en la ec.~\eqref{eq:aphicov}
+Las ecuaciones de Maxwell son invariantes bajo la \emph{transformación gauge local} obtenida en la ec.~\eqref{eq:aphicov} 
 \begin{align}
-  \label{eq:aphicovch2}
-   A^\mu\to {A'}^\mu=&A^\mu-\partial^\mu\theta(x)
+  \label{eq:aphicovch2m}
+   A^\mu(x)\to {A'}^\mu=&A^\mu(x)-\partial^\mu\theta(x)\nonumber\\
+      \delta A^\mu(x)=&b\,\partial^\mu\theta(x)
 \end{align}
  que cuando fue descubierta parecía ser una simple curiosidad matemática de dichas ecuaciones.
 
-Comparando con la transformación más general de un campo vemos, que para un campo vectorial con dicha invarianza: $a_i=0$ y $b^{\mu_i}=1$ en la ec.\eqref{eq:infdt}. 
+Comparando con la transformación más general de un campo vemos, que para un campo vectorial con dicha invarianza: $a=0$ y $b=-1$ en la ec.~\eqref{eq:infdt}. 
 
 Ya estamos en capacidad de responder la siguiente pregunta: ¿Cual es el Lagrangiano más general posible para el campo de cuatro componentes $A^{\mu}(x)$ compatible con la invarianza de Lorentz y la invarianza bajo transformaciones gauge?
 
@@ -54,17 +55,20 @@ Para abordar estas preguntas podemos comenzar por resaltar algunas propiedades q
 \item Al igual que con el caso escalar el Lagrangiano no puede dependender en una única derivada  de primer de orden, por lo que el termino cinético debe contener una doble derivada del tipo $\partial^{\mu}A^{\nu}\partial_{\mu}A_{\nu}$. Sin perdidad de generalidad, usaremos la convención que la derivada con índice superior (inferio) actúa un cuadrivector con índice superior (inferior).
 \item La parte del Lagrangiano que depende de la otra variable generalizada correspondiente al camplo explícito $A^{\nu}(x)$ no puede ser una única función de $A^{\nu}$ del tipo $A_{\nu}A^{\nu}$, pues dicho término no es invariante gauge. Por tanto, dicha parte del Lagrangiano, de existir, debe ir acompañada de términos de interacción con otros campos. Por consiguiente, la forma más general posible para una densidad Lagrangiana que dependa en los campos $A^{\mu}$ y sus derivadas, debe ser del tipo
   \begin{align}
-  \mathcal{L}(\partial_{\mu}A_{\nu},A_{\nu},\phi_i)=  \mathcal{L}(\partial_{\mu}A_{\nu})+\mathcal{L}(A_{\nu},\phi_i)\,.
+  \mathcal{L}(\partial_{\mu}A_{\nu},A_{\nu},\phi_i)=  \mathcal{L}_{\text{EM}}(\partial_{\mu}A_{\nu})+\mathcal{L}_{\text{int}}(A_{\nu},\phi_i)\,.
   \end{align}
+  \end{itemize}
+  
   Por lo tanto
   \begin{align}
-    \frac{\partial }{\partial A_{\nu}} \mathcal{L}(\partial_{\mu}A_{\nu},A_{\nu},\phi_i)=\frac{\partial }{\partial A_{\nu}} \mathcal{L}(A_{\nu},\phi_i)\,.
+    \frac{\partial }{\partial A_{\nu}} \mathcal{L}(\partial_{\mu}A_{\nu},A_{\nu},\phi_i)=\frac{\partial }{\partial A_{\nu}} \mathcal{L}_{\text{int}}(A_{\nu},\phi_i)\,.
   \end{align}
 
-  Por lo tanto podremos definir la parte áun por determinar en capítulos posteriores sobre la parte de Lagrangianao que depende de los campos extras como
+  Podemos definir la derivada de $\mathcal{L}_{\text{int}}$ (la cual se determinará en capítulos posteriores) y que depende de los campos extras, como
   \begin{align}
-    j^{\nu}\equiv\frac{\partial \mathcal{L}}{\partial A_{\nu}}\,,
-  \end{align}
+              \label{eq:thnfmunu0}
+     j^{\nu}\propto&\frac{\partial \mathcal{L}}{\partial A_{\nu}}\,,&\text{with}&&j^{\nu}\equiv&-\frac{\partial \mathcal{L}}{\partial A_{\nu}}\,,
+  \end{align}%
 que debe transformar como un campo vectorial de Lorentz:
 \begin{align}
   j^{\mu}(x)\to j^{\prime\mu}(x) ={\Lambda^{\mu}}_{\nu}\, j^{\nu}(\Lambda^{-1}x)\,.
@@ -72,7 +76,7 @@ que debe transformar como un campo vectorial de Lorentz:
 
 
 
-\end{itemize}
+
 Sin poner explícitamente la transformación en las variables internas, las posibles derivadas de campo vectorial de Lorentz, $A^{\mu}$, transforman bajo Lorentz como
 \begin{align}
   \partial_{\mu}A_{\nu}\to \partial'_{\mu}A'_{\nu}=& {\left( \Lambda^{-1}  \right)^{\alpha}}_{\mu}\partial_{\alpha} \left[ {\left( \Lambda^{-1} \right)^{\beta}}_{\nu} A_{\beta}  \right]\nonumber\\
@@ -80,6 +84,7 @@ Sin poner explícitamente la transformación en las variables internas, las posi
 \end{align}
 Entonces
 \begin{align}
+\label{eq:tensotra}
   \partial_{\mu}A_{\nu}\to \partial'_{\mu}A'_{\nu}=& {\left( \Lambda^{-1}  \right)^{\alpha}}_{\mu}\partial_{\alpha} A_{\beta} {\left( \Lambda^{-1} \right)^{\beta}}_{\nu}\,,&          \partial_{\nu}A_{\mu}\to \partial'_{\nu}A'_{\mu}=& {\left( \Lambda^{-1}  \right)^{\alpha}}_{\nu}\partial_{\alpha} A_{\beta} {\left( \Lambda^{-1} \right)^{\beta}}_{\mu} \nonumber\\
   \partial^{\mu}A^{\nu}\to \partial^{\prime\mu}A^{\prime\nu}=& {\Lambda^{\mu}}_{\alpha}\partial^{\alpha} A^{\beta} {\Lambda^{\nu}}_{\beta}\,,&
 \partial^{\nu}A^{\mu}\to \partial^{\prime\nu}A^{\prime\mu}=& {\Lambda^{\nu}}_{\alpha}\partial^{\alpha} A^{\beta} {\Lambda^{\mu}}_{\beta}\,.
@@ -87,6 +92,7 @@ Entonces
 
 Para construir términos invariantes que pueden ir en el Lagrangiano, tenemos las dos posibilidades relevantes
 \begin{align}
+\label{eq:tensotra1}
   \partial_{\mu}A_{\nu}  \partial^{\mu}A^{\nu}\to\partial'_{\mu}A'_{\nu} \partial^{\prime\mu}A^{\prime\nu}
   =& {\left( \Lambda^{-1}  \right)^{\alpha}}_{\mu}\partial_{\alpha} A_{\beta} {\left( \Lambda^{-1} \right)^{\beta}}_{\nu}
      {\Lambda^{\mu}}_{\gamma}\partial^{\gamma} A^{\delta} {\Lambda^{\nu}}_{\delta}\nonumber\\
@@ -95,45 +101,45 @@ Para construir términos invariantes que pueden ir en el Lagrangiano, tenemos la
 \end{align}
 y
 \begin{align}
-  \partial_{\mu}A_{\nu}\partial^{\nu}A^{\mu}\to \partial'_{\mu}A'_{\nu} \partial^{\prime\nu} A^{\prime\mu}
+\label{eq:tensotra2}
+\partial_{\mu}A_{\nu}\partial^{\nu}A^{\mu}\to \partial'_{\mu}A'_{\nu} \partial^{\prime\nu} A^{\prime\mu}
   =&  {\left( \Lambda^{-1}  \right)^{\alpha}}_{\mu}\partial_{\alpha} A_{\beta} {\left( \Lambda^{-1} \right)^{\beta}}_{\nu}
      {\Lambda^{\nu}}_{\gamma}\partial^{\gamma} A^{\delta} {\Lambda^{\mu}}_{\delta} \nonumber\\
 =&\delta^{\alpha}_{\delta} \delta^{\beta}_{\gamma} \partial_{\alpha} A_{\beta}\partial^{\gamma} A^{\delta} \nonumber\\
 =& \partial_{\alpha} A_{\beta} \partial^{\beta} A^{\alpha}\,.
 \end{align}
 
-
-
-De hecho, si aplicamos el segundo teorema de Noether al campo de radiación $A^\mu(x)$
+Las ecuaciones de Euler-Lagrange para el campo $A^\nu$, son (usando~\eqref{eq:thnfmunu0})
 \begin{align}
-  0=&\partial_{\mu} \left( \mathcal{E}_3 b^{\mu}_3 \right) \nonumber\\
-   0=&\partial_{\mu} \left( \mathcal{E}_3 \delta^{\mu}_\nu \right) \nonumber\\
-   0=&
- \partial_{\mu} \partial_{\rho} \left[ \frac{\partial \mathcal{L}}{\partial \left(  \partial_{\rho} A_{\nu}\right)}  \delta^{\mu}_\nu \right] - \partial_{\mu} \frac{\partial \mathcal{L}}{\partial A_{\nu}}\delta^{\mu}_{\nu} \nonumber\\
-   0=&
- \partial_{\mu} \partial_{\rho}\left[ \frac{\partial \mathcal{L}}{\partial \left(  \partial_{\rho} A_{\mu}\right)}  \right] - \partial_{\mu} \frac{\partial \mathcal{L}}{\partial A_{\mu}} \,.
+\mathcal{E}^\nu=&\partial_\mu \left[  \frac{\partial \mathcal{L}}{\partial\left(\partial_\mu A_\nu\right)}  \right]-\frac{\partial\mathcal{L}}{\partial A_\nu}\nonumber\\
+=&\partial_\mu \left[  \frac{\partial \mathcal{L}_{\text{EM}}}{\partial\left(\partial_\mu A_\nu\right)}  \right]-\frac{\partial\mathcal{L}_{\text{int}}}{\partial A_\nu}\nonumber\\
+=&\partial_\mu \left[  \frac{\partial \mathcal{L}_{\text{EM}}}{\partial\left(\partial_\mu A_\nu\right)}  \right]-j^\nu\,.
 \end{align}
 
-Podemos definir el cuadrivector
+De hecho, si aplicamos el segundo teorema de Noether al campo de radiación $A_\nu(x)$
 \begin{align}
-  j^\mu(x)\equiv \frac{\partial \mathcal{L}}{\partial A_{\mu}}\,.
+  0=&\partial_{\nu} \left( \mathcal{E}^\nu b \right) \nonumber\\
+   0=&
+ \partial_{\nu} \partial_{\mu} \left[ \frac{\partial \mathcal{L}_{\text{EM}}}{\partial \left(  \partial_{\mu} A_{\nu}\right)} \right] - \partial_{\nu} j^\nu \,.
 \end{align}
-Si asumimos que este corresponde a un cuadricorriente conservada, tenemos
+
+Si asumimos que $j^\nu$ corresponde a un cuadricorriente conservada
 \begin{align}
-  \partial_{\mu} \frac{\partial \mathcal{L}}{\partial A_{\mu}}=&
+\label{eq:contamu}
 \partial_{\mu} j^{\mu}=0\,,
 \end{align}
-Por consiguiente, la identidad resultante 
+tendremos como resultado la identidad
 \begin{align}
-   \partial_{\mu} \partial_{\rho}\left[ \frac{\partial \mathcal{L}}{\partial \left(  \partial_{\rho} A_{\mu}\right)}  \right]=0\,,
+   \partial_{\nu} \partial_{\mu}\left[ \frac{\partial \mathcal{L}_{\text{EM}}}{\partial \left(  \partial_{\mu} A_{\nu}\right)}  \right]=0\,.
 \end{align}
-se puede interpretar como la necesidad de introducir el tensor antisimétrico
+Como $\partial_\mu\partial_\nu=\partial_\nu\partial_\mu$ corresponde a un tensor simétrico, la identidad anteriors se puede interpretar como la necesidad de introducir el tensor antisimétrico
 \begin{align}
-  F_{\mu\nu}=\frac{\partial \mathcal{L}}{\partial \left(  \partial_{\nu} A_{\mu}\right)}\,,
+\label{eq:thnfmunu}
+  F^{\nu\mu}\propto&\frac{\partial \mathcal{L}}{\partial \left(  \partial_{\mu} A_{\nu}\right)}\,,&\text{with:}&&F^{\nu\mu}\equiv&\frac{\partial \mathcal{L}}{\partial \left(  \partial_{\mu} A_{\nu}\right)}\,,
 \end{align}
 tal que
 \begin{align}
-  \partial_{\mu}\partial_{\nu}F^{\mu\nu}=0\,.
+  \partial_{\nu}\partial_{\mu}F^{\nu\mu}=\partial_{\mu}\partial_{\nu}F^{\nu\mu}=0\,.
 \end{align}
 Para obtener una forma para $F_{\mu\nu}$, es conveniente imponer que la densidad Lagrangiana asociada sólo a las nuevas contribuciones de los campos $A_{\nu}$ y sus derivadas $\partial_{\mu}A_{\nu}$, denotada como $\mathcal{L}_{\text{EM}}$,
 %en la ec.
@@ -141,12 +147,20 @@ sea invariante gauge local bajo la transformación del campo $A_{\mu}$ en \eqref
 \begin{align}
   F_{\mu\nu}\equiv\partial_{\mu}A_{\nu}-\partial_{\nu}A_{\mu}\,.
 \end{align}
-Con esta definición, bajo la transformación  \eqref{eq:tfgl}
+Con esta definición, bajo la transformación  \eqref{eq:aphicovch2m}
 \begin{align}
-  F_{\mu\nu}\to F_{\mu\nu}'=F_{\mu\nu}\,.
+  F_{\mu\nu}\to F_{\mu\nu}'=&\partial_{\mu}A'_{\nu}-\partial_{\nu}A'_{\mu}\nonumber\\
+  =& \partial_{\mu}\left(A_{\nu}-\partial_\nu\theta\right)-\partial_{\nu}\left(A_{\mu}-\partial_\mu\theta\right) \nonumber\\
+  =&\partial_{\mu}A_{\nu}-\partial_{\nu}A_{\mu}
+  -\partial_{\mu}\partial_\nu\theta +\partial_{\nu}\partial_\mu\theta \nonumber\\
+  =&F_{\mu\nu}-\cancel{\partial_{\mu}\partial_\nu\theta}+\cancel{\partial_{\mu}\partial_\nu\theta}\nonumber\\
+  =&F_{\mu\nu}\,.
 \end{align}
 
-En efecto, para el campo electromagnético invariante bajo $\operatorname{U}(1)_Q$, podemos considerar como campo fundamental al tensor de campo electromagnético. Para análisis posteriores, repetiremos la demostración de invarianza pero relajando nuestra notación de usar transformaciones de Lorentz inversas para cuadrivectores con indices abajo y transformaciones de Lorentz normales para cuadrivectores con índice arriba. De esta forma podemos definir la transformación de un tensor  bajo el Grupo de Lorentz  como
+En efecto, para las ecuaciones de campo electromagnético, invariante bajo la transformación gauge local, podemos considerar como campo fundamental al tensor de campo electromagnético.
+Más adelante se escribirán las ecuaciones del campo electromagnético en términos del tensor de campo electromagnético $F_{\mu\nu}$. Dicho tensor electromagnético transforma en efecto como un tensor bajo el Grupo de Lorentz.
+
+Para análisis posteriores, estableceremos la demostración del carácter tensorial de $F_{\mu\nu}$ relajando nuestra notación de usar transformaciones de Lorentz inversas para cuadrivectores con índices abajo y transformaciones de Lorentz normales para cuadrivectores con índice arriba. De esta forma podemos definir la transformación de un tensor  bajo el Grupo de Lorentz  como
 \begin{align}
   F_{\mu\nu} \to F'_{\mu\nu}=&\partial'_{\mu} A'_{\nu} -\partial'_{\nu} A'_{\mu} \nonumber\\
 =&g_{\nu\alpha}\partial'_{\mu} A^{\alpha} -\partial'_{\nu} {A'}_{\mu} \nonumber\\
@@ -190,12 +204,11 @@ F_{\alpha\beta}F_{\sigma\rho} \nonumber\\
 F_{\alpha\beta}F_{\sigma\rho} \nonumber\\
   =& F_{\alpha\beta}F^{\alpha\beta}\,.
 \end{align}
+Note que este resultado se puede obtener directamente con las transformaciones usuales de cuadrivectores dadas en las ecs~\eqref{eq:tensotra1} y \eqref{eq:tensotra2}.
 
 
-
-Por consiguiente, el único término posible que a la vez es invariante de Lorentz e invariante gauge local es
-
-Para
+Por consiguiente, el único término posible que a la vez es invariante de Lorentz e invariante gauge local
+para
 el Lagragiano electromagnético
 \begin{align}
   \label{eq:lemfree}
@@ -203,9 +216,9 @@ el Lagragiano electromagnético
 \end{align}
 %%hablar de la ecuaciones de Euler-Lagrange, el gauge de Lorentz y la ecuación de onda.
 %el cual satisface que
-demostrar que
+A partir de este Lagrangiana, podemos demostrar en efecto que
 \begin{align}
-  F_{\mu\nu}=\frac{\partial \mathcal{L}}{\partial \left(  \partial_{\nu} A_{\mu}\right)}\,,
+  F^{\mu\nu}=\frac{\partial \mathcal{L}_{\text{EM}}}{\partial \left(  \partial_{\nu} A_{\mu}\right)}\,,
 \end{align}
 
 
@@ -228,11 +241,16 @@ A_\alpha\delta_{\sigma\mu}\delta_{\rho\nu}).\nonumber\\
 =&  \partial^\mu A^\nu+\partial^\mu A^\nu-\partial^\nu A^\mu-\partial^\nu A^\mu-\partial^\nu A^\mu-\partial^\nu A^\mu+\partial^\mu A^\nu+\partial^\mu A^\nu\nonumber\\
 =&4(\partial^\mu A^\nu-\partial^\nu A^\mu) \nonumber\\
 \label{eq:dddmufmunu2}
-\frac{\partial}{\partial(\partial_\mu A_\nu)}F^{\rho\sigma}F_{\rho\sigma}&=4F^{\mu\nu}
+\frac{\partial}{\partial(\partial_\mu A_\nu)}F^{\rho\sigma}F_{\rho\sigma}&=4F^{\mu\nu}\,.
 \end{align}
-y en efecto
+%
+Por lo tanto
 \begin{align}
-  F_{\mu\nu}=\frac{\partial \mathcal{L}}{\partial \left(  \partial_{\nu} A_{\mu}\right)}\,,
+\frac{\partial\mathcal{L}_{\text{EM}}}{\partial(\partial_\mu A_\nu)}=-F^{\mu\nu}=F^{\nu\mu}\,,
+\end{align}
+y en efecto, como hemos defindo en la ec.~\eqref{eq:thnfmunu}
+\begin{align}
+  F^{\mu\nu}=&\frac{\partial \mathcal{L}_{\text{EM}}}{\partial \left(  \partial_{\nu} A_{\mu}\right)}\,,
 \end{align}
 tal que
 \begin{align}
@@ -242,40 +260,39 @@ tal que
 
 El Lagrangiano en ec.~\eqref{eq:lemfree} admite un término adicional:
 \begin{align}
-    \mathcal{L}=-\frac{1}{4}F^{\mu\nu}F_{\mu\nu}-J^\mu A_\mu\,,
+    \mathcal{L}=-\frac{1}{4}F^{\mu\nu}F_{\mu\nu}-j^\nu A_\nu\,,
 \end{align}
-siempre y cuando $J^\mu(x)$ sea una corriente vectorial conservada:
+siempre y cuando $j^\nu(x)$ sea una corriente vectorial conservada:
 \begin{align}
-J^\mu(x)\to  {J'}^\mu(x)=&\Lambda^\mu_\nu J^\nu(\Lambda^{-1}x)\,,&  \partial_\mu J^\mu(x)=&0\,.
+j^\nu(x)\to  {j'}^\nu(x)=&{\Lambda^\nu}_\mu j^\mu(\Lambda^{-1}x)\,,&  \partial_\nu j^\nu(x)=&0\,.
 \end{align}
 
-De hecho,  usando la ec.~\eqref{eq:consvjmu}, tenemos que para la transformación interna del campo $A^\mu$, eq.~\eqref{eq:aphicovch2}
+De hecho,  usando la ec.~\eqref{eq:consvjmu}, tenemos que para la transformación interna del campo $A^\nu$, eq.~\eqref{eq:aphicovch2}
 \begin{align}
   \delta\mathcal{L}=\mathcal{L}'-\mathcal{L}=&
--\frac{1}{4}{F'}^{\mu\nu}F'_{\mu\nu}-J^\mu A'_\mu+\frac{1}{4}F^{\mu\nu}F_{\mu\nu}+J^\mu A_\mu\nonumber\\
-  =&-J^\mu A_\mu+J^\mu\partial_\mu\theta(x)+J^\mu A_\mu\nonumber\\
-  =&J^\mu\partial_\mu\theta(x)\nonumber\\
-=&\partial_\mu(J^\mu\chi)-(\partial_\mu J^\mu)\theta(x)
+-\frac{1}{4}{F'}^{\mu\nu}F'_{\mu\nu}-j^\nu A'_\nu+\frac{1}{4}F^{\mu\nu}F_{\mu\nu}+j^\nu A_\nu\nonumber\\
+  =&-j^\nu A_\nu+j^\nu\partial_\nu\theta(x)+j^\nu A_\nu\nonumber\\
+  =&j^\nu\partial_\nu\theta(x)\nonumber\\
+=&\partial_\nu(j^\nu\chi)-(\partial_\nu j^\nu)\theta(x)\,.
 \end{align}
-Para la Acción
+Como el cambio en la Acción no es afectado por la derivada total, entonces
 \begin{align}
-  \delta S=&\int d^4x \left[\partial_\mu(J^\mu\chi)-(\partial_\mu J^\mu)\chi(x)\right]\nonumber\\
-=&-\int d^4x (\partial_\mu J^\mu)\chi(x)\nonumber\\
-=&-\int d^3x\int_{-\infty}^\infty dt (\partial_\mu J^\mu)\chi(x)\,.
+  \delta S=&\int \operatorname{d}^4x \left[\partial_\nu(j^\nu\chi)-(\partial_\nu j^\nu)\theta(x)\right]\nonumber\\
+=&-\int \operatorname{d}^4x (\partial_\nu j^\nu)\theta(x).
 \end{align}
-Para tener $\delta S=0$ necesitamos asumir de momento que
-$\partial_\mu J^\mu=0$. Sin embargo, veremos que esta es una condición
-auto consistente.
+Para tener $\delta S=0$, y cómo $\theta(x)$ es arbitrario, necesitamos asumir  que
+$\partial_\nu j^\nu=0$, tal que $j^\nu$ es una corriente conservada. Sin embargo, veremos que esta es una condición 
+auto consistente en la teoría completa.
 
 
-En resumen, si la corriente electromagnética, $J^\mu$ se conserva, entonces la Acción es invariante bajo la transformación gauge \eqref{eq:aphicovch2}. Note que la densidad Lagrangiana no es localmente invariante gauge. Sin embargo, la Acción (y por consiguiente la teoría) es invariante gauge.
+En resumen, si la corriente electromagnética, $j^\nu$ se conserva, entonces la Acción es invariante bajo la transformación gauge local~\eqref{eq:aphicovch2m}. 
 \end{frame}
 
 \begin{frame}[fragile,allowframebreaks]
 Por lo tanto, el Lagrangiano
 \begin{equation}
   \label{eq:lagAmum}
-  \mathcal{L}=-\frac{1}{4}F^{\mu\nu}F_{\mu\nu}-J^\mu A_\mu
+  \mathcal{L}=-\frac{1}{4}F^{\mu\nu}F_{\mu\nu}-j^\nu A_\nu\,,
 \end{equation}
 es el más general que da lugar a una Acción invariante de Lorentz e invariante gauge
 local. 
@@ -292,338 +309,26 @@ Usando la ec.~\eqref{eq:dddmufmunu2}, tenemos
   \right]-\frac{\partial\mathcal{L}}{\partial A_\nu}&=0\nonumber\\
   -\frac{1}{4}\partial_\mu\left[
     \frac{\partial}{\partial(\partial_\mu A_\nu)}(F^{\rho\sigma}F_{\rho\sigma})  
-  \right]+J^\rho\frac{\partial A_\rho}{\partial A_\nu}&=0\nonumber\\
-  -\partial_\mu F^{\mu\nu}+J^\rho\delta_{\rho\nu}&=0\nonumber\\
-  \partial_\mu F^{\mu\nu}&=J^\nu.
+  \right]+j^\rho\frac{\partial A_\rho}{\partial A_\nu}&=0\nonumber\\
+  -\partial_\mu F^{\mu\nu}+j^\rho\delta_{\rho}^{\nu}&=0\nonumber\\
+  \partial_\mu F^{\mu\nu}&=j^\nu\,.
 \end{align}
-Como era de esperarse una Acción invariante de Lorentz e invariante
+Para completar la demostración  de que la Acción invariante de Lorentz e invariante
 gauge local, expresada en términos del Lagrangiano \eqref{eq:lagAmum},
-da lugar a la Teoría Electromagnética. 
-\end{frame}
-
-
-
-\section{Ecuaciones de Maxwell en notaci\'on covariante }
-\label{sec:maxeqs}
-Ecuaciones homog\'eneas:
+da lugar a la Teoría Electromagnética, debemos mostrar que las 4 ecuaciones de Maxwell se pueden escribir el la \emph{forma covariante}
 \begin{align}
-  \label{eq:hom_m_eq}
-  \boldsymbol{\nabla}\cdot\mathbf{B}&=0,&\boldsymbol{\nabla}\times\mathbf{E}+\frac{\partial\mathbf{B}}{\partial t}&=0
+F^{\mu\nu}=&\partial^\mu A^\nu-\partial^\nu A^\mu\,, & \partial_\mu F^{\mu\nu}&=j^\nu\,.
 \end{align}
-Ecuaciones inhomog\'eneas:
-\begin{align}
-  \label{eq:inhom_m_eq}
-  \boldsymbol{\nabla}\cdot\mathbf{E}&=\rho,&\boldsymbol{\nabla}\times\mathbf{B}-\frac{\partial\mathbf{E}}{\partial t}&=\mathbf{J}.
-\end{align}
-La primera ecuaci\'on establece la ausencia de cargas magn\'eticas, la segunda corresponde a la Ley de Faraday y la tercera a la Ley de Gauss. La cuarta sin el t\'ermino de desplazamiento el\'ectrico introducido por Maxwell corresponde a la Ley de Amp\`ere
-\begin{equation}
-   \boldsymbol{\nabla}\times\mathbf{B}=\mathbf{J}.
-\end{equation}
-Tomando la divergencia en esta expresi\'on tenemos
-\begin{equation}
-  \boldsymbol{\nabla}\cdot\mathbf{J}=0,
-\end{equation}
-que corresponde a la ecuaci\'on de continuidad \eqref{eq:conti} para $\rho$ constante
-\begin{equation}
-  \label{eq:153}
-  \frac{\partial \rho}{\partial t}+\boldsymbol{\nabla}\cdot\mathbf{J}=0.
-\end{equation}
-De este modo la Ley de Amp\`ere da lugar a la conservaci\'on de carga el\'ectrica pero solo a nivel global:  una perdida de carga el\'ectrica en un punto del universo puede ser compensada por la aparici\'on instant\'anea de carga el\'ectrica en otro lugar del universo. La conservaci\'on global podr\'\i a necesitar la propagaci\'on instant\'anea de se\~nales, y esto est\'a en conflicto con la relatividad especial.
-
-
-Tomando la divergencia de la Ley de Amp\`ere modificada por Maxwell
-\begin{equation}
-   \boldsymbol{\nabla}\times\mathbf{B}-\frac{\partial\mathbf{E}}{\partial t}=\mathbf{J},
-\end{equation}
-obtenemos la ecuaci\'on de continuidad \eqref{eq:153}. Dicha ecuaci\'on establece que la raz\'on de decrecimiento de la carga en un volumen arbitrario $V$ es debido precisa y \'unicamente al flujo de la corriente fuera de su superficie; de modo que la carga no puede ser creada ni destruida dentro de $V$.  Ya que $V$ puede ser arbitrariamente peque\~no esto significa que la carga el\'ectrica debe conservarse localmente.   El t\'ermino extra introducido por Maxwell est\'a motivado por un requerimiento de conservaci\'on local. 
-
-
-
-A la luz del teorema de Noether la conservaci\'on local de la carga el\'ectrica debe provenir de una transformaci\'on continua y \emph{local} que deje invariante a la ecuaciones de Maxwell. Las invarianza gauge de la ecuaciones de Maxwell juegan este papel. Las cargas conservadas localmente pueden determinarse a partir de la din\'amica del sistema  \cite{Aitchison:2003tq}, adem\'as del uso de cargas conocidas que participen en alguna reacci\'on. Por ejemplo se puede estudiar la forma como responde una part\'\i cula de carga desconocida a campos electromagn\'eticos para determinar su carga. 
-
-El principio gauge local, que pretendemos formular, va m\'as all\'a del teorema de Noether estableciendo una relaci\'on entre las simetr\'\i as, las leyes de conservaci\'on y la din\'amica. Este se constituye en el paradigma para estudiar las interacciones relevantes en f\'\i sica de part\'\i culas.
-
-Para mostrar la invarianza gauge que exhiben las ecuaciones de Maxwell, es conveniente reescribirlas en forma covariante. Para ello es conveniente usar el potencial escalar el\'ectrico $\phi$ y el potencia vectorial magn\'etico $\mathbf{A}$.
-
-% to_en:The following equations are equivalent to the two homogenous Maxwell equations
-De hecho las siguientes ecuaciones \eqref{eq:phia}
-\begin{align}
-  \label{eq:phia}
-  \mathbf{E}&=-\boldsymbol{\nabla}\phi-\frac{\partial\mathbf{A}}{\partial t}&
-  \mathbf{B}&=\boldsymbol{\nabla}\times\mathbf{A}.
-\end{align}
- son equivalentes a las ecuaciones homog\'eneas de Maxwell, ya que como vimos entonces y repetimos aca
-\begin{align*}
-  \boldsymbol{\nabla}\times\mathbf{E}&=-\boldsymbol{\nabla}\times\boldsymbol{\nabla}\phi-\frac{\partial}{\partial t}\boldsymbol{\nabla}\times\mathbf{A}\\
-  &=-\frac{\partial\mathbf{B}}{\partial t},
-\end{align*}
-y
-\begin{align*}
-  \boldsymbol{\nabla}\cdot\mathbf{B}&=\boldsymbol{\nabla}\cdot(\boldsymbol{\nabla}\times\mathbf{A})\\
-  &=0
-\end{align*}
-
-
-
-
-
-La ec.~(\ref{eq:phia}) es invariante bajo las siguientes transformaciones
-\begin{align}
-  \label{eq:phia_transf}
-  \mathbf{A}&\to\mathbf{A}'=\mathbf{A}+\boldsymbol{\nabla}\chi&
-  \phi&\to\phi'=\phi-\frac{\partial\chi}{\partial t} 
-\end{align}
-%to_en:Since
-Ya que
-\begin{equation}
-  \label{eq:Etrans}
-  \mathbf{E}\to\mathbf{E}'= -\boldsymbol{\nabla}\phi+\frac{\partial}{\partial t}\boldsymbol{\nabla}\chi
-  -\frac{\partial\mathbf{A}}{\partial t}-\frac{\partial}{\partial t}\boldsymbol{\nabla}\chi=\mathbf{E}
-\end{equation}
-\begin{equation}
-  \label{eq:btransf}
-  \mathbf{B}\to\mathbf{B}'= \boldsymbol{\nabla}\times\mathbf{A}+
-  \underbrace{\boldsymbol{\nabla}\times\boldsymbol{\nabla}\chi}_{\displaystyle =0}=\mathbf{B}
-\end{equation}
-%to_en:This imply that different observers in different space points, using different calibrations for their measures, get the same fields. 
-Esto implica que diferentes observadores en diferentes puntos del espacio, usando diferentes calibraciones para sus medidas, obtienen los mismos campos. Las  ecs.~\eqref{eq:phia_transf}, corresponden a \emph{transformaciones gauge locales}
-
-%to_en:In covariant notation
-En notaci\'on de cuadrivectores, tenemos   \eqref{eq:aphicov}
-\begin{align}
-  A^\mu\to {A'}^\mu=&A^\mu-\partial^\mu\chi
-\end{align}
-%to_en: Let $U$ an element of the Transformation Group $U(1)$:
-Sea  $U$ un elemento del Grupo de Transformaciones  $U(1)$:
-\begin{equation}
-  \label{eq:u1ele}
-  U=e^{i\theta(x)}\in U(1)
-\end{equation}
-%to_en: The Group is defined by the infinity set of elements $U_i=e^{i\theta(x_i)}$. Then
-El Grupo est\'a definido por el conjunto infinito de elementos $U_i=e^{i\theta(x_i)}$. Entonces
-\begin{itemize} %noinstiki
-%instiki:
-\item Producto de Grupo 
-  \begin{equation*}
-      U_1\cdot U_2=e^{i[\theta(x_1)+\theta(x_2)]}\equiv e^{i\theta(x_3)}\in U(1)
-  \end{equation*}
-\item Identidad: 
-  \begin{equation*}
-  \theta(x)=0\qquad \text{tal que}\qquad U_I=1  
-  \end{equation*}
-\item Inverso 
-  \begin{equation*}
-      \theta(-x)=-\theta(x)\qquad \text{tal que}\qquad U^{-1}=e^{-i\theta(x)}
-  \end{equation*}
-\end{itemize} %noinstiki
-Note que si
-\begin{equation}
-  \label{eq:amutransf}
-  A^\mu\to{A'}^\mu=A^\mu-\frac{i}{e}(\partial^\mu U)U^{-1}
-\end{equation}
-%to_en:(If $\theta(x)=$cte, $ A^\mu={A^\mu}'$, phase invariance). If $\theta$ is sufficiently small
-(Si $\theta=$cte, $ A^\mu={A'}^\mu$, invarianza de fase). Si $\theta$ es suficientemente peque\~no
-\begin{align}
-  \label{eq:Uinf}
-  U=e^{i\theta(x)}&\approx1+i\theta(x)+\mathcal{O}(\theta^2)&U^{-1}=e^{-i\theta(x)}&\approx1-i\theta(x)+\mathcal{O}(\theta^2)
-\end{align}
-Entonces
-\begin{align}
-  \label{eq:checkinft}
-  {A^\mu}'=&-\frac{1}{e}(i\partial^\mu\theta(8x))[1+i\theta(x)+\mathcal{O}(\theta^2)][1-i\theta(x)+\mathcal{O}(\theta^2)]
-  +A^\mu[1+i\theta(x)+\mathcal{O}(\theta^2)][1-i\theta(x)+\mathcal{O}(\theta^2)]\nonumber\\
-  =&A^\mu+\frac{1}{e}\partial^\mu\theta(x)+\mathcal{O}(\theta^2)
-\end{align}
-%to_en:Therefore, if $\chi(x)=-(1/e)\theta(x)$, then eq.~(\ref{eq:aphicov}) is the infinitesimal version of the $U(1)$ transformation in eq.~(\ref{eq:amutransf})
-Por consiguiente, si $\chi(x)=-(1/e)\theta(x)$, entonces la ec.~(\ref{eq:aphicov}) es la versi\'on infinitesimal de la transformaci\'on $U(1)$  en ec.~(\ref{eq:amutransf}). Del Teorema de Noether debe existir una carga conservada corresponde a la carga el\'ectrica, asociada la corriente $J^\mu$, de la cual a\'un no hemos especificado su origen. 
-
-%to_en:Under this transformation
-Bajo esta transformaci\'on
-\begin{align}
-  \label{eq:fmunutrans}
-  F^{\mu\nu}\to{F'}^{\mu\nu}=&(\partial^\mu{A'}^\nu-\partial^\nu{A'}^\mu)\nonumber\\
-  =&\partial^\mu A^\nu-\partial^\mu\partial^\nu\chi-\partial^\nu A^\mu+\partial^\nu\partial^\mu\chi\nonumber\\
-  =&\partial^\mu A^\nu-\partial^\nu A^\mu-\partial^\mu\partial^\nu\chi+\partial^\mu\partial^\nu\chi\nonumber\\
-  =&F^{\mu\nu}
-\end{align}
-%to_en:In this way the homogeneous part of Maxwell equations corresponds to a Gauge Theory!. This was a curiosity until 1950's. 
-De este modo las ecuaciones homog\'eneas de Maxwell \eqref{eq:fmunu} son invariantes gauge. Como la transformaci\'on gauge solo afecta al campo $A^\mu$, las ecuaciones inhomog\'eneas de Maxwell \eqref{eq:nohomME2} tambi\'en son invariantes gauge. 
-De esta forma las ecuaciones de Maxwell corresponde a una Teor\'\i a Gauge!. Esto fue una curiosidad hasta los 1950. 
-
-
-
-
-%to_en:Under this transformation
-\begin{frame}[fragile,allowframebreaks]
-Bajo la transformación gauge \eqref{eq:172qft}
-\begin{align}
-  \label{eq:fmunutrans}
-  F^{\mu\nu}\to{F'}^{\mu\nu}=&(\partial^\mu{A'}^\nu-\partial^\nu{A'}^\mu)\nonumber\\
-  =&\partial^\mu A^\nu-\partial^\mu\partial^\nu\chi-\partial^\nu A^\mu+\partial^\nu\partial^\mu\chi\nonumber\\
-  =&\partial^\mu A^\nu-\partial^\nu A^\mu-\partial^\mu\partial^\nu\chi+\partial^\mu\partial^\nu\chi\nonumber\\
-  =&F^{\mu\nu}
-\end{align}
-
-Si queremos que la Acción refleje las simetrías de las ecuaciones de
-Maxwell debemos mantener sólo los términos del Lagrangiano para $A^\mu$
-en \eqref{eq:lagAmu} que sean invariantes hasta una derivada total. Bajo una transformación gauge, cada
-uno de los términos
-\begin{equation*}
-  -\frac{1}{4}G^{\mu\nu}G_{\mu\nu}+
-  \frac{1}{2}m^2A^\mu A_\mu+\lambda_1\partial_\mu A^\mu A_\nu A^\nu+\lambda_2 A^\mu A_\mu A^\nu A_\nu+\lambda_3F^{\mu\nu}A_\mu A_\nu+\lambda_4G^{\mu\nu}A_\mu A_\nu
-+K_\nu(x) A^\nu A_\mu A^\mu
-\end{equation*}
-dan lugar a un $\delta\mathcal{L}\neq\partial_\mu(\text{algo})$ y la Acción no es
-invariante bajo la transformación gauge.
-
 \end{frame}
 
 
 
 
-\section{Tensor EM}
-
-
-Usando el cuadrivector en ec.~(\ref{eq:cv_phia}) y
-expandiendo la ec.~(\ref{eq:phia}), tenemos
-\begin{align}
-  E^i&=-(\frac{\partial A^0}{\partial x^{i}}+\frac{\partial A^{i}}{\partial x^0})\nonumber\\
-  &=(\frac{\partial A^0}{\partial x_i}-\frac{\partial A^{i}}{\partial x_0})\nonumber\\
-  &=\partial^{i}A^0-\partial^0 A^{i}\nonumber\\
-  \label{eq:Efmunu}
-  &=\partial^\mu A^\nu-\partial^\nu A^\mu,
-  \qquad 
-  \mu=i,\quad \nu=0\\
-  \label{eq:E_Fi0} %noinstiki
-  E^{i}&=F^{i0}
-\end{align}
-donde hemos definido el Tensor de intensidad electrom\'agnetica como:
-\begin{equation}
-  \label{eq:fmunu}
-    F^{\mu\nu}=\partial^\mu A^\nu-\partial^\nu A^\mu.
-\end{equation}
-A $A^\mu$ se le denomina \emph{campo vectorial}. Similarmente
-\begin{align}
-  B^k&=\epsilon_{ijk}\frac{\partial A^j}{\partial x^{i}}\nonumber\\
-  \epsilon_{lmk}B^k&=\epsilon_{lmk}\epsilon_{ijk}\frac{\partial A^j}{\partial x^{i}}\nonumber\\
-  &=(\delta_{li}\delta_{mj}-\delta_{lj}\delta_{mi})\frac{\partial A^j}{\partial x^{i}}\nonumber\\
-  &=\frac{\partial A^m}{\partial x^l}-\frac{\partial A^l}{\partial x^m}\nonumber\\
-  &=-\frac{\partial A^m}{\partial x_l}+\frac{\partial A^l}{\partial x_m}\nonumber\\
-  &=\partial^m A^l-\partial^l A^m\nonumber\\
-  \label{eq:Bfmunu}
-  &=\partial^\mu A^\nu-\partial^\nu A^\mu,
-  \qquad 
-  \mu=m,\quad \nu=l.\\
-  \label{eq:BFij}
-\epsilon_{lmk}B^k&=F^{ml}
-\end{align}
-Por consiguiente la ec.~(\ref{eq:fmunu}) es tambi\'en equivalente a las
-dos ecuaciones homog\'eneas de Maxwell. En forma matricial,
-\begin{align}
-  F^{\mu\nu}&=
-  \begin{pmatrix}
-    0       &\partial^0A^1-\partial^1A^0&\partial^0A^2-\partial^2A^0&\partial^0A^3-\partial^3A^0\\
-    \partial^1A^0-\partial^0A^1&0       &\partial^1A^2-\partial^2A^1&\partial^1A^3-\partial^3A^1\\
-    \partial^2A^0-\partial^0A^2&\partial^2A^1-\partial^1A^2&0       &\partial^2A^3-\partial^3A^2\\
-    \partial^3A^0-\partial^0A^3&\partial^3A^1-\partial^1A^3&\partial^3A^2-\partial^2A^3&0\\
-  \end{pmatrix}\nonumber\\
-  &=
-  \begin{pmatrix}
-    0 &-E^1   &-E^2   &-E^3   \\    
-    E^1&0     &\epsilon_{213}B^3&\epsilon_{312}B^2\\
-    E^2&\epsilon_{123}B^3&0     &\epsilon_{321}B^1\\
-    E^3&\epsilon_{132}B^2&\epsilon_{231}B^1&0\\
-  \end{pmatrix}\nonumber\\
-  &=
-\label{eq:matrixfmunu}
-  \begin{pmatrix}
-    0 &-E^1&-E^2&-E^3   \\    
-    E^1&0  &-B^3&B^2\\
-    E^2&B^3 &0  &-B^1\\
-    E^3&-B^2&B^1 &0\\
-  \end{pmatrix}.
-\end{align}
-
-La ec.~(\ref{eq:fmunu}) satisface la identidad,
-\begin{equation}
-  \label{eq:homME3}
-  \partial^\lambda F^{\mu\nu}+\partial^\mu F^{\nu\lambda}+\partial^\nu F^{\lambda\mu}=0
-\end{equation}
-Definiendo el tensor dual como
-\begin{equation*}
-  \tilde{F}^{\mu\nu}=\frac{1}{2}\epsilon^{\mu\nu\rho\sigma}F_{\rho\sigma},
-\end{equation*}
-la ec.~(\ref{eq:homME3}) puede escribirse como
-\begin{equation}
-  \label{eq:homEM4}
-  \partial_\mu\tilde{F}^{\mu\nu}=0.
-\end{equation}
-
-Para reescribir las ecuaciones de Maxwell inhomog\'enas en forma
-covariante usaremos adem\'as el cuadrivector $J^\mu$ de la
-ec.~\eqref{eq:cv_jmu}.  Usando la ec.~\eqref{eq:Efmunu}, la primera
-ecuaci\'on de Maxwell inhomog\'enea~\eqref{eq:inhom_m_eq} puede escribirse
-como
-\begin{align}
-  \label{nohomME21}
-    \frac{\partial E^{i}}{\partial x^{i}}&=J^0\nonumber\\
-    \frac{\partial}{\partial x^{i}}F^{i0}&=J^0\nonumber\\
-    \partial_iF^{i0}&=J^0\nonumber\\
-    \partial_\mu F^{\mu0}&=J^0\,.
-\end{align}
-Usando las ecs.~\eqref{eq:Efmunu}, \eqref{eq:Bfmunu}, la segunda
-ecuaci\'on de Maxwell inhomog\'enea~\eqref{eq:inhom_m_eq} puede escribirse
-como
-\begin{align}
-  \epsilon_{ijk}\frac{\partial B^j}{\partial x^{i}}-\frac{\partial E^k}{\partial t}&=J^k\nonumber\\
-  -\frac{\partial (\epsilon_{ikj}B^j)}{\partial x^{i}}-\frac{\partial E^k}{\partial t}&=J^k\nonumber\\
--\partial_iF^{ki}-\partial_0F^{k0}&=J^k\nonumber\\
-\partial_iF^{ik}+\partial_0F^{0k}&=J^k\nonumber\\
-\label{nohomME22}
-\partial_\mu F^{\mu k}&=J^k
-\end{align}
-
-Las ecuaciones \eqref{nohomME21},
-\eqref{nohomME22} pueden escribirse en forma compacta como
-\begin{align}
-\label{eq:nohomME2}
-  \partial_\mu F^{\mu\nu}&=J^\nu\\
-&=
-\begin{cases}
-  \partial_\mu(\partial^\mu A^0-\partial^0A^{i})=J^0&\text{para $\nu=0$}\\
-  \partial_\mu(\partial^\mu A^{i}-\partial^{i}A^\mu)=J^{i}&\text{para $\nu=i$}
-\end{cases}\nonumber
-\end{align}
-
-
-Los resultados sobre la notaci\'on covariante de la ecuaciones de Maxwell est\'an resumidos en la Tabla~\ref{tab:eqmax} %noinstiki
-\begin{table} %noinstiki
-  \begin{center} %noinstiki
-  \begin{tabular}{l|l|l|l} %noinstiki
-            &$\mathbf{E}$, $\mathbf{B}$&$A^\mu$            &$F^{\mu\nu}$\\\hline %noinstiki
-Homog\'eneas  &Ec.~(\ref{eq:hom_m_eq})   &~(\ref{eq:phia})&~(\ref{eq:fmunu}) \'o (\ref{eq:homME3}) \'o (\ref{eq:homEM4})\\\hline %noinstiki
-Inhomog\'eneas& (\ref{eq:inhom_m_eq})    &                &~\eqref{eq:nohomME2} \\ %noinstiki
-  \end{tabular} %noinstiki
-  \end{center} %noinstiki
-  \caption{Ecuaciones de Maxwell} %noinstiki
-  \label{tab:eqmax} %noinstiki
-\end{table} %noinstiki
-De la parte izquierda de la ecuaci\'on \eqref{eq:nohomME2}, podemos ver que
-\begin{align*}
-  \partial_\nu\partial_\mu F^{\mu\nu}&=0
-\end{align*}
-Por consiguiente, la cuadricorriente $J^\mu$ es conservada:
-\begin{equation}
-  \label{eq:consvjmu}
-  \partial_\mu J^\mu=0
-\end{equation}
-
-
-\subsection{Lagrangiano Electromagn\'etico}
+\subsection{Tensor  Electromagnético}
 \label{sec:lagr-electr}
 %to_en:Eq.~(\ref{eq:phia}) is invariant under the following transformations
 
-Para ilustrar la relaci\'on entre la conservaci\'on local de la carga el\'ectrica y la transformaci\'on gauge, que no es una conexi\'on simple, considere las ecuaciones de Maxwell
+Para ilustrar la relación entre la conservación local de la carga eléctrica y la transformación gauge, que no es una conexión simple, considere las ecuaciones de Maxwell
 \begin{equation}
     \partial_\mu F^{\mu\nu}=J^\nu,
 \end{equation}
@@ -633,9 +338,9 @@ que autom\'aticamente incluyen la conservaci\'on local de carga, expresada por l
 \end{equation}
 Adem\'as las ecuaciones de Maxwell permanecen invariantes bajo la transformaci\'on gauge
 \begin{equation}
-   A^\mu\to {A'}^\mu=A^\mu-\partial^\mu\chi,
+   A^\mu\to {A'}^\mu=A^\mu-\partial^\mu\theta,
 \end{equation}
-ya que dicha transformaci\'on deja invariante a $F^{\mu\nu}$. De aqu\'\i{} la sugerencia de la invarianza gauge esta relacionada de alguna manera a la conservaci\'on de la carga. De hecho la acci\'on m\'as general posible para el campo $A^\mu$ compatible tanto con la invarianza de Lorentz y la invarianza gauge local corresponde a la acci\'on que da lugar a las ecuaciones de Maxwell.
+ya que dicha transformaci\'on deja invariante a $F^{\mu\nu}$. De aquí la sugerencia de la invarianza gauge esta relacionada de alguna manera a la conservaci\'on de la carga. De hecho la acci\'on m\'as general posible para el campo $A^\mu$ compatible tanto con la invarianza de Lorentz y la invarianza gauge local corresponde a la acci\'on que da lugar a las ecuaciones de Maxwell.
 
 La  definición of $F^{\mu\nu}$ incluye de entrada las ecuaciones
 homogéneas de Maxwell. Para ver esto, note en primer lugar que las
@@ -643,56 +348,62 @@ homogéneas de Maxwell. Para ver esto, note en primer lugar que las
 \begin{align}
   F^{\mu\nu}=  \begin{cases}
     F^{\mu0}=F^{i0} & \text{$\nu=0$}\\
-    F^{\mu l}=F^{ml} & \text{$\nu=l$}\\
+    F^{\mu j}=F^{ij} & \text{$\nu=j$}\\
   \end{cases}
 \end{align}
+Siguiendo una descomposición vectorial para $F^{\mu\nu}$ similar a la del generador tensorial del Grupo de Lorentz %en la sec~\ref{}
+\begin{align}
+E^i\equiv&F^{i0}=-F_{i0}\,,& B^k=&-\frac{1}{2}\epsilon^{ijk}F_{ij}\,.
+\end{align}
+
 Para $\nu=0$ tenemos
 \begin{align}
-F^{i0}  &=\partial^{i}A^0-\partial^0 A^{i}\nonumber\\
-  &=(\frac{\partial A^0}{\partial x_i}-\frac{\partial A^{i}}{\partial x_0})\nonumber\\
-&=-(\frac{\partial A^0}{\partial x^{i}}+\frac{\partial A^{i}}{\partial x^0})\nonumber\\
-&=E^i
+F^{i0}  =&\partial^{i}A^0-\partial^0 A^{i}\nonumber\\
+=&-\partial_{i}A^0-\partial^0 A^{i}\nonumber\\
+=&\left(-\boldsymbol{\nabla}\phi-\frac{\partial\mathbf{A}}{\partial t}\right)^i \nonumber\\
+=&E^i
 \end{align}
 donde
 \begin{align}
 \label{eq:173qft}
    \mathbf{E}&=-\boldsymbol{\nabla}\phi-\frac{\partial\mathbf{A}}{\partial t}\,.
 \end{align}
-mientras que para $\nu=l$ tenemos
+mientras que para $\nu=j$ tenemos
 \begin{align}
-F^{ml}  &=\partial^m A^l-\partial^l A^m\nonumber\\
-  &=(\delta_{lj}\delta_{mi}-\delta_{li}\delta_{mj}){\partial^iA^j}\nonumber\\
-  &=-(\delta_{lj}\delta_{mi}-\delta_{li}\delta_{mj}){\partial_iA^j}\nonumber\\
-  &=(\delta_{li}\delta_{mj}-\delta_{lj}\delta_{mi}){\partial_iA^j}\nonumber\\
-  &=(\delta_{li}\delta_{mj}-\delta_{lj}\delta_{mi})\frac{\partial A^j}{\partial x^{i}}\nonumber\\
-    &=\epsilon_{lmk}\epsilon_{ijk}\frac{\partial A^j}{\partial x^{i}}\nonumber\\
-&=\epsilon_{lmk}\left(\boldsymbol{\nabla}\times  \mathbf{A}\right)^k\nonumber\\
-&=\epsilon_{lmk}B^k\,,
+\label{eq:BktoepsFij}
+B^k=-\frac{1}{2}\epsilon^{ijk}F_{ij}=&- \frac{1}{2}\epsilon^{ijk}\left( \partial_i A_j-\partial_j A_i\right)\nonumber\\
+                                                        =&-\epsilon^{ijk} \partial_i A_j\nonumber\\
+                                                        =&\epsilon^{ijk} \partial_i A^j\nonumber\\  
+                                                        =&\left(\boldsymbol{\nabla\times \mathbf{A}}\right)^k\,.
 \end{align}
 donde
 \begin{align}
 \label{eq:174qft}
   \mathbf{B}&=\boldsymbol{\nabla}\times \mathbf{A}\,.
 \end{align}
+Podemos invertir~\eqref{eq:BktoepsFij}
+\begin{align}
+F_{lm}=-\epsilon_{lmk}B^k=\epsilon_{mlk}B^k\,,
+\end{align}
 Entonces tenemos
 \begin{align}
-  \{F^{\mu\nu}\}  &=
+  \{F_{\mu\nu}\}  &=
   \begin{pmatrix}
-    0 &-E^1   &-E^2   &-E^3   \\    
-    E^1&0     &\epsilon_{213}B^3&\epsilon_{312}B^2\\
-    E^2&\epsilon_{123}B^3&0     &\epsilon_{321}B^1\\
-    E^3&\epsilon_{132}B^2&\epsilon_{231}B^1&0\\
+    0 &E^1   &E^2   &E^3   \\    
+    -E^1&0     &\epsilon_{213}B^3&\epsilon_{312}B^2\\
+    -E^2&\epsilon_{123}B^3&0     &\epsilon_{321}B^1\\
+    -E^3&\epsilon_{132}B^2&\epsilon_{231}B^1&0\\
   \end{pmatrix}\nonumber\\
   &=
 \label{eq:matrixfmunu}
   \begin{pmatrix}
-    0 &-E^1&-E^2&-E^3   \\    
-    E^1&0  &-B^3&B^2\\
-    E^2&B^3 &0  &-B^1\\
-    E^3&-B^2&B^1 &0\\
+    0 &E^1&E^2&E^3   \\    
+    -E^1&0  &-B^3&B^2\\
+    -E^2&B^3 &0  &-B^1\\
+    -E^3&-B^2&B^1 &0\\
   \end{pmatrix}.
 \end{align}
-
+\textbf{Ejercicio}: Calcule ${F^{\mu\nu}}$
 
 De las ecuaciones.~\eqref{eq:173qft}, y \eqref{eq:174qft}
 \begin{align*}
@@ -798,6 +509,116 @@ totales), ya que la acci\'on es invariante. Haciendo el Lagrangiano
 covariante de Lorentz por ejemplo, garantiza que todas las
 predicciones son invariantes de Lorentz.
 
+Los resultados sobre la notaci\'on covariante de la ecuaciones de Maxwell est\'an resumidos en la Tabla~\ref{tab:eqmax} %noinstiki
+\begin{table} %noinstiki
+  \begin{center} %noinstiki
+  \begin{tabular}{l|l|l|l} %noinstiki
+            &$\mathbf{E}$, $\mathbf{B}$&$A^\mu$            &$F^{\mu\nu}$\\\hline %noinstiki
+Homog\'eneas  &Ec.~(\ref{eq:hom_m_eq})   &~(\ref{eq:phia})&~(\ref{eq:fmunu}) \'o (\ref{eq:homME3}) \'o (\ref{eq:homEM4})\\\hline %noinstiki
+Inhomog\'eneas& (\ref{eq:inhom_m_eq})    &                &~\eqref{eq:nohomME2} \\ %noinstiki
+  \end{tabular} %noinstiki
+  \end{center} %noinstiki
+  \caption{Ecuaciones de Maxwell} %noinstiki
+  \label{tab:eqmax} %noinstiki
+\end{table} %noinstiki
+
+
+La ec.~(\ref{eq:fmunu}) satisface la identidad,
+\begin{equation}
+  \label{eq:homME3}
+  \partial^\lambda F^{\mu\nu}+\partial^\mu F^{\nu\lambda}+\partial^\nu F^{\lambda\mu}=0
+\end{equation}
+Definiendo el tensor dual como
+\begin{equation*}
+  \tilde{F}^{\mu\nu}=\frac{1}{2}\epsilon^{\mu\nu\rho\sigma}F_{\rho\sigma},
+\end{equation*}
+la ec.~(\ref{eq:homME3}) puede escribirse como
+\begin{equation}
+  \label{eq:homEM4}
+  \partial_\mu\tilde{F}^{\mu\nu}=0.
+\end{equation}
+
+
+\section{Invarianza U(1)}
+
+%to_en: Let $U$ an element of the Transformation Group $U(1)$:
+Sea  $U$ un elemento del Grupo de Transformaciones  $U(1)$:
+\begin{equation}
+  \label{eq:u1ele}
+  U=e^{i\theta(x)}\in U(1)
+\end{equation}
+%to_en: The Group is defined by the infinity set of elements $U_i=e^{i\theta(x_i)}$. Then
+El Grupo est\'a definido por el conjunto infinito de elementos $U_i=e^{i\theta(x_i)}$. Entonces
+\begin{itemize} %noinstiki
+%instiki:
+\item Producto de Grupo 
+  \begin{equation*}
+      U_1\cdot U_2=e^{i[\theta(x_1)+\theta(x_2)]}\equiv e^{i\theta(x_3)}\in U(1)
+  \end{equation*}
+\item Identidad: 
+  \begin{equation*}
+  \theta(x)=0\qquad \text{tal que}\qquad U_I=1  
+  \end{equation*}
+\item Inverso 
+  \begin{equation*}
+      \theta(-x)=-\theta(x)\qquad \text{tal que}\qquad U^{-1}=e^{-i\theta(x)}
+  \end{equation*}
+\end{itemize} %noinstiki
+Note que si
+\begin{equation}
+  \label{eq:amutransf}
+  A^\mu\to{A'}^\mu=A^\mu-\frac{i}{e}(\partial^\mu U)U^{-1}
+\end{equation}
+%to_en:(If $\theta(x)=$cte, $ A^\mu={A^\mu}'$, phase invariance). If $\theta$ is sufficiently small
+(Si $\theta=$cte, $ A^\mu={A'}^\mu$, invarianza de fase). Si $\theta$ es suficientemente peque\~no
+\begin{align}
+  \label{eq:Uinf}
+  U=e^{i\theta(x)}&\approx1+i\theta(x)+\mathcal{O}(\theta^2)&U^{-1}=e^{-i\theta(x)}&\approx1-i\theta(x)+\mathcal{O}(\theta^2)
+\end{align}
+Entonces
+\begin{align}
+  \label{eq:checkinft}
+  {A^\mu}'=&-\frac{1}{e}(i\partial^\mu\theta(8x))[1+i\theta(x)+\mathcal{O}(\theta^2)][1-i\theta(x)+\mathcal{O}(\theta^2)]
+  +A^\mu[1+i\theta(x)+\mathcal{O}(\theta^2)][1-i\theta(x)+\mathcal{O}(\theta^2)]\nonumber\\
+  =&A^\mu+\frac{1}{e}\partial^\mu\theta(x)+\mathcal{O}(\theta^2)
+\end{align}
+%to_en:Therefore, if $\theta(x)\to -(1/e)\theta(x)$, then eq.~(\ref{eq:aphicov}) is the infinitesimal version of the $U(1)$ transformation in eq.~(\ref{eq:amutransf})
+Por consiguiente, si $\theta(x)=-(1/e)\theta(x)$, entonces la ec.~(\ref{eq:aphicov}) es la versi\'on infinitesimal de la transformaci\'on $U(1)$  en ec.~(\ref{eq:amutransf}). Del Teorema de Noether debe existir una carga conservada corresponde a la carga el\'ectrica, asociada la corriente $J^\mu$, de la cual a\'un no hemos especificado su origen. 
+
+%to_en:Under this transformation
+Bajo esta transformaci\'on
+\begin{align}
+  \label{eq:fmunutrans}
+  F^{\mu\nu}\to{F'}^{\mu\nu}=&(\partial^\mu{A'}^\nu-\partial^\nu{A'}^\mu)\nonumber\\
+  =&\partial^\mu A^\nu-\partial^\mu\partial^\nu\theta-\partial^\nu A^\mu+\partial^\nu\partial^\mu\theta\nonumber\\
+  =&\partial^\mu A^\nu-\partial^\nu A^\mu-\partial^\mu\partial^\nu\theta+\partial^\mu\partial^\nu\theta\nonumber\\
+  =&F^{\mu\nu}
+\end{align}
+%to_en:In this way the homogeneous part of Maxwell equations corresponds to a Gauge Theory!. This was a curiosity until 1950's. 
+De este modo las ecuaciones homog\'eneas de Maxwell \eqref{eq:fmunu} son invariantes gauge. Como la transformaci\'on gauge solo afecta al campo $A^\mu$, las ecuaciones inhomog\'eneas de Maxwell \eqref{eq:nohomME2} tambi\'en son invariantes gauge. 
+De esta forma las ecuaciones de Maxwell corresponde a una Teor\'\i a Gauge!. Esto fue una curiosidad hasta los 1950. 
+
+
+
+
+%to_en:Under this transformation
+\begin{frame}[fragile,allowframebreaks]
+
+Si queremos que la Acción refleje las simetrías de las ecuaciones de
+Maxwell debemos mantener sólo los términos del Lagrangiano para $A^\mu$
+en \eqref{eq:lagAmu} que sean invariantes hasta una derivada total. Bajo una transformación gauge, cada
+uno de los términos
+\begin{equation*}
+  -\frac{1}{4}G^{\mu\nu}G_{\mu\nu}+
+  \frac{1}{2}m^2A^\mu A_\mu+\lambda_1\partial_\mu A^\mu A_\nu A^\nu+\lambda_2 A^\mu A_\mu A^\nu A_\nu+\lambda_3F^{\mu\nu}A_\mu A_\nu+\lambda_4G^{\mu\nu}A_\mu A_\nu
++K_\nu(x) A^\nu A_\mu A^\mu
+\end{equation*}
+dan lugar a un $\delta\mathcal{L}\neq\partial_\mu(\text{algo})$ y la Acción no es
+invariante bajo la transformación gauge.
+
+\end{frame}
+
+
 
 
 \subsection{Energ\'\i a del campo electromagn\'etico}
@@ -894,7 +715,201 @@ En ausencia de cargas y corrientes
  \mathbf{P}&=\int_Vd^3x\,(\mathbf{E}\times\mathbf{B})\,.
 \end{align}
 \end{frame}
-\subsection{Fijaci\'on del gauge}
+
+\section{Ecuaciones de Maxwell en notación covariante }
+\label{sec:maxeqs}
+Por completitud, vamos a abordar el problema inversos de ir de la ecuaciones de Maxwell en forma vectorial a al forma covarianate. 
+
+Las Eecuaciones homog\'eneas de Maxwell son:
+\begin{align}
+  \label{eq:hom_m_eq}
+  \boldsymbol{\nabla}\cdot\mathbf{B}&=0,&\boldsymbol{\nabla}\times\mathbf{E}+\frac{\partial\mathbf{B}}{\partial t}&=0
+\end{align}
+Ecuaciones inhomog\'eneas:
+\begin{align}
+  \label{eq:inhom_m_eq}
+  \boldsymbol{\nabla}\cdot\mathbf{E}&=\rho,&\boldsymbol{\nabla}\times\mathbf{B}-\frac{\partial\mathbf{E}}{\partial t}&=\mathbf{J}.
+\end{align}
+La primera ecuaci\'on establece la ausencia de cargas magn\'eticas, la segunda corresponde a la Ley de Faraday y la tercera a la Ley de Gauss. La cuarta sin el t\'ermino de desplazamiento el\'ectrico introducido por Maxwell corresponde a la Ley de Amp\`ere
+{\begin{equation}
+   \boldsymbol{\nabla}\times\mathbf{B}=\mathbf{J}.
+\end{equation}
+Tomando la divergencia en esta expresi\'on tenemos
+\begin{equation}
+  \boldsymbol{\nabla}\cdot\mathbf{J}=0,
+\end{equation}
+que corresponde a la ecuaci\'on de continuidad \eqref{eq:contamu} para $\rho$ constante
+\begin{equation}
+  \label{eq:153}
+ \partial_\mu j^\mu= \frac{\partial \rho}{\partial t}+\boldsymbol{\nabla}\cdot\mathbf{J}=0.
+\end{equation}
+De este modo la Ley de Amp\`ere da lugar a la conservaci\'on de carga el\'ectrica pero solo a nivel global:  una perdida de carga el\'ectrica en un punto del universo puede ser compensada por la aparici\'on instant\'anea de carga el\'ectrica en otro lugar del universo. La conservaci\'on global podr\'\i a necesitar la propagaci\'on instant\'anea de se\~nales, y esto est\'a en conflicto con la relatividad especial.
+
+
+Tomando la divergencia de la Ley de Amp\`ere modificada por Maxwell
+\begin{equation}
+   \boldsymbol{\nabla}\times\mathbf{B}-\frac{\partial\mathbf{E}}{\partial t}=\mathbf{J},
+\end{equation}
+obtenemos la ecuaci\'on de continuidad \eqref{eq:153}. Dicha ecuaci\'on establece que la raz\'on de decrecimiento de la carga en un volumen arbitrario $V$ es debido precisa y \'unicamente al flujo de la corriente fuera de su superficie; de modo que la carga no puede ser creada ni destruida dentro de $V$.  Ya que $V$ puede ser arbitrariamente peque\~no esto significa que la carga el\'ectrica debe conservarse localmente.   El t\'ermino extra introducido por Maxwell est\'a motivado por un requerimiento de conservaci\'on local. 
+
+
+
+A la luz del teorema de Noether la conservaci\'on local de la carga el\'ectrica debe provenir de una transformaci\'on continua y \emph{local} que deje invariante a la ecuaciones de Maxwell. Las invarianza gauge de la ecuaciones de Maxwell juegan este papel. Las cargas conservadas localmente pueden determinarse a partir de la din\'amica del sistema  \cite{Aitchison:2003tq}, adem\'as del uso de cargas conocidas que participen en alguna reacci\'on. Por ejemplo se puede estudiar la forma como responde una part\'\i cula de carga desconocida a campos electromagn\'eticos para determinar su carga. 
+
+El principio gauge local, que pretendemos formular, va m\'as all\'a del teorema de Noether estableciendo una relaci\'on entre las simetr\'\i as, las leyes de conservaci\'on y la din\'amica. Este se constituye en el paradigma para estudiar las interacciones relevantes en f\'\i sica de part\'\i culas.
+
+Para mostrar la invarianza gauge que exhiben las ecuaciones de Maxwell, es conveniente reescribirlas en forma covariante. Para ello es conveniente usar el potencial escalar el\'ectrico $\phi$ y el potencia vectorial magn\'etico $\mathbf{A}$.
+
+% to_en:The following equations are equivalent to the two homogenous Maxwell equations
+De hecho las siguientes ecuaciones \eqref{eq:phia}
+\begin{align}
+  \label{eq:phia}
+  \mathbf{E}&=-\boldsymbol{\nabla}\phi-\frac{\partial\mathbf{A}}{\partial t}&
+  \mathbf{B}&=\boldsymbol{\nabla}\times\mathbf{A}.
+\end{align}
+ son equivalentes a las ecuaciones homog\'eneas de Maxwell, ya que como vimos entonces y repetimos aca
+\begin{align*}
+  \boldsymbol{\nabla}\times\mathbf{E}&=-\boldsymbol{\nabla}\times\boldsymbol{\nabla}\phi-\frac{\partial}{\partial t}\boldsymbol{\nabla}\times\mathbf{A}\\
+  &=-\frac{\partial\mathbf{B}}{\partial t},
+\end{align*}
+y
+\begin{align*}
+  \boldsymbol{\nabla}\cdot\mathbf{B}&=\boldsymbol{\nabla}\cdot(\boldsymbol{\nabla}\times\mathbf{A})\\
+  &=0
+\end{align*}
+
+
+
+
+
+La ec.~(\ref{eq:phia}) es invariante bajo las siguientes transformaciones
+\begin{align}
+  \label{eq:phia_transf}
+  \mathbf{A}&\to\mathbf{A}'=\mathbf{A}+\boldsymbol{\nabla}\theta&
+  \phi&\to\phi'=\phi-\frac{\partial\theta}{\partial t} 
+\end{align}
+%to_en:Since
+Ya que
+\begin{equation}
+  \label{eq:Etrans}
+  \mathbf{E}\to\mathbf{E}'= -\boldsymbol{\nabla}\phi+\frac{\partial}{\partial t}\boldsymbol{\nabla}\theta
+  -\frac{\partial\mathbf{A}}{\partial t}-\frac{\partial}{\partial t}\boldsymbol{\nabla}\theta=\mathbf{E}
+\end{equation}
+\begin{equation}
+  \label{eq:btransf}
+  \mathbf{B}\to\mathbf{B}'= \boldsymbol{\nabla}\times\mathbf{A}+
+  \underbrace{\boldsymbol{\nabla}\times\boldsymbol{\nabla}\theta}_{\displaystyle =0}=\mathbf{B}
+\end{equation}
+%to_en:This imply that different observers in different space points, using different calibrations for their measures, get the same fields. 
+Esto implica que diferentes observadores en diferentes puntos del espacio, usando diferentes calibraciones para sus medidas, obtienen los mismos campos. Las  ecs.~\eqref{eq:phia_transf}, corresponden a \emph{transformaciones gauge locales}
+
+%to_en:In covariant notation
+En notaci\'on de cuadrivectores, tenemos   \eqref{eq:aphicov}
+\begin{align}
+  A^\mu\to {A'}^\mu=&A^\mu-\partial^\mu\theta
+\end{align}
+Usando el cuadrivector en ec.~(\ref{eq:cv_phia}) y
+expandiendo la ec.~(\ref{eq:phia}), tenemos
+\begin{align}
+  E^i&=-\left(\frac{\partial A^0}{\partial x^{i}}+\frac{\partial A^{i}}{\partial x^0}\right)\nonumber\\
+  &=\frac{\partial A^0}{\partial x_i}-\frac{\partial A^{i}}{\partial x_0}\nonumber\\
+  &=\partial^{i}A^0-\partial^0 A^{i}\nonumber\\
+  \label{eq:Efmunu}
+  &=\partial^\mu A^\nu-\partial^\nu A^\mu,
+  \qquad 
+  \mu=i,\quad \nu=0\\
+  \label{eq:E_Fi0} %noinstiki
+  E^{i}&=F^{i0}
+\end{align}
+donde hemos definido el Tensor de intensidad electrom\'agnetica como:
+\begin{equation}
+  \label{eq:fmunu}
+    F^{\mu\nu}=\partial^\mu A^\nu-\partial^\nu A^\mu.
+\end{equation}
+A $A^\mu$ se le denomina \emph{campo vectorial}. Similarmente
+\begin{align}
+  B^k&=\epsilon_{ijk}\frac{\partial A^j}{\partial x^{i}}\nonumber\\
+  \epsilon_{lmk}B^k&=\epsilon_{lmk}\epsilon_{ijk}\frac{\partial A^j}{\partial x^{i}}\nonumber\\
+  &=(\delta_{li}\delta_{mj}-\delta_{lj}\delta_{mi})\frac{\partial A^j}{\partial x^{i}}\nonumber\\
+  &=\frac{\partial A^m}{\partial x^l}-\frac{\partial A^l}{\partial x^m}\nonumber\\
+  &=-\frac{\partial A^m}{\partial x_l}+\frac{\partial A^l}{\partial x_m}\nonumber\\
+  &=\partial^m A^l-\partial^l A^m\nonumber\\
+  \label{eq:Bfmunu}
+  &=\partial^\mu A^\nu-\partial^\nu A^\mu,
+  \qquad 
+  \mu=m,\quad \nu=l.\\
+  \label{eq:BFij}
+\epsilon_{lmk}B^k&=F^{ml}
+\end{align}
+Por consiguiente la ec.~(\ref{eq:fmunu}) es tambi\'en equivalente a las
+dos ecuaciones homog\'eneas de Maxwell. En forma matricial,
+\begin{align}
+  F^{\mu\nu}&=
+  \begin{pmatrix}
+    0       &\partial^0A^1-\partial^1A^0&\partial^0A^2-\partial^2A^0&\partial^0A^3-\partial^3A^0\\
+    \partial^1A^0-\partial^0A^1&0       &\partial^1A^2-\partial^2A^1&\partial^1A^3-\partial^3A^1\\
+    \partial^2A^0-\partial^0A^2&\partial^2A^1-\partial^1A^2&0       &\partial^2A^3-\partial^3A^2\\
+    \partial^3A^0-\partial^0A^3&\partial^3A^1-\partial^1A^3&\partial^3A^2-\partial^2A^3&0\\
+  \end{pmatrix}\nonumber\\
+  &=
+  \begin{pmatrix}
+    0 &-E^1   &-E^2   &-E^3   \\    
+    E^1&0     &\epsilon_{213}B^3&\epsilon_{312}B^2\\
+    E^2&\epsilon_{123}B^3&0     &\epsilon_{321}B^1\\
+    E^3&\epsilon_{132}B^2&\epsilon_{231}B^1&0\\
+  \end{pmatrix}\nonumber\\
+  &=
+\label{eq:matrixfmunu}
+  \begin{pmatrix}
+    0 &-E^1&-E^2&-E^3   \\    
+    E^1&0  &-B^3&B^2\\
+    E^2&B^3 &0  &-B^1\\
+    E^3&-B^2&B^1 &0\\
+  \end{pmatrix}.
+\end{align}
+
+
+
+Para reescribir las ecuaciones de Maxwell inhomog\'enas en forma
+covariante usaremos adem\'as el cuadrivector $J^\mu$ de la
+ec.~\eqref{eq:cv_jmu}.  Usando la ec.~\eqref{eq:Efmunu}, la primera
+ecuaci\'on de Maxwell inhomog\'enea~\eqref{eq:inhom_m_eq} puede escribirse
+como
+\begin{align}
+  \label{nohomME21}
+    \frac{\partial E^{i}}{\partial x^{i}}&=J^0\nonumber\\
+    \frac{\partial}{\partial x^{i}}F^{i0}&=J^0\nonumber\\
+    \partial_iF^{i0}&=J^0\nonumber\\
+    \partial_\mu F^{\mu0}&=J^0\,.
+\end{align}
+Usando las ecs.~\eqref{eq:Efmunu}, \eqref{eq:Bfmunu}, la segunda
+ecuaci\'on de Maxwell inhomog\'enea~\eqref{eq:inhom_m_eq} puede escribirse
+como
+\begin{align}
+  \epsilon_{ijk}\frac{\partial B^j}{\partial x^{i}}-\frac{\partial E^k}{\partial t}&=J^k\nonumber\\
+  -\frac{\partial (\epsilon_{ikj}B^j)}{\partial x^{i}}-\frac{\partial E^k}{\partial t}&=J^k\nonumber\\
+-\partial_iF^{ki}-\partial_0F^{k0}&=J^k\nonumber\\
+\partial_iF^{ik}+\partial_0F^{0k}&=J^k\nonumber\\
+\label{nohomME22}
+\partial_\mu F^{\mu k}&=J^k
+\end{align}
+
+Las ecuaciones \eqref{nohomME21},
+\eqref{nohomME22} pueden escribirse en forma compacta como
+\begin{align}
+\label{eq:nohomME2}
+  \partial_\mu F^{\mu\nu}&=J^\nu\\
+&=
+\begin{cases}
+  \partial_\mu(\partial^\mu A^0-\partial^0A^{i})=J^0&\text{para $\nu=0$}\\
+  \partial_\mu(\partial^\mu A^{i}-\partial^{i}A^\mu)=J^{i}&\text{para $\nu=i$}
+\end{cases}\nonumber
+\end{align}
+
+
+
+
+\section{Fijaci\'on del gauge}
 \label{sec:fijacion-del-gauge}
 %ver secci\'on 4.4 de Cottingan
 \begin{frame}[fragile,allowframebreaks]

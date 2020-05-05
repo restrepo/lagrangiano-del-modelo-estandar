@@ -3311,7 +3311,7 @@ Para entender el significado físico de la ecuación de continuidad consideremos
 Integrando sobre el volumen y aplicando el teorema de Gauss
 \begin{align}
   \int_V \operatorname{d}^3x\,\frac{\partial j^0}{\partial t}
-+\int_S \boldsymbol{j}\cdot \boldsymbol{S}=&0\,.
++\int_S \boldsymbol{j}\cdot \operatorname{d}  \boldsymbol{S}=&0\,.
 \end{align}
 Si interpretamos $j^0$ como la densidad, $\rho$, de una cierta carga $Q$, tal que
 \begin{align}
@@ -3319,7 +3319,7 @@ Si interpretamos $j^0$ como la densidad, $\rho$, de una cierta carga $Q$, tal qu
 \end{align}
 entonces, si escogemos $S$ como una superficie suficientemente grande para contener toda la distribución de carga $Q$ en su interior, tendremos que la integral sobre la superficie se anula
 \begin{align}
-  \int_S \boldsymbol{j}\cdot \boldsymbol{S}=&0\,,
+  \int_S \boldsymbol{j}\cdot \operatorname{d} \boldsymbol{S}=&0\,,
 \end{align}
 y por consiguiente
 \begin{align}
@@ -3654,8 +3654,13 @@ En el caso en el que el parámetro de la transformación, $\theta(x)$ sea consta
 
 Una transformación local interesante es la que ocurre en el caso electromagnético. La siguientes transformaciones locales del potencial eléctrico y el vector de potencial electromagnético, dejan invariante las ecuaciones de Maxwell\footnote{La demostración se hará en el siguiente capítulo.}
 \begin{align}
-  \phi \to \phi'=\phi+\frac{\partial}{\partial t}\theta(x)\,,\nonumber\\
-  \mathbf{A} \to \mathbf{A}'=\mathbf{A}- \boldsymbol{\nabla}\theta(x)\,,
+  \phi \to \phi'=&\phi-\frac{\partial}{\partial t}\theta(x)\,,\nonumber\\
+  \mathbf{A} \to \mathbf{A}'=&\mathbf{A}+ \boldsymbol{\nabla}\theta(x)\,,
+\end{align}
+la parte del vector de potencial magnético en términos de componentes es
+\begin{align}
+            A^i\to A^{\prime i}=&A^i+ \partial_i\theta(x)\nonumber\\
+                                              =&A^i- \partial^i\theta(x)\,,
 \end{align}
 o, si definimos el cuadrivector de potencial electromagnético
 \begin{align}
@@ -3663,7 +3668,7 @@ o, si definimos el cuadrivector de potencial electromagnético
 \end{align}
 entonces %faltan detalles
 \begin{align}
-  \delta A^{\mu}=A^{\prime\mu}-A^{\mu}=\partial_\mu \theta(x)\,.
+  \delta A^{\mu}=A^{\prime\mu}-A^{\mu}=-\partial^\mu \theta(x)\,.
 \end{align}
 
 \begin{frame}[fragile,allowframebreaks]
