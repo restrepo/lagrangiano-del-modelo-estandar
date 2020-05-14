@@ -14,8 +14,8 @@ A continuación veremos cual es la forma explícita de la derivada covariante pa
 \begin{frame}[fragile,allowframebreaks]
 Para hacer el Lagrangiano en ec.~\eqref{eq:115qftnew} invariante gauge local bajo $U(1)_Q$, procedemos de la forma usual. El campo transforma como\footnote{A partir de ahora se usará $\psi$ (minúscula) para denotar un fermión de Dirac.}
 \begin{align}
-  \psi\to\psi'=\operatorname{e}^{ieQ\, \theta(x)}\psi\nonumber\\
-  \bar{\psi}\to\bar{\psi}'=\bar{\psi}\operatorname{e}^{-ieQ\,\theta(x)}\,,
+  \psi\to\psi'=\operatorname{e}^{iQ\, \theta(x)}\psi\nonumber\\
+  \bar{\psi}\to\bar{\psi}'=\bar{\psi}\operatorname{e}^{-iQ\,\theta(x)}\,,
 \end{align}
 donde $Q$ es el generador de carga eléctrica en unidades de la carga del electrón.
 
@@ -31,17 +31,17 @@ tal que
 
 donde $e$ es la carga eléctrica del electrón. De esta forma, si $\psi_e$ es el campo que representa al electrón
 \begin{align}
-  eQ \psi_e=e(-1)\psi_e=-e \psi_e\,.
+  Q \psi_e=-e \psi_e\,.
 \end{align}
 
 En efecto
 \begin{align}
   \mathcal{D}_{\mu}\psi\to \left( \mathcal{D}_{\mu}\psi \right)'=&\mathcal{D}_{\mu}'\psi' \nonumber\\
-=&\operatorname{e}^{ieQ\, \theta(x)}\mathcal{D}_{\mu}\psi\,,
+=&\operatorname{e}^{iQ\, \theta(x)}\mathcal{D}_{\mu}\psi\,,
 \end{align}
 como corresponde a una derivada covariante. Para mayor generalidad de los resultados, definimos un elemento de $\operatorname{U}(1)_Q$ como
 \begin{align}
-  U(\theta)=\operatorname{e}^{ieQ\, \theta(x)}\,.
+  U(\theta)=\operatorname{e}^{iQ\, \theta(x)}\,.
 \end{align}
 
 Repetimos a continuación el análisis hecho en la Sección~\ref{sec:dv} pero haciendo referencia sólo a los resultados. Para los detalles se recomienda ir a dicha Sección. De este modo, la derivada covariante se puede definir como
@@ -66,15 +66,15 @@ Es decir, para comprobar esta identidad, debemos aplicar el nuevo operador sobre
 \end{align*}
 da lugar a la propiedad
 \begin{align}
-    \partial_{\mu}\psi+iq A'_{\mu} \psi =&\partial_{\mu}\psi+U\left( \partial_{\mu}U^{-1} \right)\psi+iq  U A_{\mu}U^{-1}\psi\,.
+    \partial_{\mu}\psi-ieQ A'_{\mu} \psi =&\partial_{\mu}\psi+U\left( \partial_{\mu}U^{-1} \right)\psi-ieQ  U A_{\mu}U^{-1}\psi\,.
 \end{align}
 Después de cancelar el término  $\partial_{\mu}\psi$ en ambos lados, y factorizando el campo  $\psi$, tenemos que
 \begin{align}
-       A_{\mu}\to A'_{\mu} =&U A_{\mu}U^{-1}-\frac{i}{q}U\left( \partial_{\mu}U^{-1} \right)\,.
+       A_{\mu}\to A'_{\mu} =&U A_{\mu}U^{-1}+\frac{i}{eQ}U\left( \partial_{\mu}U^{-1} \right)\,.
 \end{align}
 Esta expresión es completamente general y será usada posteriormente en el contexto de grupos más complicados. En el caso particular de un Grupo Abeliano  $U(1)$, tenemos simplemente que
 \begin{align}
- A_{\mu}\to  A'_{\mu}=&A_{\mu}-\partial_{\mu}\theta(x)\,.
+  A_{\mu}\to  A'_{\mu}=&A_{\mu}-\frac{1}{e}\partial_{\mu}\theta(x)\,.
 \end{align}
 
 El Lagrangiano de Dirac invariante gauge local se obtiene reemplazando la derivada normal por la derivada covariante:
