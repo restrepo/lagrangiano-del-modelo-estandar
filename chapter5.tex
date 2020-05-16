@@ -1,3 +1,4 @@
+
 \chapter{Principio gauge local}
 
 Hemos introducido ya todos los ingredientes necesarios para entender a nivel cualitativo el modelo estándar de las partículas elementales. Para permitir simetrías internas más generales que el simple cambio de fase es necesario usar siempre el hermítico conjugado, en lugar de sólo el conjugado. Con esta notación un conjuto de $f$ fermiones (izquierdos) que conservan localmente $n$ cargas, deben interaccionar a través de $a=n^2-1$ bosones gauge. Si además alguno de ellos es masivo, debemos introducir por lo menos un campo escalar. Un Lagrangiano para tal sistema debe tener la forma genérica
@@ -77,11 +78,16 @@ Esta expresión es completamente general y será usada posteriormente en el cont
   A_{\mu}\to  A'_{\mu}=&A_{\mu}-\frac{1}{e}\partial_{\mu}\theta(x)\,.
 \end{align}
 
-El Lagrangiano de Dirac invariante gauge local se obtiene reemplazando la derivada normal por la derivada covariante:
+El Lagrangiano de Dirac invariante gauge local se obtiene reemplazando la derivada normal por la derivada covariante. Para el campo electrónico $Q=-1$
 \begin{align}
   \mathcal{L}=&\overline{\psi}\left(i\gamma^\mu\mathcal{D}_\mu-m\right)\psi+\mathcal{L}\left( \partial_{\mu}A_{\nu}\right)\nonumber\\
-=&\bar{\psi}\left[i\gamma^\mu\left(\partial_\mu-ieQA_\mu\right)-m\right]\psi +\mathcal{L}\left( \partial_{\mu}A_{\nu}\right).
+=&\bar{\psi}\left[i\gamma^\mu\left(\partial_\mu-ieQA_\mu\right)-m\right]\psi-\frac{1}{4}F_{\mu\nu}F^{\mu\nu}\nonumber\\
+=&i\bar{\psi}\gamma^\mu\partial_\mu\psi -e\bar{\psi}\gamma^\mu \psi A_\mu-m\bar{\psi}\psi +-\frac{1}{4}F_{\mu\nu}F^{\mu\nu}\,.
 \end{align}
+Este Lagrangia da lugar a una Acción que define una teoría completa correspondiente a
+la electrodinámica cuántica (QED de sus siglas en ingles)
+
+
 Retomando los resultados para las corrientes conservadas de la Sección~\ref{ref:cc}, aplicamos el segundo teorema de Noether, para una transformación $\psi\to \psi'= \operatorname{e}^{iq\theta(x)}\psi$, donde $q=\text{cte} $
 \begin{align}
 \label{eq:dpa}
@@ -89,24 +95,15 @@ Retomando los resultados para las corrientes conservadas de la Sección~\ref{ref
   \phi_{2}:& \psi^{*}\,,\qquad a_{2}=-iq\psi^{*}\,,\qquad b_2=0 \nonumber\\
   \phi_{3}:& A^{\mu}\,,\qquad a_{3}=0\,,\qquad b_2=-\delta^{\mu}_{\nu}\,,
 \end{align}
-Para analizar mejor las implicaciones de este teorema, es mejor tener una forma más simétrica del Lagrangiano de Dirac
-\begin{align}
-\mathcal{L}=\frac{i}{2}\overline{\psi} \gamma^\mu{\partial_{\mu}} \psi-\frac{i}{2}\left(\partial_{\mu} \overline{\psi}\right) \gamma^{\mu} \psi-m \overline{\psi} \psi-\frac{1}{4} F^{\mu \nu} F_{\mu \nu}\,,
-\end{align}
-cuya forma invariante gauge local se obtiene reemplazando la derivada normal por la derivada covariante
-\begin{align}
-\label{eq:silagqed}
-\mathcal{L}=&\frac{i}{2}\overline{\psi} \gamma^\mu{\mathcal{D}_{\mu}} \psi-\frac{i}{2}\overline{\left(\mathcal{D}_{\mu} \psi\right)} \gamma^{\mu} \psi-m \overline{\psi} \psi-\frac{1}{4} F^{\mu \nu} F_{\mu \nu}\nonumber\\
-=&\frac{i}{2}\overline{\psi} \gamma^\mu{\partial_{\mu}} \psi-\frac{i}{2}\partial_{\mu} \overline{\psi} \gamma^{\mu} \psi
-+e \bar{\psi} \gamma^{\mu} \psi A_{\mu}
--m \overline{\psi} \psi-\frac{1}{4} F^{\mu \nu} F_{\mu \nu}\,.
-\end{align}
 
+
+establezca el segundo teorema de Noether
 \begin{align}
   \sum_i \mathcal{E}_ia_i=&\sum_i  \partial_{\mu}   \left(  \mathcal{E}_i b^{\mu}_i  \right)\nonumber\\
   \mathcal{E}_1a_1+\mathcal{E}_2a_2=&
    \partial_{\mu}   \left(  \mathcal{E}_3 b^{\mu}_3  \right)\,.
 \end{align}
+Usando las ecuaciones de Euler-Lagranga para cada uno de los campos, tenemos
 \begin{align}
 \left\{
 \partial_{\mu}\left[
@@ -114,55 +111,82 @@ cuya forma invariante gauge local se obtiene reemplazando la derivada normal por
 \right]-\frac{\partial \mathcal{L}}{\partial\psi}
 \right\} a_{1}
 +
-a_{2}\left\{\partial_{\mu}\left[\frac{\partial \mathcal{L}}{\partial\left(\partial_{\mu} \overline{\psi}\right)}\right]- \frac{\partial \mathcal{L}}{\partial \overline{\psi}}\right\}
-=\partial_{\mu}\left[\cancel{\partial_{\nu}\left[\frac{\partial \mathcal{L}}{\partial (\partial_{\mu} A_{\nu})}\right]}-\frac{\delta \mathcal{L}}{\partial A_{\mu}}\right]\\\nonumber
-\left\{
+a_{2}\left\{\partial_{\mu}\cancel{\left[\frac{\partial \mathcal{L}}{\partial\left(\partial_{\mu} \overline{\psi}\right)}\right]}- \frac{\partial \mathcal{L}}{\partial \overline{\psi}}\right\}
+=\partial_{\mu}\left[\cancel{\partial_{\nu}\left[\frac{\partial \mathcal{L}}{\partial (\partial_{\mu} A_{\nu})}\right]}-\frac{\delta \mathcal{L}}{\partial A_{\mu}}\right]\nonumber\\
 \partial_{\mu}\left[
 \frac{\partial\mathcal{L}}{\partial\left(\partial_{\mu} \psi\right)}
-\right]
-\right\} a_{1}
-+
-a_{2}\left\{\partial_{\mu}\left[\frac{\partial \mathcal{L}}{\partial\left(\partial_{\mu} \overline{\psi}\right)}\right]
-\right\}
+\right] a_{1}
 -\frac{\partial \mathcal{L}}{\partial\psi}a_1
 -a_2\frac{\partial \mathcal{L}}{\partial \overline{\psi}}
 =-\partial_{\mu}\left(\frac{\delta \mathcal{L}}{\partial A_{\mu}}\right)\,.
 \end{align}
-aplicando la regla de la cadena
+aplicando la regla de la cadena,  y usando la definición de $j^\mu$ dada en la ec.~\eqref{eq:thnfmunu0}
 \begin{align}
 \partial_{\mu}\left[
 \frac{\partial\mathcal{L}}{\partial\left(\partial_{\mu} \psi\right)}
 a_{1}
-+ a_{2}\frac{\partial \mathcal{L}}{\partial\left(\partial_{\mu} \overline{\psi}\right)}\right]
+\right]
 -
 \frac{\partial\mathcal{L}}{\partial\left(\partial_{\mu} \psi\right)}
 \partial_{\mu}a_{1}
--\partial_{\mu}a_{2}\frac{\partial \mathcal{L}}{\partial\left(\partial_{\mu} \overline{\psi}\right)}
 -\frac{\partial \mathcal{L}}{\partial\psi}a_1
 -a_2\frac{\partial \mathcal{L}}{\partial \overline{\psi}}
-=-\partial_{\mu}\left(\frac{\delta \mathcal{L}}{\partial A_{\mu}}\right).
+=\partial_{\mu}j^{\mu}\,.
 \end{align}
 
-Usaremos ahora el Lagrangiano en la ec.~\eqref{eq:silagqed} para simplificar los términos después del corchete
+Para establecer el segundo teorema de Noether para la electrodinámica cuántica, debemos establecer la identidad  general~\eqref{eq:identityth2}, que en este caso se reduce
 \begin{align}
-    \partial_{\mu}a_{2}\frac{\partial \mathcal{L}}{\partial\left(\partial_{\mu} \overline{\psi}\right)}=&
+\frac{\partial\mathcal{L}}{\partial\left(\partial_{\mu} \psi\right)}
+\partial_{\mu}a_{1}
++\frac{\partial \mathcal{L}}{\partial\psi}a_1
++a_2\frac{\partial \mathcal{L}}{\partial \overline{\psi}} =0\,.
 \end{align}
-
-tenemos que para los campos $\psi$ y $\psi^{*}$, asumiendo que el campo $A^{\mu}$ satisface las ecuaciones de Euler-Lagrange, tenemos que
+De hecho
 \begin{align}
-  \partial_{\mu}j^{\mu}=0\,,
+&\frac{\partial\mathcal{L}}{\partial\left(\partial_{\mu} \psi\right)}
+\partial_{\mu}a_{1}
++\frac{\partial \mathcal{L}}{\partial\psi}a_1
+  +a_2\frac{\partial \mathcal{L}}{\partial \overline{\psi}}  \nonumber\\
+=&i\overline{\psi}\gamma^{\mu}(iq\partial_{\mu} \psi)
+-e\overline{\psi}\gamma^{\mu}(iq \psi)A_{\mu}
+-m\overline{\psi}(iq \psi) \nonumber\\
+&+\left( -iq\overline{\psi} \right)   \left( i \gamma^{\mu}\partial_{\mu}\psi \right)                                                      
++\left( -iq\overline{\psi} \right)\left( -e \gamma^{\mu}\psi A_{\mu} \right)
++\left( -iq\overline{\psi} \right)\left( -m\psi \right) \nonumber\\
+    =&-q\overline{\psi}\gamma^{\mu}\partial_{\mu} \psi+ q\overline{\psi} \gamma^{\mu}\partial_{\mu}\psi
+       -ieq\overline{\psi}\gamma^{\mu} \psi A_{\mu}+ieq \overline{\psi}  \gamma^{\mu}\psi A_{\mu}
+       -iq m\overline{\psi}\psi +iqm\overline{\psi} \psi  \nonumber\\
+=&0\,,
 \end{align}
-donde
+de modo que
+\begin{align}
+\partial_{\mu}\left[
+\frac{\partial\mathcal{L}}{\partial\left(\partial_{\mu} \psi\right)}
+a_{1}
+\right]
+  =\partial_{\mu}j^{\mu}\,.
+\end{align}
+De este modo, la cuadricorriente para la QED es 
 \begin{align}
   j^{\mu}=\sum_i\frac{\partial \mathcal{L}}{\partial\left(\partial_{\mu} \psi \right)}a_i\,,
 \end{align}
-El cálculo directo de la  corriente, de acuerdo al segundo teorema de Noether, se reduce a calcular 
+donde habíamos establecido, ver ec.~\eqref{eq:cuadriconj}, que $j^{\mu}$ debe ser una cuadricorriente conservada
+\begin{align}
+  \partial_{\mu}j^{\mu}=0\,,
+\end{align}
+
+El cálculo general de la corriente a partir de la identidad~\eqref{eq:identityth2}, es
 \begin{align}
   j^\mu&=\frac{\partial\mathcal{L}}{\partial\left(\partial_\mu\psi\right)}a_1+a_2\frac{\partial\mathcal{L}}{\partial\left(\partial_\mu\bar{\psi}\right)} \nonumber\\
   &=\frac{\partial\mathcal{L}}{\partial\left(\partial_\mu\psi\right)}a_1\,.
 \end{align}
-Usando el $a_1$ de la ec.~\eqref{eq:dpa}
-resulta en
+Consistente con la demostración previa.
+
+Como
+\begin{align}
+\frac{\partial\mathcal{L}}{\partial\left(\partial_\mu\psi\right)}=i\overline{\psi}\gamma^{\mu}\,,
+\end{align}
+usando el $a_1$ de la ec.~\eqref{eq:dpa}, tenemos que
 \begin{align}
   j^{\mu}=-e\overline{\psi}\gamma^{\mu} Q \psi\,,
 \end{align}
@@ -170,27 +194,8 @@ que corresponde a la cuadri-corriente electromágnética conservada localmente d
 
 
 
-Tenemos además que si aplicamos el segundo teorema de Noether al campo de radiación
-\begin{align}
-  0=&\partial_{\mu} \left( \mathcal{E}_3 b^{\mu}_3 \right),
-\end{align}
-donde $\mathcal{E}_3$ es la ecuación de Euler-Lagrange para el campo $A_{\nu}$,
-entonces
-\begin{align}
-     0=&\partial_{\mu} \left( \mathcal{E}_3 \delta^{\mu}_\nu \right) \nonumber\\
-    0=&
- \partial_{\mu} \partial_{\rho}\left[ \frac{\partial \mathcal{L}}{\partial \left(  \partial_{\rho} A_{\mu}\right)}  \right] - \partial_{\mu} \frac{\partial \mathcal{L}}{\partial A_{\mu}} \,.
-\end{align}
-Ya que
-\begin{align}
-  \frac{\partial \mathcal{L}}{\partial A_{\mu}}=e\overline{\psi}\gamma^{\mu} Q \psi\,,
-\end{align}
-el segundo témrino da lugar a la misma corriente conservada fermiónica
-\begin{align}
-  \partial_{\mu} \frac{\partial \mathcal{L}}{\partial A_{\mu}}=&
-\partial_{\mu} j^{\mu}=0\,,
-\end{align}
-Por consiguiente, la identidad resultante
+El teorema de Noether 2 para la QED es perfectamente consistente para e campo de radiación
+la identidad resultante
 \begin{align}
    \partial_{\mu} \partial_{\rho}\left[ \frac{ \mathcal{L}}{\partial \left(\partial  \partial_{\rho} A_{\mu}\right)}  \right]=0\,,
 \end{align}
@@ -1901,6 +1906,27 @@ de modo que el Lagrangiano correspondiente, dado en la ec.~\eqref{eq:200} tambi\
 
 \end{subappendices}
 
+
+\section{Ejercicios}
+\textbf{Ejercicio}: Utilizando la forma más simétrica del Lagrangiano
+Para analizar mejor las implicaciones de este teorema, es mejor tener una forma más simétrica del Lagrangiano de Dirac
+\begin{align}
+\mathcal{L}=\frac{i}{2}\overline{\psi} \gamma^\mu{\partial_{\mu}} \psi-\frac{i}{2}\left(\partial_{\mu} \overline{\psi}\right) \gamma^{\mu} \psi-m \overline{\psi} \psi-\frac{1}{4} F^{\mu \nu} F_{\mu \nu}\,,
+\end{align}
+cuya forma invariante gauge local se obtiene reemplazando la derivada normal por la derivada covariante
+\begin{align}
+\label{eq:silagqed}
+\mathcal{L}=&\frac{i}{2}\overline{\psi} \gamma^\mu{\mathcal{D}_{\mu}} \psi-\frac{i}{2}\overline{\left(\mathcal{D}_{\mu} \psi\right)} \gamma^{\mu} \psi-m \overline{\psi} \psi-\frac{1}{4} F^{\mu \nu} F_{\mu \nu}\nonumber\\
+=&\frac{i}{2}\overline{\psi} \gamma^\mu{\partial_{\mu}} \psi-\frac{i}{2}\partial_{\mu} \overline{\psi} \gamma^{\mu} \psi
++e \bar{\psi} \gamma^{\mu} \psi A_{\mu}
+-m \overline{\psi} \psi-\frac{1}{4} F^{\mu \nu} F_{\mu \nu}\,.
+\end{align}
+establezca el segundo teorema de Noether
+\begin{align}
+  \sum_i \mathcal{E}_ia_i=&\sum_i  \partial_{\mu}   \left(  \mathcal{E}_i b^{\mu}_i  \right)\nonumber\\
+  \mathcal{E}_1a_1+\mathcal{E}_2a_2=&
+   \partial_{\mu}   \left(  \mathcal{E}_3 b^{\mu}_3  \right)\,.
+\end{align}
 
 
 
