@@ -82,13 +82,72 @@ El Lagrangiano de Dirac invariante gauge local se obtiene reemplazando la deriva
   \mathcal{L}=&\overline{\psi}\left(i\gamma^\mu\mathcal{D}_\mu-m\right)\psi+\mathcal{L}\left( \partial_{\mu}A_{\nu}\right)\nonumber\\
 =&\bar{\psi}\left[i\gamma^\mu\left(\partial_\mu-ieQA_\mu\right)-m\right]\psi +\mathcal{L}\left( \partial_{\mu}A_{\nu}\right).
 \end{align}
-Retomando los resultados para las corrientes conservadas de la Sección~\ref{ref:cc}, aplicamos el segundo teorema de Noether 
+Retomando los resultados para las corrientes conservadas de la Sección~\ref{ref:cc}, aplicamos el segundo teorema de Noether, para una transformación $\psi\to \psi'= \operatorname{e}^{iq\theta(x)}\psi$, donde $q=\text{cte} $
 \begin{align}
 \label{eq:dpa}
-  \phi_{1}:& \psi\,,\qquad a_{1}=ie Q \psi \,,\qquad b_1=0\nonumber\\
-  \phi_{2}:& \psi^{*}\,,\qquad a_{2}=-ie Q\psi^{*}\,,\qquad b_2=0 \nonumber\\
+  \phi_{1}:& \psi\,,\qquad a_{1}=iq \psi \,,\qquad b_1=0\nonumber\\
+  \phi_{2}:& \psi^{*}\,,\qquad a_{2}=-iq\psi^{*}\,,\qquad b_2=0 \nonumber\\
   \phi_{3}:& A^{\mu}\,,\qquad a_{3}=0\,,\qquad b_2=-\delta^{\mu}_{\nu}\,,
 \end{align}
+Para analizar mejor las implicaciones de este teorema, es mejor tener una forma más simétrica del Lagrangiano de Dirac
+\begin{align}
+\mathcal{L}=\frac{i}{2}\overline{\psi} \gamma^\mu{\partial_{\mu}} \psi-\frac{i}{2}\left(\partial_{\mu} \overline{\psi}\right) \gamma^{\mu} \psi-m \overline{\psi} \psi-\frac{1}{4} F^{\mu \nu} F_{\mu \nu}\,,
+\end{align}
+cuya forma invariante gauge local se obtiene reemplazando la derivada normal por la derivada covariante
+\begin{align}
+\label{eq:silagqed}
+\mathcal{L}=&\frac{i}{2}\overline{\psi} \gamma^\mu{\mathcal{D}_{\mu}} \psi-\frac{i}{2}\overline{\left(\mathcal{D}_{\mu} \psi\right)} \gamma^{\mu} \psi-m \overline{\psi} \psi-\frac{1}{4} F^{\mu \nu} F_{\mu \nu}\nonumber\\
+=&\frac{i}{2}\overline{\psi} \gamma^\mu{\partial_{\mu}} \psi-\frac{i}{2}\partial_{\mu} \overline{\psi} \gamma^{\mu} \psi
++e \bar{\psi} \gamma^{\mu} \psi A_{\mu}
+-m \overline{\psi} \psi-\frac{1}{4} F^{\mu \nu} F_{\mu \nu}\,.
+\end{align}
+
+\begin{align}
+  \sum_i \mathcal{E}_ia_i=&\sum_i  \partial_{\mu}   \left(  \mathcal{E}_i b^{\mu}_i  \right)\nonumber\\
+  \mathcal{E}_1a_1+\mathcal{E}_2a_2=&
+   \partial_{\mu}   \left(  \mathcal{E}_3 b^{\mu}_3  \right)\,.
+\end{align}
+\begin{align}
+\left\{
+\partial_{\mu}\left[
+\frac{\partial\mathcal{L}}{\partial\left(\partial_{\mu} \psi\right)}
+\right]-\frac{\partial \mathcal{L}}{\partial\psi}
+\right\} a_{1}
++
+a_{2}\left\{\partial_{\mu}\left[\frac{\partial \mathcal{L}}{\partial\left(\partial_{\mu} \overline{\psi}\right)}\right]- \frac{\partial \mathcal{L}}{\partial \overline{\psi}}\right\}
+=\partial_{\mu}\left[\cancel{\partial_{\nu}\left[\frac{\partial \mathcal{L}}{\partial (\partial_{\mu} A_{\nu})}\right]}-\frac{\delta \mathcal{L}}{\partial A_{\mu}}\right]\\\nonumber
+\left\{
+\partial_{\mu}\left[
+\frac{\partial\mathcal{L}}{\partial\left(\partial_{\mu} \psi\right)}
+\right]
+\right\} a_{1}
++
+a_{2}\left\{\partial_{\mu}\left[\frac{\partial \mathcal{L}}{\partial\left(\partial_{\mu} \overline{\psi}\right)}\right]
+\right\}
+-\frac{\partial \mathcal{L}}{\partial\psi}a_1
+-a_2\frac{\partial \mathcal{L}}{\partial \overline{\psi}}
+=-\partial_{\mu}\left(\frac{\delta \mathcal{L}}{\partial A_{\mu}}\right)\,.
+\end{align}
+aplicando la regla de la cadena
+\begin{align}
+\partial_{\mu}\left[
+\frac{\partial\mathcal{L}}{\partial\left(\partial_{\mu} \psi\right)}
+a_{1}
++ a_{2}\frac{\partial \mathcal{L}}{\partial\left(\partial_{\mu} \overline{\psi}\right)}\right]
+-
+\frac{\partial\mathcal{L}}{\partial\left(\partial_{\mu} \psi\right)}
+\partial_{\mu}a_{1}
+-\partial_{\mu}a_{2}\frac{\partial \mathcal{L}}{\partial\left(\partial_{\mu} \overline{\psi}\right)}
+-\frac{\partial \mathcal{L}}{\partial\psi}a_1
+-a_2\frac{\partial \mathcal{L}}{\partial \overline{\psi}}
+=-\partial_{\mu}\left(\frac{\delta \mathcal{L}}{\partial A_{\mu}}\right).
+\end{align}
+
+Usaremos ahora el Lagrangiano en la ec.~\eqref{eq:silagqed} para simplificar los términos después del corchete
+\begin{align}
+    \partial_{\mu}a_{2}\frac{\partial \mathcal{L}}{\partial\left(\partial_{\mu} \overline{\psi}\right)}=&
+\end{align}
+
 tenemos que para los campos $\psi$ y $\psi^{*}$, asumiendo que el campo $A^{\mu}$ satisface las ecuaciones de Euler-Lagrange, tenemos que
 \begin{align}
   \partial_{\mu}j^{\mu}=0\,,
