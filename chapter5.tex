@@ -284,45 +284,93 @@ De esta manera podemos reescribir el Lagrangiano en términos de un Lagrangiano 
 \end{align}
 Para la QED sólo hay un término de interacción que es suficiente para explicar todos los fenoménos electromagnéticos y su interacción con la materia. Este esta representado por el diagrama de Feynman mostrado en la Figura \ref{fig:feynmanruleqed}
 
+\end{frame}
+\begin{frame}[fragile,allowframebreaks]
 \begin{figure}
   \centering
   \includegraphics[scale=0.6]{feynmanruleqed} % in feynmanrules.svf as a Layer
   \caption{Feynman rule for QED}
   \label{fig:feynmanruleqed}
 \end{figure}
+\end{frame}
 
 
+Para usar esta regla de Feynman debemos aclarar que línea fermiónica corresponde a partícula y cual a antipartícula.
+Ver~\ref{fig:feynmanrulesqed}
+
+
+\begin{frame}[fragile,allowframebreaks]
 \begin{figure}
   \centering
   \includegraphics[scale=0.6]{feynmanrulesqed} % in feynmanrules.svf as a Layer
   \caption{Configurations of Feynman rule for QED. The defined positive energy particles (antiparticles) travel in the same (opposite) direction that time. }
   \label{fig:feynmanrulesqed}
 \end{figure}
+\end{frame}
+
 
 La repulsión electromagnética esta representada por la figura \ref{fig:qedrepulsion}. En la Figura (a) el primer electrón emite un fotón y se dispersa, mientras que el segundo absorbe el fotón y se dispersa en la dirección opuesta. En la Figura (b) el primer electón absorve el fotón emitido por el segundo electrón. Los dos diagrams se representa por uno único con el fotón en horizontal como se muestra en la Figura (c).
 
+\begin{frame}[fragile,allowframebreaks]
 \begin{figure}
   \centering
   \includegraphics[scale=0.8]{qedrepulsion}
   \caption{Electromagnetic repulsion. The diagrams (a) and (b) are summarized in the diagram (c)}
   \label{fig:qedrepulsion}
 \end{figure}
+\end{frame}
 
+La aniquilación de un par electrón positrón en un fotones tiene que ser consistente con la conservación de momentum. En general, el cudrimomentum del electron es
+\begin{align}
+  p^\mu=&(E,\boldsymbol{p}),& \text{such that: }  m^2=p_{\mu}p^{\mu}=& E^2-p^2\,.
+\end{align}
+mientras que para el fotón es
+\begin{align}
+  p^\mu=&(E,\boldsymbol{p}),& \text{such that: }  0=p_{\mu}p^{\mu}=& E^2-p^2\,,
+\end{align}
+y por consiguiente
+\begin{align}
+  E=|\boldsymbol{p}|\,.
+\end{align}
 
+Sin perdida de generalidad, cuando un electrón y su antipartícula, el positrón, sufren una colisión viajando en direcciones opuestas, podemos escoger el sistema de masa, tal que asignando los momentos iniciales como en la figura~\ref{fig:anihilation}
+\begin{align}
+  \boldsymbol{p}_1-\boldsymbol{p}_{2}=0\,.
+\end{align}
+La conservación de la cantidad de movimiento garantiza entonces que
+\begin{align}
+  \boldsymbol{p}'_1-\boldsymbol{p}'_{2}=0\,.
+\end{align}
+De este modo, si en el estado final hay un sólo fotón, necesariamente este tendría cuadrimomentum nulo, de aquí una Energía nula  en clara violación de la conservación de energía. Por lo tanto, la aniquilación de un electrón y un positrón en radiación electrómagnética, debe dar lugar a aal menos dos fotones, como se muestra en la figura
+
+\begin{frame}[fragile,allowframebreaks]
 \begin{figure}
   \centering
   \includegraphics[scale=0.8]{anihilation}
   \caption{Momentum conservation force  annihilation into two photons}
   \label{fig:anihilation}
 \end{figure}
+\end{frame}
 
+Cada nuevo vértice en un proceso contribuye con un factor $e^{2}$ pues el cálculo de las probabilidades en mecánica cuántica involucran un módulo cuadrado. La cantidad adimensional asociada es la constante de estructura fina
+\begin{align}
+  \alpha=\frac{e^2}{4\pi}\approx \frac{1}{137}\,.
+\end{align}
 
+En el átomo de Hidrógeno, las interacciones electromagnética que mantienen el átomo ligado provienen de la emisión de un fotón por parte del electrón que es absorbido por el protón (y viceversa). Sin embargo, es también la probable que el fotón sea reabsorbido por el propio electrón como se indica en la figura~\ref{fig:selfenergy}. Sin embargo, débido a los dos vérices adicionales, la probabilidad de que esto suceda está suprimida por un factor de $\mathcal{O}({\alpha}^{2})\sim 10^{-3}$. Coloquialmente, esto implicaría que por cada mil fotones que el electrón intercambio con el protón, el propio electrón reaborve uno de ellos. Esto genera un nivel hiperfino en el átomo de hidrógeno con consecuencias medibles experimentalmente. 
+
+\begin{frame}[fragile,allowframebreaks]
 \begin{figure}
   \centering
   \includegraphics[scale=0.5]{oneloopqed}
   \caption{Electron self-energy}
   \label{fig:selfenergy}
 \end{figure}
+\end{frame}
+
+Similarmente el fotón puede ``fluctuar con el vacío'', como se muestra la figura~\ref{fig:polarization}
+
+\begin{frame}[fragile,allowframebreaks]
 
 \begin{figure}
   \centering
@@ -330,9 +378,53 @@ La repulsión electromagnética esta representada por la figura \ref{fig:qedrepu
   \caption{Vacuum polarization}
   \label{fig:polarization}
 \end{figure}
-
-
 \end{frame}
+
+\textbf{Ejercicio}:
+Realize correcciones a un loop a la interacción entre dos electrones de la figura~\ref{fig:qedrepulsion}, incluyendo la demominada \emph{corrección al vérice}.
+
+\section{Momento magnético del electrón}
+La correspondiente a la ecuación de Euler-Lagrange para el campo $\overline{\psi}$,
+%%%Establecer la ecuación
+El Hamiltoniano para el campo electrónico completo en presencia de un campo electromagnética en la QED es
+%%expresión para H
+
+El límite no relativista de dicho Hamiltoniano es obtenido en la Apéndice~\ref{sec:limite-no-relat}. El resultado es
+
+\begin{align}
+  \widehat{H}\phi&=\frac{1}{2m}\left\{(i\boldsymbol{\nabla}+q\mathbf{A})^2\phi
+    -q \sigma^k(\boldsymbol{\nabla}\times\mathbf{A})_k \phi\right\}+q A_0\phi\nonumber\\
+  &=\left[\frac{1}{2m}(i\boldsymbol{\nabla}+q \mathbf{A})^2+q A_0-\left(\frac{q\boldsymbol{\sigma}}{2m}\right)\cdot\mathbf{B}\right]\phi
+\end{align}
+%\left(\right)
+En ausencia del campo electromagn\'etico recupermos la Ecuaci\'on de Scrh\"onger para una part\'\i cula libre como era de esperarse. Sin el \'ultimo t\'ermino $({q\boldsymbol{\sigma}}/{2m})\cdot\mathbf{B}$, ser\'\i a el Hamiltoniano de Scr\"odinger para una part\'\i cula cargada en presencia de un campo electromagn\'etico. El t\'ermino adicional es interpretado como la energ\'\i a en un campo magn\'etico, de un momento magn\'etico intr\'\i nseco asociado con un part\'\i cula de Dirac.
+
+Definimos entonces el momento magn\'etico intr\'\i nseco como ($q=-e$)
+\begin{align}
+  \boldsymbol{\mu}_e&=-\frac{e\boldsymbol{\sigma}}{2m}\nonumber\\
+  &=-2\left(\frac{e}{2m}\right)\frac{\boldsymbol{\sigma}}{2}\nonumber\\
+  &=-2\left(\frac{e\hbar}{2m}\right)\frac{\boldsymbol{\sigma}}{2}\nonumber\\
+  &=-g_e\left(\frac{e\hbar}{2m}\right)\frac{\boldsymbol{\sigma}}{2}\nonumber\\
+\end{align}
+donde hemos recuperado el factor $\hbar$ y definido el \emph{factor--g} \cite{spin},  $g_e=2$. Se define el momento magn\'etico an\'omalo del electr\'on como
+%See https://en.wikipedia.org/wiki/Anomalous_magnetic_dipole_moment
+\begin{equation}
+  a_e=\frac{g_e-2}{2}
+\end{equation}
+de modo que $a_e=0$. Sin embargo experimentalmente $a_e\sim10^{-3}$
+\begin{equation}
+  a_e=0.001\;159\;652\;1859(38)
+\end{equation}
+Despu\'es de la segunda cuantizaci\'on, se pueden realizar correcciones perturbativas al valor calculado anteriormente de $g_e$. Dicho c\'alculo ha sido realizado a cuarto orden en teor\'\i a de perturbaciones coincidiendo con el valor experimental hasta la d\'ecima cifra significativa. Este tipo de comprobaciones entre teor\'\i a y experimento ha llevado a considerar la Electrodin\'amica Cu\'antica (QCD) como la mejor teor\'\i a que se halla construido para describir la naturaleza.
+
+Algunas de las cientos de miles de contribuciones, se ilustran en la figura~\ref{fig:5loop}, tomada de la referencia~\cite{Aoyama:2019ryr}
+\begin{figure}
+  \centering
+  \includegraphics{5loop}
+  \caption{Some five-loop correction from~\cite{Aoyama:2019ryr}}
+  \label{fig:5loop}
+\end{figure}
+
 
 \subsection{Paridad}
 \begin{align}
@@ -342,7 +434,7 @@ La repulsión electromagnética esta representada por la figura \ref{fig:qedrepu
 \end{align}
 de modo que el fotón se acopla por igual a los campos izquierdos que a los derechos. El Lagrangiano de la QED en términos de espinores de Weyl es:
 \begin{align}
-  \mathcal{L}_{free}=&i(e_L)^{\dagger}\overline{\sigma}^{\mu}\partial_{\mu}e_L A_{\mu}+i(e_R)^{\dagger}\sigma^{\mu}\partial_{\mu}e_{R}
+  \mathcal{L}=&i(e_L)^{\dagger}\overline{\sigma}^{\mu}\partial_{\mu}e_L A_{\mu}+i(e_R)^{\dagger}\sigma^{\mu}\partial_{\mu}e_{R}
 -m \left[ \left( e_R \right)^\dagger e_L+\left( e_L \right)^{\dagger}e_R \right] -\tfrac{1}{4}F^{\mu\nu}F_{\mu\nu}\nonumber\\
    &+eQ \left[(e_L)^{\dagger}\overline{\sigma}^{\mu}e_L+(e_R)^{\dagger}\sigma^{\mu}e_{R}  \right] A_{\mu}
 \end{align}
@@ -358,7 +450,7 @@ Una demostración de esta invarianza se muestra en el Apéndice \ref{sec:ferm-qu
 %   T^0_0=i\psi^\dagger\partial_0\psi-i\psi^\dagger\partial_0\psi-i\psi^\dagger\gamma^0\gamma^i\partial_i\psi+m\psi^\dagger\psi-eQ\bar{\psi}\gamma^\mu\psi A_\mu +\tfrac{1}{4}F^{\mu\nu}F_{\mu\nu}.
 % \end{align}
 
-En adelante escribiremos el término sólo para el fermión izquierdo $\psi$ (y el correspondiente antifermion derecho $\psi^{\dagger}$
+%En adelante escribiremos el término sólo para el fermión izquierdo $\psi$ (y el correspondiente antifermion derecho $\psi^{\dagger}$)
 
 \section{Cromodinámica Cuántica}
 \label{sec:inter-fuert}
