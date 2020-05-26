@@ -389,16 +389,19 @@ La correspondiente a la ecuación de Euler-Lagrange para el campo $\overline{\ps
 El Hamiltoniano para el campo electrónico completo en presencia de un campo electromagnética en la QED es
 %%expresión para H
 
+\begin{frame}[fragile,allowframebreaks]
 El límite no relativista de dicho Hamiltoniano es obtenido en la Apéndice~\ref{sec:limite-no-relat}. El resultado es
 
 \begin{align}
-  \widehat{H}\phi&=\frac{1}{2m}\left\{(i\boldsymbol{\nabla}+q\mathbf{A})^2\phi
-    -q \sigma^k(\boldsymbol{\nabla}\times\mathbf{A})_k \phi\right\}+q A_0\phi\nonumber\\
-  &=\left[\frac{1}{2m}(i\boldsymbol{\nabla}+q \mathbf{A})^2+q A_0-\left(\frac{q\boldsymbol{\sigma}}{2m}\right)\cdot\mathbf{B}\right]\phi
+  \widehat{H}\psi&=\frac{1}{2m}\left\{(i\boldsymbol{\nabla}+q\mathbf{A})^2\psi
+    -q \sigma^k(\boldsymbol{\nabla}\times\mathbf{A})_k \phi\right\}+q A_0\psi\nonumber\\
+  &=\left[\frac{1}{2m}(i\boldsymbol{\nabla}+q \mathbf{A})^2+q A_0-\left(\frac{q\boldsymbol{\sigma}}{2m}\right)\cdot\mathbf{B}\right]\psi\,.
 \end{align}
 %\left(\right)
+\end{frame}
 En ausencia del campo electromagn\'etico recupermos la Ecuaci\'on de Scrh\"onger para una part\'\i cula libre como era de esperarse. Sin el \'ultimo t\'ermino $({q\boldsymbol{\sigma}}/{2m})\cdot\mathbf{B}$, ser\'\i a el Hamiltoniano de Scr\"odinger para una part\'\i cula cargada en presencia de un campo electromagn\'etico. El t\'ermino adicional es interpretado como la energ\'\i a en un campo magn\'etico, de un momento magn\'etico intr\'\i nseco asociado con un part\'\i cula de Dirac.
 
+\begin{frame}[fragile,allowframebreaks]
 Definimos entonces el momento magn\'etico intr\'\i nseco como ($q=-e$)
 \begin{align}
   \boldsymbol{\mu}_e&=-\frac{e\boldsymbol{\sigma}}{2m}\nonumber\\
@@ -415,8 +418,10 @@ de modo que $a_e=0$. Sin embargo experimentalmente $a_e\sim10^{-3}$
 \begin{equation}
   a_e=0.001\;159\;652\;1859(38)
 \end{equation}
+\end{frame}
 Despu\'es de la segunda cuantizaci\'on, se pueden realizar correcciones perturbativas al valor calculado anteriormente de $g_e$. Dicho c\'alculo ha sido realizado a cuarto orden en teor\'\i a de perturbaciones coincidiendo con el valor experimental hasta la d\'ecima cifra significativa. Este tipo de comprobaciones entre teor\'\i a y experimento ha llevado a considerar la Electrodin\'amica Cu\'antica (QCD) como la mejor teor\'\i a que se halla construido para describir la naturaleza.
 
+\begin{frame}[fragile,allowframebreaks]
 Algunas de las cientos de miles de contribuciones, se ilustran en la figura~\ref{fig:5loop}, tomada de la referencia~\cite{Aoyama:2019ryr}
 \begin{figure}
   \centering
@@ -424,9 +429,10 @@ Algunas de las cientos de miles de contribuciones, se ilustran en la figura~\ref
   \caption{Some five-loop correction from~\cite{Aoyama:2019ryr}}
   \label{fig:5loop}
 \end{figure}
-
+\end{frame}
 
 \subsection{Paridad}
+\begin{frame}[fragile,allowframebreaks]
 \begin{align}
   \overline{\psi}\gamma^{\mu}\psi A_{\mu}=&
 \xi^{\dagger}\overline{\sigma}^{\mu}\xi A_{\mu}+\eta\sigma^{\mu}\eta^{\dagger} A_{\mu}\nonumber\\
@@ -438,6 +444,7 @@ de modo que el fotón se acopla por igual a los campos izquierdos que a los dere
 -m \left[ \left( e_R \right)^\dagger e_L+\left( e_L \right)^{\dagger}e_R \right] -\tfrac{1}{4}F^{\mu\nu}F_{\mu\nu}\nonumber\\
    &+eQ \left[(e_L)^{\dagger}\overline{\sigma}^{\mu}e_L+(e_R)^{\dagger}\sigma^{\mu}e_{R}  \right] A_{\mu}
 \end{align}
+\end{frame}
 Se dice entonces que la corriente  electromagnética conserva paridad, es decir es invariante bajo el cambio $L\leftrightarrow R$. 
 Una demostración de esta invarianza se muestra en el Apéndice \ref{sec:ferm-quir-de}
 %Intentando obtener el operador Hamiltoniano y demás:
@@ -2041,7 +2048,8 @@ de modo que el Lagrangiano correspondiente, dado en la ec.~\eqref{eq:200} tambi\
 
 
 \section{Ejercicios}
-\textbf{Ejercicio}: Utilizando la forma más simétrica del Lagrangiano
+\begin{enumerate}
+\item Utilizando la forma más simétrica del Lagrangiano
 Para analizar mejor las implicaciones de este teorema, es mejor tener una forma más simétrica del Lagrangiano de Dirac
 \begin{align}
 \mathcal{L}=\frac{i}{2}\overline{\psi} \gamma^\mu{\partial_{\mu}} \psi-\frac{i}{2}\left(\partial_{\mu} \overline{\psi}\right) \gamma^{\mu} \psi-m \overline{\psi} \psi-\frac{1}{4} F^{\mu \nu} F_{\mu \nu}\,,
@@ -2060,7 +2068,9 @@ establezca el segundo teorema de Noether
   \mathcal{E}_1a_1+\mathcal{E}_2a_2=&
    \partial_{\mu}   \left(  \mathcal{E}_3 b^{\mu}_3  \right)\,.
 \end{align}
-
+\item Encuentre el Hamiltoniano para la QED
+\end{enumerate}
+\textbf{Ejercicio}: 
 
 
 \renewcommand{\labelenumi}{\theenumi} %noinstiki
