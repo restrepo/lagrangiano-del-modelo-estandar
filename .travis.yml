@@ -1,19 +1,54 @@
+#https://github.com/SimonWaldherr/HowTo-Deploy-LaTeX-Documents -> .travis.yml
+#=========================
+#WARNING: Don't forget to create the DESCRIPTION FILE with contents:
+#Imports:
+#    rmarkdown
+#=================
+
 os: linux
 sudo: required
 warnings_are_errors: false
+
+# we use the R VM because it contains LaTeX and pandoc
+# https://docs.travis-ci.com/user/languages/r
+#Requieres DESCRIPTION file
+
 language: r
+
+#LaTeX/TexLive Packages #
+#The included TexLive distribution contains only a limited
+#set of default packages. If your vignettes require additional
+#TexLive packages you can install them using tlmgr install
+#in the before_install step.
+
 before_install:
-- tlmgr install chngcntr cancel babel-spanish
+  - tlmgr install chngcntr cancel babel-spanish
+
+# we can install additional software
 apt_packages:
-- pdf2djvu
+# we download pdf2djvu to also generate a djvu f i l e of our LaTeX source
+  - pdf2djvu
+
 script:
-- pdflatex -interaction=nonstopmode fullnotes.tex
-- pdflatex -interaction=nonstopmode fullnotes.tex
+# in the next step we use pdflatex to convert .tex to .pdf
+# of course we could use pandoc for this also, but pdflatex generates nicer PDFs
+  - pdflatex -interaction=nonstopmode fullnotes.tex
+  - pdflatex -interaction=nonstopmode fullnotes.tex
+
+#The following lines where automaticaly generated after
+# cd into my local repo with the old version of .travis.yml
+# install travis cli from: https://github.com/travis-ci/travis.rb
+#  $ sudo apt-get install ruby2.1-dev
+#  $ sudo gem install travis -v 1.8.2 --no-rdoc --no-ri
+#  $ travis setup releases
+# If failed login: remove Personal access token from github -> Settings
+# Add:   skip_cleanup: true (see below)
+
 deploy:
   provider: releases
   api_key:
     secure: UY8eZ40wdO1IScASdmNWchXxmfeH6Uc1lcBAm9Pf9K/Tx7pmaVOvf/HnJ+8zd+PHFoid8DXcKlak9LvK0MIiys7qT+SGCT1tVOmbG/gg7IZhDM+jWSOsnP5f1tnqdLJaotTVQCeOQ1fT8VeB5lVm2hI+2qn7Gee+hea/riLJeNUMW28XxMnkqqY8JNRJpFYSorM2nQC99EJ6OB0mY/IAuq4UTLvsW7p+B3gFJM2W0/SrkIdptq8Dw3EuLdaVMvSm4Ah/t99panpqjIXuOqpwRckU5BLpU8K98145AEGkwyV/jjIOWkY4UXXAevnqnKZ/P3RsnDc7NTef7SXjFf9lN0iL0IkobDhsf98ujrDdVKBrKYd3k7V8EC1HkxUfzlts4spBd41yG2w2Gv24IBDpzGdo19ZpVp8KXV3SCenF3ysDPcwhX2aiKoVKZhBj37fSsnjnGYwLFjvUWPNUlfY3cYgQ6hXzIDa/YIG5zVgMLgbOzW9FMWIOH1gjqI6mH8tjUMMerwnrUktsdP5WxyitQqLKe6p4EHTLtyckT1y6Bf+yvuu7PaWUbIGBePVzNFmW5RWbBTTUdPAXRJqop2vL92P3PjQr/raS6ka/9iRNgAxzHxpChsvk2Qm2y3g6lmeHoaYFC37959PPkeJo5TfIuFReRyRza4xmBjUKXWQuB1o=
   file: fullnotes.pdf
+  skip_cleanup: true
   on:
     repo: restrepo/TCC
-  skip_cleanup: 'true'
