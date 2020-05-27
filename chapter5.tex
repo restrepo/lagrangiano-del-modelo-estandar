@@ -498,7 +498,7 @@ donde los últimos subíndices hacen referencia a los colores red, blue, green. 
   B=\frac{1}{\sqrt{6}}\epsilon_{\alpha\beta\gamma}
   \left|q_\alpha q_\beta q_\gamma\right\rangle \qquad M=\frac{1}{\sqrt{3}}\delta^{\alpha\beta}\left|\bar{q}_{\alpha}q_\beta\right\rangle
 \end{equation}
-Estos estados son singletes de color.
+Estos estados son singletes de color. Algunos ejemplos de baryones y mesones formados por quarks $u$ y $d$ se muestran en la tabla~\ref{tab:baryonsmesons}
 
 \begin{frame}
 \begin{figure}
@@ -506,6 +506,16 @@ Estos estados son singletes de color.
   \includegraphics[scale=0.85]{quarks}
   \caption{Quarks de: \url{http://en.wikipedia.org/wiki/List_of_particles}}
   \label{tab:quarks}
+\end{figure}
+\end{frame}
+\begin{frame}[fragile,allowframebreaks]
+\begin{figure}
+  \centering
+  \includegraphics[scale=0.55]{baryons}
+  
+  \includegraphics[scale=0.55]{pions}
+  \caption{Algunos bariones y mesones de la primera generación de quarks}
+  \label{tab:baryonsmesons}
 \end{figure}
 
 Una lista completa de bariones está en: \url{https://en.wikipedia.org/wiki/List_of_baryons}\footnote{\url{http://pdg.lbl.gov/2019/tables/contents_tables_baryons.html}}
@@ -516,9 +526,10 @@ Una lista completa de mesones está en: \url{https://en.wikipedia.org/wiki/List_
 \end{frame}
 
 
+
 Una de las determinaciones de $N_c$ proviene del observable
 \begin{align}
-  R\approx&\frac{\sigma(e^+e^-\to\text{hadrones})}{\sigma(e^+e^-\to\mu^+\mu^-)}
+  R=&\frac{\sigma(e^+e^-\to\text{hadrones})}{\sigma(e^+e^-\to\mu^+\mu^-)}
 \end{align}
 
 Para $f=u,d,s,c,b,t$, (en orden de masa) tenemos que para una energía donde se pueden producir hadrones compuestos de hasta  quarks $f_{\text{max}}$
@@ -998,7 +1009,7 @@ Hemos divido el Lagrangiano en tres partes
 \begin{align}
   \mathcal{L}_{\text{gauge}}=&-\frac{1}{4}\left(\partial^\mu G^\nu_a-\partial^\nu G^\mu_a\right)\left(\partial_\mu G_\nu^a-\partial_\nu G_\mu^a\right)-J^\nu_aG_\nu^a,
 \end{align}
-dende
+donde
 \begin{align}
   J^\mu_a=-g_s\bar{\Psi}\gamma^\mu\frac{\lambda_a}{2}\Psi\,,
 \end{align}
@@ -1009,7 +1020,7 @@ es la nueva corriente conservada de interacción fuerte que surge como consecuen
     -\frac{g_s^2}{4}f^{a b c}f_{a d e}G_b^\mu G_c^\nu G^d_\mu G^e_\nu\nonumber\\
   &=-\frac{g_s}{2}f^{abc}\left(\partial^\mu G^\nu_a-\partial^\nu G^\mu_a\right)G^b_\mu G^c_\nu-\frac{g_s^2}{4}f^{abc}f_{ade}G^\mu_bG^\nu_cG^d_\mu G^e_\nu.
   \end{align}
-que se desaparecen en el caso Abeliano.
+que no aparece en el caso Abeliano.
 \end{itemize}
 
 El Lagrangiano de interacción es:
@@ -1221,8 +1232,13 @@ como en el caso Abeliano, tenemos la corriente conservada
 \end{align}
 donde
 \begin{align}
+  \label{eq:noabeljnu}
+j^{\nu}_{a}=-\frac{\partial\mathcal{L}}{\partial G_\nu^a}\,,
+\end{align}
+tal que
+\begin{align}
 \label{eq:jnuqcd}
-  j^\nu_a=&-g_s\left[f_{abc}G^b_\mu G^{\mu\nu}_c+\bar{\Psi}\gamma^\nu\frac{\lambda_a}{2}\Psi  \right]\,.
+  j^\nu_a=&g_s\left[f_{abc}G^b_\mu G^{\mu\nu}_c+\bar{\Psi}\gamma^\nu\frac{\lambda_a}{2}\Psi  \right]\,.
 \end{align}
 
 El primer término corresponde a las autointeracciones y el segundo a la corriente de color generada por los quarks.
@@ -1257,22 +1273,44 @@ e igualando coeficientes, tenemos
 \end{align}
 Asumimos que la ecuaciones de Euler Lagrange para los fermiones se satisfacen (además $b_1^{\mu}=b_2^{\mu}=0$), entonces
 \begin{align}
-   \mathcal{E}_3 a_3=& \partial_{\mu} \left(  \mathcal{E}_3 b_3^{\mu}   \right) \,.
+   \mathcal{E}_1 a_1 + \mathcal{E}_2 a_2 +  \mathcal{E}_3 a_3=& \partial_{\mu} \left(  \mathcal{E}_3 b_3^{\mu}   \right) \,.
 \end{align}
 
-Como $a_{3}=f_{a}^{bc} G^{\mu}_{c} $, $b_{3}^{\mu}=\delta^{\mu}_{\nu}/g_{s}$, entonces
+Haciendo uso de la ec.~\eqref{eq:noabeljnu}
 \begin{align}
-  \left\{ \partial_\mu\left[\frac{\partial\mathcal{L}}{\partial\left(\partial_\mu G_\nu^a\right)}\right]-\frac{\partial\mathcal{L}}{\partial G_\nu^a} \right\} f_{a}^{bc} G^{\mu}_{c} =&
-\frac{1}{g_s}\partial_{\mu} \left\{\left(   \partial_\mu\left[\frac{\partial\mathcal{L}}{\partial\left(\partial_\mu G_\nu^a\right)}\right]-\frac{\partial\mathcal{L}}{\partial G_\nu^a} \right)\delta_{\nu}^{\rho}  \right\}
+  \partial_{\mu} \left(  \mathcal{E}_3 b_3^{\mu}   \right)=&
+                                                \partial_{\mu} \left\{  \partial_\nu\left[\frac{\partial\mathcal{L}}{\partial\left(\partial_\nu G_\mu^a\right)}\right]-\frac{\partial\mathcal{L}}{\partial G_\mu^a}  \right\} \nonumber\\
+  =&-\partial_{\mu}\left( \frac{\partial\mathcal{L}}{\partial G_\mu^a} \right) \nonumber\\
+=& \partial_{\mu} j^{\mu}\,,
 \end{align}
-después de algunos pasos adicionales deberíamos llegar a la derivada de  la ecuación de movimiento de forma matricial
-\eqref{eq:matrixform}
 \begin{align}
-\label{eq:matrixform}
-  \partial_\nu\mathcal{D}_\mu{{G}}^{\mu\nu}
-=&0\,.
+  \left\{ \partial_{\mu}\left[{ \frac{\partial {\cal L}}{\partial \left( \partial_{\mu}\Psi \right)}}\right]-\frac{\partial{\cal L}}{\partial\Psi}  \right\}a_1+
+  a_{2}\left\{ \partial_{\mu}\left[\cancel{ \frac{\partial {\cal L}}{\partial \left( \partial_{\mu}\overline{\Psi} \right)}}\right]-\frac{\partial{\cal L}}{\partial\overline{\Psi}}  \right\}+
+  \left\{ \partial_\mu\left[\frac{\partial\mathcal{L}}{\partial\left(\partial_\mu G_\nu^a\right)}\right]-\frac{\partial\mathcal{L}}{\partial G_\nu^a} \right\} a_3 =&
+ \partial_{\mu}j^{\mu}\nonumber\\
+  \partial_{\mu}\left[ \frac{\partial {\cal L}}{\partial \left( \partial_{\mu}\Psi \right)}a_{1}+
+  \frac{\partial\mathcal{L}}{\partial\left(\partial_\mu G_\nu^a\right)}a_{3}\right]
+-\frac{\partial {\cal L}}{\partial \left( \partial_{\mu}\Psi \right)}\partial_{\mu} a_1
+  -\frac{\partial{\cal L}}{\partial\Psi}a_{1}
+  -a_2\frac{\partial{\cal L}}{\partial\overline{\Psi}}
+  -\frac{\partial\mathcal{L}}{\partial\left(\partial_\mu G_\nu^a\right)}\partial_{\mu}a_{3}
+  -\frac{\partial\mathcal{L}}{\partial G_\nu^a}a_{3}=&\partial_{\mu}j^{\mu}\,.
 \end{align}
-donde $\partial_\nu{J}^{\nu}=0$
+Ya que, usando $a_{3}=f_{a}^{bc} G^{\mu}_{c} $
+%TODO: Demostrar...
+\begin{align}
+ \frac{\partial {\cal L}}{\partial \left( \partial_{\mu}\Psi \right)}\partial_{\mu} a_1
+  +\frac{\partial{\cal L}}{\partial\Psi}a_{1}
+  +a_{2}\frac{\partial{\cal L}}{\partial\overline{\Psi}}
+  +\frac{\partial\mathcal{L}}{\partial\left(\partial_\mu G_\nu^a\right)}\partial_{\mu}a_{3}
+  +\frac{\partial\mathcal{L}}{\partial G_\nu^a}a_{3}=0\,,
+\end{align}
+el Segundo Teorema de Noether establece que
+\begin{align}
+  j^{\mu}=\frac{\partial {\cal L}}{\partial \left( \partial_{\mu}\Psi \right)}a_{1}+
+  \frac{\partial\mathcal{L}}{\partial\left(\partial_\mu G_\nu^a\right)}a_{3}\,.
+\end{align}
+% TODO: Demostrar que la formula es válida
 
 \subsection{Anotaciones finales}
 
