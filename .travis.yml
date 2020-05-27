@@ -13,7 +13,7 @@ deploy:
   provider: releases
   api_key:
     secure: UY8eZ40wdO1IScASdmNWchXxmfeH6Uc1lcBAm9Pf9K/Tx7pmaVOvf/HnJ+8zd+PHFoid8DXcKlak9LvK0MIiys7qT+SGCT1tVOmbG/gg7IZhDM+jWSOsnP5f1tnqdLJaotTVQCeOQ1fT8VeB5lVm2hI+2qn7Gee+hea/riLJeNUMW28XxMnkqqY8JNRJpFYSorM2nQC99EJ6OB0mY/IAuq4UTLvsW7p+B3gFJM2W0/SrkIdptq8Dw3EuLdaVMvSm4Ah/t99panpqjIXuOqpwRckU5BLpU8K98145AEGkwyV/jjIOWkY4UXXAevnqnKZ/P3RsnDc7NTef7SXjFf9lN0iL0IkobDhsf98ujrDdVKBrKYd3k7V8EC1HkxUfzlts4spBd41yG2w2Gv24IBDpzGdo19ZpVp8KXV3SCenF3ysDPcwhX2aiKoVKZhBj37fSsnjnGYwLFjvUWPNUlfY3cYgQ6hXzIDa/YIG5zVgMLgbOzW9FMWIOH1gjqI6mH8tjUMMerwnrUktsdP5WxyitQqLKe6p4EHTLtyckT1y6Bf+yvuu7PaWUbIGBePVzNFmW5RWbBTTUdPAXRJqop2vL92P3PjQr/raS6ka/9iRNgAxzHxpChsvk2Qm2y3g6lmeHoaYFC37959PPkeJo5TfIuFReRyRza4xmBjUKXWQuB1o=
-  file: ''
+  file: fullnotes.pdf
   on:
     repo: restrepo/TCC
   skip_cleanup: 'true'
