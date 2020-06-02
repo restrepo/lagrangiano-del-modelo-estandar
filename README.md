@@ -1,5 +1,7 @@
 [![DOI](https://zenodo.org/badge/22717/restrepo/TCC.svg)](https://zenodo.org/badge/latestdoi/22717/restrepo/TCC)
 
+[Google Scholar](https://scholar.google.com/scholar_lookup?title=El+Lagrangiano+del+Modelo+Est%C3%A1ndar&author=D+Restrepo)
+
 [PDF](https://github.com/restrepo/TCC/releases/latest) generated with [TravisCI](https://github.com/travis-ci). (See [HowTo-Deploy-LaTeX-Documents](https://github.com/SimonWaldherr/HowTo-Deploy-LaTeX-Documents))
 
 [![Build Status](https://travis-ci.org/restrepo/TCC.svg?branch=master)](https://travis-ci.org/restrepo/TCC) 

@@ -500,6 +500,8 @@ donde los últimos subíndices hacen referencia a los colores red, blue, green. 
 \end{equation}
 Estos estados son singletes de color. Algunos ejemplos de baryones y mesones formados por quarks $u$ y $d$ se muestran en la tabla~\ref{tab:baryonsmesons}
 
+%Comentar sobre la relación Quimica con electrones de Valencia y Física Nuclear con quarks de Valencia
+
 \begin{frame}
 \begin{figure}
   \centering
@@ -524,6 +526,8 @@ Una lista completa de mesones está en: \url{https://en.wikipedia.org/wiki/List_
 
 
 \end{frame}
+
+
 
 
 
@@ -566,6 +570,9 @@ En la figura, tomada de \cite{a}, se muestra el gráfico de $R$ con respecto a $
   \label{fig:r}
 \end{figure}
 \end{frame}
+
+%Comentar sobre Babar (ver Miro Notebook)
+
 \begin{frame}
 Si queremos que el color sea una carga conservada como la carga eléctrica, ésta debe ser la consecuencia de una simetría gauge local. Para tener tres cargas diferentes la posibilidad más simple es imponer la simetría $SU(3)_c$, tal que tengamos un vector compuesto de 3 espinores de Dirac en el espacio de color:
 
@@ -702,19 +709,22 @@ que se reduce al caso Abeliano cuando las constates de estructura son cero. Como
 \begin{frame}[fragile,allowframebreaks]
   \begin{table}
     \centering
-    \begin{tabular}{lll}
+    \small
+    \begin{tabular}{l|l|l}
       QED & QCD & Diferencia\\\hline
-$      \overline{\psi}\left(i\gamma^\mu\mathcal{D}_\mu-m\right)\psi +\mathcal{L} \left(A_{\nu},\partial A_{\nu}  \right)$ & $      \overline{\Psi}\left(i\gamma^\mu\mathcal{D}_\mu-m\right)\Psi +\mathcal{L} \left(G_{\nu},\partial G_{\nu}  \right)$ & $1\times 1 \to 3\times 3$\\ 
-$\mathcal{D}_{\mu}=\partial_{\mu}-i e A_{\mu}$ & $\mathcal{D}_{\mu}=\partial_{\mu}-i g G_{\mu}$ & $1\times 1 \to 3\times 3$\\ 
-$A_{\mu}\to \widehat{Q}A_{\mu}$ & $G_{\mu}=\Lambda_{a}G_{\mu}^{a}$ & $1\times 1 \to 3\times 3$\\ 
-&& $1\to 8\,, a=1,\cdots,8$\\
-$    {A}^\mu\to {A}^{\prime\mu}=U{A}^\mu U^{*}-\frac{i}{g_s}\left(\partial^\mu U\right)U^*$&
+$      \overline{\psi}\left(i\gamma^\mu\mathcal{D}_\mu-m\right)\psi +\mathcal{L} \left(A_{\nu},\partial A_{\nu}  \right)$ & $      \overline{\Psi}\left(i\gamma^\mu\mathcal{D}_\mu-m\right)\Psi +\mathcal{L} \left(G_{\nu},\partial G_{\nu}  \right)$ & $1\times 1 \to 3\times 3$: ($\mathcal{D}_{\mu}$)\\ 
+$\mathcal{D}_{\mu}=\partial_{\mu}-i e A_{\mu}$ & $\mathcal{D}_{\mu}=\partial_{\mu}-i g_s G_{\mu}$ & $1\times 1 \to 3\times 3$: ($A_{\mu}\to G_{\mu}$)\\ 
+$A_{\mu}\to \widehat{Q}A_{\mu}$ & $G_{\mu}=\Lambda_{a} G_{\mu}^{a}$,\qquad $a=1,\cdots,8$ & $1\times 1 \to 3\times 3$: ($\widehat{Q}\to\Lambda_{a}$)\\ 
+$A_{\mu}$&$ G_{\mu}^1,\cdots ,G_{\mu}^8$& $1\to 8$ (Gauge fields)\\
+$    {A}^\mu\to {A}^{\prime\mu}=U{A}^\mu U^{*}-\frac{i}{e}\left(\partial^\mu U\right)U^*$&
 $ {G}^\mu\to {G}^{\prime\mu}=U{G}^\mu U^{\dagger}-\frac{i}{g_s}\left(\partial^\mu U\right)U^\dagger$
-&$1\times 1 \to 3\times 3$\\ 
-  $A^\mu\to {A'}^\mu_a\approx A^\mu+\frac{1}{e}\partial^\mu\theta$ &
+&$1\times 1 \to 3\times 3$: ($U$)\\ 
+$U=\exp(i\widehat{Q}\theta)$ & $U=\exp(i\Lambda_{a}\theta^{a})$& $1\to 8$: ($\theta\to\theta_{1},\cdots,\theta_{8}$) \\
+      $A^\mu\to {A'}^\mu_a\approx A^\mu+\frac{1}{e}\partial^\mu\theta$ &
 $G^\mu_a\to {G'}^\mu_a\approx G^\mu_a+\frac{1}{g_s}\partial^\mu\theta_a+{f_a}^{bc}G^\mu_b\theta_c$ &\parbox{3.5cm}{radiación $\to$ ra\-dia\-ción\--ma\-teria}  \\
+$\alpha=\dfrac{e^2}{4\pi}\approx 1/137$ & $\alpha_s=\dfrac{g_s^2}{4\pi}>1$ & \parbox{3.5cm}{perturbativa $\to$ no per\-tur\-ba\-ti\-va}  \\
     \end{tabular}
-    \caption{Comparación}
+    \caption{Comparación entre la QED y la QCD}
   \end{table}
 \end{frame}
 
