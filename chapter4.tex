@@ -1,5 +1,5 @@
 %instiki:category: FisicaSubatomica
-\chapter{Ruptura espontánea de simetría}
+\chapter{Campos de radiación masivos}
 \label{rupt-espont-de} %noinstiki
 %instiki:
 %instiki:***
@@ -19,6 +19,388 @@
 %instiki:***
 %instiki:
 
+Hasta ahora los campos de radiación como el fotón o los gluones son de masa cero y median interacciones de rango infinito.  En este capítulo exploraremos cual es el posible efecto de un campo que medie interacciones masivo y la posibilidad de describirlo en el contexto de una teoría gauge local.
+
+\section{Potencial de Yukawa}
+
+\begin{frame}[fragile,allowframebreaks]
+La interacci\'on entre un prot\'on y un neutr\'on fue determinada experimentalmente por Tomonaga en 1934 \cite{history}
+\begin{align}
+\label{eq:243}
+  V(r)={A}\frac{e^{-r/\Lambda }}{r}\,,
+\end{align}
+con
+\begin{align}
+  \label{eq:245}
+  \Lambda\approx1/(7\times10^{12}\,\text{cm}^{-1})=1.43\times10^{-13}\,\text{cm}=1.43\times10^{-15}\,\text{m}\,.
+\end{align}
+\end{frame}
+
+\begin{frame}[fragile,allowframebreaks]
+Consideremos el principio de incertidumbre
+\begin{align}
+  \Delta x\, \Delta p &\geq \frac{\hbar}{2}\nonumber\\
+\Delta t\, \Delta E&\geq\frac{\hbar}{2}\,.
+\end{align}
+
+La segunda relaci\'on de incertidumbre
+aplicada a la ecuación de Klein-Gordon~\cite{Aitchison:2003tq}, brinda un nuevo entendimiento de la relaci\'on entre el rango y la masa en ec.~\eqref{eq:243}. $\Delta t$ es el tiempo que el sistema cu\'antico interact\'ua con el aparato de medida y $\Delta E=\hbar/(2\Delta t)$ es el error m\'\i nimo que se obtiene en la medida de la energ\'\i a, tal que $E=E_0\pm\Delta E$. Es decir, para medir la energ\'\i a con una precisi\'on $\Delta E$, uno necesita un tiempo mayor que $\hbar/(2\Delta E)$.
+\end{frame}
+
+\begin{frame}[fragile,allowframebreaks]
+Si $\Delta E< mc^2$ eso quiere decir que podemos medir la cantidad $mc^2$ con alguna certeza. Es decir que una part\'\i cula de masa $m$ se puede llegar a observar. Si $\Delta E>mc^2$ entonces una part\'\i cula de masa $m$ puede existir durante un tiempo $\Delta t$. A tal part\'\i cula se le llama virtual porque no es observable. 
+
+El momentum de una part\'\i cula de n\'umero de onda $k$ es $p=\hbar k$, de modo que la incertidumbre en el momentum para una part\'\i cula relativista es
+\begin{align}
+  \Delta p=\hbar\, \Delta k \approx\hbar\, \frac{\Delta\omega}{c}=\frac{\Delta E}{c}
+\end{align}
+\end{frame}
+
+Si la masa de la partícula es cero entonces $E$ puede tender a cero, que corresponde al caso de un partícula no masiva con un momentum tendiendo a cero. La cantidad por la cual la conservaci\'on de energía es violada, $\Delta E$, tambi\'en puede llegar a ser muy peque\~na. De modo que un
+\begin{frame}[fragile,allowframebreaks]
+  fot\'on virtual de frecuencia muy baja puede existir durante un tiempo casi infinito.
+\end{frame}
+  Durante ese tiempo un fot\'on viajando a la velocidad de la luz podr\'\i a viajar una distancia casi infinita y puede dar cuenta de una interacci\'on de rango infinito. 
+
+\begin{frame}[fragile,allowframebreaks]  
+Sin embargo, para una part\'\i cula de masa $m$. La violaci\'on de energ\'\i a para producir esta debe ser de al menos $mc^2$, o $\Delta E>mc^2$. Por el principio de incertidumbre la m\'axima distancia que puede recorrer es $\Lambda=c\Delta t$
+
+\begin{align}
+\label{eq:244}
+  \Lambda \geq & \frac{\hbar c}{2\Delta E}\nonumber\\
+  \geq &\frac{c\hbar}{2mc^2}\nonumber\\
+  \geq &\frac{\hbar}{2mc}\nonumber\\
+  \geq &\frac{1}{2m}\qquad\text{Natural Units} \,.
+\end{align}
+\end{frame}
+
+\begin{frame}[fragile,allowframebreaks]
+De la componente escalar de la ecuaci\'on de Proca, \eqref{eq:27}, obtenemos la ecuaci\'on de Klein--Gordon para un campo escalar real $\phi=A^0$,
+\begin{align}
+  \label{eq:29}
+  \mathcal{L}=&\frac{1}{2}\partial^\mu\phi\partial_\mu\phi-\frac{1}{2}m^2\phi^2+\rho\phi
+\end{align}
+Donde $\rho$ es la densidad de carga que actua como fuente del campo $\phi$.
+\end{frame}
+
+%to_en: Later we will discuss in detail why $m$ corresponds to the mass of the particle. The idea is that $\phi$ has excitations around the minimum of the potential $V=(1/2)m^2\phi^2$ that have some harmonic oscillator energy, and this energy is equivalent to mass. Note that $m^2\lt 0$ cannot be interpreted as mass. In this case $\phi$ will describe excitations around the flat part of the potential. Since this excitations do not cost energy, they correspond to a non-massive particle.
+Posteriormente discutiremos en detalles porque $m$ corresponde a la masa de la part\'\i cula. La idea b\'asica es que $\phi$ tiene excitaciones alrededor del m\'\i nimo del potencial $V=(1/2)m^2\phi^2$ que corresponde a la energ\'\i a de un oscilador arm\'onico. Esta energ\'\i a es equivalente a masa. Note que $m^2\lt 0$ no puede interpretarse como masa. En este caso $\phi$ describir\'a excitaciones alrededor de la parte plana del potencial. Como estas excitaciones no cuestan energ\'\i a, corresponde a una part\'\i cula sin masa. 
+
+%to_en: The field $\phi$ can be thought of as arising from a source in much the same way as the electromagnetic fields arise from charged particles; as for the electromagnetism, en esta secci\'on we can consider the fields without concerning ourselves with the sources. 
+El campo $\phi$ puede pensarse como proveniente de una fuente de la misma manera como el campo electromagn\'etico surge de part\'\i culas cargadas. Como en el caso del electromagnetismo, en esta secci\'on podemos considerar los campos sin preocuparnos de las fuentes. 
+En tal caso tendremos una teor\'\i a en la cual el campo escalar juega el papel de part\'\i cula mediadora de la interacci\'on.
+
+Si el campo escalar se generaliza para que pueda tener otros n\'umeros
+cu\'anticos, como carga el\'ectrica, entonces estos pueden ser las fuentes
+de las respectivas cargas y corrientes en la ecuaciones para campos
+vectoriales. Esto se estudiar\'a en la
+secci\'on~\ref{sec:camp-escal-compl}. En tal caso podr\'\i amos tener por
+ejemplo ``\'atomos'' formados de part\'\i culas escalares que se excitan
+emitiendo fotones.
+
+
+En las secciones~\ref{sec:ecuac-covar} y \ref{sec:ecuacion-de-proca},
+hemos visto que
+\begin{frame}[fragile,allowframebreaks]
+el Lagrangiano en ec.~\eqref{eq:29} da lugar a las
+ecuaciones de Klein-Gordon en presencia de una densidad de carga
+\begin{equation}
+  \label{eq:30}
+  (\Box+m^2)\phi=\rho
+\end{equation}
+De acuerdo a la ec.~\eqref{eq:28}, tenemos
+\begin{align}
+\mathcal{L}_{\text{free}}&=\frac{1}{2}\partial_\mu\phi\partial_\mu\phi-\frac{1}{2} m^2\phi^2\nonumber\\
+\label{eq:31}
+\mathcal{L}_{\text{int}}&=\rho\phi
+\end{align}
+\end{frame}
+En analog\'\i a con el electromagn\'etismo donde las densidades de carga y
+corrientes son la fuente del campo $A^\mu$, podemos pensar en $\rho$ como
+la fuente del campo $\phi$. En el caso del electromagnetismo el an\'alisis
+de las ecuaciones de Maxwell en forma covariante,
+ec.~\eqref{eq:nohomME2}, para las componentes $A^0$ y $J^0$, en el
+gauge de Coulomb:
+\begin{equation}
+  \label{eq:32}
+  \boldsymbol{\nabla}\cdot\mathbf{A}=0,
+\end{equation}
+da lugar a la Ley de Coulomb, que corresponde a una interacci\'on de
+rango infinito \cite{Gross}. Veremos a continuaci\'on que un an\'alisis
+similar para un campo escalar masivo (o para la componente cero de un
+campo vectorial masivo) da lugar a una interacci\'on de corto rango.
+
+\begin{frame}[fragile,allowframebreaks]
+Consideremos el caso m\'as simple de una fuente puntual para el campo
+$\phi$:
+\begin{equation}
+  \label{eq:33}
+  \rho(x)=g\delta(\mathbf{x})
+\end{equation}
+donde $g$ es una constante. Entonces $\rho$ es independiente del tiempo y
+genera un campo (un potencial) independiente del tiempo. Entonces,
+como:
+\begin{equation*}
+  \frac{\partial\phi}{\partial t}=0,
+\end{equation*}
+tenemos
+\begin{equation}
+  \label{eq:34}
+  (-\nabla^2+m^2)\phi(\mathbf{x})=g\delta(\mathbf{x})
+\end{equation}
+
+Para resolver la ecuaci\'on diferencial es m\'as conveniente transformar
+$\phi(\mathbf{x})$ al espacio de momentos. Su transformada de Fourier es
+\begin{equation}
+  \label{eq:35}
+  \phi(\mathbf{x})=\frac{1}{(2\pi)^{3/2}}\int d^3k\,e^{i\mathbf{k}\cdot\mathbf{x}}\tilde\phi(\mathbf{k}).
+\end{equation}
+La transformada inversa es
+\begin{equation}
+  \label{eq:36}
+  \tilde\phi(\mathbf{k})=\frac{1}{(2\pi)^{3/2}}\int d^3x\,e^{-i\mathbf{k}\cdot\mathbf{x}}\phi(\mathbf{x}).
+\end{equation}
+Ademas tenemos la propiedad
+\begin{equation}
+  \delta(\mathbf{x})=\frac{1}{(2\pi)^3}\int d^3k\,e^{i\mathbf{k}\cdot\mathbf{x}}.
+\end{equation}
+Reemplazando ec.~\eqref{eq:35} en \eqref{eq:34}, tenemos
+\begin{align}
+\frac{1}{(2\pi)^{3/2}}\int d^3k(\mathbf{k}^2+m^2)e^{i\mathbf{k}\cdot\mathbf{x}}\tilde\phi(\mathbf{k})&=g\delta(\mathbf{x})\nonumber\\
+&=\frac{g}{(2\pi)^3}\int d^3k\,e^{i\mathbf{k}\cdot\mathbf{x}}\nonumber\\
+(\mathbf{k}^2+m^2)\tilde\phi(\mathbf{k})&=\frac{g}{(2\pi)^{3/2}}.\nonumber
+\end{align}
+Entonces
+\begin{equation}
+  \tilde\phi(\mathbf{k})=\frac{g}{(2\pi)^{3/2}}\frac{1}{\mathbf{k}^2+m^2}.
+\end{equation}
+\end{frame}
+Reemplazando en la ec.~\eqref{eq:35} y definiendo $r\equiv|\mathbf{x}|$
+\begin{align}
+  \phi(\mathbf{x})=&\frac{1}{(2\pi)^{3/2}}\int d^3k\,e^{i\mathbf{k}\cdot\mathbf{x}}
+  \left[
+    \frac{g}{(2\pi)^{3/2}}\frac{1}{\mathbf{k}^2+m^2}
+  \right]\nonumber\\
+=&\frac{g}{(2\pi)^{3}}\int d^3k
+    \frac{e^{i\mathbf{k}\cdot\mathbf{x}}}{\mathbf{k}^2+m^2}\nonumber\\
+=&\frac{g}{(2\pi)^{3}}2\pi\int_0^\infty d|\mathbf{k}|
+    \frac{\mathbf{k}^2}{\mathbf{k}^2+m^2}\int_0^\pi e^{i|\mathbf{k}|r\cos\theta}\sen\theta\,d\theta\nonumber
+\end{align}
+Haciendo el cambio de variables $u=\cos\theta$, $du=-\sin\theta\,d\theta$,
+\begin{align}
+  \phi(\mathbf{x})=&-\frac{g}{(2\pi)^2}\int_0^\infty d|\mathbf{k}|
+    \frac{\mathbf{k}^2}{\mathbf{k}^2+m^2}\int_{1}^{-1}e^{i|\mathbf{k}|ru}du,\nonumber\\
+  \phi(\mathbf{x})=&\frac{g}{(2\pi)^2}\int_0^\infty d|\mathbf{k}|
+    \frac{\mathbf{k}^2}{\mathbf{k}^2+m^2}\int_{-1}^1e^{i|\mathbf{k}|ru}du.
+\end{align}
+%\textbf{check minus sign!} 
+Ya que  
+\begin{equation*}
+  \int_{-1}^1e^{i|\mathbf{k}|ru}du=\frac{e^{i|\mathbf{k}|r}-e^{-i|\mathbf{k}|r}}{i|\mathbf{k}|r}
+\end{equation*}
+\begin{align}
+  \phi(\mathbf{x})=&\frac{g}{i(2\pi)^2r}\int_0^\infty d|\mathbf{k}|\,|\mathbf{k}|
+    \frac{e^{i|\mathbf{k}|r}-e^{-i|\mathbf{k}|r}}{\mathbf{k}^2+m^2}\nonumber\\
+    =&\frac{g}{i(2\pi)^2r}\left(\int_0^\infty d|\mathbf{k}|\,|\mathbf{k}|
+\frac{e^{i|\mathbf{k}|r}}{\mathbf{k}^2+m^2}-\int_0^\infty d|\mathbf{k}|\,|\mathbf{k}|
+\frac{e^{-i|\mathbf{k}|r}}{\mathbf{k}^2+m^2}\right)\nonumber\\
+=&\frac{g}{i(2\pi)^2r}\left(\int_0^\infty d|\mathbf{k}|\,|\mathbf{k}|
+\frac{e^{i|\mathbf{k}|r}}{\mathbf{k}^2+m^2}-\underbrace{\int_0^{-\infty}d|\mathbf{k}|\,|\mathbf{k}|
+\frac{e^{i|\mathbf{k}|r}}{\mathbf{k}^2+m^2}}_{|\mathbf{k}|\to-|\mathbf{k}|}\right)\nonumber\\
+=&\frac{g}{i(2\pi)^2r}\int_{-\infty}^\infty d|\mathbf{k}|\,|\mathbf{k}|
+\frac{e^{i|\mathbf{k}|r}}{\mathbf{k}^2+m^2}\nonumber\\
+\label{eq:37}
+    =&\frac{g}{i(2\pi)^2r}\int_{-\infty}^\infty d|\mathbf{k}|
+    \frac{|\mathbf{k}|e^{i|\mathbf{k}|r}}{(|\mathbf{k}|+im)(|\mathbf{k}|-im)}
+\end{align}
+Definiendo
+\begin{equation*}
+  f(z)=\frac{ze^{izr}}{z+im}
+\end{equation*}
+y usando la integral de Cauchy para el contorno correspondiente al semiplano positivo que incluye el polo en $z=im$
+\begin{equation}
+  \int_C\frac{f(z)}{z-im}dz=2\pi if(im)=2\pi i\frac{im\,e^{-mr}}{2im}=\pi i\,e^{-mr}
+\end{equation}
+\begin{frame}[fragile,allowframebreaks]
+tenemos que
+\begin{equation}
+ \label{eq:38}
+  \phi(\mathbf{x})=\frac{g}{4\pi}\frac{e^{-mr}}{r}\,,
+\end{equation}
+donde  $r\equiv|\mathbf{x}|$.
+\end{frame}
+
+A la luz de la interacci\'on fuerte, un prot\'on y un neutr\'on son
+indistinguibles y son llamados nucleones. En primera aproximaci\'on la
+interacci\'on fuerte puede ser tratada como una interacci\'on de Yukawa en
+el rango de los fermis entre los nucleones, mediada por mesones, como el pi\'on. Ver sec. 2.2 de \cite{Aitchison:2003tq}.
+
+
+Para ver esto considere un nucle\'on como fuente de un mes\'on
+intermediario. De acuerdo a la ec.~(\ref{eq:38}),
+\begin{frame}[fragile,allowframebreaks]
+\begin{align}
+  \phi(\mathbf{x})&=\frac{g}{4\pi}\frac{e^{-m|\mathbf{x}|}}{|\mathbf{x}|}\nonumber\\
+  &=\frac{1}{4\pi}\int d^3x'g\,\delta(\mathbf{x}')\frac{e^{-m|\mathbf{x}-\mathbf{x}'|}}{|\mathbf{x}-\mathbf{x}'|}\nonumber\\
+  &=\frac{1}{4\pi}\int d^3x'\rho(\mathbf{x}')\frac{e^{-m|\mathbf{x}-\mathbf{x}'|}}{|\mathbf{x}-\mathbf{x}'|}
+\end{align}
+
+\begin{equation}
+  \mathcal{L}_{\text{int}}=\phi(\mathbf{x})\rho(\mathbf{x})=\frac{1}{4\pi}\int d^3x'\rho(\mathbf{x})\rho(\mathbf{x}')\frac{e^{-m|\mathbf{x}-\mathbf{x}'|}}{|\mathbf{x}-\mathbf{x}'|}
+\end{equation}
+\begin{align}
+  \mathcal{H}_{\text{int}}&=\frac{\partial\mathcal{L}_{\text{int}}}{\partial(\partial\phi/\partial t)}\frac{\partial\phi}{\partial t}-\mathcal{L}_{\text{int}}\nonumber\\
+  &=-\mathcal{L}_{\text{int}}\nonumber\\
+  &=-\frac{1}{4\pi}\int d^3x'\rho(\mathbf{x})\rho(\mathbf{x}')\frac{e^{-m|\mathbf{x}-\mathbf{x}'|}}{|\mathbf{x}-\mathbf{x}'|}
+\end{align}
+\begin{equation}
+  \label{eq:39}
+  H_{\text{int}}=-\frac{1}{4\pi}\int d^3x\,d^3x'\rho(\mathbf{x})\rho(\mathbf{x}')\frac{e^{-m|\mathbf{x}-\mathbf{x}'|}}{|\mathbf{x}-\mathbf{x}'|}
+\end{equation}
+El Hamiltoniano de interacci\'on en ec.~(\ref{eq:39}) representa la
+interacci\'on entre dos nucleones mediante el intercambio de un mes\'on.
+\end{frame}
+En forma an\'aloga a como dos electrones intercambian un fot\'on mediante
+la interacci\'on electromagn\'etica. En el caso de $m=0$,
+$H_{\text{int}}$, corresponde a la de energ\'\i a potencial de Coulomb. El
+potencial por unidad de carga al cuadrado, puede escribirse como
+\begin{equation}
+  \label{eq:40}
+    V(r)=-\frac{1}{4\pi}\frac{e^{-mr}}{r}
+\end{equation}
+El potencial en (\ref{eq:40}) recibe el nombre de \emph{potencial de
+  Yukawa} y corresponde a una interacci\'on de rango $r\sim1/m$. 
+
+\begin{frame}[fragile,allowframebreaks]
+Comparando con la ec.~(\ref{eq:243}) tenemos
+\begin{align}
+  m\approx&\frac{1}{\Lambda}
+\end{align}
+que es compatible con la ec.~\eqref{eq:244}. Usando el valor medido de $\Lambda$ en la ec.~\eqref{eq:245}
+\begin{align}
+  m\approx&\frac{1}{1.43\times10^{-15}m}\frac{1.973\times10^{-16}\,\text{m}}{\text{GeV}^{-1}}\nonumber\\
+  \approx&138\,\text{MeV}
+\end{align}
+La masa del pion $\pi^0$, es $m_{\pi^0}=134.8766(6)\,$MeV.
+\end{frame}
+
+
+En el caso general tenemos que $\phi(x)$ satisface la ecuaci\'on de Klein-Gordon en el espacio libre, ec.~\eqref{eq:30}
+\begin{equation}
+    (\frac{\partial^2}{\partial t^2}-\nabla^2+m^2)\phi=0
+\end{equation}
+con soluci\'on, 
+\begin{equation}
+  \phi\propto\exp(i\mathbf{k}\cdot\mathbf{x}-i\omega t)
+\end{equation}
+que, consistente con la discusi\'on en la secci\'on~\ref{sec:srn}, ec.\eqref{eq:k-gpmu}, da lugar a la condici\'on 
+\begin{equation}
+  m^2=\omega^2-\mathbf{k}^2.
+\end{equation}
+De este modo $m$, puede interpretarse como la masa de la part\'\i cula $\phi$.
+
+Para complementar la discusi\'on, condere el caso de un aparato de medida con el m\'\i nimo requerimiento para descubrir el $\pi^0$.
+El tiempo que el $\pi^0$ tarda en crurzar del prot\'on al nucle\'on debe ser al menos de $r/c$. El aparato de medida debe operar a una escala de tiempos
+\begin{align}
+  \Delta t<\frac{r}{c}\,.
+\end{align}
+La incertidumbre en la enrg\'\i a ser\'a
+\begin{align}
+  \Delta E\geq \frac{\hbar}{2\Delta t}=\frac{\hbar c}{2r}\,.
+\end{align}
+Reemplazando $\Delta E=\frac{1}{2}m c^2$ para que la medida $E\pm\Delta E$ sea significativa a dos $\sigma$, tenemos que
+\begin{align}
+  r\geq \frac{\hbar}{ m c}\,.
+\end{align}
+De este modo $r$ es la medidad de la separaci\'on entre $n$ y $p$, tal que en el tiempo disponible, el $\pi^0$ pueda robar la energ\'\i a necesaria para llegar a existir y cruzar de uno a otro. Usando $m=138\,$MeV, tenemos 
+\begin{align}
+  r\geq\frac{1}{0.138}\,\text{GeV}^{-1}\times\frac{1.973\times10^{-16}\,\text{m}}{\text{GeV}^{-1}}=1.43\times10^{-15}\,\text{m}.
+\end{align}
+El valor obtenido de $\Lambda$ es compatible con $r$. $\Lambda$ es el rango efectivo de la fuerza asociada. 
+A continuaci\'on Yukawa considero la posibilidad de que el quantum $\phi$ pudiera ser emitido en la transici\'on $n\to p$, a trav\'es del proceso
+\begin{equation}
+  \label{eq:154}
+  n\to p+\phi^-
+\end{equation}
+donde la conservaci\'on de la carga determina la carga de $\phi^-$. Sin embargo el proceso viola la conservaci\'on de la energ\'\i a ya que $m_n=939.565\;56(81)\,$MeV, $m_p=938.272\;013(23)\,$MeV, de modo que $m_n\lt m_p+m_\phi$, si $m_\phi\sim100\,$MeV, as\'\i{} esto no puede ocurrir como un proceso real de emissi\'on. Sin embargo, Yukawa not\'o que si \eqref{eq:154} se combina con el proceso inverso
+\begin{equation}
+  p+\phi^-\to n
+\end{equation}
+entonces una interacci\'on $n$--$p$ podr\'\i a tomar lugar a trav\'es del mecanismo mostrado en la figura \ref{fig:n-p}(a). Es decir a trav\'es del intercambio de un quantum $\phi^-$. El otro diagrama compatible con la conservaci\'on de la carga tambi\'en aparece en la figura
+
+\begin{frame}[fragile,allowframebreaks]
+%noinstiki
+\begin{figure} %noinstiki
+
+\includegraphics{yukawa-schange} %noinstiki
+  \caption{Intercambio de Yukawa de un s\'olo $\phi$} %noinstiki
+\label{fig:n-p} %noinstiki
+\end{figure} %noinstiki<div id="fig:n-p">Figura: Intercambio de Yukawa</div>
+%noinstiki![yukawa-schange](http://gfif.udea.edu.co/figfs/yukawa-schange.png)
+%noinstiki
+
+
+En el espacio de momentos, la cantidad relevante que representa el
+intercambio de piones, es la que aparece en la ec.~(\ref{eq:37}) y se
+conoce como el \emph{propagador}:
+\begin{equation}
+\text{propagador:}\qquad \frac{1}{\mathbf{k}^2-m^2}
+\end{equation}
+En el caso electromagn\'etico tendremos simplemente
+\begin{equation}
+  1/\mathbf{k}^2.
+\end{equation}
+\end{frame}
+Para part\'\i culas $\alpha$ incidiendo sobre un metal y siendo dispersadas por un \'angulo $\theta$ entre $\mathbf{q}$ y $\mathbf{q}'$, tal que se satisface la condici\'on de dispersi\'on el\'astica $\mathbf{q}^2={\mathbf{q}'}^2$ (dispersi\'on de Rutherford)
+\begin{align}
+  \mathbf{k}^2=(\mathbf{q}-\mathbf{q}')^2=2\mathbf{q}^2(1-\cos\theta)=4\mathbf{q}^2\sin^2\frac{\theta}{2}
+\end{align}
+Entonces
+\begin{align}
+  \text{cross section}&\propto\frac{1}{\mathbf{k}^2}\nonumber\\
+  &\propto\sin^{-4}\frac{\theta}{2},
+\end{align}
+que explica la famosa variaci\'on angular de la dispersi\'on de Rutherford, en la cual las part\'\i culas $\alpha$ son dispersadas por los n\'ucleos positivamente cargados del metal. Ver figura \ref{fig:sr}
+
+\begin{figure} %noinstiki
+\includegraphics[scale=0.95]{scattering} %noinstiki
+  \caption{Dispersi\'on de part\'\i culas $\alpha$ a trav\'es de una l\'amina de oro} %noinstiki
+  \label{fig:sr} %noinstiki
+\end{figure} 
+
+ 
+En general tendremos
+\begin{equation}
+\text{propagador:}\qquad \frac{1}{k^2-m^2},
+\end{equation}
+donde $k=(k_0,\mathbf{k})$
+
+
+
+\section{Mecanismo de Stueckelberg}
+Consideremos un campo vectorial masivo tipo Proca, acompañado de un campo escalar de la misma masa. El Lagrangiano es entonces~\cite{Ruegg:2003ps}
+\begin{align}
+\mathcal{L}_{\text{Stueckelberg}}  =-\frac{1}{2} \partial_{\mu} A_{\nu} \partial^{\mu} A^{\nu}+\frac{1}{2} m^{2} A_\mu A^\mu+\frac{1}{2} \partial_{\mu} B \partial^{\mu} B-\frac{1}{2} m^{2} B^{2}\,.
+\end{align}
+
+Sin perdida de generalidad, dicho Lagrangiano se puede reescribir hasta términos de derivadas totales como
+\begin{align}
+  \mathcal{L}_{\text{Stueckelberg}}=-\frac{1}{4} F_{\mu \nu} F^{\mu \nu}+\frac{1}{2} m^{2}\left(A^{\mu}-\frac{1}{m} \partial^{\mu}B\right)^{2}-\frac{1}{2}\left(\partial_{\mu} A^\mu+m B\right)^{2}.
+\end{align}
+Este Lagrangiano es invariante bajo las transformaciones Gauge
+\begin{align}
+  A_{\mu} \rightarrow A_{\mu}^{\prime}=&A_{\mu}+\partial_{\mu} \Lambda \nonumber\\ 
+B \rightarrow B^{\prime}=&B+m \Lambda\,,
+\end{align}
+y la condición
+\begin{align}
+  \left( \partial_\mu\partial^\mu-m^2   \right)\Lambda=0\,,
+\end{align}
+la cual implica que el campo $A_\mu$ tiene tres grados de libertad independientes. Para los detalles ver \url{https://bit.ly/Stueckel}
+
+Esta teoría aún no ha encontrado una realización en la naturaleza y además no se ha podido generalizar al caso no Abeliano.
+
+Para encontar una teoría con un campo gauge masivo generalizable al caso no Abeliano, debemos introducir la idea de la ruptura espontánea de la simetría.
 
 \section{El resurgimiento del éter.}
 
