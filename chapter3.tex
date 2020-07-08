@@ -251,7 +251,8 @@ El sistema que podríamos describir es el de los pares de Cooper de carga eléct
 En ese caso la Acción, y la correspondiente densidad Lagrangiana son
 únicas y están dadas por una función polinómica de $\phi^{*}\phi$
 \begin{align}
-  \mathcal{L}=\partial_{\mu}\phi^{*} \partial^{\mu}\phi-m^2\phi^{*}\phi+\lambda \left(\phi^{*}\phi \right)^2\,.
+  \label{eq:41qftnew}
+  \mathcal{L}=\partial_{\mu}\phi^{*} \partial^{\mu}\phi-m^2\phi^{*}\phi-\lambda \left(\phi^{*}\phi \right)^2\,.
 \end{align}
 Términos de orden superior se pueden obtener a partir de esa
 Lagrangiana única y por eso no se consideran. 
@@ -268,7 +269,7 @@ Por lo tanto
 
 
 
-De las ecuaciones de Euler-Lagrange para $\phi^*$, usando el Lagrangiano en ec.~(\ref{eq:41qft})
+De las ecuaciones de Euler-Lagrange para $\phi^*$, usando el Lagrangiano en ec.~(\ref{eq:41qftnew}) y para $\lambda=0$
 \begin{align}
   \partial_\mu\left[
       \frac{\partial\mathcal{L}}{\partial(\partial_\mu\phi^*)}\right]-\frac{\partial\mathcal{L}}{\partial\phi^*}&=0\nonumber\\
@@ -317,7 +318,22 @@ definida \cite{Gross}.
 
 Al interpretarse como carga eléctrica se predice la existencia de antipartículas!
 
-\textbf{Ejercicio}: Calcular el Hamiltoniano para el campo escalar complejo. (Ver Sec. 1.2 de \cite{Greiner:1990tz}).
+Podemos calcular también el tensor de momentum-energía para el campo escalar
+\begin{align}
+  T^\mu_\nu=&\frac{\partial\mathcal{L}}{\partial\left(\partial_\mu\phi\right)} \partial_\nu \phi + \partial_\nu \phi^* \frac{\partial\mathcal{L}}{\partial\left(\partial_\mu\phi^*\right)}-\delta_\nu^\mu \mathcal{L} \nonumber\\
+   =&\partial^\mu\phi^* \partial_\nu \phi + \partial_\nu \phi^* \partial^\mu\phi-\delta_\nu^\mu \left(\partial_{\alpha}\phi^{*} \partial^{\alpha}\phi-m^2\phi^{*}\phi-\lambda \left(\phi^{*}\phi \right)^2\right)\nonumber\\
+\end{align}
+
+\textbf{Ejercicio}: Calcular el Hamiltoniano para el campo escalar complejo. (Ver Sec. 1.2 de \cite{Greiner:1990tz}):
+En particular, para la densidad Hamiltoniana tenemos
+\begin{align}
+ \mathcal{H}=  T^0_0 =&\partial^0\phi^* \partial_0 \phi + \partial_0 \phi^* \partial^0\phi-\partial_{\alpha}\phi^{*} \partial^{\alpha}\phi+m^2\phi^{*}\phi+\lambda \left(\phi^{*}\phi \right)^2 \nonumber\\
+  =&\partial^0\phi^* \partial_0 \phi + \partial_0 \phi^* \partial^0\phi-\partial_{0}\phi^{*} \partial^{0}\phi-\partial_{i}\phi^{*} \partial^i\phi+m^2\phi^{*}\phi+\lambda \left(\phi^{*}\phi \right)^2 \nonumber\\
+  =&\partial^0\phi^* \partial_0 \phi -\boldsymbol{\nabla}\phi^{*}\cdot\boldsymbol{\nabla}\phi+m^2\phi^{*}\phi+\lambda \left(\phi^{*}\phi \right)^2 \,.
+\end{align}
+
+
+
 
 
 
