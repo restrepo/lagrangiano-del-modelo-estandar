@@ -575,14 +575,14 @@ El producto escalar de $\operatorname{SU}(2)$ también se puede definir en térm
 \end{align}
 Podemos definir un producto que es invariante bajo $\operatorname{SU}(2)$ como el producto escalar bajo la ``métrica'' de $\operatorname{SU}(2)$ (suma sobre índices repetidos)
 \begin{align}
-\epsilon^{ab}\Psi_a \Upsilon_b\to \epsilon_{ab}\Psi'_a \Upsilon'_b=&\epsilon_{ab}U_{ac}U_{bd}\Psi_c \Upsilon_d\nonumber\\
+\Psi\cdot\Upsilon=\epsilon^{ab}\Psi_a \Upsilon_b\to \epsilon_{ab}\Psi'_a \Upsilon'_b=&\epsilon_{ab}U_{ac}U_{bd}\Psi_c \Upsilon_d\nonumber\\
   =&\left( U_{11}U_{22}-U_{12}U_{21} \right)\left(\Psi_1\Upsilon_2-\Psi_2\Upsilon_1  \right)\nonumber\\
   =&\epsilon^{ab}\left( \det\mathbf{U} \right) \Psi_a \Upsilon_b\nonumber\\
   =&\epsilon^{ab} \Psi_a \Upsilon_b\,.
 \end{align}
 Es claro además que
 \begin{align}
-  \epsilon^{ab}\Psi_a \Upsilon_b=&\Psi_1 \Upsilon_2-\Psi_2 \Upsilon_1 \,.
+ \Psi\cdot\Upsilon= \epsilon^{ab}\Psi_a \Upsilon_b=&\Psi_1 \Upsilon_2-\Psi_2 \Upsilon_1 \,.
  \end{align}
 
 
@@ -610,6 +610,27 @@ Por lo tanto, el producto escalar entre dos dobletes de $\operatorname{SU}(2)$ s
 \end{align}
 En adelante, usaremos la primera forma.
 
+\textbf{Ejemplo}: Escribir $\Psi\cdot \Upsilon$ en forma matricial
+\begin{align}
+  \label{eq:2to2}
+\Psi\cdot \Upsilon\equiv \epsilon^{ab}{\Psi}_a \Upsilon_b=&{\Psi}_1 \Upsilon_2-{\Psi}_2 \Upsilon_1 \nonumber\\
+                     =&-\left(\Psi_2 \Upsilon_1 - (-\Psi_1) \Upsilon_2\right) \nonumber\\
+                     =&-\begin{pmatrix}
+                        \Psi_2 & -\Psi_1\\ 
+                        \end{pmatrix}^{\operatorname{T}}
+                         \begin{pmatrix}
+                           \Upsilon_1\\
+                           \Upsilon_2\\
+                         \end{pmatrix} \nonumber\\
+                     =&-\begin{pmatrix}
+                        \Psi_2^* & -\Psi_1^*\\ 
+                        \end{pmatrix}^{\dagger}
+                         \begin{pmatrix}
+                           \Upsilon_1\\
+                           \Upsilon_2\\
+                         \end{pmatrix} \nonumber\\
+                     =&-\widetilde{\Psi}^\dagger \Upsilon\,.
+\end{align}
 
 Usando la correspondiente identidad para los delta de Kronecker
 \begin{align}
@@ -646,6 +667,17 @@ En forma matricial, tenemos
                \end{pmatrix}\nonumber\\
              =&i \tau_2 \Psi^{*}\,.
 \end{align}
+
+\textbf{Ejemplo}: Demostrar \eqref{eq:2to2}
+\begin{align}
+  \widetilde{\Psi}\cdot \Upsilon^*=& \Psi^{\dagger} \Upsilon^* \nonumber\\
+  i \tau_2 \Psi^*\cdot \Upsilon^* =&\Psi^{\operatorname{T}*} Y^* \nonumber\\
+  -i \tau_2^* \Psi \cdot \Upsilon= & \Psi^{\operatorname{T}} Y \nonumber\\
+  i \tau_2 \Psi \cdot \Upsilon=&  \Psi^{\operatorname{T}} Y \nonumber\\
+  i \tau_2( i \tau_2) \Psi \cdot \Upsilon=& i \tau_2 \Psi^{*\dagger} Y \nonumber\\
+   \Psi \cdot \Upsilon=& - \widetilde{\Psi}^{\dagger} Y \,.
+\end{align}
+
 
 \end{frame}
 
