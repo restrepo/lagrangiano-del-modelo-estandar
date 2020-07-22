@@ -1,6 +1,6 @@
 [![DOI](https://zenodo.org/badge/22717/restrepo/TCC.svg)](https://zenodo.org/badge/latestdoi/22717/restrepo/TCC)
 
-[Google Scholar](https://scholar.google.com/scholar_lookup?title=El+Lagrangiano+del+Modelo+Est%C3%A1ndar&author=D+Restrepo)
+[Google Scholar](https://scholar.google.com/scholar_lookup?title=El+Lagrangiano+del+Modelo+Estándar&author=D+Restrepo)
 
 [PDF](https://github.com/restrepo/TCC/releases/latest) generated with [TravisCI](https://github.com/travis-ci). (See [HowTo-Deploy-LaTeX-Documents](https://github.com/SimonWaldherr/HowTo-Deploy-LaTeX-Documents))
 
@@ -38,6 +38,10 @@ NUEVO!
 Puede clone/editar/push directamente de:
 
 https://www.overleaf.com/2407528pjqwrc
+
+Citar como:
+
+> Restrepo, Diego. "El Lagrangiano del Modelo Estándar.", [DOI:10.5281/zenodo.596727](http://doi.org/10.5281/zenodo.596727), [https://scholar.google.com/scholar_lookup?hl=en&title=El+Lagrangiano+del+Modelo+Estándar&author=D+Restrepo](Google Scholar)
 
 NOTAS:
 * [1/(100 GeV) to s](https://www.wolframalpha.com/input/?i=1%2F(100+GeV)++to+s)

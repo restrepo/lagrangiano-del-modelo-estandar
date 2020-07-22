@@ -39,7 +39,8 @@ La materia conocida esta constituida de un cojunto de \emph{fermiones de Dirac} 
    quarks &quark up  & $u_1,u_2,u_3$ & $2/3$\\
           &quark down  & $d_1,d_2,d_3$& $-1/3$\\
   \end{tabular}
-  \caption{Fermiones elementales:  The symbol represent both the particle, e.g $e^-$, as the antiparticle, e.g, $e^+$. The lectric chage is given in units of the electron chage $e$  }
+  \caption{Fermiones elementales:
+    El símbolo representa tanto la partícula, i.e  $e^-$, como la antipartícula, i.e $e^+$. La carga eléctrica está dada en unidades de la carga del electrón $e$.}
   \label{tab:ef}
 \end{table}
 donde podemos definir los tripletes de color de quarks como
@@ -54,18 +55,18 @@ donde podemos definir los tripletes de color de quarks como
   \end{pmatrix}
 \end{align}
 
-Este conjunto de partículas esta bien definido para interacciones que conservan paridad como la interacción electromagnética o la fuerte. Para introducir la interacciones débiles usaremos más bien espinores de Weyl
+Este conjunto de partículas esta bien definido para interacciones que conservan paridad como la interacción electromagnética o la fuerte. Para introducir las interacciones débiles usaremos más bien espinores de Weyl.
 
 \end{frame}
 
 \section{Interacciones débiles}
 \begin{frame}[fragile,allowframebreaks]
 Las interacciones débiles son las responsables, entre otros fenoménos,
-del decaimiento de neutrones libres en un protón, un electron y un
+del decaimiento de neutrones libres en un protón, un electrón y un
 anti-neutrino electrónico. En nuestro entendimiento actual, se asume
 que dicho decaimiento esta medidado por un bosón vectorial masivo y
 cargado llamado $W^-_{\mu}$ con su correspondiente antipartícula
-$W^{+}_{\mu}$. El caracter másivo da cuenta del corto alcance de la
+$W^{+}_{\mu}$. El carácter masivo da cuenta del corto alcance de la
 interacción comparado con el rango infinito de la
 interacción electromagnética mediada por un fotón sin masa
 $A_{\mu}$. En la primera parte del decaimiento, el neutrón decae al
@@ -90,8 +91,7 @@ Dicho decaimiento debe involucrar un término de interacción del tipo
 Este tipo de interacción significa que en el contexto de las interacciones débiles un $e_L$ debe ser completamente
 equivalente a un campo $\nu_L$. Es decir, el Lagrangiano debe ser
 invariante bajo una transformación $\operatorname{SU}(2)_L$ de esos campos. A las energías normales, a las que se encuentra por ejemplo un neutrón dentro de un núcleo de Uranio, dicha simetría permanece oculta pues un electrón izquierdo y un neutrino izquierdo son campos completamente diferentes.
-La
-diferencia entre no sólo está en sus respectivas cargas eléctricas sino también
+La diferencia entre ellos no sólo está en sus respectivas cargas eléctricas sino también en sus
 masas, pues la masa del neutrino es mucho más pequeña que la del electrón. 
 
 Para poder explicar dicha interacción en el contexto de una simetría gauge local $\operatorname{SU}(2)_L$, debemos asumir que dicha simetría es explicita en alguna otra escala de energía donde en efecto  $e_L$ sea completamente
@@ -100,7 +100,7 @@ equivalente a $\nu_L$.
 Debemos asumir entonces que ambos campos tienen una misma hipercarga,
 asociada a una nueva simetría Abeliana $\operatorname{U}(1)_Y$ que sea la precursora de la simetría Abeliana de carga eléctrica $\operatorname{U}(1)_Q$. En tal caso, podríamos esperar que
 la corriente electromagnética apropiada pueda obtenerse a partir del
-Grupo semisimple $\operatorname{SU}(2)_L\times U(1)_Y$. Además. la respectiva masa para $W_{\mu}^{-}$
+Grupo semisimple $\operatorname{SU}(2)_L\times U(1)_Y$. Además, la respectiva masa para $W_{\mu}^{-}$
 se podría obtener a partir del mecanismo de Higgs.
 
 La simetría $\operatorname{SU}(2)_L$ entre las partes izquierdas del neutrino y el electrón, y entre las partes izquierdas de los quarks up y down, se establece  definiendo los dobletes:
@@ -108,7 +108,7 @@ La simetría $\operatorname{SU}(2)_L$ entre las partes izquierdas del neutrino y
     L\equiv\begin{pmatrix}
       \nu_L\\
       e_L      
-    \end{pmatrix}\qquad   Q=&\begin{pmatrix}
+    \end{pmatrix},\qquad   Q=&\begin{pmatrix}
     u_L\\
     d_L
   \end{pmatrix}\,,
@@ -134,7 +134,7 @@ u_L=&
         \left( u_R \right)^{\dagger}_2&    \left( u_R \right)^{\dagger}_3
   \end{pmatrix},
 \end{align}
-etc.
+respectivamente.
 
 
 
@@ -235,7 +235,7 @@ i(e_R)^{\dagger}\sigma^\mu\mathcal{D}_\mu {e_R}+i(d_R)^{\dagger}\sigma^\mu\mathc
 \end{align}
 donde
 \begin{align}
-  \mathcal{D}^\mu&\equiv\partial^\mu-i g_s\frac{\lambda^a}{2}G^\mu_a-i g \frac{\tau^i}{2}W^\mu_i-i {g_1}YB^\mu\,.
+  \mathcal{D}^\mu&\equiv\partial^\mu-i g_s\frac{\lambda^a}{2}G^\mu_a-i g_2 \frac{\tau^i}{2}W^\mu_i-i {g_1}YB^\mu\,.
 \end{align}
 y además
 \begin{align*}
@@ -438,6 +438,7 @@ y sin perdida de generalidad para las partes del Lagrangiano $\mathcal{L}_{\text
 Nos enfocaremos de momento en la parte leptónica pues las interacciones para quarks involucran el mismo tipo de cálculos.
 
 Los términos de interacción generados por la simetría gauge para el sector leptónico son:
+\begin{frame}[fragile,allowframebreaks]
 \begin{align}
 \label{eq:devLW}
  \mathcal{L}_{\text{fermion}}^{\text{lepton}}=& i \widetilde{L}\cdot\overline{\sigma}^\mu\mathcal{D}_\mu L+  i \left( e_R \right)^{\dagger}{\sigma}^\mu\mathcal{D}_\mu e_R \nonumber\\
@@ -498,6 +499,7 @@ e_LW_\mu^+\\
   \end{pmatrix}=\frac{g_2}{\sqrt{2}} \left[\left( e_L \right)^{\dagger} \overline{\sigma}^{\mu} \nu_L W_{\mu}^-
 + \left( \nu_L \right)^{\dagger} \overline{\sigma}^{\mu} e_L W_{\mu}^+ \right].
 \end{align}
+\end{frame}
 De este modo, la simetría gauge genera la interacción deseada con los bosones gauge cargados $W_{\mu}^{\pm}$. Sin embargo, se generan muchas otras interacciones las cuales deben contener apropiadamente la interacción electromagnética en algún cambio de base.
 
 % Reemplazando en \eqref{eq:devLW}
@@ -539,10 +541,11 @@ El principal problema con $\mathcal{L}_{AZL}$ en la ec.~\eqref{eq:lazl} es que e
 \end{equation}
 donde $\theta_{W}$, es el ángulo de rotación débil (Weak de sus siglas en inglés) y $Z^{\mu}$ es el otro campo que resulta de la rotación a la nueva base que define al fotón $A^{\mu}$.
 Aplicando esta rotación a~\eqref{eq:lazl}, tenemos que
+\begin{frame}[fragile,allowframebreaks]
 \begin{align}
 \label{eq:brot}
-   \mathcal{L}_{A Z L}=& \widetilde{L}\cdot\overline{\sigma}^\mu\left[g_2 T_3(c_W Z_\mu+s_W A_\mu)+{g_1}\,Y_L(-s_W Z_\mu+c_W A_\mu)\right]L
-    +g_1 Y_R\left(e_R \right)^{\dagger}\sigma^\mu  {e_R} (-s_W Z_\mu+c_W A_\mu)\nonumber\\
+  \mathcal{L}_{A Z L}=& \widetilde{L}\cdot\overline{\sigma}^\mu\left[g_2 T_3(c_W Z_\mu+s_W A_\mu)+{g_1}\,Y_L(-s_W Z_\mu+c_W A_\mu)\right]L \nonumber\\
+    &+g_1 Y_R\left(e_R \right)^{\dagger}\sigma^\mu  {e_R} (-s_W Z_\mu+c_W A_\mu)\nonumber\\
      =& \widetilde{L}\cdot\overline{\sigma}^\mu\left[g_2 T_3c_W Z_\mu+g_2 T_3s_W A_\mu-{g_1}\,Y_Ls_W Z_\mu+{g_1}\,Y_Lc_W A_\mu\right]L\nonumber\\
 &-g_1 s_W Y_R\left(e_R \right)^{\dagger}\sigma^\mu  {e_R}Z_{\mu}  +g_1 c_W Y_R\left(e_R \right)^{\dagger}\sigma^\mu  {e_R}A_{\mu}  \nonumber\\
     =& \widetilde{L}\cdot\overline{\sigma}^\mu\left[\left(g_2 c_WT_3-{g_1}s_W\,Y_L\right)Z_\mu
@@ -590,6 +593,7 @@ una tercera condición surge de imponer que el electrón derecho se acople aprop
  e\widehat{Q} e_R =& \left(g_2 s_W T_3+{g_1}c_W\,\widehat{Y}\right) e_R\nonumber\\  
 e Q_e e_R=& g_1 c_W\,Y_R \, e_R\,.
 \end{align}
+\end{frame}
 con estas condiciones podemos despejar tres incógnitas que corresponden a $g_1c_W$, $g_2s_W$ y $Y_L$.
 La primera de ellas la podemos obtener de 
 igualar los coeficientes que acompañan los campos para la tercera condición, teniendo en cuenta que $\widehat{Q}=\widehat{Y}$ para los campos derechos los cuales no participan de la interacción
@@ -610,6 +614,7 @@ de donde podemos despejar $Y_L$
   Y_L=Q_e+\frac{1}{2}=-1+\frac{1}{2}=-\frac{1}{2}\,.
 \end{align}
 
+\begin{frame}[fragile,allowframebreaks]
 El resultado final es entonces
 \begin{align}
 \label{eq:esc}
@@ -621,6 +626,7 @@ La segunda ecuación se puede reemplazar en la ec.~\eqref{eq:relgn} para obtener
 \label{eq:gn}
  \widehat{Q}=&T_3+\widehat{Y}\,,
 \end{align}
+\end{frame}
 la cual es válida para cualquier campo fermiónico.
 
 La ec. \eqref{eq:gn}, se conoce como la relación de Gell-Mann--Nishijima, y junto con~\eqref{eq:esc}, establece las condiciones que se deben satisfacer para obtener apropiadamente la QED a partir de la interacción electrodébil asociada al grupo semisimple $\operatorname{SU}(2)_L\times  U(1)_Y$.
@@ -638,6 +644,7 @@ De la segunda ecuación  \eqref{eq:esc}, podemos expresar el ángulo $\theta_W$ 
   \tan\theta_W=\frac{g_1}{g_2}\,.
 \end{align}
 
+\begin{frame}[fragile,allowframebreaks]
 A modo de ilustración podemos comprobar
 los valores numéricos para $Y_L$ y $Y_R$ usando directamente la relación de Gell-Mann--Nishijima \eqref{eq:gn}
 \begin{align}
@@ -674,9 +681,10 @@ De la misma forma
 \begin{align}
   Y_R=Q_e=-1\,.
 \end{align}
+\end{frame}
 Note que para campos derechos la hipercarga coincide con la carga eléctrica.
 
-
+\begin{frame}[fragile,allowframebreaks]
 Usando la relación entre $g_2$ y ${g_1}$~\eqref{eq:twa} en ~\eqref{eq:brot}
 \begin{align}
     \mathcal{L}_{A Z L}
@@ -726,6 +734,7 @@ e \left( e_R \right)^{\dagger}{\sigma}^\mu \widehat{Q} e_R\, A_\mu \nonumber\\
 =&-e \left[ \left( e_L \right)^{\dagger}\overline{\sigma}^\mu \ e_L + \left( e_R \right)^{\dagger}{\sigma}^\mu \ e_R  \right]A_{\mu}\,,
 \end{align}
 y la interacción de la electrodinámica cuántica se recupera satisfactoriamente.
+\end{frame}
 
 \begin{frame}[fragile,allowframebreaks]
 Para obtener la interacción requerida de los $W^{\pm}$ con el $\nu_L$ y $e_L$ dada en la ec~\eqref{eq:lwl} y genera el fotón con las propiedades adecuadas resumidas en la ec.~\eqref{eq:LQED}, el modelo gauge local $\operatorname{SU}(2)_L\times \operatorname{U}(1)_Y$ predice entonces la existencia de nuevas interacciones con un nuevo bosón gauge $Z_{\mu}$ dadas por
@@ -849,8 +858,8 @@ Entonces
     0\\
     H(x)+v
   \end{pmatrix}=\begin{pmatrix}
-    -\frac{i}{\sqrt{2}}gW_\mu^+(H+v)\\
-    \partial_\mu H-i\left(-\frac{1}{2}gW^3_\mu+{\color{red}{g_1}Y_{\widetilde{\Phi}} B_\mu}\right)(H+v)
+    -\frac{i}{\sqrt{2}}g_2 W_\mu^+(H+v)\\
+    \partial_\mu H-i\left(-\frac{1}{2}g_2 W^3_\mu+{\color{red}{g_1}Y_{\widetilde{\Phi}} B_\mu}\right)(H+v)
   \end{pmatrix}.
 \end{align}
 
@@ -858,31 +867,31 @@ El correspondiente productor escalar $\operatorname{\operatorname{SU}}(2)_L$ es:
 \begin{align}
   \mathcal{L}_{WBH}=&\frac{1}{2}\widetilde{\begin{pmatrix}
     -\frac{i}{\sqrt{2}}g{W^\mu}^+(H+v)\\
-    \partial^\mu H-i\left(-\frac{1}{2}gW_3^\mu+{g_1}Y_{\widetilde{\Phi}} B^\mu\right)(H+v)
+    \partial^\mu H-i\left(-\frac{1}{2}g_2 W_3^\mu+{\color{red}{g_1}Y_{\widetilde{\Phi}} B^\mu}\right)(H+v)
   \end{pmatrix}}\cdot
    \begin{pmatrix}
     -\frac{i}{\sqrt{2}}gW_\mu^+(H+v)\\
-    \partial_\mu H-i\left(-\frac{1}{2}gW^3_\mu+{g_1}Y_{\widetilde{\Phi}} B_\mu\right)(H+v)
+    \partial_\mu H-i\left(-\frac{1}{2}g_2 W^3_\mu+{\color{red}{g_1}Y_{\widetilde{\Phi}} B_\mu}\right)(H+v)
   \end{pmatrix}-V(H)\nonumber\\
 =&\frac{1}{2}\begin{pmatrix}
-    \partial^\mu H+i\left(-\frac{1}{2}gW_3^\mu+{g_1}Y_{\widetilde{\Phi}} B^\mu\right)(H+v)\\
-    \frac{i}{\sqrt{2}}g{W^\mu}^-(H+v)\\
+    \partial^\mu H+i\left(-\frac{1}{2}gW_3^\mu+{\color{red}{g_1}Y_{\widetilde{\Phi}} B^\mu}\right)(H+v)\\
+    \frac{i}{\sqrt{2}}g_2{W^\mu}^-(H+v)\\
   \end{pmatrix}\cdot
   \begin{pmatrix}
-    -\frac{i}{\sqrt{2}}gW_\mu^+(H+v)\\
-    \partial_\mu H-i\left(-\frac{1}{2}gW^3_\mu+{g_1}Y_{\widetilde{\Phi}} B_\mu\right)(H+v)
+    -\frac{i}{\sqrt{2}}g_2 W_\mu^+(H+v)\\
+    \partial_\mu H-i\left(-\frac{1}{2}gW^3_\mu+\color{red}{g_1 Y_{\widetilde{\Phi}} B_\mu}\right)(H+v)
   \end{pmatrix}-V(H)\nonumber\\
   =&\frac{1}{4}g^2{W^\mu}^-W_\mu^+(H+v)^2-V(H)\nonumber\\
-  &+\frac{1}{2}\left[\partial^\mu H+i\left(-\tfrac{1}{2}gW_3^\mu+{g_1}Y_{\widetilde{\Phi}} B^\mu\right)(H+v)\right]
+  &+\frac{1}{2}\left[\partial^\mu H+i\left(-\tfrac{1}{2}gW_3^\mu+{\color{red}{g_1}Y_{\widetilde{\Phi}} B^\mu}\right)(H+v)\right]
   \times\nonumber\\
-  &\qquad\left[\partial_\mu H-i\left(-\tfrac{1}{2}gW^3_\mu+{g_1}Y_{\widetilde{\Phi}} B_\mu\right)(H+v)\right]\nonumber\\
+  &\qquad\left[\partial_\mu H-i\left(-\tfrac{1}{2}g_2 W^3_\mu+{\color{red}{g_1}Y_{\widetilde{\Phi}} B_\mu}\right)(H+v)\right]\nonumber\\
  =&-V(H)
   +\frac{1}{4}g^2{W^\mu}^-W_\mu^+(H+v)^2+\nonumber\\
-  &+\frac{1}{2}\partial^\mu H\partial_\mu H+\frac{1}{2}\left(-\tfrac{1}{2}gW_3^\mu+{\color{red}{g_1}Y_{\widetilde{\Phi}} B^\mu}\right)^2(H+v)^2
+  &+\frac{1}{2}\partial^\mu H\partial_\mu H+\frac{1}{2}\left(-\tfrac{1}{2}g_2 W_3^\mu+{\color{red}{g_1}Y_{\widetilde{\Phi}} B^\mu}\right)^2(H+v)^2
 \end{align}
 donde la última línea corresponde a la magnitud del ``número'' complejo: 
 \begin{align}
-\left[\partial_\mu H-i\left(-\tfrac{1}{2}gW^3_\mu+{g_1}Y_{\widetilde{\Phi}} B_\mu\right)(H+v)\right]
+\left[\partial_\mu H-i\left(-\tfrac{1}{2}g_2 W^3_\mu+{\color{red}{g_1}Y_{\widetilde{\Phi}} B_\mu}\right)(H+v)\right]
 \end{align}
 
 \end{frame}
@@ -892,11 +901,13 @@ Entonces
 \begin{align}
   \label{eq:96qft}
   \mathcal{L}_{WBH}=&\frac{1}{2}\partial^\mu H\partial_\mu H-V(H)
-  +\frac{g^2v^2}{4}{W^\mu}^-W_\mu^+ \left( \frac{H}{v}+1 \right)^2+\mathcal{L}_{Z A H}\,,
+  +\frac{g_2^2v^2}{4}{W^\mu}^-W_\mu^+ \left( \frac{H}{v}+1 \right)^2+\mathcal{L}_{Z A H}\,,
 \end{align}
 donde
 \begin{align}
-  \mathcal{L}_{ZAH}=\frac{1}{2}&\left(\tfrac{1}{4}g^2W_3^\mu W^3_\mu-\tfrac{1}{2}g{g_1}Y_{\widetilde{\Phi}} W_3^\mu B_\mu-\tfrac{1}{2}g{g_1}Y_{\widetilde{\Phi}} W_3^\mu B_\mu+{{g_1}}^2Y_{\widetilde{\Phi}} ^2B^\mu B_\mu\right)
+  \mathcal{L}_{ZAH}=&\frac{1}{2}\left(\tfrac{1}{4}g_2^2W_3^\mu W^3_\mu-{\color{red}g_2{g_1}Y_{\widetilde{\Phi}} W_3^\mu B_\mu+g_1^2 Y_{\widetilde{\Phi}} ^2B^\mu B_\mu}\right)
+\left(H+v\right)^2 \nonumber\\
+  =&\frac{1}{2}\left(\tfrac{1}{4}g_2^2W_3^\mu W^3_\mu-{\color{red}\tfrac{1}{2}g_2{g_1}Y_{\widetilde{\Phi}} W_3^\mu B_\mu-\tfrac{1}{2}g_2{g_1}Y_{\widetilde{\Phi}} W_3^\mu B_\mu+{{g_1}}^2Y_{\widetilde{\Phi}} ^2B^\mu B_\mu}\right)
 \left(H+v\right)^2.
 \end{align}
 Haciendo $Y_{\widetilde{\Phi}} =1/2$ como en la ec.~\eqref{eq:yyy},
