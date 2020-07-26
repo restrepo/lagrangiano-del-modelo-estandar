@@ -23,11 +23,6 @@
 LICENSE: All materials are licensed under the
 [![Creative Commons Lizenzvertrag](https://i.creativecommons.org/l/by-sa/4.0/88x31.png)](http://creativecommons.org/licenses/by-sa/4.0/) 
 
- [![PDF Status](https://www.sharelatex.com/github/repos/rescolo/TCC/builds/latest/badge.svg)](https://github.com/restrepo/TCC/files/376561/fullnotes.pdf)
-
-
-[ShareLaTeX](https://www.sharelatex.com/github): [![PDF Status](https://www.sharelatex.com/github/repos/rescolo/TCC/builds/latest/badge.svg)](https://www.sharelatex.com/github/repos/rescolo/TCC/builds/latest/output.pdf)
-
 Notas del Curso de Física Subatómica
 Instituto de Física 
 Universidad de Antioquia
