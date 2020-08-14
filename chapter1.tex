@@ -50,9 +50,38 @@ Ver \url{https://indico.cern.ch/event/243629}
 
 
 
-$\operatorname{SO}(2)$ es el grupo de rotaciones de dos ejes reales .
+$\operatorname{SO}(2)$ es el grupo de rotaciones de dos ejes reales.
+Considere un punto $(x,y)$ en sistema de referencia de dos dimensiones. Si cambiamos a un sistema de referencia rotado por un ángulo $\theta$, $(x',y')$, como se muestra en la figura~\ref{fig:so2}, podemos definir los dos triángulos rectángulos que se muestran en la figura y a partir de ellos obtener la transformación de los sistemas de referencia debido a la rotación
+\begin{align}
+  x'=&x\cos\theta+y\sin\theta \nonumber\\
+  y'=&y\cos\theta-x\cos\theta\,.
+\end{align}
+En forma matricial, la transformación del sistema de coordenas inicial al sistema de coordenados rotado por un ángulo $\theta$ está dado por
+\begin{align}
+  \begin{pmatrix}
+    x'\\
+    y'\\
+  \end{pmatrix}=
+  \begin{pmatrix}
+    \cos\theta & \sin\theta\\
+    -\sin\theta& \cos\theta\\
+  \end{pmatrix}
+  \begin{pmatrix}
+    x\\
+    y\\
+  \end{pmatrix}.
+\end{align}
+
+\begin{figure}
+  \centering
+  \includegraphics[scale=0.73]{so2}
+  \caption{Rotación por ángulo $\theta$}
+  \label{fig:so2}
+\end{figure}
+
+
 \begin{frame}[fragile,allowframebreaks]
-Una representación matricial corresponde al Grupo de matrices $2\times 2$ ortogonales de determinante 1
+Una representación matricial de $\operatorname{SO}(2)$, corresponde al Grupo de matrices $2\times 2$ ortogonales de determinante 1
 \begin{align*}
   R(\theta)=
   \begin{pmatrix}
