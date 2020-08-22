@@ -44,9 +44,8 @@ Antes de entrar en materia, se sentarán las bases teóricas necesarias sobre el
 \subsection{Definición de grupo}
 Ver \url{https://indico.cern.ch/event/243629}
 
-\subsection{$\operatorname{SO}(2)$ y $\operatorname{U}(1)$}
 
-\subsubsection{$\operatorname{SO}(2)$}
+\subsection{$\operatorname{SO}(2)$}
 
 
 
@@ -267,6 +266,7 @@ podemos demostrar que es invariante bajo rotaciones. Para demostrarlo aplicamos 
   =&\sum_{kl}  \delta_{kl}    x^{k}  y^{l} \nonumber\\
     =& \boldsymbol{x}\cdot \boldsymbol{y}\,,
 \end{align}
+La métrica asociada al producto escalar en este caso corresponde al delta de Kronecker $\delta_{ij}$.
 
 En forma compacta, usando \eqref{eq:xrtrx}, tenemos que
 \begin{frame}[fragile,allowframebreaks]
@@ -287,9 +287,142 @@ En forma compacta, usando \eqref{eq:xrtrx}, tenemos que
   En mecánica clásica el Lagrangiano es una función de escalares y por lo tanto un vector debe aparecer en forma de producto escalar, como en el caso de la energía cinética que es proporcional a $\boldsymbol{v}\cdot \boldsymbol{v}$
 \end{frame}
 
-La formulación Lagrangiana de la teoría clásica de campos que desarrollaremos a continuación hace uso también de productos escalares. Por lo tanto es conveniente definir el producto escalar en todos los espacios posibles para su uso posterior.  Comencemos con el grupo $\operatorname{U}(1)$
+La formulación Lagrangiana de la teoría clásica de campos que desarrollaremos a continuación hace uso también de productos escalares. Por lo tanto es conveniente definir el producto escalar en todos los espacios posibles para su uso posterior.
 
-\subsubsection{$\operatorname{U}(1)$}
+
+Hemos ilustrado como el Álgebra puede generar el grupo como tal. De hecho, podemos comenzar estableciendo de entrada el Álgebra como se hará a continuación.
+
+\subsection{$\operatorname{SO}(1,1)$}
+Queremos obtener una representación del álgebra
+\begin{align}
+  K^2=-\boldsymbol{1}\,,
+\end{align}
+donde $K$ es el único generador. Para hallar una representación de esta álgebra en términos de matrices $2\times2$ considere el generador
+\begin{align}
+  K=&  \begin{pmatrix}
+   0 &-i\\
+   -i &0\\ 
+  \end{pmatrix}. 
+\end{align}
+que genera un elemento del grupo $\operatorname{SO}(1,1)$ con parámetro $\xi$
+\begin{align}
+  \Lambda=\exp \left( i \xi K \right)\,.
+\end{align}
+Para realizar la expansión de Taylor, considere
+
+\begin{align*}
+  K^{0}=&\boldsymbol{1}_{2\times2}\,,&K=&
+  \begin{pmatrix}
+   0 &-i\\ %0 &-i\\
+   -i &0\\  %i &0\\ 
+  \end{pmatrix},&K^{2}=&  \begin{pmatrix}
+   -1 &0\\
+   0 &-1\\ 
+  \end{pmatrix},&K^{3}=&  \begin{pmatrix}
+   0 &i\\
+   i &0\\ 
+  \end{pmatrix},\ldots \nonumber\\
+  K^{2n}=&(-1)^{n}\boldsymbol{1}_{2\times2}\,,&&
+&&&K^{2n+1}=& (-1)^{n} \begin{pmatrix}
+   0 &-i\\
+   -i &0\\ 
+  \end{pmatrix}. 
+\end{align*}
+
+Entonces,
+\begin{align}
+  \label{eq:km1}
+  \Lambda=\exp \left( i \xi K \right)=&\sum_{n=0}^{\infty}\frac{\left(i \xi K \right)^{n}}{n!}\nonumber\\
+=&\sum_{n=0}^{\infty}(i)^{2n}\frac{\left( \xi K \right)^{2n}}{2n!}+\sum_{n=0}^{\infty}(i)^{2n+1}\frac{\left( \xi K \right)^{2n+1}}{(2n+1)!}\nonumber\\
+  =&\sum_{n=0}^{\infty}(-1)^{n}\frac{\xi^{2n}}{2n!}(-1)^{n}
+  \begin{pmatrix}
+    1 & 0\\
+    0 & 1\\
+  \end{pmatrix}
++\sum_{n=0}^{\infty}i(-1)^{n}\frac{ \xi^{2n+1}}{(2n+1)!} (-1)^{n}
+\begin{pmatrix}
+  0 & -i \\
+  -i & 0
+\end{pmatrix} 
+\nonumber\\
+  =&\sum_{n=0}^{\infty}\frac{\xi^{2n}}{2n!}
+  \begin{pmatrix}
+    1 & 0\\
+    0 & 1\\
+  \end{pmatrix}
++\sum_{n=0}^{\infty}\frac{ \xi^{2n+1}}{(2n+1)!} 
+\begin{pmatrix}
+  0 & 1 \\
+  1 & 0
+\end{pmatrix} 
+\nonumber\\
+  =&
+  \begin{pmatrix}
+    \cosh\xi & 0\\
+    0 & \cosh\xi \\
+  \end{pmatrix}
++
+\begin{pmatrix}
+  0 & \sinh\xi \\
+  \sinh\xi & 0
+\end{pmatrix}
+\nonumber\\
+    =&
+  \begin{pmatrix}
+    \cosh\xi & \sinh\xi\\
+     \sinh\xi& \cosh\xi \\
+  \end{pmatrix},
+\end{align}
+Podemos entonces definir el grupo $\operatorname{SO}(1,1)$ como el grupo de las matrices $2\times2$ que satisfacen la condición
+\begin{align}
+  \Lambda^T g \Lambda=g\,,
+\end{align}
+donde
+\begin{align}
+  g=
+  \begin{pmatrix}
+    1 & 0\\
+    0 & -1\\
+  \end{pmatrix}.
+\end{align}
+
+\begin{frame}[fragile,allowframebreaks]
+  Si $\boldsymbol{x}=
+  \begin{pmatrix}
+    x^0& x^1
+  \end{pmatrix}^{\operatorname{T}}
+$ es un vector en $\operatorname{SO}(1,1)$
+\begin{align}
+  \boldsymbol{x}\to \boldsymbol{x}'=&\Lambda \boldsymbol{x}\,,&
+  \boldsymbol{x}^{\operatorname{T}}\to \boldsymbol{x}^{\prime {\operatorname{T}}}=& \boldsymbol{x}^{\operatorname{T}} \Lambda^{\operatorname{T}}\,,
+\end{align}
+\begin{align}
+  \label{eq:psso11}
+  \boldsymbol{x}\cdot \boldsymbol{x}= \boldsymbol{x}^{\operatorname{T}}g \boldsymbol{x}\to \boldsymbol{x}^{\prime\operatorname{T}}g \boldsymbol{x}'
+  =\boldsymbol{x}^{\operatorname{T}}\Lambda^{\boldsymbol{T}}g \Lambda \boldsymbol{x}=\boldsymbol{x}^{\operatorname{T}}g \boldsymbol{x}\equiv  \boldsymbol{x}\cdot \boldsymbol{x}\,.
+\end{align}
+\end{frame}
+de manera que el producto escalar es
+\begin{align}
+  \boldsymbol{x}\cdot \boldsymbol{x}=&\sum_{\mu,\nu}g_{\mu\nu}x^{\mu}x^{\nu}\,,& \mu,\nu=0,1\,.
+\end{align}
+donde $g_{\mu\nu}$, correspondiente a las componentes de la matrix $2\times2$ $g$, es la métrica del producto
+escalar bajo $\operatorname{SO}(1,1)$.
+
+
+
+\subsection{Representación fundamental}
+A partir de una misma álgebra podemos definir las representaciones fundamentales de diferentes grupos. Si dos grupos diferentes provienen de la misma álgebra, diremos que dichos grupos son isomorfos.
+
+A modo de ejemplo, para el álgebra
+\begin{align}
+  T^2=\operatorname{1}\,,
+\end{align}
+podemos definir la representación fundamental $2\times2$ del grupo $\operatorname{SO}(2)$, a partir del generador $\tau$ de la ecuación \eqref{eq:so2g}. 
+
+El generador trivial $T=1$ nos permite definir la representación fundamental del grupo  $\operatorname{U}(1)$. Generalizando a un generador constante $T=Y$, tenemos lo siguiente.
+
+\subsection{$\operatorname{U}(1)$}
  El Grupo $U(1)$ corresponde a las rotaciones de un eje complejo. Tiene como elementos a los números complejos de módulo 1, los cuales en coordenadas polares se puede representar como
 \begin{align}
   U(\theta)=\operatorname{e}^{i \theta Y}\,,
@@ -819,6 +952,8 @@ entonces
 \section{Grupo de Lorentz: $\operatorname{SO}(1,3)$}
 \label{sec:glso13}
 
+See \url{https://indico.cern.ch/event/243629/attachments/415251/576988/L2.pdf}
+
 \begin{frame}[fragile,allowframebreaks]
   Los seis generadores independientes del Grupo de Lorentz $\operatorname{SO}(1,3)$ se pueden definir a partir del tensor antisimétrico
 \begin{align}
@@ -1020,70 +1155,8 @@ donde el generador de boost es
     0 & 0 &  0 & 0\\ 
   \end{pmatrix}.
 \end{align}
-
-Para realizar la expansión de Taylor, definimos la submatriz
-\begin{align*}
-  K^{0}=&\boldsymbol{1}_{2\times2}\,,&K=&
-  \begin{pmatrix}
-   0 &-i\\ %0 &-i\\
-   -i &0\\  %i &0\\ 
-  \end{pmatrix},&K^{2}=&  \begin{pmatrix}
-   -1 &0\\
-   0 &-1\\ 
-  \end{pmatrix},&K^{3}=&  \begin{pmatrix}
-   0 &i\\
-   i &0\\ 
-  \end{pmatrix}. \nonumber\\
-  K^{n}=&(-1)^{n}\boldsymbol{1}_{2\times2}\,,&&
-&&&K^{2n+1}=& (-1)^{n} \begin{pmatrix}
-   0 &-i\\
-   -i &0\\ 
-  \end{pmatrix}. 
-\end{align*}
-Entonces, para la subestructura $2\times 2$
-\begin{align}
-  \Lambda_{2\times2}=\exp \left( i \xi K \right)=&\sum_{n=0}^{\infty}\frac{\left(i \xi K \right)^{n}}{n!}\nonumber\\
-=&\sum_{n=0}^{\infty}(i)^{2n}\frac{\left( \xi K \right)^{2n}}{2n!}+\sum_{n=0}^{\infty}(i)^{2n+1}\frac{\left( \xi K \right)^{2n+1}}{(2n+1)!}\nonumber\\
-  =&\sum_{n=0}^{\infty}(-1)^{n}\frac{\xi^{2n}}{2n!}(-1)^{n}
-  \begin{pmatrix}
-    1 & 0\\
-    0 & 1\\
-  \end{pmatrix}
-+\sum_{n=0}^{\infty}i(-1)^{n}\frac{ \xi^{2n+1}}{(2n+1)!} (-1)^{n}
-\begin{pmatrix}
-  0 & -i \\
-  -i & 0
-\end{pmatrix} 
-\nonumber\\
-  =&\sum_{n=0}^{\infty}\frac{\xi^{2n}}{2n!}
-  \begin{pmatrix}
-    1 & 0\\
-    0 & 1\\
-  \end{pmatrix}
-+\sum_{n=0}^{\infty}\frac{ \xi^{2n+1}}{(2n+1)!} 
-\begin{pmatrix}
-  0 & 1 \\
-  1 & 0
-\end{pmatrix} 
-\nonumber\\
-  =&
-  \begin{pmatrix}
-    \cosh\xi & 0\\
-    0 & \cosh\xi \\
-  \end{pmatrix}
-+
-\begin{pmatrix}
-  0 & \sinh\xi \\
-  \sinh\xi & 0
-\end{pmatrix}
-\nonumber\\
-    =&
-  \begin{pmatrix}
-    \cosh\xi & \sinh\xi\\
-     \sinh\xi& \cosh\xi \\
-  \end{pmatrix},
-\end{align}
-de modo que
+Usando la expansión de Taylor~\eqref{eq:km1},
+tenemos que
 \begin{align}
   \label{eq:Lximunu}
   \{{\Lambda(\xi_1)^{\mu}}_{\nu}\}=&
