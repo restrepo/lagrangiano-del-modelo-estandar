@@ -49,7 +49,19 @@ Ver \url{https://indico.cern.ch/event/243629}
 
 
 
-$\operatorname{SO}(2)$ es el grupo de rotaciones de dos ejes reales.
+$\operatorname{SO}(2)$ es el grupo de rotaciones de dos ejes reales. Un ejemplo de transformación es la de un montaje experimental en la cual se determina el movimiento de un cuerpo con respecto a los ejes $x$, $y$ correpondientes a los lados de la mesa ilustrado en la figura~\ref{fig:tabla} izquierda. Posteriormente se repite la medida con la mesa rotada un ángulo $\theta$ pero manteniendo la posición del montaje experimental sobre la misma, como se ilustra en la figura~\ref{fig:tabla} derecha. Es claro que la trayectoria del movimiento no depende del sistema de referencia.
+\begin{figure}
+  \centering
+  \includegraphics[scale=0.4]{table}
+  \includegraphics[scale=0.4]{tabletheta}
+  \caption{Rotación de sistema de coordenadas}
+  \label{fig:tabla}
+\end{figure}
+
+
+
+
+
 Considere un punto $(x,y)$ en sistema de referencia de dos dimensiones. Si cambiamos a un sistema de referencia rotado por un ángulo $\theta$, $(x',y')$, como se muestra en la figura~\ref{fig:so2}, podemos definir los dos triángulos rectángulos que se muestran en la figura y a partir de ellos obtener la transformación de los sistemas de referencia debido a la rotación
 \begin{align}
   x'=&x\cos\theta+y\sin\theta \nonumber\\
@@ -292,8 +304,67 @@ La formulación Lagrangiana de la teoría clásica de campos que desarrollaremos
 
 Hemos ilustrado como el Álgebra puede generar el grupo como tal. De hecho, podemos comenzar estableciendo de entrada el Álgebra como se hará a continuación.
 
+
+\subsection{Representación fundamental}
+A partir de una misma álgebra podemos definir las representaciones fundamentales de diferentes grupos. Si dos grupos diferentes provienen de la misma álgebra, diremos que dichos grupos son isomorfos.
+
+A modo de ejemplo, para el álgebra
+\begin{align}
+  T^2=\operatorname{1}\,,
+\end{align}
+podemos definir la representación fundamental $2\times2$ del grupo $\operatorname{SO}(2)$, a partir del generador $\tau$ de la ecuación \eqref{eq:so2g}. 
+
+El generador trivial $T=1$ nos permite definir la representación fundamental del grupo  $\operatorname{U}(1)$. Generalizando a un generador constante $T=Y$, tenemos lo siguiente.
+
+\subsection{$\operatorname{U}(1)$}
+ El Grupo $U(1)$ corresponde a las rotaciones de un eje complejo. Tiene como elementos a los números complejos de módulo 1, los cuales en coordenadas polares se puede representar como
+\begin{align}
+  U(\theta)=\operatorname{e}^{i \theta Y}\,,
+\end{align}
+donde $Y$ es el generador de los elementos del Grupo y su representación es un número real (arbitrario)\footnote{Se suele asumir que es racional}.  En este grupo, $U^{*}(\theta)=U(-\theta)$ es el inverso y $U(0)$ es la identidad.
+
+Estos dos grupos son isomorfos: para un elemento complejo $U(\theta)$ el correspondiente elemento en $SO(2)$ es la rotación por el ángulo de cambio de fase de $U(\theta)$.
+
+\begin{frame}[fragile,allowframebreaks]
+Sea $\psi$ un \emph{vector} en el espacio $\operatorname{U}(1)$, en el sentido que puede sufrir transformaciones de cambio de fase del tipo
+\begin{align}
+  \psi\to \psi'=& U(\theta)\psi= \operatorname{e}^{i \theta Y}\psi \nonumber\\
+  \psi^{*}\to {\psi'}^{*}=&\psi^{*} U^{*}(\theta)=\psi^{*}\operatorname{e}^{-i \theta Y}\,.
+\end{align}
+
+
+Podemos definir el producto escalar como
+\begin{align}
+  \psi\cdot \psi\equiv\psi^{*} \psi
+  \to {\psi'}^{*} \psi'=\psi^{*} U^{*}(\theta) U(\theta) \psi=\psi^{*} \psi=\psi\cdot \psi\,.
+\end{align}
+\end{frame}
+
+\subsection{Construcción de Grupos a partir del álgebra}
+Considere el álgebra
+\begin{align}
+  K^2=-\boldsymbol{1}\,,
+\end{align}
+Exploraremos a continuación las representaciones matriciales fundamentales de dimensión $1\times1$ y $2\times2$
+
+
+\subsection{$\operatorname{SO}(1)$}
+Considere el generador $1\times1$
+\begin{align}
+  K=-i\,,
+\end{align}
+que genera el elemento del grupo $\operatorname{SO}(1)$, $R(\xi)$
+\begin{align}
+  R(\xi)=\operatorname{e^{\xi}}\,,
+\end{align}
+que corresponde simplemente al grupo de los números reales. Un elemento del espacio de números puede sufrir una transformación
+\begin{align}
+  x\to x'=\operatorname{e^{\xi}}x\,,
+\end{align}
+que corresponde a su vez a un boost por la cantidad $\operatorname{e^{\xi}}$.
+
 \subsection{$\operatorname{SO}(1,1)$}
-Queremos obtener una representación del álgebra
+Queremos obtener una representación $2\times2$ del álgebra
 \begin{align}
   K^2=-\boldsymbol{1}\,,
 \end{align}
@@ -409,42 +480,15 @@ de manera que el producto escalar es
 donde $g_{\mu\nu}$, correspondiente a las componentes de la matrix $2\times2$ $g$, es la métrica del producto
 escalar bajo $\operatorname{SO}(1,1)$.
 
+El diagrama mostrado en la figura~\ref{fig:sunson} resume los grupos introducidos hasta ahora, presenta los que discutiremos a continuación y la correspondiente generalización a dimensión $N$.
+\begin{figure}
+  \centering
+  \includegraphics[scale=0.7]{sunson}
+  \caption{Grupos de Lie}
+  \label{fig:sunson}
+\end{figure}
 
 
-\subsection{Representación fundamental}
-A partir de una misma álgebra podemos definir las representaciones fundamentales de diferentes grupos. Si dos grupos diferentes provienen de la misma álgebra, diremos que dichos grupos son isomorfos.
-
-A modo de ejemplo, para el álgebra
-\begin{align}
-  T^2=\operatorname{1}\,,
-\end{align}
-podemos definir la representación fundamental $2\times2$ del grupo $\operatorname{SO}(2)$, a partir del generador $\tau$ de la ecuación \eqref{eq:so2g}. 
-
-El generador trivial $T=1$ nos permite definir la representación fundamental del grupo  $\operatorname{U}(1)$. Generalizando a un generador constante $T=Y$, tenemos lo siguiente.
-
-\subsection{$\operatorname{U}(1)$}
- El Grupo $U(1)$ corresponde a las rotaciones de un eje complejo. Tiene como elementos a los números complejos de módulo 1, los cuales en coordenadas polares se puede representar como
-\begin{align}
-  U(\theta)=\operatorname{e}^{i \theta Y}\,,
-\end{align}
-donde $Y$ es el generador de los elementos del Grupo y su representación es un número real (arbitrario)\footnote{Se suele asumir que es racional}.  En este grupo, $U^{*}(\theta)=U(-\theta)$ es el inverso y $U(0)$ es la identidad.
-
-Estos dos grupos son isomorfos: para un elemento complejo $U(\theta)$ el correspondiente elemento en $SO(2)$ es la rotación por el ángulo de cambio de fase de $U(\theta)$.
-
-\begin{frame}[fragile,allowframebreaks]
-Sea $\psi$ un \emph{vector} en el espacio $\operatorname{U}(1)$, en el sentido que puede sufrir transformaciones de cambio de fase del tipo
-\begin{align}
-  \psi\to \psi'=& U(\theta)\psi= \operatorname{e}^{i \theta Y}\psi \nonumber\\
-  \psi^{*}\to {\psi'}^{*}=&\psi^{*} U^{*}(\theta)=\psi^{*}\operatorname{e}^{-i \theta Y}\,.
-\end{align}
-
-
-Podemos definir el producto escalar como
-\begin{align}
-  \psi\cdot \psi\equiv\psi^{*} \psi
-  \to {\psi'}^{*} \psi'=\psi^{*} U^{*}(\theta) U(\theta) \psi=\psi^{*} \psi=\psi\cdot \psi\,.
-\end{align}
-\end{frame}
 
 \subsection{$\operatorname{SO}(3)$}
 Una representación matricial de esta álgebra se puede obtener con la llamada representación adjunta del Grupo de rotaciones en 3 dimensiones, $\operatorname{SO}(3)$, definida a partir de las constantes de estructura \cite{Veltman}
@@ -1001,7 +1045,7 @@ podemos escribir
   \label{eq:44rep}
   \left(J^{\mu\nu}\right)_{\alpha\beta}  =&i\left({\delta^\mu}_\alpha{\delta^\nu}_\beta-{\delta^\mu}_\beta{\delta^\nu}_\alpha\right)\nonumber\\
  {\left(J^{\mu\nu}\right)^{\alpha}}_{\beta}=&ig^{\gamma\alpha}\left({\delta^{\mu}}_{\gamma}{\delta^\nu}_\beta-{\delta^\mu}_\beta{\delta^{\nu}}_\gamma\right) \nonumber\\
- =  &i\left(g^{\mu\alpha}{\delta^\nu}_\beta-{\delta^\mu}_\beta g^{\nu\alpha}\right)
+{\left(J^{\mu\nu}\right)^{\alpha}}_{\beta}  =  &i\left(g^{\mu\alpha}{\delta^\nu}_\beta-{\delta^\mu}_\beta g^{\nu\alpha}\right)
  % \left(J^{\mu\nu}\right)^{\alpha\beta}}=&-i \left( g^{\mu\alpha}g^{\nu\beta}-g^{\mu\beta}g^{\nu\alpha} \right) \nonumber\\
 \end{align}
 donde $\mu$ y $\nu$ rotulan cual de las dieciséis matrices se desea, mientras que $\alpha$ y $\beta$ rotulan las componentes de las matrices. Estas matrices satisfacen la relaciones de conmutación \eqref{eq:lrtalg}.
@@ -1071,10 +1115,65 @@ tenemos en términos de componentes que
 \end{align}
 donde, $L_i$ son los generadores de $\operatorname{SO}(3)$ en ec.~\eqref{eq:so3adj}, escritos como matrices $4\times 4$ con la primera fila y la primera columna nulas.
 
-Tomando en cuenta además que, incluyendo la definición  en la ec.~\eqref{eq:xii}:
+En resumén, el conjunto de 16 generadores asociados al tensor antisimétrico de 16 matrices $4\times4$
+\begin{align}
+  {\left(J^{\mu\nu}\right)^{\alpha}}_{\beta}  =  &i\left(g^{\mu\alpha}{\delta^\nu}_\beta-{\delta^\mu}_\beta g^{\nu\alpha}\right)\,,
+\end{align}
+es equivalente a los seis generadores
+\begin{align}
+  L_{1}=&  
+  \begin{pmatrix}
+0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0 \\
+0 & 0 & 0 & -i \\
+0 & 0 & i & 0
+  \end{pmatrix}, \quad &L_{2}=&
+  \begin{pmatrix}
+0 & 0 & 0 & 0 \\
+0 & 0 & 0 & i \\
+0 & 0 & 0 & 0 \\
+0 & -i & 0 & 0
+  \end{pmatrix},\quad& L_{3}=&
+  \begin{pmatrix}
+0 & 0 & 0 & 0 \\
+0 & 0 & -i & 0 \\
+0 & i & 0 & 0 \\
+0 & 0 & 0 & 0
+  \end{pmatrix} \nonumber\\
+K_{1}=&\begin{pmatrix}
+0 & -i & 0 & 0 \\
+-i & 0 & 0 & 0 \\
+0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0
+\end{pmatrix}, \quad &K_{2}=&\begin{pmatrix}
+0 & 0 & -i & 0 \\
+0 & 0 & 0 & 0 \\
+-i & 0 & 0 & 0 \\
+0 & 0 & 0 & 0
+\end{pmatrix},\quad &K_{3}=&\begin{pmatrix}
+0 & 0 & 0 & -i \\
+0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0 \\
+-i & 0 & 0 & 0
+\end{pmatrix}
+\end{align}
+
+\subsection{De seis a dieciseis}
+Cuando se quieren obtener las tres componentes temporaloides, $T^i$, y las tres componentes espacialoides $S^i$
+a partir de un tensor antisimétrico, $\mathcal{T}^{\mu\nu}$, se usan las siguientes definiciones
+\begin{align}
+  T^i\equiv &\mathcal{T}^{i0}\,& S^i=& \frac{1}{2}\epsilon^{ijk}\mathcal{T}_{ij}\,.
+\end{align}
+Cómo se mostrará a continuación, dichas expresiones se puede invertir de tal manera que
+\begin{align}
+  \mathcal{T}^{i0}= &T^i\,& \mathcal{T}_{ij} =&\epsilon_{ijk}S^k\,.
+\end{align}
+
+
+Por ejemplo, en el caso de los seis parámetros de la transformación de Lorentz, tomando en cuenta además que, incluyendo la definición  en la ec.~\eqref{eq:xii}:
 \begin{align}
 \label{eq:thijk}
-\omega_{i0}\equiv&\xi_i\,,&\theta^i\equiv&\frac{1}{2}\epsilon^{ijk}\omega_{jk}
+\xi_i\equiv \omega_{i0}&\,,&\theta^i\equiv&\frac{1}{2}\epsilon^{ijk}\omega_{jk}
 \end{align}
 podemos invertir las expresiones anteriores, ecs~\eqref{eq:lijjk} y~\eqref{eq:thijk}, para obtener
 \begin{align}
