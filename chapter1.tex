@@ -52,8 +52,8 @@ Ver \url{https://indico.cern.ch/event/243629}
 $\operatorname{SO}(2)$ es el grupo de rotaciones de dos ejes reales. Un ejemplo de transformación es la de un montaje experimental en la cual se determina el movimiento de un cuerpo con respecto a los ejes $x$, $y$ correpondientes a los lados de la mesa ilustrado en la figura~\ref{fig:tabla} izquierda. Posteriormente se repite la medida con la mesa rotada un ángulo $\theta$ pero manteniendo la posición del montaje experimental sobre la misma, como se ilustra en la figura~\ref{fig:tabla} derecha. Es claro que la trayectoria del movimiento no depende del sistema de referencia.
 \begin{figure}
   \centering
-  \includegraphics[scale=0.4]{table}
-  \includegraphics[scale=0.4]{tabletheta}
+  \includegraphics[scale=0.35]{table}
+  \includegraphics[scale=0.35]{tabletheta}
   \caption{Rotación de sistema de coordenadas}
   \label{fig:tabla}
 \end{figure}
@@ -355,13 +355,16 @@ Considere el generador $1\times1$
 \end{align}
 que genera el elemento del grupo $\operatorname{SO}(1)$, $R(\xi)$
 \begin{align}
-  R(\xi)=\operatorname{e^{\xi}}\,,
+  \lambda(\xi)=\operatorname{e^{\xi}}\,,
 \end{align}
-que corresponde simplemente al grupo de los números reales. Un elemento del espacio de números puede sufrir una transformación
+que corresponde simplemente al grupo de las exponenciales reales. Un número real puede sufrir una transformación
 \begin{align}
   x\to x'=\operatorname{e^{\xi}}x\,,
 \end{align}
-que corresponde a su vez a un boost por la cantidad $\operatorname{e^{\xi}}$.
+que corresponde a su vez a un boost por la cantidad $\operatorname{e^{\xi}}$. Podemos definir un producto escalar invariante como la división de números reales tal que
+\begin{align}
+  x\cdot y \to x'\cdot y'\equiv \frac{x'}{y'}= \frac{\operatorname{e}^{\xi}x}{\operatorname{e}^{\xi}y}=\frac{x}{y}=x\cdot y\,.
+\end{align}
 
 \subsection{$\operatorname{SO}(1,1)$}
 Queremos obtener una representación $2\times2$ del álgebra
