@@ -40,4 +40,5 @@ Citar como:
 
 NOTAS:
 * [1/(100 GeV) to s](https://www.wolframalpha.com/input/?i=1%2F(100+GeV)++to+s)
+* Can be open with code
 
