@@ -714,7 +714,7 @@ Como antes, $\theta_i$ son los parámetros de la transformación.  Usando las pr
 =&\mathbf{1}\,,
   \end{align*}
 la identidad $2\times 2$.
-\item Especial (Special): Usando la formula de Jacobi para la exponencial de una matriz, $A$, $e^{A}=e^{\operatorname{Tr}A}$, tenemos que
+\item Especial (Special): Usando la formula de Jacobi para la exponencial de una matriz, $A$, $\operatorname{det}\operatorname{e}^{A}=\operatorname{e}^{\operatorname{Tr}A}$, tenemos que
   \begin{align*}
    \det[U(\boldsymbol{\theta})]=&\det\left\{\exp\left[  i \operatorname{Tr}\left( T^i \right)\theta_i \right]  \right\}\nonumber\\
                            =&e^{0}\nonumber\\
@@ -1042,7 +1042,7 @@ De las las  matrices $4\times 4$
 \end{align}
 nos interesan realmente las componentes definidas como
 \begin{align}
-    { \left(J^{\mu\nu}\right)^{\alpha}}_{\beta}\equiv g^{\gamma\alpha}\left(J^{\mu\nu}\right)_{\gamma\beta}= &i\epsilon^{\mu\nu\rho\sigma}\epsilon_{\rho\sigma\gamma\beta}g^{\gamma\alpha}\,,
+    { \left(J^{\mu\nu}\right)^{\alpha}}_{\beta}\equiv g^{\alpha {\color{red}\gamma}}\left(J^{\mu\nu}\right)_{{\color{red}\gamma}\beta}= &i\,g^{\alpha {\color{red}\gamma}}\epsilon^{\mu\nu\rho\sigma}\epsilon_{\rho\sigma {\color{red}\gamma} \beta}\,,
 \end{align}
 Teniendo en cuenta la identidad
 \begin{align}
@@ -1090,10 +1090,12 @@ Entonces
      0 & 0 & 0 & 0\\
      0 & 0 & 0 & 0\\      
      i & 0 & 0 & 0\\      
-   \end{pmatrix},  \nonumber\\
-\omega_{10}=-\omega_{01}=&\xi_1\,,&\omega_{20}=-\omega_{02}=&\xi_2\,,&\omega_{30}=-\omega_{03}=&\xi_3\,.
+   \end{pmatrix}, % \nonumber\\
+%\omega_{10}=-\omega_{01}=&\xi_1\,,&\omega_{20}=-\omega_{02}=&\xi_2\,,&\omega_{30}=-\omega_{03}=&\xi_3\,.
 \end{align}
 
+\end{frame}
+\begin{frame}[fragile,allowframebreaks]
 Definimos
 \begin{align}
   K^{i}\equiv J^{i0}=-J^{0i}\,.
@@ -1124,6 +1126,8 @@ tenemos en términos de componentes que
 \end{align}
 donde, $L_i$ son los generadores de $\operatorname{SO}(3)$ en ec.~\eqref{eq:so3adj}, escritos como matrices $4\times 4$ con la primera fila y la primera columna nulas.
 
+\end{frame}
+\begin{frame}[fragile,allowframebreaks]
 En resumén, el conjunto de 16 generadores asociados al tensor antisimétrico de 16 matrices $4\times4$
 \begin{align}
   {\left(J^{\mu\nu}\right)^{\alpha}}_{\beta}  =  &i\left(g^{\mu\alpha}{\delta^\nu}_\beta-{\delta^\mu}_\beta g^{\nu\alpha}\right)\,,
@@ -1166,8 +1170,10 @@ K_{1}=&\begin{pmatrix}
 -i & 0 & 0 & 0
 \end{pmatrix}
 \end{align}
+\end{frame}
 
 \subsection{De seis a dieciseis}
+\begin{frame}[fragile,allowframebreaks]
 Cuando se quieren obtener las tres componentes temporaloides, $T^i$, y las tres componentes espacialoides $S^i$
 a partir de un tensor antisimétrico, $\mathcal{T}^{\mu\nu}$, se usan las siguientes definiciones
 \begin{align}
@@ -1177,7 +1183,7 @@ Cómo se mostrará a continuación, dichas expresiones se puede invertir de tal 
 \begin{align}
   \mathcal{T}^{i0}= &T^i\,& \mathcal{T}_{ij} =&\epsilon_{ijk}S^k\,.
 \end{align}
-
+\end{frame}
 
 Por ejemplo, en el caso de los seis parámetros de la transformación de Lorentz, tomando en cuenta además que, incluyendo la definición  en la ec.~\eqref{eq:xii}:
 \begin{align}
@@ -1192,6 +1198,15 @@ podemos invertir las expresiones anteriores, ecs~\eqref{eq:lijjk} y~\eqref{eq:th
   =&\frac{1}{2}\left(J^{lm}+J^{lm} \right)                                   \,,& =&\frac{1}{2}\left(\omega_{lm}+\omega_{lm} \right)                     \nonumber\\
 \epsilon^{ilm}L_i=&J^{lm}\,.                                                                \,,&\epsilon_{ilm}\theta^i=&\omega_{lm}\,.
 \end{align}
+
+\begin{frame}[fragile,allowframebreaks]
+Por lo tanto
+\begin{align}
+\label{eq:thijk}
+  \omega_{i0}=&\xi_i\,, &\omega_{lm}=&\epsilon_{ilm}\theta^i\nonumber\\
+  J^{i0}=&K^i\,, & J^{lm}=& \epsilon^{ilm}L_i\,.                  
+\end{align}
+\end{frame}
 
 De este modo, podemos escribir
 \begin{align}
@@ -1213,13 +1228,14 @@ Mientras que para la suma completa tenemos
 \end{align}
 
 
+\begin{frame}[fragile,allowframebreaks]
 \noindent
 \textbf{Teorema}:
   La representación $4\times 4$ del Grupo de Lorentz se puede obtener de la exponenciación de los generadores matriciales $4\times 4$ $J^{\mu\nu}$ y los parámetros $\omega_{\mu\nu}$
 \begin{align}
   {\Lambda}=\exp\left(-i\omega_{\mu\nu}\frac{{J}^{\mu\nu}}{2}\right)\,,
 \end{align}
-
+\end{frame}
 Las componentes están definidas como  ${\Lambda^{\alpha}}_{\beta}$, y ${\left( J^{\mu\nu}\right)^{\alpha}}_{\beta}$.
 A continuación vamos a usar la notación de subir el índice con la métrica
 \begin{align*}
@@ -1239,6 +1255,7 @@ Ya hemos desarrollado la parte de $\operatorname{SO}(3)$ correspondiente a los g
 Cada $L_i$ genera una matriz de rotación ortogonal como en las ecs.~\eqref{eq:lirot}.
 A continuación mostraremos el tipo de matriz que genera un boost $\xi_i$ asociado  a un generador $K^i$.
 
+\begin{frame}[fragile,allowframebreaks]
   Recordemos que
 \begin{align}
   \cosh\xi=&\sum_{n=0}^{\infty}\frac{\xi^{2n}}{2n!}\approx 1+\mathcal{O}(\xi^2)\nonumber\\
@@ -3289,7 +3306,7 @@ Como $L$ tiene unidades de Energía, en el sistema de unidades naturales las coo
 \end{align}
 La Acción para el campo es entonces
 \begin{align}
-  S[\phi,\partial_{\mu}]=\int_{t_1}^{t_2} L\left( \phi,\partial_{\mu}\phi \right)=\int_{R} \mathcal{L}\left( \phi,\partial_{\mu}\phi \right) \operatorname{d}t\operatorname{d}x\operatorname{d}y\operatorname{d}z=\int_{R} \mathcal{L}\left( \phi,\partial_{\mu}\phi \right) \operatorname{d}^{4}x\,,
+  S[\phi,\partial_{\mu}\phi]=\int_{t_1}^{t_2} L\left( \phi,\partial_{\mu}\phi \right)=\int_{R} \mathcal{L}\left( \phi,\partial_{\mu}\phi \right) \operatorname{d}t\operatorname{d}x\operatorname{d}y\operatorname{d}z=\int_{R} \mathcal{L}\left( \phi,\partial_{\mu}\phi \right) \operatorname{d}^{4}x\,,
 \end{align}
 donde los corchete en $S$ significan que la Acción es un \emph{funcional} de las coordenadas generalizadas $\phi,\partial_{\mu}$, $\operatorname{d}^4 x$ es el cuadrivolumen diferencial y $R$ es el cuadrivolumen en el cual se integra la densidad Laggrangiana para obtener la Acción.
 
@@ -3299,6 +3316,35 @@ donde los corchete en $S$ significan que la Acción es un \emph{funcional} de la
 
 
 
+\section{Propiedades de la Acción}
+
+
+\begin{frame}[fragile,allowframebreaks]
+El teorema de Gauss establece que
+\begin{equation}
+\int_V\boldsymbol{\nabla}\cdot\mathbf{A}\,d^3x=
+ \int_S\mathbf{A}\cdot d\mathbf{S}\,.
+\end{equation}
+Generalizado a cuatro dimensiones, tenemos
+\begin{align}
+  \label{eq:gauss4d}
+\int_{R} \operatorname{d}^4x\,\partial_{\mu} \eta^{\mu}=
+\int_{\sigma} \operatorname{d}\sigma_{\mu} \eta^{\mu}\,,   
+\end{align}
+donde $\mathcal{R}$ es el volumen en cuatro dimensiones (4D) y $\sigma$ la correspondiente hipersuperficie en tres dimensiones.
+\end{frame}
+
+Para una densidad Lagrangiana modificada con una derivada total de un cuadrivector
+\begin{align}
+  \mathcal{L}'=\mathcal{L}+\partial_\mu(\eta^{\mu}(x))
+\end{align}
+donde $\eta^{\mu}(x)$ es cualquier función de los campos de la densidad Lagrangiana original. Sí asumimos que dichos campos se anulan  sobre la frontera, da lugar a la Acción
+\begin{align}
+  S'=\int_{R}d^4x\,\mathcal{L}'=&\int_{R}d^4x\,\mathcal{L}+\int_R d^4x\,\partial_\mu\eta^{\mu}\nonumber\\
+  =&\int_{R}d^4x\,\mathcal{L}+\int_\sigma \eta^{\mu} d\sigma_{\mu}\nonumber\\
+  =&S\,,
+\end{align}
+para una hipersuperficie suficientemente grande. De modo que dos densidades lagrangianas que difieran solo en derivadas totales dan lugar a la misma Acción. Es claro por ejemplo para el campo electromagnético que su valor se anula a grandes distancias.
 
 \section{Principio de mínima acción}
 \label{sec:principio-de-minima-call}
@@ -3350,8 +3396,12 @@ Para $N$ campos asociados a un parámetro de transformación $\theta$ , la depen
 \begin{equation}
   S[\phi_i,\partial_\mu\phi_i;x]=\int_{R}\operatorname{d}^4x\,\mathcal{L}(\phi_i,\partial_\mu\phi_i;x)
 \end{equation}
-El problema variacional de Noether, que es diferente al principio de Hamilton, puede ser establecido en los siguientes términos
 
+
+El problema variacional de Noether, que es diferente al principio de Hamilton, puede ser establecido en los siguientes términos:
+
+
+\noindent
 ¿Cuales son las condiciones generales que se deben satisfacer para que una dada variación en la variables explícitas e implicitas permitan que la Acción pueda quedar invariante, y de aquí $\delta S=0$, donde $\delta S$ puede o no contener un término de frontera?
 
 Definiendo el cambio interno en el campo como en \eqref{eq:deltaphi}
@@ -3400,27 +3450,11 @@ donde
 \end{frame}
 
 
-
 \section{Ecuaciones de Euler-Lagrange}
 %% TODO: Mejorar
-\begin{frame}[fragile,allowframebreaks]
-El teorema de Gauss establece que
-\begin{equation}
-\int_V\boldsymbol{\nabla}\cdot\mathbf{A}\,d^3x=
- \int_S\mathbf{A}\cdot d\mathbf{S}\,.
-\end{equation}
-Generalizado a cuatro dimensiones, tenemos
-\begin{align}
-\int_{R} \operatorname{d}^4x\,\partial_{\mu} \eta^{\mu}=
-\int_{\sigma} \operatorname{d}\sigma_{\mu} \eta^{\mu}\,,   
-\end{align}
-donde $\mathcal{R}$ es el volumen en cuatro dimensiones (4D) y $\sigma$ la correspondiente hipersuperficie en tres dimensiones.
-\end{frame}
 
 
-Aplicando las condiciones de Frontera usando  el teorema de Gauss en 4D en el lado derecho de \eqref{eq:masterint},
-%detalles
-es claro que la integral de frontera se anula si imponemos que la variación tanto de la coordenadas, $\delta x^{\mu}$, como de los campos, $\delta \phi_{i}$ , en la frontera se hagan cero. Esto es equivalente a la anulación de las trayectorias en los extremos para la Acción en mecánica clásica, 
+Aplicando las condiciones de Frontera usando  el teorema de Gauss en 4D dado en la ec.~\eqref{eq:gauss4d} en el lado derecho de \eqref{eq:masterint}, es claro que la integral de frontera se anula si imponemos que la variación tanto de la coordenadas, $\delta x^{\mu}$, como de los campos, $\delta \phi_{i}$ , en la frontera se hagan cero. Esto es equivalente a la anulación de las trayectorias en los extremos para la Acción en mecánica clásica, 
 
 \begin{frame}[fragile,allowframebreaks]
 Obtenemos entonces las ecuaciones de Euler-Lagrange para cada campo $\phi_i$
@@ -3429,17 +3463,7 @@ Obtenemos entonces las ecuaciones de Euler-Lagrange para cada campo $\phi_i$
   \partial_{\mu} \left[ \frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}\right]-\frac{\partial\mathcal{L}}{\partial\phi_i}=0
 \end{align}
 
-La misma condición de nulidad de los campos en la frontera permite establecer que una densidad Lagrangiana modificada con una deriva total
-\begin{align}
-  \mathcal{L}'=\mathcal{L}+\partial_\mu(\eta^{\mu}(x))
-\end{align}
-donde $\eta^{\mu}(x)$ es cualquier función de los campos de la densidad Lagrangiana original que también sea cero sobre la frontera, da lugar a la Acci\'on
-\begin{align}
-  S'=\int_{R}d^4x\,\mathcal{L}'=&\int_{R}d^4x\,\mathcal{L}+\int_R d^4x\,\partial_\mu\eta^{\mu}\nonumber\\
-  =&\int_{R}d^4x\,\mathcal{L}+\int_\sigma \eta^{\mu} d\sigma_{\mu}\nonumber\\
-  =&S\,,
-\end{align}
-para una hipersuperficie suficientemente grande. De modo que dos densidades lagrangianas que difieran solo en derivadas totales dan lugar a la misma Acci\'on.
+La misma condición de nulidad de los campos en la frontera permite establecer que 
 \end{frame}
 
 Usando el principio de m\'\i nima acci\'on en t\'erminos del campo $\phi$, tenemos que para la densidad Lagrangiana~\eqref{eq:call2}
@@ -3540,6 +3564,13 @@ es decir, como la suma de la densidad Lagrangiana para dos campos reales indepen
 \end{frame}
 
 
+
+%%Radical view:
+% 1) Transformaciones externas
+% 2) Transformaciones internas
+
+% 1) Transformaciones externas
+
 \section{Ecuación de continuidad}
 \begin{frame}[fragile,allowframebreaks]
 Las transformaciones que bajo algunas condiciones dejan invariante a la acción, van a estar relacionadas con cargas conservadas. A continuación definiremos con un ejemplo conocido que es una carga conservada.
@@ -3624,54 +3655,8 @@ y la transformaci\'on del campo $\phi$ como consecuencia de la traslaci\'on es
 
 
 
-\section{Transformaciones internas}
 
-Una consecuencia del primer teorema de Noether es que por cada simetría global de la Acción existe una carga conservada. 
-
-
-
-
-La virtud del trabajo de Noether~\cite{Noether} fue separar los resultados  en los casos de grupos de simetrías globales en los cuales el parámetro de transformación no depende del punto del espacio tiempo (como es el caso de las transformaciones a velocidad constante la relatividad especial: $v=\text{cte}$) del caso en que los grupos de simetría dependan del punto del espacio-tiempo (como los sistemas acelerados de la relatividad general donde la velocidad depende el punto del espacio-tiempo: $v(x)$).
-
-En el caso de teorías de campos estamos más interesados en simetría de espacios internos como puede ser el cambio de fase de la función de onda en la ecuación de Schrödinger. Un cambio de fase, $\theta$, es un caso particular del parámetro de la transformación. En general el parámetro de una transformación interna puede ser constante, $\theta=\text{cte}$, que corresponde a una transformación de fase  \emph{global}, o depender del punto del espacio tiempo, $\theta(x)$, que corresponde  a una transformación  de fase \emph{local}. Las simetrías internas estan caracterizadas por la condición $\delta x^\mu=0$ 
-
-Nos enfocaremos en esta sección en la formulación de los dos teoremas de Noether para el caso de simetrías internas globales y locales.   
-
-
-Si la transformación depende de algún parámetro $\theta$ continuo, entonces podemos garantizar la existencia de un parámetro infinitesimal tal que
-\begin{align}
-\label{eq:infdt}
- \delta\phi_i= a_{i}\left( \phi_{i},\partial_{\mu}\phi_{i} \right) \theta(x)+b^{\nu}_i \left( \phi_{i},\partial_{\mu}\phi_{i} \right) \partial_{\nu}\theta(x)\,,
-\end{align}
-
-Para concretar, consideremos como transformación interna el cambio de fase de una función compleja
-\begin{align}
-  \phi\to \phi'=\operatorname{e}^{i\theta}\phi\,,  
-\end{align}
-Para un $\theta$ suficientemente pequeño
-\begin{align}
-  \phi'=&\operatorname{e}^{i\theta}\phi \nonumber\\
-    \approx&(1+i \theta)\phi \nonumber\\
-    \approx&\phi+i \theta\, \phi\,.
-\end{align}
-Definimos el cambio interno en la función como
-\begin{align}
-  \delta\phi\equiv \phi'-\phi\,,
-\end{align}
-y para el cambio infinitesimal del campo y su complejo conjugado, tenemos que haciendo $\phi_1=\phi$ y $\phi_2=\phi^{*}$
-\begin{align}
-  \delta\phi=&a_1 \theta\,, &  \delta\phi^{*}=&  a_2 \theta\,, 
-\end{align}
-donde
-\begin{align}
-  a_1=& i\phi \,, & a_2=&-i\phi^{*}\,.
-\end{align}
-Ademas, para este caso
-\begin{align}
-  b_1^\nu=b_2^\nu=0\,.
-\end{align}
-
-\section{Primer teorema de Noether}
+\section{Primer teorema de Noether para simetrías externas}
 El primer teorema de Noether surge al asumir que
 \begin{itemize}
 \item Los parámetros de transformación son globales, es decir, que los parámetros de la transformación no dependen del punto del espacio tiempo.
@@ -3691,9 +3676,6 @@ Por  cada parámetro asociado a una transformación global  existe una ecuación
    \partial_{\mu} B^{\mu}=0\,,
 \end{align}
 con $B^{\mu}$ dado por la ecuación~\eqref{eq:master2}.
-
-
-\subsection{Simetrías externas}
 
 \begin{frame}[fragile,allowframebreaks]
   Consideremos el caso en el cual el campo es sólo afectado en su dependencia espacio-temporal. Como ocurre para una la transformación externa de traslación global
@@ -3771,72 +3753,6 @@ Generalizando a un campo complejo
 
 
 
-\subsection{Simetrías internas}
-
-Consideremos primero el caso en el que el parámetro de la transformación $\theta=\text{cte}$. Como $\partial_{\nu}\theta=0$ (y también $\delta x^{\mu}=0$) en ese caso
-\begin{align}
-\label{eq:infdt}
-  \delta\phi_i= &a_{i}\left( \phi_{i},\partial_{\mu}\phi_{i} \right) \theta\,,&
-   \theta=&\text{cte}\,.
-\end{align}
-
-Reemplazando en \eqref{eq:master2}
-\begin{align}
-  B^{\mu}  =& \sum_{i}  \frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)} \delta \phi_i\nonumber\\
-  =&\sum_{i}  \frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}a_{i}\, \theta \nonumber\\
-=& j^{\mu} \theta\,,
-\end{align}
-donde
-\begin{align}
- \label{eq:thn1s}
-  j^{\mu}\equiv \frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}a_{i}\,.
-\end{align}
-Tenemos entonces que la corriente del Teorema 1 dada en la ec.~\eqref{eq:dmubmu}, puede escribirse como
-\begin{align}
-  \partial_{\mu} B^{\mu}=&0 \nonumber\\
-  \partial_{\mu} j^{\mu}=&0 \,.
-\end{align}
-de modo que $j^{\mu}$ es la cuadricorriente conservada asociada a la transformación con parámetro $\theta$.
-
-
-Generalizando al caso de una transformación con varios parámetros, tendremos la formulación del primer teorema de Noether para simetrías internas:
-
-\begin{frame}[fragile,allowframebreaks]
-\textbf{Teorema 1}: Si la acción $S$ es invariante bajo un grupo continuo de simetrías globales que dependen suavemente de $\rho$ parámetros independientes $\theta_{\alpha}=\text{cte}$ ($\alpha=1,2,\ldots, \rho$), tal que $\delta\phi_i=a_{\alpha i}\theta^{\alpha}$, y los campos satisfacen las ecuaciones de Euler Lagrange, entonces existen las $\rho$ relaciones
-\begin{align}
-  % \sum_{i}\mathcal{E}_i a_{\alpha i}\equiv
-  \partial_{\mu} j^{\mu}_{\alpha}=0\,,  
-\end{align}
-donde
-\begin{align}
-  \label{eq:thn1}
-j^{\mu}_{\alpha}\equiv B^{\mu}/\theta_{\alpha}=\sum_{i}  \frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}a_{\alpha i}
-\end{align}
-Y genera exactamente el mismo término de corriente conservada que en el caso del simetrías continuas locales internas.
-\end{frame}
-
-% De la ec.~\eqref{eq:master2}
-% \begin{align}
-% \label{eq:varprin}
-%   \sum_i \mathcal{E}_i \delta\phi_i =&\sum_{i} \partial_{\mu} \left[\frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}\delta\phi_{i}  \right] \nonumber\\
-%   \sum_i \mathcal{E}_i a_{\alpha i}\theta^{\alpha} =&\sum_{i} \partial_{\mu} \left[\frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)} a_{\alpha i}\theta^{\alpha}  \right] \nonumber\\
-%   \sum_i \mathcal{E}_i a_{\alpha i}\theta^{\alpha} =&\sum_{i} \partial_{\mu} \left[\frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)} a_{\alpha i}  \right]\theta^{\alpha}\,.
-% \end{align}
-% Igualando para cada $\theta^{\alpha}$
-% \begin{align}
-%     \sum_i \mathcal{E}_i a_{\alpha i} =&\sum_{i} \partial_{\mu} \left[\frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)} a_{\alpha i}  \right]
-% \end{align}
-
-Si inponemos que las ecuaciones de Euler-Lagrange se satisfagan, es decir
-\begin{align}
-  \mathcal{E}_i=0\,,
-\end{align}
-obtenemos $\alpha$-\emph{ecuaciones de continuidad}
-\begin{align}
-  \partial_{\mu} j^{\mu}_{\alpha}=0\,.
-\end{align}
-
-
 % \subsection{Teorema de Noether para simetr\'\i as externas}
 
 % Si $a^\mu$ es constante (un an\'alisis m\'as general es hecho en \cite{r})
@@ -3875,6 +3791,55 @@ obtenemos $\alpha$-\emph{ecuaciones de continuidad}
 %     \partial_\mu T^\mu_\nu
 %   \right)\delta a^\nu=0.
 % \end{align}
+
+
+
+\section{Transformaciones internas}
+
+Una consecuencia del primer teorema de Noether es que por cada simetría global de la Acción existe una carga conservada. 
+
+
+
+
+La virtud del trabajo de Noether~\cite{Noether} fue separar los resultados  en los casos de grupos de simetrías globales en los cuales el parámetro de transformación no depende del punto del espacio tiempo (como es el caso de las transformaciones a velocidad constante la relatividad especial: $v=\text{cte}$) del caso en que los grupos de simetría dependan del punto del espacio-tiempo (como los sistemas acelerados de la relatividad general donde la velocidad depende el punto del espacio-tiempo: $v(x)$).
+
+En el caso de teorías de campos estamos más interesados en simetría de espacios internos como puede ser el cambio de fase de la función de onda en la ecuación de Schrödinger. Un cambio de fase, $\theta$, es un caso particular del parámetro de la transformación. En general el parámetro de una transformación interna puede ser constante, $\theta=\text{cte}$, que corresponde a una transformación de fase  \emph{global}, o depender del punto del espacio tiempo, $\theta(x)$, que corresponde  a una transformación  de fase \emph{local}. Las simetrías internas estan caracterizadas por la condición $\delta x^\mu=0$ 
+
+Nos enfocaremos en esta sección en la formulación de los dos teoremas de Noether para el caso de simetrías internas globales y locales.   
+
+
+Si la transformación depende de algún parámetro $\theta$ continuo, entonces podemos garantizar la existencia de un parámetro infinitesimal tal que
+\begin{align}
+\label{eq:infdt}
+ \delta\phi_i= a_{i}\left( \phi_{i},\partial_{\mu}\phi_{i} \right) \theta(x)+b^{\nu}_i \left( \phi_{i},\partial_{\mu}\phi_{i} \right) \partial_{\nu}\theta(x)\,,
+\end{align}
+
+Para concretar, consideremos como transformación interna el cambio de fase de una función compleja
+\begin{align}
+  \phi\to \phi'=\operatorname{e}^{i\theta}\phi\,,  
+\end{align}
+Para un $\theta$ suficientemente pequeño
+\begin{align}
+  \phi'=&\operatorname{e}^{i\theta}\phi \nonumber\\
+    \approx&(1+i \theta)\phi \nonumber\\
+    \approx&\phi+i \theta\, \phi\,.
+\end{align}
+Definimos el cambio interno en la función como
+\begin{align}
+  \delta\phi\equiv \phi'-\phi\,,
+\end{align}
+y para el cambio infinitesimal del campo y su complejo conjugado, tenemos que haciendo $\phi_1=\phi$ y $\phi_2=\phi^{*}$
+\begin{align}
+  \delta\phi=&a_1 \theta\,, &  \delta\phi^{*}=&  a_2 \theta\,, 
+\end{align}
+donde
+\begin{align}
+  a_1=& i\phi \,, & a_2=&-i\phi^{*}\,.
+\end{align}
+Ademas, para este caso
+\begin{align}
+  b_1^\nu=b_2^\nu=0\,.
+\end{align}
 
 
 
@@ -3972,6 +3937,79 @@ Entonces, dada una densidad Lagrangiana para un conjunto de campos y el conjunto
 En particular mostraremos luego  que la cuadricorriente asociada al cambio de fase de un campo complejo no depende de que la transformación sea gloabal o local.
 
 
+
+
+
+
+% \subsection{Simetrías internas globales}
+
+% Consideremos primero el caso en el que el parámetro de la transformación $\theta=\text{cte}$. Como $\partial_{\nu}\theta=0$ (y también $\delta x^{\mu}=0$) en ese caso
+% \begin{align}
+% \label{eq:infdt}
+%   \delta\phi_i= &a_{i}\left( \phi_{i},\partial_{\mu}\phi_{i} \right) \theta\,,&
+%    \theta=&\text{cte}\,.
+% \end{align}
+
+% Reemplazando en \eqref{eq:master2}
+% \begin{align}
+%   B^{\mu}  =& \sum_{i}  \frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)} \delta \phi_i\nonumber\\
+%   =&\sum_{i}  \frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}a_{i}\, \theta \nonumber\\
+% =& j^{\mu} \theta\,,
+% \end{align}
+% donde
+% \begin{align}
+%  \label{eq:thn1s}
+%   j^{\mu}\equiv \frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}a_{i}\,.
+% \end{align}
+% Tenemos entonces que la corriente del Teorema 1 dada en la ec.~\eqref{eq:dmubmu}, puede escribirse como
+% \begin{align}
+%   \partial_{\mu} B^{\mu}=&0 \nonumber\\
+%   \partial_{\mu} j^{\mu}=&0 \,.
+% \end{align}
+% de modo que $j^{\mu}$ es la cuadricorriente conservada asociada a la transformación con parámetro $\theta$.
+
+
+% Generalizando al caso de una transformación con varios parámetros, tendremos la formulación del primer teorema de Noether para simetrías internas:
+
+% \begin{frame}[fragile,allowframebreaks]
+% \textbf{Teorema 1}: Si la acción $S$ es invariante bajo un grupo continuo de simetrías globales que dependen suavemente de $\rho$ parámetros independientes $\theta_{\alpha}=\text{cte}$ ($\alpha=1,2,\ldots, \rho$), tal que $\delta\phi_i=a_{\alpha i}\theta^{\alpha}$, y los campos satisfacen las ecuaciones de Euler Lagrange, entonces existen las $\rho$ relaciones
+% \begin{align}
+%   % \sum_{i}\mathcal{E}_i a_{\alpha i}\equiv
+%   \partial_{\mu} j^{\mu}_{\alpha}=0\,,  
+% \end{align}
+% donde
+% \begin{align}
+%   \label{eq:thn1}
+% j^{\mu}_{\alpha}\equiv B^{\mu}/\theta_{\alpha}=\sum_{i}  \frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}a_{\alpha i}
+% \end{align}
+% Y genera exactamente el mismo término de corriente conservada que en el caso del simetrías continuas locales internas.
+% \end{frame}
+
+% De la ec.~\eqref{eq:master2}
+% \begin{align}
+% \label{eq:varprin}
+%   \sum_i \mathcal{E}_i \delta\phi_i =&\sum_{i} \partial_{\mu} \left[\frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}\delta\phi_{i}  \right] \nonumber\\
+%   \sum_i \mathcal{E}_i a_{\alpha i}\theta^{\alpha} =&\sum_{i} \partial_{\mu} \left[\frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)} a_{\alpha i}\theta^{\alpha}  \right] \nonumber\\
+%   \sum_i \mathcal{E}_i a_{\alpha i}\theta^{\alpha} =&\sum_{i} \partial_{\mu} \left[\frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)} a_{\alpha i}  \right]\theta^{\alpha}\,.
+% \end{align}
+% Igualando para cada $\theta^{\alpha}$
+% \begin{align}
+%     \sum_i \mathcal{E}_i a_{\alpha i} =&\sum_{i} \partial_{\mu} \left[\frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)} a_{\alpha i}  \right]
+% \end{align}
+
+% Si inponemos que las ecuaciones de Euler-Lagrange se satisfagan, es decir
+% \begin{align}
+%   \mathcal{E}_i=0\,,
+% \end{align}
+% obtenemos $\alpha$-\emph{ecuaciones de continuidad}
+% \begin{align}
+%   \partial_{\mu} j^{\mu}_{\alpha}=0\,.
+% \end{align}
+
+
+
+
+%reformular
 \subsection{Generalización del Teorema 1 para simetrías internas}
 \begin{frame}[fragile,allowframebreaks]
 Si no imponemos que los campos satisfagan las ecuaciones de Euler-Lagrange, podemos formular:
