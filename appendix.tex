@@ -1,10 +1,905 @@
-\chapter{Potencial de Yukawa}
+\chapter{Mínima acción}
+
+
+\section{Aplicaci\'on a Mec\'anica Cu\'antica}
+\label{sec:aplic-mecan-cuant}
+%% Mover a apéndice.
+
+%\begin{frame}[fragile,allowframebreaks]
+Haciendo $\hbar=1$, el Lagrangiano que da lugar a la ecuaci\'on de Schr\"odinger es~\cite{0712.1608}\footnote{A simple version is discussed in 
+\url{http://physics.stackexchange.com/questions/55622/how-would-a-lagrangian-be-used-to-recover-the-schrodinger-equation}}
+\begin{align}
+\label{eq:5tcc}
+  \mathcal{L}(\psi,\psi^*,\partial_\mu\psi,\partial_\mu\psi^*)
+  &=-\frac{1}{2m}\psi^*\nabla^2\psi-\frac{i}{2}
+  \left(
+\psi^*\frac{\partial\psi}{\partial t}-\frac{\partial\psi^*}{\partial t}\psi
+  \right)+\psi^*V\psi\\
+&=\frac{1}{2m}\boldsymbol{\nabla}\psi^*\cdot\boldsymbol{\nabla}\psi-\frac{i}{2}
+  \left(
+\psi^*\frac{\partial\psi}{\partial t}-\frac{\partial\psi^*}{\partial t}\psi
+  \right)+\psi^*V\psi\\
+&=\frac{1}{2m}\partial_i\psi^*\partial_i\psi-\frac{i}{2}
+  \left(\psi^*\partial_0\psi-\partial_0\psi^*\psi\right)+\psi^*V\psi.\nonumber
+\end{align}
+donde la segunda forma es real: $\mathcal{L}^*=\mathcal{L}$. Aplicando las ecuaciones de Euler-Lagrange (\ref{eq:132}) para
+la funci\'on de onda $\psi^*$ obtenemos la ecuaci\'on de Scr\"odinger con $\hbar=1$:
+\begin{equation}
+  \label{eq:137}
+    0=\partial_\mu\left[\frac{\partial\mathcal{L}}{\partial(\partial_\mu\psi^*)}\right]-\frac{\partial\mathcal{L}}{\partial\psi^*}=
+  \partial_0\left[\frac{\partial\mathcal{L}}{\partial(\partial_0\psi^*)}\right]+  
+\partial_i\left[\frac{\partial\mathcal{L}}{\partial(\partial_i\psi^*)}\right]-\frac{\partial\mathcal{L}}{\partial\psi^*}.
+\end{equation}
+Como
+\begin{align}
+  \label{eq:136}
+  &\frac{\partial\mathcal{L}}{\partial(\partial_0\psi)}=-\frac{i}{2}\psi^*&&\frac{\partial\mathcal{L}}{\partial(\partial_0\psi^*)}=\frac{i}{2}\psi\nonumber\\
+  &\frac{\partial\mathcal{L}}{\partial(\partial_i\psi)}=\frac{1}{2m}\partial_i\psi^*&&\frac{\partial\mathcal{L}}{\partial(\partial_i\psi^*)}=\frac{1}{2m}\partial_i\psi\\
+  &\frac{\partial\mathcal{L}}{\partial\psi}=\frac{i}{2}\partial_0\psi^*+\psi^*V&&\frac{\partial\mathcal{L}}{\partial\psi^*}=-\frac{i}{2}\partial_0\psi+V\psi.\nonumber
+\end{align}
+%\end{frame}
+Entonces, reemplazando la ec.~(\ref{eq:136}) en la ec.~(\ref{eq:137}), tenemos
+\begin{align}
+ 0=\partial_\mu\left[\frac{\partial\mathcal{L}}{\partial(\partial_\mu\psi^*)}\right]-\frac{\partial\mathcal{L}}{\partial\psi^*}
+ &=\partial_0\left(\frac{i}{2}\psi\right)+\partial_i\left(\frac{1}{2m}\partial_i\psi\right)
+  -\left(-\frac{i}{2}\partial_0\psi+V\psi\right)\nonumber\\
+  &=\frac{i}{2}\partial_0\psi+\frac{1}{2m}\partial_i\partial_i\psi+\frac{i}{2}\partial_0\psi-V\psi.
+\end{align}
+
+Que puede escribirse como
+\begin{equation}
+  \label{eq:133}
+  i\frac{\partial}{\partial t}\psi=
+  \left(
+    -\frac{1}{2m}\nabla^2+V
+  \right)\psi.
+\end{equation}
+
+El Lagrangiano en ec~(\ref{eq:5}), y por consiguiente la Acci\'on, es invariante bajo una transformaci\'on de fase
+\begin{equation}
+  \label{eq:6}
+  \psi\to\psi'=e^{i\theta}\psi.
+\end{equation}
+Por consiguiente, de acuerdo al Teorema de Noether, debe existir una cantidad conservada. La corriente conservada se obtine de la ec.~(\ref{eq:jmuphi}). Para los campos $\psi$ y $\psi^*$, tenemos
+\begin{align}
+  \delta\psi=\psi'-\psi=(e^{i\theta}-1)\psi&\approx i\theta\psi\\
+  \delta\psi^*&\approx-i\theta\psi.
+\end{align}
+Usando adem\'as la ec.~(\ref{eq:136}) en la definici\'on de $J^0$ dada por la ec.~(\ref{eq:jmuphi}), tenemos
+\begin{align}
+  \label{eq:135}
+  J^0&=\left[\frac{\partial\mathcal{L}}{\partial(\partial_0\psi)}\right]\delta\psi
+  +\delta\psi^*\left[\frac{\partial\mathcal{L}}{\partial(\partial_0\psi^*)}\right]\nonumber\\
+  &=-\frac{i}{2}\psi^*(i\theta\psi)+(-i\theta\psi^*)\frac{i}{2}\psi\nonumber\\
+  &=\theta\psi^*\psi,
+\end{align}
+y
+\begin{align}
+  \label{eq:134}
+  J^i&=\left[\frac{\partial\mathcal{L}}{\partial(\partial_i\psi)}\right]\delta\psi
+  +\delta\psi^*\left[\frac{\partial\mathcal{L}}{\partial(\partial_i\psi^*)}\right]\nonumber\\
+  &=\frac{1}{2m}\partial_i\psi^*(i\theta\psi)+(-i\theta\psi^*)\frac{1}{2m}\partial_i\psi\nonumber\\
+  &=\frac{i\theta}{2m}\left(\partial_i\psi^*\psi-\psi^*\partial_i\psi \right).
+\end{align}
+Entonces, normalizando apropiadamente la corriente escogiendo $\theta=1$, tenemos
+\begin{align}
+  \label{eq:7}
+  J^0&=\psi^*\psi\\
+  \mathbf{J}&=\frac{i}{2m}
+  \left(
+    \psi\boldsymbol{\nabla}\psi^*-\psi^*\boldsymbol{\nabla}\psi
+  \right).
+\end{align}
+%\begin{frame}[fragile,allowframebreaks]
+De acuerdo a la ec.~(\ref{eq:7}), la cantidad conservada corresponde a la probabilidad de la funci\'on de onda y normalizando apropiadamente la ec.~(\ref{eq:qcons})
+\begin{equation}
+  \label{eq:57}
+Q_\rho=  \int_V \psi^*\psi \,d^3x=1.
+\end{equation}
+%\end{frame}
+
+En cuanto a las simetr\'\i as externas, tenemos de la ec.~(\ref{eq:tmunu}) que
+da lugar a las ecuaciones de continuidad (\ref{eq:122})(\ref{eq:235})
+\begin{align}
+  \partial_\mu T^\mu_0&=0,\nonumber\\
+\partial_\mu{T}^\mu_i&=0
+\end{align}
+Las cargas conservadas se pueden obtener de las densidades de carga
+$T^0_0$ y $T^0_i$. 
+
+\subsection{Conservación del moméntum}
+Comencemos con las densidades de carga asociadas a
+la conservación del moméntum lineal.
+Usando  las ecs.~(\ref{eq:136}) en la ec.~(\ref{eq:138})
+\begin{align}
+  T^0_i=&\frac{\partial\mathcal{L}}{\partial(\partial_0\psi)}(\partial_i\psi)
+  +(\partial_i\psi^*)\frac{\partial\mathcal{L}}{\partial(\partial_0\psi^*)}\nonumber\\
+  T^0_i=&-\frac{i}{2}\psi^*(\partial_i\psi)+\frac{i}{2}(\partial_i\psi^*)\psi
+\end{align}
+Entonces, definiendo
+\begin{equation}
+   \mathbf{T}^0=\frac{i}{2}
+  \left(
+    \psi\boldsymbol{\nabla}\psi^*-\psi^*\boldsymbol{\nabla}\psi
+  \right)
+\end{equation}
+Procedemos ahora a reemplazar $\psi\boldsymbol{\nabla}\psi^*$ por la
+derivada total
+\begin{align}
+ \mathbf{T}^0&=\frac{i}{2}
+  \left[\left( 
+    \boldsymbol{\nabla}(\psi^*\psi)-\psi^*\boldsymbol{\nabla}\psi \right)-\psi^*\boldsymbol{\nabla}\psi
+  \right]\nonumber\\
+&=-i\psi^*\boldsymbol{\nabla}\psi+\frac{i}{2}\boldsymbol{\nabla}(\psi^*\psi)\,.
+\end{align}
+Integrando en el volumen
+\begin{equation}
+  \int_V \mathbf{T}^0\, d^3x=-i\int_V \psi^*\boldsymbol{\nabla}\psi\, d^3x+\frac{i}{2}\boldsymbol{\nabla}\int_V\psi^*\psi\,d^3x
+\end{equation}
+%\begin{frame}[fragile,allowframebreaks]
+De acuerdo a la ec.~(\ref{eq:57}), la \'ultima integral es una constante y
+\begin{align}
+  \label{eq:140}
+  \int_V \mathbf{T}^0\, d^3x=-i\int_V \psi^*\boldsymbol{\nabla}\psi d^3x\nonumber\\
+\langle\widehat{\mathbf{p}}\rangle=\int_V \psi^*\widehat{\mathbf{p}}\psi d^3x
+\end{align}
+De modo que $\langle\widehat{\mathbf{p}}\rangle$ son las cargas conservadas asociadas al valor esperado el operador de momentum
+\begin{equation}
+  \widehat{\mathbf{p}}=-i\boldsymbol{\nabla}\,.
+\end{equation}
+En general, el valor esperado de un operador $ \widehat{\cal O}$, se define en mecánica cuántica como
+\begin{align*}
+  \langle\widehat{\cal O}\rangle=\int_V d^3x\,\psi^{*}\widehat{\cal O}\psi\,.
+\end{align*}
+%\end{frame}
+\subsection{Conservación de la energía}
+De otro lado
+\begin{align}
+  T^0_0&=\frac{\partial\mathcal{L}}{\partial(\partial_0\psi)}{\partial_0\psi}+{\partial_0\psi^*}\frac{\partial\mathcal{L}}{\partial(\partial_0\psi^*)}-\mathcal{L}\nonumber\\
+  &=-\frac{i}{2}\psi^*\partial_0\psi+\frac{i}{2}\partial_0\psi^*\psi-\frac{1}{2m}\partial_i\psi^*\partial_i\psi+\frac{i}{2}
+  \left(\psi^*\partial_0\psi-\partial_0\psi^*\psi\right)-\psi^*V\psi\nonumber\\
+  &=-\frac{1}{2m}\partial_i\psi^*\partial_i\psi-\psi^*V\psi
+\end{align}
+Como las corrientes solo est\'an determinadas hasta un factor de proporcionalidad, definimos
+\begin{align}
+  \label{eq:139}
+   \mathcal{H}&\equiv-T^0_0=\frac{1}{2m}\boldsymbol{\nabla}\psi^*\cdot\boldsymbol{\nabla}\psi+\psi^*V\psi\nonumber\\
+   &=\frac{1}{2m}\boldsymbol{\nabla}\cdot(\psi^*\boldsymbol{\nabla}\psi)-\frac{1}{2m}\psi^*\nabla^2\psi+\psi^*V\psi.
+\end{align}
+Integrando sobre el volumen y usando la ec.~(\ref{eq:140})
+\begin{align}
+ \int_V\mathcal{H}\,d^3x&=\frac{1}{2m}\int_V\boldsymbol{\nabla}\cdot(\psi^*\boldsymbol{\nabla}\psi)
++\int_V\psi^*\left(-\frac{1}{2m}\nabla^2+V\right)\psi\,d^3x\nonumber\\
+&=\frac{1}{2m}\boldsymbol{\nabla}\cdot\int_V(\psi^*\boldsymbol{\nabla}\psi)
++\int_V\psi^*\left(-\frac{1}{2m}\nabla^2+V\right)\psi\,d^3x\nonumber\\
+&=\frac{i}{2m}\boldsymbol{\nabla}\cdot\langle\widehat{\mathbf{p}}\rangle
++\int_V\psi^*\left(-\frac{1}{2m}\nabla^2+V\right)\psi\,d^3x\nonumber\\
+&=\int_V\psi^*\left(-\frac{1}{2m}\nabla^2+V\right)\psi\,d^3x\,.
+\end{align}
+
+Entonces
+\begin{align}
+\label{eq:141}
+H&\equiv \int_V\mathcal{H}\,d^3x=\int_V\psi^*\left(-\frac{1}{2m}\nabla^2+V\right)\psi\,d^3x\nonumber\\
+&=\int_{V} d^3x\,\psi^*\widehat{H}\psi=\langle\widehat{H}\rangle.
+\end{align}
+Que es un resultado bien conocido de la mec\'anica cu\'antica.
+
+Como
+\begin{equation}
+  \widehat H=\frac{1}{2m}\hat p^2+\widehat V,
+\end{equation}
+podemos escribir la ec.~(\ref{eq:133}) como
+\begin{equation}
+  i\frac{\partial}{\partial t}\psi=\widehat H \psi\,.
+\end{equation}
+Podemos identificar entonces los operadores de energ\'\i a y momentum.
+\begin{equation}
+  \label{eq:151}
+  \widehat H=i\frac{\partial}{\partial t},\qquad \hat{\mathbf{p}}=-i\,\boldsymbol{\nabla}.
+\end{equation}
+
+Retornando a la ec.~(\ref{eq:140}), tenemos que para la soluci\'on de part\'\i cula libre de la ecuaci\'on de Schr\"odinger 
+\begin{equation}
+  \psi=A\,e^{-i\mathbf{k}\cdot\mathbf{x}},
+\end{equation}
+la condici\'on de normalizaci\'on en ec.~\eqref{eq:57} implica que $|A|^2=1/L^3$, y
+\begin{align}
+  \int_V \mathbf{T}^0\, d^3x&=\mathbf{k}.
+\end{align}
+
+%\begin{frame}[fragile,allowframebreaks]
+Los dos operadores se pueden combinar en relatividad especial definiendo el operador de cuadrimomentum
+\begin{align}
+  \widehat{p}\;^{\mu}=i\partial^{\mu}=
+  \begin{cases}
+    i\partial^0=i\partial_0=\widehat{H} & \mu=0\\
+    i\partial^i=-i\partial_i=\widehat{p}\;^{i} & \mu=i\\
+  \end{cases}
+\end{align}
+%\end{frame}
+
+
+\begin{itemize}
+\item[\textbf{Ejercicio:}]  De la ec.~(\ref{eq:141}) obtenega la densidad Hamiltoniana, y usando la ec.~(\ref{eq:3}) encontrar la densidad Lagrangiana~\eqref{eq:5}.
+\end{itemize}
+
+Una interpretación satisfactoria de los operadores se puede obtener si al identificar una excitación del campo $\psi$ con una partícula de energía $E$ y momentum $\mathbf{p}$, dichas cantidades se encuentran en la fase de la función de onda:
+\begin{align}
+  \psi(x)\propto e^{i p\cdot x}=\exp(Et-\mathbf{p}\cdot \mathbf{x})\,,
+\end{align}
+De esta manera, asumiendo una normalización adecuada,
+\begin{align}
+  \left( \widehat{p}^{\mu} \right)=&\int d^{3}x\,. \psi^{*}\widehat{p}^{\mu}\psi=p^{\mu}\,.
+\end{align}
+
+\section{Invarianza de fase local del Lagrangiano de  Scrödinger's}
+
+%Trasladar el material de sección 3.4 aquí. 
+Cuando se habla de la función $\psi(x)$, $x$ representa el punto del espacio tiempo en el cual deseamos conocer el valor de la función de onda. 
+Ya que los núneros complejos son, pues por eso, complejos, uno no los puede representar con una posición en una línea. En su lugar, hay que representarlos por un punto en un espacio en dos dimensiones.
+
+Además de la longitud de la flecha apuntando al número complejo también necesitamos un ángulo para especificar exactamente como dibujar la flecha apuntando al número complejo. El observable esta codificado dentro de la longitud de la flecha que representa el valor del función de onda complejo en ese punto del espacio-tiempo. Su ángulo es inobservable.
+
+El número complejo $\psi(x)$  en la ecuación de Scrödinger es justo el número cuyo cuadrado es la probabilidad relativa de encontrar el objeto en ese punto, como hemos visto como consecuencia de la simetría asociada a que el ángulo es inobservable.
+
+Ahora, supongamos que usted decide hacer un cambio de fase de la función de onda de forma arbitraria en cada punto del espacio, osea el ángulo $\theta$ que el número complejo $\psi$ hace con respecto al eje real. Aquí hay un punto crucial: si el cambio de fase es \emph{global}, es decir si el cambio de fase asociado al ángulo $\theta$ es el mismo en todos los puntos del espacio, este cambio no destruirá el delicado balance entre la energía cinética y la energía potencial en la ecuación de Scrödinger.
+
+Sin embargo, desde el punto de vista de la relatividad especial de Einstein, la necesidad de requerir que el sistema mecánico cuántico quede inalterado sólo por cambios globales de fase parece poco natural. Una vez se escoge el fase de la función de onda en un punto del espacio-tiempo, el requerimiento de la invarianza de fase global fija esta en todos los puntos del espacio tiempo: 
+
+  \begin{quote}
+\small
+    As usually conceived however, this arbitrariness is subject to the following  limitation: once one choose [the phase of the wave function] at one space--time point, one is then not free to make any choices at other space--time points.
+
+It seems that it is not consistent with the localized field concept that underlies the usual physical theories. In the present paper we wish to explore the possibility of requiring all the interactions to be invariant under independent [change of phases] at all space-time points.
+  \end{quote}
+  \begin{flushright}
+    Yang-Mills, \emph{Physical Review}, 1954
+  \end{flushright}
+
+Un cambio de fase que dependa del punto del espacio-tiempo, $\theta(x)$, de otro lado, sería similar a lo que pasa en la teoría electromagnética cuando es expresada en términos de potenciales escalares y vectoriales. Ellos se pueden cambiar por derivadas de funciones arbitrarias de una forma tal que los campos eléctricos y magnéticos medidos permanecen invariantes. Como veremos, estas características están profundamente conectas con la conservación local de la carga eléctrica.  
+
+\subsection{Motivación}
+
+Desde un punto de vista más cuantitativo, debido a que la energía y la cantidad de movimiento del electrón aparecen  en la fase de su función de onda
+\begin{align}
+  \psi(x)\propto e^{i p\cdot x}=\exp(Et-\mathbf{p}\cdot \mathbf{x})\,,
+\end{align}
+entonces, un cambio de fase local
+\begin{align}
+ \psi(x)\to \psi'(x)=e^{{i\theta(x)}}\psi\,,
+\end{align}
+cambia la energía y la cantidad de movimiento del electrón. Esto hace necesario la existencia de un nuevo campo que compense esos cambios para garantizar su convervación entre el sistema completo del electrón y el nuevo campo.
+
+Histroricamente primero se implemento la invarianza de Lorentz en Mecánica Cuántica cambiando el correspondiente Lagrangiano de Sch\"odinger. Sin embargo, el Lagrangiano resultante es insuficiente pues tiene una invarianza de fase global que contradice los principios de la relativad especial. El Lagrangiano definitivo de la electrodinámica cuántica, que construiremos en detalle luego, incorpora además de la invarianza de Lorentz, la invarianza de fase local. Aquí, no seguiremos el camino histórico, sino uno inverso en el  que primero modificaremos el Lagrangiano de Sch\"odinger por uno que sea invariante bajo cambios de fase locales. Como las interacciones van a resultar como consecuencia de imponer la invarianza de fase local, es suficiente hacer el análisis partiendo de la Lagrangiana libre de interacciones, es decir, sin considerar el término $\psi^{*}V\psi$.
+
+Comenzamos de nuevo con el Lagrangiano de Schödinger escrito como en la ec.~\eqref{eq:5tcc}, pero sin el término de interacción:
+
+\begin{align}
+  \mathcal{L}(\psi,\psi^*,\partial_\mu\psi,\partial_\mu\psi^*)&=\frac{1}{2m}\boldsymbol{\nabla}\psi^*\cdot\boldsymbol{\nabla}\psi-\frac{i}{2}
+  \left(
+\psi^*\frac{\partial\psi}{\partial t}-\frac{\partial\psi^*}{\partial t}\psi
+  \right)+\cancel{\psi^*V\psi}\\
+\mathcal{L}_{\text{free}}&=\frac{1}{2m}\sum_i\partial_i\psi^*\partial_i\psi-\frac{i}{2}
+  \left(\psi^*\partial_0\psi-\partial_0\psi^*\psi\right).\nonumber
+\end{align}
+Este Lagrangiano no es invariante bajo cambios de fase locales de la función de onda:
+\begin{align}
+  \partial_\mu \psi\to\partial_\mu \psi'=&\partial_\mu \left(e^{i\theta(x)}\psi\right)\nonumber\\
+  =&\left(\partial_\mu e^{i\theta(x)}\right)\psi+e^{i\theta(x)}\partial_\mu\psi\nonumber\\
+  =&e^{i\theta(x)}\left(i\partial_\mu \theta(x)\right)\psi+e^{i\theta(x)}\partial_\mu\psi\nonumber\\
+  =&e^{i\theta(x)}\left[i\partial_\mu \theta(x)+\partial_\mu\right]\psi\,.
+\end{align}
+Para tener un nuevo Lagrangiano invariante bajo transformaciones de fase locales, llamadas simplemente transformaciones gauge, necesitamos introducir un nuevo término para compensar el término que proviente de la derivada de  $e^{i\theta(x)}$. Éste término debe tener índice $\mu$ como el de la deriva normal:
+\begin{align}
+\label{eq:165qft}
+   \mathcal{D}_\mu \psi\to\mathcal{D}_\mu' \psi'=&(\partial_\mu+X'_\mu) \left(e^{i\theta(x)}\psi\right)\nonumber\\
+   =&e^{i\theta(x)}\left[i\partial_\mu \theta(x)+\partial_\mu\right]\psi+X'_\mu \left(e^{i\theta(x)}\psi\right)\nonumber\\
+   =&e^{i\theta(x)}\left[i\partial_\mu \theta(x)+\partial_\mu+X'_\mu \right]\psi\,.
+\end{align}
+La condición de transformación del nuevo término $X_\mu$, para poder compensar el término que proviene de la derivada de la fase local,  $i\partial_\mu\theta(x)$, es justamente
+\begin{align}
+\label{eq:169qft}
+X_\mu\to  X'_\mu=X_\mu-i\partial_\mu\theta(x)\,.
+\end{align}
+Reemplazándolo en la ec.~\eqref{eq:165qft}, tenemos
+\begin{align}
+    \mathcal{D}_\mu \psi\to\left(\mathcal{D}_\mu \psi\right)'=\mathcal{D}_\mu' \psi'=&(\partial_\mu+X'_\mu) \left(e^{i\theta(x)}\psi\right)\nonumber\\
+=&e^{i\theta(x)}\left[i\partial_\mu \theta(x)+\partial_\mu+X_\mu-i\partial_\mu\theta(x) \right]\psi\nonumber\\
+=&e^{i\theta(x)}\left[\partial_\mu+X_\mu\right]\psi\nonumber\\
+=&e^{i\theta(x)}\left(\mathcal{D}_\mu\psi\right)\,.
+\end{align}
+Note que  $\mathcal{D}_\mu\psi$ transforma igual que el campo $\psi$, y debido a este es llamada la \emph{derivada covariante} de $\psi$.
+Similarmente
+\begin{align}
+    (\mathcal{D}_\mu \psi)^*\to{\left(\mathcal{D}_\mu \psi\right)'}^*=&(\partial_\mu+{X'_\mu}^*) \left(\psi^*e^{-i\theta(x)}\right)\nonumber\\
+=&\left[-i\partial_\mu \theta(x)+\partial_\mu+X_\mu^*+i\partial_\mu\theta(x) \right]\psi^*e^{-i\theta(x)}\nonumber\\
+=&\left[\partial_\mu+X_\mu^*\right]\psi^*e^{-i\theta(x)}\nonumber\\
+=&\left(\mathcal{D}_\mu\psi\right)^*e^{-i\theta(x)}\,.
+\end{align}
+
+Es conveniente redefinir $X_\mu$ en término de un campo  $A_\mu$ y unas constantes adecuadas
+\begin{align}
+  A_\mu\equiv\frac{1}{i q}X_\mu\,,
+\end{align}
+tal que la derivada covariante pueda escribirse de forma convenientes como
+\begin{align}
+\label{eq:170qft}
+  \mathcal{D}_\mu=\partial_\mu+i q A_\mu\,.
+\end{align}
+Las propiedades de transformación de  $A_\mu$ pueden ser obtenidas de las de  $X_\mu$ en la ec.~\eqref{eq:169qft}: 
+\begin{align}
+\label{eq:159qft}
+ i q A_\mu\to& i q A_\mu'=i q A_\mu-i \partial_\mu\theta(x)\nonumber\\
+  A_\mu\to&  A_\mu'= A_\mu-\frac{1}{q} \partial_\mu\theta(x)\,.
+\end{align}
+
+\subsection{Derivadas covariantes}
+\label{sec:dv}
+%\begin{frame}[fragile,allowframebreaks]
+Para obtener las propiedades de la transformación de la derivada covariante misma, podemos comenzar de la definición
+\begin{align}
+    \mathcal{D}_\mu \psi\to\left(\mathcal{D}_\mu \psi\right)'=&U(\theta)\left(\mathcal{D}_\mu \psi\right) \nonumber\\
+    \left[ \mathcal{D}_\mu \psi  \right]^{*}\to \left[ \left(\mathcal{D}_\mu \psi\right)'  \right]^{*}=&\left(\mathcal{D}_\mu \psi\right)^{*} U^{*}(\theta) \nonumber\\
+\,,
+\end{align}
+donde
+\begin{align}
+  U(\theta)=e^{iq\theta(x)}\,.
+\end{align}
+A $q$ hace las veces del generador del Grupo U(1), mientras que $\theta(x)$ es el parámetro local de transformación.
+Es importante enfatizar las propiedas de grupo:
+\begin{enumerate}
+\item El conjunto de transformaciones  $U(\theta_3)=U(\theta_1)U(\theta_2)$ también esta en el grupo.
+\item Contiene la identidad
+$U_{\text{identity}}=e^{0}$.
+\item Contiene  el inverso $U^{-1}(\theta)=U^{*}(\theta)=U(-\theta)$,
+\item Satisface la propiedad de asociatividad bajo la operación del grupo $\left( U(\theta_1)U(\theta_2) \right)U (\theta_3 )=U(\theta_1)\left( U(\theta_2)U(\theta_3) \right)$. 
+\end{enumerate}
+Como $U(\theta_1)U_2(\theta_2)=U(\theta_2)U_1(\theta_1)$, el grupo es Abeliano. Este grupo Abeliano de números complejos de módulo 1 es llamado el grupo $U(1)$, 
+y es isomorgo al grupo de rotaciones en dos dimensiones por un ángulo  $\theta$. 
+
+%\end{frame}
+
+Para un elemento $U$ de un grupo general, tenemos como definición de derivada covariante que la correspondiente derivada del campo transforme como el campo. En este caso general el campo transforma como
+\begin{align}
+  \psi\to\psi'=U\psi\,,
+\end{align}
+de modo que la derivada covariante se puede definir como
+\begin{align}
+     \mathcal{D}_\mu \psi\to\left(\mathcal{D}_\mu \psi\right)'=&U\left(\mathcal{D}_\mu \psi\right)\,.
+\end{align}
+
+Para encontrar las propiedades de la derivada covariante en este contexto general, necesitamos evaluar cual es la transformación de la derivada covariante como tal, es decir
+\begin{align}
+ \left(\mathcal{D}_\mu \psi\right)'=     \mathcal{D}'_\mu \psi'=&U\left(\mathcal{D}_\mu \psi\right)\nonumber\\
+    \mathcal{D}'_\mu \left( U\psi \right)=&U\left(\mathcal{D}_\mu \psi\right)\,.
+\end{align}
+
+Si mantenemos en mente que  $\mathcal{D}'_\mu U$ es todavía un operador, tenemos que
+\begin{align}
+    \mathcal{D}'_\mu U=&U\mathcal{D}_\mu \nonumber\\
+    \mathcal{D}'_\mu UU^{-1}=&U\mathcal{D}_\mu U^{-1} \nonumber\\
+    \mathcal{D}'_\mu =&U\mathcal{D}_\mu U^{-1} \,.
+\end{align}
+Es decir, para comprobar esta identidad, debemos aplicar el nuevo operador sobre algún campo. Para mantener la generalidad del resultado evitaremos usar la propiedad conmutativa del algún grupo particular
+\begin{align*}
+    \mathcal{D}'_\mu \psi =&U\mathcal{D}_\mu \left(U^{-1}\psi  \right) \nonumber\\
+    \partial_{\mu}\psi+iq A'_{\mu} \psi =&U \left(\partial_{\mu}+iq A_{\mu}  \right) \left(U^{-1}\psi  \right) \nonumber\\
+    \partial_{\mu}\psi+iq A'_{\mu} \psi =&U \left[U^{-1}\partial_{\mu}\psi+\left( \partial_{\mu}U^{-1} \right)\psi+iq  A_{\mu}U^{-1}\psi\right] \nonumber\\
+    \partial_{\mu}\psi+iq A'_{\mu} \psi =&\partial_{\mu}\psi+U\left( \partial_{\mu}U^{-1} \right)\psi+iq  U A_{\mu}U^{-1}\psi\,.
+\end{align*}
+Después de cancelar el término  $\partial_{\mu}\psi$ en ambos lados, y factorizando el campo  $\psi$, tenemos que
+\begin{align}
+      iq A'_{\mu} =&iq  U A_{\mu}U^{-1}+ U\left( \partial_{\mu}U^{-1} \right)\nonumber\\
+      A_{\mu}\to A'_{\mu} =&U A_{\mu}U^{-1}-\frac{i}{q}U\left( \partial_{\mu}U^{-1} \right)\,.
+\end{align}
+Esta expresión es completamente general y será usada posteriormente en el contexto de grupos más complicados. En el caso particular de un Grupo Abeliano  $U(1)$, tenemos simplemente que
+\begin{align}
+  A'_{\mu}=&A_{\mu}-\frac{i}{q} \operatorname{e}^{iq\theta(x)}\left( \partial_{\mu} \operatorname{e}^{-iq\theta(x)} \right)\nonumber\\
+=&A_{\mu}-\frac{i}{q}\left[ -iq\partial_{\mu}\theta(x) \right]\operatorname{e}^{iq\theta(x)} \operatorname{e}^{-iq\theta(x)}\nonumber\\
+ A_{\mu}\to  A'_{\mu}=&A_{\mu}-\partial_{\mu}\theta(x)\,.
+\end{align}
+
+Definimos la \emph{invarianza gauge local} como una forma arbitraria de escoger el factor de fase complejo de un campo cargado\footnote{como el electrón descrito por la ecuación usual de  Scrödinger.} en todos los puntos del espacio tiempo.
+
+%\begin{frame}
+De esta forma, podemos cambiar el Lagrangiano libre original por uno nuevo que sea invariante bajo transformaciones de fase locales, asegurándonos de considerar todos los término extra posibles, en particular los asociados al nuevo campo $A_{\mu}$:
+\begin{align}
+   \mathcal{L}(\psi,\psi^*,\partial_\mu\psi,\partial_\mu\psi^*,A_\nu,\partial_{\mu} A_{\nu} )
+=\frac{1}{2m}\sum_i\left(\mathcal{D}_i\psi\right)^*\mathcal{D}_i\psi-\frac{i}{2}
+  \left[\psi^*\mathcal{D}_0\psi-\left(\mathcal{D}_0\psi\right)^*\psi\right]+\mathcal{L}\left( A_{\nu},\partial_{\mu} A_{\nu} \right).
+\end{align}
+donde
+\begin{align}
+\label{eq:167qft}
+  A_\mu\to A'_\mu=A_\mu-\frac{1}{q}\partial_\mu\theta(x)\,.
+\end{align}
+%\end{frame}
+Esta es justamente la transformación que deja el campo electromagnético invariante, y como veremos, el Lagrangiano faltante $\mathcal{L}_{\text{EM}}=\mathcal{L}\left( A_{\nu},\partial_{\mu} A_{\nu} \right)$ dará lugar precisamente a las ecuaciones de Maxwell!. El nuevo Lagrangiano es ahora invariante bajo transformaciones de fase (y deberemos imponer que $\mathcal{L}_{\text{EM}}$ también lo sea). De hecho:
+\begin{align}
+  \mathcal{L}\to \mathcal{L}'=&
+\frac{1}{2m}\sum_i{\left(\mathcal{D}_i\psi\right)'}^*\left(\mathcal{D}_i\psi\right)'
+-\frac{i}{2}\left[{\psi'}^*\left(\mathcal{D}_0\psi\right)'-{\left(\mathcal{D}_0\psi\right)'}^*\psi'\right]+\mathcal{L}_{\text{EM}}'\nonumber\\
+=&
+\frac{1}{2m}\sum_i{\left(\mathcal{D}_i\psi\right)}^*e^{-i\theta(x)}e^{i\theta(x)}\left(\mathcal{D}_i\psi\right)\nonumber\\
+&-\frac{i}{2}\left[{\psi}^*e^{-i\theta(x)}e^{i\theta(x)}\left(\mathcal{D}_0\psi\right)+\mathcal{L}_{\text{EM}}
+-{\left(\mathcal{D}_0\psi\right)}^*e^{-i\theta(x)}e^{i\theta(x)}\psi\right]+\mathcal{L}_{\text{EM}}\,.\nonumber\\
+=&\mathcal{L}\,.
+\end{align}
+
+Para preservar la invarianza uno nota que es necesario contrarrestar la variación de  $\theta$ con $x$, $y$, $z$, y $t$ 
+introduciendo el campo electromagnético  $A_\mu$. De esta forma, una vez logremos especificar $\mathcal{L}_{\text{EM}}$, la interacción electromagnética será obtenida como resultado de imponer la invarianza de fase local bajo el grupo Abeliano  $U(1)$, correspondiente a las transformaciones de fase locales. Para implementar por completo el principio gauge local necesitamos especificar completamente el $\mathcal{L}_{\text{EM}}$ de una forma compatible con la transformación gauge del campo $A_{\mu}$ y las transformaciones de Lorentz, lo cual será desarrollado en el próximo capítulo. 
+
+Por ahora veremos las consecuencias del principio variacional de Noether para simetrías internas, expresado por la ec.~\eqref{eq:varprin}, sobre los campos $\psi$ y $\psi^{*}$.
+
+Mostraremos que en efecto, para esta densidad Lagrangiana particular los términos 
+\begin{align*}
+\sum_i \frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}\partial_{\mu}a_i+
+\sum_i  \frac{\partial\mathcal{L}}{\partial\phi_i}a_i =&0
+\end{align*}
+En efecto, usando $a_1=i \psi$ y $a_2=-i \psi^*$, tenemos
+\begin{align}
+\sum_i \frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}\partial_{\mu}a_i=&
+i   \frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\psi)} \partial_{\mu}\psi
+-i  \partial_{\mu}\psi^*   \frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\psi^*)}\nonumber\\
+=&\sum_j \frac{i}{2m} \left(\partial_j\psi^*-iq A_j\psi^* \right) \partial_{\mu}\psi
+-\sum_j\frac{i}{2m}\partial_i\psi^* \left(\partial_j\psi+iq A_j\psi \right)\nonumber\\
+&+i   \left(-\frac{i}{2}\psi^*\right)      \partial_0\psi 
+-i  \partial_0\psi^*     \left(\frac{i}{2}\psi\right) \nonumber\\
+=&\sum_j\frac{q}{2m} \left[\left(\partial_j\psi^* \right)\psi+\psi^*\partial_j\psi\right] A_j
++\frac{1}{2}\left[  \left(\partial_0\psi^*\right)\psi+\psi^*\partial_0\psi\right]
+\end{align}
+y
+\begin{align}
+\sum_i  \frac{\partial\mathcal{L}}{\partial\phi_i}a_i =&
+i \frac{\partial\mathcal{L}}{\partial\psi} \psi
+-i \psi^*\frac{\partial\mathcal{L}}{\partial\psi^*}\nonumber\\
+=&\sum_j\frac{i}{2m} \left(\partial_j\psi^*-iq A_j\psi^* \right)\left(iqA_j\right)\psi
+-\sum_j\frac{i}{2m}\psi^* \left(-iqA_j\right) \left(\partial_j\psi+iq A_j\psi \right)\nonumber\\
+&+i  \frac{i}{2}              \left(\partial_0\psi^*-    iqA_0\psi^*\right)        \psi
+-i\left(\frac{-i}{2}\right)\psi^*\left(\partial_0\psi+iqA_0\right) \nonumber\\
+=&-\sum_j\frac{q}{2m} \left[\left(\partial_j\psi^* \right)\psi+\psi^*\partial_j\psi\right] A_j
+-\frac{1}{2}\left[  \left(\partial_0\psi^*\right)\psi+\psi^*\partial_0\psi\right]
+\end{align}
+Por lo tanto, la corriente conservada corresponde para los campos $\psi$\footnote{El témrino con $b_3^{\mu}$ se puede anular usando condiciones de frontera para el campo $\phi_3\to A_{\mu}$.}
+y $\psi^*$  es, de la ec.~\eqref{eq:tnoeth2} 
+\begin{align}
+j^\mu=&\frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}a_i\nonumber\\
+ =&\begin{cases}
+q \psi^{*}\psi & \mu=0\\
+-\frac{i}{2m} \left[ \psi^{*}\mathcal{D}^i\psi-\left( \mathcal{D}^i\psi^{*} \right)\psi \right] & \mu=i
+  \end{cases}
+\end{align}
+
+
+\section{Ecuación de Scrödinger en presencia de un campo electromagnético}
+
+La expansión del Lagrangiano en términos de los campos $\psi$, $\psi^*$, y $A_\mu$ es %add LEM
+\begin{align}
+\label{eq:178qft}
+   \mathcal{L}
+=&\frac{1}{2m}\sum_i\left(\partial_i\psi+i q A_i\psi\right)^*\left(\partial_i\psi+i q A_i\psi\right)-\frac{i}{2}
+  \left[\psi^*\left(\partial_0\psi+i q A_0\psi\right)-\left(\partial_0\psi+i q A_0\psi\right)^*\psi\right]+\mathcal{L}_{\text{EM}} 
+\nonumber\\
+=&\frac{1}{2m}\sum_i\left(\partial_i\psi^*-i q A_i\psi^*\right)\left(\partial_i\psi+i q A_i\psi\right)-\frac{i}{2}
+  \left[\psi^*\left(\partial_0\psi+i q A_0\psi\right)-\left(\partial_0\psi^*-i q A_0\psi^*\right)\psi\right]+\mathcal{L}_{\text{EM}}
+\nonumber\\
+ =&\frac{1}{2m}\sum_i\left(\partial_i\psi^*\partial_i\psi-i q \psi^*A_i\partial_i\psi+i q \partial_i\psi^*A_i\psi+q^2A_i A_i \psi^*\psi\right)
++\mathcal{L}_{\text{EM}}
+\nonumber\\
+ &-\frac{i}{2}
+  \left[\psi^*\partial_0\psi+i q \psi^*A_0\psi-(\partial_0\psi^*)\psi+i q A_0\psi^*\psi\right]\nonumber\\
+ =&\frac{1}{2m}\sum_i\left(\partial_i\psi^*\partial_i\psi-i q \psi^*A_i\partial_i\psi+i q \partial_i\psi^*A_i\psi+q^2A_i A_i \psi^*\psi\right)
++\mathcal{L}_{\text{EM}}
+\nonumber\\
+ &-\frac{i}{2}
+  \left[\psi^*\partial_0\psi-(\partial_0\psi^*)\psi+2 i q \psi^*A_0\psi\right]+\mathcal{L}_{\text{EM}}\,.
+ \end{align}
+
+Entonces, tenemos
+\begin{align}
+  \mathcal{L}=&\frac{1}{2m}\sum_i\partial_i\psi^*\partial_i\psi
+-\frac{i}{2}
+  \left[\psi^*\partial_0\psi-(\partial_0\psi^*)\psi\right] \nonumber\\
+&+\frac{1}{2m}\sum_i\left[ -i q \psi^*A_i\partial_i\psi+i q \left(\partial_i\psi^*\right) A^i\psi+q^2A_i A_i \psi^*\psi\right]\nonumber\\
+ &+ q \psi^*A_0\psi+\mathcal{L}_{\text{EM}}\,.
+ \end{align}
+De aquí podemos obtener las ecuaciones de Euler-Lagrange para cada campo.
 
 
 
-\section{Ecuaci\'on de Klein-Gordon}
-\label{sec:ecuacion-de-klein}
-%to_en: From the scalar component we obtain from eq.~\eqref{eq:27}, with the Lagrangian for the Klein-Gordon equation for a real scalar field $\phi=A^0$
+%TRADUCIR
+In the following developments we will use heavily  the covariant and contravariant form of the four-vector $A_{\mu}$ defined in eqs:\eqref{eq:covariante}, \eqref{eq:contravariante}, such that the tridimensional vector is defined in term od the spacial covariant components
+\begin{align*}
+  \mathbf{A}=\left( A^1,A^2,A^3\right)=-\left( A_1,A_2,A_3\right)\,.
+\end{align*}
+
+\subsection{Euler-Lagrange equation for $\psi^*$}
+In particular for $\psi^*$ we have
+\begin{align}
+  \partial_\mu\left[\frac{\partial\mathcal{L}}{\partial(\partial_\mu\psi^*)}\right]-\frac{\partial\mathcal{L}}{\partial\psi^*}=&0\nonumber\\
+  \partial_0\left[\frac{\partial\mathcal{L}}{\partial(\partial_0\psi^*)}\right]+\partial_i\left[\frac{\partial\mathcal{L}}{\partial(\partial_i\psi^*)}\right]-\frac{\partial\mathcal{L}}{\partial\psi^*}=&0\nonumber\\
+  \frac{i}{2}\partial_0\psi-\frac{1}{2m}\partial_i\left[\partial^i\psi+i q A^i\psi\right]
+-\left[-\frac{1}{2m}\left(-i q A_i\partial^i\psi+q^2A_iA^i\psi\right)
+-\frac{i}{2}\left(\partial_0\psi+2 i q A_0\psi\right)\right]=&0\nonumber\\
+  i\partial_0\psi-q A_0\psi-\frac{1}{2m}\left[\partial_i\left(\partial^i\psi+i q A^i\psi\right)
++i q A_i\left(\partial^i\psi+i q A^i\psi\right)\right]
+=&0\nonumber\\
+  i(\partial_0+i q A_0)\psi-\frac{1}{2m}(\partial_i+i q A_i)(\partial^i\psi+i q A^i\psi)
+=&0\nonumber\\
+   i\mathcal{D}_0\psi
+  +\frac{1}{2m}\sum_i\mathcal{D}_i\mathcal{D}_i\psi=&0\,,
+\end{align}
+
+If we define
+\begin{align}
+  \boldsymbol{\mathcal{D}}\equiv\boldsymbol{\nabla}-i q \mathbf{A}\,.
+\end{align}
+we have in components:
+\begin{align}
+    \boldsymbol{\mathcal{D}}_i=\partial_i-i q A^i\nonumber\\
+    \boldsymbol{\mathcal{D}}_i=\partial_i+i q A_i\,.
+\end{align}
+
+Then we have the new wave equation:
+\begin{align}
+  i\mathcal{D}_0\psi=&-\frac{1}{2m}\boldsymbol{\mathcal{D}}\cdot\boldsymbol{\mathcal{D}}\psi\nonumber\\
+i\mathcal{D}_0\psi=&-\frac{1}{2m}\boldsymbol{\mathcal{D}}^2\psi\,,
+\end{align}
+
+que corresponde a la ecuación de Scrödinger con la derivada normal reemplazada por la derivada covariante.
+
+
+
+Expandiendo esta ecuación tenemos 
+\begin{align}
+\label{eq:175qft}
+   i\left(\frac{\partial}{\partial t}+iqA_0\right)\psi
+&=-\frac{1}{2m}\sum_i(\partial_i+i q A_i)^2\psi\nonumber\\
+   \left(i\frac{\partial}{\partial t}-qA_0\right)\psi
+ &=-\frac{1}{2m}\sum_i(\partial_i-i q A^i)^2\psi\nonumber\\
+   \left(i\frac{\partial}{\partial t}-q\phi\right)\psi
+&=-\frac{1}{2m}(\boldsymbol{\nabla}-i q \mathbf{A})^2\psi\nonumber\\
+   \left(\widehat{H}-q\phi\right)\psi
+&=-\frac{-i^2}{2m}(\boldsymbol{\nabla}-i q \mathbf{A})^2\psi\nonumber\\
+&=\frac{1}{2m}(i\boldsymbol{\nabla}+ q \mathbf{A})^2\psi\nonumber\\
+&=\frac{1}{2m}(-i\boldsymbol{\nabla}- q \mathbf{A})^2\psi\nonumber\\
+&=\frac{1}{2m}(\widehat{\mathbf{p}}- q \mathbf{A})^2\psi\,.
+\end{align}
+In this way, the Scrödinger equation in presence of the electromagnetic field, can be obtained from the original Scrödinger equation but with the \emph{minimum substitution}:
+\begin{align}
+  \widehat{H}\to& \widehat{H}-q\phi & \widehat{\mathbf{p}}\to&\widehat{\mathbf{p}}-q\mathbf{A}\,.
+\end{align}
+
+
+
+De la ecuación (\ref{eq:175qft}) podemos obtener la ecuación de Schödinger en presencia de un campo electromagnético
+\begin{align}
+\label{eq:176qft}
+ i\frac{\partial}{\partial t}\psi&=\left[\frac{1}{2m}(-i\mathbf{\nabla}-q\mathbf{A})^2+qA_0\right]\psi\,.
+\end{align}
+ Para que la mecánica cuántica sea consistente con las ecuaciones de Maxwell es necesario que las transformaciones gauge (\ref{eq:159qft}) de los potenciales de Maxwell estén acompañados por una transformación de la función de onda, $\psi\to\psi'$, donde $\psi'$ satisface la ecuación
+\begin{align}
+  \label{eq:160qft}
+   i{\mathcal{D}'}^0\psi'&=-\frac{1}{2m}{\boldsymbol{\mathcal{D}}'}^2\psi'\nonumber\\
+ i\frac{\partial}{\partial t}\psi'&=\left[\frac{1}{2m}(-i\mathbf{\nabla}-q\mathbf{A}')^2+q{A'}_0\right]\psi'\,.
+\end{align}
+Como la forma de la ecuación (\ref{eq:160qft}) es exactamente la misma que la forma de~\eqref{eq:176qft} entonces ambas describen la misma física. Se dice que  la ec.~\eqref{eq:176qft} es covariante gauge, lo que significa que mantiene la misma forma bajo una transformación gauge. 
+
+\begin{itemize}
+\item \textbf{Ejemplo:}\\ 
+Demuestre que la ec.~\eqref{eq:160qft} es covariante:
+
+
+
+Como 
+\begin{align}
+  \psi\to \psi'=e^{i\theta(x)}\psi
+\end{align}
+Entonces
+\begin{align}
+  \boldsymbol{\mathcal{D}}'\psi'&=\left[(\boldsymbol{\nabla}-iq\mathbf{A})-i\boldsymbol{\nabla}\theta\right]e^{i\theta(x)}\psi\nonumber\\
+  &=i(\boldsymbol{\nabla}\theta)e^{i\theta(x)}\psi+e^{i\theta(x)}\boldsymbol{\nabla}\psi-iq\mathbf{A}e^{i\theta(x)}\psi-i(\boldsymbol{\nabla}\theta) e^{i\theta(x)}\psi\nonumber\\
+  &=e^{i\theta(x)}(\boldsymbol{\nabla}-iq\mathbf{A})\psi\nonumber\\
+  &=e^{i\theta(x)}(\boldsymbol{\mathcal{D}}\psi)
+\end{align}
+y
+\begin{align}
+  {\boldsymbol{\mathcal{D}}'}^2\psi'&=\boldsymbol{\mathcal{D}}'(\boldsymbol{\mathcal{D}}'\psi')\nonumber\\
+  &=\left[(\boldsymbol{\nabla}-iq\mathbf{A})-i\boldsymbol{\nabla}\theta\right]e^{i\theta(x)}(\boldsymbol{\mathcal{D}}\psi)\nonumber\\
+  &=i(\boldsymbol{\nabla}\theta)e^{i\theta(x)}(\boldsymbol{\mathcal{D}}\psi)+e^{i\theta(x)}\boldsymbol{\nabla}(\boldsymbol{\mathcal{D}}\psi)
+  -iq\mathbf{A}e^{i\theta(x)}(\boldsymbol{\mathcal{D}}\psi)-i\boldsymbol{\nabla}\theta e^{i\theta(x)}(\boldsymbol{\mathcal{D}}\psi)\nonumber\\
+  &=e^{i\theta(x)}(\boldsymbol{\nabla}-iq\mathbf{A})(\boldsymbol{\mathcal{D}}\psi)\nonumber\\
+  &=e^{i\theta(x)}(\boldsymbol{\mathcal{D}}^2\psi)
+\end{align}
+
+De la misma manera
+\begin{equation}
+  {\mathcal{D}'}^0\psi'=e^{i\theta(x)}(\mathcal{D}^0\psi)
+\end{equation}
+De modo que
+\begin{equation}
+  \mathcal{D}^\mu\psi\to {\mathcal{D}'}^\mu\psi'=e^{i\theta(x)}(\mathcal{D}^\mu\psi)
+\end{equation}
+y la derivada covariante del campo transforma como el campo. Tenemos entonces que 
+\begin{align}
+  \label{eq:225qft}
+     i{\mathcal{D}'}^0\psi'&=-\frac{1}{2m}{\boldsymbol{\mathcal{D}}'}^2\psi'\nonumber\\
+     ie^{i\theta(x)}{\mathcal{D}}^0\psi&=-\frac{1}{2m}e^{i\theta(x)}{\boldsymbol{\mathcal{D}}}^2\psi\nonumber\\
+     i{\mathcal{D}}^0\psi&=-\frac{1}{2m}{\boldsymbol{\mathcal{D}}}^2\psi
+\end{align}
+\end{itemize}
+
+%\begin{frame}
+  En resumen, para 
+\begin{equation}
+  \mathcal{D}^\mu=\partial^\mu+iqA^\mu
+\end{equation}
+y reemplazando $\theta\to q\theta$ tenemos
+\begin{align}
+\label{eq:tfgl}
+   A^\mu&\to{A^\mu}'=A^\mu-\partial^\mu\theta(x)\\
+   \psi&\to \psi'=e^{iq\theta(x)}\psi\nonumber\\
+  \mathcal{D}^\mu\psi&\to {\mathcal{D}'}^\mu\psi'=e^{iq\theta(x)}(\mathcal{D}^\mu\psi)\,.
+\end{align}
+En esta convención $q$ corresponde al \emph{generador} de la transformación y $\theta$ al parámetro de la transformación.
+%\end{frame}
+%\left(\right)
+
+
+\subsection{Corrientes conservadas}
+\label{ref:cc}
+%\begin{frame}[fragile,allowframebreaks]
+Aplicamos el segundo teorema de Noether con (con el reemplazo $\theta\to q\theta$
+\begin{align}
+\label{eq:dpa}
+  \phi_{1}:& \psi\,,\qquad a_{1}=iq \psi \,,\qquad b_1=0\nonumber\\
+  \phi_{2}:& \psi^{*}\,,\qquad a_{2}=-iq\psi^{*}\,,\qquad b_2=0 \nonumber\\
+  \phi_{3}:& A^{\mu}\,,\qquad a_{3}=0\,,\qquad b_3=-\delta^{\mu}_{\nu}\,,
+\end{align}
+para los campos $\psi$ y $\psi^{*}$, asumiendo que el campo $A^{\mu}$ satisface las ecuaciones de Euler-Lagrange, tenemos que
+\begin{align}
+  \partial_{\mu}j^{\mu}=0\,,
+\end{align}
+donde
+\begin{align}
+  j^{\mu}=
+  \begin{cases}
+q \psi^{*}\psi & \mu=0\\
+-\frac{i}{2m} \left[ \psi^{*}\mathcal{D}^i\psi-\left( \mathcal{D}^i\psi^{*} \right)\psi \right] & \mu=i
+  \end{cases}
+\end{align}
+
+Podemos interpretar la corriente conservada como la asociada a la conservación de la carga eléctrica, tal que
+\begin{align}
+  \left\langle \widehat{Q} \right\rangle =\int_{V}\operatorname{d}^3x\, \psi^{*} \widehat{Q} \psi=q\int_{V}\operatorname{d}^3x\, \psi^{*} \psi=q\,,
+\end{align}
+donde
+\begin{align}
+  \widehat{Q} \psi=q\psi\,.
+\end{align}
+
+
+Es importante hacer notar que para  $T^0_0$, y $T^0_i$ deberíamos obtener
+\begin{align}
+  \widehat{H}=& i\frac{\partial}{\partial t}-q\phi & \widehat{\mathbf{p}}=&-i\boldsymbol{\nabla}-q\mathbf{A}\,.
+\end{align}
+
+%\end{frame}
+
+
+The approach to change the Action for a new one invariant under local phase  transformations, is that the electron cannot be longer considered as an isolated \emph{naked} particle. The electron must be always surrounded by some cloud of virtual particles associated with the electromagnetic field in order to guarantee the conservation of the energy and momentum of the system. In general the wave function of the electron can be represented as the exponential of $iEt$ and $i \mathbf{p}\cdot \mathbf{x}$, so that a local phase transformation will change the energy $E$ and the momentum $\mathbf{p}$ of the electron. This changes must be compensated with the corresponding changes in $A_{\mu}$.
+
+Moreover, to be consistent, we could start with the free Lagrangian before the change of the normal derivative by the covariant derivative. The interactions are not longer imposed by hand but a consequence of the improved Action. 
+
+%\begin{frame}
+Combinando todos los resultados, podemos escribir el Lagrangiano final como %DEBUG: Check signs
+\begin{align}
+  \mathcal{L}=&\frac{1}{2m}\sum_i\partial_i\psi^*\partial_i\psi
+-\frac{i}{2}
+  \left[\psi^*\partial_0\psi-(\partial_0\psi^*)\psi\right] \nonumber\\
+&+j^\nu A_\nu%\nonumber\\
+% &-\frac{1}{4}F_{\mu\nu}F^{\mu\nu}\,.\,.
+\end{align}
+
+% Las ecuaciones de movimiento para el campo $A_\nu$, se obtienen del Lagrangiano
+% \begin{align}
+% \mathcal{L}_{A_\nu} = -\frac{1}{4}F_{\mu\nu}F^{\mu\nu} - j^\nu A_\nu\,,
+% \end{align}
+%\end{frame}
+como se mostrará en el próximo capítulo.
+
+\subsection{Interpretación física}
+Al ser una función compleja, la función de onda del electrón puede escribirse en coordenadas polares como
+\begin{align}
+  \psi=|\psi|e^{i\theta(x)}
+\end{align}
+donde $\theta(x)$ suele ser una expansión en ondas planas en términos de frecuencias angular $\omega$ y números de onda $\mathbf{k}$, que interpretadas en el contexto de la mecánica cuántica corresponden con los factores adecuados a la energía $E$ y a la cantidad de movimiento $\mathbf{p}$ del electrón. Por lo tanto una transformación gauge local sobre el electrón
+\begin{align}
+  \psi\to \psi'=\psi e^{i\alpha(x)}=|\psi|e^{i[\theta(x)+\alpha(x)]}\,,
+\end{align}
+equivale a un cambio en la energía y la cantidad de movimiento del electrón. Por consiguiente el papel de los cuatros campos $A_{\mu}(x)$ es muy importante porque están permanente compensando los cambios en la energía y las tres cantidades de movimiento del electrón de manera que la Acción invariante gauge local, con la densidad Lagrangiana modificada con derivadas covariantes, pueda conservar la energía y la cantidad de movimiento en cualquier punto del espacio tiempo. En la práctica esto implica que el electrón desnudo no es un observable físico. Lo que llamamos electrón es realmente al combinación del electrón como tal y su propio campo electromagnético que garantiza la conservación apropiada de la energía y cantidad de movimiento. 
+
+
+
+%\appendix
+% \section{Principio de M\'\i nima Acci\'on para $\mathcal{L}$}
+% \label{sec:principio-de-minima-call}
+% Consideremos primero el problema de hallar la condiciones extremal sobre el funcional de acción
+
+
+% Definamos
+% \begin{equation}
+%   \label{eq:dmu}
+%   \partial_\mu=\frac{\partial}{\partial x^\mu},
+%   \end{equation}
+% En tres dimensiones, la acci\'on de la ec.~\eqref{eq:Scall}, queda
+% \begin{equation}
+%   \label{eq:Scall3d}
+%   S[\phi,\partial_\mu\phi]=\int_{R}d^4x\mathcal{L}(\phi,\partial_\mu\phi)
+% \end{equation}
+% donde $d^4x=d t\,d x\, d y\,d z$.  El principio de Hamilton para el campo $\phi$ requiere que la acción sea extremal (es decir que $\delta S=0$, donde
+% \begin{align}
+%   \delta S=S'-S\,,
+% \end{align}
+% es la variación funcional de primer orden en $S$ para variaciones arbitrarias del campo $\phi$ que se hagan cero en la frontera.
+
+% Considere una variaci\'on s\'olo de
+% los campos, tal que ($x=x^\mu)$
+% \begin{equation}
+%   \label{eq:deltaphi}
+%   \delta\phi(x)=\phi'(x)-\phi(x)
+% \end{equation}
+% Con la condición adicional de que la variación del campo sea cero en la frontera, como ocurre con el campo electromagnéticos en el infinito.
+
+% De otro lado, con $\delta x=x'-x$, la expansi\'on de Taylor para $f(x+\delta x)$ es
+% \begin{equation}
+%   f(x+\delta x)=f(x)+\frac{\partial f}{\partial x}\delta x+\cdots 
+% \end{equation}
+% Para $\mathcal{L}$, tenemos de la ec.~\eqref{eq:deltaphi}
+% \begin{align}
+%   \mathcal{L}(\phi',\partial_\mu\phi')&=\mathcal{L}(\phi+\delta\phi,\partial_\mu\phi+\partial_\mu(\delta\phi))\nonumber\\
+%   &=\mathcal{L}+\frac{\partial\mathcal{L}}{\partial\phi}\delta\phi+\frac{\partial\mathcal{L}}{\partial(\partial_\mu\phi)}\partial_\mu(\delta\phi)
+% \end{align}
+% Entonces, de imponer que $\delta S=0$, tenemos que para una transformación interna
+% \begin{align}
+%   \delta S&=S'-S=\int_{R}d^4x\,\mathcal{L}(\phi',\partial_\mu\phi')-\int_{R}d^4x\,\mathcal{L}(\phi,\partial_\mu\phi)\nonumber\\
+% &=\int_{R}d^4x\,
+% \left[
+% \frac{\partial\mathcal{L}}{\partial\phi}\delta\phi+\frac{\partial\mathcal{L}}{\partial(\partial_\mu\phi)}\partial_\mu(\delta\phi)
+% \right]\nonumber\\
+%  &=\int_{R}d^4x\,
+%   \left\{ 
+%     \frac{\partial\mathcal{L}}{\partial\phi}-\left[\partial_\mu\left(
+%       \frac{\partial\mathcal{L}}{\partial(\partial_\mu\phi)}
+%     \right)\right]
+%   \right\}\delta\phi+\int_{R}d^4x\,
+%     \partial_\mu\left[
+%       \frac{\partial\mathcal{L}}{\partial(\partial_\mu\phi)}\delta\phi
+%     \right]\nonumber\\
+% \label{eq:1}
+% \delta S&=\int_{R}d^4x\,
+%   \left\{ 
+%     \frac{\partial\mathcal{L}}{\partial\phi}-    
+%     \left[\partial_\mu\left(
+%       \frac{\partial\mathcal{L}}{\partial(\partial_\mu\phi)}
+%     \right)\right]
+%   \right\}\delta\phi+\int_{\sigma}\left[
+%       \frac{\partial\mathcal{L}}{\partial(\partial_\mu\phi)}\delta\phi
+%     \right]\,d\sigma_\mu=0.
+% \end{align}
+% Donde hemos aplicado el Teorema de Gauss
+% \begin{equation}
+% \int_V\boldsymbol{\nabla}\cdot\mathbf{A}\,d^3x=
+%  \int_S\mathbf{A}\cdot d\mathbf{S}\,
+% \end{equation}
+% generalizado a cuatro dimensiones. De la condición de frontera, tenemos que la variaci\'on de $\delta\phi$ es cero sobre la hipersuperficie $\sigma$, de modo que
+% \begin{equation}
+%   \int_{R}d^4x\,
+%   \left\{ 
+%     \frac{\partial\mathcal{L}}{\partial\phi}-
+%    \left[\partial_\mu\left(
+%       \frac{\partial\mathcal{L}}{\partial(\partial_\mu\phi)}
+%     \right)\right]
+%   \right\}\delta\phi=0.
+% \end{equation}
+% Como $\delta\phi$ es cualquier posible variaci\'on al \emph{interior} de la  hipersuperficie, el integrando debe anularse y resultan las ecuaciones de Euler-Lagrange:
+% \begin{equation}
+% \label{eq:eelcallfmuold}
+%  \partial_\mu
+%   \left[
+%     \frac{\partial\mathcal{L}}{\partial
+%       (\partial_\mu\phi)}
+%   \right]-\frac{\partial\mathcal{L}}{\partial\phi}=0.
+% \end{equation}
+% La densidad Lagrangiana
+% \begin{align}
+%   \mathcal{L}'=\mathcal{L}+\partial_\mu(\eta^{\mu}(x))
+% \end{align}
+% donde $\eta^{\mu}(x)$ es cualquier función de los campos de la densidad Lagrangiana original que también sea cero sobre la frontera, da lugar a la Acci\'on
+% \begin{align}
+%   S'=\int_{R}d^4x\,\mathcal{L}'=&\int_{R}d^4x\,\mathcal{L}+\int_R d^4x\,\partial_\mu\eta^{\mu}\nonumber\\
+%   =&\int_{R}d^4x\,\mathcal{L}+\int_\sigma \eta^{\mu} d\sigma_{\mu}\nonumber\\
+%   =&S\,,
+% \end{align}
+% para una hipersuperficie suficientemente grande. De modo que dos densidades lagrangianas que difieran solo en derivadas totales dan lugar a la misma Acci\'on.
+
+% Usando el principio de m\'\i nima acci\'on en t\'erminos del campo $\phi$, tenemos que para la densidad Lagrangiana~\eqref{eq:call2}
+% \begin{align}
+%   \mathcal{L}=&\frac{1}{2}  \left[
+%   \frac{1}{v^2}\left(\frac{\partial\phi}{\partial t}\right)^2-\left(\frac{\partial\phi}{\partial z}\right)^2
+% \right],
+% \end{align}
+% las ecuaciones de Euler-Lagrange~\eqref{eq:eelcallfmu}
+% \begin{align}
+%   \partial_0\left[\frac{\partial\mathcal{L}}{\partial(\partial_0\phi)}\right]+
+% \partial_3\left[\frac{\partial\mathcal{L}}{\partial(\partial_3\phi)}\right]
+% -\frac{\partial\mathcal{L}}{\partial\phi}=&0\nonumber\\
+%   \frac{\partial}{\partial t}\left[\frac{\partial\mathcal{L}}{\partial(\partial\phi/\partial t)}\right]+
+% \frac{\partial}{\partial z}\left[\frac{\partial\mathcal{L}}{\partial(\partial\phi/\partial z)}\right]
+% =&0\nonumber\\
+%  \frac{1}{v^2}\frac{\partial}{\partial t}\left[\frac{\partial\phi}{\partial t}\right]
+% -\frac{\partial}{\partial z}\left[\frac{\partial\phi}{\partial z}\right]=&0\nonumber\\
+%  \frac{1}{v^2}\frac{\partial^2\phi}{\partial t^2}-\frac{\partial^2\phi}{\partial z^2}=&0\,,
+% \end{align}
+% que corresponde a la ec.~\eqref{eq:econda1}.
+
+% Generalizando a tres dimensiones vemos que la ecuaci\'on para una onda propagandose a una velocidad $v$, eq.~\eqref{eq:econda3},  
+% \begin{equation}
+%      \frac{1}{v^2}\frac{\partial^2\phi}{\partial t^2}-\nabla^2\phi=0\,,
+% \end{equation}
+% proviene de una densidad Lagrangiana (hasta derivadas totales)
+% \begin{align}
+%     \label{eq:ls3d}
+%     \mathcal{L}=&\frac{1}{2}\left[
+%   \left(
+% \frac{1}{v^2}\frac{\partial\phi}{\partial t}
+%   \right)^2-\boldsymbol{\nabla}\phi\cdot\boldsymbol{\nabla}\phi \right]\nonumber\\
+%     =&\frac{1}{2}\left[
+%       \frac{1}{v^2}{\partial_0\phi}\,{\partial_0\phi}-\sum_i{\partial_i\phi}\,{\partial_i\phi}
+%    \right]\,.
+% \end{align}
+% Definiendo $x^0=vt$, podemos escribir la densidad Lagrangiana como
+% \begin{align}
+%    \mathcal{L}=&\frac{1}{2}\sum_{\mu,\nu}g_{\mu\nu}\frac{\partial\phi}{\partial x^{\mu}}\frac{\partial\phi}{\partial x^{\nu}}
+% \end{align}
+% donde
+% \begin{align}
+%   g_{\mu\nu}=
+%   \begin{cases}
+%     1, & \mu=0,\nu=0\\
+%     -1, & \mu=i,\nu=i\\
+%     0, & \mu\ne\nu\\
+%   \end{cases}
+% \end{align}
+% Que corresponde a un nuevo producto escalar entre $\partial\phi/\partial x^{\mu}$ y $\partial\phi/\partial x^{\nu}$ con la métrica $g_{\mu\nu}$. En general si tenemos dos cuadrivectores \emph{covariantes} (en términos de superíndices)
+% \begin{align}
+% \label{eq:covariante}
+%   A^{\mu}\to &\left(A^0,A^1,A^2,A^3  \right) & B^{\mu}\to &\left(B^0,B^1,B^2,B^3  \right)
+% \end{align}
+% su producto escalar bajo la métrica $g^{\mu\nu}$ es
+% \begin{align}
+%   A\cdot B\equiv &A^0 B^0-A^1B^1-A^2B^2-A^3B^3 \nonumber\\
+%  =&\sum_{\mu\nu} g_{\mu\nu}A^{\mu} B^{\nu}\,.
+% \end{align}
+% Si definimos el cuadrivector \emph{contravariante} (en términos de subíndices)
+% \begin{align}
+%   B_{\mu}\to \left( B_0,B_1,B_2,B_3 \right)\,,
+% \end{align}
+% como
+% \begin{align}
+%   \label{eq:contravariante}
+%   B_{\mu}=&\sum_{\nu} g_{\mu\nu}B^{\nu}\nonumber\\
+%   B_{\mu}\to& \left(B^0,-B^1,-B^2,-B^3\right)\,,
+% \end{align}
+% entonces, podemos escribir el nuevo producto escalar como
+% \begin{align}
+%   A\cdot B=&\sum_{\mu} A^{\mu}\left( \sum_{\nu} g_{\mu\nu} B^{\nu} \right)\nonumber\\
+% \sum_{\mu} A^{\mu}B_{\mu}\,.
+% \end{align}
+% El producto definido anteriormente es invariante de Lorentz si $v$ es independiente del sistema de referencia inercial.
+
 \chapter{Dirac Action}
 \label{cha:dirac-action}
 
@@ -623,9 +1518,949 @@ and
 \end{align}
 
 
+\section{Lagrangiano para el campo vectorial}
+\begin{frame}[fragile,allowframebreaks]
+Ya estamos en capacidad de responder la siguiente pregunta: ¿Cual es el Lagrangiano más general posible para el campo de cuatro componentes $A^{\mu}(x)$ compatible con la invarianza de Lorentz 
+
+Las correspondientes transformaciones son
+
+\begin{align}
+  A^\mu(x)\to {A'}^\mu(x')={\Lambda^\mu}_\nu A^\nu(\Lambda^{-1}x)\,.
+\end{align}
+
+Además, tenemos la ec.\eqref{eq:aphicov}:
+\begin{align}
+\label{eq:172qft}
+  A^\mu\to{A'}^\mu=A^\mu-\partial^\mu\chi(x)\;.
+\end{align}
+
+
+
+
+Definiendo
+\begin{align*}
+  F^{\mu\nu}&=\partial^\mu A^\nu-\partial^\nu A^\mu\\
+  G^{\mu\nu}&=\partial^\mu A^\nu+\partial^\nu A^\mu\\
+\end{align*}
+El Lagrangiano que da lugar a una Acción invariante de Lorentz para el cuadrivector $A^\mu$
+es, hasta derivadas totales y potencias en los campos de hasta dimensión 4:
+\begin{align}
+  \mathcal{L}=&-\frac{1}{4}F^{\mu\nu}F_{\mu\nu}-\frac{1}{4}G^{\mu\nu}G_{\mu\nu}-\frac{1}{2}F^{\mu\nu}G_{\mu\nu}\nonumber\\
+&-J^\mu A_\mu+
+ \frac{1}{2}m^2A^\mu A_\mu +\lambda_1\partial_\nu A^\nu(x) A_\mu(x) A^\mu(x)+\lambda_2 A^\mu A_\mu A^\nu A_\nu\nonumber\\
+&+\lambda_3 F^{\mu\nu}(x)A_\mu(x) A_\nu(x)+\lambda_4G^{\mu\nu}(x)A_\mu(x) A_\nu+\cdots
+  \label{eq:lagAmu}
+\end{align}
+\end{frame}
+
+\begin{itemize}
+\item \textbf{Ejercicio:} Show that terms like $\partial^\mu A^\nu(x)\partial_\mu A_\nu(x)$, and hence $F^{\mu\nu}F_{\mu\nu}$, transforms as
+  \begin{align}
+    \partial^\mu A^\nu\left(\Lambda^{-1}x\right)\partial_\mu A_\nu\left(\Lambda^{-1}x\right)
+  \end{align}
+Hint: use the Lorentz transformation properties of $\partial_\mu$ in eq.~\eqref{dmulrtran}.
+\end{itemize}
+In the case of $J^\mu A_\mu$:
+\begin{align}
+  J^\mu(x)A_\mu(x)\to g_{\mu\nu}{J'}^\mu(x){A'}^\nu(x)=& g_{\mu\nu}{\Lambda^\mu}_\rho J^\rho\left(\Lambda^{-1}x\right){\Lambda^\nu}_\sigma A^\sigma\left(\Lambda^{-1}x\right)\nonumber\\
+=& {\Lambda^\mu}_\rho g_{\mu\nu}{\Lambda^\nu}_\sigma J^\rho\left(\Lambda^{-1}x\right)A^\sigma\left(\Lambda^{-1}x\right)\nonumber\\
+=& g_{\rho\sigma}J^\rho\left(\Lambda^{-1}x\right)A^\sigma\left(\Lambda^{-1}x\right)\,,
+\end{align}
+in the case $\partial_\nu A^\nu(x) A_\mu(x) A^\mu(x)$:
+\begin{align}
+   \partial_\nu A^\nu(x) A_\mu(x) A^\mu(x)\to {\partial'}_\nu{A'}^\nu(x') {A'}_\mu(x') {A'}^\mu(x')=& {\left(\Lambda^{-1}\right)^\sigma}_\nu{\Lambda^\nu}_\rho\partial_\sigma A^\rho\left(\Lambda^{-1}x\right) A_\mu\left(\Lambda^{-1}x\right) A^\mu\left(\Lambda^{-1}x\right)\nonumber\\
+=& \delta^\sigma_\rho\partial_\sigma A^\rho\left(\Lambda^{-1}x\right) A_\mu\left(\Lambda^{-1}x\right) A^\mu\left(\Lambda^{-1}x\right)\nonumber\\
+=& \partial_\rho A^\rho\left(\Lambda^{-1}x\right) A_\mu\left(\Lambda^{-1}x\right) A^\mu\left(\Lambda^{-1}x\right)\,,\nonumber\\
+\end{align}
+and similarly for the other terms. Under a Lorentz transformation the full Lagrangian transform as
+\begin{align}
+  \mathcal{L}(x)\to\mathcal{L}'(x)=\mathcal{L}(\Lambda^{-1}x) 
+\end{align}
+Since the Action involves the integration over all the points, it is invariant under the Lorentz transformation. The $J^\mu(x)$ does not involves the introduction a new vector field, because it will be identified later as the 4--current.
+
+
+Terms like
+\begin{align}
+  K_\nu A^\nu(x) A_\mu(x) A^\mu(x)\,,
+\end{align}
+(for $K_\nu$ constant) are not Lorentz invariant:
+\begin{align}
+  K_\nu A^\nu(x) A_\mu(x) A^\mu(x)\to K_\nu{A'}^\nu(x) {A'}_\mu(x) {A'}^\mu(x)=& K_\nu{\Lambda^\nu}_\rho A^\rho\left(\Lambda^{-1}x\right) A_\mu\left(\Lambda^{-1}x\right) A^\mu\left(\Lambda^{-1}x\right)\,.
+\end{align}
+$K_\nu(x)A^\nu(x)A_\mu(x)A^\mu(x)$ is Lorentz invariant %but not gauge-invariant (see below).
+
+
+
+
+%\begin{frame}[fragile,allowframebreaks]
+% The field $A^\mu(x)$ transforms simultaneously as field and as vector under Lorentz transformation
+% \begin{align}
+%   A^\mu(x)\to {A'}^\mu(x')={\Lambda^\mu}_\nu A^\nu(\Lambda^{-1}x)\,.
+% \end{align}
+% \end{frame}
+
+  
+\subsection{Representación  de operadores}
+La representación adjunta se puede obtener a partir de las propiedades de los operadores en mecánica cuántica.
+
+\begin{english}
+First, let us consider a simpler group, corresponding to the rotation group in tree dimensions. The generators are the angular momentum operators $J^i$, which satisfy the commutation relations
+\end{english}
+\begin{spanish}
+Consideremos primero un grupo más simple, el correspondiente a las rotaciones en tres dimensiones $\operatorname{SO(3)}$. 
+\end{spanish}
+Para conocer las relaciones de conmutación de los generadores del grupo de rotaciones, podemos escribir los generadores como operadores diferenciales; de la expresión 
+\begin{align}
+  \mathbf{J}=&\mathbf{r}\times \mathbf{p}=\mathbf{r}\times (-i\boldsymbol{\nabla})
+\end{align}
+o en componentes
+\begin{align}
+\label{eq:rxpi}
+  J^k=\left[\mathbf{r}\times (-i\boldsymbol{\nabla})\right]^k=&
+-i\sum_j\epsilon_{ijk}x^i\partial_j=i\epsilon_{ijk}x^i\partial^j\,.
+\end{align}
+
+Las relaciones de conmutación del momento angular \eqref{eq:rotgr} se obtienen de forma directa
+\begin{align*}
+  \left[ J^i,J^j \right]\psi=&-\left[ \epsilon_{ilm}x^{l}\partial_m ,\epsilon_{jpq}x^{p}\partial_q \right]\psi \nonumber\\
+=&-\epsilon_{ilm}\epsilon_{jpq}\left[ x^{l}\partial_m ,x^{p}\partial_q \right]\psi \nonumber\\
+=&-\epsilon_{ilm}\epsilon_{jpq}\left[ x^{l}\partial_m \left(x^{p}\partial_q\psi  \right)-x^{p}\partial_q \left( x^{l}\partial_m\psi \right) \right] \nonumber\\
+   =&-\epsilon_{ilm}\epsilon_{jpq}\left( x^{l}\delta_{mp}\partial_q\psi +x^{l}x^{p}\partial_m \partial_q\psi  -x^{p}\delta_{ql}\partial_m\psi-x^{p}  x^{l}\partial_q\partial_m\psi \right)\,,
+\end{align*}
+cancelando las derivadas cruzadas
+\begin{align*}
+\phantom{\left[ J^i,J^j \right]\psi}   =&-\epsilon_{ilm}\epsilon_{jpq}\left( x^{l}\delta_{mp}\partial_q\psi   -x^{p}\delta_{ql}\partial_m\psi \right) \nonumber\\
+   =&-\epsilon_{ilm}\epsilon_{jpq} x^{l}\delta_{mp}\partial_q\psi +i\epsilon_{ilm}\epsilon_{jpq}x^{p}\delta_{ql}\partial_m\psi \nonumber\\
+   =&-\epsilon_{ilm}\epsilon_{jmq} x^{l}\partial_q\psi +i\epsilon_{ilm}\epsilon_{jpl}x^{p}\partial_m\psi \nonumber\\
+   =&-\epsilon_{ilm}\epsilon_{jmq} x^{l}\partial_q\psi +i\epsilon_{iml}\epsilon_{jqm}x^{q}\partial_l\psi \qquad (l\leftrightarrow m)\ \text{in 2nd term}\nonumber\\
+   =&-\epsilon_{ilm}\epsilon_{jmq} x^{l}\partial_q\psi +i\epsilon_{imq}\epsilon_{jlm}x^{l}\partial_q\psi  \qquad (l\leftrightarrow q)\ \text{in 2nd term}\,,
+\end{align*}
+y finalmente
+\begin{align*}
+  \left[ J^i,J^j \right]\psi  =& \left(-\epsilon_{ilm}\epsilon_{jmq}+\epsilon_{imq}\epsilon_{jlm}  \right) x^{l}\partial_q\psi \nonumber\\
+   =& \left(\epsilon_{ilm}\epsilon_{jqm}-\epsilon_{iqm}\epsilon_{jlm}  \right) x^{l}\partial_q\psi \nonumber\\
+   =& \left(\cancel{\delta_{ij}\delta_{lq}}-\delta_{iq}\delta_{lj}-\cancel{\delta_{ij}\delta_{ql}}+\delta_{il}\delta_{qj}  \right) x^{l}\partial_q\psi \nonumber\\
+  =& \left(\delta_{il}\delta_{qj}-\delta_{iq}\delta_{lj}  \right) x^{l}\partial_q\psi \nonumber\\
+  =& \epsilon_{kij}\epsilon_{klq} x^{l}\partial_q\psi \nonumber\\
+  =&i \epsilon_{kij}\left(-i\epsilon_{klq} x^{l}\partial_q  \right)\psi \nonumber\\
+  =&i \epsilon_{kij}J^{k}\psi \,.
+\end{align*}
+
+Por consiguiente, Los generadores son los operadores de momento angular $ J^i$, que satisfacen las relaciones de conmutación
+\begin{align}
+\label{eq:rotgr}
+  \left[J^i,J^j\right]=i\epsilon_{ijk}J^k\,.
+\end{align}
+donde $\epsilon_{ijk}$ son las constantes de estructura del Grupo $SU(2)$
+
+\section{Grupo de Lorentz }
+Para estudiar otros posibles tipos de campos además de los escalares y vectoriales, debemos explorar las representaciones del Grupo de Lorentz en $n$ dimensiones. El grupo de Lorentz es un subgrupo del Grupo de Poincaré que además incluye el subgrupo de las traslaciones en el espacio y el tiempo.
+
+Seguiremos el mismo método de encontrar representaciones matriciales a partir del algebra  de los generadores del Grupo (los cuales deben satisfacer la relaciones de conmutación apropiadas) para luego exponenciar estas representaciones infinitesimales.
+
+Para el presente problema, necesitamos conocer las relaciones de conmutación de los generadores del grupo de transformaciones de Lorentz. Hemos mostrado en la ec.~ \eqref{eq:rotgr}  que, a partir de la relación (haciendo expícito el caracter de operadores)
+\begin{align}
+\label{eq:rxp}
+  \widehat{\mathbf{J}}=&\widehat{\mathbf{r}}\times \widehat{\mathbf{p}}=
+\widehat{\mathbf{r}}\times (-i\boldsymbol{\nabla})
+\end{align}
+la parte correspondiente al grupo de rotaciones es
+\begin{align*}
+  \left[\widehat{J}^i,\widehat{J}^j\right]=i\epsilon_{ijk}\widehat{J}^k\,.
+\end{align*}
+
+La ecuación \eqref{eq:rxp} en términos de componentes esta dada en~\eqref{eq:rxpi} y corresponde a
+\begin{align}
+  \widehat{J}^k=i\epsilon_{ijk}x^i\partial^j
+\end{align}
+Definimos una representación matricial de los operadores de momento angular como
+\begin{align}
+  \widehat{J}^{l m}\equiv\epsilon_{lmk}\widehat{J}^k=&i\epsilon_{lmk}\epsilon_{ijk}x^i\partial^j\nonumber\\
+=&i(\delta_{li}\delta_{mj}-\delta_{lj}\delta_{mi})x^i\partial^j\nonumber\\
+=&i(x^l\partial^m-x^m\partial^l)\,.
+\end{align}
+  Que involucran tres generadores. La generalización a cuatro dimensiones da lugar a generadores adicionales $\widehat{J}^{0i}$:
+\begin{align}
+  \widehat{J}^{\mu\nu}=i(x^\mu\partial^\nu-x^\nu\partial^\mu)\,.
+\end{align}
+
+
+Los seis generadores satisfacen el álgebra
+\begin{align}
+\label{eq:lrtalg}
+  \left[\widehat{J}^{\mu\nu},\widehat{J}^{\rho\sigma}\right]=&
+i(g^{\nu\rho}\widehat{J}^{\mu\sigma}-g^{\mu\rho}\widehat{J}^{\nu\sigma}-g^{\nu\sigma}\widehat{J}^{\mu\rho}+g^{\mu\sigma}\widehat{J}^{\nu\rho})\,.
+\end{align}
+%From \cite{Peskin}:
+Cualquier representación matricial de esta álgebra debe obedecer las mismas reglas de conmutación.
+
+\chapter{Espinores de Weyl}
+
+\section{Derivación alternativa}
+
+
+
+
+
+
+% \begin{align}
+%     \left[ \mathcal{D}_{\mu} \right]_{a}^{b} G^{\nu}_{b}\to 
+%    \left\{   \left[ \mathcal{D}_{\mu} \right]_{a}^{b} G^{\nu}_{b}\right\}'=
+% \left[ \mathcal{D}_{\mu} \right]_{a}^{b} G^\mu_b+\frac{1}{g_s}\partial^\mu\theta_a
+% +f^{abc}\theta_c\left[ \mathcal{D}_{\mu} \right]_{b}^{d} G^\mu_d
+% \end{align}
+% Esta propiedad puede ser obtenida si usamos 
+
+Algunas identidades útiles en SU(N) son:
+
+\begin{itemize}
+\item 
+\begin{align}
+  \left\{ \Lambda^{a},\Lambda^{b} \right\}=\frac{1}{N}\delta^{ab}+{d^{ab}}_c \Lambda^{c}\,
+\end{align}
+donde $d^{abc}$ es totalmente simétrico en $a,b,c$
+
+ En el caso de $SU(2)$ $d^{ijk}=0$, 
+
+Para  $SU(2)$
+\begin{align}
+\left\{T_i,T_j\right\}=\frac{1}{2}\delta_{ij}\mathbf{1}\,.
+\end{align}
+Para  $SU(3)$
+\begin{align}
+\left\{\Lambda_a,\Lambda_b\right\}=\frac{1}{3}\delta_{ab}\mathbf{1}+{d^{ab}}_c \Lambda^{c}\,.
+\end{align}
+
+\item 
+\begin{align}
+  f^{abe}f^{cde}=\frac{2}{N}(\delta^{ac}\delta^{bd}-
+ \delta^{ad}\delta^{bc})+d^{ace}d^{bde}-d^{ade}d^{bce}
+\end{align}
+\end{itemize}
+
+
+
+Similarmente, definiendo la matriz $3\times 3$, 
+\begin{align}
+  \label{eq:gmunu}
+  {{G}}^{\mu\nu}&=\frac{i}{g_s}[\mathcal{D}^\mu,\mathcal{D}^\nu]\equiv\frac{\lambda_a}{2}G^{\mu\nu}_a,
+\end{align}
+tenemos
+\begin{align}
+  \label{eq:164qft}
+   {G}^{\mu\nu}\psi =&\frac{i}{g_s}[\partial^\mu-ig_sG^\mu,\partial^\nu-ig_sG^\nu]\psi\nonumber\\
+  =&\frac{i}{g_s}\left[\left(\partial^\mu-ig_sG^\mu\right)\left(\partial^\nu-ig_sG^\nu\right)\psi
+    -\left(\partial^\nu-ig_sG^\nu\right)\left(\partial^\mu-ig_sG^\mu\right)\psi\right]\nonumber\\
+  =&\frac{i}{g_s}\left\{\partial^\mu\partial^\nu\psi-g_s^2G^\mu G^\nu\psi-ig_s[\partial^\mu(G^\nu\psi)+G^\mu\partial^\nu\psi]
+    -\partial^\nu\partial^\mu\psi+g_s^2G^\nu G^\mu\psi+ig_s[\partial^\nu(G^\mu\psi)+G^\nu\partial^\mu\psi]\right\}\nonumber\\
+  =&\frac{i}{g_s}\{(\partial^\mu\partial^\nu-\partial^\nu\partial^\mu)\psi-g_s^2(G^\mu G^\nu-G^\nu G^\mu)\psi
+  -ig_s[(\partial^\mu G^\nu)-(\partial^\nu G^\mu)]\psi\nonumber\\
+  &-ig_s[G^\nu\partial^\mu\psi+G^\mu\partial^\nu\psi-G^\mu\partial^\nu\psi+G^\nu\partial^\mu\psi]\}\nonumber\\
+=&[\partial^\mu G^\nu-\partial^\nu G^\mu-ig_s(G^\mu G^\nu-G^\nu G^\mu)]\psi\nonumber\\
+=&\{\partial^\mu G^\nu-\partial^\nu G^\mu-ig_s[G^\mu,G^\nu]\}\psi
+\end{align}
+
+De modo que
+\begin{align}
+  {G}^{\mu\nu}=&\partial^\mu G^\nu-\partial^\nu G^\mu-ig_s[G^\mu,G^\nu]\,,
+\end{align}
+que se reduce al caso Abeliano cuando los bosones gauge conmutan. En términos de componentes
+\begin{align}
+  \Lambda^a{G}^{\mu\nu}_a=&\Lambda^a\partial^\mu G^\nu_a-\Lambda^a\partial^\nu G^\mu_a-ig_s[\Lambda^bG^\mu_b,\Lambda^cG^\nu_c]\nonumber\\
+  =&\Lambda^a\partial^\mu G^\nu_a-\Lambda^a\partial^\nu G^\mu_a-ig_s[\Lambda^b,\Lambda^c]G^\mu_bG^\nu_c\nonumber\\
+  =&\Lambda^a\partial^\mu G^\nu_a-\Lambda^a\partial^\nu G^\mu_a-ig_s(i\Lambda^af_{a b c})G^\mu_bG^\nu_c\nonumber\\
+  =&\Lambda^a\partial^\mu G^\nu_a-\Lambda^a\partial^\nu G^\mu_a+\Lambda^ag_sf_{a b c}G^\mu_bG^\nu_c\,.
+\end{align}
+Por consiguiente
+\begin{equation}
+  \label{eq:258qftold}
+  G^{\mu\nu}_a=\partial^\mu G^\nu_a-\partial^\nu G^\mu_a+g_s f^{abc}G^\mu_b G^\nu_c\equiv\widetilde{G}^{\mu\nu}_a+g_s f^{abc}G^\mu_b G^\nu_c,
+\end{equation}
+con
+\begin{equation}
+  \widetilde{G}^{\mu\nu}_a=\partial^\mu G^\nu_a-\partial^\nu G^\mu_a
+\end{equation}
+
+
+
+A diferencia del caso Abeliano $G^{\mu\nu}$ ya no es invariante bajo transformaciones gauge
+\begin{align}
+G^{\mu\nu}\to    {G'}^{\mu\nu}
+  &=\frac{i}{g_s}\left[{\mathcal{D}'}^\mu,{\mathcal{D}'}^\nu\right]\nonumber\\
+&=\frac{i}{g_s}\left[U{\mathcal{D}}^\mu U^{-1},U{\mathcal{D}}^\nu U^{-1}\right]\nonumber\\
+&=U{{G}}^{\mu\nu}U^{-1}\,.
+\end{align}
+
+Note que con la definición \eqref{eq:gmunu}, la derivada covariante de la matrix $G^{\mu\nu}$, transforma como la matrix $G^{\mu\nu}$
+\begin{align}
+\mathcal{D}_\mu G^{\mu\nu} \to\left(\mathcal{D}_\mu G^{\mu\nu}\right)'=U\mathcal{D}_\mu G^{\mu\nu} U^{-1}\,.
+\end{align}
+
+
+
+
+% La derivada covariante del campo tensorial transforma igual:
+% \begin{align}
+%  \mathcal{D}_{\mu} G^{\mu\nu}\to  \left( \mathcal{D}_{\mu} G^{\mu\nu}\right)'=U \left( \mathcal{D}_{\mu}G^{\mu\nu} \right) U^{-1}
+% \end{align}
+% Es interesante notar que
+% \begin{align}
+%    \mathcal{D}_{\mu} G^{\mu\nu}=& \left(\mathbf{1}\partial_{\mu}-i g_s G_{\mu}  \right) G^{\mu\nu} \nonumber\\
+% =& \partial_{\mu}G^{\mu\nu}-i g_s G_{\mu}G^{\mu\nu}\,.
+% \end{align}
+% De modo que
+% \begin{align}
+% \mathcal{D}_{\mu} G^{\mu\nu}\to {\left[ \mathcal{D}_{\mu} \right]^{a}}_{b} {\left[ G^{\mu\nu} \right]^{b}}_{c}
+% =&\left( \delta^a_b\partial_{\mu}-ig_s {\left[ \widetilde{\Lambda}_e \right]^a}_b G_{\mu}^e \right)  {\left[ \widetilde{\Lambda}^f\right]^{b}}_{c} G^{\mu\nu}_{f}
+% \end{align}
+% \begin{align}
+% =&   \delta^a_b{\left[ \widetilde{\Lambda}^f\right]^{b}}_{c}\partial_{\mu}  G^{\mu\nu}_{f}-ig_s {\left[ \widetilde{\Lambda}_e \right]^a}_b {\left[ \widetilde{\Lambda}^f\right]^{b}}_{c} G_{\mu}^e  G^{\mu\nu}_{f} 
+% \end{align}
+
+
+
+\section{Invarianza de fase local para campo escalar complejo}
+
+Aplicando el principio gauge local al Lagrangiano para un campo escalar complejo presentado en la ecuación~\ref{eq:cef} con $\lambda=0$, debemos reemplazar la derivada normal $\partial_{\mu}$, por la derivada covariante $\mathcal{D}_{\mu}=\partial_{\mu}+iq A_{\mu}$ y adicionar todos los términos invariantes asociados al campo $A_\mu$, de modo que
+\begin{align}
+\label{eq:lcv}
+  \mathcal{L}=& \left( \mathcal{D}_{\mu} \phi \right)^{*} \mathcal{D}^{\mu}\phi -m^2 \phi^{*}\phi-\frac{1}{4}F^{\mu\nu}F_{\mu\nu} \nonumber\\
+             =&\left( \partial_{\mu}\phi^{*}-iq A_{\mu} \phi^{*} \right)\left( \partial^{\mu}\phi+iq A^{\mu} \phi \right) -m^2 \phi^{*}\phi-\frac{1}{4}F^{\mu\nu}F_{\mu\nu} \nonumber\\
+              =&\partial_{\mu}\phi^{*}\partial^{\mu}\phi-m^2 \phi^{*}\phi+iq \left(\phi\partial_{\mu}\phi^{*} -\phi^{*}\partial_{\mu}\phi \right) A^{\mu} +q^2 \phi^{*}\phi A_{\mu} A^{\mu} -\frac{1}{4}F^{\mu\nu}F_{\mu\nu} 
+\end{align}
+De modo que
+\begin{align}
+  \partial_{\mu} \left[ \frac{\partial \mathcal{L}}{\partial \left( \partial_{\mu}\phi^{*} \right)} \right]-\frac{\partial \mathcal{L}}{\partial \phi^{*}}
+=&\partial_{\mu} \left( \partial^{\mu}+iq A^{\mu} \right)\phi -\left(-iq \partial_{\mu}\phi A^{\mu} +q^2 A_{\mu}A^{\mu}\phi-m^{2}\phi  \right) \nonumber\\
+ =&\partial_{\mu} \left( \partial^{\mu}+iq A^{\mu} \right)\phi  +iq \partial_{\mu}\phi A^{\mu}-q^2 A_{\mu}A^{\mu}\phi+m^{2}\phi\,.
+\end{align}
+
+Por lo tanto
+\begin{align}
+-iq &\phi^{*} \left\{\partial_{\mu} \left[ \frac{\partial \mathcal{L}}{\partial \left( \partial_{\mu}\phi^{*} \right)} \right]-\frac{\partial \mathcal{L}}{\partial \phi^{*}} \right\}   
+= -iq \phi^{*}\partial_{\mu}\left( \partial^{\mu}+iq A^{\mu} \right)\phi+q^2 A_{\mu}  \phi^{*} \partial^{\mu}\phi +iq^3 A_{\mu}A^{\mu}\phi^{*}\phi-iq m^2\phi^{*}\phi \nonumber\\
+  =& -iq \partial_{\mu} \left[ \phi^{*}\left( \partial^{\mu}+iq A^{\mu} \right)\phi \right]+iq \left( \partial_{\mu} \phi^{*}\right)\left( \partial^{\mu}+iq A^{\mu} \right)\phi +q^2 A_{\mu}  \phi^{*} \partial^{\mu}\phi +iq^3 A_{\mu}A^{\mu}\phi^{*}\phi-iq m^2\phi^{*}\phi \nonumber\\
+  =& -iq \partial_{\mu} \left[ \phi^{*}\mathcal{D}^{\mu}\phi \right]+iq  \partial_{\mu} \phi^{*}\partial^{\mu}\phi-q^2A^\mu \left( \partial_{\mu} \phi^{*} \right)\phi  +q^2 A_{\mu}  \phi^{*} \partial^{\mu}\phi +iq^3 A_{\mu}A^{\mu}\phi^{*}\phi-iq m^2\phi^{*}\phi\,. 
+\end{align}
+Similarmente
+\begin{align}
+  iq &\left\{\partial_{\mu} \left[ \frac{\partial \mathcal{L}}{\partial \left( \partial_{\mu}\phi \right)} \right]-\frac{\partial \mathcal{L}}{\partial \phi} \right\} \phi \nonumber\\
+  =& iq \partial_{\mu} \left[ \left(  \mathcal{D}^{\mu}\phi \right) \phi^{*} \right]-iq  \partial_{\mu} \phi^{*}\partial^{\mu}\phi+q^2A^\mu \left( \partial_{\mu} \phi^{*} \right)\phi  -q^2 A_{\mu}  \phi^{*} \partial^{\mu}\phi -iq^3 A_{\mu}A^{\mu}\phi^{*}\phi+iq m^2\phi^{*}\phi\,. 
+\end{align}
+Sumando las dos expresiones, todos los términos con excepción de los primeros se cancelan entre si, dando lugar a 
+\begin{align}
+   \sum_{i}\mathcal{E}_{i} a_{\alpha i}=& \partial_{\mu} j^{\mu}\,,
+\end{align}
+donde
+\begin{align}
+  j^{\mu}=-iq \left[  \phi^{*}\mathcal{D}^{\mu}\phi -  \left(  \mathcal{D}^{\mu}\phi \right)^{*} \phi\right]\,,
+\end{align}
+que corresponde a la carga eléctrica. Note que dicho resultado se puede obtener más directamente usando la ec.~\eqref{eq:tnoeth2}.
+
+Note además que 
+\begin{align}
+\mathcal{D}_{\mu}\mathcal{D}^{\mu}\phi=  \left( \partial_{\mu}+iq A_{\mu}  \right)\left( \partial^{\mu}+iq A^{\mu} \right)\phi=& \partial_{\mu}\left( \partial^{\mu}+iq A^{\mu} \right)\phi+iq A_{\mu}  \left( \partial^{\mu}+iq A^{\mu} \right)\phi \nonumber\\
+=& \partial_{\mu}\left( \partial^{\mu}+iq A^{\mu} \right)\phi+iq A_{\mu}   \partial^{\mu}\phi -q^2 A_{\mu}A^{\mu}\phi\,.
+\end{align}
+Por lo tanto la ecuación de movimiento asociada al campo $\phi^{*}$
+
+
+
+\begin{align}
+  \partial_{\mu} \left[ \frac{\partial \mathcal{L}}{\partial \left( \partial_{\mu}\phi^{*} \right)} \right]-\frac{\partial \mathcal{L}}{\partial \phi}=&
+ \left(\mathcal{D}_{\mu}\mathcal{D}^{\mu}+m^2  \right)\phi\,=0
+\end{align}
+Que corresponde a la ecuación de Klein-Gordon pero con la derivada normal reemplazada por la derivada covariante.
+
+Partiendo de nuevo de \ref{eq:lcv}, es interesenta notar que
+
+
+
+\section{Soluciones a la ecuaci\'on de Dirac}
+\label{sec:soluc-la-ecuac}
+
+\subsection{Lagrangiano de Weyl}
+\label{sec:lagrangiano-de-weyl}
+\begin{borrar}
+En la ec.~\eqref{eq:118}, obtuvimos el Hamiltoniano en ec.~\eqref{eq:103}
+\begin{equation}
+  \hat{H}= \gamma_0(\boldsymbol{\gamma}\cdot\mathbf{p}+m)=\boldsymbol{\alpha}\cdot\mathbf{p}+\beta m\,.
+\end{equation}
+Una escogencia particular de las cuatro matrices $\gamma^\mu$, conocida como la representaci\'on de Weyl, o representaci\'on quiral, puede escribirse en t\'erminos de la matrices de Pauli. Escritas en bloques $2\times2$, tenemos
+\begin{equation}
+  \gamma^0=
+  \begin{pmatrix}
+    0&\sigma_0\\
+    \sigma_0&0
+  \end{pmatrix}\qquad
+  \gamma_i=\begin{pmatrix}
+    0&\sigma_i\\
+    -\sigma_i&0
+  \end{pmatrix}.
+\end{equation}
+Con $\sigma^0=1$. Con la matriz de tranformaci\'on
+\begin{equation}
+  U=\frac{1}{\sqrt{2}}
+  \begin{pmatrix}
+    1&1\\
+    -1&1    
+  \end{pmatrix}
+\end{equation}
+podemos obtener la representaci\'on de Dirac, tal que $U$ diagonaliza $\gamma^0$,
+\begin{equation}
+  \gamma^0=
+  \begin{pmatrix}
+    \sigma^0&0\\
+    0&-\sigma^0
+  \end{pmatrix}\qquad
+  \gamma_i=\begin{pmatrix}
+    0&\sigma_i\\
+    -\sigma_i&0
+  \end{pmatrix}.
+\end{equation}
+\end{borrar}
+En adelante trabajaremos en la representaci\'on de Weyl que en forma compacta es
+\begin{equation}
+  \gamma^\mu=\begin{pmatrix}
+    0&\sigma^\mu\\
+    \bar{\sigma}^\mu & 0
+  \end{pmatrix}
+\end{equation}
+donde
+\begin{align}
+  \sigma^\mu&=(\sigma^0,\sigma^1,\sigma^2,\sigma^3)\nonumber\\
+  \bar{\sigma}^\mu&=(\sigma^0,-\sigma^1,-\sigma^2,-\sigma^3)\nonumber\\
+\end{align}
+Hemos escrito las matrices de Dirac en bloques $2\times2$, y es natural escribir similarmente las cuatro componentes del campo de Dirac como un par de campos de dos componentes
+\begin{align}
+  \psi=  \begin{pmatrix}
+    \psi_L\\
+    \psi_R    
+  \end{pmatrix}=\begin{pmatrix}
+    \psi_L\\
+    0   
+  \end{pmatrix}+\begin{pmatrix}
+    0\\
+    \psi_R    
+  \end{pmatrix}
+\end{align}
+Donde $\psi_{L,R}$ son espinores de Weyl de dos componentes. En la representaci\'on de Weyl el Lagrangiano se puede escribir como
+\begin{align}
+\label{eq:200}
+  \mathcal{L}=&i\bar{\psi}\gamma^\mu\partial_\mu\psi-m\bar{\psi}\psi\nonumber\\
+  =&i\psi^\dagger \gamma^0\gamma^\mu\partial_\mu\psi-m\psi^\dagger \gamma^0 \psi\nonumber\\
+  =&i\psi^\dagger  \begin{pmatrix}
+    0 & 1\\
+    1&0
+  \end{pmatrix}
+  \begin{pmatrix}
+    0 &\sigma^\mu \\
+    \bar{\sigma}^\mu&0
+  \end{pmatrix}\partial_\mu\psi-m\psi^\dagger
+  \begin{pmatrix}
+    0 & 1\\
+    1&0
+  \end{pmatrix}\psi\nonumber\\
+=&i\begin{pmatrix}
+ \psi_L^\dagger & \psi_R^\dagger
+\end{pmatrix}
+ \begin{pmatrix}
+   \bar{\sigma}^\mu &0\\
+   0&\sigma^\mu
+ \end{pmatrix} \begin{pmatrix}
+   \partial_\mu\psi_L\\
+   \partial_\mu\psi_R
+ \end{pmatrix}-m
+ \begin{pmatrix}
+   \psi_L^\dagger&\psi_R^\dagger
+ \end{pmatrix}
+ \begin{pmatrix}
+   0&1\\
+   1&0
+ \end{pmatrix}
+ \begin{pmatrix}
+   \psi_L\\ \psi_R
+ \end{pmatrix}\nonumber\\
+ =& i\psi_L^\dagger \bar{\sigma}^\mu\partial_\mu\psi_L+i\psi_R^\dagger \sigma^\mu\partial_\mu\psi_R
+  -m(\psi_L^\dagger \psi_R+\psi_R^\dagger \psi_L)
+\end{align}
+
+\subsection{Ecuaciones de Weyl}
+\label{sec:ecuaciones-de-weyl}
+Las ecuaciones de Euler-Lagrango para el Lagrangiano en ec.\eqref{eq:200}, dan como resultado
+\begin{align}
+  i\bar{\sigma}^\mu\partial_\mu\psi_L -m\psi_R &=0\nonumber\\
+  i{\sigma}^\mu\partial_\mu\psi_R -m\psi_L &=0
+\end{align}
+Expandiendo
+\begin{align}
+  \label{eq:209}
+   i{\sigma}^0\partial_0\psi_L-i{\sigma}^i\partial_i\psi_L -m\psi_R &=0\nonumber\\
+   i{\sigma}^0\partial_0\psi_R+i{\sigma}^i\partial_i\psi_R -m\psi_L &=0
+\end{align}
+que pueden escribirse como
+\begin{align}
+  \label{eq:207}
+   i\partial_0\psi_L-i\boldsymbol{\sigma}\cdot\boldsymbol{\nabla}\psi_L -m\psi_R &=0\nonumber\\
+   i\partial_0\psi_R+i\boldsymbol{\sigma}\cdot\boldsymbol{\nabla}\psi_R -m\psi_L &=0
+\end{align}
+Para el Lagrangiano invariante gauge local $U(1)$ en ec.\eqref{eq:201}, tendr\'\i amos
+\begin{align}
+  i\bar{\sigma}^\mu\mathcal{D}_\mu\psi_L -m\psi_R &=0\nonumber\\
+  i{\sigma}^\mu\mathcal{D}_\mu\psi_R -m\psi_L &=0
+\end{align}
+Expandiendo, para $\mathcal{D}^\mu$ dado en la ec.\eqref{eq:202}, con $q=-e$
+\begin{equation}
+  \mathcal{D}_\mu=\partial_\mu+i q A_\mu
+\end{equation}
+Tenemos
+\begin{align}
+     i(\partial_0+i q A_0)\psi_L-i{\sigma}^i(\partial_i+i q A_i)\psi_L -m\psi_R &=0\nonumber\\
+   i(\partial_0+i q A_0)\psi_R+i{\sigma}^i(\partial_i+i q A_i)\psi_R -m\psi_L &=0
+\end{align}
+de donde
+\begin{align}
+\label{eq:203}
+     (i\partial_0- q A_0)\psi_L-{\sigma}^i(i\partial_i-q A_i)\psi_L -m\psi_R &=0\nonumber\\
+   (i\partial_0-q A_0)\psi_R+{\sigma}^i(i\partial_i-q A_i)\psi_R -m\psi_L &=0
+\end{align}
+\section{Esp\'\i n}
+\label{sec:espin}
+El momento angular est\'a descrito por el \'algebra
+\begin{equation}
+  [\hat L_i,\hat L_j]=i\epsilon_{ijk}\hat L_k
+\end{equation}
+Si dos operadores no conmutan no es posible conocer sus autovalores simult\'aneamente. Sin embargo
+\begin{equation}
+  [\hat L_i,\hat{L}^2]=0
+\end{equation}
+y por convenci\'on podemos escoger $\langle\hat L_z\rangle$ y $\hat{L}^2$ como los dos observables de momento \'angular. 
+
+Las matrices de Pauli forman una representaci\'on del \'algebra de momento angular
+\begin{equation}
+  [\hat S_i,\hat S_j]=i\epsilon_{ijk}\hat S_k
+\end{equation}
+donde el \emph{operador de esp\'\i n} se define como
+\begin{equation}
+  \hat S_i=\frac{\sigma_i}{2}
+\end{equation}
+Los autovalores del operador de esp\'\i n son entonces
+\begin{equation}
+  \hat S_z
+  \begin{pmatrix}
+    a\\
+    b
+  \end{pmatrix}=\lambda
+  \begin{pmatrix}
+    a\\
+    b
+  \end{pmatrix}
+\end{equation}
+que corresponde a autovalores $\lambda=\pm1/2$ con autovectores 
+\begin{equation}
+  |\uparrow\rangle=\begin{pmatrix}
+    1\\
+    0
+  \end{pmatrix}\qquad
+  |\downarrow\rangle=\begin{pmatrix}
+    0\\
+    1
+  \end{pmatrix}
+\end{equation}
+que son autoestados de esp\'\i n up y esp\'\i n down respectivamente. Una funci\'on de onda de esp\'\i n ha de poder expandir en t\'erminos de estos autoestados
+\begin{equation}
+  |\psi\rangle=c_1|\uparrow\rangle+c_2|\downarrow\rangle
+\end{equation}
+donde $|c_1|^2$ y $|c_2|^2$ corresponden a las probabilidades de encontrar el estado con esp\'\i n up o esp\'\i n down respectivamente. Adem\'as
+\begin{equation}
+  |c_1|^2+|c_2|^2=1
+\end{equation}
+y $\psi$ es un espinor. La ecuaci\'on de Scr\"odinger para un espinor es, por ejemplo
+\begin{align}
+  i\frac{\partial\psi_R}{\partial t}=\widehat{H}\psi_R
+\end{align}
+donde
+\begin{equation}
+  \psi_R=
+  \begin{pmatrix}
+    \psi_1\\
+    \psi_2
+  \end{pmatrix}
+\end{equation}
+con $\psi_i$ las funciones de onda convencionales. Dicha ecuaci\'on debe ser invariante bajo rotaciones en el espacio de esp\'\i n
+\begin{equation}
+  \psi_R\to\psi'_R=\exp(i\frac{\sigma^i}{2}\theta_i)\psi_R\,.
+\end{equation}
+Esta es justo las ecuaciones que aparecen cuando se hace $m=0$ en la ec.\eqref{eq:207}. Para $\psi_R$
+\begin{equation}
+  \widehat{H}=i\boldsymbol{\sigma}\cdot\boldsymbol{\nabla}=-\boldsymbol{\sigma}\cdot\mathbf{p}
+\end{equation}
+con
+\begin{align}
+\label{eq:208}
+\mathcal{L}&= i\psi_R^\dagger {\sigma}^\mu\partial_\mu\psi_R  \nonumber\\
+&=i\psi_R^\dagger \partial_0\psi_R+i\psi_R^\dagger {\sigma}^i\partial_i\psi_R\nonumber\\
+&=i\psi_R^\dagger \partial_0\psi_R-i\psi_R^\dagger\boldsymbol{\sigma}\cdot\mathbf{p} \psi_R
+\end{align}
+Como el Lagrangiano debe ser escalar entonces $\psi_R^\dagger\boldsymbol{\sigma} \psi_R$ debe ser un vector en el espacio de esp\'\i n. En efecto, escogiendo los coeficientes como
+\begin{align}
+  c_1&=e^{-i \phi/2}\cos(\theta/2)\nonumber\\
+  c_2&=e^{i \phi/2}\sin(\theta/2)
+\end{align}
+entonces
+\begin{equation}
+  |c_1|^2+|c_2|^2=c_1 c_1^*+c_2 c_2^*=\cos^2(\theta/2)+\sin^2(\theta/2)=1\,.
+\end{equation}
+Para
+\begin{align}
+  \psi_R=e^{-i p\cdot x}(c_1|\uparrow\rangle+c_2|\downarrow\rangle)&=e^{-i p\cdot x}\left[c_1\begin{pmatrix}
+    1\\
+    0
+  \end{pmatrix}+c_2
+  \begin{pmatrix}
+    0\\
+    1
+  \end{pmatrix}\right]=
+  e^{-i p\cdot x}\begin{pmatrix}
+    c_1\\
+    c_2
+  \end{pmatrix}\,\nonumber\\
+  &=e^{-i p\cdot x}
+  \begin{pmatrix}
+  e^{-i \phi/2}\cos(\theta/2)\\
+  e^{i \phi/2}\sin(\theta/2)
+  \end{pmatrix}=e^{-i p\cdot x}|+\rangle
+\end{align}
+donde
+\begin{equation}
+|+\rangle=  \begin{pmatrix}
+  e^{-i \phi/2}\cos(\theta/2)\\
+  e^{i \phi/2}\sin(\theta/2)
+  \end{pmatrix}\,.
+\end{equation}
+Tenemos
+\begin{align}
+  \psi^\dagger_R \sigma_1 \psi_R=&
+  \begin{pmatrix}
+   c_1^\dagger & c_2^\dagger 
+  \end{pmatrix}
+  \begin{pmatrix}
+    0 & 1\\
+    1&0
+  \end{pmatrix}
+  \begin{pmatrix}
+    c_1\\
+    c_2
+  \end{pmatrix}\nonumber\\
+  =&  \begin{pmatrix}
+    c_2^\dagger & c_1^\dagger
+  \end{pmatrix}
+  \begin{pmatrix}
+    c_1\\
+    c_2
+  \end{pmatrix}\nonumber\\
+  =&  c_2^\dagger c_1 + c_1^\dagger c_2\nonumber\\
+  =&  \sin(\theta/2)\cos(\theta/2)e^{-i\phi}+\cos(\theta/2)\sin(\theta/2)e^{i\phi}\nonumber\\
+  =&  (e^{-i\phi}+e^{i\phi})\cos(\theta/2)\sin(\theta/2)\nonumber\\
+  =&  (2\cos\phi)\frac{1}{2}\sin\theta\nonumber\\
+  =&  \cos\phi\sin\theta
+\end{align}
+Similarmente
+\begin{align}
+  \psi^\dagger_R \sigma_2\psi_R&=\sin\phi\sin\theta\nonumber\\
+  \psi^\dagger_R \sigma_3\psi_R&=\cos\theta
+\end{align}
+Por consiguiente $\psi^\dagger \sigma_i\psi$ son las componentes de un vector unitario $\psi^\dagger \boldsymbol{\sigma}\psi$ con \'angulo polar $\theta$ y \'angulo azimutal $\phi$. Posibles escalares se pueden construir con otros vectores disponibles, por ejemplo $\mathbf{p}$, como en la ec.~\eqref{eq:208}.
+\begin{align}
+  \boldsymbol{\sigma}\cdot\hat{\mathbf{p}}=&\sigma^i \frac{p^i}{|\mathbf{p}|}\nonumber\\
+  =&\sigma^1\cos\phi\sin\theta+\sigma^2\sin\phi\sin\theta+\sigma^3\cos\theta\nonumber\\
+  =&\begin{pmatrix}
+    \cos\theta&\sin\theta(\cos\phi-i\sin\phi)\\
+    \sin\theta(\cos\phi-i\sin\phi)&-\cos\theta
+  \end{pmatrix}\nonumber\\
+  =&\begin{pmatrix}
+    \cos\theta&e^{-i\phi}\sin\theta\\
+    e^{i\phi}\sin\theta&-\cos\theta
+  \end{pmatrix}
+\end{align}
+\begin{align}
+\boldsymbol{\sigma}\cdot\hat{\mathbf{p}}|+\rangle=&\begin{pmatrix}
+    \cos\theta&e^{-i\phi}\sin\theta\\
+    e^{i\phi}\sin\theta&-\cos\theta
+  \end{pmatrix}\begin{pmatrix}
+  e^{-i \phi/2}\cos(\theta/2)\\
+  e^{i \phi/2}\sin(\theta/2)
+  \end{pmatrix}\nonumber\\
+  =&e^{-i\phi/2}\begin{pmatrix}
+    \cos\theta&e^{-i\phi}\sin\theta\\
+    e^{i\phi}\sin\theta&-\cos\theta
+  \end{pmatrix}\begin{pmatrix}
+  \cos(\theta/2)\\
+  e^{i \phi}\sin(\theta/2)
+  \end{pmatrix}\nonumber\\
+  =&e^{-i\phi/2}
+  \begin{pmatrix}
+    \cos\theta\cos(\theta/2)+\sin\theta\sin(\theta/2)\\
+    e^{i\phi}[\sin\theta\cos(\theta/2)- \cos\theta\sin(\theta/2)]
+  \end{pmatrix}\nonumber\\
+  =&e^{-i\phi/2}
+  \begin{pmatrix}
+    \cos(\theta-\theta/2)\\
+    e^{i\phi}\sin(\theta-\theta/2)
+  \end{pmatrix}\nonumber\\
+  =&e^{-i\phi/2}
+  \begin{pmatrix}
+    \cos(\theta/2)\\
+    e^{i\phi}\sin(\theta/2)
+  \end{pmatrix}\nonumber\\
+  =&+|+\rangle
+\end{align}
+(El gorro en este caso, significa vector unitario). Decimos entonces que
+\begin{align}
+\label{eq:214}
+\boldsymbol{\sigma}\cdot\hat{\mathbf{p}}\psi_R=+e^{-i p\cdot x}|+\rangle=+\psi_R
+\end{align}
+es un estado de helicidad positiva o derecha. Como $\boldsymbol{\sigma}\cdot\mathbf{p}$ denota la proyecci\'on de esp\'\i n sobre la direcci\'on de moviento, para la helicidad derecha, dicha proyecci\'on es positiva.
+
+
+Si definimos ademas
+\begin{equation}
+  \psi_L=e^{-i p\cdot x}|-\rangle
+\end{equation}
+donde
+\begin{equation}
+|-\rangle=  \begin{pmatrix}
+  -e^{-i \phi/2}\sin(\theta/2)\\ 
+  e^{i \phi/2}\cos(\theta/2)
+  \end{pmatrix}\,,
+\end{equation}
+entonces
+\begin{align}
+  \psi^\dagger\boldsymbol{\sigma}\cdot\hat{\mathbf{p}}\psi=-(\cos\phi\sin\theta,\sin\phi\sin\phi,\cos\theta)
+\end{align}
+y
+\begin{equation}
+  \label{eq:215}
+  \boldsymbol{\sigma}\cdot\hat{\mathbf{p}}\psi_L=-e^{-i p\cdot x}|-\rangle=-\psi_L
+\end{equation}
+$\psi$ es un estado de helicidad negativa o izquierda. Adem\'as
+\begin{align}
+  \langle-|-\rangle=\langle+|+\rangle=1\qquad \langle+|-\rangle=\langle-|+\rangle=0
+\end{align}
+donde $\langle-|=|-\rangle^\dagger$, etc.
+%\left(\right)
+\section{Soluci\'on de part\'\i cula libre}
+\label{sec:solucion-de-parti}
+Consideraremos incialmente dos casos $m^2\gg\mathbf{p}^2$ y $m^2\ll\mathbf{p}^2$.
+
+De la ecuaci\'on relativista
+\begin{equation}
+  \label{eq:213}
+  E^2=\mathbf{p}^2+m^2\,,
+\end{equation}
+tenemos que para elcaso no relativista $m^2\gg\mathbf{p}^2$, podemos tomar $\mathbf{p}=0$, de modo que
+\begin{equation}
+  E^2=m^2\Rightarrow E=\pm m
+\end{equation}
+La aparici\'on de soluciones de Energ\'\i a negativa. . .
+
+A $\mathbf{p}=0$ proponemos las soluciones de energ\'\i a positiva $E=+m$
+\begin{align}
+  \label{eq:210}
+  \psi_L&=u_L e^{-i E t}=\psi_L=u_L e^{-i m t} & \psi_R&=u_R e^{-i E t}=u_R e^{-i m t}
+\end{align}
+
+En este caso las ecs.~\eqref{eq:207} se reducen a
+\begin{align}
+  i\partial_0\psi_L -m\psi_R &=0\nonumber\\
+  i\partial_0\psi_R -m\psi_L &=0
+\end{align}
+de modo que para que \eqref{eq:210} sea soluci\'on, se debe satisfacer que 
+\begin{equation}
+  u_L=u_R=u
+\end{equation}
+con
+\begin{align}
+  u=  \begin{pmatrix}
+    u_1\\
+    u_2    
+  \end{pmatrix}=|+\rangle\,.
+\end{align}
+El espinor completo es
+\begin{align}
+  \psi=\begin{pmatrix}
+    \psi_L\\
+    \psi_R
+  \end{pmatrix}=e^{-i m t}\begin{pmatrix}
+    |+\rangle\\
+    |+\rangle
+  \end{pmatrix}
+\end{align}
+Con norma
+\begin{align}
+  \bar{\psi}\psi=\psi^\dagger\gamma^0\gamma^0\psi=\psi^\dagger\psi=|+\rangle^\dagger|+\rangle+|+\rangle^\dagger|+\rangle=1
+\end{align}
+Para el caso relativista $m^2\ll\mathbf{p}^2$, podemos hacer $m=0$ y las ecuaciones \eqref{eq:207} se desacoplan
+\begin{align}
+  \label{eq:211}
+   i\partial_0\psi_L-i\boldsymbol{\sigma}\cdot\boldsymbol{\nabla}\psi_L &=0\nonumber\\
+   i\partial_0\psi_R+i\boldsymbol{\sigma}\cdot\boldsymbol{\nabla}\psi_R&=0
+\end{align}
+Proponemos como soluciones de energ\'\i a positiva
+\begin{align}
+  \label{eq:212}
+    \psi_L&=u_L e^{-i p\cdot x}=\psi_L=u_L e^{i(\mathbf{p}\cdot \mathbf{x}-E t)} & \psi_R&=u_R e^{-i p\cdot x}=u_R e^{i(\mathbf{p}\cdot \mathbf{x}-E t)}
+\end{align}
+reemplazando en las ecs.~\eqref{eq:211} tenemos
+\begin{align}
+  \label{eq:217}
+     E\psi_L+\boldsymbol{\sigma}\cdot\mathbf{p}\psi_L &=0\nonumber\\
+   E\psi_R-\boldsymbol{\sigma}\cdot\mathbf{p}\psi_R&=0
+\end{align}
+De modo que para que las ecs.~\eqref{eq:212} sean soluci\'on se debe satisfacer que
+\begin{align}
+     \boldsymbol{\sigma}\cdot\frac{\mathbf{p}}{E}\psi_L &=-\psi_L\nonumber\\
+   \boldsymbol{\sigma}\cdot\frac{\mathbf{p}}{E}\psi_R&=\psi_R
+\end{align}
+pero de la ec.~\eqref{eq:213}, tenemos que para $m=0$, $E=|\mathbf{p}|$, y $\mathbf{p}/E=\mathbf{p}/|\mathbf{p}|=\hat{\mathbf{p}}$. Entonces
+\begin{align}
+  \boldsymbol{\sigma}\cdot\hat{\mathbf{p}}\psi_L &=-\psi_L\nonumber\\
+  \boldsymbol{\sigma}\cdot\hat{\mathbf{p}}\psi_R&=\psi_R
+\end{align}
+Comparando con las ecuaciones \eqref{eq:214} y \eqref{eq:215} vemos que para las soluciones de energ\'\i a positiva $\psi_{R,L}$ corresponden en efecto a estado de helicidad derecha e izquierda respectivamente. Explicitamente
+\begin{equation}
+  \boldsymbol{\sigma}\cdot\hat{\mathbf{p}}\psi_L=e^{-i p\cdot x}\boldsymbol{\sigma}\cdot\hat{\mathbf{p}}|-\rangle=-e^{-i p\cdot x}|-\rangle=-\psi_L
+\end{equation}
+El espinor de cuatro componentes para la soluci\'on de energ\'\i a positiva es
+\begin{equation}
+  \psi=\begin{pmatrix}
+    \psi_L\\
+    \psi_R
+  \end{pmatrix}=e^{-i p\cdot x}\begin{pmatrix}
+    |-\rangle\\
+    |+\rangle
+  \end{pmatrix}
+\end{equation}
+
+\begin{align}
+  \bar{\psi}\psi=&\bar{u}{u}=\psi^\dagger \gamma^0 \psi\nonumber\\
+  =&\begin{pmatrix}
+    |-\rangle^\dagger & |+\rangle^\dagger
+  \end{pmatrix}
+  \begin{pmatrix}
+    0&1\\
+    1&0    
+  \end{pmatrix}
+  \begin{pmatrix}
+    |-\rangle\\
+    |+\rangle
+  \end{pmatrix}\nonumber\\
+  =&\begin{pmatrix}
+    \langle-| & \langle+|
+  \end{pmatrix}
+  \begin{pmatrix}
+    0&1\\
+    1&0    
+  \end{pmatrix}
+  \begin{pmatrix}
+    |-\rangle\\
+    |+\rangle
+  \end{pmatrix}\nonumber\\
+  =&\begin{pmatrix}
+    \langle+| & \langle-| 
+  \end{pmatrix}
+  \begin{pmatrix}
+    |-\rangle\\
+    |+\rangle
+  \end{pmatrix}\nonumber\\
+  =&\langle+|-\rangle+\langle-|+\rangle=0
+\end{align}
+
+Es convención escoger la normalización del espinor de Dirac tal que
+\begin{equation}
+  \bar{u}{u}=2m
+\end{equation}
+que de hecho es cero cuando $m=0$.
+
+Para las soluciones de energ\'\i a negativa tenemos
+
+\begin{align}
+    \hat{\psi}_L&=u_L e^{i(\mathbf{p}\cdot \mathbf{x}+E t)} & \hat{\psi}_R&=u_R e^{i(\mathbf{p}\cdot \mathbf{x}+E t)}
+\end{align}
+Para explorar las caracter\'\i sticas de esta soluci\'on podemos reemplazar en la ec.~(\ref{eq:217}) $E\to-E$, $\mathbf{p}\to\mathbf{p}$, de modo que
+\begin{align}
+  \boldsymbol{\sigma}\cdot\hat{\mathbf{p}}\hat{\psi}_L &=+\hat{\psi}_L\nonumber\\
+  \boldsymbol{\sigma}\cdot\hat{\mathbf{p}}\hat{\psi}_R&=-\hat{\psi}_R
+\end{align}
+De modo que la antipart\'\i cula de una part\'\i cula de helicidad izquierda tiene helicidad derecha. Dentro de los errores experimentales actuales se puede afirmar que en la naturaleza solo se ha observado el neutrino izquierdo y su correspondiente antineutrino derecho.
+
+Para $m\neq0$, tenemos de la ecs.~\eqref{eq:207} y \eqref{eq:212} (ver ec.~\eqref{eq:217})
+\begin{align}
+  E\psi_L+\boldsymbol{\sigma}\cdot\mathbf{p}\psi_L &=m\psi_R\nonumber\\
+  E\psi_R-\boldsymbol{\sigma}\cdot\mathbf{p}\psi_R&=m\psi_L
+\end{align}
+Entonces
+\begin{align}
+  \label{eq:219}
+  \left(\frac{E+\boldsymbol{\sigma}\cdot\mathbf{p}}{m}\right)\psi_L&=\psi_R\nonumber\\
+  \left(\frac{E-\boldsymbol{\sigma}\cdot\mathbf{p}}{m}\right)\psi_R&=\psi_L\,.
+\end{align}
+En este caso sin embargo, la helicidad no esta bien definida y s\'olo podemos afirmar que $\psi_L$ corresponde a la soluci\'on que tiene mayor probabilidad de ser izquierda que derecha. Para calcular dicha probabilidad es necesario especificar los espinores $u_{L,R}$ (ver \cite{cottingham}, Cap\'\i tulo 6). El resultado es que la probabilidad de que $\psi_{R}$ sea derecho se obtiene de
+\begin{align}
+  \boldsymbol{\sigma}\cdot\mathbf{p}|\psi_{R}\rangle&=+\frac{1}{2}\left(1+\frac{v}{c}\right)|\psi_{R}\rangle\to 
+  \begin{cases}
+    +|\psi_{R}\rangle & v\to c\quad\text{(relativistic)}\\
+    +\frac{1}{2}|\psi_{R}\rangle & v\to 0 \quad\text{(non-relativistic)}
+  \end{cases}\nonumber\\
+  \boldsymbol{\sigma}\cdot\mathbf{p}|\psi_{L}\rangle&=-\frac{1}{2}\left(1-\frac{v}{c}\right)|\psi_{R}\rangle
+\end{align}
+mientras que la probabilidad de que sea izquierdo se obtiene de
+\begin{align}
+\label{eq:259}
+  \boldsymbol{\sigma}\cdot\mathbf{p}|\psi_{R}\rangle&=+\frac{1}{2}\left(1-\frac{v}{c}\right)|\psi_{R}\rangle\nonumber\\
+  \boldsymbol{\sigma}\cdot\mathbf{p}|\psi_{L}\rangle&=-\frac{1}{2}\left(1+\frac{v}{c}\right)|\psi_{R}\rangle
+\end{align}
+
+Si en un decaimiento $\beta$ solo se emiten electrones izquierdos, el grado de polarizaci\'on del electr\'on emitido es, usando la ec.~\eqref{eq:259}
+\begin{align}
+   \langle \psi_R|\boldsymbol{\sigma}\cdot\mathbf{p}|\psi_R\rangle+ \langle \psi_L|\boldsymbol{\sigma}\cdot\mathbf{p}|\psi_L\rangle
+=&+\frac{1}{2}\left(1-\frac{v}{c}\right)-\frac{1}{2}\left(1+\frac{v}{c}\right)=-\frac{v}{c}
+\end{align}
+El grafico de polarizaci\'on versus $-v/c$, \cite{cottingham} (\S9.1), debe corresponder a una l\'\i nea recta de pendiente $45^\text{o}$. Si s\'olo se emiten electrones derechos ser\'\i a
+\begin{align}
+  +\frac{1}{2}\left(1+\frac{v}{c}\right)-\frac{1}{2}\left(1-\frac{v}{c}\right)=\frac{v}{c}
+\end{align}
+Mientras que si se emiten por igual electrones derechos e izquierdos la polarizaci\'on total ser\'\i a cero.
+
+Las soluciones en ec.~\eqref{eq:219} puden ser intercambiadas por $\psi_L\to -\psi_R$. Esto se puede ver como una transformaci\'on de paridad definida por
+\begin{align}
+  \mathbf{r}&\to-\mathbf{r}& t&\to t& \psi_L\leftrightarrow \psi_R\,.
+\end{align}
+De aqu\'\i{} el nombre de la transformaci\'on. Como $\hat{\mathbf{p}}=-i\boldsymbol{\nabla}$ y $\mathbf{L}=\mathbf{r}\times\mathbf{p}$, entonces
+\begin{align}
+  \mathbf{p}&\to-\mathbf{p}& \mathbf{L}\to\mathbf{L}\,,
+\end{align}
+Entonces es de esperarse que el momentum angular intr\'\i nseco, transforme como el momentum angular, y
+\begin{align}
+  \mathbf{S}&\to \mathbf{S}\Rightarrow& \boldsymbol{\sigma}\to\boldsymbol{\sigma}\,.
+\end{align}
+Bajo la transformaci\'on de paridad
+\begin{align}
+   \mathbf{p}&\to-\mathbf{p}& \boldsymbol{\sigma}&\to \boldsymbol{\sigma}& \psi_L\leftrightarrow &\psi_R\,,
+\end{align}
+Las ecuaciones \eqref{eq:219} quedan invariantes. Adem\'as bajo dicha transformaci\'on
+\begin{align}
+  \sigma^\mu\partial_\mu=\sigma^0\partial_0+\boldsymbol{\sigma}\cdot\boldsymbol{\nabla}\to \sigma^0\partial_0-\boldsymbol{\sigma}\cdot\boldsymbol{\nabla}=\bar{\sigma}^\mu\partial_\mu
+\end{align}
+de modo que el Lagrangiano correspondiente, dado en la ec.~\eqref{eq:200} tambi\'en es invariante bajo la transformaci\'on de paridad
+\begin{align}
+  \sigma^\mu\partial_\mu\to& \bar{\sigma}^\mu\partial_\mu &\psi_L\leftrightarrow &\psi_R
+\end{align}
+
+
 
 \chapter{Soluciones a la ecuación de Dirac}
-\label{cha:fermiones}
+\label{cha:dfermiones}
 %instiki:
 %instiki:***
 %instiki:

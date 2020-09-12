@@ -1133,95 +1133,9 @@ Además, el Lagrangiano libre se puede reescribir como la suma de cuatro lagrang
 
 
 
-\begin{subappendices}
+% \begin{subappendices}
 
-
-\section{Lagrangiano para el campo vectorial}
-\begin{frame}[fragile,allowframebreaks]
-Ya estamos en capacidad de responder la siguiente pregunta: ¿Cual es el Lagrangiano más general posible para el campo de cuatro componentes $A^{\mu}(x)$ compatible con la invarianza de Lorentz 
-
-Las correspondientes transformaciones son
-
-\begin{align}
-  A^\mu(x)\to {A'}^\mu(x')={\Lambda^\mu}_\nu A^\nu(\Lambda^{-1}x)\,.
-\end{align}
-
-Además, tenemos la ec.\eqref{eq:aphicov}:
-\begin{align}
-\label{eq:172qft}
-  A^\mu\to{A'}^\mu=A^\mu-\partial^\mu\chi(x)\;.
-\end{align}
-
-
-
-
-Definiendo
-\begin{align*}
-  F^{\mu\nu}&=\partial^\mu A^\nu-\partial^\nu A^\mu\\
-  G^{\mu\nu}&=\partial^\mu A^\nu+\partial^\nu A^\mu\\
-\end{align*}
-El Lagrangiano que da lugar a una Acción invariante de Lorentz para el cuadrivector $A^\mu$
-es, hasta derivadas totales y potencias en los campos de hasta dimensión 4:
-\begin{align}
-  \mathcal{L}=&-\frac{1}{4}F^{\mu\nu}F_{\mu\nu}-\frac{1}{4}G^{\mu\nu}G_{\mu\nu}-\frac{1}{2}F^{\mu\nu}G_{\mu\nu}\nonumber\\
-&-J^\mu A_\mu+
- \frac{1}{2}m^2A^\mu A_\mu +\lambda_1\partial_\nu A^\nu(x) A_\mu(x) A^\mu(x)+\lambda_2 A^\mu A_\mu A^\nu A_\nu\nonumber\\
-&+\lambda_3 F^{\mu\nu}(x)A_\mu(x) A_\nu(x)+\lambda_4G^{\mu\nu}(x)A_\mu(x) A_\nu+\cdots
-  \label{eq:lagAmu}
-\end{align}
-\end{frame}
-
-\begin{itemize}
-\item \textbf{Ejercicio:} Show that terms like $\partial^\mu A^\nu(x)\partial_\mu A_\nu(x)$, and hence $F^{\mu\nu}F_{\mu\nu}$, transforms as
-  \begin{align}
-    \partial^\mu A^\nu\left(\Lambda^{-1}x\right)\partial_\mu A_\nu\left(\Lambda^{-1}x\right)
-  \end{align}
-Hint: use the Lorentz transformation properties of $\partial_\mu$ in eq.~\eqref{dmulrtran}.
-\end{itemize}
-In the case of $J^\mu A_\mu$:
-\begin{align}
-  J^\mu(x)A_\mu(x)\to g_{\mu\nu}{J'}^\mu(x){A'}^\nu(x)=& g_{\mu\nu}{\Lambda^\mu}_\rho J^\rho\left(\Lambda^{-1}x\right){\Lambda^\nu}_\sigma A^\sigma\left(\Lambda^{-1}x\right)\nonumber\\
-=& {\Lambda^\mu}_\rho g_{\mu\nu}{\Lambda^\nu}_\sigma J^\rho\left(\Lambda^{-1}x\right)A^\sigma\left(\Lambda^{-1}x\right)\nonumber\\
-=& g_{\rho\sigma}J^\rho\left(\Lambda^{-1}x\right)A^\sigma\left(\Lambda^{-1}x\right)\,,
-\end{align}
-in the case $\partial_\nu A^\nu(x) A_\mu(x) A^\mu(x)$:
-\begin{align}
-   \partial_\nu A^\nu(x) A_\mu(x) A^\mu(x)\to {\partial'}_\nu{A'}^\nu(x') {A'}_\mu(x') {A'}^\mu(x')=& {\left(\Lambda^{-1}\right)^\sigma}_\nu{\Lambda^\nu}_\rho\partial_\sigma A^\rho\left(\Lambda^{-1}x\right) A_\mu\left(\Lambda^{-1}x\right) A^\mu\left(\Lambda^{-1}x\right)\nonumber\\
-=& \delta^\sigma_\rho\partial_\sigma A^\rho\left(\Lambda^{-1}x\right) A_\mu\left(\Lambda^{-1}x\right) A^\mu\left(\Lambda^{-1}x\right)\nonumber\\
-=& \partial_\rho A^\rho\left(\Lambda^{-1}x\right) A_\mu\left(\Lambda^{-1}x\right) A^\mu\left(\Lambda^{-1}x\right)\,,\nonumber\\
-\end{align}
-and similarly for the other terms. Under a Lorentz transformation the full Lagrangian transform as
-\begin{align}
-  \mathcal{L}(x)\to\mathcal{L}'(x)=\mathcal{L}(\Lambda^{-1}x) 
-\end{align}
-Since the Action involves the integration over all the points, it is invariant under the Lorentz transformation. The $J^\mu(x)$ does not involves the introduction a new vector field, because it will be identified later as the 4--current.
-
-
-Terms like
-\begin{align}
-  K_\nu A^\nu(x) A_\mu(x) A^\mu(x)\,,
-\end{align}
-(for $K_\nu$ constant) are not Lorentz invariant:
-\begin{align}
-  K_\nu A^\nu(x) A_\mu(x) A^\mu(x)\to K_\nu{A'}^\nu(x) {A'}_\mu(x) {A'}^\mu(x)=& K_\nu{\Lambda^\nu}_\rho A^\rho\left(\Lambda^{-1}x\right) A_\mu\left(\Lambda^{-1}x\right) A^\mu\left(\Lambda^{-1}x\right)\,.
-\end{align}
-$K_\nu(x)A^\nu(x)A_\mu(x)A^\mu(x)$ is Lorentz invariant %but not gauge-invariant (see below).
-
-
-
-
-%\begin{frame}[fragile,allowframebreaks]
-% The field $A^\mu(x)$ transforms simultaneously as field and as vector under Lorentz transformation
-% \begin{align}
-%   A^\mu(x)\to {A'}^\mu(x')={\Lambda^\mu}_\nu A^\nu(\Lambda^{-1}x)\,.
-% \end{align}
-% \end{frame}
-
-
-
-
-
-\end{subappendices}
+% \end{subappendices}
 
 
 
