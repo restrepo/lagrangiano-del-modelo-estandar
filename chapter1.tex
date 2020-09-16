@@ -1591,8 +1591,23 @@ Lo que esto significa es que de ahora en adelante los valores de estas constante
      N_{\text{A}}=&\SI{6.022 140 76E23}{mol^{-1}}\,.  
 \end{align*}
 
-El error se pasa a la medida de la correspondiente cantidad SI.
+El error se pasa a la medida de la correspondiente cantidad SI. Ver \url{https://pdg.lbl.gov/2019/reviews/rpp2018-rev-phys-constants.pdf}:
+\begin{quote}
+  \begin{itemize}
+  \item[s:]  The second, symbol $\SI{}{s}$, is the SI unit of time. It is defined by taking the fixed numerical value of the caesium frequency $\Delta\nu_{\text{Cs}}$, the unperturbed ground-state hyperfine transition frequency of the caesium-133 atom, to be $\SI{9 192 631 770}{}$ when expressed in the unit $\SI{}{Hz}$, which is equal to $\SI{}{s}^{-1}$
+  \item[m:] The meter, symbol $\SI{}{m}$, is the SI unit of length. It is defined by taking the fixed numerical value of the speed of light in vacuum $c$  to be $\SI{ 299 792 458 }{}$  when expressed in the unit $\SI{}{m\,s^{-1}}$, where the second is defined in terms of the caesium frequency $\Delta\nu_{\text{Cs}}$.
+  \item[kg:] The kilogram, symbol $\SI{}{kg}$, is the SI unit of mass. It is defined by taking the fixed numerical value of the Planck constant $h$ to be $\SI{ 6.62607015E-34 }{}$ when expressed in the unit $\SI{}{J\,s}$, which is equal to $\SI{}{Kg\, m^2\,s^{-1}}$ , where the meter and the second are defined in terms of $c$ and $\Delta\nu_{\text{Cs}}$.
+  \item[...]
+  \end{itemize}
+\end{quote}
+
+
+
+
+
 \end{frame}
+
+
 
 Las constantes físicas que suelen normalizarse se escogen del conjunto dado por la ec.~\eqref{eq:144} y
 \begin{equation}
@@ -1600,16 +1615,16 @@ Las constantes físicas que suelen normalizarse se escogen del conjunto dado por
   e,\qquad m_e,\qquad m_p.
 \end{equation}
 \begin{frame}[fragile,allowframebreaks]
-Teniendo en cuenta que $1\,\text{eV}=1.602\;176\;565(35)\times10^{-19}\,\text{J}$,
+Teniendo en cuenta que $1\,\text{eV}=1.602\;176\;634\times10^{-19}\,\text{J}$ (exact), 
 \begin{align}
-  10^{-9}\,\text{GeV}=&1.602\;176\;565(35)\times10^{-19}\,\text{J}\nonumber\\
-  1\,\text{GeV}=&1.602\;176\;565(35)\times10^{-10}\,\text{J}
+  10^{-9}\,\text{GeV}=&1.602\;176\;634\times10^{-19}\,\text{J}\nonumber\\
+  1\,\text{GeV}=&1.602\;176\;634\times10^{-10}\,\text{J}
 \end{align}
 De la masa en reposo del protón, por ejemplo, 
 \begin{align*}
-  m_pc^2=&\SI{1.672621777 +- 0.000000074E-27}{kg}\times (\SI{299792458}{ms^{-1}})^2\nonumber\\
-  =&\SI{1.5032775e-10}{J}\frac{\SI{1}{GeV}}{\SI{1.602176565 +- .000000035E-10}{J}}\nonumber\\
-  =&\SI{938.272046+-21}{MeV}/c^2\,,
+  m_pc^2=&\SI{1.67262192369 +- 0.00000000051E-27}{kg}\times (\SI{299792458}{ms^{-1}})^2\nonumber\\
+  =&\SI{1.503277615985e-10}{J}\frac{\SI{1}{GeV}}{\SI{1.60217634E-10}{J}}\nonumber\\
+  =&\SI{938.27208816+-0.00000029}{MeV}/c^2\,,
 \end{align*}
 podemos obtener la equivalencia entre masa y energía en unidades naturales: $c=1$
 \begin{align}
@@ -1640,21 +1655,21 @@ Teniendo en cuenta que \cite{PDG}
 \end{equation}
 podemos obtener la relación entre longitud y energía a partir de
 \begin{align}
-  \hbar c=&1.054\;571\;68(53)\times10^{-34}\,\text{J}\,\text{s}\times299\;792\;450\,\text{m}\,\text{s}^{-1} \nonumber\\
+  \hbar c=&1.054\;571\;817\times10^{-34}\,\text{J}\,\text{s}\times299\;792\;458\,\text{m}\,\text{s}^{-1} \nonumber\\
   \approx&3.161\;526\;28\times10^{-26}\,\text{J}\,\text{m}\nonumber\\
-  \approx&3.161\;526\;28\times10^{-26}\,{\text{J}}\frac{1\,\text{GeV}}{1.602\;176\;487\times10^{-10}\,\text{J}}\,\text{m}\nonumber\\
-  =&1.973\;269\;631(49)\times10^{-16}\,\text{GeV}\,\text{m}.
+  \approx&3.161\;526\;28\times10^{-26}\,{\text{J}}\frac{1\,\text{GeV}}{1.602\;176\;634\times10^{-10}\,\text{J}}\,\text{m}\nonumber\\
+  =&1.973\;269\;804\times10^{-16}\,\text{GeV}\,\text{m}.
 \end{align}
-Entonces $\hbar c =0.1973\;269\;631(49)\,\text{GeV}\,\text{fm}$.
+Entonces $\hbar c =0.1973\;269\;804\,\text{GeV}\,\text{fm}$.
 
 podemos obtener la relación entre el tiempo y la energía de
 \begin{equation}
-  \hbar\equiv\frac{h}{2\pi}=1.054\;571\;68(53)\times10^{-34}\,\text{J}\,\text{s}
-  =6.582\;118\;99(16)\times10^{-25}\,\text{GeV}\,\text{s},
+  \hbar\equiv\frac{h}{2\pi}=1.054\;571\;817\times10^{-34}\,\text{J}\,\text{s}
+  =6.582\;119\;569\times10^{-25}\,\text{GeV}\,\text{s},
 \end{equation}
 Similarmente para la relación entre temperatura y energía, tenemos de la constante de Boltzman
 \begin{equation}
-  k=1.380\;6504(24)\times10^{-23}\,\text{J}\,\text{K}^{-1}=8.617\;343(15)\times10^{-14}\,\text{GeV}\,\text{K}^{-1}.
+  k=1.380\;649\times10^{-23}\,\text{J}\,\text{K}^{-1}=8.617\;333\;262\times10^{-14}\,\text{GeV}\,\text{K}^{-1}.
 \end{equation}
 
 
@@ -1664,19 +1679,19 @@ Los factores de conversión del sistema MKS a MPU están dados en la Tabla~\ref{
   \centering %noinstiki
   \begin{tabular}{c|c} %noinstiki
 %instiki:
-$6.582\;118\;99(16)\times10^{-25}\,\text{s}$ & $ {\hbar}\,\text{GeV}^{-1}$\\\hline
+$6.582\;119\;569\times10^{-25}\,\text{s}$ & $ {\hbar}\,\text{GeV}^{-1}$\\\hline
 %instiki:
-$1.973\;269\;631(49)\times10^{-16}\,\text{m}$ & $ {\hbar c}\,\text{GeV}^{-1} $\\ \hline
+$1.973\;269\;804\times10^{-16}\,\text{m}$ & $ {\hbar c}\,\text{GeV}^{-1} $\\ \hline
 %instiki:
-1\,kg& $5.609\;589\;12(42)\times10^{26}\,\text{GeV}/c^2$ \\ \hline
+1\,kg& $5.609\;588\;603\times10^{26}\,\text{GeV}/c^2$ \\ \hline
 %instiki:
-1\,K & $8.617\;343(15)\times10^{-14}/k\,\text{GeV}$\,\\ \hline
-$299\;792\;450\,\text{m}\,\text{s}^{-1}$&$c$\\ \hline
+1\,K & $8.617\;333\;262\times10^{-14}/k\,\text{GeV}$\,\\ \hline
+$299\;792\;458\,\text{m}\,\text{s}^{-1}$&$c$\\ \hline
 %instiki:
 m\,kg&$2.842\;278\,859\times10^{-16}\hbar\,c^{-1}$\\ \hline
 %instiki:
   \end{tabular} %noinstiki
-  \caption{SI $\leftrightarrow$ MPU} %noinstiki
+  \caption{SI $\leftrightarrow$ MPU (exact)} %noinstiki
   \label{tab:mks2mpu} %noinstiki
 \end{table} %noinstiki
 
