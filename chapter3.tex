@@ -76,7 +76,7 @@ que el campo escalar transforma bajo una transformación de Lorentz como
 
 
 \begin{frame}[fragile,allowframebreaks]
-Para comprobar la invarianza de Lorentz de la Acción para el campo escalar, necesitamos las propiedades de transformación para $\partial_\mu$ dada por la ec.~\eqref{dmulrtran}
+Para comprobar la invarianza de Lorentz de la Acción para el campo escalar, necesitamos las propiedades de transformación para $\partial_\mu$ dada por la ec.~\eqref{eq:dmulrtran}, que reproducimos a continuación
 \begin{align}
   {\left(\Lambda^{-1}\right)^\mu}_\alpha{x'}^\alpha=&{\left(\Lambda^{-1}\right)^\mu}_\alpha{\Lambda^\alpha}_\nu x^\nu\nonumber\\
 =&\delta^\mu_\nu x^\nu\nonumber\\
@@ -92,8 +92,7 @@ o
 \end{align}
 de modo que la transformación de Lorentz para $\partial_\mu=\partial/\partial x^\mu$, es
 \begin{align}
-  \label{dmulrtran}
-   \frac{\partial}{{\partial x'}^\mu}=& {\left(\Lambda^{-1}\right)^\nu}_\mu\frac{\partial}{\partial x^\nu}\nonumber\\
+     \frac{\partial}{{\partial x'}^\mu}=& {\left(\Lambda^{-1}\right)^\nu}_\mu\frac{\partial}{\partial x^\nu}\nonumber\\
    {\partial\,}'_\mu=& {\left(\Lambda^{-1}\right)^\nu}_\mu\partial_\nu\,,
 \end{align}
 Podemos ahora demostrar que la Acción obtenida del Lagrangiano en la ec.\eqref{eq:Lpr} es invariante bajo transformaciones de Lorentz haciendo uso de la ec.~(\ref{eq:Lambdacontra}). Para hacer la demostración más general, podemos agregar una función general que solo dependa del campo $\phi$ pero no de sus derivadas, $V(\phi)$
@@ -194,13 +193,10 @@ donde $f(\phi)$ es una función de campos escalar real $\phi$. Si $V(\phi)$ es u
   \mathcal{L}=\frac{1}{2}\partial_\mu\phi\partial^\mu\phi-\frac{1}{2}m^2\phi^2-\frac{1}{4}\lambda\phi^4-a\phi+b\phi^3.
 \end{equation}
 
-En asencia de fuentes $a=c=d=0$ en la ec.~\eqref{eq:fullV}, y usando las
+En asencia de fuentes $\lambda=a=b=0$ en la ec.~\eqref{eq:wavelag}, y usando las
 ecuaciones de Euler-Lagrange \eqref{eq:eelcallfmu}, se obtiene
 \begin{align}
-  (\hat{p}_\mu\hat{p}^\mu-m^2)\phi&=0\nonumber\\
-  \label{eq:k-gpmu} %noinstiki
-(\hat{E}^2-\hat{\mathbf{P}}^2-m^2)\phi&=0\\
-\label{eq:kg} 
+  \label{eq:kg} 
   (\Box+m^2)\phi&=0,
 \end{align}
 donde
@@ -208,7 +204,13 @@ donde
   \label{eq:dalambertiano}
   \Box\equiv\partial_\mu\partial^\mu=\frac{\partial^2}{\partial t^2}-\nabla^2. 
 \end{equation}
-Es el D'Alembartiano~\cite{daelembertiano}. 
+Es el D'Alembartiano~\cite{daelembertiano}.
+Comparando con la ec.~\eqref{eq:waveec} podemos reescribir la ec.~\eqref{eq:kg} en términos del operador de cuadrimomentum como
+\begin{align}
+  (\hat{p}_\mu\hat{p}^\mu-m^2)\phi&=0\nonumber\\
+  \label{eq:k-gpmu} %noinstiki
+(\hat{E}^2-\hat{\mathbf{P}}^2-m^2)\phi&=0\\
+\end{align}
 Ec.~\eqref{eq:k-gpmu} %noinstikiEc.~\eqref{eq:kg}
 corresponde a la forma de operadores de la
 ecuaci\'on de energ\'\i a-momentum relativista. La
@@ -455,26 +457,22 @@ In summary we have the following Lorentz's transformation properties for the fie
 \begin{align}
    \phi(x)\to \phi'(x)=&\phi(\Lambda^{-1}x) && \text{Scalar field,}\nonumber\\
    A^\mu(x)\to {A'}^\mu(x)=&{\Lambda^\mu}_\nu A^\nu(\Lambda^{-1}x)&&\text{Vector field,}\nonumber\\
-  \psi_\alpha(x)\to\psi'_\alpha(x)=&{\left[ S(\Lambda) \right]_\alpha}^\beta\psi_\beta(\Lambda^{-1}x)
-&& \text{Left-handed spinor field,}\nonumber\\
-  {\psi}_{\dot{\alpha}}^{\dagger}(x)\to  {\psi'}_{\dot{\alpha}}^{\dagger}(x)=&
-\psi_{\dot{\beta}}^{\dagger}(\Lambda^{-1}x){\left[{S^{\dagger}(\Lambda)}\right]^{\dot{\beta}}}_{\dot{\alpha}}&& \text{Rigth-handed anti-spinor field,}\,,
+  \partial_{\mu}\to {\partial\,}'_\mu=& \partial_\nu{\left(\Lambda^{-1}\right)^\nu}_\mu &&\text{Full derivative,}\nonumber\\
+  \xi_\alpha(x)\to\xi'_\alpha(x)=&{\left[ S(\Lambda) \right]_\alpha}^\beta\xi_\beta(\Lambda^{-1}x)
+                           && \text{Left-handed Weyl spinor field,}\nonumber\\
+  \eta^{\alpha}(x)\to {\eta'}^{\alpha}(x) =&\eta^\beta(\Lambda^{-1}x){\left[  S^{-1}(\Lambda)  \right]_{\beta}}^{\alpha} && \text{Left-handed  Weyl anti-spinor field}\,.
  \end{align}
 \end{frame}
-
+Con los correspondientes (anti)espinores derechos ($\xi_{\dot{\alpha}}^{*}=\left( \xi_\alpha \right)^{*}$) $\eta^{* \dot{\alpha}}=\left( \eta^{\alpha} \right)^{*}$.  Para facilitar la notación, en adelante denotaremos un espinor de Weyl genérico con el símbolo ($\psi_{\alpha}$) $\psi^{\alpha}$ y el conjugador del espinor con el símbolo: $\dagger$.
 
 
 
 En lo siguiente usaremos la notación con puntos y sin puntos para los espinores de Lorentz, pero no su forma matricial.
 \begin{frame}[fragile,allowframebreaks]
-Hay otras dos representaciones adicionales del grupo de Lorentz: $\left( S^{-1}
-\right)^T$ and $\left( S^{-1} \right)^{\dagger}$, pero estas son equivalentes a las representaciones $\left( \frac{1}{2},0 \right)$ y  $\left(
-  0,\frac{1}{2}\right)$  respectivamente.
-Los espinores que transforman bajo estas representaciones tienen los índices arriba,
-  $\psi^{\alpha}$ and $\psi^{\dagger\dot{\alpha}}$, con las leyes de transformación
+Para los espinores conjugados tenemos que
 \begin{align}
-  \psi^{\alpha}\to {\psi'}^{\alpha}=&{\left[ \left( S^{-1} \right)^T \right]^{\alpha}}_{\beta}\psi^{\beta}\nonumber\\
-  \psi^{\dagger\dot{\alpha}}\to {\psi'}^{\dagger\dot{\alpha}}=&\psi^{\dagger\dot{\beta}}{\left[ \left( S^{-1} \right)^\dagger \right]^{\dot{\alpha}}}_{\dot{\beta}}\,,
+  \psi_{\dot{\alpha}}^{\dagger}(x)\to {\psi'}_{\dot{\alpha}}^{\dagger}=\psi_{\dot{\beta}}^{\dagger}\left( \Lambda^{-1}x \right)&{\left[ \left( S^{\dagger} \right)^T \right]_{\beta}}^{\alpha}\nonumber\\
+    \psi^{\dagger\dot{\alpha}}(x)\to {\psi'}^{\dagger\dot{\alpha}}(x)=&{\left[ \left( S^{-1}(\Lambda) \right)^\dagger \right]^{\dot{\alpha}}}_{\dot{\beta}}\psi^{\dagger\dot{\beta}}\left( \Lambda^{-1}x \right) \nonumber\\
 \end{align}
 donde
 \begin{align}
@@ -499,8 +497,11 @@ and similarmente el producto escalar de dos anti-espinores como
 =&\psi^{\dagger}\psi^{\dagger}\,.
 \end{align}
 \end{frame}
-To construct Lorentz invariant Lagrangians, one needs to first combine products of spinors to make objects that transforms as Lorentz tensors.
-When constructing Lorentz  tensors from fermion fields the lowered indices must only be contracted with raised indices following the same convention established in eq.~(\ref{eq:conven}). A contravariant  Lorentz tensor of rank $(n\times n)$  in this space must have an index structure with $n$ undotted (dotted) indices follow by $n$ dotted (undotted) indices, as for example,   $\alpha_1\alpha_2\ldots\alpha_n\dot{\alpha}_1\dot{\alpha}_2\ldots\dot{\alpha}_n$.
+Para construir una Acción invariante de Lorentz, uno necesita primero combinar productos de espinores para obtener objetos que transformen como tensores de Lorentz.
+
+Cuando se construyan tensores de Lorentz a partir e campos fermiónicos, los subíndices sólo se deben contraer con superíndices siguiendo
+la misma conveción que la establecida en la eq.~(\ref{eq:conven}). 
+To construct Lorentz invariant Lagrangians, one needs to first combine products of spinors to make objects that transforms as Lorentz tensors. Un tensor contravariante de Lorentz de rango  $(n\times n)$ en este espacio debe tener una estructura de índices con $n$ indicies sin puntos (con puntos) seguidos por $n$ indices con puntos (sin puntos), como por ejemplo,   $\alpha_1\alpha_2\ldots\alpha_n\dot{\alpha}_1\dot{\alpha}_2\ldots\dot{\alpha}_n$. El caso más es cuadrivector de matrices $2\times2$ que en el espacio interno sería un tensor de rango dos con índices $\overline{\sigma}^{\mu \alpha\dot{\alpha}}$.
 
 
 \section{Lagrangiano fermiónico}
@@ -536,13 +537,14 @@ un campo que se vea afectado por las transformaciones de Lorentz. Por consiguien
 %\end{document}
 
 \begin{frame}[fragile,allowframebreaks]
-We could need a new representation acting in and internal space upon a
-two-component field $\psi_a$ ($a=1,2$). An Action with a Lagrangian term linear in the derivatives, could be Lorentz invariant if, taking into account the convention in eq.~(\ref{eq:conven}) and the dotted-undotted structure of the tensor in this internal space, we have that if $a^{\mu}$ is to be a 2th rank tensor of the internal space, it must have components, e.g, $\left( a^{\mu} \right)^{\dot{\alpha}\beta}$. Therefore, a posible Lorentz invariant with a single derivative could be 
+  La mínima posibilidad es usar un objeto de dos componentes en el espacio definido por uno de los subgrupos
+  de Lorentz $\operatorname{SL}(2,C)$. Es decir, necesitamos un campo
+  de dos componentes $\psi_{\alpha}$, $(\alpha=1,2)$. An Action with a Lagrangian term linear in the derivatives, could be Lorentz invariant if, taking into account the convention in eq.~(\ref{eq:conven}) and the dotted-undotted structure of the tensor in this internal space, we have that if $a^{\mu}$ is to be a 2th rank tensor of the internal space, it must have components, e.g, $\left( a^{\mu} \right)^{\dot{\alpha}\beta}$. Therefore, a posible Lorentz invariant with a single derivative could be 
  \begin{align}
    {\psi}^{\dagger}(x)a^\mu\partial_\mu\psi(x)\to  {\psi'}^{\dagger}(x)a^\mu\partial'_\mu\psi'(x)
 &={\psi'}^{\dagger}_{\dot{\alpha}}(\Lambda^{-1}x)a^{\mu\dot{\alpha}\gamma}{\left(\Lambda^{-1}\right)^\rho}_\mu\partial_\rho \psi'_{\gamma}(\Lambda^{-1}x)\,,
 \end{align}
-with the first letters of the Greek alphabet are used to denote the indices of the internal Lorentz space, and the others the external one.
+cowith the first letters of the Greek alphabet are used to denote the indices of the internal Lorentz space, and the others the external one.
 Para suavizar la notación, vamos a ignorar en adelante la dependencia en las coordenadas transformadas las cuales serán integradas en el cálculo de la Acción
 \begin{align}
 {\psi}^{\dagger}a^\mu\partial_\mu\psi\to  {\psi'}^{\dagger}(x)a^\mu\partial_\mu\psi'

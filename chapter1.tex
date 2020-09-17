@@ -1966,7 +1966,7 @@ o
 \end{align}
 de modo que la transformación de Lorentz para $\partial_\mu=\partial/\partial x^\mu$, es
 \begin{align}
-  \label{dmulrtran}
+  \label{eq:dmulrtran}
    \frac{\partial}{{\partial x'}^\mu}=& {\left(\Lambda^{-1}\right)^\nu}_\mu\frac{\partial}{\partial x^\nu}\nonumber\\
    {\partial\,}'_\mu=& {\left(\Lambda^{-1}\right)^\nu}_\mu\partial_\nu\,.
 \end{align}
@@ -2146,6 +2146,7 @@ y, por ejemplo:
 \end{align}
 Podemos ver que las transformaciónes de Lorentz para un boost en $x$, dan lugar a una de las matrices de boost que definen el grupo de Lorentz, $\operatorname{SO}(1,3)$, dadas en la ec.~\eqref{eq:Lximunu}. En efecto, el ${\Lambda^\mu}_{\nu}$ definido en la ec.~\eqref{eq:147} satisface la condición en ec.~\eqref{eq:lrinv}, 
 \begin{align}
+  \label{eq:boostx}
   \Lambda^T g \Lambda=&\begin{pmatrix}
     \cosh\xi&\sinh\xi&0&0\\
     \sinh\xi&\cosh\xi&0&0\\
@@ -2187,6 +2188,35 @@ Podemos ver que las transformaciónes de Lorentz para un boost en $x$, dan lugar
 \end{frame}
 
 \textbf{Ejercicio:} Muestre que bajo los cambios $\xi\to i\theta$ y $t\to it$, la transformación de Lorentz se puede escribir como una matriz de rotación convencional.
+
+Otro ejemplo de transformación de Lorentz, que satisface la misma condición \eqref{eq:boostx}, es la rotación del plano $x-y$ alrededor del eje $z$
+\begin{align}
+    \left\{x^\mu\right\}=\begin{pmatrix}
+    t\\
+    x\\
+    y\\
+    z
+  \end{pmatrix}\to
+  \begin{pmatrix}
+    t'\\
+    x'\\
+    y'\\
+    z'
+  \end{pmatrix}= 
+  \begin{pmatrix}
+    1     &0&0&0\\
+    0     &\cos\theta&\sin\theta&0\\
+    0     & -\sin\theta  &\cos\theta&0\\
+    0     &  0  &0&1
+  \end{pmatrix}
+  \begin{pmatrix}
+    t\\
+    x\\
+    y\\
+    z
+  \end{pmatrix}
+=\left\{{\Lambda^\mu}_{\nu}\right\}\left\{x^\nu\right\}.
+\end{align}
 
 Note que el orden de los índices es importante porque, recuperando la dependencias en el parámetro de transformación
 \begin{align}
@@ -2282,7 +2312,7 @@ Entonces, para un cuadrivector $J^{\mu}$
   \label{eq:ecncontiJ}
   \partial_\mu J^\mu=\frac{\partial J^0}{\partial t}+\boldsymbol{\nabla}\cdot\boldsymbol{J}
 \end{equation}
-Esta expresión es conocida como la ecuaci\'on de continuidad $\partial_\mu J^\mu=0$, y al provenir de un producto escalar entre dos cuadrivectores resulta ser un invariante de Lorentz.
+Esta expresión da lugar a la ecuación de continuidad $\partial_\mu J^\mu=0$, y al provenir de un producto escalar entre dos cuadrivectores resulta ser un invariante de Lorentz.
 El operador cuadrático es, usando la ec.~\eqref{eq:146}
 \begin{equation}
   \label{eq:dalambertian}
@@ -2330,7 +2360,7 @@ La interpretación correcta se debe hacer en el marco de la Teoría Cuántica de
 
 \subsubsection{Ecuaciones de Maxwell en términos de cuarivectores}
 
-Ecuaciones homog\'eneas:
+Ecuaciones homogéneas:
 \begin{align}
   \label{eq:hom_m_eq}
   \boldsymbol{\nabla}\cdot\mathbf{B}&=0,&\boldsymbol{\nabla}\times\mathbf{E}+\frac{\partial\mathbf{B}}{\partial t}&=0
@@ -2348,7 +2378,7 @@ Tomando la divergencia en esta expresi\'on tenemos
 \begin{equation}
   \boldsymbol{\nabla}\cdot\mathbf{J}=0,
 \end{equation}
-que corresponde a la ecuaci\'on de continuidad \eqref{eq:conti} para $\rho$ constante
+que corresponde a la ecuación de continuidad
 \begin{equation}
   \label{eq:153}
   \frac{\partial \rho}{\partial t}+\boldsymbol{\nabla}\cdot\mathbf{J}=0.
@@ -2362,9 +2392,9 @@ Tomando la divergencia de la Ley de Amp\`ere modificada por Maxwell
 \end{equation}
 obtenemos la ecuaci\'on de continuidad \eqref{eq:153}. Dicha ecuaci\'on establece que la raz\'on de decrecimiento de la carga en un volumen arbitrario $V$ es debido precisa y \'unicamente al flujo de la corriente fuera de su superficie; de modo que la carga no puede ser creada ni destruida dentro de $V$.  Ya que $V$ puede ser arbitrariamente peque\~no esto significa que la carga el\'ectrica debe conservarse localmente.   El t\'ermino extra introducido por Maxwell est\'a motivado por un requerimiento de conservaci\'on local. 
 
-Vamos a  reescribir las ecuaciones de Maxwell en términos de cuadrivector usando el potencial escalar el\'ectrico $\phi$ y el potencia vectorial magn\'etico $\mathbf{A}$.
+Vamos a  reescribir las ecuaciones de Maxwell en términos de cuadrivector usando el potencial escalar eléctrico $\phi$ y el potencial vectorial magn\'etico $\mathbf{A}$.
 
-De hecho ecuaciones   \label{eq:phia} 
+De hecho, las ecuaciones
 \begin{align}
   \label{eq:phia}
   \mathbf{E}&=-\boldsymbol{\nabla}\phi-\frac{\partial\mathbf{A}}{\partial t}&
@@ -2458,10 +2488,10 @@ donde hemos usado que las componentes de $\mathcal{D}$ son (con índices abajo)
 \end{align}
 
 \begin{english}
-Note that the eq.~\eqref{eq:166qft} can be written as  
+Note that the eq.~\eqref{eq:aphicov} can be written as  
 \end{english}
 \begin{spanish}
-Note que la ec.~\eqref{eq:166qft} se puede escribir como
+Note que la ec.~\eqref{eq:aphicov} se puede escribir como
 \end{spanish}
 
 \begin{align}
