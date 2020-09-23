@@ -1394,7 +1394,7 @@ esta condición automáticamente incluye
 Aquí nos enfocaremos en la representaciones más simples no triviales del Grupo de Lorentz. Estas corresponde a las representaciones no equivalentes $2\times2$: $(\frac{1}{2},0)$ y $(0,\frac{1}{2})$ del grupo $\operatorname{SL}(2,C)$ con elementos 
 \begin{align}
   \label{eq:slamo}
-  S(\Lambda)_{\left( \frac{1}{2},0 \right)}=&\exp\left(-i \omega_{\mu\nu}\frac{\sigma^{\mu\nu}}{2}\right)\nonumber
+  S_{\left( \frac{1}{2},0 \right)}=&\exp\left(-i \omega_{\mu\nu}\frac{\sigma^{\mu\nu}}{2}\right)\nonumber
 \end{align}
 donde los seis generadores independientes están dados por
 \begin{align}
@@ -1476,7 +1476,7 @@ tenemos que los generadores para la representación $(\frac{1}{2},0)$ del subgru
 La ecuación \eqref{eq:slamo} se puede escribir en términos de los seis generadores independientes correspondientes a los boosts y las rotaciones
 \begin{align}
 \label{eq:SLet}
-  S(\Lambda)_{\left( \frac{1}{2},0 \right)}\equiv S(\Lambda)=
+  S_{\left( \frac{1}{2},0 \right)}\equiv S=
 \exp\left( \boldsymbol{\xi}\cdot \frac{\boldsymbol{\sigma}}{2}+i\boldsymbol{\theta}\cdot \frac{\boldsymbol{\sigma}}{2} \right)\,,
 \end{align}
 
@@ -1484,22 +1484,23 @@ La ecuación \eqref{eq:slamo} se puede escribir en términos de los seis generad
 La otra representación independiente es
 \begin{align}
 \label{eq:SLet}
-\left[S(\Lambda)\right]^{*} = S(\Lambda)_{\left(0,\frac{1}{2} \right)}\equiv S^{*}(\Lambda)=&
+\left[S\right]^{*} = S_{\left(0,\frac{1}{2} \right)}\equiv S^{*}=&
 \exp\left( \boldsymbol{\xi}\cdot \frac{\boldsymbol{\sigma}}{2}+i\boldsymbol{\theta}\cdot \frac{\boldsymbol{\sigma}}{2} \right)^{*}\nonumber\\
 =&\exp\left( \boldsymbol{\xi}\cdot \frac{\boldsymbol{\sigma}^{*}}{2}-i\boldsymbol{\theta}\cdot \frac{\boldsymbol{\sigma}^{*}}{2} \right)\,.
 \end{align}
  
-Las componentes de $S(\Lambda)$ serán denotadas como  ${\left[ S(\Lambda) \right]_{\alpha}}^{\beta}$. En tal caso, $S^{*}(\Lambda)$ es otra representación diferente $2\times 2$ de $\operatorname{SL}(2,C)$. Ésta se denota con $\left( 0,\frac{1}{2}\right)$, y con el fin de enfatizar la diferencia, sus componentes se denotan con índices acentuados con puntos  $\dot{\alpha},\dot{\beta},\cdots$. De modo que sus componentes serán denotadas como ${\left[ S^{*}(\Lambda) \right]_{\dot{\alpha}}}^{\dot{\beta}}$\,.
+Las componentes de $S$ serán denotadas como  ${\left[ S \right]_{\alpha}}^{\beta}$. En tal caso, $S^{*}$ es otra representación diferente $2\times 2$ de $\operatorname{SL}(2,C)$. Ésta se denota con $\left( 0,\frac{1}{2}\right)$, y con el fin de enfatizar la diferencia, sus componentes se denotan con índices acentuados con puntos  $\dot{\alpha},\dot{\beta},\cdots$. De modo que sus componentes serán denotadas como ${\left[ S^{*} \right]_{\dot{\alpha}}}^{\dot{\beta}}$\,.
 \end{frame}
 
 Cada uno de los dos $\operatorname{SL}(2,C)$ cubre doblemente al grupo $\operatorname{SO}(1,3)$ de la misma manera que el grupo $\operatorname{SU}(2)$ es una cobertura doble del grupo $\operatorname{SO}(3)$.
 
 \begin{frame}[fragile,allowframebreaks]
 La componentes de las matrices de Pauli se definen como $\sigma^{\mu}_{\alpha\dot{\beta}}$ y $\overline{\sigma}^{\mu\dot{\alpha}\beta}$, tal que
-\begin{align*}
+\begin{align}
+  \label{eq:smntensor}
   {\left(\sigma^{\mu \nu}\right)_{\alpha}}^{\beta} \equiv & \frac{i}{4}\left(\sigma_{\alpha \dot{\gamma}}^{\mu} \bar{\sigma}^{\nu \dot{\gamma} \beta}-\sigma_{\alpha \dot{\gamma}}^{\nu} \bar{\sigma}^{\mu \dot{\gamma} \beta}\right) \nonumber\\
 =&\frac{i}{4}{\left[\sigma^{\mu} \bar{\sigma}^{\nu}-\sigma^{\nu} \bar{\sigma}^{\mu}\right]_{\alpha}}^{\beta}\,.
-\end{align*}
+\end{align}
 
 Por ejemplo, de la ec.~\eqref{eq:sigijsi}
 \begin{align*}
@@ -2591,11 +2592,11 @@ appears to be constructed out of them.
 \end{quote}
 
 \begin{frame}[fragile,allowframebreaks]
-  Hasta ahora hemos definido la representación ${[S(\Lambda)]_{\alpha}}^{\beta}$ del subgrupo de Lorentz $(\frac{1}{2},0)$ y su correspondiente conjugado en el subgrupo $(0,\frac{1}{2})$. Para definir el producto escalar en este subespacio debemos introducir un objeto de dos componentes $\alpha=1,2$ que transforma bajo está representación el cual recibe el nombre de \emph{espinor de Weyl}~\cite{Dreiner:2008tw,Quevedo:2010ui}. Sea entonces el espinor de Weyl, $\xi_{\alpha}$, tal que
+  Hasta ahora hemos definido la representación ${[S]_{\alpha}}^{\beta}$ del subgrupo de Lorentz $(\frac{1}{2},0)$ y su correspondiente conjugado en el subgrupo $(0,\frac{1}{2})$. Para definir el producto escalar en este subespacio debemos introducir un objeto de dos componentes $\alpha=1,2$ que transforma bajo está representación el cual recibe el nombre de \emph{espinor de Weyl}~\cite{Dreiner:2008tw,Quevedo:2010ui}. Sea entonces el espinor de Weyl, $\xi_{\alpha}$, tal que
 \begin{align*}
-    \xi_{\alpha} \to \xi_{\alpha}'=&{\left[ S(\Lambda) \right]_{\alpha}}^{\beta}\xi_{\beta} \nonumber\\
+    \xi_{\alpha} \to \xi_{\alpha}'=&{S_{\alpha}}^{\beta}\xi_{\beta} \nonumber\\
   \xi_{\dot{\alpha}}^{*}\to \xi_{\dot{\alpha}}^{\prime *}
-  =&{\left[ S^{*}(\Lambda) \right]_{\dot{\alpha}}}^{\dot{\beta}}\xi_{\dot{\beta}}^{*}\,,
+  =&{\left[ S^{*} \right]_{\dot{\alpha}}}^{\dot{\beta}}\xi_{\dot{\beta}}^{*}\,,
 \end{align*}
 donde $\dot{\alpha}=\dot{1},\dot{2}$.  Los correspondientes espinores conjugados, o simplemente anti-espinores de Weyl, pertenecen a la representación $\left( 0,\frac{1}{2}\right)$ y hemos
 definido
@@ -2605,7 +2606,7 @@ definido
 En efecto
 \begin{align}
  \xi_{\dot{\alpha}}^{*}\equiv \left( \xi_{\alpha} \right)^{*} \to \left( \xi_{\alpha}' \right)^{*}=&
- \left\{ {\left[ S(\Lambda) \right]_{\alpha}}^{\beta} \right\}^{*} \left( \xi_{\beta} \right)^{*} = {\left[ S^{*}(\Lambda) \right]_{\dot{\alpha}}}^{\dot{\beta}}\xi_{\dot{\beta}}^{*}\,.
+ \left\{ {S_{\alpha}}^{\beta} \right\}^{*} \left( \xi_{\beta} \right)^{*} = {\left[ S^{*} \right]_{\dot{\alpha}}}^{\dot{\beta}}\xi_{\dot{\beta}}^{*}\,.
 \end{align}
   
 Hemos visto que usando las convenciones adecuadas podemos ahorrarnos
@@ -2614,11 +2615,11 @@ la escritura de la métrica en la definición de producto escalar.
 Para ello es necesario definir la transformación inversa asociada a
 espinores con índices arriba. Como hicimos con el caso de la cuadriderivada, vamos a introducir un espinor que tenga su índice intrínsicamente superior y que transforme con la representación inversa de $(\frac{1}{2},0)$
 \begin{align*}
-  \eta^{\alpha}\to {\eta'}^{\alpha} =&\eta^\beta{\left[  S^{-1}(\Lambda)  \right]_{\beta}}^{\alpha}\,.
+  \eta^{\alpha}\to {\eta'}^{\alpha} =&\eta^\beta{\left[  S^{-1}  \right]_{\beta}}^{\alpha}\,.
 \end{align*}
 Sacando el conjugado
 \begin{align}
- \left( \eta^{\alpha} \right)^{*}\to \left( {\eta'}^{\alpha} \right)^{*} =&\left\{ {\left[  S^{-1}(\Lambda)  \right]_{\beta}}^{\alpha} \right\}^{*} \left( \eta^\beta \right)^{*}\,.
+ \left( \eta^{\alpha} \right)^{*}\to \left( {\eta'}^{\alpha} \right)^{*} =&\left\{ {\left[  S^{-1}  \right]_{\beta}}^{\alpha} \right\}^{*} \left( \eta^\beta \right)^{*}\,.
 \end{align}
 y definiendo
 \begin{align}
@@ -2649,14 +2650,14 @@ tal que
 \begin{frame}[fragile,allowframebreaks]
 % Las dos posibilidades de vectores en $\operatorname{SL}(2,C)$, los cuales reciben el nombre de \emph{espinores de Weyl}~\cite{Dreiner:2008tw}, pueden definirse como espinores que transforman con índices arriba y espinores que transforman con índices abajo
 % \begin{align}
-% \xi_{\alpha} \to \xi_{\alpha}'=&{\left[ S(\Lambda) \right]_{\alpha}}^{\beta}\xi_{\beta} \nonumber\\
-% \eta^{\alpha}\to {\eta'}^{\alpha} =&\eta^\beta{\left[  S^{-1}(\Lambda)  \right]_{\beta}}^{\alpha}\,.
+% \xi_{\alpha} \to \xi_{\alpha}'=&{S_{\alpha}}^{\beta}\xi_{\beta} \nonumber\\
+% \eta^{\alpha}\to {\eta'}^{\alpha} =&\eta^\beta{\left[  S^{-1}  \right]_{\beta}}^{\alpha}\,.
 % \end{align}
 % donde $\alpha,\beta=1,2$. Estos dos espinores de Weyl independientes están asociados a la representación $(\frac{1}{2},0)$  de $\operatorname{SL}(2,C)$. Los correspondientes espinores conjugados, o simplemente anti-espinores de Weyl, pertenecen a la representación $\left( 0,\frac{1}{2}\right)$
 % \begin{align}
 %   \left( \xi_{\alpha} \right)^{*} \to \left( \xi_{\alpha}' \right)^{*}=&
-% \left( \xi_{\beta} \right)^{*} \left\{ {\left[ S(\Lambda) \right]_{\alpha}}^{\beta} \right\}^{*} \nonumber\\
-% \left( \eta^{\alpha} \right)^{*}\to \left( {\eta'}^{\alpha} \right)^{*} =&\left\{ {\left[  S^{-1}(\Lambda)  \right]_{\beta}}^{\alpha} \right\}^{*} \left( \eta^\beta \right)^{*}\,.
+% \left( \xi_{\beta} \right)^{*} \left\{ {S_{\alpha}}^{\beta} \right\}^{*} \nonumber\\
+% \left( \eta^{\alpha} \right)^{*}\to \left( {\eta'}^{\alpha} \right)^{*} =&\left\{ {\left[  S^{-1}  \right]_{\beta}}^{\alpha} \right\}^{*} \left( \eta^\beta \right)^{*}\,.
 % \end{align}
 % Para simplificar la notación en la representación $(\frac{1}{2},0)$ definimos
 % \begin{align}
@@ -2727,9 +2728,9 @@ Tenemos los siguientes objetos que transforman bajo las representaciones del Gru
    \phi\to \phi'=&\phi && \text{Scalar field,}\nonumber\\
    A^\mu\to {A'}^\mu=&{\Lambda^\mu}_\nu A^\nu&&\text{Vector field,}\nonumber\\
   \partial_{\mu}\to \partial'_{\mu}=&\partial_{\nu} {\left( \Lambda^{-1} \right)^{\nu}}_{\mu}&&\text{Cuadridivergencia,}\nonumber\\
-  \xi_\alpha\to\xi'_\alpha=&{\left[ S(\Lambda) \right]_\alpha}^\beta\xi_\beta
+  \xi_\alpha\to\xi'_\alpha=&{S_\alpha}^\beta\xi_\beta
 && \text{Left-handed spinor field + ${}^{*}$,}\nonumber\\
-\eta^{\alpha}\to {\eta'}^{\alpha} =&\eta^\beta{\left[  S^{-1}(\Lambda)  \right]_{\beta}}^{\alpha}&&
+\eta^{\alpha}\to {\eta'}^{\alpha} =&{\left[  S^{-1}  \right]_{\beta}}^{\alpha}\eta^\beta&&
  \text{Left-handed anti-spinor field + ${}^{*}$,}\,.
  \end{align}
 \end{frame}
@@ -2765,7 +2766,7 @@ donde,
   \centering
   \begin{tabular}{llll}
     Nombre & Símbolo & Lorentz & $U(1)$\\\hline\hline
-    $e_L$: electrón izquierdo & $\xi_{\alpha}$ & ${\left[ S \right]_{\alpha}}^{\beta}\xi_{\beta}$ & $e^{i\theta}\xi_\alpha$\\
+    $e_L$: electrón izquierdo & $\xi_{\alpha}$ & ${S_{\alpha}}^{\beta}\xi_{\beta}$ & $e^{i\theta}\xi_\alpha$\\
    $\left( e_R \right)^{\dagger}$: positrón izquierdo&$\eta^{\alpha}$& $\eta^\beta{\left[  S^{-1}  \right]_{\beta}}^{\alpha}$ & $\eta^\alpha\, e^{-i\theta}$\\
     \hline    
     $\left( e_L \right)^{\dagger}$: positrón derecho   & $\left( \xi_{\alpha} \right)^{\dagger}=\xi^{\dagger}_{\dot{\alpha}}$ &

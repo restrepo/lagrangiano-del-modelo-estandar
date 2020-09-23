@@ -394,9 +394,9 @@ Ver \url{http://www.damtp.cam.ac.uk/user/examples/3P7.pdf}
 Considere los campos espinoriales, que se transforma como
 \begin{align}
 \label{eq:184qft}
-  \psi_\alpha(x)\to\psi'_\alpha(x)={\left[ S(\Lambda) \right]_\alpha}^\beta\psi_\beta(\Lambda^{-1}x)\,, 
+  \psi_\alpha(x)\to\psi'_\alpha(x)={S_\alpha}^\beta\psi_\beta(\Lambda^{-1}x)\,, 
 \end{align}
-donde $S(\Lambda)$ es la representación espinorial $(\frac{1}{2},0)$ del grupo de Lorentz. 
+donde $S$ es la representación espinorial $(\frac{1}{2},0)$ del grupo de Lorentz. 
 \end{frame}
 % En forma matricial, si $\Psi(x)$ es un vector columna de dos componentes,
 % \begin{align*}
@@ -458,50 +458,62 @@ In summary we have the following Lorentz's transformation properties for the fie
    \phi(x)\to \phi'(x)=&\phi(\Lambda^{-1}x) && \text{Scalar field,}\nonumber\\
    A^\mu(x)\to {A'}^\mu(x)=&{\Lambda^\mu}_\nu A^\nu(\Lambda^{-1}x)&&\text{Vector field,}\nonumber\\
   \partial_{\mu}\to {\partial\,}'_\mu=& \partial_\nu{\left(\Lambda^{-1}\right)^\nu}_\mu &&\text{Full derivative,}\nonumber\\
-  \xi_\alpha(x)\to\xi'_\alpha(x)=&{\left[ S(\Lambda) \right]_\alpha}^\beta\xi_\beta(\Lambda^{-1}x)
+  \xi_\alpha(x)\to\xi'_\alpha(x)=&{S_\alpha}^\beta\xi_\beta(\Lambda^{-1}x)
                            && \text{Left-handed Weyl spinor field,}\nonumber\\
-  \eta^{\alpha}(x)\to {\eta'}^{\alpha}(x) =&\eta^\beta(\Lambda^{-1}x){\left[  S^{-1}(\Lambda)  \right]_{\beta}}^{\alpha} && \text{Left-handed  Weyl anti-spinor field}\,.
+  \eta^{\alpha}(x)\to {\eta'}^{\alpha}(x) =&\eta^\beta(\Lambda^{-1}x){\left[  S^{-1}  \right]_{\beta}}^{\alpha} && \text{Left-handed  Weyl anti-spinor field}\,.
  \end{align}
 \end{frame}
-Con los correspondientes (anti)espinores derechos ($\xi_{\dot{\alpha}}^{*}=\left( \xi_\alpha \right)^{*}$) $\eta^{* \dot{\alpha}}=\left( \eta^{\alpha} \right)^{*}$.  Para facilitar la notación, en adelante denotaremos un espinor de Weyl genérico con el símbolo ($\psi_{\alpha}$) $\psi^{\alpha}$ y el conjugador del espinor con el símbolo: $\dagger$.
+Con los correspondientes (anti)espinores derechos ($\xi_{\dot{\alpha}}^{*}=\left( \xi_\alpha \right)^{*}$) $\eta^{* \dot{\alpha}}=\left( \eta^{\alpha} \right)^{*}$. En adelante, para denotar el conjugado de un espinor usaremos el símbolo $\dagger$ en lugar del $*$. Para matrices el $\dagger$ mantedrá su definición usual de transpuesto conjugado.
 
-
-
-En lo siguiente usaremos la notación con puntos y sin puntos para los espinores de Lorentz, pero no su forma matricial.
+Al igual que con los cudrivectores covariantes (contravariantes) puros, existe una métrica que permite subir (bajar) los índices.  El nuevo espinor se transforma de la misma manera que un espinor de índice arriba (abajo) puro. 
 \begin{frame}[fragile,allowframebreaks]
-Para los espinores conjugados tenemos que
+  Para un espinor de índice arriba (abajo) genérico\footnote{Un espinor genérico puede ser puro o con el índice alterado por la métrica}, denotado como  $\psi^{\alpha}$   ($\psi^{\dagger \alpha}$) y recordando que
 \begin{align}
-  \psi_{\dot{\alpha}}^{\dagger}(x)\to {\psi'}_{\dot{\alpha}}^{\dagger}=\psi_{\dot{\beta}}^{\dagger}\left( \Lambda^{-1}x \right)&{\left[ \left( S^{\dagger} \right)^T \right]_{\beta}}^{\alpha}\nonumber\\
-    \psi^{\dagger\dot{\alpha}}(x)\to {\psi'}^{\dagger\dot{\alpha}}(x)=&{\left[ \left( S^{-1}(\Lambda) \right)^\dagger \right]^{\dot{\alpha}}}_{\dot{\beta}}\psi^{\dagger\dot{\beta}}\left( \Lambda^{-1}x \right) \nonumber\\
+  \psi^{\dagger\dot{\alpha}}\equiv \left( \psi^\alpha \right)^{\dagger}\,,
 \end{align}
-donde
+tenemos
 \begin{align}
-  \psi^{\dagger\dot{\alpha}}\equiv \left( \psi^\alpha \right)^{\dagger}
+ \psi_\alpha(x)\to\psi'_\alpha(x)=&{S_\alpha}^\beta\psi_\beta(\Lambda^{-1}x)\,,&  \psi_{\dot{\alpha}}^{\dagger}(x)\to {\psi'}_{\dot{\alpha}}^{\dagger}={\left[ S^{*} \right]_{\dot{\alpha}}}^{\dot{\beta}}\psi_{\dot{\beta}}^{\dagger}(\Lambda^{-1}x)
+  =&\psi_{\dot{\beta}}^{\dagger}\left( \Lambda^{-1}x \right){\left[S^{\dagger} \right]^{\dot{\beta}}}_{\dot{\alpha}}\nonumber\\
+  \psi^{\alpha}(x)\to {\psi'}^{\alpha}(x) =&\psi^\beta(\Lambda^{-1}x){\left[  S^{-1}  \right]_{\beta}}^{\alpha}\,,&    \psi^{\dagger\dot{\alpha}}(x)\to {\psi'}^{\dagger\dot{\alpha}}(x)=
+\psi^{\dagger\dot{\beta}}{\left[ \left( S^{-1} \right)^{*}  \right]_{\dot{\beta}}}^{\dot{\alpha}}
+  = &{\left[ \left( S^{-1} \right)^\dagger \right]^{\dot{\alpha}}}_{\dot{\beta}}\psi^{\dagger\dot{\beta}}\left( \Lambda^{-1}x \right),
 \end{align}
-Al interpretar  $\psi$ and $\psi^{\dagger}$ como espinores de dos componentes en este espacio interno, hemos definido el producto escalar usando la convención índices contraídos  \emph{descendiendo} e índices con puntos contrídos \emph{ascendiendo}
+donde $\psi=\xi\text{ or }\eta$.
+Al interpretar  $\psi$ and $\psi^{\dagger}$ como espinores de dos componentes en este espacio interno, hemos definido el producto escalar usando la convención de índices contraídos  \emph{descendiendo} e índices con puntos contrídos \emph{ascendiendo}
 \begin{align}
 \label{eq:conven}
   {{}^{\alpha}}\,{}_{\alpha}\qquad \text{and}\qquad {{}_{\dot{\alpha}}}\,{}^{\dot{\alpha}}\,.
 \end{align}
-De esta forma podemos definir el producto escalar entre dos espinores como
+De esta forma podemos definir el producto escalar entre dos espinores, $\psi=\xi\text{ or }\eta$, como
 \begin{align}
 \psi\psi\equiv  \psi^{\alpha}\psi_{\alpha}\to {\psi'}^{\alpha}{\psi'}_{\alpha}=& {\left[ \left( S^{-1} \right)^T \right]^{\alpha}}_{\beta}\psi^{\beta} {S_\alpha}^\gamma\psi_\gamma \nonumber\\
  =& {\left( S^{-1} \right)_{\beta}}^{\alpha}{S_\alpha}^\gamma\psi^{\beta}\psi_\gamma \nonumber\\
   =& \delta_{\beta}^{\gamma}\psi^{\beta}\psi_\gamma \nonumber\\
   =& \psi^{\beta}\psi_\beta\,.
 \end{align}
-and similarmente el producto escalar de dos anti-espinores como
+y similarmente el producto escalar de dos anti-espinores como
 \begin{align}
   \psi^{\dagger}\psi^{\dagger}\equiv {\psi}^{\dagger}_{\dot{\alpha}}{\psi}^{\dagger\dot{\alpha}}
 \to &{\psi'}^{\dagger}_{\dot{\alpha}}{\psi'}^{\dagger\dot{\alpha}}\nonumber\\
 =&\psi^{\dagger}\psi^{\dagger}\,.
 \end{align}
+En adelante, cuando los índices estén contraídos de acuerdo a la convención~\eqref{eq:conven}, podemos escribir la forma no expandida del producto escalar, es decir, sin índices.
 \end{frame}
-Para construir una Acción invariante de Lorentz, uno necesita primero combinar productos de espinores para obtener objetos que transformen como tensores de Lorentz.
-
-Cuando se construyan tensores de Lorentz a partir e campos fermiónicos, los subíndices sólo se deben contraer con superíndices siguiendo
-la misma conveción que la establecida en la eq.~(\ref{eq:conven}). 
-To construct Lorentz invariant Lagrangians, one needs to first combine products of spinors to make objects that transforms as Lorentz tensors. Un tensor contravariante de Lorentz de rango  $(n\times n)$ en este espacio debe tener una estructura de índices con $n$ indicies sin puntos (con puntos) seguidos por $n$ indices con puntos (sin puntos), como por ejemplo,   $\alpha_1\alpha_2\ldots\alpha_n\dot{\alpha}_1\dot{\alpha}_2\ldots\dot{\alpha}_n$. El caso más es cuadrivector de matrices $2\times2$ que en el espacio interno sería un tensor de rango dos con índices $\overline{\sigma}^{\mu \alpha\dot{\alpha}}$.
+Para construir una Acción invariante de Lorentz, se necesita primero
+combinar productos de espinores para obtener objetos que transformen
+como tensores de Lorentz. Cuando se construyan tensores de Lorentz a
+partir e campos fermiónicos, los subíndices sólo se deben contraer con
+superíndices siguiendo la misma conveción que la establecida en la
+eq.~(\ref{eq:conven}). Un tensor contravariante de Lorentz de
+rango $(n\times n)$ en este espacio debe tener una estructura de
+índices con $n$ indicies con puntos (sin puntos) seguidos por $n$
+indices sin puntos (con puntos), como por ejemplo,
+$\dot{\alpha}_1\dot{\alpha}_2\ldots\dot{\alpha}_n\alpha_1\alpha_2\ldots\alpha_n$. Un 
+caso conocido es cuadrivector de matrices $2\times2$ que, de acuerdo
+a la ec.~\eqref{eq:smntensor}, en el espacio
+$\operatorname{SL}(2,C)$ es un tensor de rango dos con índices
+$\overline{\sigma}^{\mu \alpha\dot{\alpha}}$.
 
 
 \section{Lagrangiano fermiónico}
@@ -539,42 +551,54 @@ un campo que se vea afectado por las transformaciones de Lorentz. Por consiguien
 \begin{frame}[fragile,allowframebreaks]
   La mínima posibilidad es usar un objeto de dos componentes en el espacio definido por uno de los subgrupos
   de Lorentz $\operatorname{SL}(2,C)$. Es decir, necesitamos un campo
-  de dos componentes $\psi_{\alpha}$, $(\alpha=1,2)$. An Action with a Lagrangian term linear in the derivatives, could be Lorentz invariant if, taking into account the convention in eq.~(\ref{eq:conven}) and the dotted-undotted structure of the tensor in this internal space, we have that if $a^{\mu}$ is to be a 2th rank tensor of the internal space, it must have components, e.g, $\left( a^{\mu} \right)^{\dot{\alpha}\beta}$. Therefore, a posible Lorentz invariant with a single derivative could be 
+  de dos componentes $\psi_{\alpha}$, $(\alpha=1,2)$.
+  Una Acción con un término lineal en las derivada debería ser invariante de Lorentz, si tomando en
+  cuenta las convenciones en la ec.~(\ref{eq:conven}) y la estructura de los índices con y sin punto
+  de los tensores en el espacio de  $\operatorname{SL}(2,C)$ and the dotted-undotted tenemos a
+  nuestra disposición los tensores necesarios.
+  De la definición de los generadores del subgrupo $\operatorname{SL}(2,C)$ en la ec.~\eqref{eq:sigten} tenemos las siguientes
+  matrices con indices tensoriales en $\operatorname{SL}(2,C)$:
+   $\sigma^{\mu}_{\alpha\dot{\beta}}$ y $\overline{\sigma}^{\mu\dot{\alpha}\beta}$,
+
+\section{Espinores izquierdos}
+Vamos a comenzar con la construcción de Lagrangiano para el espinor de Weyl de índice abajo $\psi_{\alpha}=\xi_{\alpha}$, usando el cudrivecto de Lorentz con estructura tensorial en $\operatorname{SL}(2,C)$ $\overline{\sigma}^{\mu\dot{\alpha}\beta}$
+% espinores izquierdos puros
+Por consiguiente, un posible invariante de Lorentz con un sóla derivada podría ser
  \begin{align}
-   {\psi}^{\dagger}(x)a^\mu\partial_\mu\psi(x)\to  {\psi'}^{\dagger}(x)a^\mu\partial'_\mu\psi'(x)
-&={\psi'}^{\dagger}_{\dot{\alpha}}(\Lambda^{-1}x)a^{\mu\dot{\alpha}\gamma}{\left(\Lambda^{-1}\right)^\rho}_\mu\partial_\rho \psi'_{\gamma}(\Lambda^{-1}x)\,,
+   {\psi}^{\dagger}_{\dot{\alpha}}(x)\overline{\sigma}^{\mu\dot{\alpha}\alpha}\partial_\mu\psi_{\alpha}(x)\to  {\psi'}^{\dagger}_{\dot{\alpha}}(x)\overline{\sigma}^{\mu\dot{\alpha}\alpha}\partial'_\mu\psi'_{\alpha}(x)
+&={\psi'}^{\dagger}_{\dot{\alpha}}(\Lambda^{-1}x)\overline{\sigma}^{\mu\dot{\alpha}\gamma}{\left(\Lambda^{-1}\right)^\rho}_\mu\partial_\rho \psi'_{\gamma}(\Lambda^{-1}x)\,,
 \end{align}
-cowith the first letters of the Greek alphabet are used to denote the indices of the internal Lorentz space, and the others the external one.
 Para suavizar la notación, vamos a ignorar en adelante la dependencia en las coordenadas transformadas las cuales serán integradas en el cálculo de la Acción
 \begin{align}
-{\psi}^{\dagger}a^\mu\partial_\mu\psi\to  {\psi'}^{\dagger}(x)a^\mu\partial_\mu\psi'
+     {\psi}^{\dagger}_{\dot{\alpha}}\overline{\sigma}^{\mu\dot{\alpha}\alpha}\partial_\mu\psi_{\alpha}\to  {\psi'}^{\dagger}_{\dot{\alpha}}\overline{\sigma}^{\mu\dot{\alpha}\alpha}\partial'_\mu\psi'_{\alpha}
 &=
- {S^*_{\dot{\alpha}}}^{\dot{\beta}}{\psi}^{\dagger}_{\dot{\beta}}a^{\mu\dot{\alpha\gamma}}{\left(\Lambda^{-1}\right)^\rho}_\mu\partial_\rho \left( {S_{\gamma}}^{\delta}\psi_\delta \right)\,.
+ {S^*_{\dot{\alpha}}}^{\dot{\beta}}{\psi}^{\dagger}_{\dot{\beta}}\overline{\sigma}^{\mu\dot{\alpha\gamma}}{\left(\Lambda^{-1}\right)^\rho}_\mu\partial_\rho \left( {S_{\gamma}}^{\delta}\psi_\delta \right)\,.
  \end{align} 
  Como los parámtetros de la transformación, $\xi_i$ y $\theta_i$, en la ec.~\eqref{eq:SLet} están en el espacio interno de Lorentz, 
- del conjunto de cuatro matrices constantes $\sigma^{\mu}$ no cambia bajo una transofrmación de Lorentz asociada a cambios de las coordenadas externas
+ ni $\Lambda$, ni el cuadrivector de matrices constantes $\overline{\sigma}^{\mu}$ cambian bajo una transofrmación de Lorentz asociada a cambios de las coordenadas externas
 \begin{align}
-  {\psi}^{\dagger}a^\mu\partial_\mu\psi\to  {\psi'}^{\dagger}(x)a^\mu\partial_\mu\psi'&=
-{\psi}^{\dagger}_{\dot{\beta}}{\left(\Lambda^{-1}\right)^\rho}_\mu {S^{\dagger\dot{\beta}}}_{\dot{\alpha}}a^{\mu\dot{\alpha\gamma}}{S_{\gamma}}^{\delta} \partial_\rho  \psi_\delta \nonumber\\
-&=\psi^\dagger {\left(\Lambda^{-1}\right)^\rho}_\mu \left(S^\dagger a^\mu S\right)\partial_\rho\psi\nonumber\\
-&=\psi^{\dagger}a^\rho\partial_\rho\psi\,,
+  {\psi}^{\dagger}\overline{\sigma}^\mu\partial_\mu\psi
+  =    {\psi}^{\dagger}_{\dot{\alpha}}\overline{\sigma}^{\mu\dot{\alpha}\alpha}\partial_\mu\psi_{\alpha}\to  {\psi'}^{\dagger}_{\dot{\alpha}}\overline{\sigma}^{\mu\dot{\alpha}\alpha}\partial'_\mu\psi'_{\alpha}&=
+{\psi}^{\dagger}_{\dot{\beta}}{\left(\Lambda^{-1}\right)^\rho}_\mu {S^{\dagger\dot{\beta}}}_{\dot{\alpha}}\overline{\sigma}^{\mu\dot{\alpha\gamma}}{S_{\gamma}}^{\delta} \partial_\rho  \psi_\delta \nonumber\\
+&=\psi^\dagger {\left(\Lambda^{-1}\right)^\rho}_\mu \left(S^\dagger \overline{\sigma}^\mu S\right)\partial_\rho\psi\nonumber\\
+&=\psi^{\dagger}\overline{\sigma}^\rho\partial_\rho\psi\,,
 \end{align}
 De este modo, el término permanece invariante si la siguiente condición se satisface
 \begin{align}
- {\left(\Lambda^{-1}\right)^\rho}_\mu  S^{\dagger}a^\mu S=a^\rho\,,
+ {\left(\Lambda^{-1}\right)^\rho}_\mu  S^{\dagger}\overline{\sigma}^\mu S=\overline{\sigma}^\rho\,,
 \end{align}
 o
 \begin{align}
 \label{eq:ltrincond}
-{\left(\Lambda\right)^\nu}_\rho{\left(\Lambda^{-1}\right)^\rho}_\mu   S^{\dagger}a^\mu S=&
-{\left(\Lambda\right)^\nu}_\rho a^\rho\,,\nonumber\\
-\delta^{\nu}_{\mu}   S^{\dagger}a^\mu S=&
-{\left(\Lambda\right)^\nu}_\rho a^\rho \nonumber\\
-S^{\dagger}a^\nu S=&{\left(\Lambda\right)^\nu}_\rho a^\rho\,,
+{\left(\Lambda\right)^\nu}_\rho{\left(\Lambda^{-1}\right)^\rho}_\mu   S^{\dagger}\overline{\sigma}^\mu S=&
+{\left(\Lambda\right)^\nu}_\rho \overline{\sigma}^\rho\,,\nonumber\\
+\delta^{\nu}_{\mu}   S^{\dagger}\overline{\sigma}^\mu S=&
+{\left(\Lambda\right)^\nu}_\rho \overline{\sigma}^\rho \nonumber\\
+S^{\dagger}\overline{\sigma}^\nu S=&{\left(\Lambda\right)^\nu}_\rho \overline{\sigma}^\rho\,,
 \end{align}
 La solución para esta identidad es única y puede expresarse en términos de las matries  $2\times2$ de Pauli más la identidad
    \begin{align} 
- a^{\mu}=\overline{\sigma}^{\mu}=& \left( \mathbf{1}_{2\times2},\overline{\boldsymbol{\sigma}} \right) \nonumber\\
+ \overline{\sigma}^{\mu}& \left( \mathbf{1}_{2\times2},\overline{\boldsymbol{\sigma}} \right) \nonumber\\
  =& \left( \sigma^0,\overline{\boldsymbol{\sigma}} \right)\,, 
 \end{align}
 donde
@@ -861,7 +885,7 @@ Si $\psi$ no tiene ninguna carga continua se puede adicionar un término de masa
 \subsection{Lorentz invariance of the Weyl Action}
 
 \begin{frame}[fragile,allowframebreaks]
-To show that $S(\Lambda)$ is in fact a Lorentz transformation, it is convinient to write this in covariant form. If we define
+To show that $S$ is in fact a Lorentz transformation, it is convinient to write this in covariant form. If we define
 \begin{align}
   \sigma^{\mu\nu}=\frac{i}{4}\left[\sigma^\mu,\overline{\sigma}^\nu\right]\,.
 \end{align}
@@ -880,7 +904,7 @@ We can obtain the proper boost and rotations generators:
 % \end{align}
 It is worth notices that in fact $\sigma^{\mu\nu}$ satisfy the Lorentz algebra, and therefore are the generators of the Lorentz group elements:
 \begin{align}
-  S(\Lambda)=&\exp\left(-i \omega_{\mu\nu}\frac{\sigma^{\mu\nu}}{2}\right)\nonumber\\
+  S=&\exp\left(-i \omega_{\mu\nu}\frac{\sigma^{\mu\nu}}{2}\right)\nonumber\\
   \approx&1-\frac{i}{2} \omega_{\mu\nu}{\sigma^{\mu\nu}}\,.
 \end{align}
 
@@ -893,7 +917,7 @@ It is worth notices that in fact $\sigma^{\mu\nu}$ satisfy the Lorentz algebra, 
 Ahora
 \begin{align}
 \label{eq:SLet}
-  S(\Lambda)_{\left( \frac{1}{2},0 \right)}\equiv S(\Lambda)=
+  S_{\left( \frac{1}{2},0 \right)}\equiv S=
 \exp\left( \boldsymbol{\xi}\cdot \frac{\boldsymbol{\sigma}}{2}+i\boldsymbol{\theta}\cdot \frac{\boldsymbol{\sigma}}{2} \right)\,,
 \end{align}
 y expandiendo \eqref{eq:sss}
@@ -1063,10 +1087,10 @@ Para describir completamente un electrón, que conserva carga eléctrica bajo $U
   \centering
   \begin{tabular}{llll}
     Nombre & Símbolo & Lorentz & $U(1)$\\\hline
-    $e_L$: electrón izquierdo & $\xi_{\alpha}$ & ${\left[ S \right]_{\alpha}}^{\beta}$ & $e^{i\theta}$\\
-   $\left( e_L \right)^{\dagger}=e^{\dagger}_R$: positrón derecho   & $\left( \xi_{\alpha} \right)^{\dagger}=\xi^{\dagger}_{\dot{\alpha}}$ & ${\left[{S^{*}}\right]_{\dot{\alpha}}}^{\dot{\beta}}$ & $e^{-i\theta}$\\
-   $e_R$: electrón derecho   & $\left( \eta^{\alpha} \right)^{\dagger}=\eta^{\dagger\;\dot{\alpha}}$ & ${\left[ \left( S^{-1} \right)^\dagger \right]^{\dot{\alpha}}}_{\dot{\beta}}$& $e^{i\theta}$\\
-   $\left( e_R \right)^{\dagger}=e^{\dagger}_L$: positrón izquierdo&$\eta^{\alpha}$& ${\left[ \left( S^{-1} \right)^T \right]^{\alpha}}_{\beta}$ & $e^{-i\theta}$\\\hline
+    $e_L$: electrón {\color{red}izquierdo} & $\xi_{\color{red}\alpha}$ & ${S_{\color{red}\alpha}}^{\color{red}\beta}\xi_{\color{red}\beta}$ & $e^{i\theta}\xi_{\color{red}\alpha}$\\
+   $\left( e_L \right)^{\dagger}$: positrón {\color{blue}derecho}   & $\left( \xi_{\color{red}\alpha} \right)^{\dagger}=\xi^{\dagger}_{\color{blue}\dot{\alpha}}$ & $\xi^{\dagger}_{\color{blue}\dot{\beta}}{\left[{S^{\dagger}}\right]^{\color{blue}\dot{\beta}}}_{\color{blue}\dot{\alpha}}$ & $\xi^{\dagger}_{\color{blue}\dot{\alpha}}e^{-i\theta}$\\
+   $e_R$: electrón {\color{blue}derecho}   & $\left( \eta^{\color{red}\alpha} \right)^{\dagger}=\eta^{\dagger\;\color{blue}\dot{\alpha}}$ & ${\left[ \left( S^{-1} \right)^\dagger \right]^{\color{blue}\dot{\alpha}}}_{\color{blue}\dot{\beta}}\eta^{\dagger\;\color{blue}\dot{\beta}}$& $e^{i\theta}\eta^{\dagger\;\color{blue}\dot{\alpha}}$\\
+   $\left( e_R \right)^{\dagger}$: positrón {\color{red}izquierdo}&$\eta^{\color{red}\alpha}$& $\eta^{\color{red}\alpha}{\left[ S^{-1}  \right]_{\color{red}\beta}}^{\color{red}\alpha}$ & $e^{-i\theta}\eta^{\color{red}\alpha}$\\\hline
   \end{tabular}
   \caption{Componentes del electrón}
   \label{tab:electron}
