@@ -548,7 +548,7 @@ un campo que se vea afectado por las transformaciones de Lorentz. Por consiguien
 
 %\end{document}
 
-\begin{frame}[fragile,allowframebreaks]
+
   La mínima posibilidad es usar un objeto de dos componentes en el espacio definido por uno de los subgrupos
   de Lorentz $\operatorname{SL}(2,C)$. Es decir, necesitamos un campo
   de dos componentes $\psi_{\alpha}$, $(\alpha=1,2)$.
@@ -561,7 +561,9 @@ un campo que se vea afectado por las transformaciones de Lorentz. Por consiguien
    $\sigma^{\mu}_{\alpha\dot{\beta}}$ y $\overline{\sigma}^{\mu\dot{\alpha}\beta}$,
 
 \section{Espinores izquierdos}
-Vamos a comenzar con la construcción de Lagrangiano para el espinor de Weyl de índice abajo $\psi_{\alpha}=\xi_{\alpha}$, usando el cudrivecto de Lorentz con estructura tensorial en $\operatorname{SL}(2,C)$ $\overline{\sigma}^{\mu\dot{\alpha}\beta}$
+\begin{frame}[fragile,allowframebreaks]
+Vamos a comenzar con la construcción de Lagrangiano para el espinor de Weyl de índice abajo
+$\psi_{\alpha}=\xi_{\alpha}$, usando el cudrivector de Lorentz con estructura tensorial en $\operatorname{SL}(2,C)$ $\overline{\sigma}^{\mu\dot{\alpha}\beta}$.
 % espinores izquierdos puros
 Por consiguiente, un posible invariante de Lorentz con un sóla derivada podría ser
  \begin{align}
@@ -646,43 +648,46 @@ Teniendo en cuenta de nuevo que la Acción es adimensional, que implica $[\mathc
 
 
 
-Si al campo $\psi$ se la asocia además una carga conservada asociada a una simetría continua tipo $U(1)$, tal que
+Si al campo $\psi$ se la asocia además una carga conservada asociada a una simetría continua tipo $U(1)$, podemos imponer que el Lagrangiano sea invariante bajo cambios de fase de $\psi$, 
 \begin{align}
-  \psi\to\psi'=e^{-i\alpha}\psi\,,
+  \label{eq:phasechange}
+  \psi\to \psi'=e^{-i\theta}\psi\,.
 \end{align}
-podemos imponer que el Lagrangiano sea invariante bajo cambios de fase $\psi$. En tal caso, el término con coeficiente $m$ debe se ser cero y la densidad Lagrangiana se simplifica a
+En tal caso, el término con coeficiente $m$ debe se ser cero y la densidad Lagrangiana se simplifica a
 \begin{align}
   \label{eq:masslesweylL}
    \mathcal{L}=&i{\psi}^{\dagger}\overline{\sigma}^\mu\partial_\mu\psi.
 \end{align}
-
-The previous Lagrangian which is invariant under
-\begin{align}
-  \psi\to \psi'=e^{i\alpha}\psi\,,
-\end{align}
-is the most general one if $\psi$ have any conserved charge, and will be the one the will use in the subsequent discussions.
 \end{frame}
 
 
 \subsection{Corriente conservada y Lagrangiano de Weyl}
 \label{sec:corriente-conservada}
 \begin{frame}[fragile,allowframebreaks]
-En general
+  Podemos calcular la corriente conservada asociada al cambio de fase
+  usando el resultado del Teorema 1 de Noether para simetrías internas  dado por la ec.~\eqref{eq:t1gen}. Para la transformación de cambio de fase~\eqref{eq:phasechange} con $\phi_1\to \psi$ y $\phi_2\to \psi^{\dagger}$, tenemos de ec.~\eqref{eq:ai}
+  \begin{align}
+    a_{1}=&-i\psi,,&      a_{2}=&i\psi^{\dagger}\,,
+  \end{align}
 \begin{align}
-   J^\mu&\propto\left[\frac{\partial\mathcal{L}}{\partial\left(\partial_\mu\psi\right)}\right]\delta\psi+\delta\psi^\dagger\left[\frac{\partial\mathcal{L}}{\partial\left(\partial_\mu\psi^\dagger\right)}\right]\nonumber\\
-   &\propto i\psi^\dagger \overline{\sigma}^\mu(-i\alpha\psi)\nonumber\\
-   &\propto i\psi^\dagger \overline{\sigma}^\mu(-i\alpha\psi)\nonumber\\
-   &=\psi^\dagger \overline{\sigma}^\mu\psi
+   j^\mu&=\left[\frac{\partial\mathcal{L}}{\partial\left(\partial_\mu\psi\right)}\right]a_1+a_2\left[\frac{\partial\mathcal{L}}{\partial\left(\partial_\mu\psi^\dagger\right)}\right]\nonumber\\
+   &= i\psi^\dagger \overline{\sigma}^\mu(-i\psi)\nonumber\\
+   &=\psi^\dagger \overline{\sigma}^\mu\psi\,.
 \end{align}
-y
+
+La  densidad de carga conservada y la corriente son respectivamente
+\begin{align}
+  j^0&= \psi^\dagger \sigma^0\psi=\psi^{\dagger}\psi\,,&
+  \boldsymbol{j}&=-\psi^{\dagger}\boldsymbol{\sigma} \psi\,.
+\end{align}
+%\begin{frame}[fragile,allowframebreaks]
+La cantidad conservada es
 \begin{equation}
-     J^\mu=\psi^\dagger  \overline{\sigma}^\mu\psi\,.
+  \label{eq:57}
+P=  \int_V \psi^*\psi \,\operatorname{d}^3x=1,,
 \end{equation}
-La  densidad de corriente es
-\begin{align}
-  J^0&\propto \psi^\dagger \sigma^0\psi=\psi^{\dagger}\psi\,.
-\end{align}
-Que podemos interpretar como una densidad de probabilidad. Por consiguiente, la ecuación de movimiento se puede interpretar directamente como una ecuación de una función de onda de la mecánica cuántica.
+%\end{frame}
+la cual podemos interpretar corresponde a la probabilidad de la funci\'on de onda, $\psi$. Por consiguiente, la ecuación de Euler-Lagrange se puede interpretar directamente como una ecuación de una función de onda de la mecánica cuántica. 
 \end{frame}
 \subsection{Tensor momento-energía}
 \label{sec:tens-momento-energi}
@@ -744,13 +749,16 @@ de modo que
 \subsection{Ecuaciones de Euler-Lagrange}
 \label{sec:ecuaciones-de-euler}
 
+\begin{frame}[fragile,allowframebreaks]
 Queremos que el Lagrangiano de lugar a la ecuación de Scröndinger de validez general
 \begin{equation}
   \label{eq:grlsch}
   i\frac{\partial}{\partial t}\psi=\hat{H} \psi
 \end{equation}
+\end{frame}
 con el Hamiltoniano dado en la ec.~(\ref{eq:99qft}), que corresponde a un Lagrangiano de sólo derivadas de primer orden y covariante, en lugar del Hamiltoniano para el caso no relativista. 
 
+\begin{frame}[fragile,allowframebreaks]
 De hecho, aplicando las ecuaciones de Euler-Lagrange para el campo $\psi^\dagger$ al Lagrangiano en ec.~(\ref{eq:100qft}) ,tenemos
 \begin{align}
   \partial_\mu\left[\frac{\partial\mathcal{L}}{\partial\left(\partial_\mu\psi^\dagger\right)}\right]-\frac{\partial\mathcal{L}}{\partial\psi^\dagger}&=0\nonumber\\
@@ -773,8 +781,9 @@ Como $\sigma^0=\mathbf{1}$,
 De la ec.~(\ref{eq:denshal})
 \begin{equation}
   \label{eq:186qft}
-  \hat{H}= -\boldsymbol\sigma\cdot\mathbf{p}.
+  \hat{H}_{W}= -\boldsymbol\sigma\cdot\mathbf{p}.
 \end{equation}
+\end{frame}
 Si identificamos a $\boldsymbol{\sigma}/2$, como el operador de espín, el signo menos del Hamiltoniano quiere decir que el espín del campo $\psi$ se proyecta en la dirección opuesta a su momentum. 
 De esta forma podemos interpretar el espinor de Weyl de dos components $\psi$ como un espinor de Weyl izquierdo
 
@@ -800,10 +809,10 @@ De modo que, teniendo en cuenta que $\partial\hat H/\partial t=0$,
  \left(\frac{\partial^2}{\partial t^2}+\hat{H}^2\right)\psi&=0.
 \end{align}
 % 
-De la ec.~(\ref{eq:186qft}), y usando la condición en ec.~(\ref{eq:gamma02}), tenemos
+De la ec.~(\ref{eq:186qft})
 \begin{align}
 \label{eq:106qft}
-\hat{H}^2&=(\boldsymbol\sigma\cdot\mathbf{p})(\boldsymbol\sigma\cdot\mathbf{p})\,.
+\hat{H}^2_W&=(\boldsymbol\sigma\cdot\mathbf{p})(\boldsymbol\sigma\cdot\mathbf{p})\,.
 \end{align}
 \end{frame}
 
@@ -833,7 +842,7 @@ Sea $A$ una matriz y $\theta$ en un escalar. Entonces tenemos la identidad
 \begin{frame}[fragile,allowframebreaks]
 Entonces
 \begin{align}
-  \hat{H}^2=& \sigma_i^2p_i^2+\sum_{i\lt j}\left\{ \sigma_i, \sigma_j\right\}p_i p_j
+  \hat{H}^2_W=& \sigma_i^2p_i^2+\sum_{i\lt j}\left\{ \sigma_i, \sigma_j\right\}p_i p_j
 \end{align}
 (suma sobre índices repetidos). Si
 \begin{align}
@@ -848,7 +857,7 @@ que se puede resumir en
 todo consistente con las propiedades de las matrices de Pauli en  \eqref{eq:64qftw}. 
 De modo que
 \begin{equation}
-  \hat{H}^2=-\boldsymbol{\nabla}^2\,,
+  \hat{H}^2_W=-\boldsymbol{\nabla}^2\,,
 \end{equation}
 y reemplazando en la ec.~\eqref{eq:2qftw} llegamos a la ecuación de Klein-Gordon para $\psi$
 \begin{align}
@@ -995,7 +1004,7 @@ Para $\mu=l$
 \begin{frame}[fragile,allowframebreaks]
 Para el campo de dos componentes derecho  ${\eta^{\dagger}}^{\dot{\alpha}}$ ($\dot{\alpha}=\dot{1},\dot{2}$), el término invariante de Lorentz con derivada de primer orden debería ser
  \begin{align}
-   {\eta}\sigma^\mu\partial_\mu\eta^{\dagger}\to  {\eta'}\left(\sigma^\mu\right)\partial'_\mu{\eta^{\dagger}}'
+   {\eta}^{\alpha}\left( \sigma^{\mu} \right)_{\alpha\dot{\alpha}}\partial_\mu\eta^{\dagger\dot{\alpha}}\to  {\eta'}^{\alpha}\left(\sigma^\mu\right)_{\alpha\dot{\alpha}}\partial'_\mu{\eta^{\dagger \dot{\alpha}}}'
 &={\eta'}^{\alpha}\left( \sigma^\mu \right)_{\alpha\dot{\alpha}}{\left(\Lambda^{-1}\right)^\nu}_\mu\partial_\nu \,{\eta'}^{\dagger\dot{\alpha}}\nonumber\\
 &={\left[ \left( S^{-1} \right)^T \right]^{\alpha}}_{\beta}{\eta}^{\beta}\left( \sigma^\mu \right)_{\alpha\dot{\alpha}}{\left(\Lambda^{-1}\right)^\nu}_\mu {\left[ \left( S^{-1} \right)^\dagger \right]^{\dot{\alpha}}}_{\dot{\beta}}\partial_\nu \,{\eta}^{\dagger\dot{\alpha}}\nonumber\\
 &={\left(\Lambda^{-1}\right)^\nu}_\mu{\left[ \left( S^{-1} \right) \right]_{\beta}}^{\alpha}\left( \sigma^\mu \right)_{\alpha\dot{\alpha}}{\left[ \left( S^{-1} \right)^\dagger \right]^{\dot{\alpha}}}_{\dot{\beta}} {\eta}^{\beta}\partial_\nu \,{\eta}^{\dagger\dot{\alpha}}\,.
@@ -1090,7 +1099,7 @@ Para describir completamente un electrón, que conserva carga eléctrica bajo $U
     $e_L$: electrón {\color{red}izquierdo} & $\xi_{\color{red}\alpha}$ & ${S_{\color{red}\alpha}}^{\color{red}\beta}\xi_{\color{red}\beta}$ & $e^{i\theta}\xi_{\color{red}\alpha}$\\
    $\left( e_L \right)^{\dagger}$: positrón {\color{blue}derecho}   & $\left( \xi_{\color{red}\alpha} \right)^{\dagger}=\xi^{\dagger}_{\color{blue}\dot{\alpha}}$ & $\xi^{\dagger}_{\color{blue}\dot{\beta}}{\left[{S^{\dagger}}\right]^{\color{blue}\dot{\beta}}}_{\color{blue}\dot{\alpha}}$ & $\xi^{\dagger}_{\color{blue}\dot{\alpha}}e^{-i\theta}$\\
    $e_R$: electrón {\color{blue}derecho}   & $\left( \eta^{\color{red}\alpha} \right)^{\dagger}=\eta^{\dagger\;\color{blue}\dot{\alpha}}$ & ${\left[ \left( S^{-1} \right)^\dagger \right]^{\color{blue}\dot{\alpha}}}_{\color{blue}\dot{\beta}}\eta^{\dagger\;\color{blue}\dot{\beta}}$& $e^{i\theta}\eta^{\dagger\;\color{blue}\dot{\alpha}}$\\
-   $\left( e_R \right)^{\dagger}$: positrón {\color{red}izquierdo}&$\eta^{\color{red}\alpha}$& $\eta^{\color{red}\alpha}{\left[ S^{-1}  \right]_{\color{red}\beta}}^{\color{red}\alpha}$ & $e^{-i\theta}\eta^{\color{red}\alpha}$\\\hline
+   $\left( e_R \right)^{\dagger}$: positrón {\color{red}izquierdo}&$\eta^{\color{red}\alpha}$& $\eta^{\color{red}\beta}{\left[ S^{-1}  \right]_{\color{red}\beta}}^{\color{red}\alpha}$ & $e^{-i\theta}\eta^{\color{red}\alpha}$\\\hline
   \end{tabular}
   \caption{Componentes del electrón}
   \label{tab:electron}
