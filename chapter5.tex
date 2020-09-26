@@ -8,7 +8,52 @@ Hemos introducido ya todos los ingredientes necesarios para entender a nivel cua
               &+\left( \mathcal{D}_{\mu}\phi \right)^{\dagger} \mathcal{D}^{\mu}\phi-\mu^2 \phi^{\dagger} \phi-\lambda \left(\phi^{\dagger} \phi  \right) \nonumber\\
               &+h^{fg} \left( \psi_f\psi_g \phi + \text{h.c} \right)
  \end{align}
-A continuación veremos cual es la forma explícita de la derivada covariante para cada una de las interacciones fundamentales.
+ A continuación veremos cual es la forma explícita de la derivada covariante para cada una de las interacciones fundamentales.
+
+\section{Transformaciones de simetría locales}
+Cuando se habla de la función $\psi(x)$, $x$ representa el punto del
+espacio tiempo en el cual deseamos conocer el valor de la función de
+onda.  Ya que los núneros complejos son, pues por eso, complejos, no
+se pueden representar con una posición en una línea. En su lugar, hay
+que representarlos por un punto en un espacio en dos dimensiones.
+
+Además de la longitud de la flecha apuntando al número complejo también necesitamos un ángulo para especificar exactamente como dibujar la flecha apuntando al número complejo. El observable esta codificado dentro de la longitud de la flecha que representa el valor del función de onda compleja en ese punto del espacio-tiempo. Su ángulo es inobservable.
+
+El número complejo $\psi(x)$  en la ecuación de Dirac es justo el número cuyo cuadrado es la probabilidad relativa de encontrar el objeto en ese punto, como hemos visto como consecuencia de la simetría asociada a que el ángulo es inobservable.
+
+\begin{frame}[fragile,allowframebreaks]
+Ahora, supongamos que se decide hacer un cambio de fase de la función de onda de forma arbitraria en cada punto del espacio, osea en el ángulo, $\theta$, que el número complejo $\psi$ hace con respecto al eje real. Aquí hay un punto crucial: si el cambio de fase es \emph{global}, es decir si el cambio de fase asociado al ángulo $\theta$ es el mismo en todos los puntos del espacio, este cambio no destruirá el delicado balance entre la energía cinética y la energía potencial en la ecuación de Scrödinger.
+
+Sin embargo, desde el punto de vista de la relatividad especial de Einstein, la necesidad de requerir que el sistema mecánico cuántico quede inalterado sólo por cambios globales de fase parece poco natural. Una vez se escoge el fase de la función de onda en un punto del espacio-tiempo, el requerimiento de la invarianza de fase global fija esta en todos los puntos del espacio tiempo:
+
+  \begin{quote}
+\small
+    As usually conceived however, this arbitrariness is subject to the following  limitation: once one choose [the phase of the wave function] at one space--time point, one is then not free to make any choices at other space--time points.
+
+It seems that it is not consistent with the localized field concept that underlies the usual physical theories. In the present paper we wish to explore the possibility of requiring all the interactions to be invariant under independent [change of phases] at all space-time points.
+  \end{quote}
+  \begin{flushright}
+    Yang-Mills, \emph{Physical Review}, 1954
+  \end{flushright}
+
+\end{frame}
+Un cambio de fase que dependa del punto del espacio-tiempo, $\theta(x)$, de otro lado, sería similar a lo que pasa en la teoría electromagnética cuando es expresada en términos de potenciales escalares y vectoriales. Ellos se pueden cambiar por derivadas de funciones arbitrarias de una forma tal que los campos eléctricos y magnéticos medidos permanecen invariantes. Como veremos, estas características están profundamente conectas con la conservación local de la carga eléctrica.  
+
+\subsection{Motivación}
+
+Desde un punto de vista más cuantitativo, debido a que la energía y la cantidad de movimiento del electrón aparecen  en la fase de su función de onda
+\begin{frame}[fragile,allowframebreaks]
+\begin{align}
+  \psi(x)\propto e^{i p\cdot x}=\exp(Et-\mathbf{p}\cdot \mathbf{x})\,,
+\end{align}
+entonces, un cambio de fase local
+\begin{align}
+ \psi(x)\to \psi'(x)=\operatorname{e}^{{i\theta(x)}}\psi\,,
+\end{align}
+cambia la energía y la cantidad de movimiento del electrón. Esto hace necesario la existencia de un nuevo campo que compense esos cambios para garantizar su convervación entre el sistema completo del electrón y el nuevo campo.
+\end{frame}
+
+Histroricamente primero se implemento la invarianza de Lorentz en Mecánica Cuántica cambiando el correspondiente Lagrangiano de Sch\"odingerpor el de Dirac. Sin embargo, el Lagrangiano resultante es insuficiente pues tiene una invarianza de fase global que contradice los principios de la relativad especial. El Lagrangiano definitivo de la electrodinámica cuántica, que construiremos en detalle luego, incorpora además de la invarianza de Lorentz, la invarianza de fase local. 
 
 \section{Electrodinámica Cuántica}
 \label{sec:electr-cuant}
@@ -21,27 +66,34 @@ Para hacer el Lagrangiano en ec.~\eqref{eq:115qftnew} invariante gauge local baj
 \end{align}
 donde $Q$ es el generador de carga eléctrica en unidades de la carga del electrón.
 
-La derivada covariante se define de manera que transforma de la misma forma que el campo, introduciendo el campo gauge $A^\mu$
-\begin{equation}
-  \label{eq:202qft}
-  \partial_\mu\to\mathcal{D}_\mu=\partial_\mu-ieQA_\mu\,,
-\end{equation}
-tal que
-\begin{align}
-  A_{\mu}\to A_{\mu}'=A_{\mu}-\partial_{\mu}\theta(x)\,.
-\end{align}
+La derivada covariante se define de manera que transforme de la misma forma que el campo,
+% introduciendo el campo gauge $A^\mu$
+% \begin{equation}
+%   \label{eq:202qft}
+%   \partial_\mu\to\mathcal{D}_\mu=\partial_\mu-ieQA_\mu\,,
+% \end{equation}
+% tal que
+% \begin{align}
+%   A_{\mu}\to A_{\mu}'=A_{\mu}-\partial_{\mu}\theta(x)\,.
+% \end{align}
 
-donde $e$ es la carga eléctrica del electrón. De esta forma, si $\psi_e$ es el campo que representa al electrón
-\begin{align}
-  Q \psi_e=- \psi_e\,.
-\end{align}
-
+% donde $e$ es la carga eléctrica del electrón. De esta forma, si $\psi_e$ es el campo que representa al electrón
+% \begin{align}
+%   Q \psi_e=- \psi_e\,.
+% \end{align}
 En efecto
 \begin{align}
   \mathcal{D}_{\mu}\psi\to \left( \mathcal{D}_{\mu}\psi \right)'=&\mathcal{D}_{\mu}'\psi' \nonumber\\
 =&\operatorname{e}^{iQ\, \theta(x)}\mathcal{D}_{\mu}\psi\,,
 \end{align}
-como corresponde a una derivada covariante. Para mayor generalidad de los resultados, definimos un elemento de $\operatorname{U}(1)_Q$ como
+como corresponde a una derivada covariante. Tal que la derivada normal sufra una sustitución mínima, es decir, debemos introducir el campo gauge $A^\mu(x)$
+\begin{equation}
+  \label{eq:202qft}
+  \partial_\mu\to\mathcal{D}_\mu=\partial_\mu-ieQA_\mu\,,
+\end{equation}
+tal que...
+
+Para mayor generalidad de los resultados, definimos un elemento de $\operatorname{U}(1)_Q$ como
 \begin{align}
   U(\theta)=\operatorname{e}^{iQ\, \theta(x)}\,.
 \end{align}
@@ -53,40 +105,57 @@ De este modo, la derivada covariante se puede definir como
 
 Para encontrar las propiedades de la derivada covariante en este contexto general, necesitamos evaluar cual es la transformación de la derivada covariante como tal, es decir
 \begin{align}
+\label{eq:covargen}
  \left(\mathcal{D}_\mu \psi\right)'=     \mathcal{D}'_\mu \psi'=&U\left(\mathcal{D}_\mu \psi\right)\nonumber\\
     \mathcal{D}'_\mu \left( U\psi \right)=&U\left(\mathcal{D}_\mu \psi\right)\,.
 \end{align}
 
-Si mantenemos en mente que  $\mathcal{D}'_\mu U$ es todavía un operador, tenemos que
+Para mantener la generalidad del resultado evitaremos usar la propiedad conmutativa del algún grupo particular. De modo que,
+\begin{align}
+    \left( \partial_{\mu}-ieQ A'_{\mu} \right)\left(U\psi\right) =&U\partial_{\mu}\psi-ie  U A_{\mu}Q\psi \nonumber\\
+    \left( \partial_{\mu}U \right)\psi+U \partial_{\mu}\psi -ie QA'_{\mu}U\psi =&U\partial_{\mu}\psi-ie  U QA_{\mu}\psi \nonumber\\
+    \left( \partial_{\mu}U \right)\psi -ie QA'_{\mu}U\psi =&-ie  U QA_{\mu}\psi \nonumber\\
+      QA'_{\mu}U\psi =&- \frac{1}{-ie}\left( \partial_{\mu}U \right)\psi + U QA_{\mu}\psi \,.
+\end{align}
+A nivel de operadores
+\begin{align}
+      QA'_{\mu}U =&\frac{i}{e}\left( \partial_{\mu}U \right) + U QA_{\mu} \nonumber\\
+      QA'_{\mu} =& U QA_{\mu} U^{-1}+\frac{i}{e}\left( \partial_{\mu}U \right)U^{-1}\,.
+\end{align}
+Usando la forma explítica de $U$ dada en la ec.~\eqref{eq:202qft}
+\begin{align}
+  \partial_{\mu}U=  \partial_{\mu} \operatorname{e}^{iQ\theta(x)}=iQ \left[ \partial_{\mu}\theta(x) \right]\operatorname{e}^{iQ\theta(x)}
+  =iQ \left[ \partial_{\mu}\theta(x) \right]U\,,
+\end{align}
+teniendo en cuenta que $U U^{-1}=1$
+\begin{align}
+       QA'_{\mu} =& U QA_{\mu} U^{-1}-\frac{Q}{e}\partial_{\mu}\theta(x) \,.
+\end{align}
+Está expresión será de validez general incluso para Grupos no Abelianos con la combinación de generadores y campos $QA_{\mu}$. Esta expresión es completamente general y será usada posteriormente en el contexto de grupos más complicados. En el caso particular de un Grupo Abeliano  $U(1)$, tenemos simplemente que
+\begin{align}
+  UQA_{\mu}U^{-1}=QA_{\mu}\,,
+\end{align}
+de modo que, cancelando el generado $Q$ a ambos lados de la igualdad
+\begin{align}
+  A_{\mu}(x)\to  A'_{\mu}(x)=&A_{\mu}(x)-\frac{1}{e}\partial_{\mu}\theta(x)\,.
+\end{align}
+Obtenemos entonces que el campo vectorial, $A_{\mu}(x)$, que realiza la sustitución mínima de la derivada total, debe ser un campo de radiación y de acuerdo al análisis del capítulo \ref{cha:campos-vectoriales}, debe corresponder al campo electromagnético. 
+
+El Lagrangiano de Dirac invariante gauge local se ha obtienido reemplazando la derivada normal por la derivada covariante. Para el campo electrónico, con $Q=-1$
+\begin{align}
+  \mathcal{L}=&\overline{\psi}\left(i\gamma^\mu\mathcal{D}_\mu-m\right)\psi+\mathcal{L}\left( \partial_{\mu}A_{\nu}\right)\nonumber\\
+=&\bar{\psi}\left[i\gamma^\mu\left(\partial_\mu-ieQA_\mu\right)-m\right]\psi-\frac{1}{4}F_{\mu\nu}F^{\mu\nu}\nonumber\\
+=&i\bar{\psi}\gamma^\mu\partial_\mu\psi -e\bar{\psi}\gamma^\mu \psi A_\mu-m\bar{\psi}\psi -\frac{1}{4}F_{\mu\nu}F^{\mu\nu}\,.
+\end{align}
+Este Lagrangina da lugar a una Acción que define una teoría general (en el sentido que es invariante bajo transformaciones que dependen del espacio-tiempo) correspondiente a  la electrodinámica cuántica (QED de sus siglas en ingles)
+
+Si mantenemos en mente que  $\mathcal{D}'_\mu U$ es todavía un operador, podemos a partir de la ec.~\eqref{eq:covargen},
+tenemos que
 \begin{align}
     \mathcal{D}'_\mu U=&U\mathcal{D}_\mu \nonumber\\
     \mathcal{D}'_\mu =&U\mathcal{D}_\mu U^{-1} \,.
 \end{align}
-Es decir, para comprobar esta identidad, debemos aplicar el nuevo operador sobre algún campo. Para mantener la generalidad del resultado evitaremos usar la propiedad conmutativa del algún grupo particular. Al aplicar la derivada covariante en un campo, en interpretandóla como un operador, tenemos que
-\begin{align*}
-    \mathcal{D}'_\mu \psi =&U\mathcal{D}_\mu \left(U^{-1}\psi  \right)\,,
-\end{align*}
-da lugar a la propiedad
-\begin{align}
-    \partial_{\mu}\psi-ieQ A'_{\mu} \psi =&\partial_{\mu}\psi+U\left( \partial_{\mu}U^{-1} \right)\psi-ieQ  U A_{\mu}U^{-1}\psi\,.
-\end{align}
-Después de cancelar el término  $\partial_{\mu}\psi$ en ambos lados, y factorizando el campo  $\psi$, tenemos que
-\begin{align}
-       A_{\mu}\to A'_{\mu} =&U A_{\mu}U^{-1}+\frac{i}{eQ}U\left( \partial_{\mu}U^{-1} \right)\,.
-\end{align}
-Esta expresión es completamente general y será usada posteriormente en el contexto de grupos más complicados. En el caso particular de un Grupo Abeliano  $U(1)$, tenemos simplemente que
-\begin{align}
-  A_{\mu}\to  A'_{\mu}=&A_{\mu}-\frac{1}{e}\partial_{\mu}\theta(x)\,.
-\end{align}
-
-El Lagrangiano de Dirac invariante gauge local se obtiene reemplazando la derivada normal por la derivada covariante. Para el campo electrónico $Q=-1$
-\begin{align}
-  \mathcal{L}=&\overline{\psi}\left(i\gamma^\mu\mathcal{D}_\mu-m\right)\psi+\mathcal{L}\left( \partial_{\mu}A_{\nu}\right)\nonumber\\
-=&\bar{\psi}\left[i\gamma^\mu\left(\partial_\mu-ieQA_\mu\right)-m\right]\psi-\frac{1}{4}F_{\mu\nu}F^{\mu\nu}\nonumber\\
-=&i\bar{\psi}\gamma^\mu\partial_\mu\psi -e\bar{\psi}\gamma^\mu \psi A_\mu-m\bar{\psi}\psi +-\frac{1}{4}F_{\mu\nu}F^{\mu\nu}\,.
-\end{align}
-Este Lagrangia da lugar a una Acción que define una teoría completa correspondiente a
-la electrodinámica cuántica (QED de sus siglas en ingles)
+Es decir, para comprobar esta identidad, debemos aplicar el nuevo operador sobre algún campo.
 
 
 Retomando los resultados para las corrientes conservadas de la Sección~\ref{ref:cc}, aplicamos el segundo teorema de Noether, para una transformación $\psi\to \psi'= \operatorname{e}^{iq\theta(x)}\psi$, donde $q=\text{cte} $
@@ -94,10 +163,8 @@ Retomando los resultados para las corrientes conservadas de la Sección~\ref{ref
 \label{eq:dpa}
   \phi_{1}:& \psi\,,\qquad a_{1}=iq \psi \,,\qquad b_1=0\nonumber\\
   \phi_{2}:& \psi^{*}\,,\qquad a_{2}=-iq\psi^{*}\,,\qquad b_2=0 \nonumber\\
-  \phi_{3}:& A^{\mu}\,,\qquad a_{3}=0\,,\qquad b_2=-\delta^{\mu}_{\nu}\,,
+  \phi_{3}:& A^{\mu}\,,\qquad a_{3}=0\,,\qquad b_3=-\delta^{\mu}_{\nu}\,,
 \end{align}
-
-
 establezca el segundo teorema de Noether
 \begin{align}
   \sum_i \mathcal{E}_ia_i=&\sum_i  \partial_{\mu}   \left(  \mathcal{E}_i b^{\mu}_i  \right)\nonumber\\
