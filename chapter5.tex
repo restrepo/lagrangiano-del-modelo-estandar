@@ -112,6 +112,7 @@ Usando la forma explítica de $U$ dada en la ec.~\eqref{eq:202qft}
 \end{align}
 teniendo en cuenta que $U U^{-1}=1$
 \begin{align}
+  \label{eq:gnrlaggtr}
        QA'_{\mu} =& U QA_{\mu} U^{-1}+\frac{Q}{e}\partial_{\mu}\theta(x) \,.
 \end{align}
 Está expresión es de validez general incluso para Grupos no Abelianos con la combinación de generadores y campos $QA_{\mu}$. En el caso particular de un Grupo Abeliano  $U(1)$, tenemos simplemente que
@@ -639,10 +640,10 @@ En la figura, tomada de \cite{a}, se muestra el gráfico de $R$ con respecto a $
 
 %Comentar sobre Babar (ver Miro Notebook)
 
-\begin{frame}
+
 Si queremos que el color sea una carga conservada como la carga eléctrica, ésta debe ser la consecuencia de una simetría gauge local. Para tener tres cargas diferentes la posibilidad más simple es imponer la simetría $SU(3)_c$, tal que tengamos un vector compuesto de 3 espinores de Dirac en el espacio de color:
 
-  
+\begin{frame}  
 \begin{equation}
   \Psi=
   \begin{pmatrix}
@@ -688,7 +689,7 @@ donde $f^{abc}$ son las constantes de estructura fina de $SU(3)$.
 Las ocho matrices $3\times3$ $\lambda^a$ se pueden construir a partir de las tres matrices de Pauli, pero su forma explícita no es necesaria en la siguiente discusión.
 
 En un análisis similar al de la sección \ref{sec:diracs-lagrangian} tenemos que la Acción invariante gauge local bajo $SU(3)_c$, se obtiene de reemplazar la derivada normal por la derivada covariante. Para compensar los 8 cambios asociados a los 8 parámetros $\theta_a(x)$, la derivada covariante debe definirse en términos de 8 campos vectoriales $G^\nu_a$, que llamaremos campos de gluones
-\begin{frame}%[fragile,allowframebreaks]
+\begin{frame}[fragile,allowframebreaks]
 \begin{equation}
   \label{eq:127qft}
   \mathcal{L}_{\text{local}}=i\bar{\Psi}\gamma^\mu\mathcal{D}_\mu\Psi-m\bar{\Psi}\Psi
@@ -703,15 +704,15 @@ donde
 \end{align}
 con la matriz $3\times 3$
 \begin{align}
-  U(x)=\exp\left[i\theta_a(x)\frac{\lambda^a}{2}\right]\,,
+  U(x)=\exp\left[i\theta_a(x){\Lambda^a}\right]\,,
 \end{align}
 y
 \begin{equation}
-  \mathcal{D}_\mu=\partial_\mu-i g_s\frac{\lambda_a}{2}G_\mu^a\equiv\partial_\mu-i g_s {G}_\mu
+  \mathcal{D}_\mu=\partial_\mu-i g_s{\Lambda_a}G_\mu^a\equiv\partial_\mu-i g_s {G}_\mu
 \end{equation}
 donde hemos definido la matriz $3\times 3$  $G_\mu$, como
 \begin{equation}
-  \left({G}_\mu\right)_{\alpha\beta}=\left(\frac{\lambda_a}{2}\right)_{\alpha\beta}G_\mu^a
+  \left({G}_\mu\right)_{\alpha\beta}=\left( \Lambda_a \right)_{\alpha\beta}G_\mu^a
 \end{equation}
 \end{frame}
 Este Lagrangiano da lugar a la interacción fuerte y es llamado el Lagrangiano de la Cromodinámica Cuántica, o el Lagrangiano de la QCD de sus siglas en Inglés.
@@ -748,17 +749,31 @@ de modo que
  G^{\mu}\to     {G'}^\mu U =&\frac{1}{i g_s}(\partial^\mu U)+ U{G}^\mu \nonumber\\
  G^{\mu}\to  {G'}^\mu  =&-\frac{i}{g_s}(\partial^\mu U)U^{-1}+ U{G}^\mu U^{-1}\,.
 \end{align}
-\begin{frame}[fragile,allowframebreaks]
+
 Como $U$ es unitaria, la transformación de los campos gauge puede escribirse como
 \begin{equation}
     {G}^\mu\to\left({G}^\mu\right)'=U{G}^\mu U^{\dagger}-\frac{i}{g_s}\left(\partial^\mu U\right)U^\dagger.
 \end{equation}
-
-Entonces
+Como
+\begin{align}
+  \partial^{\mu}U= \partial^{\mu}\exp\left[i\theta_a(x){\Lambda^a}\right]
+  = \left( \partial^{\mu}i\theta_a(x)\right){\Lambda^a}\exp\left[i\theta_a(x){\Lambda^a}\right]
+   = \left( \partial^{\mu}i\theta_a(x)\right){\Lambda^a}U\,,
+\end{align}
+entonces
+\begin{frame}[fragile,allowframebreaks]
+\begin{align}
+   {G}^\mu\to\left({G}^\mu\right)'=U{G}^\mu U^{\dagger}+\frac{1}{g_s}{\Lambda^a} \partial^{\mu}\theta_a(x)\,.
+\end{align}
+y la expresión en ec.~\eqref{eq:gnrlaggtr} en efecto es suficiente general y para $\operatorname{SU}(3)$ queda
+\begin{align}
+   \Lambda^a{G'}^\mu_a=&U\Lambda^cG^\mu_cU-\frac{1}{g_s}\Lambda^e(\partial^\mu\theta_e)\,.
+\end{align}
+Entonces, haciendo la expansión a primer orden en $\theta_{a}(x)$ de $U$
 \begin{align}
 \label{eq:Gmuinv}
-  \Lambda^a{G'}^\mu_a\approx&(1+i\theta_b\Lambda^b)\Lambda^cG^\mu_c(1-i\theta_d\Lambda^d)-\frac{i}{g_s}[i(\partial^\mu\theta_e)\Lambda^e(1-i\theta_f\Lambda^f)]\nonumber\\
-  =&(\Lambda^c+i\theta_b\Lambda^b\Lambda^c)(1-i\theta_d\Lambda^d)G^\mu_c-\frac{i}{g_s}[i(\partial^\mu\theta_e)\Lambda^e(1-i\theta_f\Lambda^f)]\nonumber\\
+  \Lambda^a{G'}^\mu_a\approx&(1+i\theta_b\Lambda^b)\Lambda^cG^\mu_c(1-i\theta_d\Lambda^d)+\frac{1}{g_s}\Lambda^e\partial^\mu\theta_e\nonumber\\
+  =&(\Lambda^c+i\theta_b\Lambda^b\Lambda^c)(1-i\theta_d\Lambda^d)G^\mu_c+\frac{1}{g_s}\Lambda^e\partial^\mu\theta_e\nonumber\\
   \approx&[\Lambda^c-i\theta_d\Lambda^c\Lambda^d+i\theta_b\Lambda^b\Lambda^c]G^\mu_c+\frac{1}{g_s}\Lambda^e\partial^\mu\theta_e\nonumber\\
   =&[\Lambda^c-i\theta_b(\Lambda^c\Lambda^b-\Lambda^b\Lambda^c)]G^\mu_c+\frac{1}{g_s}\Lambda^e\partial^\mu\theta_e\nonumber\\
   =&\Lambda^aG^\mu_a-i(i f^{acb}\Lambda^a)G^\mu_c\theta_b+\frac{1}{g_s}\Lambda^a\partial^\mu\theta_a\nonumber\\
@@ -802,16 +817,16 @@ $\alpha=\dfrac{e^2}{4\pi}\approx 1/137$ & $\alpha_s=\dfrac{g_s^2}{4\pi}>1$ & \pa
 % 2 Construya tensor con derivadas covariantes
 % 3 Encuentre como tranforma un tensor
 % 2 Demuestre que la derivada covariante de Gmunu transforma como Gmunu
-\begin{frame}[fragile,allowframebreaks]
+
 
 Note entonces que en el lenguage de los teoremas de Noether, el campo $G^{\mu}_{a}$ transforma como un campo material y un campo de radiación a la vez, es decir, su transformación depende tanto del parámetro como de la derivada del parámetro. Por consiguiente, es conveniente definir la derivada covariante del campo $G^{\nu}_{a}$. Para ello se debe introducir la representación adjunta de $\operatorname{SU}(N)$.
 
-
+\begin{frame}[fragile,allowframebreaks]
 La representación adjunta de $\operatorname{SU}(3)$, consiste en las 8 matrices $8\times 8$
 \begin{align}
   \left[  \widetilde{\Lambda}^{a}\right]_{bc}=-i {f^{a}}_{bc}\,.
 \end{align}
-
+\end{frame}
 
 \noindent
 \textbf{Ejemplo:} Definiendo $\Sigma_i$ como las matrices $3\times3$ generadores de $\operatorname{SU}(2)$ en la representaci\'on adjunta
@@ -826,7 +841,7 @@ hemos comprobado en la ec.~\eqref{eq:adjrepsu2} que
 \noindent
 \textbf{Ejercicio:} Demostar que la representación adjunta satisface el álgebra de $\operatorname{SU}(3)$.
 
-
+\begin{frame}[fragile,allowframebreaks]
 La derivada covariante en la representación adjunta es
 \begin{align}
   \mathcal{D}_{\mu}=&\mathbf{1}\partial_{\mu}-i g_s \mathbb{G}_{\mu}  \nonumber\\
@@ -836,6 +851,7 @@ donde
 \begin{align}
   \mathbb{G}_{\mu}\equiv \widetilde{\Lambda}_a G_{\mu}^{a}\,,
 \end{align}
+\end{frame}
 es ahora una matriz $8\times8$ de campos de gluones en la representación adjunta. En componentes
 \begin{align}
  \left[\mathcal{D}_{\mu} \right]^b_c=&\delta^b_c\partial_{\mu}-i g_{s}\left[ \widetilde{\Lambda}_{a} G^a_{\mu} \right]^b_c \nonumber\\
@@ -851,7 +867,7 @@ o en componentes
   \left[ \mathcal{D}_{\mu} \right]^{a}_{b} \left[ \mathbb{G}_{\nu} \right]^b_c=& \left(\delta^a_b\partial_{\mu}-i g_s \left[ \mathbb{G}_{\mu} \right]^{a}_{b} \right)\left[ \mathbb{G}_{\nu} \right]^b_c \nonumber\\
     =& \left(\delta^a_b\partial_{\mu}-i g_s \left[  \widetilde{\Lambda}_c \right]^a_b G^c_{\mu} \right) \left[  \widetilde{\Lambda}_d \right]^b_cG_{\nu}^{d}\,.
 \end{align}
-\end{frame}
+
 Veamos como transforma la derivada covariante de la matriz de campos de gluones en la representación adjunta, donde un elemento $8\times 8$ del grupo $\operatorname{SU}(3)$ se define ahora como
 \begin{align}
   \widetilde{U}=\exp \left[ i\theta_a(x) \widetilde{\Lambda} \right].
@@ -899,7 +915,6 @@ Ya que
 =&- \partial_{\mu} \left[ \widetilde{U}^{\dagger} \widetilde{U} \partial_{\nu} \widetilde{U}^{\dagger}\right] \nonumber\\
 =&- \partial_{\mu}  \partial_{\nu} \widetilde{U}^{\dagger} \,,
 \end{align}
-\begin{frame}[fragile,allowframebreaks]
 entonces
 \begin{align}
 \label{eq:Dmup}
@@ -914,6 +929,7 @@ entonces
 \end{align} 
 Por consiguiente, la ``derivada covariante'' de la matriz del campo de gluones no transforma como la la matriz del campo de gluones. Una discusión al respecto se puede encontrar en~\cite{2015arXiv151203827R}.
 
+\begin{frame}[fragile,allowframebreaks]
 Note que si definimos la matriz de tensores de campos de gluones como
 \begin{align}
    \mathbb{G}_{\mu\nu}\equiv & \mathcal{D}_{\mu} \mathbb{G}_{\nu}-\mathcal{D}_{\nu} \mathbb{G}_{\mu} 
@@ -934,7 +950,8 @@ y usando \eqref{eq:Dmup} da lugar a
   \right] \widetilde{U}^{\dagger} \nonumber\\
 =& \widetilde{U} \mathbb{G}_{\mu\nu} \widetilde{U}^{\dagger}\,.
 \end{align}
-Esto es justo lo que se espera de la transformación de un tensor para un grupo de simetría continuo. 
+Esto es justo lo que se espera de la transformación de un tensor para un grupo de simetría continuo.
+\end{frame}
 
 Como hemos visto en el caso electromagnético, para demostrar la invarianza del Lagragiano electromagnético en la ec.~\eqref{eq:invlorff}, es necesario que en efecto el tensor electromagnético transforme como un tensor en el espacio de Lorentz:
 \begin{align}
@@ -945,7 +962,8 @@ Como hemos visto en el caso electromagnético, para demostrar la invarianza del 
 
 Sin embargo, para el tensor electromagnético la transformación bajo $\operatorname{U}(1)_Q$ es trivial.
 
-Retornado a la definición la matriz de tensores de campos gauge para una teoría no Abeliana $\operatorname{SU}(3)$, 
+Retornado a la definición la matriz de tensores de campos gauge para una teoría no Abeliana $\operatorname{SU}(3)$,
+\begin{frame}[fragile,allowframebreaks]
 si imponemos que la derivada covariante de $\mathbb{G}_{\mu\nu}$ transforme como $\mathbb{G}_{\mu\nu}$\footnote{o asumiendo simplemente que la propiedas de la derivada covariante no dependen de la representación}
 \begin{align}
   \mathcal{D}_{\mu}\mathbb{G}^{\mu\nu} \to \left(  \mathcal{D}_{\mu}\mathbb{G}^{\mu\nu}  \right)'=
@@ -967,7 +985,9 @@ Como se hizo antes, de esta propiedad se puede obtener la transformación de la 
  \mathbb{G}^{\mu}\to  {\mathbb{G}'}^\mu  =&-\frac{i}{g_s}(\partial^\mu \widetilde{U})\widetilde{U}^{-1}+ \widetilde{U}{\mathbb{G}}^\mu \widetilde{U}^{-1}\,.  
 \end{align}
 De modo que es consistente asumir que la transformación de la matriz de  campo $\mathbb{G}^{\mu}$ es independiente de la representación, como se hizo explícitamente en~\eqref{eq:tdcg}.
+\end{frame}
 
+\begin{frame}[fragile,allowframebreaks]
 Tenemos entonces que %Obtener a partir del segundo teorema de Noether
 \begin{align}
   \mathbb{G}_{\mu\nu}\equiv & \mathcal{D}_{\mu} \mathbb{G}_{\nu}-\mathcal{D}_{\nu} \mathbb{G}_{\mu} \nonumber\\
@@ -978,8 +998,10 @@ Tenemos entonces que %Obtener a partir del segundo teorema de Noether
 =& \partial_{\mu}\mathbb{G}_{\nu}-\partial_{\nu}\mathbb{G}_{\mu}
 -ig_s \left[  \mathbb{G}_{\mu},\mathbb{G}_{\nu}  \right] .
 \end{align}
+\end{frame}
 Note que en el caso Abeliano, la matriz del único tensor es $1\times1$ y por lo tanto el conumutador es cero, recobrando la definición usual del tensor de campo electromagnético.
 
+\begin{frame}[fragile,allowframebreaks]
 Es conveniente definir los \emph{tensores cromodinámicos}, $G^{\mu\nu}_a$, tal que su combinación lineal con los generadores de $SU(3)$ generen la matrizde tensores de campos de gluones:
 \begin{align}
 \label{eq:Gmunu}
@@ -1007,7 +1029,7 @@ donde hemos definido la parte Abeliana de los tensores cromodinámicos como
 \begin{equation}
   \widetilde{G}_{\mu\nu}^a=\partial_\mu G_\nu^a-\partial_\nu G_\mu^a\,.
 \end{equation}
-
+\end{frame}
 
 
 En conclusión, hemos visto que la matrix de tensores de gluones \eqref{eq:Gmunu} debe transformar en la representación adjunta de $\operatorname{SU}(3)$ como
@@ -1021,7 +1043,7 @@ y que dicha transformación es consisitente con la transformación de la matriz 
 -\frac{i}{g_s} \left( \partial_{\mu} \widetilde{U} \right) \widetilde{U}^{-1}\,.
 \end{align}
 
-
+\begin{frame}[fragile,allowframebreaks]
 Para poder obtener un invariante bajo transformaciones gauge a partir del producto $\mathbb{G}^{\mu\nu}\mathbb{G}_{\mu\nu}$, debemos utilizar la traza 
 \begin{align}
   \operatorname{Tr}\left(\mathbb{G}^{\mu\nu}\mathbb{G}_{\mu\nu}\right)\to
@@ -1031,8 +1053,10 @@ Para poder obtener un invariante bajo transformaciones gauge a partir del produc
   =&\operatorname{Tr}\left(\widetilde{U}^{-1}\widetilde{U}{{\mathbb{G}}}^{\mu\nu}{{\mathbb{G}}}_{\mu\nu}\right)\nonumber\\
   =&\operatorname{Tr}\left({{\mathbb{G}}}^{\mu\nu}{{\mathbb{G}}}_{\mu\nu}\right)\,.
 \end{align}
+\end{frame}
 
 Como las propiedades de Traza  son independientes de la representación, a partir de este momento omitiremos la virgulilla para la representación adjunta y usaremos el mismo símbolo $G_{\mu\nu}$ para representar la matriz de tensores cromodinámicos tanto en su representación adjunta como en su representación fundamental. 
+\begin{frame}[fragile,allowframebreaks]
 Teniendo en cuenta la normalización de las matrices de SU(3)
 \begin{align}
    \operatorname{Tr}\left(\Lambda^a\Lambda^b\right)=&\frac{1}{2}\delta^{ab}\,,
@@ -1309,6 +1333,7 @@ La ec.\eqref{eq:Gmuael} puede reescribirse como:
 \begin{align}
   \partial_\mu G^{\mu\nu}_a=-g_s\left[{\color{red}f_{abc}G^b_\mu G^{\mu\nu}_c}+\bar{\Psi}\gamma^\nu\frac{\lambda_a}{2}\Psi  \right]
 \end{align}
+\end{frame}
 y usando el hecho que $\partial_\mu\partial_\nu=\partial_\nu\partial_\mu$:
 \begin{align}
   \partial_\nu\partial_\mu G^{\mu\nu}_a=&\partial_\nu\partial_\mu\widetilde{G}^{\mu\nu}+g_s\partial_\nu\partial_\mu\left(f_{abc}G^\mu_bG^\nu_c\right)\nonumber\\
@@ -1318,11 +1343,13 @@ y usando el hecho que $\partial_\mu\partial_\nu=\partial_\nu\partial_\mu$:
 =&\frac{1}{2}\left[g_s\partial_\nu\partial_\mu\left(f_{abc}G^\mu_bG^\nu_b\right)-g_s\partial_\mu\partial_\nu\left(f_{abc}G^\mu_bG^\nu_c\right)\right]\nonumber\\
 =&0\,,
 \end{align}
-como en el caso Abeliano, tenemos la corriente conservada
-\begin{align}
-  \partial_\nu j^\nu=0\,,
-\end{align}
-donde
+como en el caso Abeliano, tenemos la corriente
+% conservada
+% \begin{align}
+%   \partial_\nu j^\nu=0\,,
+% \end{align}
+% donde
+\begin{frame}[fragile,allowframebreaks]
 \begin{align}
   \label{eq:noabeljnu}
 j^{\nu}_{a}=-\frac{\partial\mathcal{L}}{\partial G_\nu^a}\,,
@@ -1334,7 +1361,6 @@ tal que
 \end{align}
 
 El primer término corresponde a las autointeracciones y el segundo a la corriente de color generada por los quarks.
-
 \end{frame}
 
 % De otro lado
