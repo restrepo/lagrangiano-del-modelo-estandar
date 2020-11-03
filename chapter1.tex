@@ -1,4 +1,5 @@
-%instiki:category: FisicaSubatomica
+
+% instiki:category: FisicaSubatomica
 % use latex2itexv2 chapter1.tex to obtain inkstiki file
 % use latex2itexTOC to obtain Tabla de Contenidos
 %%%%%%%%%% TODO %%%%%%%%%%%%
@@ -354,7 +355,7 @@ Considere el generador $1\times1$
 \begin{align}
   K=-i\,,
 \end{align}
-que genera el elemento del grupo $\operatorname{SO}(1)$, $R(\xi)$
+que genera el elemento del grupo dilaton, $\operatorname{SO}(1)$,~\cite{Schwichtenberg:2019fjh} $R(\xi)$
 \begin{align}
   \lambda(\xi)=\operatorname{e^{\xi}}\,,
 \end{align}
@@ -1979,7 +1980,8 @@ Imponiendo la invarianza sobre el producto escalar
 y repitiendo los pasos que dieron lugar a la ec.~(\ref{eq:Lambdasteps})
 pero para la métrica contravariante
 \begin{align}
-g^{\mu\nu}= {\left(\Lambda^{-1}\right)^\mu}_\alpha g^{\alpha \beta}{\left(\Lambda^{-1}\right)^\nu}_\beta\,, 
+g^{\mu\nu}=& {\left(\Lambda^{-1}\right)^\mu}_\alpha g^{\alpha \beta}{\left(\Lambda^{-1}\right)^\nu}_\beta \nonumber\\
+=& {\left(\Lambda^{-1}\right)^\mu}_\alpha g^{\alpha \beta}{\left[ \left(\Lambda^{-1}\right)^{\operatorname{T}} \right]_{\beta}}^{\nu} \,.
 \end{align}
 
 Como una forma de acortar las operaciones, podemos definir que la métrica permita bajar los indices
@@ -2038,7 +2040,8 @@ Usando ec.~\eqref{eq:lambdainv}, tenemos que
 \begin{align}
   \label{eq:Lambdacontra}
   g^{\mu\nu}=&{\left( \Lambda^{-1} \right)^{\mu}}_{\alpha}g^{\alpha\beta} {\left( \Lambda^{-1} \right)^{\nu}}_{\beta}\nonumber\\
-=&{\Lambda_{\alpha}}^{\mu}g^{\alpha\beta}{\Lambda_{\beta}}^{\nu}\,.           
+=&{\Lambda_{\alpha}}^{\mu}g^{\alpha\beta}{\Lambda_{\beta}}^{\nu} \nonumber\\
+=&{\left( \Lambda^{\operatorname{T}} \right)^{\mu}}_{\alpha}g^{\alpha\beta}{\Lambda_{\beta}}^{\nu} \nonumber\\\,.           
 \end{align}
 
 
@@ -2753,7 +2756,7 @@ Tenemos los siguientes objetos que transforman bajo las representaciones del Gru
   \end{tabular}
   \caption{
        Productos escalares: $\Psi^\dagger \Psi$,  \hspace{4cm}
-      $A^\nu A_\nu= g_{\nu \beta}  A^\nu  A^{\beta}\,,\quad \partial_\mu  \partial^\mu=g^{\mu\alpha}\partial_\mu\partial_{\alpha}$
+       $\partial_\mu A^{\mu}\,,\quad A^\nu A_\nu \,,\quad \partial_\mu  \partial^\mu$
 }
   \label{tab:fermionlr}
 \end{table}
@@ -4076,7 +4079,7 @@ Teniendo en cuenta que
   \sum_i \left[\frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}\partial_{\mu}a_i+\frac{\partial\mathcal{L}}{\partial\phi_i}a_i \right]=&
  \sum_i \frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}\partial_{\mu}a_i \nonumber\\
  =& \frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi)}\partial_{\mu}a_{1} +  \partial_{\mu}a_2\frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi^{*})} \nonumber\\
-=&i\partial^{\mu}\phi^{*} \partial_{\mu}\phi-i \partial_{\mu}\psi^{*}\partial^{\psi}\nonumber\\
+  =&i\partial^{\mu}\phi^{*} \partial_{\mu}\phi-i \partial_{\mu}\phi^{*}\partial^{\mu}\phi\nonumber\\
 =&0\,.
 \end{align}
 Este resultado particular para campos complejos se mantiene en general para el conjunto de campos que dependan sólo del parámetro y no de la derivada del parámetro, es decir, para el (sub)conjunto de campos de materia con $b_i^\mu=0$: ver Teorema 3 de \cite{Brading:2000hc}. 
@@ -4098,11 +4101,11 @@ Retomando la identidad para campos de materia con un parámetro de transformaci�
      \sum_i \mathcal{E}_ia_{i}     
  =& \partial_{\mu} j^{\mu}\,,
 \end{align}
-si imponemos además que los campos de materia satisfagan las ecuaciones de Euler-Lagrange, de modo que $\mathcal{E}_i=0$, resultaclaramente como la ecuación de continuidad
+si imponemos además que los campos de materia satisfagan las ecuaciones de Euler-Lagrange, de modo que $\mathcal{E}_i=0$, resulta claramente como la ecuación de continuidad
 \begin{align}
   \partial_{\mu} j^{\mu}=0\,.
 \end{align}
-Cuando la conservación de la carga requiera de que las ecuaciones de Euler-Lagrange se satisifagan, diremos que la conservación de la carga es \emph{propia}.
+Cuando la conservación de la carga requiera de que las ecuaciones de Euler-Lagrange se satisfagan, diremos que la conservación de la carga es \emph{propia}.
 \end{frame}
 
 

@@ -98,17 +98,22 @@ de modo que la transformación de Lorentz para $\partial_\mu=\partial/\partial x
 Podemos ahora demostrar que la Acción obtenida del Lagrangiano en la ec.\eqref{eq:Lpr} es invariante bajo transformaciones de Lorentz haciendo uso de la ec.~(\ref{eq:Lambdacontra}). Para hacer la demostración más general, podemos agregar una función general que solo dependa del campo $\phi$ pero no de sus derivadas, $V(\phi)$
 \begin{align}
   \mathcal{L}(\phi(x),\partial_{\mu}\phi(x))\to  \mathcal{L}'=& \frac{1}{2}\partial'_\mu\phi'(x)\partial^{'\mu}\phi'(x)-V(\phi'), \nonumber\\
-  =&{\left(\Lambda^{-1}\right)^\nu}_\mu g^{\mu \rho}{\left(\Lambda^{-1}\right)^\sigma}_\rho \partial_\nu\phi(\Lambda^{-1}x) \partial_\sigma \phi(\Lambda^{-1}x) -V(\phi')\nonumber\\
-  =& g^{\nu \sigma}\partial_\nu\phi(\Lambda^{-1}x) \partial_\sigma \phi(\Lambda^{-1}x) -V(\phi(\Lambda^{-1}x))\nonumber\\
-  =& \partial_\nu\phi(\Lambda^{-1}x) \partial^{\nu} \phi(\Lambda^{-1}x) -V(\phi(\Lambda^{-1}x)) \nonumber\\
+   =& \frac{1}{2}\partial'_\mu\phi'(x)g^{\mu \rho}\partial'_{\rho}\phi'(x)-V(\phi'), \nonumber\\
+   =&\frac{1}{2}{\color{red}\partial_\nu\phi(\Lambda^{-1}x) {\left(\Lambda^{-1}\right)^\nu}_\mu} g^{\mu \rho} {\color{blue}\partial_\sigma \phi(\Lambda^{-1}x){\left(\Lambda^{-1}\right)^\sigma}_\rho}  -V(\phi')\nonumber\\
+  =&\frac{1}{2}{\color{red}{\left(\Lambda^{-1}\right)^\nu}_\mu} g^{\mu \rho}{\color{blue}{\left(\Lambda^{-1}\right)^\sigma}_\rho} \partial_\nu\phi(\Lambda^{-1}x) \partial_\sigma \phi(\Lambda^{-1}x) -V(\phi')\nonumber\\
+  =&\frac{1}{2} g^{\nu \sigma}\partial_\nu\phi(\Lambda^{-1}x) \partial_\sigma \phi(\Lambda^{-1}x) -V(\phi(\Lambda^{-1}x))\nonumber\\
+  =&\frac{1}{2} \partial_\nu\phi(\Lambda^{-1}x) \partial^{\nu} \phi(\Lambda^{-1}x) -V(\phi(\Lambda^{-1}x)) \nonumber\\
   =&\mathcal{L}(\phi(\Lambda^{-1}x),\partial_{\mu}\phi(\Lambda^{-1}x))\,.
 \end{align}
 Ya que la Acción involucra la integración sobre todos los puntos, esta es invariante bajo transformaciones de Lorentz. Explícitamente
 \begin{align}
-  S\to S'=\int \operatorname{d}^4x\, \mathcal{L}
+  S\to S'=&\int\operatorname{d}^4x'\,\mathcal{L}(\phi'(x'),\partial'_{\mu}\phi'(x') ) \nonumber\\
+=&\int\operatorname{d}^4x'\,\mathcal{L}\left( \phi(\Lambda^{-1}x'),\frac{\partial}{\partial {x'}^{\mu}}\phi(\Lambda^{-1}x') \right) \nonumber\\  
+=&\int\operatorname{d}^4x\, \mathcal{L}(\phi(\Lambda^{-1}x),\partial_{\mu}\phi(\Lambda^{-1}x))\nonumber\\
+=&S\,.
 \end{align}
 
-Note que en unidades naturales
+Nótese que en unidades naturales
 \begin{align}
   [S]=[\hbar]=1,
 \end{align}
@@ -394,21 +399,21 @@ Ver \url{http://www.damtp.cam.ac.uk/user/examples/3P7.pdf}
 Considere los campos espinoriales, que se transforma como
 \begin{align}
 \label{eq:184qft}
-  \psi_\alpha(x)\to\psi'_\alpha(x)={S_\alpha}^\beta\psi_\beta(\Lambda^{-1}x)\,, 
+  \xi_\alpha(x)\to\xi'_\alpha(x)={S_\alpha}^\beta\xi_\beta(\Lambda^{-1}x)\,, 
 \end{align}
 donde $S$ es la representación espinorial $(\frac{1}{2},0)$ del grupo de Lorentz. 
 \end{frame}
-% En forma matricial, si $\Psi(x)$ es un vector columna de dos componentes,
+% En forma matricial, si $\xi(x)$ es un vector columna de dos componentes,
 % \begin{align*}
-%   \Psi=
+%   \xi=
 %   \begin{pmatrix}
-%    \psi_1\\
-%    \psi_2\\
+%    \xi_1\\
+%    \xi_2\\
 %   \end{pmatrix}
 % \end{align*}
 % entonces, una representación $2\times2$ del grupo de Lorentz, denotado con $(\frac{1}{2},0)$, puede ser escrita como
 % \begin{align}
-%   \Psi(x)\to \Psi'(x)=S\Psi \left(\Lambda^{-1}x  \right).
+%   \xi(x)\to \xi'(x)=S\xi \left(\Lambda^{-1}x  \right).
 % \end{align}
 % In such a case,
 
@@ -417,30 +422,30 @@ donde $S$ es la representación espinorial $(\frac{1}{2},0)$ del grupo de Lorent
 % $\left( 0,\frac{1}{2}\right)$, y para enfatizar su diferencia se tiene la convención de denotar sus componentes con índices con puntos, $\dot{\alpha},\dot{\beta},\cdots$.
 % %We can get $S^{*}$ from $S^{\dagger}$. In fact, writing out the fields without arguments to avoid clutter, 
 % % \begin{align}
-% %     \Psi^{\dagger}\to \Psi'^{\dagger}=\Psi^{\dagger}S^{\dagger}.
+% %     \xi^{\dagger}\to \xi'^{\dagger}=\xi^{\dagger}S^{\dagger}.
 % % \end{align}
 % En  componentes, y
 % anticipando los índices con puntos
 % para $S^{*}$, tenemos
 % \begin{align}
-%   \left( \psi'_\alpha \right)^{\dagger}=&\left( \psi_\beta \right)^{\dagger}{\left( S^\dagger\right)^{\dot{\beta}}}_{\dot{\alpha}}\nonumber\\
-% =&\left( \psi_\beta \right)^{\dagger}{\left( S^*\right)_{\dot{\alpha}}}^{\dot{\beta}}\nonumber\\
-% =&\left( \psi_\beta \right)^{\dagger}{\left( S^*\right)_{\dot{\alpha}}}^{\dot{\beta}}\,,
+%   \left( \xi'_\alpha \right)^{\dagger}=&\left( \xi_\beta \right)^{\dagger}{\left( S^\dagger\right)^{\dot{\beta}}}_{\dot{\alpha}}\nonumber\\
+% =&\left( \xi_\beta \right)^{\dagger}{\left( S^*\right)_{\dot{\alpha}}}^{\dot{\beta}}\nonumber\\
+% =&\left( \xi_\beta \right)^{\dagger}{\left( S^*\right)_{\dot{\alpha}}}^{\dot{\beta}}\,,
 % \end{align}
 \begin{frame}[fragile,allowframebreaks]
-Si interpretamos  $\left( \psi_\beta \right)^{\dagger}$ como las componentes de un nuevo vector fila transformando bajo la representación $(0,\frac{1}{2})$,
+Si interpretamos  $\left( \xi_\beta \right)^{\dagger}$ como las componentes de un nuevo vector fila transformando bajo la representación $(0,\frac{1}{2})$,
  $S^{*}(\Lambda)$, con componentes con puntos
 \begin{align}
- \psi_{\dot{\alpha}}^{\dagger}\equiv \left( \psi_\alpha \right)^{\dagger}
+ \xi_{\dot{\alpha}}^{\dagger}\equiv \left( \xi_\alpha \right)^{\dagger}
 \end{align}
 entonces tenemos que 
 \begin{align}
-{\psi}_{\dot{\alpha}}^{\dagger}\to  {\psi'}_{\dot{\alpha}}^{\dagger}=& \psi_{\dot{\beta}}^{\dagger}{\left[{S^{\dagger}}\right]^{\dot{\beta}}}_{\dot{\alpha}}\,.
+{\xi}_{\dot{\alpha}}^{\dagger}\to  {\xi'}_{\dot{\alpha}}^{\dagger}=& \xi_{\dot{\beta}}^{\dagger}{\left[{S^{\dagger}}\right]^{\dot{\beta}}}_{\dot{\alpha}}\,.
 \end{align}
 \end{frame}
 % or in matricial form
 % \begin{align}
-% {{\Psi'}^{\dagger}}^{T}=S^{*}{{\Psi}^{\dagger}}^{T}
+% {{\xi'}^{\dagger}}^{T}=S^{*}{{\Psi}^{\dagger}}^{T}
 % \end{align}
 % \begin{align}
 %   K=&\begin{pmatrix}
@@ -453,7 +458,7 @@ entonces tenemos que
 % \end{align}
 
 \begin{frame}[fragile,allowframebreaks]
-In summary we have the following Lorentz's transformation properties for the fields
+En resumen, tenemos las siguiente transformaciones de Lorentz para los diferentes tipos de campos
 \begin{align}
    \phi(x)\to \phi'(x)=&\phi(\Lambda^{-1}x) && \text{Scalar field,}\nonumber\\
    A^\mu(x)\to {A'}^\mu(x)=&{\Lambda^\mu}_\nu A^\nu(\Lambda^{-1}x)&&\text{Vector field,}\nonumber\\
