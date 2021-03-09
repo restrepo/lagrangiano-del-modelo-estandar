@@ -42,3 +42,10 @@ NOTAS:
 * [1/(100 GeV) to s](https://www.wolframalpha.com/input/?i=1%2F(100+GeV)++to+s)
 * Can be open with code
 
+ACTIONS TO GENERARE PDF IN RELEASE
+* From the local clone
+```bash
+$ git tag v3.0.0
+$ git push --tags
+```
+
