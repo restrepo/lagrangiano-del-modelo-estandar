@@ -16,11 +16,9 @@ fi
 
 #Check y
 if [ "$yy" ==  True ];then
-    echo va1
     if [ $y -lt 9 ];then
 	y=$(($y+1))
     else 
-	echo va2
 	zz=True
         y=0
     fi
