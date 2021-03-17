@@ -32,5 +32,6 @@ fi
 
 
 echo git tag v${z}.${y}.${x}
-#git tag v${z}.${y}.${x}
+git tag v${z}.${y}.${x}
 echo git push --tags
+git push --tags
