@@ -304,19 +304,28 @@ La formulación Lagrangiana de la teoría clásica de campos que desarrollaremos
 
 Hemos ilustrado como el Álgebra puede generar el grupo como tal. De hecho, podemos comenzar estableciendo de entrada el Álgebra como se hará a continuación.
 
+\subsection{Álgebras de Lie}
+En adelante, definiremos los grupos continuos a partir del álgebra que satisfagan sus generadores. En efecto, dato un conjunto de generadores $T_{i}$ que satisfagan alguna relación algebraica entre ellos, una vez se establezca una representación específica de esa álgebra, definimos un elemento del Grupo que se genera como
+\begin{align}
+  U=\exp \left( i \sum_j T_j \theta^{j} \right),
+\end{align}
+donde $\theta^j$ son los parámetros del grupo y $T_j$ los generadores del grupo en una representación matricial específica.
 
-\subsection{Representación fundamental}
+\subsection{Álgebra de Lie para $\operatorname{SO}(2)$}
 A partir de una misma álgebra podemos definir las representaciones fundamentales de diferentes grupos. Si dos grupos diferentes provienen de la misma álgebra, diremos que dichos grupos son isomorfos.
 
 A modo de ejemplo, para el álgebra
 \begin{align}
+  \label{eq:algab}
   T^2=\operatorname{1}\,,
 \end{align}
 podemos definir la representación fundamental $2\times2$ del grupo $\operatorname{SO}(2)$, a partir del generador $\tau$ de la ecuación \eqref{eq:so2g}. 
 
-El generador trivial $T=1$ nos permite definir la representación fundamental del grupo  $\operatorname{U}(1)$. Generalizando a un generador constante $T=Y$, tenemos lo siguiente.
+\subsection{Representación del álgebra para $\operatorname{U}(1)$}
+Para una representación fundamental $1\times 1$ del álgebra~\eqref{eq:algab}, tenemos el generador trivial $T=1$, el cual nos permite definir la representación fundamental del grupo  $\operatorname{U}(1)$. Generalizando a un generador constante $T=Y$, tenemos lo siguiente.
 
-\subsection{$\operatorname{U}(1)$}
+
+
  El Grupo $U(1)$ corresponde a las rotaciones de un eje complejo. Tiene como elementos a los números complejos de módulo 1, los cuales en coordenadas polares se puede representar como
 \begin{align}
   U(\theta)=\operatorname{e}^{i \theta Y}\,,
