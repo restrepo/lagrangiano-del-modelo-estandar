@@ -895,11 +895,11 @@ En forma matricial, tenemos
 \textbf{Ejemplo}: Demostrar \eqref{eq:2to2}
 \begin{align}
   \widetilde{\Psi}\cdot \Upsilon^*=& \Psi^{\dagger} \Upsilon^* \nonumber\\
-  i \tau_2 \Psi^*\cdot \Upsilon^* =&\Psi^{\operatorname{T}*} Y^* \nonumber\\
+  i \tau_2 \Psi^*\cdot \Upsilon^* =&\Psi^{\operatorname{T}*}  \Upsilon^* \nonumber\\
   -i \tau_2^* \Psi \cdot \Upsilon= & \Psi^{\operatorname{T}} Y \nonumber\\
-  i \tau_2 \Psi \cdot \Upsilon=&  \Psi^{\operatorname{T}} Y \nonumber\\
-  i \tau_2( i \tau_2) \Psi \cdot \Upsilon=& i \tau_2 \Psi^{*\dagger} Y \nonumber\\
-   \Psi \cdot \Upsilon=& - \widetilde{\Psi}^{\dagger} Y \,.
+  i \tau_2 \Psi \cdot \Upsilon=&  \Psi^{\operatorname{T}}  \Upsilon \nonumber\\
+  i \tau_2( i \tau_2) \Psi \cdot \Upsilon=& i \tau_2 \Psi^{*\dagger}  \Upsilon \nonumber\\
+   \Psi \cdot \Upsilon=& - \widetilde{\Psi}^{\dagger}  \Upsilon \,.
 \end{align}
 
 
@@ -911,7 +911,7 @@ En forma matricial, tenemos
 \begin{frame}[fragile,allowframebreaks]
 En general, si $N^{2}-1$ generadores $\Lambda_a$, satisfacen el álgebra
 \begin{align}
-  \left[ \Lambda_a,\Lambda_b \right]=f_{abc}\Lambda^{c}\,,
+  \left[ \Lambda_a,\Lambda_b \right]=i\,f_{abc}\Lambda^{c}\,,
 \end{align}
 con
 \begin{align}
@@ -1201,7 +1201,7 @@ K_{1}=&\begin{pmatrix}
 Cuando se quieren obtener las tres componentes temporaloides, $T^i$, y las tres componentes espacialoides $S^i$
 a partir de un tensor antisimétrico, $\mathcal{T}^{\mu\nu}$, se usan las siguientes definiciones
 \begin{align}
-  T^i\equiv &\mathcal{T}^{i0}\,& S^i=& \frac{1}{2}\epsilon^{ijk}\mathcal{T}_{ij}\,.
+  T^i\equiv &\mathcal{T}^{i0}\,& S^i=& \frac{1}{2}\epsilon^{ijk}\mathcal{T}_{jk}\,.
 \end{align}
 Cómo se mostrará a continuación, dichas expresiones se puede invertir de tal manera que
 \begin{align}
@@ -2116,7 +2116,7 @@ En el libro de A.~Zee sobre teoría de grupos~\cite{Zee:2016fuk} se resumen este
 \begin{frame}[fragile,allowframebreaks]
 
 
-Como un ejemplo de Transformación de Lorentz consideremos el cambio de un sistema en reposo a un sistema inercial con velocidad a lo largo del eje $x$, $v$
+Como un ejemplo de Transformación de Lorentz consideremos el cambio de un sistema en reposo a un sistema inercial con velocidad \emph{constante},  $v$, a lo largo del eje $x$,
 \begin{align}
 \label{eq:147}
   \left\{x^\mu\right\}=\begin{pmatrix}
