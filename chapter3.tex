@@ -336,7 +336,7 @@ En particular, para la densidad Hamiltoniana tenemos
 \begin{align}
  \mathcal{H}=  T^0_0 =&\partial^0\phi^* \partial_0 \phi + \partial_0 \phi^* \partial^0\phi-\partial_{\alpha}\phi^{*} \partial^{\alpha}\phi+m^2\phi^{*}\phi+\lambda \left(\phi^{*}\phi \right)^2 \nonumber\\
   =&\partial^0\phi^* \partial_0 \phi + \partial_0 \phi^* \partial^0\phi-\partial_{0}\phi^{*} \partial^{0}\phi-\partial_{i}\phi^{*} \partial^i\phi+m^2\phi^{*}\phi+\lambda \left(\phi^{*}\phi \right)^2 \nonumber\\
-  =&\partial^0\phi^* \partial_0 \phi -\boldsymbol{\nabla}\phi^{*}\cdot\boldsymbol{\nabla}\phi+m^2\phi^{*}\phi+\lambda \left(\phi^{*}\phi \right)^2 \,.
+  =&\frac{\partial\phi^*}{\partial t} \frac{\partial\phi}{\partial t}  +\boldsymbol{\nabla}\phi^{*}\cdot\boldsymbol{\nabla}\phi+m^2\phi^{*}\phi+\lambda \left(\phi^{*}\phi \right)^2 \,.
 \end{align}
 
 
@@ -572,14 +572,13 @@ $\psi_{\alpha}=\xi_{\alpha}$, usando el cudrivector de Lorentz con estructura te
 % espinores izquierdos puros
 Por consiguiente, un posible invariante de Lorentz con un sóla derivada podría ser
  \begin{align}
-   {\psi}^{\dagger}_{\dot{\alpha}}(x)\overline{\sigma}^{\mu\dot{\alpha}\alpha}\partial_\mu\psi_{\alpha}(x)\to  {\psi'}^{\dagger}_{\dot{\alpha}}(x)\overline{\sigma}^{\mu\dot{\alpha}\alpha}\partial'_\mu\psi'_{\alpha}(x)
-&={\psi'}^{\dagger}_{\dot{\alpha}}(\Lambda^{-1}x)\overline{\sigma}^{\mu\dot{\alpha}\gamma}{\left(\Lambda^{-1}\right)^\rho}_\mu\partial_\rho \psi'_{\gamma}(\Lambda^{-1}x)\,,
+   {\psi}^{\dagger}_{\dot{\alpha}}(x)\overline{\sigma}^{\mu\dot{\alpha}\alpha}\partial_\mu\psi_{\alpha}(x)\,.
 \end{align}
 Para suavizar la notación, vamos a ignorar en adelante la dependencia en las coordenadas transformadas las cuales serán integradas en el cálculo de la Acción
 \begin{align}
      {\psi}^{\dagger}_{\dot{\alpha}}\overline{\sigma}^{\mu\dot{\alpha}\alpha}\partial_\mu\psi_{\alpha}\to  {\psi'}^{\dagger}_{\dot{\alpha}}\overline{\sigma}^{\mu\dot{\alpha}\alpha}\partial'_\mu\psi'_{\alpha}
 &=
- {S^*_{\dot{\alpha}}}^{\dot{\beta}}{\psi}^{\dagger}_{\dot{\beta}}\overline{\sigma}^{\mu\dot{\alpha\gamma}}{\left(\Lambda^{-1}\right)^\rho}_\mu\partial_\rho \left( {S_{\gamma}}^{\delta}\psi_\delta \right)\,.
+\left( {\psi}^{\dagger}_{\dot{\beta}}  {S^{\dagger\dot{\beta}}}_{\dot{\alpha}} \right)\overline{\sigma}^{\mu\dot{\alpha\gamma}}{\left(\Lambda^{-1}\right)^\rho}_\mu\partial_\rho \left( {S_{\gamma}}^{\delta}\psi_\delta \right)\,.
  \end{align} 
  Como los parámtetros de la transformación, $\xi_i$ y $\theta_i$, en la ec.~\eqref{eq:SLet} están en el espacio interno de Lorentz, 
  ni $\Lambda$, ni el cuadrivector de matrices constantes $\overline{\sigma}^{\mu}$ cambian bajo una transofrmación de Lorentz asociada a cambios de las coordenadas externas
@@ -605,7 +604,7 @@ S^{\dagger}\overline{\sigma}^\nu S=&{\left(\Lambda\right)^\nu}_\rho \overline{\s
 \end{align}
 La solución para esta identidad es única y puede expresarse en términos de las matries  $2\times2$ de Pauli más la identidad
    \begin{align} 
- \overline{\sigma}^{\mu}& \left( \mathbf{1}_{2\times2},\overline{\boldsymbol{\sigma}} \right) \nonumber\\
+ \overline{\sigma}^{\mu}=& \left( \mathbf{1}_{2\times2},\overline{\boldsymbol{\sigma}} \right) \nonumber\\
  =& \left( \sigma^0,\overline{\boldsymbol{\sigma}} \right)\,, 
 \end{align}
 donde
