@@ -306,10 +306,14 @@ Hemos ilustrado como el Álgebra puede generar el grupo como tal. De hecho, pode
 
 \subsection{Álgebras de Lie}
 En adelante, definiremos los grupos continuos a partir del álgebra que satisfagan sus generadores. En efecto, dato un conjunto de generadores $T_{i}$ que satisfagan alguna relación algebraica entre ellos, una vez se establezca una representación específica de esa álgebra, definimos un elemento del Grupo que se genera como
+%
+\begin{frame}[fragile,allowframebreaks]
+
 \begin{align}
   U=\exp \left( i \sum_j T_j \theta^{j} \right),
 \end{align}
 donde $\theta^j$ son los parámetros del grupo y $T_j$ los generadores del grupo en una representación matricial específica.
+\end{frame}
 
 \subsection{Álgebra de Lie para $\operatorname{SO}(2)$}
 A partir de una misma álgebra podemos definir las representaciones fundamentales de diferentes grupos. Si dos grupos diferentes provienen de la misma álgebra, diremos que dichos grupos son isomorfos.
@@ -2650,7 +2654,7 @@ Sacando el conjugado
 \end{align}
 y definiendo
 \begin{align}
-\eta^{*\dot{\alpha}}\equiv  \left( \xi^{\alpha} \right)^{*}\,.
+\eta^{*\dot{\alpha}}\equiv  \left( \eta^{\alpha} \right)^{*}\,.
 \end{align}
 tenemos que
 \begin{align*}
@@ -2818,9 +2822,31 @@ como se vera posteriormente en detalle.
 
 \end{frame}
 
+Los campos fundamentales asociados a la primera generación del modelo estándar se puede definir en términos de sus transformaciones con respecto a los Grupo de Lorentz y los grupos de Lie usados que lo definen como se muestra en la Tabla~\ref{tab:smflds}.
+
+\begin{frame}[fragile,allowframebreaks]
+\begin{table}
+  \centering
+    \begin{tabular}{|l|c|c|c|l|}\hline
+      Campos               &Lorentz   & SU(3)$_{C}$            & SU(2)$_{L}$           & U(1)$_Y$          \\\hline
+    $Q   $                 & $\xi_{\alpha}^1$ & $\mathbf{3}$           & $\mathbf{2}$          & $1/6$          \\      
+    $L   $                 & $\xi_{\alpha}^2$ & $\mathbf{1}$           & $\mathbf{2}$          & $-1/2$          \\
+    $\left(u_R^{-}\right)^{\dagger}$ & $\eta_1^\alpha$  & $\overline{\mathbf{3}}$ & $\mathbf{1}$           & $-2/3$              \\
+    $\left(d_R^{-}\right)^{\dagger}$ & $\eta_2^\alpha$  & $\overline{\mathbf{3}}$ & $\mathbf{1}$           & $-1/3$              \\            
+    $\left(e_R^{-}\right)^{\dagger}$ & $\eta_3^\alpha$  & $\mathbf{1}$            & $\mathbf{1}$            & $1$              \\
+     $H$                   & -       &  $\color{red}\mathbf{1}$ & $\color{red}\mathbf{2}$ &$\color{red}1/2$\\\hline
+  \end{tabular}\hspace{1cm} 
+  \caption{Campos fundamentales del modelo estándar }
+  \label{tab:smflds}
+\end{table}
+\end{frame}
+
+
+
 \noindent
 \textbf{Ejemplo:} 
 En la siguiente Tabla y figura se asignan los espinores (anti-espinores) de Weyl izquierdos (derechos) $\xi_{i\alpha}$ ($\eta^{\alpha}_i$)  y las cargas bajo diferentes simetrías especificadas en las columnas.
+
 
 
 \begin{frame}[fragile,allowframebreaks]
