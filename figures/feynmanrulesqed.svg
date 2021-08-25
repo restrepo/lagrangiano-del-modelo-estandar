@@ -27,9 +27,9 @@
      inkscape:window-height="1031"
      id="namedview41"
      showgrid="false"
-     inkscape:zoom="0.99913954"
-     inkscape:cx="557.50664"
-     inkscape:cy="196.44882"
+     inkscape:zoom="1.1802375"
+     inkscape:cx="574.03703"
+     inkscape:cy="155.78779"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
@@ -46,7 +46,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -698,6 +698,12 @@
          x="69.041336"
          y="206.52357"
          style="font-size:12px;stroke-width:0.75">Emisión                                               absorción                                             aniquilación                                        creación</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 258.63439,-22.925188 h 20.33489"
+       id="path125"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
   </g>
   <g
      style="display:none"

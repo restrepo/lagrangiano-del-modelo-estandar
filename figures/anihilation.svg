@@ -10,11 +10,11 @@
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    sodipodi:docname="anihilation.svg"
-   inkscape:version="0.92.1 r15371"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
    version="1.1"
    id="svg6866"
-   height="150.80756"
-   width="222.86278">
+   height="163.20697"
+   width="231.23125">
   <sodipodi:namedview
      fit-margin-bottom="0"
      fit-margin-right="0"
@@ -23,13 +23,13 @@
      inkscape:window-maximized="1"
      inkscape:window-y="0"
      inkscape:window-x="0"
-     inkscape:window-height="1011"
+     inkscape:window-height="1031"
      inkscape:window-width="1920"
      showgrid="false"
      inkscape:current-layer="layer5"
      inkscape:document-units="px"
-     inkscape:cy="-4.7795483"
-     inkscape:cx="212.41413"
+     inkscape:cy="7.6198577"
+     inkscape:cx="50.229897"
      inkscape:zoom="1.1579998"
      inkscape:pageshadow="2"
      inkscape:pageopacity="0.0"
@@ -172,19 +172,19 @@
     </rdf:RDF>
   </metadata>
   <g
-     transform="translate(-509.51038,-142.46946)"
+     transform="translate(-501.14191,-142.46946)"
      style="display:inline"
      inkscape:label="frame"
      id="layer4"
      inkscape:groupmode="layer" />
   <g
-     transform="translate(-509.51038,-142.46946)"
+     transform="translate(-501.14191,-142.46946)"
      style="display:inline"
      id="layer1"
      inkscape:groupmode="layer"
      inkscape:label="Layer 1" />
   <g
-     transform="translate(-509.51038,-142.46946)"
+     transform="translate(-501.14191,-142.46946)"
      style="display:inline"
      inkscape:label="Layer3"
      id="layer5"
