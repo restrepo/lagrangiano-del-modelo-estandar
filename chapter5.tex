@@ -105,6 +105,23 @@ A nivel de operadores
       QA'_{\mu}U =&\frac{1}{ie}\left( \partial_{\mu}U \right) + U QA_{\mu} \nonumber\\
       QA'_{\mu} =& U QA_{\mu} U^{-1}-\frac{i}{e}\left( \partial_{\mu}U \right)U^{-1}\,.
 \end{align}
+
+
+% \begin{align}
+%        A'_{\mu} =& U A_{\mu} U^{-1}-\frac{i}{eQ}\left( \partial_{\mu}U \right)U^{-1}\,.
+% \end{align}
+% \begin{align}
+%   F^{\mu\nu}\to F^{\prime \mu\nu}=&\partial^{\mu} A^{\prime \nu}-\partial^{\nu} A^{\prime \mu} \nonumber\\
+%   =&\partial^{\mu} \left(  UA^{\nu}U^{-1}\right)-\partial^{\nu}\left( U A^{\mu} U^{-1} \right)
+%      -\frac{i}{eQ}\partial^{\mu}\left[  \left( \partial^{\nu}U \right)U^{-1}  \right]
+%      +\frac{i}{eQ}\partial^{\nu}\left[  \left( \partial^{\mu}U \right)U^{-1}  \right]\,.        \nonumber\\
+% \end{align}
+% \begin{align}
+%   =&\left(\partial^{\mu} U \right)  A^{\nu}U^{-1}\partial^{\mu} +  U\left(\partial^{\mu}A^{\nu}\right)U^{-1}+   UA^{\nu}\left(\partial^{\mu}U^{-1}\right)
+%      -\partial^{\nu}\left( U A^{\mu} U^{-1} \right)
+%      -\frac{i}{eQ}\partial^{\mu}\left[  \left( \partial^{\nu}U \right)U^{-1}  \right]
+%      +\frac{i}{eQ}\partial^{\nu}\left[  \left( \partial^{\mu}U \right)U^{-1}  \right]\,.        \nonumber\\
+% \end{align}
 Usando la forma explítica de $U$ dada en la ec.~\eqref{eq:202qft}
 \begin{align}
   \partial_{\mu}U=  \partial_{\mu} \operatorname{e}^{iQ\theta(x)}=iQ \left[ \partial_{\mu}\theta(x) \right]\operatorname{e}^{iQ\theta(x)}
@@ -116,7 +133,7 @@ teniendo en cuenta que $U U^{-1}=1$
        QA'_{\mu} =& U QA_{\mu} U^{-1}+\frac{Q}{e}\partial_{\mu}\theta(x) \,.
 \end{align}
 Está expresión es de validez general incluso para Grupos no Abelianos con la combinación de generadores y campos $QA_{\mu}$. En el caso particular de un Grupo Abeliano  $U(1)$, tenemos simplemente que
-\begin{align}d
+\begin{align}
   UQA_{\mu}U^{-1}=QA_{\mu}\,,
 \end{align}
 de modo que, cancelando el generador $Q$ a ambos lados de la igualdad
@@ -288,6 +305,11 @@ Por consiguiente, el único término posible que a la vez es invariante de Loren
 \begin{align}
  \mathcal{L}\left( \partial_{\mu}A_{\nu}\right)=-\frac{1}{4}F_{\mu\nu}F^{\mu\nu}\,.
 \end{align}
+
+
+
+\end{frame}
+
 
 
 El Lagrangiano correspondiente a la interacción de un fermión y el
@@ -681,7 +703,7 @@ La transformación gauge local bajo $SU(3)$ es
 \begin{equation}
   \Psi\to \Psi'=\exp\left(i\theta_a(x)\frac{\lambda^a}{2}\right)\Psi.
 \end{equation}
-donde $a=1,\ldots,8$, $\lambda_a/2$ son los ocho generadores de $SU(3)$ y $\theta_a(x)$ son los parámetros de la transformación global. Los generadores de $SU(3)$
+donde $a=1,\ldots,8$, $\lambda_a/2$ son los ocho generadores de $SU(3)$ y $\theta_a(x)$ son los parámetros de la transformación local. Los generadores de $SU(3)$
 \begin{align}
   \Lambda^a\equiv\frac{\lambda^a}{2}\,,
 \end{align}
@@ -825,7 +847,7 @@ $\alpha=\dfrac{e^2}{4\pi}\approx 1/137$ & $\alpha_s=\dfrac{g_s^2}{4\pi}>1$ & \pa
 % 2 Demuestre que la derivada covariante de Gmunu transforma como Gmunu
 
 
-Note entonces que en el lenguage de los teoremas de Noether, el campo $G^{\mu}_{a}$ transforma como un campo material y un campo de radiación a la vez, es decir, su transformación depende tanto del parámetro como de la derivada del parámetro. Por consiguiente, es conveniente definir la derivada covariante del campo $G^{\nu}_{a}$. Para ello se debe introducir la representación adjunta de $\operatorname{SU}(N)$.
+Note entonces que en el lenguage de los teoremas de Noether, el campo $G^{\mu}_{a}$ transforma como un campo de materia y un campo de radiación a la vez, es decir, su transformación depende tanto del parámetro como de la derivada del parámetro. Por consiguiente, es conveniente definir la derivada covariante del campo $G^{\nu}_{a}$. Para ello se debe introducir la representación adjunta de $\operatorname{SU}(N)$.
 
 \begin{frame}[fragile,allowframebreaks]
 La representación adjunta de $\operatorname{SU}(3)$, consiste en las 8 matrices $8\times 8$
@@ -938,6 +960,7 @@ Por consiguiente, la ``derivada covariante'' de la matriz del campo de gluones n
 \begin{frame}[fragile,allowframebreaks]
 Note que si definimos la matriz de tensores de campos de gluones como
 \begin{align}
+  \label{eq:gmunu}
    \mathbb{G}_{\mu\nu}\equiv & \mathcal{D}_{\mu} \mathbb{G}_{\nu}-\mathcal{D}_{\nu} \mathbb{G}_{\mu} 
 \end{align}
 entonces,
@@ -978,14 +1001,16 @@ si imponemos que la derivada covariante de $\mathbb{G}_{\mu\nu}$ transforme como
 entonces
 \begin{align}
   \mathcal{D}_{\mu}'\mathbb{G}^{\prime \mu\nu}
-  =\widetilde{U}  \mathcal{D}_{\mu}\mathbb{G}^{\mu\nu}  \widetilde{U}^{\dagger}\nonumber\\
   =\widetilde{U} \mathcal{D}_{\mu}\widetilde{U}^{\dagger} \widetilde{U} \mathbb{G}^{\mu\nu}  \widetilde{U}^{\dagger}\nonumber\\
-  =\widetilde{U} \mathcal{D}_{\mu}\widetilde{U}^{\dagger}  \mathbb{G}^{\prime \mu\nu}\,,
+  =\widetilde{U} \left(   \mathcal{D}_{\mu}  \mathbb{G}^{\mu\nu} \right) \widetilde{U}^{\dagger}\,,
 \end{align}
-y obtenemos que
+De modo que la derivada covariante de $\mathbb{G}^{\mu\nu}$ transforma como $\mathbb{G}^{\mu\nu}$ si se satisface
 \begin{align}
 {\mathcal{D}}^\mu \to   {\mathcal{D}'}^\mu =\widetilde{U} {\mathcal{D}}^\mu \widetilde{U}^{\dagger}\,.
 \end{align}
+
+Tomando $\mathbb{G}^{\mu\nu}$ como el campo fundamental, podemos concluir que con la definción~\eqref{eq:gmunu}, que al igual que con $\Psi$, la derivada covariante del campo transforma como el campo. 
+
 Como se hizo antes, de esta propiedad se puede obtener la transformación de la matriz de gluones pero ahora en la representación adjunta:
 \begin{align}
  \mathbb{G}^{\mu}\to  {\mathbb{G}'}^\mu  =&-\frac{i}{g_s}(\partial^\mu \widetilde{U})\widetilde{U}^{-1}+ \widetilde{U}{\mathbb{G}}^\mu \widetilde{U}^{-1}\,.  
