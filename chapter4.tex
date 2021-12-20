@@ -380,6 +380,7 @@ donde $k=(k_0,\mathbf{k})$
 
 
 \section{Mecanismo de Stueckelberg}
+\begin{frame}[fragile,allowframebreaks]
 Consideremos un campo vectorial masivo tipo Proca, acompañado de un campo escalar de la misma masa. El Lagrangiano es entonces~\cite{Ruegg:2003ps}
 \begin{align}
 \mathcal{L}_{\text{Stueckelberg}}  =-\frac{1}{2} \partial_{\mu} A_{\nu} \partial^{\mu} A^{\nu}+\frac{1}{2} m^{2} A_\mu A^\mu+\frac{1}{2} \partial_{\mu} B \partial^{\mu} B-\frac{1}{2} m^{2} B^{2}\,.
@@ -387,7 +388,7 @@ Consideremos un campo vectorial masivo tipo Proca, acompañado de un campo escal
 
 Sin perdida de generalidad, dicho Lagrangiano se puede reescribir hasta términos de derivadas totales como
 \begin{align}
-  \mathcal{L}_{\text{Stueckelberg}}=-\frac{1}{4} F_{\mu \nu} F^{\mu \nu}+\frac{1}{2} m^{2}\left(A^{\mu}-\frac{1}{m} \partial^{\mu}B\right)^{2}-\frac{1}{2}\left(\partial_{\mu} A^\mu+m B\right)^{2}.
+  \mathcal{L}_{\text{Stueckelberg}}=-\frac{1}{4} F_{\mu \nu} F^{\mu \nu}+\frac{1}{2} {\color{red}m^{2}}\left(A^{\mu}-\frac{1}{m} \partial^{\mu}B\right)^{2}-\frac{1}{2}\left(\partial_{\mu} A^\mu+m B\right)^{2}.
 \end{align}
 Este Lagrangiano es invariante bajo las transformaciones Gauge
 \begin{align}
@@ -404,6 +405,7 @@ Esta teoría aún no ha encontrado una realización en la naturaleza y además n
 
 Para encontar una teoría con un campo gauge masivo generalizable al caso no Abeliano, debemos introducir la idea de la ruptura espontánea de la simetría.
 
+\end{frame}
 \section{El resurgimiento del éter.}
 
 Tomado de~\cite{restrepo2013resurgimiento}.
@@ -1058,7 +1060,7 @@ donde
 \begin{frame}[fragile,allowframebreaks]
 hemos definido
 \begin{align}
-  W_{\mu}^{+}\equiv& \frac{W_{\mu}^1+i W_{\mu}^2}{\sqrt{2}} & 
+  W_{\mu}^{+}\equiv& \frac{W_{\mu}^1-i W_{\mu}^2}{\sqrt{2}} & 
   W_{\mu}^{-}=\left( W_{\mu}^{+} \right)^{*}=& \frac{W_{\mu}^1+i W_{\mu}^2}{\sqrt{2}}\,. 
 \end{align}
 
@@ -1231,3 +1233,4 @@ y especifique cuales son los campos masivos y cuales quedan sin masas. Note ento
 %%% TeX-master: "fullnotes"
 %%% ispell-local-dictionary: "castellano8"
 %%% End:
+

@@ -42,7 +42,8 @@ especial.
 \section{Teoría de Grupos}
 
 \subsection{Definición de grupo}
-Ver \url{https://indico.cern.ch/event/243629}
+Ver \url{https://indico.cern.ch/event/243629}, \cite{salcedofisica} y \cite{Zee:2016fuk}.
+
 
 
 \subsection{$\operatorname{SO}(2)$}
@@ -120,8 +121,16 @@ considere el generador del Grupo de Rotaciones en dos dimensiones
 (\tau)_{ab}=-i \epsilon_{ab}\,, 
 \end{align}
 tal que
+\begin{align}
+  \epsilon=
+  \begin{pmatrix}
+    0 & 1 \\
+    -1 & 0\\
+  \end{pmatrix}
+\end{align}
+y
 \begin{align*}
-\epsilon_{ac}\epsilon_{cb}=-\delta_{ab}\,.
+\sum_c \epsilon_{ac}\epsilon_{cb}=-\delta_{ab}\,.
 \end{align*}
 Entonces  
 
@@ -545,6 +554,10 @@ Estos generadores satisfacen el álgebra (suma sobre índices repetidos)
 \begin{align}
   %the summation only includes a term
   \left[ L^i,L^j \right]=& i \epsilon_{ijk}L^{k}\,.
+\end{align}
+donde el conmutador de dos matrices $A$ y $B$ se define
+\begin{align}
+  [A,B]=AB-BA\,.
 \end{align}
 \end{frame}
 Estos generan los elementos de $SO(3)$

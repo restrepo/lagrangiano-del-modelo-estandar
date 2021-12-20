@@ -102,6 +102,7 @@ Para mantener la generalidad del resultado evitaremos usar la propiedad conmutat
 \end{align}
 A nivel de operadores
 \begin{align}
+  \label{eq:u1gt}
       QA'_{\mu}U =&\frac{1}{ie}\left( \partial_{\mu}U \right) + U QA_{\mu} \nonumber\\
       QA'_{\mu} =& U QA_{\mu} U^{-1}-\frac{i}{e}\left( \partial_{\mu}U \right)U^{-1}\,.
 \end{align}
@@ -308,7 +309,7 @@ Por consiguiente, el único término posible que a la vez es invariante de Loren
 
 
 
-\end{frame}
+\end{frame} 
 
 
 
@@ -360,7 +361,6 @@ donde hemos interpretado a $Q$ como el operador de carga eléctrica con autovalo
 \end{align}
 
 De nuevo, la aparición de la interacción electromagnética es una consecuencia de la invarianza gauge local. 
-\end{frame}
 
 \begin{frame}[fragile,allowframebreaks]
 De esta manera podemos reescribir el Lagrangiano en términos de un Lagrangiano libre y otro de interacción
@@ -619,6 +619,7 @@ Una lista completa de bariones está en: \url{https://en.wikipedia.org/wiki/List
 
 Una lista completa de mesones está en: \url{https://en.wikipedia.org/wiki/List_of_mesons}\footnote{\url{http://pdg.lbl.gov/2019/tables/contents_tables_mesons.html}}
 
+Un dataset con todas la propiedades de partículas está disponible en Wolfram (Mathematica): \url{https://reference.wolfram.com/language/ref/ParticleData.html}
 
 \end{frame}
 
@@ -780,8 +781,14 @@ de modo que
 
 Como $U$ es unitaria, la transformación de los campos gauge puede escribirse como
 \begin{equation}
-    {G}^\mu\to\left({G}^\mu\right)'=U{G}^\mu U^{\dagger}-\frac{i}{g_s}\left(\partial^\mu U\right)U^\dagger.
+    {G}^\mu\to{G}^{\prime \mu}=U{G}^\mu U^{\dagger}-\frac{i}{g_s}\left(\partial^\mu U\right)U^\dagger.
 \end{equation}
+O en términos de los 8 bosones gauge
+\begin{align}
+  \Lambda^a{G}^\mu_a\to\Lambda^a{G}^{\prime \mu}_a=U\Lambda^c{G}^\mu_c U^{\dagger}-\frac{i}{g_s}(\partial^\mu U)U^{-1}\,,
+\end{align}
+exactamente como en \eqref{eq:u1gt}, pero con $Q\to \Lambda^a$ and $A^\mu\to G^\mu_a$
+
 Como
 \begin{align}
   \partial^{\mu}U= \partial^{\mu}\exp\left[i\theta_a(x){\Lambda^a}\right]
@@ -791,7 +798,7 @@ Como
 entonces
 \begin{frame}[fragile,allowframebreaks]
 \begin{align}
-   {G}^\mu\to\left({G}^\mu\right)'=U{G}^\mu U^{\dagger}+\frac{1}{g_s}{\Lambda^a} \partial^{\mu}\theta_a(x)\,.
+ \Lambda^a{G}^\mu_a\to\Lambda^a{G}^{\prime \mu}_a=U\Lambda^c{G}^\mu_c U^{\dagger}+\frac{1}{g_s}{\Lambda^e} \partial^{\mu}\theta_e(x)\,.
 \end{align}
 y la expresión en ec.~\eqref{eq:gnrlaggtr} en efecto es suficiente general y para $\operatorname{SU}(3)$ queda
 \begin{align}
