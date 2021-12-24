@@ -566,13 +566,22 @@ Entonces $H$ adquiere una masa al cuadrado $\lambda v^{2}$ y $V(H)$ no es invari
 \begin{frame}[fragile,allowframebreaks]
 Otro método es usar las ecuaciones de mínimo $-\mu^2=\lambda v^2$, para eliminar un parámetro del potencial:
 \begin{align}
+  \label{eq:eliminar}
   V(\phi)&=-\tfrac{1}{2}\lambda v^2\phi^2+\tfrac{1}{4}\lambda\phi^4\nonumber\\
   =&-\tfrac{1}{2}\lambda v^2 \left(H^2+2vH+v^2\right)+\tfrac{1}{4}\lambda\left[H^4+4vH^3+6H^2v^2+4v^3H+v^4\right]\nonumber\\
   =&\lambda v^2H^2+\lambda vH^3+\tfrac{1}{4}\lambda H^4+\text{constant} \nonumber\\
   =&\lambda v^2 H^2 \left[1 + 2\frac{H}{2v} + \left( \frac{H}{2v} \right)^2\right]+\text{constant} \nonumber\\
     =&\frac{1}{2}\left( 2\lambda v^2 \right) H^2 \left(1+\frac{H}{2v}\right)^2+\text{constant} \,.
 \end{align}
-Podemos escribir el potencial en términos del  nuevo campo como
+
+Aprovechando la arbitrariedad del término constante, podemos escribir el potencial en la forma más condensada
+\begin{align}
+  V(\phi)&=-\tfrac{1}{2}\lambda v^2\phi^2+\tfrac{1}{4}\lambda\phi^4+\tfrac{1}{4}\lambda v^4-\tfrac{1}{4}\lambda v^4\nonumber\\
+  &=\tfrac{1}{4}\lambda \left(\phi^4-2 \phi^{2} v^2 +v^{4} \right)+\text{constant}\nonumber\\
+    &=\tfrac{1}{4}\lambda \left(\phi^2-v^{2}\right)^{2}+\text{constant}\,.
+\end{align}
+
+Podemos escribir el potencial en ec.~\eqref{eq:eliminar} en términos del  nuevo campo como
 \begin{align}
 \label{eq:higgspot}
   \mathcal{L}_H=\tfrac{1}{2}\partial^\mu H\partial_\mu H- V(H)
