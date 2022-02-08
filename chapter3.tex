@@ -28,7 +28,7 @@ En la ecuación~\eqref{eq:dlc3d}, teníamos un Lagragiano en función de $\parti
     =&\frac{1}{2}\left[
       {\partial_0\phi}\,{\partial^0\phi}+{\partial_i\phi}\,{\partial^i\phi}
    \right]\nonumber\\
-   =&\frac{1}{2}{\partial_\mu\phi}\,{\partial^\mu\phi}\,.
+ \mathcal{L}(\partial_{\mu}\phi)   =&\frac{1}{2}{\partial_\mu\phi}\,{\partial^\mu\phi}\,.
 \end{align}
 donde se ha usado la convención de suma para índices repetidos. Note que para que la velocidad de propagación sea independiente del sistema de coordenadas se requiere su identificación con la velocidad de la luz. De modo que si queremos interpretar los términos de la densidad Lagrangiana como objetos invariantes, necesariamente se tiene que hacer en el contexto de la relatividad especial.
 \end{frame}
@@ -75,7 +75,7 @@ que el campo escalar transforma bajo una transformación de Lorentz como
 
 
 
-\begin{frame}[fragile,allowframebreaks]
+
 Para comprobar la invarianza de Lorentz de la Acción para el campo escalar, necesitamos las propiedades de transformación para $\partial_\mu$ dada por la ec.~\eqref{eq:dmulrtran}, que reproducimos a continuación
 \begin{align}
   {\left(\Lambda^{-1}\right)^\mu}_\alpha{x'}^\alpha=&{\left(\Lambda^{-1}\right)^\mu}_\alpha{\Lambda^\alpha}_\nu x^\nu\nonumber\\
@@ -92,10 +92,18 @@ o
 \end{align}
 de modo que la transformación de Lorentz para $\partial_\mu=\partial/\partial x^\mu$, es
 \begin{align}
-     \frac{\partial}{{\partial x'}^\mu}=& {\left(\Lambda^{-1}\right)^\nu}_\mu\frac{\partial}{\partial x^\nu}\nonumber\\
-   {\partial\,}'_\mu=& {\left(\Lambda^{-1}\right)^\nu}_\mu\partial_\nu\,,
+     \frac{\partial}{{\partial x'}^\mu}=& {\left(\Lambda^{-1}\right)^\nu}_\mu\frac{\partial}{\partial x^\nu}\,,
 \end{align}
-Podemos ahora demostrar que la Acción obtenida del Lagrangiano en la ec.\eqref{eq:Lpr} es invariante bajo transformaciones de Lorentz haciendo uso de la ec.~(\ref{eq:Lambdacontra}). Para hacer la demostración más general, podemos agregar una función general que solo dependa del campo $\phi$ pero no de sus derivadas, $V(\phi)$
+\begin{frame}[fragile,allowframebreaks]
+o simplemente
+\begin{align*}
+     {\partial\,}'_\mu=& {\left(\Lambda^{-1}\right)^\nu}_\mu\partial_\nu\,,
+\end{align*}
+\end{frame}
+
+Podemos ahora demostrar que la Acción obtenida del Lagrangiano en la ec.\eqref{eq:Lpr} es invariante bajo transformaciones de Lorentz haciendo uso de la ec.~(\ref{eq:Lambdacontra}). Para hacer la demostración más general,
+\begin{frame}[fragile,allowframebreaks]
+podemos agregar una función general que solo dependa del campo $\phi$ pero no de sus derivadas, $V(\phi)$
 \begin{align}
   \mathcal{L}(\phi(x),\partial_{\mu}\phi(x))\to  \mathcal{L}'=& \frac{1}{2}\partial'_\mu\phi'(x)\partial^{'\mu}\phi'(x)-V(\phi'), \nonumber\\
    =& \frac{1}{2}\partial'_\mu\phi'(x)g^{\mu \rho}\partial'_{\rho}\phi'(x)-V(\phi'), \nonumber\\
@@ -112,18 +120,20 @@ Ya que la Acción involucra la integración sobre todos los puntos, esta es inva
 =&\int\operatorname{d}^4x\, \mathcal{L}(\phi(\Lambda^{-1}x),\partial_{\mu}\phi(\Lambda^{-1}x))\nonumber\\
 =&S\,.
 \end{align}
+\end{frame}
 
+\begin{frame}[fragile,allowframebreaks]
 Nótese que en unidades naturales
 \begin{align}
   [S]=[\hbar]=1,
 \end{align}
 y ya que $[d^4x]=E^{-4}$, entonces
 \begin{align}
-  [\mathcal{L}]=E^{4}\,.
+ S=\int\operatorname{d}^4x\,\mathcal{L}\to [\mathcal{L}]=E^{4}\,.
 \end{align}
 Como $[\partial_{\mu}]=E$, entonces
 \begin{align}
-  [\phi]=E\,.
+ \mathcal{L}(\partial_{\mu}\phi) =\frac{1}{2}{\partial_\mu\phi}\,{\partial^\mu\phi}\to [\phi]=E\,.
 \end{align}
 
 \end{frame}
