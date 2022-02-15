@@ -224,7 +224,7 @@ Comparando con la ec.~\eqref{eq:waveec} podemos reescribir la ec.~\eqref{eq:kg} 
 \begin{align}
   (\hat{p}_\mu\hat{p}^\mu-m^2)\phi&=0\nonumber\\
   \label{eq:k-gpmu} %noinstiki
-(\hat{E}^2-\hat{\mathbf{P}}^2-m^2)\phi&=0\\
+(\hat{E}^2-\hat{\boldsymbol{P}}^2-m^2)\phi&=0\\
 \end{align}
 Ec.~\eqref{eq:k-gpmu} %noinstikiEc.~\eqref{eq:kg}
 corresponde a la forma de operadores de la
@@ -614,12 +614,12 @@ S^{\dagger}\overline{\sigma}^\nu S=&{\left(\Lambda\right)^\nu}_\rho \overline{\s
 \end{align}
 La solución para esta identidad es única y puede expresarse en términos de las matries  $2\times2$ de Pauli más la identidad
    \begin{align} 
- \overline{\sigma}^{\mu}=& \left( \mathbf{1}_{2\times2},\overline{\boldsymbol{\sigma}} \right) \nonumber\\
+ \overline{\sigma}^{\mu}=& \left( \boldsymbol{1}_{2\times2},\overline{\boldsymbol{\sigma}} \right) \nonumber\\
  =& \left( \sigma^0,\overline{\boldsymbol{\sigma}} \right)\,, 
 \end{align}
 donde
 \begin{align}
-\sigma^0=& \mathbf{1} & \overline{\boldsymbol{\sigma}}=&-\boldsymbol{\sigma}=\left(-\sigma^1,-\sigma^2,-\sigma^3\right)\,.
+\sigma^0=& \boldsymbol{1} & \overline{\boldsymbol{\sigma}}=&-\boldsymbol{\sigma}=\left(-\sigma^1,-\sigma^2,-\sigma^3\right)\,.
 \end{align}
 \end{frame}
 \begin{frame}[fragile,allowframebreaks]
@@ -701,7 +701,7 @@ La cantidad conservada es
 P=  \int_V \psi^*\psi \,\operatorname{d}^3x=1,,
 \end{equation}
 %\end{frame}
-la cual podemos interpretar corresponde a la probabilidad de la funci\'on de onda, $\psi$. Por consiguiente, la ecuación de Euler-Lagrange se puede interpretar directamente como una ecuación de una función de onda de la mecánica cuántica. 
+la cual podemos interpretar que corresponde a la probabilidad de la función de onda $\psi$. Por consiguiente, la ecuación de Euler-Lagrange se puede interpretar directamente como una ecuación de una función de onda de la mecánica cuántica. 
 \end{frame}
 \subsection{Tensor momento-energía}
 \label{sec:tens-momento-energi}
@@ -720,20 +720,20 @@ calcular $T^{\mu}_{\nu}$ y a partir de  las densidades of carga conservadas demo
 donde $\hat{H}_{W}=-\boldsymbol{\sigma} \cdot \hat{\boldsymbol{p}}$ y $\hat{\boldsymbol{p}}=-i \boldsymbol{\nabla}$
 
 
-  Usando $\sigma^{0}=\mathbf{1}$,
+  Usando $\sigma^{0}=\boldsymbol{1}$,
 \begin{align}
   T^0_0&=\frac{\partial\mathcal{L}}{\partial\left(\partial_0\psi\right)}\partial_0\psi+\partial_0\psi^\dagger\frac{\partial\mathcal{L}}{\partial\left(\partial_0\psi^\dagger\right)}-\mathcal{L}\nonumber\\
   &=i\psi^\dagger\partial_0\psi-\mathcal{L}\nonumber\\
   &=-i\psi^\dagger \overline{\sigma}^i\partial_i\psi\nonumber\\
   &=-\psi^\dagger \sigma^i \left( -i \partial_i\right)\psi\nonumber\\
-  &=-\psi^\dagger(\boldsymbol{\sigma}\cdot\widehat{\mathbf{p}})\psi,\nonumber\\
+  &=-\psi^\dagger(\boldsymbol{\sigma}\cdot\widehat{\boldsymbol{p}})\psi,\nonumber\\
   \label{eq:118qft}
   &=\psi^\dagger\hat{H}_{W} \psi,
 \end{align}
 donde hemos definido el Hamiltoniano de Weyl como
 \begin{equation}
   \label{eq:denshal}
-  \hat{H}_W= -\boldsymbol{\sigma}\cdot\widehat{\mathbf{p}}
+  \hat{H}_W= -\boldsymbol{\sigma}\cdot\widehat{\boldsymbol{p}}
 \end{equation}
 Que corresponde a la proyección del espín en la dirección de movimiento. El signo menos justica la definción de $\psi_{\alpha}$ como un espinor de Weyl izquierdo. Como la ecuación de Scröndinger es de validez general, tenemos entonces que
 
@@ -756,7 +756,7 @@ Además
 
 de modo que
 \begin{align}
-\langle\hat{\mathbf{p}}\rangle=\int\psi^\dagger\hat{\mathbf{p}}\psi\,d^3 x
+\langle\hat{\boldsymbol{p}}\rangle=\int\psi^\dagger\hat{\boldsymbol{p}}\psi\,d^3 x
 \end{align}
 \end{frame}
 
@@ -785,17 +785,17 @@ Expandiendo
     i \sigma^0\partial_0\psi+i \overline{\sigma}^i\partial_i\psi&=0\\
   i \sigma^0\partial_0\psi-i \sigma^i\partial_i\psi&=0\\
   i \sigma^0\partial_0\psi+\boldsymbol\sigma\cdot(-i\boldsymbol{\nabla})\psi&=0,\\
-  i \sigma^0\partial_0\psi&=-(\boldsymbol\sigma\cdot\hat{\mathbf{p}})\psi,
+  i \sigma^0\partial_0\psi&=-(\boldsymbol\sigma\cdot\hat{\boldsymbol{p}})\psi,
 \end{align*}
-Como $\sigma^0=\mathbf{1}$,
+Como $\sigma^0=\boldsymbol{1}$,
 \begin{equation}
   \label{eq:wspinorL}
-    i\frac{\partial}{\partial t}\psi=-\boldsymbol\sigma\cdot\mathbf{p}\psi.
+    i\frac{\partial}{\partial t}\psi=-\boldsymbol\sigma\cdot\boldsymbol{p}\psi.
 \end{equation}
 De la ec.~(\ref{eq:denshal})
 \begin{equation}
   \label{eq:186qft}
-  \hat{H}_{W}= -\boldsymbol\sigma\cdot\mathbf{p}.
+  \hat{H}_{W}= -\boldsymbol\sigma\cdot\boldsymbol{p}.
 \end{equation}
 \end{frame}
 Si identificamos a $\boldsymbol{\sigma}/2$, como el operador de espín, el signo menos del Hamiltoniano quiere decir que el espín del campo $\psi$ se proyecta en la dirección opuesta a su momentum. 
@@ -826,7 +826,7 @@ De modo que, teniendo en cuenta que $\partial\hat H/\partial t=0$,
 De la ec.~(\ref{eq:186qft})
 \begin{align}
 \label{eq:106qft}
-\hat{H}^2_W&=(\boldsymbol\sigma\cdot\mathbf{p})(\boldsymbol\sigma\cdot\mathbf{p})\,.
+\hat{H}^2_W&=(\boldsymbol\sigma\cdot\boldsymbol{p})(\boldsymbol\sigma\cdot\boldsymbol{p})\,.
 \end{align}
 \end{frame}
 
@@ -834,13 +834,13 @@ De la ec.~(\ref{eq:186qft})
 Sea $A$ una matriz y $\theta$ en un escalar. Entonces tenemos la identidad
 \begin{align}
   \label{eq:206qftw}
-  (\mathbf{A}\cdot\boldsymbol{\theta})^2=\sum_i {A^i}^2 {\theta^i}^2+\sum_{i\lt j}\left\{A^i,A^j  \right\}\theta^i \theta^j 
+  (\boldsymbol{A}\cdot\boldsymbol{\theta})^2=\sum_i {A^i}^2 {\theta^i}^2+\sum_{i\lt j}\left\{A^i,A^j  \right\}\theta^i \theta^j 
 \end{align}
 \end{frame}
 \begin{itemize}
 \item \textbf{Demostración}
   \begin{align}
-    \left[\left(\mathbf{A}\cdot\boldsymbol{\theta}\right)\right]_{\alpha\beta}
+    \left[\left(\boldsymbol{A}\cdot\boldsymbol{\theta}\right)\right]_{\alpha\beta}
     =&\sum_{i j}\sum_\gamma A^i_{\alpha\gamma}\theta^iA^j_{\gamma\beta}\theta^j\nonumber\\    
     =&\sum_{i j}\theta^i\theta^j\sum_\gamma A^i_{\alpha\gamma}A^j_{\gamma\beta}\nonumber\\    
     =&\sum_\gamma \sum_{i j}\theta^i\theta^jA^i_{\alpha\gamma}A^j_{\gamma\beta}\nonumber\\    
@@ -861,12 +861,12 @@ Entonces
 (suma sobre índices repetidos). Si
 \begin{align}
   \label{eq:107qft}
-   \sigma_i^2&=\mathbf{1}\nonumber\\
+   \sigma_i^2&=\boldsymbol{1}\nonumber\\
   \left\{ \sigma_i, \sigma_j\right\}&=0\qquad i\ne j\,.
 \end{align}
 que se puede resumir en
 \begin{align}
-  \left\{ \sigma^i,\sigma^j \right\}=&2\delta_{ij} \mathbf{1}\,.
+  \left\{ \sigma^i,\sigma^j \right\}=&2\delta_{ij} \boldsymbol{1}\,.
 \end{align}
 todo consistente con las propiedades de las matrices de Pauli en  \eqref{eq:64qftw}. 
 De modo que
@@ -881,8 +881,8 @@ y reemplazando en la ec.~\eqref{eq:2qftw} llegamos a la ecuación de Klein-Gordo
 \end{frame}
 Debido a la ambigüedad  en el signo, podemos construir dos cuadrivectores independientes
    \begin{align}
- \sigma^{\mu}=& \left( \mathbf{1}_{2\times2},\boldsymbol{\sigma} \right)&
- \overline{\sigma}^{\mu}=& \left( \mathbf{1}_{2\times2},\overline{\boldsymbol{\sigma}} \right)
+ \sigma^{\mu}=& \left( \boldsymbol{1}_{2\times2},\boldsymbol{\sigma} \right)&
+ \overline{\sigma}^{\mu}=& \left( \boldsymbol{1}_{2\times2},\overline{\boldsymbol{\sigma}} \right)
 \end{align}
 donde
 \begin{align}
@@ -914,7 +914,7 @@ To show that $S$ is in fact a Lorentz transformation, it is convinient to write 
 \end{align}
 We can obtain the proper boost and rotations generators:
 \begin{align*}
- \mathbf{K}= \sigma^{0i}=&-i\frac{\sigma}{2}\nonumber\\
+ \boldsymbol{K}= \sigma^{0i}=&-i\frac{\sigma}{2}\nonumber\\
  L_{i}=\frac{1}{2}\epsilon_{ijk}\sigma^{jk}=&-4\frac{i}{8}\epsilon_{ijk}\left[\frac{\sigma^j}{2},\frac{\sigma^k}{2}  \right]\nonumber\\
 =&-\tfrac{i}{2}\epsilon_{ijk}i\epsilon^{jkl}\frac{\sigma_l}{2}\nonumber\\
 =&\tfrac{1}{2}\delta_i^l\sigma_l\nonumber\\
@@ -945,28 +945,28 @@ Ahora
 \end{align}
 y expandiendo \eqref{eq:sss}
 \begin{align*}
-\left(\mathbf{1}+\boldsymbol{\xi}\cdot \frac{\boldsymbol{\sigma}}{2} -i\boldsymbol{\theta}\cdot \frac{\boldsymbol{\sigma}}{2}  \right)
+\left(\boldsymbol{1}+\boldsymbol{\xi}\cdot \frac{\boldsymbol{\sigma}}{2} -i\boldsymbol{\theta}\cdot \frac{\boldsymbol{\sigma}}{2}  \right)
 \overline{\sigma}^{\mu}
-\left(\mathbf{1}+\boldsymbol{\xi}\cdot \frac{\boldsymbol{\sigma}}{2} +i\boldsymbol{\theta}\cdot \frac{\boldsymbol{\sigma}}{2}  \right)
-=&\left[ \mathbf{1}+i\boldsymbol{\xi}\cdot \mathbf{K}+i\boldsymbol{\theta}\cdot \mathbf{L} \right]^{\mu}_{\ \nu}\overline{\sigma}^\nu \nonumber\\
+\left(\boldsymbol{1}+\boldsymbol{\xi}\cdot \frac{\boldsymbol{\sigma}}{2} +i\boldsymbol{\theta}\cdot \frac{\boldsymbol{\sigma}}{2}  \right)
+=&\left[ \boldsymbol{1}+i\boldsymbol{\xi}\cdot \boldsymbol{K}+i\boldsymbol{\theta}\cdot \boldsymbol{L} \right]^{\mu}_{\ \nu}\overline{\sigma}^\nu \nonumber\\
 \left(\overline{\sigma}^{\mu}+\boldsymbol{\xi}\cdot \frac{\boldsymbol{\sigma}}{2}\overline{\sigma}^{\mu} -i\boldsymbol{\theta}\cdot \frac{\boldsymbol{\sigma}}{2}\overline{\sigma}^{\mu}  \right)
-\left(\mathbf{1}+\boldsymbol{\xi}\cdot \frac{\boldsymbol{\sigma}}{2} +i\boldsymbol{\theta}\cdot \frac{\boldsymbol{\sigma}}{2}  \right)
-=&\left[ \mathbf{1}+i\boldsymbol{\xi}\cdot \mathbf{K}+i\boldsymbol{\theta}\cdot \mathbf{L} \right]^{\mu}_{\ \nu}\overline{\sigma}^\nu \,.
+\left(\boldsymbol{1}+\boldsymbol{\xi}\cdot \frac{\boldsymbol{\sigma}}{2} +i\boldsymbol{\theta}\cdot \frac{\boldsymbol{\sigma}}{2}  \right)
+=&\left[ \boldsymbol{1}+i\boldsymbol{\xi}\cdot \boldsymbol{K}+i\boldsymbol{\theta}\cdot \boldsymbol{L} \right]^{\mu}_{\ \nu}\overline{\sigma}^\nu \,.
 \end{align*}
 Hasta primer orden en los parametros $\xi^i$ y $\theta^i$,
 \begin{align*}
  \overline{\sigma}^{\mu}+\boldsymbol{\xi}\cdot \left(\overline{\sigma}^{\mu} \frac{\boldsymbol{\sigma}}{2} \right)  +i\boldsymbol{\theta}\cdot \left(\overline{\sigma}^{\mu} \frac{\boldsymbol{\sigma}}{2} \right)+\boldsymbol{\xi}\cdot \frac{\boldsymbol{\sigma}}{2}\overline{\sigma}^{\mu} -i\boldsymbol{\theta}\cdot \frac{\boldsymbol{\sigma}}{2}\overline{\sigma}^{\mu}
- =&\delta^{\mu}_{\nu}\overline{\sigma}^\nu+i\boldsymbol{\xi}\cdot {\mathbf{K}^{\mu}}_{\nu}\overline{\sigma}^\nu+i\boldsymbol{\theta}\cdot {\mathbf{L}^{\mu}}_{\nu}\overline{\sigma}^\nu \nonumber\\
+ =&\delta^{\mu}_{\nu}\overline{\sigma}^\nu+i\boldsymbol{\xi}\cdot {\boldsymbol{K}^{\mu}}_{\nu}\overline{\sigma}^\nu+i\boldsymbol{\theta}\cdot {\boldsymbol{L}^{\mu}}_{\nu}\overline{\sigma}^\nu \nonumber\\
    \overline{\sigma}^{\mu}+\boldsymbol{\xi}\cdot \left(\overline{\sigma}^{\mu}\frac{\boldsymbol{\sigma}}{2}+ \frac{\boldsymbol{\sigma}}{2}\overline{\sigma}^{\mu}\right)  +i\boldsymbol{\theta}\cdot \left(\overline{\sigma}^{\mu} \frac{\boldsymbol{\sigma}}{2}-\frac{\boldsymbol{\sigma}}{2}\overline{\sigma}^{\mu} \right)  
- =&\delta^{\mu}_{\nu}\overline{\sigma}^\nu+i\boldsymbol{\xi}\cdot {\mathbf{K}^{\mu}}_{\nu}\overline{\sigma}^\nu+i\boldsymbol{\theta}\cdot {\mathbf{L}^{\mu}}_{\nu}\overline{\sigma}^\nu \nonumber\\
+ =&\delta^{\mu}_{\nu}\overline{\sigma}^\nu+i\boldsymbol{\xi}\cdot {\boldsymbol{K}^{\mu}}_{\nu}\overline{\sigma}^\nu+i\boldsymbol{\theta}\cdot {\boldsymbol{L}^{\mu}}_{\nu}\overline{\sigma}^\nu \nonumber\\
   \boldsymbol{\xi}\cdot \left(\overline{\sigma}^{\mu}\frac{\boldsymbol{\sigma}}{2}+ \frac{\boldsymbol{\sigma}}{2}\overline{\sigma}^{\mu}\right)  +i\boldsymbol{\theta}\cdot \left(\overline{\sigma}^{\mu} \frac{\boldsymbol{\sigma}}{2}-\frac{\boldsymbol{\sigma}}{2}\overline{\sigma}^{\mu} \right)  
- =&i\boldsymbol{\xi}\cdot {\mathbf{K}^{\mu}}_{\nu}\overline{\sigma}^\nu+i\boldsymbol{\theta}\cdot {\mathbf{L}^{\mu}}_{\nu}\overline{\sigma}^\nu\,.
+ =&i\boldsymbol{\xi}\cdot {\boldsymbol{K}^{\mu}}_{\nu}\overline{\sigma}^\nu+i\boldsymbol{\theta}\cdot {\boldsymbol{L}^{\mu}}_{\nu}\overline{\sigma}^\nu\,.
 \end{align*}
 Igualando coeficientes
 \begin{align*}
-\overline{\sigma}^{\mu}\frac{\boldsymbol{\sigma}}{2}+ \frac{\boldsymbol{\sigma}}{2}\overline{\sigma}^{\mu}  =&i{\mathbf{K}^{\mu}}_{\nu}\overline{\sigma}^\nu \nonumber\\
+\overline{\sigma}^{\mu}\frac{\boldsymbol{\sigma}}{2}+ \frac{\boldsymbol{\sigma}}{2}\overline{\sigma}^{\mu}  =&i{\boldsymbol{K}^{\mu}}_{\nu}\overline{\sigma}^\nu \nonumber\\
 \overline{\sigma}^{\mu} \frac{\boldsymbol{\sigma}}{2}-\frac{\boldsymbol{\sigma}}{2}\overline{\sigma}^{\mu}=&
-{\mathbf{L}^{\mu}}_{\nu}\overline{\sigma}^\nu
+{\boldsymbol{L}^{\mu}}_{\nu}\overline{\sigma}^\nu
 \end{align*}
 La primera ecuación es
 \begin{align*}
@@ -984,7 +984,7 @@ para $\mu=0$
 Para $\mu=j$
 \begin{align*}
   -\sigma^{j}\frac{\sigma^i}{2} -\frac{\sigma^i}{2}\sigma^j  =& +g^{ij}\sigma^0\nonumber\\
-  -\delta^{ij}\mathbf{1}=-\delta^{ij}\mathbf{1}\,.
+  -\delta^{ij}\boldsymbol{1}=-\delta^{ij}\boldsymbol{1}\,.
 \end{align*}
 La segunda ecuación es
 \begin{align*}
@@ -1040,7 +1040,7 @@ m \left( \eta\eta+\eta^{\dagger}\eta^{\dagger} \right)\,.
 El cálculo del tensor de momento energía en este caso, nos permite  definir el Hamiltoniano de Weyl para un espinor de Weyl derecho como
 \begin{equation}
   \label{eq:denshal}
-  \hat{H}_W= \mathbf{\sigma}\cdot\widehat{\mathbf{p}}\,,
+  \hat{H}_W= \boldsymbol{\sigma}\cdot\widehat{\boldsymbol{p}}\,,
 \end{equation}
 que corresponde, en efecto, a la proyección del espín en la dirección de movimiento. El signo positivo justica la definción de $\eta^{\dot{\alpha}}$ como un espinor de Weyl derecho.
 \end{frame}
@@ -1051,8 +1051,8 @@ que corresponde, en efecto, a la proyección del espín en la dirección de movi
 
 Para ir de un cuadrivector de spín barrado al sin barrar
    \begin{align}
- \overline{\sigma}^{\mu}=\left( \mathbf{1}_{2\times2},-{\boldsymbol{\sigma}} \right) \rightarrow
-\sigma^{\mu}= \left( \mathbf{1}_{2\times2},\boldsymbol{\sigma} \right)
+ \overline{\sigma}^{\mu}=\left( \boldsymbol{1}_{2\times2},-{\boldsymbol{\sigma}} \right) \rightarrow
+\sigma^{\mu}= \left( \boldsymbol{1}_{2\times2},\boldsymbol{\sigma} \right)
 \end{align}
 podemos usar la \emph{métrica de Weyl}
 \begin{align}
@@ -1157,8 +1157,8 @@ y usando \eqref{eq:exxe}, tenemos en primer lugar que
   \xi^{\dagger}_{\dot{\alpha}}& \eta^{\alpha}
   \end{pmatrix}
   \begin{pmatrix}
-    0           &\mathbf{1}\\
-    \mathbf{1} &0\\
+    0           &\boldsymbol{1}\\
+    \boldsymbol{1} &0\\
   \end{pmatrix} \begin{pmatrix}
    \xi_{\alpha}\\
    \eta^{\dagger\;\dot{\alpha}}    
@@ -1182,8 +1182,8 @@ mientras que para los términos cinéticos
   \xi^{\dagger}_{\dot{\alpha}}& \eta^{\alpha}
   \end{pmatrix}
  \begin{pmatrix}
-    0           &\mathbf{1}\\
-    \mathbf{1} &0\\
+    0           &\boldsymbol{1}\\
+    \boldsymbol{1} &0\\
   \end{pmatrix}
   \begin{pmatrix}
     0           &\sigma^{\mu}_{\alpha\dot{\alpha}}\\
@@ -1215,19 +1215,19 @@ Definiendo las matrices de Dirac (en la representación quiral) como
 \end{align}
 las cuales satisfacen el algebra
 \begin{align}
-  \left\{ \gamma^{\mu},\gamma^{\nu} \right\}=2 g^{\mu\nu}\mathbf{1}\,.
+  \left\{ \gamma^{\mu},\gamma^{\nu} \right\}=2 g^{\mu\nu}\boldsymbol{1}\,.
 \end{align}
 
 tememos en particular que, 
 \begin{align}
   \gamma^0= \begin{pmatrix}
-    0           &\mathbf{1}\\
-    \mathbf{1} &0\\
+    0           &\boldsymbol{1}\\
+    \boldsymbol{1} &0\\
   \end{pmatrix}
 \end{align}
 tal que
 \begin{align}
-  \left( \gamma^{0} \right)^2=\mathbf{1}_{\text{4$\times 4$}}\,.
+  \left( \gamma^{0} \right)^2=\boldsymbol{1}_{\text{4$\times 4$}}\,.
 \end{align}
 Usando (\ref{eq:psid}), (\ref{eq:psidm}) y (\ref{eq:psidd})
 \begin{align}
@@ -1268,12 +1268,12 @@ Escrito en la forma de la ecuación de Scrodinger general, da lugar al Hamiltoni
 \begin{align}
   i\gamma^0 \partial_{0}\Psi=&\left[ \gamma^{i} \left( -i \partial_{i}\right)+m \right]\Psi \nonumber\\
   i \left( \gamma^0 \right)^2 \partial_{0}\Psi=&\gamma^0\left( \sum_i\gamma^{i} \widehat{p}\;^i +m \right)\Psi \nonumber\\
-  i \frac{\partial}{\partial t}\Psi=&\gamma^0\left( \boldsymbol{\gamma}\cdot \widehat{\mathbf{p}} +m \right)\Psi \nonumber\\
+  i \frac{\partial}{\partial t}\Psi=&\gamma^0\left( \boldsymbol{\gamma}\cdot \widehat{\boldsymbol{p}} +m \right)\Psi \nonumber\\
   i \frac{\partial}{\partial t}\Psi=&\widehat{H}_D\Psi\,,
 \end{align}
 donde
 \begin{align}
-  \widehat{H}_D=\gamma^0\left( \boldsymbol{\gamma}\cdot \widehat{\mathbf{p}} +m \right)
+  \widehat{H}_D=\gamma^0\left( \boldsymbol{\gamma}\cdot \widehat{\boldsymbol{p}} +m \right)
 \end{align}
 \end{frame}
 Antes de intentar tomar el límite no relativista, y para ser consistentes con relatividad espacial, se debe cambiar el Lagangiano por uno que tenga la invarianza de fase local. En tal caso, el Hamiltoniano resultante se debe reducir al Hamiltoniano de  Sch\"odinger en presencia de un campo electrómagnético (ver Apéndice \ref{sec:limite-no-relat}).
