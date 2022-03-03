@@ -207,7 +207,7 @@ a_{2}\left\{\partial_{\mu}\cancel{\left[\frac{\partial \mathcal{L}}{\partial\lef
 -a_2\frac{\partial \mathcal{L}}{\partial \overline{\psi}}
 =-\partial_{\mu}\left(\frac{\partial \mathcal{L}}{\partial A_{\mu}}\right)\,.
 \end{align}
-aplicando la regla de la cadena,  y usando la definición de $j^\mu$ dada en la ec.~\eqref{eq:thnfmunu0}
+aplicando la regla de la cadena, % y usando la definición de $j^\mu$ dada en la ec.~\eqref{eq:thnfmunu0}
 \begin{align}
 \partial_{\mu}\left[
 \frac{\partial\mathcal{L}}{\partial\left(\partial_{\mu} \psi\right)}
@@ -218,7 +218,7 @@ a_{1}
 \partial_{\mu}a_{1}
 -\frac{\partial \mathcal{L}}{\partial\psi}a_1
 -a_2\frac{\partial \mathcal{L}}{\partial \overline{\psi}}
-=\partial_{\mu}j^{\mu}\,.
+=-\partial_{\mu}\left(\frac{\partial \mathcal{L}}{\partial A_{\mu}}\right)\,.
 \end{align}
 
 Para establecer el segundo teorema de Noether para la electrodinámica cuántica, debemos establecer la identidad  general~\eqref{eq:identityth2}, que en este caso se reduce
@@ -252,17 +252,18 @@ de modo que
 \frac{\partial\mathcal{L}}{\partial\left(\partial_{\mu} \psi\right)}
 a_{1}
 \right]
-  =\partial_{\mu}j^{\mu}\,.
+  =-\partial_{\mu}\left(\frac{\partial \mathcal{L}}{\partial A_{\mu}}\right)\,.
 \end{align}
-Tenemo entonces que   la cuadricorriente para la QED es 
+Tenemos entonces que   la cuadricorriente para la QED es 
 \begin{align}
-  j^{\mu}=\sum_i\frac{\partial \mathcal{L}}{\partial\left(\partial_{\mu} \psi \right)}a_i\,,
+  j^{\mu}=\frac{\partial \mathcal{L}}{\partial\left(\partial_{\mu} \psi \right)}a_1=\frac{\partial \mathcal{L}}{\partial A_{\mu}}\,.
 \end{align}
 pero en un lugar de satisfacer la ecuación de identidad como en el caso de la simetría global en ec.~\eqref{eq:cuadriconj}, ahora  $j^{\mu}$ debe ser satisfacer la identidad en la ec.~\eqref{eq:idt2}, asociada al segundo Teorema de Noether.
 
 El cálculo general de la corriente a partir de la identidad~\eqref{eq:identityth2}, es
 \begin{align}
-  j^\mu&=\frac{\partial\mathcal{L}}{\partial\left(\partial_\mu\psi\right)}a_1+a_2\frac{\partial\mathcal{L}}{\partial\left(\partial_\mu\bar{\psi}\right)} \nonumber\\
+  j^\mu&=\sum_i\frac{\partial \mathcal{L}}{\partial\left(\partial_{\mu} \psi \right)}a_i \nonumber\\
+  &=\frac{\partial\mathcal{L}}{\partial\left(\partial_\mu\psi\right)}a_1+a_2\frac{\partial\mathcal{L}}{\partial\left(\partial_\mu\bar{\psi}\right)} \nonumber\\
   &=\frac{\partial\mathcal{L}}{\partial\left(\partial_\mu\psi\right)}a_1\,.
 \end{align}
 Consistente con la demostración previa.
@@ -277,16 +278,21 @@ usando el $a_1$ de la ec.~\eqref{eq:dpa}, tenemos que
 \end{align}
 que corresponde a la cuadri-corriente electromágnética conservada localmente de la electrodinámica cuántica.
 
+Usando
+\begin{align}
+  j^{\mu}=&-\partial_{\mu}\left(\frac{\partial \mathcal{L}}{\partial A_{\mu}}\right) \nonumber\\
+      =&-e\overline{\psi}\gamma^{\mu} Q \psi\,.
+\end{align}
 
 
 El segundo teorema de Noether para la QED es perfectamente consistente con el campo de radiación. Por ejemplo,
 la identidad resultante
 \begin{align}
-   \partial_{\mu} \partial_{\rho}\left[ \frac{ \mathcal{L}}{\partial \left(\partial  \partial_{\rho} A_{\mu}\right)}  \right]=0\,,
+   \partial_{\mu} \partial_{\rho}\left[ \frac{\partial \mathcal{L}}{\partial \left(  \partial_{\rho} A_{\mu}\right)}  \right]=0\,,
 \end{align}
 se puede interpretar como la necesidad de introducir el tensor antisimétrico
 \begin{align}
-  F_{\mu\nu}=\frac{\partial \mathcal{L}}{\partial \left(\partial  \partial_{\nu} A_{\mu}\right)}\,,
+  F_{\mu\nu}=\frac{\partial \mathcal{L}}{\partial \left( \partial_{\nu} A_{\mu}\right)}\,,
 \end{align}
 tal que
 \begin{align}
