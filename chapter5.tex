@@ -162,9 +162,14 @@ De modo que en efecto, la derivada covariante del campo transforma como el campo
 
 El Lagrangiano de Dirac invariante gauge local se ha obtienido reemplazando la derivada normal por la derivada covariante. Para el campo electrónico, con $Q=-1$
 \begin{align}
+  \label{eq:fullqed}
   \mathcal{L}=&\overline{\psi}\left(i\gamma^\mu\mathcal{D}_\mu-m\right)\psi+\mathcal{L}\left( \partial_{\mu}A_{\nu}\right)\nonumber\\
-=&\bar{\psi}\left[i\gamma^\mu\left(\partial_\mu-ieQA_\mu\right)-m\right]\psi-\frac{1}{4}F_{\mu\nu}F^{\mu\nu}\nonumber\\
-=&i\bar{\psi}\gamma^\mu\partial_\mu\psi -e\bar{\psi}\gamma^\mu \psi A_\mu-m\bar{\psi}\psi -\frac{1}{4}F_{\mu\nu}F^{\mu\nu}\,.
+  =&\bar{\psi}\left[i\gamma^\mu\left(\partial_\mu-ieQA_\mu\right)-m\right]\psi-\frac{1}{4}F_{\mu\nu}F^{\mu\nu}\nonumber\\
+  =&i\bar{\psi}\gamma^\mu\partial_\mu\psi+e\bar{\psi}\gamma^\mu Q\psi A_\mu-m \bar{\psi} \psi-\frac{1}{4}F_{\mu\nu}F^{\mu\nu}\,.
+\end{align}
+El generador de carga eléctrica $Q$ para el campo electrónico $\psi$ es $Q\psi=-\psi$, de modo que
+\begin{align}
+  \mathcal{L}=&i\bar{\psi}\gamma^\mu\partial_\mu\psi -e\bar{\psi}\gamma^\mu \psi A_\mu-m\bar{\psi}\psi -\frac{1}{4}F_{\mu\nu}F^{\mu\nu}\,.
 \end{align}
 Este Lagrangina da lugar a una Acción que define una teoría general (en el sentido que es invariante bajo transformaciones que dependen del espacio-tiempo) correspondiente a  la electrodinámica cuántica (QED de sus siglas en ingles)
 
@@ -260,6 +265,7 @@ Tenemos entonces que   la cuadricorriente para la QED es
 \end{align}
 pero en un lugar de satisfacer la ecuación de identidad como en el caso de la simetría global en ec.~\eqref{eq:cuadriconj}, ahora  $j^{\mu}$ debe ser satisfacer la identidad en la ec.~\eqref{eq:idt2}, asociada al segundo Teorema de Noether.
 
+
 El cálculo general de la corriente a partir de la identidad~\eqref{eq:identityth2}, es
 \begin{align}
   j^\mu&=\sum_i\frac{\partial \mathcal{L}}{\partial\left(\partial_{\mu} \psi \right)}a_i \nonumber\\
@@ -268,7 +274,7 @@ El cálculo general de la corriente a partir de la identidad~\eqref{eq:identityt
 \end{align}
 Consistente con la demostración previa.
 
-Como
+A partir del Lagrangiano en~\eqref{eq:fullqed}
 \begin{align}
 \frac{\partial\mathcal{L}}{\partial\left(\partial_\mu\psi\right)}=i\overline{\psi}\gamma^{\mu}\,,
 \end{align}
@@ -278,12 +284,25 @@ usando el $a_1$ de la ec.~\eqref{eq:dpa}, tenemos que
 \end{align}
 que corresponde a la cuadri-corriente electromágnética conservada localmente de la electrodinámica cuántica.
 
-Usando
+Usando~\eqref{eq:fullqed} de nuevo
 \begin{align}
+  \label{eq:jmu}
   j^{\mu}=&-\frac{\partial \mathcal{L}}{\partial A_{\mu}} \nonumber\\
       =&-e\overline{\psi}\gamma^{\mu} Q \psi\,.
 \end{align}
-
+De esta forma podemos reescribir la ec.~\eqref{eq:fullqed} cómo
+\begin{align}
+  \mathcal{L}=&\mathcal{L}_{\text{Dirac}}+\mathcal{L}_{A_{\mu}}\,.
+\end{align}
+donde
+\begin{align}
+  \mathcal{L}_{\text{Dirac}}=i\bar{\psi}\gamma^\mu\partial_\mu\psi-m \bar{\psi} \psi\,,
+\end{align}
+y, tal cómo habíamos derivado en el Capítulo~\ref{cha:campos-vectoriales}, en la ec.~\eqref{eq:lagAmum}
+\begin{align}
+  \mathcal{L}_{A_{\mu}}=
+-\frac{1}{4}F_{\mu\nu}F^{\mu\nu}-j^{\mu}A_\mu\,.
+\end{align}
 
 El segundo teorema de Noether para la QED es perfectamente consistente con el campo de radiación. Por ejemplo,
 la identidad resultante
@@ -355,7 +374,7 @@ Que corresponde a la ecuación de Dirac en presencia del campo electromagnético
   -\frac{1}{4}\partial_\mu\left[\frac{F^{\rho\eta}F_{\rho\eta}}{\partial\left(\partial_\mu A_\nu\right)}\right]-eQ\bar{\psi}\gamma^\rho\psi\frac{\partial A_\rho}{\partial A_\nu}&=0\nonumber\\
   \partial_\mu F^{\mu\nu}&=-eQ\bar{\psi}\gamma^\nu\psi
 \end{align}
-Definimos entonces la corriente electromagnética generada por el fermión como
+Con la definción de  corriente electromagnética generada por el fermión en la ec.~\eqref{eq:jmu}, tenemos
 \begin{align}
   \label{eq:222qft}
   j^\mu=&-e\bar{\psi}\gamma^\mu Q\psi \nonumber\\
