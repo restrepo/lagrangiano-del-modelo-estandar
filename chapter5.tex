@@ -331,12 +331,7 @@ Por consiguiente, el único término posible que a la vez es invariante de Loren
 \begin{align}
  \mathcal{L}\left( \partial_{\mu}A_{\nu}\right)=-\frac{1}{4}F_{\mu\nu}F^{\mu\nu}\,.
 \end{align}
-
-
-
 \end{frame} 
-
-
 
 El Lagrangiano correspondiente a la interacción de un fermión y el
 campo electromagnético corresponde al Lagrangiano de Dirac con la
@@ -466,12 +461,14 @@ De este modo, si en el estado final hay un sólo fotón, necesariamente este ten
 \end{figure}
 \end{frame}
 
+\begin{frame}[fragile,allowframebreaks]
 Cada nuevo vértice en un proceso contribuye con un factor $e^{2}$ pues el cálculo de las probabilidades en mecánica cuántica involucran un módulo cuadrado. La cantidad adimensional asociada es la constante de estructura fina
 \begin{align}
   \alpha=\frac{e^2}{4\pi}\approx \frac{1}{137}\,.
 \end{align}
 
-En el átomo de Hidrógeno, las interacciones electromagnética que mantienen el átomo ligado provienen de la emisión de un fotón por parte del electrón que es absorbido por el protón (y viceversa). Sin embargo, es también la probable que el fotón sea reabsorbido por el propio electrón como se indica en la figura~\ref{fig:selfenergy}. Sin embargo, débido a los dos vérices adicionales, la probabilidad de que esto suceda está suprimida por un factor de $\mathcal{O}({\alpha}^{2})\sim 10^{-3}$. Coloquialmente, esto implicaría que por cada mil fotones que el electrón intercambio con el protón, el propio electrón reaborve uno de ellos. Esto genera un nivel hiperfino en el átomo de hidrógeno con consecuencias medibles experimentalmente. 
+En el átomo de Hidrógeno, las interacciones electromagnética que mantienen el átomo ligado provienen de la emisión de un fotón por parte del electrón que es absorbido por el protón (y viceversa). Sin embargo, es también probable que el fotón sea reabsorbido por el propio electrón como se indica en la figura~\ref{fig:selfenergy}. Sin embargo, débido a los dos vérices adicionales, la probabilidad de que esto suceda está suprimida por un factor de $\mathcal{O}({\alpha}^{2})\sim 10^{-3}$. Coloquialmente, esto implicaría que por cada mil fotones que el electrón intercambia con el protón, el propio electrón reaborve uno de ellos. Esto genera un nivel hiperfino en el átomo de hidrógeno con consecuencias medibles experimentalmente. 
+\end{frame}
 
 \begin{frame}[fragile,allowframebreaks]
 \begin{figure}
@@ -563,8 +560,8 @@ de modo que el fotón se acopla por igual a los campos izquierdos que a los dere
 -m \left[ \left( e_R \right)^\dagger e_L+\left( e_L \right)^{\dagger}e_R \right] -\tfrac{1}{4}F^{\mu\nu}F_{\mu\nu}\nonumber\\
    &+eQ \left[(e_L)^{\dagger}\overline{\sigma}^{\mu}e_L+(e_R)^{\dagger}\sigma^{\mu}e_{R}  \right] A_{\mu}
 \end{align}
+Se dice entonces que la corriente  electromagnética conserva paridad, es decir es invariante bajo el cambio $L\leftrightarrow R$.
 \end{frame}
-Se dice entonces que la corriente  electromagnética conserva paridad, es decir es invariante bajo el cambio $L\leftrightarrow R$. 
 Una demostración de esta invarianza se muestra en el Apéndice \ref{sec:ferm-quir-de}
 %Intentando obtener el operador Hamiltoniano y demás:
 %  \begin{align}
@@ -584,7 +581,7 @@ Una demostración de esta invarianza se muestra en el Apéndice \ref{sec:ferm-qu
 Como se ilustra en la figura~\ref{fig:crosssection}, en cromodinámica cuántica existe la posibilidad que un electrón y un positrón se aniquilen mutuamente en pura energía llevada por un fotón virtual el cual se debe materializar en un par partícula-antipartícula de acuerdo a la energía disponible. Este es el principio de funcionamiento de los aceleradores electrón-positrón donde se generan dos rayos muy energéticos de electrones y positrones los cuales se hacen colisionar en un punto alrededor de un detector de partículas. El detector esta diseñado para reconstruir los productos de la aniquilación del par electrón positrón. Por ejemplo, si el par electrón-positrón colisiona con una energía superior a $\SI{212}{MeV}$, existe la probabilidad que se cree un par muón ($\mu^-$) antimuón $\mu^{+}$. En teoría cuántica de campos de campos a dicho proceso se le llama sección eficaz y se denota como
 \begin{frame}[fragile,allowframebreaks]
 \begin{align}
-  \sigma(e^+\;e^-\rightarrow \mu^+\;\mu^-)
+  \sigma(e^+\;e^-\rightarrow \mu^+\;\mu^-)\propto Q_e^2 Q_\mu^2\,.
 \end{align}
 
 \begin{figure}
@@ -594,7 +591,7 @@ Como se ilustra en la figura~\ref{fig:crosssection}, en cromodinámica cuántica
   \label{fig:crosssection}
 \end{figure}
 \end{frame}
-Aunque el cálculo de dicho proceso está fuera del alcance de una descripción clásica de los campos, dicha probabilidad debe ser proporcional al cuadrado de la carga eléctrica de la partícula producida, en este caso $Q_{\mu}^2=1$, en unidades de la carga del electrón. El conjunto fermiones elementales que interaccionan sólo de forma electrodébil se conoce como \emph{leptones} y esta especificado en la tabla~\ref{tab:leptons}
+Aunque el cálculo de dicho proceso está fuera del alcance de una descripción clásica de los campos, dicha probabilidad debe ser proporcional al cuadrado de la carga eléctrica en cada vértice, en este caso $Q_e^2Q_{\mu}^2=1$, en unidades de la carga del electrón. El conjunto fermiones elementales que interaccionan sólo de forma electrodébil se conoce como \emph{leptones} y esta especificado en la tabla~\ref{tab:leptons}
 \begin{frame}
 \begin{figure}
   \centering
@@ -648,8 +645,19 @@ Un dataset con todas la propiedades de partículas está disponible en Wolfram (
 
 \end{frame}
 
+\begin{frame}[fragile,allowframebreaks]
+La sección eficaz de producir un tipo específico de quarks sería entonces
+\begin{align}
+ \sigma(e^+e^-\to q\bar{q}) \propto N_c Q_e^2 Q_q^2 .
+\end{align}
+donde, en orden ascendente en masa, la lista de quarks es $q=u,d,s,c,b,t$.
 
+Pero el observable en sí es la producción de hadrones. Para un acelera energía donde se pueden producir hadrones compuestos de hasta  quarks $q_{\text{max}}$
+\begin{align}
+  \sigma(e^+e^-\to\text{hadrones})=N_c \sum_{q=u}^{q_{\text{max}}} \sigma(e^+e^-\to q\bar{q}) 
+\end{align}
 
+Durante los años sesenta del siglo pasado $q_{\text{max}}=s$, y en la última generación de aceleradores electrón-positrón $q_{\text{max}}=b$.
 
 
 Una de las determinaciones de $N_c$ proviene del observable
@@ -657,31 +665,31 @@ Una de las determinaciones de $N_c$ proviene del observable
   R=&\frac{\sigma(e^+e^-\to\text{hadrones})}{\sigma(e^+e^-\to\mu^+\mu^-)}
 \end{align}
 
-Para $f=u,d,s,c,b,t$, (en orden de masa) tenemos que para una energía donde se pueden producir hadrones compuestos de hasta  quarks $f_{\text{max}}$
+Para $q=u,d,s,c,b,t$, (en orden de masa) tenemos que para una energía donde se pueden producir hadrones compuestos de hasta  quarks $q_{\text{max}}$
 \begin{align}
-  R\approx&\frac{\sum_{f=u}^{f_{\text{max}}}\sum_{\alpha=1}^{N_c}\sigma(e^+e^-\to f_\alpha\bar{f}_\alpha)}{\sigma(e^+e^-\to\mu^+\mu^-)}\nonumber\\
-  R\approx&N_c\frac{\sum_{f=u}^{f_{\text{max}}}\sigma(e^+e^-\to f\bar{f})}{\sigma(e^+e^-\to\mu^+\mu^-)}
+   R\approx&N_c\frac{\sum_{q=u}^{q_{\text{max}}}\sigma(e^+e^-\to q\bar{q})}{\sigma(e^+e^-\to\mu^+\mu^-)}
 \end{align}
 De este modo $R$ esta dado por la suma de las cargas eléctricas al cuadrado
 \begin{align}
 \label{eq:254qft}
-R\approx&N_c\frac{\sum_f Q_f^2}{Q_\mu^2}\nonumber\\
+R\approx&N_c\frac{\sum_q Q_q^2}{Q_\mu^2}\nonumber\\
 =
-&N_c\sum_{f=u}^{f_{\text{max}}} Q_f^2\nonumber\\
+&N_c\sum_{q=u}^{q_{\text{max}}} Q_q^2\nonumber\\
 =&
 \begin{cases}
-  N_c[(\frac{2}{3})^2+2(\frac{-1}{3})^2]=\frac{2}{3}N_c&f=u,d,s,\;f_{\text{max}}=s\\
-  N_c[2(\frac{2}{3})^2+2(\frac{-1}{3})^2]=\frac{10}{9}N_c&f_{\text{max}}=c\\
-  N_c[2(\frac{2}{3})^2+3(\frac{-1}{3})^2]=\frac{11}{9}N_c&f_{\text{max}}=b
+  N_c[(\frac{2}{3})^2+2(\frac{-1}{3})^2]=\frac{2}{3}N_c&q=u,d,s,\;q_{\text{max}}=s\\
+  N_c[2(\frac{2}{3})^2+2(\frac{-1}{3})^2]=\frac{10}{9}N_c&q_{\text{max}}=c\\
+  N_c[2(\frac{2}{3})^2+3(\frac{-1}{3})^2]=\frac{11}{9}N_c&q_{\text{max}}=b
 \end{cases}\nonumber\\
 =&
 \begin{cases}
-  2&N_c=3,\qquad f_{\text{max}}=s\\
-  \frac{10}{3}&N_c=3,\qquad f_{\text{max}}=c\\
-  \frac{11}{3}&N_c=3,\qquad f_{\text{max}}=b\\
+  2&N_c=3,\qquad q_{\text{max}}=s\\
+  \frac{10}{3}&N_c=3,\qquad q_{\text{max}}=c\\
+  \frac{11}{3}&N_c=3,\qquad q_{\text{max}}=b\\
 \end{cases}
 \end{align}
-%\left(\right)
+\end{frame}
+% \left(\right)
 En la figura, tomada de \cite{a}, se muestra el gráfico de $R$ con respecto a $\sqrt{s}$ (la energía de centro de masa de la colisión). Se observan dos escalones, uno que va hasta una energía $\sqrt{s}\approx4\,$GeV que corresponden a $f=u,d,s$, con un $R\approx2$,  y otro hasta $\sqrt{s}\approx40\,$GeV que corresponde a $f=u,d,s,c,b$, con un $R\approx3.7\approx11/3$. Los dos valores de $R$ son compatibles con los esperados de la ec.~\eqref{eq:254qft}. Como referencia también se señalan los valores para $N_c=4$ (en rojo). 
 \begin{frame}
 \begin{figure}
