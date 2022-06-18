@@ -910,7 +910,37 @@ donde
   =&\frac{1}{2}\left(\tfrac{1}{4}g_2^2W_3^\mu W^3_\mu-{\color{red}\tfrac{1}{2}g_2{g_1}Y_{\widetilde{\Phi}} W_3^\mu B_\mu-\tfrac{1}{2}g_2{g_1}Y_{\widetilde{\Phi}} W_3^\mu B_\mu+{{g_1}}^2Y_{\widetilde{\Phi}} ^2B^\mu B_\mu}\right)
 \left(H+v\right)^2.
 \end{align}
-Haciendo $Y_{\widetilde{\Phi}} =1/2$ como en la ec.~\eqref{eq:yyy},
+Esta ecuación se puede reescribir en forma matricial en la base $
+\begin{pmatrix}
+  W_\mu & B_\mu
+\end{pmatrix}^{\operatorname{T}}
+$, como
+\begin{align}
+  \mathcal{L}_{ZAH}=\frac{v^2}{4}
+  \begin{pmatrix}
+    W^\mu_3 & B^\mu
+  \end{pmatrix}
+  \begin{pmatrix}
+    \frac{1}{2}g^2_2&\color{red}-g_2{g_1}Y_{\widetilde{\Phi}}\\
+    \color{red}-g_2{g_1}Y_{\widetilde{\Phi}}&\color{red}2g_1^2 Y_{\widetilde{\Phi}}^2
+  \end{pmatrix}
+  \begin{pmatrix}
+    W^3_\mu\\
+    B_\mu
+  \end{pmatrix}
+\left(\frac{H}{v}+1\right)^2\,.
+\end{align}
+Como la matriz $2\times 2$ tiene determinante cero:
+\begin{align}
+  \left|\begin{matrix}
+    \frac{1}{2}g^2_2&\color{red}-g_2{g_1}Y_{\widetilde{\Phi}}\\
+    \color{red}-g_2{g_1}Y_{\widetilde{\Phi}}&\color{red}2g_1^2 Y_{\widetilde{\Phi}}^2
+  \end{matrix}\right|=g_2^2\color{red}g_1^2  Y_{\widetilde{\Phi}}^2-  g_2^2 g_1^2 Y_{\widetilde{\Phi}}^2=0\,,
+ \end{align}
+independiente de la hipercarga $Y_{\widetilde{\Phi}}$, quiere decir que tiene un autovalor cero que identificaremos como las masa nula del fotón.
+
+
+Para facilitar dicho análisis haremos $Y_{\widetilde{\Phi}} =1/2$ como en la ec.~\eqref{eq:yyy},
 \begin{align}
   \mathcal{L}_{ZAH}=\frac{1}{2}\frac{v^2}{4}
   \begin{pmatrix}
