@@ -154,7 +154,7 @@ respectivamente.
    $\eta^{\alpha}_2$: anti-up izquierdo & $\left( u_R \right)^{\dagger}$&$\left(\overline{\mathbf{3}},\mathbf{1},Y_{U}\right)$ \\
    $\eta^{\alpha}_3$: anti-down izquierdo & $\left( d_R \right)^{\dagger}$&$\left(\overline{\mathbf{3}},\mathbf{1},Y_{D}\right)$ \\
   \end{tabular}
-  \caption{Spinores de Weyl izquierdos para la primera generación del modelo estándar}
+  \caption{Espinores de Weyl izquierdos para la primera generación del modelo estándar}
   \label{tab:fgw}
 \end{table}
 
@@ -789,7 +789,10 @@ Por lo tanto, para obtener una teoría realista se debe adicionar un mecanismo d
 Retornando al doblete de Higgs del modelo estándar en la ec.~\eqref{eq:polarhiggs}, los cuatro grados de libertad de $\Phi$, pueden escribirse en forma polar con la parte real neutra desplazada para generar la ruptura espontánea de la simetría $\operatorname{SU}(2)_L\times  U(1)_Y$. De este modo, y sin perdida de generalidad
 \begin{align}
 \label{eq:92qft}
-  {\Phi}=&e^{i G_j(x)T^j}
+  {\Phi}=  \begin{pmatrix}
+    \phi^+\\
+    \phi^0
+  \end{pmatrix}=&e^{i G_j(x)T^j}
   \begin{pmatrix}
     0\\
     \frac{1}{\sqrt{2}}[H(x)+v]
@@ -1704,6 +1707,33 @@ entre fermiones y el Higgs!
 
 
 \subsection{Lagrangiano completo  para al primera generación en el gauge unitario}
+
+El contenido de partículos con las hipercargas calculadas se presenta en la Tabla~\ref{tab:fgwy}
+
+\begin{table}
+  \centering
+  \begin{tabular}{l|c|c}\hline
+    Nombre & Símbolo & $\left( \operatorname{SU}(3)_c, \operatorname{SU}(2)_L, U(1)_Y \right)$\\\hline
+    Doblete de Higgs & $  {\Phi}=\displaystyle{  \begin{pmatrix}
+    \phi^+\\
+    \phi^0
+  \end{pmatrix}}$ & $\left( \mathbf{1},\mathbf{2},1/2 \right)$\\
+    Doblete leptónico & $L=\displaystyle{\begin{pmatrix}
+      \nu_L\\
+      e_L      
+    \end{pmatrix}}$ & $\left( \mathbf{1},\mathbf{2},-1/2 \right)$\\
+    Doblete de quarks & $Q=\displaystyle{\begin{pmatrix}
+      u_L\\
+      d_L      
+    \end{pmatrix}}$ & $\left( \mathbf{3},\mathbf{2},1/6 \right)$\\
+  electrón derecho & $ e_R$&$\left(\mathbf{1},\mathbf{1},-1\right)$ \\
+  up derecho & $ u_R$&$\left(\overline{\mathbf{3}},\mathbf{1},2/3\right)$ \\
+   down derecho & $ d_R$&$\left(\overline{\mathbf{3}},\mathbf{1},-1/3\right)$ \\
+  \end{tabular}
+  \caption{Espinores de Weyl izquierdos para la primera generación del modelo estándar con sus correspondientes hipercargas}
+  \label{tab:fgwy}
+\end{table}
+
 
 Recopilando los resultados para $\mathcal{L}_{WBH}$
 \eqref{eq:lwbhfin}, $\mathcal{L}_{\text{Yukawa}}$ \eqref{eq:lyuklr},
