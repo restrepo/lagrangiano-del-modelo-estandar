@@ -90,6 +90,41 @@ las propiedades globales y los axiomas del grupo imponen condiciones estrictas y
 
 Esta conexión es sumamente poderosa: en lugar de buscar matrices complicadas que sean unitarias y de determinante $1$ (grupo $SU(N)$), el problema se simplifica a buscar un conjunto de matrices hermíticas y de traza nula que satisfagan cierta regla de conmutación. Una vez encontrados estos generadores (como las matrices de Pauli para $SU(2)$ o las de Gell-Mann para $SU(3)$), las propiedades del grupo global quedan garantizadas por construcción.
 
+
+\subsection{Demostración de las propiedades del grupo a partir de sus generadores}
+
+Dado que cualquier elemento de un grupo de Lie (conectado a la identidad) puede construirse mediante la exponenciación de sus generadores, 
+\begin{equation}
+    U(\theta) = \exp\left(i \sum_j \theta^j T_j\right),
+\end{equation}
+las propiedades globales y los axiomas del grupo imponen condiciones estrictas y directas sobre la naturaleza matemática de los generadores $T_j$. A continuación, se demuestra cómo las propiedades del grupo emergen desde el álgebra:
+
+\begin{itemize}
+    \item \textbf{Elemento Identidad:} La identidad del grupo se recupera trivialmente haciendo que todos los parámetros sean nulos ($\theta^j = 0$). Así, $U(0) = \exp(0) = \mathbf{1}$.
+    
+    \item \textbf{Elemento Inverso:} El inverso de una transformación paramétrica $U(\theta)$ corresponde simplemente a realizar la transformación en el sentido opuesto, es decir, invirtiendo el signo de los parámetros: $U^{-1}(\theta) = U(-\theta) = \exp\left(-i \sum_j \theta^j T_j\right)$.
+
+    \item \textbf{Clausura y la fórmula de Baker-Campbell-Hausdorff:} Para que el grupo sea cerrado, el producto de dos elementos del grupo debe ser otro elemento del grupo. Es decir, $e^{i\alpha A} e^{i\beta B} = e^{i \gamma C}$, donde $A, B$ y $C$ son generadores. La relación entre los exponentes está dada por la célebre fórmula de Baker-Campbell-Hausdorff (BCH):
+    \begin{equation}
+        e^{X} e^{Y} = \exp\left(X + Y + \frac{1}{2}[X,Y] + \frac{1}{12}[X,[X,Y]] - \frac{1}{12}[Y,[X,Y]] + \dots \right)
+    \end{equation}
+    Para que el resultado de esta serie siga perteneciendo al grupo, el exponente completo debe poder escribirse como una combinación lineal de los generadores. Esto exige que \textbf{el conmutador de dos generadores sea siempre una combinación lineal de los generadores}. De aquí nace la regla fundamental del álgebra de Lie: $[T_i, T_j] = i f_{ijk} T_k$, donde las constantes de estructura $f_{ijk}$ garantizan la clausura del grupo macroscópico.
+
+    \item \textbf{Unitariedad ($U^{-1} = U^\dagger$):} En mecánica cuántica, exigimos que las transformaciones (como la evolución temporal o cambios de fase) sean unitarias para conservar la probabilidad total. Evaluando el conjugado hermítico de $U$:
+    \begin{equation}
+        U^\dagger(\theta) = \left[ \exp\left(i \sum_j \theta^j T_j\right) \right]^\dagger = \exp\left(-i \sum_j \theta^j T_j^\dagger\right)
+    \end{equation}
+    Para que esto sea igual al inverso $U^{-1} = \exp(-i \sum_j \theta^j T_j)$, es un requisito ineludible que \textbf{los generadores sean Hermíticos}: $T_j^\dagger = T_j$.
+    
+    \item \textbf{Condición "Especial" ($\det(U) = 1$):} Los grupos denominados "Especiales", como $SO(N)$ o $SU(N)$, están formados por matrices cuyo determinante es exactamente $+1$. Utilizando la identidad matricial de Jacobi para la exponencial de una traza, $\det(e^A) = e^{\text{Tr}(A)}$, tenemos:
+    \begin{equation}
+        \det[U(\theta)] = \det\left[ \exp\left(i \sum_j \theta^j T_j\right) \right] = \exp\left( i \sum_j \theta^j \text{Tr}(T_j) \right)
+    \end{equation}
+    Para que esta exponencial sea igual a $1$ para cualquier valor de $\theta^j$, se debe cumplir que \textbf{la traza de cada generador sea nula}: $\text{Tr}(T_j) = 0$.
+\end{itemize}
+
+Esta conexión es sumamente poderosa: en lugar de buscar matrices complicadas que sean unitarias y de determinante $1$ (grupo $SU(N)$), el problema se simplifica a buscar un conjunto de matrices hermíticas y de traza nula que satisfagan cierta regla de conmutación. Una vez encontrados estos generadores (como las matrices de Pauli para $SU(2)$ o las de Gell-Mann para $SU(3)$), las propiedades del grupo global quedan garantizadas por construcción.
+
 \subsection{$\operatorname{SO}(2)$}
 
 
