@@ -3660,6 +3660,39 @@ La Acción  debe ser también invariante bajo este tipo de transformación, es d
 \end{align}
 \end{frame}
 
+Para expandir una función alrededor de un cambio infinitesimal, $\delta x$, usaremos la expansión a primer orden:
+\begin{align}
+  f(x+\delta x,y+\delta y) \approx &f(x,y) + \frac{\partial f}{\partial x}\delta x + \frac{\partial f}{\partial y}\delta y\,.\,.
+\end{align}
+Algunos ejemplos
+\begin{itemize}
+\item $f(x) =1$
+  \begin{align*}
+    f(x+\delta x) = 1 + 0 = 1 
+  \end{align*}
+\item $f(x) =x$
+  \begin{align*}
+    f(x+\delta x) = x + \delta x  
+  \end{align*}
+\item $f(x) =x^2$
+  \begin{align*}
+    f(x+\delta x) \approx x +2x \delta x + {\cal O}(\delta x^2)  \,,
+  \end{align*}
+que coincide a primer orden con la expresión exacta
+  \begin{align*}
+    f(x+\delta x) = x +2x \delta x + \delta x^2\,.
+  \end{align*}
+  
+\item $f(x)=\cos x$
+  \begin{align*}
+    f(x+\delta x)\approx \cos x -\sin x \delta x + {\cal O}(\delta x^2)
+  \end{align*}
+  que coincide a primer orden con la expresión exacta
+  \begin{align*}
+    \cos(x+\delta x) =& \cos x g\cos (\delta x) - \sin x \sin\delta (x) 
+  \end{align*}
+  después de la expansión a primer orden de las series de Taylos para $\cos $
+\end{itemize}
 
 \begin{frame}[fragile,allowframebreaks]
 Para $N$ campos asociados a un parámetro de transformación $\theta$ , la dependencia explicita e implicita de la densidad Lagrangiana da lugar al funcional de Acción
