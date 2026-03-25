@@ -2268,14 +2268,14 @@ Como un ejemplo de Transformación de Lorenz consideremos el cambio de un sistem
     z'
   \end{pmatrix}=&
   \begin{pmatrix}
-  \displaystyle{ \frac{t+vx}{\sqrt{1-v^2}} }\\
-  \displaystyle{ \frac{x+vt}{\sqrt{1-v^2}} }\\
+  \displaystyle{ \frac{t-vx}{\sqrt{1-v^2}} }\\
+  \displaystyle{ \frac{x-vt}{\sqrt{1-v^2}} }\\
     y\\
     z
   \end{pmatrix} \nonumber\\
 =&\begin{pmatrix}
-  \gamma   & v \gamma & 0 & 0 \\
-  v \gamma & \gamma & 0 & 0\\
+  \gamma   & -v \gamma & 0 & 0 \\
+  -v \gamma & \gamma & 0 & 0\\
   0 & 0 & 1 & 0 \\
     0 & 0 & 0 & 1 \\
    \end{pmatrix} 
@@ -2302,12 +2302,17 @@ Como un ejemplo de Transformación de Lorenz consideremos el cambio de un sistem
 \end{align}
 donde
 \begin{equation}
-  \cosh\xi=\gamma\qquad\sinh\xi=v\gamma,\qquad\text{and}\qquad \gamma=\frac{1}{\sqrt{1-v^2}}.
+  \cosh\xi=\gamma\qquad\sinh\xi=-v\gamma,\qquad\text{and}\qquad \gamma=\frac{1}{\sqrt{1-v^2}}.
 \end{equation}
-y, por ejemplo:
+Y, por ejemplo:
 \begin{align}
-  t\cosh{\xi}+x\sinh\xi=\gamma(t+v x)=\frac{t+v x}{\sqrt{1-v^2}}\,.
+  t\cosh{\xi}+x\sinh\xi=\gamma(t-v x)=\frac{t-v x}{\sqrt{1-v^2}}\,.
 \end{align}
+Note que en efecto
+\begin{align*}
+ \cosh^2\xi - \sinh^2\xi = \gamma^2(1-v^2) = 1\,. 
+\end{align*}
+
 Podemos ver que las transformaciones de Lorenz para un boost en $x$, dan lugar a una de las matrices de boost que definen el grupo de Lorentz, $\operatorname{SO}(1,3)$, dadas en la ec.~\eqref{eq:Lximunu}. En efecto, el ${\Lambda^\mu}_{\nu}$ definido en la ec.~\eqref{eq:147} satisface la condición en ec.~\eqref{eq:lrinv}, 
 \begin{align}
   \label{eq:boostx}
