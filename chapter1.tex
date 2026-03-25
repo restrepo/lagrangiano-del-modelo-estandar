@@ -2561,7 +2561,7 @@ Vamos a  reescribir las ecuaciones de Maxwell en términos de cuadrivector usand
 
 De hecho, las ecuaciones
 \begin{align}
-  \label{eq:phia}
+  \label{eq:phiach1}
   \mathbf{E}&=-\boldsymbol{\nabla}\phi-\frac{\partial\mathbf{A}}{\partial t}&
   \mathbf{B}&=\boldsymbol{\nabla}\times\mathbf{A}.
 \end{align}
@@ -2575,7 +2575,10 @@ y
   \boldsymbol{\nabla}\cdot\mathbf{B}&=\boldsymbol{\nabla}\cdot(\boldsymbol{\nabla}\times\mathbf{A})\\
   &=0
 \end{align*}
-
+Es de anotar que cada uno de los campos anteriores depende de $x^\mu=(t,\boldsymbol{x})$. Dicha dependencia será abreviada simplemente como $x$, que cuando sea el argumento de un campo será interpretada como el cuadrivector de posición completo
+\begin{align*}
+  A(t, \boldsymbol{x}) = A(x^\mu) = A(x)\,.
+\end{align*}
 
 \begin{frame}[fragile,allowframebreaks]
 Del electromagnetismo tenemos entonces que
@@ -2589,7 +2592,7 @@ Del electromagnetismo tenemos entonces que
 \end{equation}
 \end{frame}
 
-La ec.~(\ref{eq:phia}) es invariante bajo las siguientes transformaciones
+La ec.~(\ref{eq:phiach1}) es invariante bajo las siguientes transformaciones
 \begin{align}
   \label{eq:phia_transf}
   \mathbf{A}&\to\mathbf{A}'=\mathbf{A}+\boldsymbol{\nabla}\chi&
@@ -2669,6 +2672,14 @@ which is just the transformation obtained in eq.~\eqref{eq:159qft}.
 \begin{spanish} %commments cannot use UTF8 characters
 qué es justamente la ecuación de transformación obtenida en la ec.~\eqref{eq:159qft}.  
 \end{spanish}
+
+De ésta manera podemos definir el campo electromagnético, como un campo clásico vectorial de Lorentz\footnote{Hay un detalle sobre la transformación de Lorentz interna $x$ es será estudiadad en detalle luego.}, que además posee la propiedad gauge local:
+\begin{align*}
+  A^\mu \to {A'}^\mu =& {\Lambda^\mu}_\nu A^\nu\\
+ A_\mu(x)\to A'_\mu(x)=&A_\mu(x)-\partial_\mu\chi(x)\,.
+\end{align*}
+
+
 
 \begin{frame}[fragile,allowframebreaks]
 \begin{example}
