@@ -3671,6 +3671,32 @@ La Acción  debe ser también invariante bajo este tipo de transformación, es d
 \end{align}
 \end{frame}
 
+\begin{frame}[fragile,allowframebreaks]
+\section{Expansión de Taylor a primer orden}
+\label{sec:taylor_expansion}
+
+Por definición, si una función $f(x')$ es infinitamente diferenciable en un entorno de un punto $a$, su serie de Taylor alrededor de ese punto $a$ está dada por:
+\begin{equation}
+    f(x') = f(a) + f'(a)(x' - a) + \frac{f''(a)}{2!}(x' - a)^2 + \frac{f'''(a)}{3!}(x' - a)^3 + \dots
+\end{equation}
+
+Para evaluar la función en un punto ligeramente desplazado de $x$, definimos nuestro nuevo punto de evaluación como
+\begin{align}
+x' = x + \delta x\,,  
+\end{align}
+y expandimos la serie alrededor del punto base $a = x$. 
+
+Sustituyendo $x'$ y $a$ en la fórmula general obtenemos:
+\begin{equation}
+    f(x + \delta x) = f(x) + f'(x)(x + \delta x - x) + \frac{f''(x)}{2!}(x + \delta x - x)^2 + \dots
+\end{equation}
+
+Por lo tanto, la serie infinita se trunca de forma exacta como:
+\begin{equation}
+    f(x+\delta x) = f(x) + \frac{df(x)}{dx}\delta x + \mathcal{O}(\delta x^2)
+\end{equation}
+
+
 Para expandir una función alrededor de un cambio infinitesimal, $\delta x$, usaremos la expansión a primer orden:
 \begin{align}
   f(x+\delta x,y+\delta y) \approx &f(x,y) + \frac{\partial f}{\partial x}\delta x + \frac{\partial f}{\partial y}\delta y\,.\,.
@@ -3704,9 +3730,12 @@ que coincide a primer orden con la expresión exacta
     \approx & \cos x  - \sin x \delta x + {\cal O}(\delta x^2)\,.
   \end{align*}
 \end{itemize}
+\end{frame}
 
 \begin{frame}[fragile,allowframebreaks]
-Para $N$ campos asociados a un parámetro de transformación $\theta$ , la dependencia explicita e implicita de la densidad Lagrangiana da lugar al funcional de Acción
+\section{Principio de mínima acción para $N$ campos}
+\label{sec:ncampos}
+  Para $N$ campos asociados a un parámetro de transformación $\theta$ , la dependencia explicita e implicita de la densidad Lagrangiana da lugar al funcional de Acción
 \begin{equation}
   S[\phi_i,\partial_\mu\phi_i;x^\mu]=\int_{R}\operatorname{d}^4x\,\mathcal{L}(\phi_i,\partial_\mu\phi_i;x^\mu)
 \end{equation}
