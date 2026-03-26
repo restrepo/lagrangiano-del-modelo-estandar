@@ -3560,7 +3560,7 @@ O en forma más compacta, cambiando a un sistema de unidades en el cual $v=1$:
 \begin{align}
   \mathcal{L}(\partial_{\mu} \phi)=  \frac{1}{2}{\partial_\mu\phi}\,{\partial^\mu\phi}\,.
 \end{align}
-Note que para una onda mecánica con velocidad de propagación $v$, la ecuación anterior se usa sólo a modo de notación. Sólo cuando la velocidad de propagación es la velocidad de la luz la densidad Lagrangiana contiene una producto escalar bien definido, el cual es invariante bajo transformaciones de Lorenz. En este caso el producto escalar corresponde al módulo al cuadrado del cuadrivector $\partial_{\mu}\phi$.
+Note que para una onda mecánica con velocidad de propagación $v$, la ecuación anterior se usa sólo a modo de notación. Sólo cuando la velocidad de propagación es la velocidad de la luz la densidad Lagrangiana contiene un producto escalar bien definido, el cual es invariante bajo transformaciones de Lorentz. En este caso el producto escalar corresponde al módulo al cuadrado del cuadrivector $\partial_{\mu}\phi$.
 \end{frame}
 
 \begin{frame}[fragile,allowframebreaks]
@@ -3672,7 +3672,7 @@ La Acción  debe ser también invariante bajo este tipo de transformación, es d
 \end{frame}
 
 \begin{frame}[fragile,allowframebreaks]
-\section{Expansión de Taylor a primer orden}
+\subsection{Expansión de Taylor a primer orden}
 \label{sec:taylor_expansion}
 
 Por definición, si una función $f(x')$ es infinitamente diferenciable en un entorno de un punto $a$, su serie de Taylor alrededor de ese punto $a$ está dada por:
@@ -3751,7 +3751,7 @@ Definiendo el cambio interno en el campo como en \eqref{eq:deltaphi}
 \begin{align}
   \delta\phi_i(x)=\phi'_i(x)-\phi_i(x)\,,
 \end{align}
-y el cambio en $x$ bajo una transformación de Lorenz infinitesimal como\footnote{¿Cual es la ley de conservación que corresponde a los boosts de Lorenz ?: ver \url{https://physics.stackexchange.com/a/12561}}
+y el cambio en $x$ bajo una transformación de Lorentz infinitesimal como\footnote{¿Cual es la ley de conservación que corresponde a los boosts de Lorentz ?: ver \url{https://physics.stackexchange.com/a/12561}}
 \begin{align}
 \label{eq:deltax}
   x^\mu\to {x'}^\mu=x^\mu+\delta x^\mu\,,
@@ -4008,9 +4008,9 @@ es decir, como la suma de la densidad Lagrangiana para dos campos reales indepen
 
 \section{Ecuación de continuidad}
 \begin{frame}[fragile,allowframebreaks]
-Las transformaciones que bajo algunas condiciones dejan invariante a la acción, van a estar relacionadas con cargas conservadas. A continuación definiremos con un ejemplo conocido que es una carga conservada.
+Las transformaciones que bajo algunas condiciones dejan invariante a la acción, van a estar relacionadas con cargas conservadas. A continuación definiremos, con un ejemplo conocido, que es una carga conservada.
 
-Para entender el significado físico de la ecuación de continuidad consideremos una cuadri-corriente asociada por ejemplo a la densidad de carga y corriente eléctricas. Expandiendo la ecuación de continuidad en sus componentes espaciales y temporales tenemos que
+Para entender el significado físico de la ecuación de continuidad consideremos una cuadri-corriente asociada por ejemplo a la densidad de carga y a la corriente eléctrica. Expandiendo la ecuación de continuidad en sus componentes espaciales y temporales tenemos que
 \begin{align}
   \partial_\mu j^\mu=&0&\nonumber\\
   \partial_0 j^0+ \partial_i j^i=&0\,,&\text{suma sobre $i$}\nonumber\\
@@ -4050,7 +4050,7 @@ puede parametrizarse sin perdida de generalidad como
   x^\mu\to{x'}^\mu=&x^\mu+\delta x^{\mu}\,.
 \end{align}
 
-Para visualizar más fácilmente la situación para un campo escalar, supongamos de momento que $\delta x^{\mu}$ corresponde  traslación espacio--temporal.
+Para visualizar más fácilmente la situación para un campo escalar, supongamos de momento que $\delta x^{\mu}$ corresponde a una traslación espacio--temporal.
 
 Tenemos
 \begin{align}
@@ -4091,7 +4091,7 @@ y la transformación del campo $\phi$ como consecuencia de la traslación es
 
 
 
-\section{Primer teorema de Noether para simetrías externas}
+\section{Primer teorema de Noether}
 El primer teorema de Noether surge al asumir que
 \begin{itemize}
 \item Los parámetros de transformación son globales, es decir, que los parámetros de la transformación no dependen del punto del espacio tiempo.
@@ -4112,6 +4112,9 @@ Por  cada parámetro asociado a una transformación global  existe una ecuación
 \end{align}
 con $B^{\mu}$ dado por la ecuación~\eqref{eq:master2}.
 
+\subsection{Transformaciones externas}
+\label{sec:text}
+
 \begin{frame}[fragile,allowframebreaks]
   Consideremos el caso en el cual el campo es sólo afectado en su dependencia espacio-temporal. Como ocurre para una la transformación externa de traslación global
   discutida en la Sección~\ref{sec:tranf-extern}. Allí, un desplazamiento constante
@@ -4126,9 +4129,9 @@ ocasiona un cambio en
 
   De acuerdo al Teorema 1 de Noether, los cuatro posibles parámetros de desplazamiento deben dar lugar a cuatro ecuaciones de continuidad para (suma sobre índices repetidos)
 \begin{align}
-     B^{\mu}=& \mathcal{L} \delta x^{\mu} + \frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}\delta\phi_{i} \nonumber\\
-  =&\delta_{\nu}^{\mu} \mathcal{L} \delta x^{\nu} - \frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)} \left( \partial_{\nu}\phi_i \right)\delta x^{\nu}   \nonumber\\
-  =&- \left[\frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)} \left( \partial_{\nu}\phi_i \right) - \delta_{\nu}^{\mu} \mathcal{L} \right] \delta x^{\nu}   \nonumber\\
+     B^{\mu}=& \mathcal{L} \delta x^{\mu} +\sum_i \frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}\delta\phi_{i} \nonumber\\
+  =&\delta_{\nu}^{\mu} \mathcal{L} \delta x^{\nu} -\sum_i \frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)} \left( \partial_{\nu}\phi_i \right)\delta x^{\nu}   \nonumber\\
+  =&- \left[\sum_i\frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)} \left( \partial_{\nu}\phi_i \right) - \delta_{\nu}^{\mu} \mathcal{L} \right] \delta x^{\nu}   \nonumber\\
   =&    - T^{\mu}_{\nu} \delta x^{\nu}\,,
 \end{align}
 donde, hemos definido
@@ -4147,7 +4150,7 @@ El tensor $T^\mu_\nu$ proviene de asumir la homogeneidad del espacio y el tiempo
 \end{frame}
 
 \begin{frame}[fragile,allowframebreaks]
-La densidad Hamiltoniana se obtiene de $T^0_0$
+La densidad Hamiltoniana se obtiene de $T^0_0$. Para un sólo campo, $\phi$
 \begin{align}
   \label{eq:3}
 \mathcal{H}&=T^0_0=\frac{\partial\mathcal{L}}{\partial\dot{\phi}}\dot{\phi}
@@ -4232,7 +4235,7 @@ La predicción de la existencia del neutrino fue basada en garantizar la Ley de 
 
 
 
-\section{Transformaciones internas}
+\subsection{Transformaciones internas globales}
 
 Una consecuencia del primer teorema de Noether es que por cada simetría global de la Acción existe una carga conservada. 
 
@@ -4241,16 +4244,16 @@ Una consecuencia del primer teorema de Noether es que por cada simetría global 
 
 La virtud del trabajo de Noether~\cite{Noether,Brading:2000hc,Brading:2003nv,Sundermeyer:2014kha} fue separar los resultados  en los casos de grupos de simetrías globales en los cuales el parámetro de transformación no depende del punto del espacio tiempo (como es el caso de las transformaciones a velocidad constante la relatividad especial: $v=\text{cte}$) del caso en que los grupos de simetría dependan del punto del espacio-tiempo (como los sistemas acelerados de la relatividad general donde la velocidad depende el punto del espacio-tiempo: $v(x)$).
 
-En el caso de teorías de campos, estamos más interesados en simetría de espacios internos como puede ser el cambio de fase de la función de onda en la ecuación de Schrödinger. Un cambio de fase, $\theta$, es un caso particular del parámetro de la transformación. En general el parámetro de una transformación interna puede ser constante, $\theta=\text{cte}$, que corresponde a una transformación de fase  \emph{global}, o depender del punto del espacio tiempo, $\theta(x)$, que corresponde  a una transformación  de fase \emph{local}. Las simetrías internas están caracterizadas por la condición $\delta x^\mu=0$ 
-
-Nos enfocaremos en esta sección en la formulación de los dos teoremas de Noether para el caso de simetrías internas globales y locales.   
-
-
-Si la transformación depende de algún parámetro $\theta$ continuo, entonces podemos garantizar la existencia de un parámetro infinitesimal tal que
+En el caso de teorías de campos, estamos más interesados en simetría de espacios internos como puede ser el cambio de fase de la función de onda en la ecuación de Schrödinger. Un cambio de fase, $\theta$, es un caso particular del parámetro de la transformación. En general el parámetro de una transformación interna puede ser constante, $\theta=\text{cte}$, que corresponde a una transformación de fase  \emph{global}, o depender del punto del espacio tiempo, $\theta(x)$, que corresponde  a una transformación  de fase \emph{local}. Las simetrías internas están caracterizadas por la condición $\delta x^\mu=0$. Por lo tanto, en este caso
 \begin{align}
-\label{eq:infdt}
- \delta\phi_i= a_{i}\left( \phi_{i},\partial_{\mu}\phi_{i} \right) \theta(x)+b^{\nu}_i \left( \phi_{i},\partial_{\mu}\phi_{i} \right) \partial_{\nu}\theta(x)\,,
+  B^{\mu}=&\sum_i \frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}\delta\phi_{i}
 \end{align}
+Para la densidad Lagrangiana en la ec.~ \eqref{eq:kincmplx}
+\begin{align}
+  \label{eq:t1noetherint}
+    \mathcal{L} =  {\partial_\mu\phi^{*}}\,{\partial^\mu\phi} = {\partial^\mu\phi^{*}}\,{\partial_\mu\phi}\,,
+\end{align}
+podemos indentificar $\phi_1 \to \phi$ y $\phi_2 \to \phi^*$ 
 
 Para concretar, consideremos como transformación interna el cambio de fase de una función compleja
 \begin{align}
@@ -4259,6 +4262,7 @@ Para concretar, consideremos como transformación interna el cambio de fase de u
 Para el cambio infinitesimal del campo y su complejo conjugado,  haciendo $\phi_1=\phi$ y $\phi_2=\phi^{*}$ y
 para un $\theta$ suficientemente pequeño, obtenemos~\eqref{eq:deltamatter}
 \begin{align}
+  \label{eq:parconst}
   \delta\phi=&a_1 \theta\,, &  \delta\phi^{*}=&  a_2 \theta\,, 
 \end{align}
 donde
@@ -4266,14 +4270,66 @@ donde
   \label{eq:ai}
   a_1=& i\phi \,, & a_2=&-i\phi^{*}\,.
 \end{align}
-Ademas, para este caso
+Entonces
+\begin{align}
+  B^{\mu}=& \frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}\delta\phi_{i}\\
+  =& \frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi)}\delta\phi
+  +  \delta\phi^*\frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi^*)}\,,
+\end{align}
+donde el orden de los términos no importa y se ha puesto por conveniencia. Usando las dos formas equivalentes de la densidad Lagrangiana en la ec.~\eqref{eq:t1noetherint}, tenemos respectivamente que
+\begin{align*}
+  \frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi^*)} =& \partial^\mu \phi\\
+  \frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi)}  =& \partial^\mu \phi^*
+\end{align*}
+Usando la ec.~\eqref{eq:parconst}
+\begin{align}
+  B^\mu = \left(\partial^\mu \phi^* a_1 + a_2 \partial^\mu\phi \right)\theta 
+\end{align}
+Si $\theta$ es constante, podemos usar la ec.~\eqref{eq:ai}  para  definir
+\begin{align}
+  J^\mu =& \left(\partial^\mu \phi^*\right) \phi - \phi^* \partial^\mu\phi\,.
+\end{align}
+Para facilitar la notación, será asumido que la derivada sólo actua sobre el primer campo y entonces
+\begin{align}
+  J^\mu =& \partial^\mu \phi^* \phi - \phi^* \partial^\mu\phi\,.
+\end{align}
+es la corriente conservada que satisface
+\begin{align}
+  \partial_\mu J^\mu =0\,.
+\end{align}
+
+
+El segundo teorema de Noether será formulado en general para simetrías internas, conteniendo éste caso de simetrías internas globales, con parámetro constante, $\theta$.
+
+
+
+Si la transformación depende de algún parámetro $\theta(x)$ continuo, entonces podemos garantizar la existencia de un parámetro infinitesimal tal que
+\begin{align}
+\label{eq:infdt}
+ \delta\phi_i= a_{i}\left( \phi_{i},\partial_{\mu}\phi_{i} \right) \theta(x)+b^{\nu}_i \left( \phi_{i},\partial_{\mu}\phi_{i} \right) \partial_{\nu}\theta(x)\,,
+\end{align}
+
+Para concretar, consideremos como transformación interna el cambio de fase de una función compleja local
+\begin{align}
+  \phi\to \phi'=\operatorname{e}^{i\theta(x)}\phi\,.
+\end{align}
+Para el cambio infinitesimal del campo y su complejo conjugado,  haciendo $\phi_1=\phi$ y $\phi_2=\phi^{*}$ y
+para un $\theta$ suficientemente pequeño, obtenemos~\eqref{eq:deltamatter}
+\begin{align}
+  \delta\phi=&a_1 \theta(x)\,, &  \delta\phi^{*}=&  a_2 \theta(x)\,, 
+\end{align}
+donde
+\begin{align}
+  \label{eq:ai}
+  a_1=& i\phi \,, & a_2=&-i\phi^{*}\,.
+\end{align}
+Además, para este caso
 \begin{align}
   b_1^\nu=b_2^\nu=0\,,
 \end{align}
 y no hay dependencia de la derivada del parámetro, como en la ec~\eqref{eq:deltarad}.
 
-En el caso de campos de materia tenemos entonces 
-que el parámetro puede ser global o local.
+
 
 \section{Segundo teorema de Noether}
 
