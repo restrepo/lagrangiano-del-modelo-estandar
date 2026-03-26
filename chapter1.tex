@@ -2118,8 +2118,9 @@ de modo que la transformación de Lorenz para $\partial_\mu=\partial/\partial x^
 \begin{align}
   \label{eq:dmulrtran}
    \frac{\partial}{{\partial x'}^\mu}=& {\left(\Lambda^{-1}\right)^\nu}_\mu\frac{\partial}{\partial x^\nu}\nonumber\\
-   {\partial\,}'_\mu=& {\left(\Lambda^{-1}\right)^\nu}_\mu\partial_\nu\,.
+   {\partial\,}'_\mu=&\partial_\nu {\left(\Lambda^{-1}\right)^\nu}_\mu\,.
 \end{align}
+Note que $\Lambda$ es constante y no afecta la derivada en sí.
 
 Imponiendo la invarianza sobre el producto escalar
 \begin{align}
@@ -2195,40 +2196,41 @@ Usando ec.~\eqref{eq:lambdainv}, tenemos que
 
 \end{frame}
 
+\begin{frame}[fragile,allowframebreaks]
 Similarmente,
 \begin{align*}
    {x'}^\mu=&{\Lambda^\mu}_{\nu}x^\nu\\
-  g^{\mu\alpha}{x'}_\alpha=&g^{\mu\alpha}{\Lambda_\alpha}^{beta}g_{\beta\nu}x^\nu\\
-   {x'}_\alpha=&{\Lambda_\alpha}^{beta}x_{\beta}\,,
+  g^{\mu\alpha}{x'}_\alpha=&g^{\mu\alpha}{\Lambda_\alpha}^{\beta}g_{\beta\nu}x^\nu\\
+   {x'}_\alpha=&{\Lambda_\alpha}^{\beta}x_{\beta}\,,
 \end{align*}
 de modo que, usando \eqref{eq:lambdainv} 
 \begin{align}
+  \label{eq:xto-1}
   {x'}_\mu=&{\Lambda_\mu}^{\nu}x_{\nu}\nonumber\\
-     {x'}_\mu=&{\left(\Lambda^{-1}\right)^\nu}_\mu x_{\nu}\,,
+     {x'}_\mu=&x_{\nu}{\left(\Lambda^{-1}\right)^\nu}_\mu \,,
 \end{align}
 y comparando con \eqref{eq:invtr}, podemos concluir que $x_\mu$ transforma de la misma manera que $1/x^\mu$\,. 
 
-\begin{frame}[fragile,allowframebreaks]
-\begin{example}
   
 
 
-Invarianza de Lorentz
+La invarianza de Lorentz del producto escalar es entonces ahora mucho más directa usando~\eqref{eq:xto-1}
 
-  \begin{align}
-  x\cdot y= g_{\mu\nu}x^{\mu}y^{\nu}=  x_\nu y^\nu\to x'_\mu{y'}^\mu=&{\Lambda_\mu}^\nu x_\nu{\Lambda^\mu}_\rho y^\rho \nonumber\\
-    =&{\Lambda_\mu}^\nu x_\nu{\Lambda^\mu}_\rho y^\rho \nonumber\\
-    =&{\left(\Lambda^{-1}\right)^\nu}_\mu{\Lambda^\mu}_\rho x_\nu y^\rho \nonumber\\
-    =&\delta^\nu_\rho x_\nu y^\rho \nonumber\\
-    =&x_\nu y^\nu \nonumber\,.
+\begin{align}
+  \label{eq:easyli}
+  x\cdot y= g_{\mu\nu}x^{\mu}y^{\nu}=  x_\nu y^\nu = x_\mu y^\mu\to x'_\mu{y'}^\mu %=&{\Lambda_\mu}^\nu x_\nu{\Lambda^\mu}_\rho y^\rho \nonumber\\
+   % =&{\Lambda_\mu}^\nu x_\nu{\Lambda^\mu}_\rho y^\rho \nonumber\\
+    =&x_\nu{\left(\Lambda^{-1}\right)^\nu}_\mu{\Lambda^\mu}_\rho  y^\rho \nonumber\\
+    =&x_\nu \delta^\nu_\rho  y^\rho \nonumber\\
+    =&x_\nu y^\nu \,.
   \end{align}
 
+  
   Entonces, el producto escalar se puede escribir como
 \begin{equation}
   x_\mu y^\mu=x^0y^0-x^1y^1-x^2y^2-x^3y^3=x^0y^0-\sum_{i}x^i y^i=x^0y^0-\boldsymbol{x}\cdot \boldsymbol{y}\,.
 \end{equation}
 
-\end{example}
 
 
 \end{frame}
@@ -2678,12 +2680,14 @@ which is just the transformation obtained in eq.~\eqref{eq:159qft}.
 qué es justamente la ecuación de transformación obtenida en la ec.~\eqref{eq:159qft}.  
 \end{spanish}
 
+
+\begin{frame}[fragile,allowframebreaks]
 De ésta manera podemos definir el campo electromagnético, como un campo clásico vectorial de Lorentz\footnote{Hay un detalle sobre la transformación de Lorentz interna $x$ es será estudiadad en detalle luego.}, que además posee la propiedad gauge local:
 \begin{align*}
   A^\mu \to {A'}^\mu =& {\Lambda^\mu}_\nu A^\nu\\
  A_\mu(x)\to A'_\mu(x)=&A_\mu(x)-\partial_\mu\chi(x)\,.
 \end{align*}
-
+\end{frame}
 
 
 \begin{frame}[fragile,allowframebreaks]
@@ -2773,11 +2777,12 @@ appears to be constructed out of them.
 
 \begin{frame}[fragile,allowframebreaks]
   Hasta ahora hemos definido la representación ${[S]_{\alpha}}^{\beta}$ del subgrupo de Lorentz $(\frac{1}{2},0)$ y su correspondiente conjugado en el subgrupo $(0,\frac{1}{2})$. Para definir el producto escalar en este subespacio debemos introducir un objeto de dos componentes $\alpha=1,2$ que transforma bajo está representación el cual recibe el nombre de \emph{espinor de Weyl}~\cite{Dreiner:2008tw,Quevedo:2010ui}. Sea entonces el espinor de Weyl, $\xi_{\alpha}$, tal que
-\begin{align*}
-    \xi_{\alpha} \to \xi_{\alpha}'=&{S_{\alpha}}^{\beta}\xi_{\beta} \nonumber\\
+  \begin{align}
+      \label{eq:subalpha}
+    \xi_{\alpha} \to \xi_{\alpha}'=&{S_{\alpha}}^{\beta}\xi_{\beta} \\
   \xi_{\dot{\alpha}}^{*}\to \xi_{\dot{\alpha}}^{\prime *}
   =&{\left[ S^{*} \right]_{\dot{\alpha}}}^{\dot{\beta}}\xi_{\dot{\beta}}^{*}\,,
-\end{align*}
+\end{align}
 donde $\dot{\alpha}=\dot{1},\dot{2}$.  Los correspondientes espinores conjugados, o simplemente anti-espinores de Weyl, pertenecen a la representación $\left( 0,\frac{1}{2}\right)$ y hemos
 definido
 \begin{align}
@@ -2794,9 +2799,10 @@ la escritura de la métrica en la definición de producto escalar.
 %
 Para ello es necesario definir la transformación inversa asociada a
 espinores con índices arriba. Como hicimos con el caso de la cuadriderivada, vamos a introducir un espinor que tenga su índice intrínsecamente superior y que transforme con la representación inversa de $(\frac{1}{2},0)$
-\begin{align*}
+\begin{align}
+  \label{eq:superalpha}
   \eta^{\alpha}\to {\eta'}^{\alpha} =&\eta^\beta{\left[  S^{-1}  \right]_{\beta}}^{\alpha}\,.
-\end{align*}
+\end{align}
 Sacando el conjugado
 \begin{align}
  \left( \eta^{\alpha} \right)^{*}\to \left( {\eta'}^{\alpha} \right)^{*} =&\left\{ {\left[  S^{-1}  \right]_{\beta}}^{\alpha} \right\}^{*} \left( \eta^\beta \right)^{*}\,.
@@ -2822,7 +2828,7 @@ tal que
 
 \textbf{Ejercicio:} Para esta representación, encuentre los generadores de boots y rotaciones: $\boldsymbol{L}$ y $\boldsymbol{K}$.
 
-\bigskip
+
 
 
 \end{frame}
@@ -2863,9 +2869,12 @@ Para evitar hacer uso explícito de la métrica en cada una de las dos represent
   \eta^{*}\cdot \eta^{*}\equiv & \eta^{*}_{\dot{\alpha}}\cdot \eta^{*\dot{\alpha}}\,.
 \end{align}
 
-Con las definiciones y convenciones anteriores la invarianza de cada uno de estos productos escalares queda garantizada, por ejemplo
+Con las definiciones y convenciones anteriores la invarianza de cada uno de estos productos escalares queda garantizada, por ejemplo, usando \eqref{eq:superalpha} y \eqref{eq:subalpha} y 
 \begin{align*}
-   \eta\cdot\xi\equiv& \eta^{\alpha} \cdot \xi_{\alpha} =...
+  \eta\cdot\xi\equiv \eta^{\alpha} \cdot \xi_{\alpha} \to {\eta'}^{\alpha} \cdot \xi'_{\alpha}=&
+       \eta^\beta {\left[  S^{-1}  \right]_{\beta}}^{\alpha}{S_\alpha}^\gamma \xi_\gamma\\
+  =& \eta^\beta\delta_\beta^\gamma\xi_\gamma\\
+  =& \eta^\beta\xi_\beta\,.
 \end{align*}
 
 Note que un producto escalar entre un espinor conjugado con otro sin conjugar no tiene sentido pues pertenecen a espacios diferentes.
@@ -3689,15 +3698,15 @@ que coincide a primer orden con la expresión exacta
   \end{align*}
   que coincide a primer orden con la expresión exacta
   \begin{align*}
-    \cos(x+\delta x) =& \cos x g\cos (\delta x) - \sin x \sin\delta (x) 
+    \cos(x+\delta x) =& \cos x \cos (\delta x) - \sin x \sin(\delta x) \\
+    \approx & \cos x  - \sin x \delta x + {\cal O}(\delta x^2)\,.
   \end{align*}
-  después de la expansión a primer orden de las series de Taylos para $\cos $
 \end{itemize}
 
 \begin{frame}[fragile,allowframebreaks]
 Para $N$ campos asociados a un parámetro de transformación $\theta$ , la dependencia explicita e implicita de la densidad Lagrangiana da lugar al funcional de Acción
 \begin{equation}
-  S[\phi_i,\partial_\mu\phi_i;x]=\int_{R}\operatorname{d}^4x\,\mathcal{L}(\phi_i,\partial_\mu\phi_i;x)
+  S[\phi_i,\partial_\mu\phi_i;x^\mu]=\int_{R}\operatorname{d}^4x\,\mathcal{L}(\phi_i,\partial_\mu\phi_i;x^\mu)
 \end{equation}
 
 
@@ -3714,25 +3723,39 @@ Definiendo el cambio interno en el campo como en \eqref{eq:deltaphi}
 y el cambio en $x$ bajo una transformación de Lorenz infinitesimal como\footnote{¿Cual es la ley de conservación que corresponde a los boosts de Lorenz ?: ver \url{https://physics.stackexchange.com/a/12561}}
 \begin{align}
 \label{eq:deltax}
-  x\to x'=x+\delta x
+  x^\mu\to {x'}^\mu=x^\mu+\delta x^\mu\,,
 \end{align}
 tenemos que la variación en las variables dependientes e independientes de la Acción son
 \begin{align}
-   \delta S=&\int_{R}d^4x'\,\mathcal{L} \left( \phi_{i}',\partial_{\mu}\phi'_i;x' \right)- \int_{R}d^4x\,\mathcal{L} \left( \phi_{i}(x),\partial_{\mu}\phi_i(x);x \right) \nonumber\\
-     =&\int_{R}\frac{\partial x'}{\partial x}d^4x\,\mathcal{L} \left( \phi_{i}+\delta\phi_i,\partial_{\mu}(\phi_i+\delta\phi_i);x+\delta x \right)- \int_{R}d^4x\,\mathcal{L} \left( \phi_{i},\partial_{\mu}\phi_i;x \right)\,
+   \delta S=&\int_{R}d^4x'\,\mathcal{L} \left( \phi_{i}',\partial_{\mu}\phi'_i;x' \right)- \int_{R}d^4x\,\mathcal{L} \left( \phi_{i}(x),\partial_{\mu}\phi_i(x);x^\mu \right) \nonumber\\
+     =&\int_{R}\frac{\partial {x'}^\mu}{\partial x^\mu}d^4x\,\mathcal{L} \left( \phi_{i}+\delta\phi_i,\partial_{\mu}(\phi_i+\delta\phi_i);x^\mu+\delta x^\mu \right)- \int_{R}d^4x\,\mathcal{L} \left( \phi_{i},\partial_{\mu}\phi_i;x^\mu \right)\,
 \end{align}
-Derivando \eqref{eq:deltax}, y reemplazadando
+Derivando \eqref{eq:deltax},  reemplazadando
 \begin{align}
   \frac{\partial x^{\prime \mu}}{\partial x^{\mu}}=1+\partial_{\mu} \left( \delta x^{\mu} \right),
 \end{align}
+y expandiendo
+\begin{align}
+  \mathcal{L} \left( \phi_{i}+\delta\phi_i,\partial_{\mu}(\phi_i+\delta\phi_i);x^\mu+\delta x^\mu \right) \approx
+  \mathcal{L}(\phi_i,\partial_{\mu}\phi_i;x^\mu)+\sum_i \left[ \frac{\partial\mathcal{L}}{\partial\phi_i}\delta\phi_{i} +\frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}\partial_{\mu}(\delta\phi_{i}) \right]+\left( \partial_{\mu}\mathcal{L} \right)\delta x^{\mu}
+\end{align}
+
 en la expresión anterior, tenemos que
 \begin{align}
-     \delta S =&\int_{R} \left[ 1+\partial_{\mu} \left( \delta x^{\mu}  \right)\right]  d^4x\,\left\{ \mathcal{L}(\phi_i,\partial_{\mu}\phi_i;x)+\sum_i \left[ \frac{\partial\mathcal{L}}{\partial\phi_i}\delta\phi_{i} +\frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}\partial_{\mu}(\delta\phi_{i}) \right]+\left( \partial_{\mu}\mathcal{L} \right)\delta x^{\mu} \right\}\nonumber\\
-      &- \int_{R}d^4x\,\mathcal{L} \left( \phi_{i},\partial_{\mu}\phi_i;x \right) \nonumber\\
-     =&\int_{R} d^4x\,\left[ \partial_{\mu} \left( \delta x^{\mu}  \right)\right] \mathcal{L} + \int_{R}d^4x\,\left\{\sum_i \left[ \frac{\partial\mathcal{L}}{\partial\phi_i}\delta\phi_{i} +\frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}\partial_{\mu}(\delta\phi_{i}) \right]+\left( \partial_{\mu}\mathcal{L} \right)\delta x^{\mu} \right\}+\mathcal{O} \left( \delta^2 \right)\nonumber\\
-     \approx&\int_{R} d^4x\,\partial_{\mu} \left(\mathcal{L} \delta x^{\mu}  \right)  + \int_{R}d^4x\,\sum_i \left\{ \frac{\partial\mathcal{L}}{\partial\phi_i}\delta\phi_{i} +\partial_{\mu} \left[ \frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}\delta\phi_{i} \right]-\partial_{\mu} \left[ \frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}\right]\delta\phi_{i}  \right\}\,,
+  \delta S =&
+\contraction[2ex]{\int_{R} \big[} {1}{+\partial_{\mu} \left( \delta x^{\mu}  \right)\big]  d^4x\,\bigg\{}{ \mathcal{L}(\phi_i,\partial_{\mu}\phi_i;x^\mu)}
+\contraction[3ex]{\int_{R} \big[} {1}{+\partial_{\mu} \left( \delta x^{\mu}  \right)\big]  d^4x\,\bigg\{ \mathcal{L}(\phi_i,\partial_{\mu}\phi_i;x^\mu)+}{\sum_i \left[ \frac{\partial\mathcal{L}}{\partial\phi_i}\delta\phi_{i} +\frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}\partial_{\mu}(\delta\phi_{i}) \right]}
+\contraction[4ex]{\int_{R} \big[} {1}{+\partial_{\mu} \left( \delta x^{\mu}  \right)\big]  d^4x\,\bigg\{ \mathcal{L}(\phi_i,\partial_{\mu}\phi_i;x^\mu)+\sum_i \left[ \frac{\partial\mathcal{L}}{\partial\phi_i}\delta\phi_{i} +\frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}\partial_{\mu}(\delta\phi_{i}) \right]+}{\left( \partial_{\mu}\mathcal{L} \right)\delta x^{\mu}}
+\contraction[5ex]{\int_{R} \big[1+}{\partial_{\mu} \left( \delta x^{\mu}  \right)}{\big]  d^4x\,\bigg\{}{ \mathcal{L}(\phi_i,\partial_{\mu}\phi_i;x^\mu)}              
+  \int_{R} \big[ 1+\partial_{\mu} \left( \delta x^{\mu}  \right)\big]  d^4x\,\bigg\{ \mathcal{L}(\phi_i,\partial_{\mu}\phi_i;x^\mu)+\sum_i \left[ \frac{\partial\mathcal{L}}{\partial\phi_i}\delta\phi_{i} +\frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}\partial_{\mu}(\delta\phi_{i}) \right]+\left( \partial_{\mu}\mathcal{L} \right)\delta x^{\mu} \bigg\}\nonumber\\
+      &- \int_{R}d^4x\,\mathcal{L} \left( \phi_{i},\partial_{\mu}\phi_i;x^\mu \right) \nonumber\\
+  =&\int_{R} d^4x\,\left[ \partial_{\mu} \left( \delta x^{\mu}  \right)\right] \mathcal{L} + \int_{R}d^4x\,\left\{\sum_i \left[ \frac{\partial\mathcal{L}}{\partial\phi_i}\delta\phi_{i} +\frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}\partial_{\mu}(\delta\phi_{i}) \right]+\left( \partial_{\mu}\mathcal{L} \right)\delta x^{\mu} \right\}+\mathcal{O} \left( \delta^2 \right)\nonumber\\
+  \label{eq:intermediate}
+   =&\int_{R} d^4x\,\left\{\left[ \partial_{\mu} \left( \delta x^{\mu}  \right)\right] \mathcal{L} +\left( \partial_{\mu}\mathcal{L} \right)\delta x^{\mu}\right\} + \int_{R}d^4x\,\sum_i \left[ \frac{\partial\mathcal{L}}{\partial\phi_i}\delta\phi_{i} +\frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}\partial_{\mu}(\delta\phi_{i}) \right] +\mathcal{O} \left( \delta^2 \right)\\
+  \approx&\int_{R} d^4x\,\partial_{\mu} \left(\mathcal{L} \delta x^{\mu}  \right)  + \int_{R}d^4x\,\sum_i \left\{ \frac{\partial\mathcal{L}}{\partial\phi_i}\delta\phi_{i} +\partial_{\mu} \left[ \frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}\delta\phi_{i} \right]-\partial_{\mu} \left[ \frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}\right]\delta\phi_{i}  \right\}\nonumber\,,
 \end{align}
-y reordenando los términos con derivada total
+donde hemos aplicado la regla de la cadena sobre los primeros dos términos y el último término de la ec.~\eqref{eq:intermediate}.
+Reordenando los términos con derivada total
 \begin{align}
   \delta S =&
 \int_{R} d^4x\,\partial_{\mu} \left[\mathcal{L} \delta x^{\mu} + \frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}\delta\phi_{i} \right]  + \int_{R}d^4x\,\sum_i \left\{ \frac{\partial\mathcal{L}}{\partial\phi_i} -\partial_{\mu} \left[ \frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}\right]  \right\}\delta\phi_{i}\,,              
@@ -3777,7 +3800,6 @@ Obtenemos entonces las ecuaciones de Euler-Lagrange para cada campo $\phi_i$
   \partial_{\mu} \left[ \frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_i)}\right]-\frac{\partial\mathcal{L}}{\partial\phi_i}=0
 \end{align}
 
-La misma condición de nulidad de los campos en la frontera permite establecer que 
 \end{frame}
 
 Usando el principio de mínima acción en términos del campo $\phi$, tenemos que para la densidad Lagrangiana~\eqref{eq:call2}
