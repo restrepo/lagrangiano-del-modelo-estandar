@@ -502,7 +502,7 @@ tenemos
   =&\psi_{\dot{\beta}}^{\dagger}\left( \Lambda^{-1}x \right){\left[S^{\dagger} \right]^{\dot{\beta}}}_{\dot{\alpha}}\nonumber\\
   \psi^{\alpha}(x)\to {\psi'}^{\alpha}(x) =&\psi^\beta(\Lambda^{-1}x){\left[  S^{-1}  \right]_{\beta}}^{\alpha}\,,&    \psi^{\dagger\dot{\alpha}}(x)\to {\psi'}^{\dagger\dot{\alpha}}(x)=
 \psi^{\dagger\dot{\beta}}{\left[ \left( S^{-1} \right)^{*}  \right]_{\dot{\beta}}}^{\dot{\alpha}}
-  = &{\left[ \left( S^{-1} \right)^\dagger \right]^{\dot{\alpha}}}_{\dot{\beta}}\psi^{\dagger\dot{\beta}}\left( \Lambda^{-1}x \right),
+  = &{\left[ \left( S^{\dagger} \right)^{-1} \right]^{\dot{\alpha}}}_{\dot{\beta}}\psi^{\dagger\dot{\beta}}\left( \Lambda^{-1}x \right),
 \end{align}
 donde $\psi=\xi\text{ or }\eta$.
 Al interpretar  $\psi$ and $\psi^{\dagger}$ como espinores de dos componentes en este espacio interno, hemos definido el producto escalar usando la convención de índices contraídos  \emph{descendiendo} e índices con puntos contrídos \emph{ascendiendo}
@@ -512,7 +512,7 @@ Al interpretar  $\psi$ and $\psi^{\dagger}$ como espinores de dos componentes en
 \end{align}
 De esta forma podemos definir el producto escalar entre dos espinores, $\psi=\xi\text{ or }\eta$, como
 \begin{align}
-\psi\psi\equiv  \psi^{\alpha}\psi_{\alpha}\to {\psi'}^{\alpha}{\psi'}_{\alpha}=& {\left[ \left( S^{-1} \right)^T \right]^{\alpha}}_{\beta}\psi^{\beta} {S_\alpha}^\gamma\psi_\gamma \nonumber\\
+\psi\psi\equiv  \psi^{\alpha}\psi_{\alpha}\to {\psi'}^{\alpha}{\psi'}_{\alpha}=&\psi^{\beta} {\left[ \left( S^{-1} \right) \right]_{\beta}}^{\alpha} {S_\alpha}^\gamma\psi_\gamma \nonumber\\
  =& {\left( S^{-1} \right)_{\beta}}^{\alpha}{S_\alpha}^\gamma\psi^{\beta}\psi_\gamma \nonumber\\
   =& \delta_{\beta}^{\gamma}\psi^{\beta}\psi_\gamma \nonumber\\
   =& \psi^{\beta}\psi_\beta\,.
@@ -1122,7 +1122,7 @@ Para describir completamente un electrón, que conserva carga eléctrica bajo $U
     Nombre & Símbolo & Lorentz & $U(1)$\\\hline
     $e_L$: electrón {\color{red}izquierdo} & $\xi_{\color{red}\alpha}$ & ${S_{\color{red}\alpha}}^{\color{red}\beta}\xi_{\color{red}\beta}$ & $e^{i\theta}\xi_{\color{red}\alpha}$\\
    $\left( e_L \right)^{\dagger}$: positrón {\color{blue}derecho}   & $\left( \xi_{\color{red}\alpha} \right)^{\dagger}=\xi^{\dagger}_{\color{blue}\dot{\alpha}}$ & $\xi^{\dagger}_{\color{blue}\dot{\beta}}{\left[{S^{\dagger}}\right]^{\color{blue}\dot{\beta}}}_{\color{blue}\dot{\alpha}}$ & $\xi^{\dagger}_{\color{blue}\dot{\alpha}}e^{-i\theta}$\\
-   $e_R$: electrón {\color{blue}derecho}   & $\left( \eta^{\color{red}\alpha} \right)^{\dagger}=\eta^{\dagger\;\color{blue}\dot{\alpha}}$ & ${\left[ \left( S^{-1} \right)^\dagger \right]^{\color{blue}\dot{\alpha}}}_{\color{blue}\dot{\beta}}\eta^{\dagger\;\color{blue}\dot{\beta}}$& $e^{i\theta}\eta^{\dagger\;\color{blue}\dot{\alpha}}$\\
+   $e_R$: electrón {\color{blue}derecho}   & $\left( \eta^{\color{red}\alpha} \right)^{\dagger}=\eta^{\dagger\;\color{blue}\dot{\alpha}}$ & ${\left[ \left( S^{\dagger} \right)^{-1} \right]^{\color{blue}\dot{\alpha}}}_{\color{blue}\dot{\beta}}\eta^{\dagger\;\color{blue}\dot{\beta}}$& $e^{i\theta}\eta^{\dagger\;\color{blue}\dot{\alpha}}$\\
    $\left( e_R \right)^{\dagger}$: positrón {\color{red}izquierdo}&$\eta^{\color{red}\alpha}$& $\eta^{\color{red}\beta}{\left[ S^{-1}  \right]_{\color{red}\beta}}^{\color{red}\alpha}$ & $e^{-i\theta}\eta^{\color{red}\alpha}$\\\hline
   \end{tabular}
   \caption{Componentes del electrón}
