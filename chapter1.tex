@@ -2792,10 +2792,20 @@ definido
 \end{align}
 En efecto
 \begin{align}
- \xi_{\dot{\alpha}}^{*}\equiv \left( \xi_{\alpha} \right)^{*} \to \left( \xi_{\alpha}' \right)^{*}=&
- \left\{ {S_{\alpha}}^{\beta} \right\}^{*} \left( \xi_{\beta} \right)^{*} = {\left[ S^{*} \right]_{\dot{\alpha}}}^{\dot{\beta}}\xi_{\dot{\beta}}^{*}\,.
+ \xi_{\dot{\alpha}}^{*}\equiv \left( \xi_{\alpha} \right)^{*} \to \left( \xi_{\alpha}' \right)^{*}={\xi'}^*_{\cdot{\alpha}}=&
+ \left\{ {S_{\alpha}}^{\beta} \right\}^{*} \left( \xi_{\beta} \right)^{*} = {\left[ S^{*} \right]_{\dot{\alpha}}}^{\dot{\beta}}\xi_{\dot{\beta}}^{*}
+=\xi_{\dot{\beta}}^{*}{\left[ S^{\dagger} \right]^{\dot{\beta}}}_{\dot{\alpha}}                                                                                                                              \,.
 \end{align}
-  
+Podemos escribir finalmente la transformación del anti-espinor de Weyl en la representación $
+\left(
+  0,1/2
+\right)$, como
+\begin{align}
+  \label{eq:antispinorright}
+ \xi_{\dot{\alpha}}^{*}\equiv \left( \xi_{\alpha} \right)^{*} \to {\xi'}^*_{\cdot{\alpha}}=&
+ \xi_{\dot{\beta}}^{*}{\left[ S^{\dagger} \right]^{\dot{\beta}}}_{\dot{\alpha}}\,.
+\end{align}
+
 Hemos visto que usando las convenciones adecuadas podemos ahorrarnos
 la escritura de la métrica en la definición de producto escalar.
 %
@@ -2830,10 +2840,63 @@ tal que
 
 \textbf{Ejercicio:} Para esta representación, encuentre los generadores de boots y rotaciones: $\boldsymbol{L}$ y $\boldsymbol{K}$.
 
-
-
-
 \end{frame}
+
+\begin{frame}[fragile,allowframebreaks]
+Usando la indentidad
+\begin{align}
+  \label{eq:idsdagger-1}
+  \left(S^{-1}\right)^\dagger = \left(S^\dagger\right)^{-1} \,,
+\end{align}
+en la ec.~\eqref{eq:idsdagger-1} 
+\begin{align}
+  \label{eq:spinorright}
+  \eta^{*\dot{\alpha}}\to \eta^{\prime *\dot{\alpha}}
+  ={\left[ \left( S^{\dagger} \right)^{-1} \right]^{\dot{\alpha}}}_{\dot{\beta}}\eta^{*\dot{\beta}}\,,
+\end{align}
+\end{frame}
+
+Para demostrar la identidad en ec.~\eqref{eq:idsdagger-1}, nos basaremos en la definición fundamental de la matriz inversa y en las propiedades del operador adjunto o conjugado hermítico (denotado con $^\dagger$).
+
+Recordemos dos propiedades algebraicas fundamentales:
+\begin{itemize}
+    \item El conjugado hermítico de la matriz identidad es la misma matriz identidad: $I^\dagger = I$.
+    \item El conjugado hermítico de un producto de matrices invierte el orden de los factores: $(AB)^\dagger = B^\dagger A^\dagger$.
+\end{itemize}
+
+\textbf{Paso 1:} Partimos de la definición de la matriz inversa para una matriz $S$. Al multiplicar la matriz por su inversa obtenemos la matriz identidad $I$:
+\begin{equation}
+    S S^{-1} = I
+\end{equation}
+
+\textbf{Paso 2:} Aplicamos el operador conjugado hermítico ($^\dagger$) a ambos lados de la igualdad:
+\begin{equation}
+    (S S^{-1})^\dagger = I^\dagger
+\end{equation}
+
+Usando las propiedades mencionadas, el lado izquierdo invierte su orden en el producto y el derecho permanece igual, obteniendo nuestra ecuación base:
+\begin{equation}
+    \left[S^{-1}\right]^\dagger S^\dagger = I
+    \label{eq:identidad_base}
+\end{equation}
+
+\textbf{Paso 3:} Ahora, multiplicamos a la \textbf{derecha} en ambos lados de la ecuación \eqref{eq:identidad_base} por la matriz $\left[S^\dagger\right]^{-1}$ (es decir, la inversa de $S^\dagger$):
+\begin{equation}
+    \left[S^{-1}\right]^\dagger S^\dagger \left[S^\dagger\right]^{-1} = I \left[S^\dagger\right]^{-1}
+\end{equation}
+
+\textbf{Paso 4:} Por la definición misma de matriz inversa, el producto de cualquier matriz por su inversa es la identidad. Por lo tanto, agrupamos el producto $S^\dagger \left[S^\dagger\right]^{-1} = I$ en el lado izquierdo:
+\begin{align}
+    \left[S^{-1}\right]^\dagger \left( S^\dagger \left[S^\dagger\right]^{-1} \right) &= \left[S^\dagger\right]^{-1} \nonumber \\
+    \left[S^{-1}\right]^\dagger (I) &= \left[S^\dagger\right]^{-1}
+\end{align}
+
+\textbf{Paso 5:} Como multiplicar cualquier matriz por la identidad la deja inalterada ($M \cdot I = M$), el lado izquierdo se simplifica, llegando al resultado final:
+\begin{equation}
+    \left[S^{-1}\right]^\dagger = \left[S^\dagger\right]^{-1}
+\end{equation}
+
+De esta manera queda demostrada la relación. Esta identidad es fundamental para verificar la invarianza de Lorentz en los Lagrangianos construidos con espinores (donde las transformaciones $S(\Lambda)$ no son unitarias).
 
 \begin{frame}[fragile,allowframebreaks]
 % Las dos posibilidades de vectores en $\operatorname{SL}(2,C)$, los cuales reciben el nombre de \emph{espinores de Weyl}~\cite{Dreiner:2008tw}, pueden definirse como espinores que transforman con índices arriba y espinores que transforman con índices abajo
