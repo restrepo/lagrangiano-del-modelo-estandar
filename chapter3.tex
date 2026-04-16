@@ -416,7 +416,7 @@ entonces la Acción debe contener una densidad Lagrangiana con derivadas tempora
 Ver \url{http://www.damtp.cam.ac.uk/user/examples/3P7.pdf}
 
 \begin{frame}[fragile,allowframebreaks]
-Considere los campos espinoriales, que se transforma como
+Considere el campo espinorial, que se transforma como
 \begin{align}
 \label{eq:184qft}
   \xi_\alpha(x)\to\xi'_\alpha(x)={S_\alpha}^\beta\xi_\beta(\Lambda^{-1}x)\,, 
@@ -458,7 +458,7 @@ Si interpretamos  $\left( \xi_\beta \right)^{\dagger}$ como las componentes de u
 \begin{align}
  \xi_{\dot{\alpha}}^{\dagger}\equiv \left( \xi_\alpha \right)^{\dagger}
 \end{align}
-entonces tenemos que 
+entonces tenemos que~\eqref{eq:antispinorright}
 \begin{align}
 {\xi}_{\dot{\alpha}}^{\dagger}\to  {\xi'}_{\dot{\alpha}}^{\dagger}=& \xi_{\dot{\beta}}^{\dagger}{\left[{S^{\dagger}}\right]^{\dot{\beta}}}_{\dot{\alpha}}\,.
 \end{align}
@@ -594,26 +594,31 @@ Por consiguiente, un posible invariante de Lorentz con un sóla derivada podría
  \begin{align}
    {\psi}^{\dagger}_{\dot{\alpha}}(x)\overline{\sigma}^{\mu\dot{\alpha}\alpha}\partial_\mu\psi_{\alpha}(x)\,.
 \end{align}
-Para suavizar la notación, vamos a ignorar en adelante la dependencia en las coordenadas transformadas las cuales serán integradas en el cálculo de la Acción
+Para suavizar la notación, vamos a ignorar en adelante la dependencia en las coordenadas transformadas, las cuales serán integradas en el cálculo de la Acción
 \begin{align}
      {\psi}^{\dagger}_{\dot{\alpha}}\overline{\sigma}^{\mu\dot{\alpha}\alpha}\partial_\mu\psi_{\alpha}\to  {\psi'}^{\dagger}_{\dot{\alpha}}\overline{\sigma}^{\mu\dot{\alpha}\alpha}\partial'_\mu\psi'_{\alpha}
 &=
 \left( {\psi}^{\dagger}_{\dot{\beta}}  {S^{\dagger\dot{\beta}}}_{\dot{\alpha}} \right)\overline{\sigma}^{\mu\dot{\alpha\gamma}}{\left(\Lambda^{-1}\right)^\rho}_\mu\partial_\rho \left( {S_{\gamma}}^{\delta}\psi_\delta \right)\,.
  \end{align} 
- Como los parámtetros de la transformación, $\xi_i$ y $\theta_i$, en la ec.~\eqref{eq:SLet} están en el espacio interno de Lorentz, 
- ni $\Lambda$, ni el cuadrivector de matrices constantes $\overline{\sigma}^{\mu}$ cambian bajo una transofrmación de Lorentz asociada a cambios de las coordenadas externas
+ Como los parámetros de la transformación, $\xi_i$ y $\theta_i$, en la ec.~\eqref{eq:SLet} están en el espacio interno de Lorentz, 
+ ni $\Lambda$, ni el cuadrivector de matrices constantes $\overline{\sigma}^{\mu}$ cambian bajo una transformación de Lorentz asociada a cambios de las coordenadas externas
 \begin{align}
   {\psi}^{\dagger}\overline{\sigma}^\mu\partial_\mu\psi
   =    {\psi}^{\dagger}_{\dot{\alpha}}\overline{\sigma}^{\mu\dot{\alpha}\alpha}\partial_\mu\psi_{\alpha}\to  {\psi'}^{\dagger}_{\dot{\alpha}}\overline{\sigma}^{\mu\dot{\alpha}\alpha}\partial'_\mu\psi'_{\alpha}&=
 {\psi}^{\dagger}_{\dot{\beta}}{\left(\Lambda^{-1}\right)^\rho}_\mu {S^{\dagger\dot{\beta}}}_{\dot{\alpha}}\overline{\sigma}^{\mu\dot{\alpha\gamma}}{S_{\gamma}}^{\delta} \partial_\rho  \psi_\delta \nonumber\\
-&=\psi^\dagger {\left(\Lambda^{-1}\right)^\rho}_\mu \left(S^\dagger \overline{\sigma}^\mu S\right)\partial_\rho\psi\nonumber\\
-&=\psi^{\dagger}\overline{\sigma}^\rho\partial_\rho\psi\,,
+&=\psi^\dagger {\left(\Lambda^{-1}\right)^\rho}_\mu \left(S^\dagger \overline{\sigma}^\mu S\right)\partial_\rho\psi\,.
 \end{align}
-De este modo, el término permanece invariante si la siguiente condición se satisface
+El término permanece invariante si la siguiente condición se satisface
 \begin{align}
+  \label{eq:preidentidadlag}
  {\left(\Lambda^{-1}\right)^\rho}_\mu  S^{\dagger}\overline{\sigma}^\mu S=\overline{\sigma}^\rho\,,
 \end{align}
-o
+de modo que
+\begin{align}
+{\psi}^{\dagger}_{\dot{\alpha}}\overline{\sigma}^{\mu\dot{\alpha}\alpha}\partial_\mu\psi_{\alpha}\to  {\psi'}^{\dagger}_{\dot{\alpha}}\overline{\sigma}^{\mu\dot{\alpha}\alpha}\partial'_\mu\psi'_{\alpha}&=\psi^{\dagger}\overline{\sigma}^\rho\partial_\rho\psi\,.
+\end{align}
+
+Multiplicando matricialmente por $\Lambda$ a ambos lados de la ecuación~\eqref{eq:preidentidadlag}
 \begin{align}
 \label{eq:ltrincond}
 {\left(\Lambda\right)^\nu}_\rho{\left(\Lambda^{-1}\right)^\rho}_\mu   S^{\dagger}\overline{\sigma}^\mu S=&
@@ -639,7 +644,7 @@ Por consiguiente, el Lagrangiano más general posible para espinores de dos comp
 \supset&\frac{i}{2}{\psi}^{\dagger}\overline{\sigma}^\mu\partial_\mu\psi-m\,\psi\psi\,.
 \end{align}
 Los coeficientes $i/2$ y $m$ se han escogido para que las ecuaciones de Euler-Lagrange den lugar a las ecuaciones de movimiento apropiadas.
-Para garantizar que la Acción sea un real, debemos imponer que  $\mathcal{L}^{\dagger}=\mathcal{L}$. La forma más simple de Lograrlo es simplemente adicionar el hermítico conjugado de cada uno de los términos (h.c de las siglas en inglés). De modo que el Lagrangiano más general posible para espinores de dos componentes es
+Para garantizar que la Acción sea un número real, debemos imponer que  $\mathcal{L}^{\dagger}=\mathcal{L}$. La forma más simple de Lograrlo es simplemente adicionar el hermítico conjugado de cada uno de los términos (h.c de las siglas en inglés). De modo que el Lagrangiano más general posible para espinores de dos componentes es
 \begin{align*}
   \mathcal{L}=&\frac{i}{2}{\psi}^{\dagger}\overline{\sigma}^\mu\partial_\mu\psi-m\,\psi\psi+
 \text{h.c} \nonumber\\
@@ -648,13 +653,13 @@ Para garantizar que la Acción sea un real, debemos imponer que  $\mathcal{L}^{\
 \end{align*}
 Entonces
 \begin{align*}
-  \mathcal{L}=&\frac{i}{2}{\psi}^{\dagger}\overline{\sigma}^\mu\partial_\mu\psi-\frac{i}{2} \partial_\mu\psi^{\dagger}{\overline{\sigma}^\mu}^{\dagger}\psi-m \left( \psi\psi+\psi^{\dagger}\psi^{\dagger} \right)
+  \mathcal{L}=&\frac{i}{2}{\psi}^{\dagger}\overline{\sigma}^\mu\partial_\mu\psi-\frac{i}{2} \partial_\mu\psi^{\dagger}{\overline{\sigma}^\mu}^{\dagger}\psi-m \left( \psi\psi+\psi^{\dagger}\psi^{\dagger} \right),
 \end{align*}
-Ya que, de la hermiticidad de las matrices de Pauli
+y usando la hermiticidad de las matrices de Pauli
 \begin{align}
-{\overline{\sigma}^\mu}^{\dagger}=\overline{\sigma}^\mu\,.
+{\overline{\sigma}^\mu}^{\dagger}=\overline{\sigma}^\mu\,,
 \end{align}
-De modo que
+tenemos que
 \begin{align}
 \mathcal{L}=&\frac{i}{2}{\psi}^{\dagger}\overline{\sigma}^\mu\partial_\mu\psi-\frac{i}{2} \partial_\mu \left(  \psi^{\dagger} \overline{\sigma}^\mu\psi\right)
 +\frac{i}{2}{\psi}^{\dagger}\overline{\sigma}^\mu\partial_\mu\psi
@@ -915,14 +920,14 @@ Si $\psi$ no tiene ninguna carga continua se puede adicionar un término de masa
   \mathcal{L}=& i\psi^\dagger\overline{\sigma}^\mu\partial_\mu\psi -m \left( \psi\psi+\psi^{\dagger}\psi^{\dagger} \right)\,.
 \end{align}
 
-\subsection{Lorentz invariance of the Weyl Action}
+\subsection{Invarianza de  Lorentz de la Acción de  Weyl}
 
 \begin{frame}[fragile,allowframebreaks]
-To show that $S$ is in fact a Lorentz transformation, it is convinient to write this in covariant form. If we define
+  Para mostrar que $S$ es de hecho una transformación de Lorentz, es conveniente escribir ésta de forma covariante. Si definimos
 \begin{align}
   \sigma^{\mu\nu}=\frac{i}{4}\left[\sigma^\mu,\overline{\sigma}^\nu\right]\,.
 \end{align}
-We can obtain the proper boost and rotations generators:
+Podemos obtener los generadores de boost y rotaciones apropiados:
 \begin{align*}
  \boldsymbol{K}= \sigma^{0i}=&-i\frac{\sigma}{2}\nonumber\\
  L_{i}=\frac{1}{2}\epsilon_{ijk}\sigma^{jk}=&-4\frac{i}{8}\epsilon_{ijk}\left[\frac{\sigma^j}{2},\frac{\sigma^k}{2}  \right]\nonumber\\
@@ -935,7 +940,7 @@ We can obtain the proper boost and rotations generators:
 %   \mathcal{S}^{0i}=&\frac{i}{4}\left(\gamma^0\gamma^i-\gamma^i\gamma^0\right)=\frac{i}{2}\gamma^0\gamma^i= i B^i\nonumber\\
 %   \mathcal{S}^{i j}=&\frac{i}{4}\left(\gamma^i\gamma^j-\gamma^j\gamma^i\right)=\frac{i}{2}\gamma^i\gamma^j= i R^{i j}\,.
 % \end{align}
-It is worth notices that in fact $\sigma^{\mu\nu}$ satisfy the Lorentz algebra, and therefore are the generators of the Lorentz group elements:
+Vale la pena notar el hecho que $\sigma^{\mu\nu}$ satisface el álgebra de Lorentz y por consiguiente son los generadores del grupo de Lorentz:
 \begin{align}
   S=&\exp\left(-i \omega_{\mu\nu}\frac{\sigma^{\mu\nu}}{2}\right)\nonumber\\
   \approx&1-\frac{i}{2} \omega_{\mu\nu}{\sigma^{\mu\nu}}\,.
