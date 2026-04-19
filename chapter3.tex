@@ -260,6 +260,131 @@ Una realización física para la acción del campo escalar real con un potencia 
 
 
 
+\begin{frame}[fragile,allowframebreaks]
+densidad Lagrangiana de una onda propagándose a una velocidad $v$, eq.~\eqref{eq:econda3},
+\begin{align}
+  \mathcal{L}(\partial_{\mu} \phi)=  \frac{1}{2}{\partial_\mu\phi}\,{\partial^\mu\phi}
+  =& \frac{1}{2}g^{\mu\nu}{\partial_\mu\phi}\,{\partial_{\nu}\phi}\,,
+\end{align}
+\end{frame}
+se puede calcular a partir de
+\begin{align}
+  \frac{\partial\mathcal{L}}{\partial(\partial_{\sigma}\phi)}=&
+                                                                \frac{\partial}{\partial(\partial_{\sigma}\phi)} \left( \frac{1}{2}g^{\mu\nu}{\partial_\mu\phi}\,{\partial_{\nu}\phi} \right) \nonumber\\
+    =&\frac{1}{2} \left\{  g^{\mu\nu}\left[ \frac{\partial \left( \partial_{\mu}\phi \right)}{\partial \left( \partial_{\sigma}\phi \right)} \right]\partial_{\nu}\phi
+     +g^{\mu\nu} \partial_{\mu}\phi \left[ \frac{\partial \left( \partial_{\nu}\phi \right)}{\partial \left( \partial_{\sigma}\phi \right)} \right] \right\} \nonumber\\
+    =&\frac{1}{2}\left(  g^{\mu\nu}\delta^{\sigma}_{\mu}\partial_{\nu}\phi
+     +  g^{\mu\nu}\partial_{\mu}\phi \delta ^{\sigma}_{\nu}\right) \nonumber\\
+    =&\frac{1}{2}\left(  g^{\sigma\nu}\partial_{\nu}\phi
+       +  g^{\mu\sigma}\partial_{\mu}\phi \right) \nonumber\\
+           =&\frac{1}{2}\left(  \partial^{\sigma}\phi
+     + \partial^{\sigma}\phi \right) \nonumber\\
+=& \partial^{\sigma}\phi\,.
+\end{align}
+De modo que
+\begin{align}
+   \partial_{\sigma} \left[ \frac{\partial\mathcal{L}}{\partial(\partial_{\sigma}\phi)}\right]-\frac{\partial\mathcal{L}}{\partial\phi}=&0 \nonumber\\
+  \partial_{\sigma} \left[ \frac{\partial\mathcal{L}}{\partial(\partial_{\sigma}\phi)}\right]=&0 \nonumber\\
+       \partial_{\sigma}\partial^{\sigma}\phi=&0 \,.
+\end{align}
+\begin{frame}[fragile,allowframebreaks]
+Teniendo en cuenta que $\sigma$ es un índice modo, podemos escribir la ecuación de onda en la forma conocida:
+\begin{align}
+     \partial_{\mu}\partial^{\mu}\phi=&0 \nonumber\\
+     \frac{1}{v^2}\frac{\partial^2\phi}{\partial t^2}-\nabla^2\phi=&0\,.
+\end{align}
+\end{frame}
+
+\textbf{Ejercicio:} Demuestre que la ecuación de Klein-Gordon en \eqref{eq:KG} proviene de una densidad Lagragiana del tipo
+\begin{align}
+  \mathcal{L}(\phi,\partial_{\mu} \phi)=  \frac{1}{2}{\partial_\mu\phi}\,{\partial^\mu\phi}-V(\phi)\,,
+\end{align}
+donde
+\begin{align}
+  V(\phi)=\frac{1}{2}m^2 \phi^2\,.
+\end{align}
+
+En el ejercicio anterior el gráfico del \emph{potencial} escalar $V(\phi)$ corresponde a la parábola mostrada en la figura~\ref{fig:x2ini}
+
+
+\begin{figure} %noinstiki
+  \centering %noinstiki
+  \includegraphics[scale=0.8]{vphi2roll}
+  \caption{$V(\phi)=\frac{1}{2}m^2 \phi^2$ con $m^2\gt 0$} %noinstiki
+  \label{fig:x2ini} %noinstiki
+\end{figure} %n
+
+
+
+La interpretación tomada de la teoría cuántica de campos completa, nos permite visualizar la excitación del campo como una partícula rodando a través de las paredes del potencial como se muestra en la figura. La masa del campo corresponde a las oscilaciones alrededor del mínimo que suben las paredes y que por consiguiente \emph{cuestan energía}. Esta interpretación la usaremos en el Capítulo~\ref{rupt-espont-de} para entender el mecanismo de Higgs.
+
+El potencial escalar se puede modelar para que el campo escalar $\phi$ pueda interpretarse por ejemplo como el inflatón en el Universo primitivo. Mientras la partícula rueda hacía el mínimo el Universo sufre una expansión exponencial y cuando termina oscilando alrededor del mismo el universo sufre una fase de \emph{recalentamiento} mediante la cual la energía del inflaton genera todas las partículas y antipartículas del modelo estándar en cantidades de $10^{90}$. La radiación cósmica de fondo esta compuesta de esos $10^{90}$ fotones de primigenios y las anisotropías observadas en ella provienen de las fluctuaciones cuánticas del inflaton magnificadas por la expansión exponencial.
+
+Para enfatizar al interpretación de $m$ como la masa del campo, consideremos en detalle la deducción de la ecuación de Klein-Gordon
+
+
+\section{Ecuación de Klein-Gordon}
+
+
+Si modificamos el Lagrangiano en ec.~\eqref{eq:call2}, para incluir un
+término adicional ($v=c=1$)
+\begin{equation}
+  \label{eq:14}
+  \mathcal{L}(\partial\phi/\partial t,\partial\phi/\partial z)=\frac{1}{2}
+\left[
+  \left(\frac{\partial\phi}{\partial t}\right)^2-\left(\frac{\partial\phi}{\partial z}\right)^2-m^2\phi^2
+\right].
+\end{equation}
+entonces, la ec.~\eqref{eq:12} es solución a la ecuación resultante de
+aplicar las ecuaciones de Euler-Lagrange:
+\begin{align}
+\label{eq:150}
+      \frac{\partial^2\phi}{\partial t^2}-\frac{\partial^2\phi}{\partial z^2}+m^2\phi=&0\nonumber\\
+      \left(\frac{\partial^2}{\partial t^2}-\frac{\partial^2}{\partial z^2}+m^2
+      \right)\phi=&0,
+\end{align}
+
+Generalizando a 3 dimensiones tenemos el Lagrangiano de Klein-Gordon
+\begin{align}
+  \label{eq:15}
+  \mathcal{L}=&\frac12 \partial_{\mu}\phi\partial^{\mu}\phi-\frac12 m^2\phi^{2}\nonumber\\
+=&\frac{1}{2}
+  \left(
+\frac{\partial\phi}{\partial t}
+  \right)^2-\tfrac{1}{2}\boldsymbol{\nabla}\phi\cdot\boldsymbol{\nabla}\phi-\tfrac{1}{2}m^2\phi^2,
+\end{align}
+que dan lugar a la ecuación de Klein-Gordon
+
+\begin{equation}
+\label{eq:152}
+  \left(
+\frac{\partial^2}{\partial t^2}-\nabla^2+m^2
+  \right)\phi=0.
+\end{equation}
+
+Una forma de derivar la ecuación de Schrödinger es usar escribir la ecuación de conservación de la energía mecánica en términos de operadores aplicados a la función de onda
+\begin{align}
+  \widehat{H}\psi=\left( \frac{1}{2m}\widehat{\mathbf{p}}^{2}+v \right)\psi\,,
+\end{align}
+
+De esta manera, la versión mecánico cuántica de la conservación de momentum-energía de la relatividad especial se podría obtener de
+\begin{align}
+  \widehat{p}_{\mu}\widehat{p}\;^{\mu}\psi=&\left( \widehat{H}^{2}-\sum_{i}\widehat{p}\;^i\widehat{p}\;^i \right)\psi \nonumber\\
+=&\left( -\partial_0^2+\nabla^2 \right)\psi \nonumber\\
+=& m^2 \psi\,,
+\end{align}
+de donde obtenemos precisamente la ecuación~\eqref{eq:152}
+\begin{align}
+  \left(
+\frac{\partial^2}{\partial t^2}-\nabla^2+m^2
+  \right)\psi=0.
+\end{align}
+Aunque la interpretación en mecánica cuántica de la ecuación de momentum-energía requiere promover también el campo a un operador, una vez se establece la teoría cuántica de campos correspondiente, el coeficiente $m$ se puede interpretar como la masa del campo $\psi$.
+
+
+
+
+
 \section{Campos escalares complejos}
 Entre más simetrías posea una Acción menos arbitraría es. Podemos
 ilustrar esta afirmación si consideramos una Acción para un campo escalar
