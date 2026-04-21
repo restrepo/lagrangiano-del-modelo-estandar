@@ -533,6 +533,7 @@ Para un campo escalar, un término en la densidad Lagrangiana con sólo una deri
 no deja a la Acción invariante. Un término de ese tipo con una derivada temporal de primer orden se requiere para tener una probabilidad bien definida en mecánica cuántica.
 Para tener una formulación de la mecánica cuántica necesitamos garantizar la siguiente ecuación general
 \begin{align}
+  \label{eq:generalschro}
   i\frac{\partial}{\partial t}\psi=\hat{H} \psi\,,  
 \end{align}
 con algún operador Hamiltoniano relativista  $\widehat{H}$ a determinar luego. Si dicha ecuación corresponde a una ecuación de Euler-Lagrange para el campo $\psi$,
@@ -815,91 +816,6 @@ En tal caso, el término con coeficiente $m$ debe se ser cero y la densidad Lagr
 \end{frame}
 
 
-\subsection{Corriente conservada y Lagrangiano de Weyl}
-\label{sec:corriente-conservada}
-\begin{frame}[fragile,allowframebreaks]
-  Podemos calcular la corriente conservada asociada al cambio de fase
-  usando el resultado del Teorema 1 de Noether para simetrías internas  dado por la ec.~\eqref{eq:t1gen}. Para la transformación de cambio de fase~\eqref{eq:phasechange} con $\phi_1\to \psi$ y $\phi_2\to \psi^{\dagger}$, tenemos de ec.~\eqref{eq:ai}
-  \begin{align}
-    a_{1}=&-i\psi,,&      a_{2}=&i\psi^{\dagger}\,,
-  \end{align}
-\begin{align}
-   j^\mu&=\left[\frac{\partial\mathcal{L}}{\partial\left(\partial_\mu\psi\right)}\right]a_1+a_2\left[\frac{\partial\mathcal{L}}{\partial\left(\partial_\mu\psi^\dagger\right)}\right]\nonumber\\
-   &= i\psi^\dagger \overline{\sigma}^\mu(-i\psi)\nonumber\\
-   &=\psi^\dagger \overline{\sigma}^\mu\psi\,.
-\end{align}
-
-La  densidad de carga conservada y la corriente son respectivamente
-\begin{align}
-  j^0&= \psi^\dagger \sigma^0\psi=\psi^{\dagger}\psi\,,&
-  \boldsymbol{j}&=-\psi^{\dagger}\boldsymbol{\sigma} \psi\,.
-\end{align}
-%\begin{frame}[fragile,allowframebreaks]
-La cantidad conservada es
-\begin{equation}
-  \label{eq:57}
-P=  \int_V \psi^*\psi \,\operatorname{d}^3x=1,,
-\end{equation}
-%\end{frame}
-la cual podemos interpretar que corresponde a la probabilidad de la función de onda $\psi$. Por consiguiente, la ecuación de Euler-Lagrange se puede interpretar directamente como una ecuación de una función de onda de la mecánica cuántica. 
-\end{frame}
-\subsection{Tensor momento-energía}
-\label{sec:tens-momento-energi}
-\begin{frame}[fragile,allowframebreaks]
-
-
-Para el Lagrangiano
-\begin{align*}
-    \mathcal{L}=i \psi^{\dagger} \overline{\sigma}^{\mu} \partial_{\mu} \psi\,,
-\end{align*}
-calcular $T^{\mu}_{\nu}$ y a partir de  las densidades of carga conservadas demostrar que
-\begin{align*}
-  \langle\hat{H}_{W}\rangle=&\int_{V} \operatorname{d}^{3} x \psi^{\dagger} \hat{H}_{W} \psi \\
- \langle\hat{\boldsymbol{p}}\rangle=&\int_{V} \operatorname{d}^{3} x \psi^{\dagger}\hat{\boldsymbol{p}} \psi\,. 
-\end{align*}
-donde $\hat{H}_{W}=-\boldsymbol{\sigma} \cdot \hat{\boldsymbol{p}}$ y $\hat{\boldsymbol{p}}=-i \boldsymbol{\nabla}$
-
-
-  Usando $\sigma^{0}=\boldsymbol{1}$,
-\begin{align}
-  T^0_0&=\frac{\partial\mathcal{L}}{\partial\left(\partial_0\psi\right)}\partial_0\psi+\partial_0\psi^\dagger\frac{\partial\mathcal{L}}{\partial\left(\partial_0\psi^\dagger\right)}-\mathcal{L}\nonumber\\
-  &=i\psi^\dagger\partial_0\psi-\mathcal{L}\nonumber\\
-  &=-i\psi^\dagger \overline{\sigma}^i\partial_i\psi\nonumber\\
-  &=-\psi^\dagger \sigma^i \left( -i \partial_i\right)\psi\nonumber\\
-  &=-\psi^\dagger(\boldsymbol{\sigma}\cdot\widehat{\boldsymbol{p}})\psi,\nonumber\\
-  \label{eq:118qft}
-  &=\psi^\dagger\hat{H}_{W} \psi,
-\end{align}
-donde hemos definido el Hamiltoniano de Weyl como
-\begin{equation}
-  \label{eq:denshal}
-  \hat{H}_W= -\boldsymbol{\sigma}\cdot\widehat{\boldsymbol{p}}
-\end{equation}
-Que corresponde a la proyección del espín en la dirección de movimiento. El signo menos justica la definción de $\psi_{\alpha}$ como un espinor de Weyl izquierdo. Como la ecuación de Scröndinger es de validez general, tenemos entonces que
-
-\begin{equation}
-  i\frac{\partial}{\partial t}\psi=\hat{H}_W \psi
-\end{equation}
-y, como en mecánica clásica usual
-\begin{equation}
-  \label{eq:99qft}
-  \langle\hat{H}_W\rangle=\int \psi^\dagger\hat{H}_W \psi\,d^3x.
-\end{equation}
-Note que esta relación no es posible para el Hamiltoniado de Weyl con término de masa.
-
-Además
-\begin{align}
-    T^0_i&=\frac{\partial\mathcal{L}}{\partial\left(\partial_0\psi\right)}\partial_i\psi+\partial_i\psi^\dagger\frac{\partial\mathcal{L}}{\partial\left(\partial_0\psi^\dagger\right)}\nonumber\\
-    &=i\psi^\dagger\partial_i\psi\nonumber\\
-    &=-\psi^\dagger(-i\partial_i)\psi
-\end{align}
-
-de modo que
-\begin{align}
-\langle\hat{\boldsymbol{p}}\rangle=\int\psi^\dagger\hat{\boldsymbol{p}}\psi\,d^3 x
-\end{align}
-\end{frame}
-
 \subsection{Ecuaciones de Euler-Lagrange}
 \label{sec:ecuaciones-de-euler}
 
@@ -910,7 +826,7 @@ Queremos que el Lagrangiano de lugar a la ecuación de Scröndinger de validez g
   i\frac{\partial}{\partial t}\psi=\hat{H} \psi
 \end{equation}
 \end{frame}
-con el Hamiltoniano dado en la ec.~(\ref{eq:99qft}), que corresponde a un Lagrangiano de sólo derivadas de primer orden y covariante, en lugar del Hamiltoniano para el caso no relativista. 
+con el Hamiltoniano de sólo derivadas de primer orden y covariante, en lugar del Hamiltoniano para el caso no relativista. 
 
 \begin{frame}[fragile,allowframebreaks]
 De hecho, aplicando las ecuaciones de Euler-Lagrange para el campo $\psi^\dagger$ al Lagrangiano en ec.~(\ref{eq:100qft}) ,tenemos
@@ -1044,6 +960,93 @@ Si $\psi$ no tiene ninguna carga continua se puede adicionar un término de masa
 \begin{align}
   \mathcal{L}=& i\psi^\dagger\overline{\sigma}^\mu\partial_\mu\psi -m \left( \psi\psi+\psi^{\dagger}\psi^{\dagger} \right)\,.
 \end{align}
+
+
+\subsection{Corriente conservada y Lagrangiano de Weyl}
+\label{sec:corriente-conservada}
+\begin{frame}[fragile,allowframebreaks]
+  Podemos calcular la corriente conservada asociada al cambio de fase
+  usando el resultado del Teorema 1 de Noether para simetrías internas  dado por la ec.~\eqref{eq:t1gen}. Para la transformación de cambio de fase~\eqref{eq:phasechange} con $\phi_1\to \psi$ y $\phi_2\to \psi^{\dagger}$, tenemos de ec.~\eqref{eq:ai}
+  \begin{align}
+    a_{1}=&-i\psi,,&      a_{2}=&i\psi^{\dagger}\,,
+  \end{align}
+\begin{align}
+   j^\mu&=\left[\frac{\partial\mathcal{L}}{\partial\left(\partial_\mu\psi\right)}\right]a_1+a_2\left[\frac{\partial\mathcal{L}}{\partial\left(\partial_\mu\psi^\dagger\right)}\right]\nonumber\\
+   &= i\psi^\dagger \overline{\sigma}^\mu(-i\psi)\nonumber\\
+   &=\psi^\dagger \overline{\sigma}^\mu\psi\,.
+\end{align}
+
+La  densidad de carga conservada y la corriente son respectivamente
+\begin{align}
+  j^0&= \psi^\dagger \sigma^0\psi=\psi^{\dagger}\psi\,,&
+  \boldsymbol{j}&=-\psi^{\dagger}\boldsymbol{\sigma} \psi\,.
+\end{align}
+%\begin{frame}[fragile,allowframebreaks]
+La cantidad conservada es
+\begin{equation}
+  \label{eq:57}
+P=  \int_V \psi^*\psi \,\operatorname{d}^3x=1,,
+\end{equation}
+%\end{frame}
+la cual podemos interpretar que corresponde a la probabilidad de la función de onda $\psi$. Por consiguiente, la ecuación de Euler-Lagrange se puede interpretar directamente como una ecuación de una función de onda de la mecánica cuántica. 
+\end{frame}
+\subsection{Tensor momento-energía}
+\label{sec:tens-momento-energi}
+\begin{frame}[fragile,allowframebreaks]
+
+
+Para el Lagrangiano
+\begin{align*}
+    \mathcal{L}=i \psi^{\dagger} \overline{\sigma}^{\mu} \partial_{\mu} \psi\,,
+\end{align*}
+calcular $T^{\mu}_{\nu}$ y a partir de  las densidades of carga conservadas demostrar que
+\begin{align*}
+  \langle\hat{H}_{W}\rangle=&\int_{V} \operatorname{d}^{3} x \psi^{\dagger} \hat{H}_{W} \psi \\
+ \langle\hat{\boldsymbol{p}}\rangle=&\int_{V} \operatorname{d}^{3} x \psi^{\dagger}\hat{\boldsymbol{p}} \psi\,. 
+\end{align*}
+donde $\hat{H}_{W}=-\boldsymbol{\sigma} \cdot \hat{\boldsymbol{p}}$ y $\hat{\boldsymbol{p}}=-i \boldsymbol{\nabla}$
+
+
+  Usando $\sigma^{0}=\boldsymbol{1}$,
+\begin{align}
+  T^0_0&=\frac{\partial\mathcal{L}}{\partial\left(\partial_0\psi\right)}\partial_0\psi+\partial_0\psi^\dagger\frac{\partial\mathcal{L}}{\partial\left(\partial_0\psi^\dagger\right)}-\mathcal{L}\nonumber\\
+  &=i\psi^\dagger\partial_0\psi-\mathcal{L}\nonumber\\
+  &=-i\psi^\dagger \overline{\sigma}^i\partial_i\psi\nonumber\\
+  &=-\psi^\dagger \sigma^i \left( -i \partial_i\right)\psi\nonumber\\
+  &=-\psi^\dagger(\boldsymbol{\sigma}\cdot\widehat{\boldsymbol{p}})\psi,\nonumber\\
+  \label{eq:118qft}
+  &=\psi^\dagger\hat{H}_{W} \psi,
+\end{align}
+donde hemos definido el Hamiltoniano de Weyl como
+\begin{equation}
+  \label{eq:denshal}
+  \hat{H}_W= -\boldsymbol{\sigma}\cdot\widehat{\boldsymbol{p}}
+\end{equation}
+Que corresponde a la proyección del espín en la dirección de movimiento. El signo menos justica la definción de $\psi_{\alpha}$ como un espinor de Weyl izquierdo. Como la ecuación de Scröndinger es de validez general, tenemos entonces que
+
+\begin{equation}
+  i\frac{\partial}{\partial t}\psi=\hat{H}_W \psi
+\end{equation}
+y, como en mecánica clásica usual
+\begin{equation}
+  \label{eq:99qft}
+  \langle\hat{H}_W\rangle=\int \psi^\dagger\hat{H}_W \psi\,d^3x.
+\end{equation}
+Note que esta relación no es posible para el Hamiltoniado de Weyl con término de masa.
+
+Además
+\begin{align}
+    T^0_i&=\frac{\partial\mathcal{L}}{\partial\left(\partial_0\psi\right)}\partial_i\psi+\partial_i\psi^\dagger\frac{\partial\mathcal{L}}{\partial\left(\partial_0\psi^\dagger\right)}\nonumber\\
+    &=i\psi^\dagger\partial_i\psi\nonumber\\
+    &=-\psi^\dagger(-i\partial_i)\psi
+\end{align}
+
+de modo que
+\begin{align}
+\langle\hat{\boldsymbol{p}}\rangle=\int\psi^\dagger\hat{\boldsymbol{p}}\psi\,d^3 x
+\end{align}
+\end{frame}
+
 
 \subsection{Invarianza de  Lorentz de la Acción de  Weyl}
 
