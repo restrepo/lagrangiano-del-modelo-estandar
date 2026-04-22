@@ -816,6 +816,98 @@ En tal caso, el término con coeficiente $m$ debe se ser cero y la densidad Lagr
 \end{frame}
 
 
+
+\subsection{Corriente conservada y Lagrangiano de Weyl}
+\label{sec:corriente-conservada}
+\begin{frame}[fragile,allowframebreaks]
+  Podemos calcular la corriente conservada asociada al cambio de fase
+  usando el resultado del Teorema 1 de Noether para simetrías internas  dado por la ec.~\eqref{eq:t1gen}. Para la transformación de cambio de fase~\eqref{eq:phasechange} con $\phi_1\to \psi$ y $\phi_2\to \psi^{\dagger}$, tenemos de ec.~\eqref{eq:ai}
+  \begin{align}
+    a_{1}=&-i\psi,,&      a_{2}=&i\psi^{\dagger}\,,
+  \end{align}
+\begin{align}
+   j^\mu&=\left[\frac{\partial\mathcal{L}}{\partial\left(\partial_\mu\psi\right)}\right]a_1+a_2\left[\frac{\partial\mathcal{L}}{\partial\left(\partial_\mu\psi^\dagger\right)}\right]\nonumber\\
+   &= i\psi^\dagger \overline{\sigma}^\mu(-i\psi)\nonumber\\
+   &=\psi^\dagger \overline{\sigma}^\mu\psi\,.
+\end{align}
+
+La  densidad de carga conservada y la corriente son respectivamente
+\begin{align}
+  j^0&= \psi^\dagger \sigma^0\psi=\psi^{\dagger}\psi\,,&
+  \boldsymbol{j}&=-\psi^{\dagger}\boldsymbol{\sigma} \psi\,.
+\end{align}
+%\begin{frame}[fragile,allowframebreaks]
+La cantidad conservada es
+\begin{equation}
+  \label{eq:57}
+P=  \int_V \psi^*\psi \,\operatorname{d}^3x=1,,
+\end{equation}
+%\end{frame}
+la cual podemos interpretar que corresponde a la probabilidad de la función de onda $\psi$. Por consiguiente, la ecuación de Euler-Lagrange se puede interpretar directamente como una ecuación de una función de onda de la mecánica cuántica.
+
+
+Ésta interpretación tiene consecuencias importantes porque implica que la teoría cuántica subyacente pues implica que la probabilidad se conserva de forma no local. 
+\end{frame}
+
+\subsection{Tensor momento-energía}
+\label{sec:tens-momento-energi}
+\begin{frame}[fragile,allowframebreaks]
+
+
+Para el Lagrangiano
+\begin{align*}
+    \mathcal{L}=i \psi^{\dagger} \overline{\sigma}^{\mu} \partial_{\mu} \psi\,,
+\end{align*}
+calcular $T^{\mu}_{\nu}$ y a partir de  las densidades of carga conservadas demostrar que
+\begin{align*}
+  \langle\hat{H}_{W}\rangle=&\int_{V} \operatorname{d}^{3} x \psi^{\dagger} \hat{H}_{W} \psi \\
+ \langle\hat{\boldsymbol{p}}\rangle=&\int_{V} \operatorname{d}^{3} x \psi^{\dagger}\hat{\boldsymbol{p}} \psi\,. 
+\end{align*}
+donde $\hat{H}_{W}=-\boldsymbol{\sigma} \cdot \hat{\boldsymbol{p}}$ y $\hat{\boldsymbol{p}}=-i \boldsymbol{\nabla}$
+
+
+  Usando $\sigma^{0}=\boldsymbol{1}$,
+\begin{align}
+  T^0_0&=\frac{\partial\mathcal{L}}{\partial\left(\partial_0\psi\right)}\partial_0\psi+\partial_0\psi^\dagger\frac{\partial\mathcal{L}}{\partial\left(\partial_0\psi^\dagger\right)}-\mathcal{L}\nonumber\\
+  &=i\psi^\dagger\partial_0\psi-\mathcal{L}\nonumber\\
+  &=-i\psi^\dagger \overline{\sigma}^i\partial_i\psi\nonumber\\
+  &=-\psi^\dagger \sigma^i \left( -i \partial_i\right)\psi\nonumber\\
+  &=-\psi^\dagger(\boldsymbol{\sigma}\cdot\widehat{\boldsymbol{p}})\psi,\nonumber\\
+  \label{eq:118qft}
+  &=\psi^\dagger\hat{H}_{W} \psi,
+\end{align}
+donde hemos definido el Hamiltoniano de Weyl como
+\begin{equation}
+  \label{eq:denshal}
+  \hat{H}_W= -\boldsymbol{\sigma}\cdot\widehat{\boldsymbol{p}}
+\end{equation}
+Que corresponde a la proyección del espín en la dirección de movimiento. El signo menos justica la definción de $\psi_{\alpha}$ como un espinor de Weyl izquierdo. Como la ecuación de Scröndinger es de validez general, tenemos entonces que
+
+\begin{equation}
+  i\frac{\partial}{\partial t}\psi=\hat{H}_W \psi
+\end{equation}
+y, como en mecánica clásica usual
+\begin{equation}
+  \label{eq:99qft}
+  \langle\hat{H}_W\rangle=\int \psi^\dagger\hat{H}_W \psi\,d^3x.
+\end{equation}
+Note que esta relación no es posible para el Hamiltoniado de Weyl con término de masa.
+
+Además
+\begin{align}
+    T^0_i&=\frac{\partial\mathcal{L}}{\partial\left(\partial_0\psi\right)}\partial_i\psi+\partial_i\psi^\dagger\frac{\partial\mathcal{L}}{\partial\left(\partial_0\psi^\dagger\right)}\nonumber\\
+    &=i\psi^\dagger\partial_i\psi\nonumber\\
+    &=-\psi^\dagger(-i\partial_i)\psi
+\end{align}
+
+de modo que
+\begin{align}
+\langle\hat{\boldsymbol{p}}\rangle=\int\psi^\dagger\hat{\boldsymbol{p}}\psi\,d^3 x
+\end{align}
+\end{frame}
+
+Con estas definciones del operador $\hat{H}_W$ y $\hat{\boldsymbol{p}}$, podremos interpretar más facilmente la ecuaciones de Euler-Lagrange a continuación.
+
 \subsection{Ecuaciones de Euler-Lagrange}
 \label{sec:ecuaciones-de-euler}
 
@@ -846,16 +938,16 @@ Expandiendo
 Como $\sigma^0=\boldsymbol{1}$,
 \begin{equation}
   \label{eq:wspinorL}
-    i\frac{\partial}{\partial t}\psi=-\boldsymbol\sigma\cdot\boldsymbol{p}\psi.
+    i\frac{\partial}{\partial t}\psi=-\boldsymbol\sigma\cdot\hat{\boldsymbol{p}}\psi.
 \end{equation}
 De la ec.~(\ref{eq:denshal})
 \begin{equation}
   \label{eq:186qft}
-  \hat{H}_{W}= -\boldsymbol\sigma\cdot\boldsymbol{p}.
+  \hat{H}_{W}= -\boldsymbol\sigma\cdot\hat{\boldsymbol{p}}.
 \end{equation}
 \end{frame}
-Si identificamos a $\boldsymbol{\sigma}/2$, como el operador de espín, el signo menos del Hamiltoniano quiere decir que el espín del campo $\psi$ se proyecta en la dirección opuesta a su momentum. 
-De esta forma podemos interpretar el espinor de Weyl de dos components $\psi$ como un espinor de Weyl izquierdo
+Si identificamos a $\boldsymbol{\sigma}/2$, como el operador de espín, el signo menos del Hamiltoniano quiere decir que el espín del campo $\psi$ se proyecta en la dirección opuesta a su momentum, lo que define una  \emph{helicidad}izquierda. 
+De esta forma podemos interpretar el espinor de Weyl de dos components $\psi$ como un espinor de Weyl de \emph{quiralidad} izquierda, donde la quiralidad izquierda [derecha] se refiere a la propidedad del espinor de Weyl de pertencer a la representación $\left(\frac{1}{2},0\right)$ $\left[\left(\frac{1}{2},0\right)\right]$ del grupo de Lorentz. Note que la helicidad y la quiralidad coinciden sólo en el caso de masa $m$ (o en general para campos relativistas donde masa es despreciable en comparación con la energía del campo).   
 
 
 A este punto, podemos comprobar la consistencia relacionada con que las matrices $\overline{\sigma}^\mu$ corresponden a las matrices de Pauli más la identidad $2\times2$.
@@ -961,91 +1053,6 @@ Si $\psi$ no tiene ninguna carga continua se puede adicionar un término de masa
   \mathcal{L}=& i\psi^\dagger\overline{\sigma}^\mu\partial_\mu\psi -m \left( \psi\psi+\psi^{\dagger}\psi^{\dagger} \right)\,.
 \end{align}
 
-
-\subsection{Corriente conservada y Lagrangiano de Weyl}
-\label{sec:corriente-conservada}
-\begin{frame}[fragile,allowframebreaks]
-  Podemos calcular la corriente conservada asociada al cambio de fase
-  usando el resultado del Teorema 1 de Noether para simetrías internas  dado por la ec.~\eqref{eq:t1gen}. Para la transformación de cambio de fase~\eqref{eq:phasechange} con $\phi_1\to \psi$ y $\phi_2\to \psi^{\dagger}$, tenemos de ec.~\eqref{eq:ai}
-  \begin{align}
-    a_{1}=&-i\psi,,&      a_{2}=&i\psi^{\dagger}\,,
-  \end{align}
-\begin{align}
-   j^\mu&=\left[\frac{\partial\mathcal{L}}{\partial\left(\partial_\mu\psi\right)}\right]a_1+a_2\left[\frac{\partial\mathcal{L}}{\partial\left(\partial_\mu\psi^\dagger\right)}\right]\nonumber\\
-   &= i\psi^\dagger \overline{\sigma}^\mu(-i\psi)\nonumber\\
-   &=\psi^\dagger \overline{\sigma}^\mu\psi\,.
-\end{align}
-
-La  densidad de carga conservada y la corriente son respectivamente
-\begin{align}
-  j^0&= \psi^\dagger \sigma^0\psi=\psi^{\dagger}\psi\,,&
-  \boldsymbol{j}&=-\psi^{\dagger}\boldsymbol{\sigma} \psi\,.
-\end{align}
-%\begin{frame}[fragile,allowframebreaks]
-La cantidad conservada es
-\begin{equation}
-  \label{eq:57}
-P=  \int_V \psi^*\psi \,\operatorname{d}^3x=1,,
-\end{equation}
-%\end{frame}
-la cual podemos interpretar que corresponde a la probabilidad de la función de onda $\psi$. Por consiguiente, la ecuación de Euler-Lagrange se puede interpretar directamente como una ecuación de una función de onda de la mecánica cuántica. 
-\end{frame}
-\subsection{Tensor momento-energía}
-\label{sec:tens-momento-energi}
-\begin{frame}[fragile,allowframebreaks]
-
-
-Para el Lagrangiano
-\begin{align*}
-    \mathcal{L}=i \psi^{\dagger} \overline{\sigma}^{\mu} \partial_{\mu} \psi\,,
-\end{align*}
-calcular $T^{\mu}_{\nu}$ y a partir de  las densidades of carga conservadas demostrar que
-\begin{align*}
-  \langle\hat{H}_{W}\rangle=&\int_{V} \operatorname{d}^{3} x \psi^{\dagger} \hat{H}_{W} \psi \\
- \langle\hat{\boldsymbol{p}}\rangle=&\int_{V} \operatorname{d}^{3} x \psi^{\dagger}\hat{\boldsymbol{p}} \psi\,. 
-\end{align*}
-donde $\hat{H}_{W}=-\boldsymbol{\sigma} \cdot \hat{\boldsymbol{p}}$ y $\hat{\boldsymbol{p}}=-i \boldsymbol{\nabla}$
-
-
-  Usando $\sigma^{0}=\boldsymbol{1}$,
-\begin{align}
-  T^0_0&=\frac{\partial\mathcal{L}}{\partial\left(\partial_0\psi\right)}\partial_0\psi+\partial_0\psi^\dagger\frac{\partial\mathcal{L}}{\partial\left(\partial_0\psi^\dagger\right)}-\mathcal{L}\nonumber\\
-  &=i\psi^\dagger\partial_0\psi-\mathcal{L}\nonumber\\
-  &=-i\psi^\dagger \overline{\sigma}^i\partial_i\psi\nonumber\\
-  &=-\psi^\dagger \sigma^i \left( -i \partial_i\right)\psi\nonumber\\
-  &=-\psi^\dagger(\boldsymbol{\sigma}\cdot\widehat{\boldsymbol{p}})\psi,\nonumber\\
-  \label{eq:118qft}
-  &=\psi^\dagger\hat{H}_{W} \psi,
-\end{align}
-donde hemos definido el Hamiltoniano de Weyl como
-\begin{equation}
-  \label{eq:denshal}
-  \hat{H}_W= -\boldsymbol{\sigma}\cdot\widehat{\boldsymbol{p}}
-\end{equation}
-Que corresponde a la proyección del espín en la dirección de movimiento. El signo menos justica la definción de $\psi_{\alpha}$ como un espinor de Weyl izquierdo. Como la ecuación de Scröndinger es de validez general, tenemos entonces que
-
-\begin{equation}
-  i\frac{\partial}{\partial t}\psi=\hat{H}_W \psi
-\end{equation}
-y, como en mecánica clásica usual
-\begin{equation}
-  \label{eq:99qft}
-  \langle\hat{H}_W\rangle=\int \psi^\dagger\hat{H}_W \psi\,d^3x.
-\end{equation}
-Note que esta relación no es posible para el Hamiltoniado de Weyl con término de masa.
-
-Además
-\begin{align}
-    T^0_i&=\frac{\partial\mathcal{L}}{\partial\left(\partial_0\psi\right)}\partial_i\psi+\partial_i\psi^\dagger\frac{\partial\mathcal{L}}{\partial\left(\partial_0\psi^\dagger\right)}\nonumber\\
-    &=i\psi^\dagger\partial_i\psi\nonumber\\
-    &=-\psi^\dagger(-i\partial_i)\psi
-\end{align}
-
-de modo que
-\begin{align}
-\langle\hat{\boldsymbol{p}}\rangle=\int\psi^\dagger\hat{\boldsymbol{p}}\psi\,d^3 x
-\end{align}
-\end{frame}
 
 
 \subsection{Invarianza de  Lorentz de la Acción de  Weyl}
