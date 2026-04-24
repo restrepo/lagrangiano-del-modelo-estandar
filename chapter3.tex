@@ -290,7 +290,10 @@ De modo que
 \begin{frame}[fragile,allowframebreaks]
 Teniendo en cuenta que $\sigma$ es un índice modo, podemos escribir la ecuación de onda en la forma conocida:
 \begin{align}
-     \partial_{\mu}\partial^{\mu}\phi=&0 \nonumber\\
+  \label{eq:onda}
+  \partial_{\mu}\partial^{\mu}\phi=&0 \nonumber\\
+  \partial_{0}\partial^{0}\phi + \sum_i\partial_{i}\partial^{i}\phi  =&0 \nonumber\\
+        \partial_{0}\partial^{0}\phi - \sum_i\partial_{i}\partial_{i}\phi  =&0 \nonumber\\
      \frac{1}{v^2}\frac{\partial^2\phi}{\partial t^2}-\nabla^2\phi=&0\,.
 \end{align}
 \end{frame}
@@ -354,6 +357,11 @@ Generalizando a 3 dimensiones tenemos el Lagrangiano de Klein-Gordon
   \right)^2-\tfrac{1}{2}\boldsymbol{\nabla}\phi\cdot\boldsymbol{\nabla}\phi-\tfrac{1}{2}m^2\phi^2,
 \end{align}
 que dan lugar a la ecuación de Klein-Gordon
+\begin{align}
+   \partial_{\mu} \left[ \frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi)}\right]-\frac{\partial\mathcal{L}}{\partial\phi}=&0 \nonumber\\
+       \partial_{\mu}\partial^{\mu}\phi+m^2\phi=&0 \,,
+\end{align}
+y cómo en la ecuación~\eqref{eq:onda}
 
 \begin{equation}
 \label{eq:152}
@@ -362,24 +370,6 @@ que dan lugar a la ecuación de Klein-Gordon
   \right)\phi=0.
 \end{equation}
 
-Una forma de derivar la ecuación de Schrödinger es usar escribir la ecuación de conservación de la energía mecánica en términos de operadores aplicados a la función de onda
-\begin{align}
-  \widehat{H}\psi=\left( \frac{1}{2m}\widehat{\mathbf{p}}^{2}+v \right)\psi\,,
-\end{align}
-
-De esta manera, la versión mecánico cuántica de la conservación de momentum-energía de la relatividad especial se podría obtener de
-\begin{align}
-  \widehat{p}_{\mu}\widehat{p}\;^{\mu}\psi=&\left( \widehat{H}^{2}-\sum_{i}\widehat{p}\;^i\widehat{p}\;^i \right)\psi \nonumber\\
-=&\left( -\partial_0^2+\nabla^2 \right)\psi \nonumber\\
-=& m^2 \psi\,,
-\end{align}
-de donde obtenemos precisamente la ecuación~\eqref{eq:152}
-\begin{align}
-  \left(
-\frac{\partial^2}{\partial t^2}-\nabla^2+m^2
-  \right)\psi=0.
-\end{align}
-Aunque la interpretación en mecánica cuántica de la ecuación de momentum-energía requiere promover también el campo a un operador, una vez se establece la teoría cuántica de campos correspondiente, el coeficiente $m$ se puede interpretar como la masa del campo $\psi$.
 
 
 
@@ -854,59 +844,83 @@ la cual podemos interpretar que corresponde a la probabilidad de la función de 
 \begin{frame}[fragile,allowframebreaks]
 
 
-Para el Lagrangiano
-\begin{align*}
-    \mathcal{L}=i \psi^{\dagger} \overline{\sigma}^{\mu} \partial_{\mu} \psi\,,
-\end{align*}
-calcular $T^{\mu}_{\nu}$ y a partir de  las densidades of carga conservadas demostrar que
-\begin{align*}
-  \langle\hat{H}_{W}\rangle=&\int_{V} \operatorname{d}^{3} x \psi^{\dagger} \hat{H}_{W} \psi \\
- \langle\hat{\boldsymbol{p}}\rangle=&\int_{V} \operatorname{d}^{3} x \psi^{\dagger}\hat{\boldsymbol{p}} \psi\,. 
-\end{align*}
-donde $\hat{H}_{W}=-\boldsymbol{\sigma} \cdot \hat{\boldsymbol{p}}$ y $\hat{\boldsymbol{p}}=-i \boldsymbol{\nabla}$
 
 
-  Usando $\sigma^{0}=\boldsymbol{1}$,
+
+
+Una de las conexiones más hermosas y profundas entre la Teoría Clásica de Campos y la Mecánica Cuántica surge al estudiar las simetrías espaciotemporales de los espinores. 
+
+En la sección anterior vimos que la simetría interna $U(1)$ (cambio de fase global) del campo espinorial da lugar, por el Primer Teorema de Noether, a una cuadricorriente conservada cuya componente temporal $j^0 = \psi^\dagger \psi$ interpretamos como una densidad de probabilidad. Si ahora aplicamos el \textbf{Primer Teorema de Noether para simetrías externas} (traslaciones en el espacio y en el tiempo), obtendremos el tensor de momento-energía $T^\mu_{\ \nu}$. Las cargas conservadas asociadas a este tensor son la energía total y el momentum total del campo.
+
+Para el Lagrangiano libre de un espinor de Weyl izquierdo sin masa:
 \begin{align}
-  T^0_0&=\frac{\partial\mathcal{L}}{\partial\left(\partial_0\psi\right)}\partial_0\psi+\partial_0\psi^\dagger\frac{\partial\mathcal{L}}{\partial\left(\partial_0\psi^\dagger\right)}-\mathcal{L}\nonumber\\
-  &=i\psi^\dagger\partial_0\psi-\mathcal{L}\nonumber\\
-  &=-i\psi^\dagger \overline{\sigma}^i\partial_i\psi\nonumber\\
-  &=-\psi^\dagger \sigma^i \left( -i \partial_i\right)\psi\nonumber\\
-  &=-\psi^\dagger(\boldsymbol{\sigma}\cdot\widehat{\boldsymbol{p}})\psi,\nonumber\\
-  \label{eq:118qft}
-  &=\psi^\dagger\hat{H}_{W} \psi,
+  \label{eq:masslessweyl}
+  \mathcal{L} =& i\psi^\dagger \bar{\sigma}^\mu \partial_\mu \psi \nonumber\\
+  =& i\psi^\dagger \bar{\sigma}^0 \partial_0 \psi + i\psi^\dagger \bar{\sigma}^i \partial_i \psi \nonumber\\
+=& i\psi^\dagger  \partial_0 \psi - i\psi^\dagger {\sigma}^i \partial_i \psi   \,,
 \end{align}
-donde hemos definido el Hamiltoniano de Weyl como
-\begin{equation}
-  \label{eq:denshal}
-  \hat{H}_W= -\boldsymbol{\sigma}\cdot\widehat{\boldsymbol{p}}
-\end{equation}
-Que corresponde a la proyección del espín en la dirección de movimiento. El signo menos justica la definción de $\psi_{\alpha}$ como un espinor de Weyl izquierdo. Como la ecuación de Scröndinger es de validez general, tenemos entonces que
-
-\begin{equation}
-  i\frac{\partial}{\partial t}\psi=\hat{H}_W \psi
-\end{equation}
-y, como en mecánica clásica usual
-\begin{equation}
-  \label{eq:99qft}
-  \langle\hat{H}_W\rangle=\int \psi^\dagger\hat{H}_W \psi\,d^3x.
-\end{equation}
-Note que esta relación no es posible para el Hamiltoniado de Weyl con término de masa.
-
-Además
+podemos calcular la densidad Hamiltoniana (densidad de energía), que corresponde a la componente $T^0_{\ 0}$. Usando la definición del tensor de momento-energía y sabiendo que $\bar{\sigma}^0 = \mathbf{1}$, tenemos:
 \begin{align}
-    T^0_i&=\frac{\partial\mathcal{L}}{\partial\left(\partial_0\psi\right)}\partial_i\psi+\partial_i\psi^\dagger\frac{\partial\mathcal{L}}{\partial\left(\partial_0\psi^\dagger\right)}\nonumber\\
-    &=i\psi^\dagger\partial_i\psi\nonumber\\
-    &=-\psi^\dagger(-i\partial_i)\psi
+    T^0_{\ 0} &= \frac{\partial \mathcal{L}}{\partial (\partial_0 \psi)} \partial_0 \psi + \partial_0 \psi^\dagger \frac{\partial \mathcal{L}}{\partial (\partial_0 \psi^\dagger)} - \mathcal{L} \nonumber \\
+    &= i\psi^\dagger \partial_0 \psi - \mathcal{L} \, .
+\end{align}
+Usando~\eqref{eq:masslessweyl} 
+
+\begin{align}
+  T^0_{\ 0}   &= i\psi^\dagger \partial_0 \psi  - i\psi^\dagger  \partial_0 \psi + i\psi^\dagger {\sigma}^i \partial_i \psi \nonumber\\  \,,
+  &= i\psi^\dagger (\sigma^i \partial_i) \psi \nonumber \\
+    &= -\psi^\dagger \sigma^i (-i\partial_i) \psi \nonumber \\
+    &= -\psi^\dagger (\boldsymbol{\sigma} \cdot \mathbf{\hat{p}})\psi \nonumber \\
+    &= \psi^\dagger \hat{H}_W \psi \, ,
+    \label{eq:T00_espinores}
+\end{align}
+donde hemos definido el \textbf{Hamiltoniano de Weyl} como:
+\begin{equation}
+    \hat{H}_W = -\boldsymbol{\sigma} \cdot \mathbf{\hat{p}} \, .
+\end{equation}
+(Este Hamiltoniano corresponde a la proyección del espín en la dirección opuesta al movimiento, justificando el signo menos para definir a $\psi$ como un espinor de helicidad \textit{izquierda}).
+
+De la misma manera, la densidad de momentum físico del campo corresponde a las componentes espaciales $T^0_{\ i}$:
+\begin{align}
+    T^0_{\ i} &= \frac{\partial \mathcal{L}}{\partial (\partial_0 \psi)} \partial_i \psi \nonumber \\
+    &= i\psi^\dagger \partial_i \psi \nonumber \\
+    &= \psi^\dagger (-i\partial_i)\psi \nonumber \\
+    &= \psi^\dagger \hat{p}_i \psi \, .
+    \label{eq:T0i_espinores}
 \end{align}
 
-de modo que
+\subsubsection*{El surgimiento del postulado de la Mecánica Cuántica:}
+A nivel clásico, la energía y el momentum total del sistema se obtienen integrando estas densidades de carga sobre todo el volumen del espacio. Si observamos con detenimiento el resultado de estas integrales utilizando las Ecs. \eqref{eq:T00_espinores} y \eqref{eq:T0i_espinores}:
 \begin{align}
-\langle\hat{\boldsymbol{p}}\rangle=\int\psi^\dagger\hat{\boldsymbol{p}}\psi\,d^3 x
+    E &= \int_V T^0_{\ 0} \, d^3x = \int_V \psi^\dagger \hat{H}_W \psi \, d^3x \, , \\
+    \mathbf{P} &= \int_V T^0_{\ i} \, d^3x = \int_V \psi^\dagger \mathbf{\hat{p}} \psi \, d^3x \, ,
 \end{align}
-\end{frame}
+y recordamos que $\psi^\dagger \psi$ representa la distribución de probabilidad espacial del campo (normalizada a 1), nos damos cuenta de un hecho extraordinario: \textbf{la energía y el momentum clásico del campo se expresan matemáticamente como un promedio espacial ponderado por la densidad de probabilidad de la partícula}. 
+
+En la Mecánica Cuántica tradicional, se introduce como un axioma o ``postulado'' impuesto ad-hoc que el valor esperado (o promedio estadístico) de un observable $\hat{O}$ se calcula como $\langle \hat{O} \rangle = \int \psi^\dagger \hat{O} \psi \, d^3x$. 
+
+Sin embargo, como acabamos de demostrar, en el marco de la Teoría de Campos este no es un postulado independiente. Es una consecuencia directa e inevitable de exigir que la Acción del campo sea invariante ante traslaciones en el espacio y el tiempo (Primer Teorema de Noether). De modo que las cantidades conservadas clásicas son, por definición, los valores esperados cuánticos:
+\begin{align}
+    \langle \hat{H}_W \rangle &= \int_V \psi^\dagger \hat{H}_W \psi \, d^3x \, , \\
+    \langle \mathbf{\hat{p}} \rangle &= \int_V \psi^\dagger \mathbf{\hat{p}} \psi \, d^3x \, .
+\end{align}
+
+\textit{Nota:} Como la ecuación de Schrödinger $i\partial_t \psi = \hat{H}_W \psi$ es de validez general en este contexto, la relación $\langle \hat{H} \rangle = \int \psi^\dagger \hat{H} \psi \, d^3x$ se mantiene. Sin embargo, cabe advertir que esta forma exacta construida solo con derivadas de primer orden no es posible para un Hamiltoniano de Weyl si se le añade un término de masa acoplado a un campo derecho, lo cual requerirá el formalismo de los espinores de Dirac.
+
+Podemos definir el operador de cuadrimomento como
+\begin{align}
+  \label{eq:cuadrimomentum}
+  \hat{p}^\mu = i\partial^\mu =& \left(i\partial^0,i\partial^i\right)\nonumber\\
+  =& \left(i\partial_0,-i\partial_i\right)\nonumber\\
+  =& \left(i\frac{\partial}{\partial t},-i \boldsymbol{\nabla}\right)\nonumber\\
+   =& \left(\hat{H},\hat{\boldsymbol{p}}\right)\,.
+\end{align}
+
 
 Con estas definciones del operador $\hat{H}_W$ y $\hat{\boldsymbol{p}}$, podremos interpretar más facilmente la ecuaciones de Euler-Lagrange a continuación.
+\end{frame}
+
+
 
 \subsection{Ecuaciones de Euler-Lagrange}
 \label{sec:ecuaciones-de-euler}
@@ -1163,7 +1177,7 @@ Para $\mu=l$
 \end{frame}
 
 
-\subsection{Rigth-handed fermion}
+\section{Espinores derechos}
 
 \begin{frame}[fragile,allowframebreaks]
 Para el campo de dos componentes derecho  ${\eta^{\dagger}}^{\dot{\alpha}}$ ($\dot{\alpha}=\dot{1},\dot{2}$), el término invariante de Lorentz con derivada de primer orden debería ser
@@ -1476,6 +1490,47 @@ es decir, como la suma de la densidad Lagrangiana para dos campos reales indepen
 
 \end{enumerate}
 
+
+\vspace{0.5cm}
+\noindent \textbf{Ejercicio: El Teorema de Noether y los postulados de la Mecánica Cuántica}
+
+\noindent Considere la densidad Lagrangiana de Dirac para un campo fermiónico libre de masa $m$:
+\begin{equation*}
+    \mathcal{L} = \bar{\psi}(i\gamma^\mu \partial_\mu - m)\psi
+\end{equation*}
+donde $\psi$ es un espinor de Dirac de cuatro componentes y $\bar{\psi} = \psi^\dagger \gamma^0$ es su espinor adjunto. Este ejercicio demuestra cómo los postulados de la mecánica cuántica emergen de manera natural a partir de las simetrías clásicas de este campo.
+
+\begin{enumerate}
+    \item \textbf{Ecuaciones de movimiento y el Lagrangiano \textit{on-shell}:} 
+    Utilice las ecuaciones de Euler-Lagrange para el campo $\bar{\psi}$ para derivar la ecuación de movimiento (la ecuación de Dirac). Utilizando este resultado, demuestre que cuando el campo satisface las leyes de la física (es decir, \textit{on-shell}), la densidad Lagrangiana se anula localmente ($\mathcal{L} = 0$). \textit{Nota: Verá que esta es una propiedad excepcional de los campos fermiónicos que son lineales en las derivadas.}
+
+    \item \textbf{Simetría Interna (Conservación de la Probabilidad):} 
+    Suponga una transformación de fase global $U(1)$ dada por $\psi \to e^{-i\alpha}\psi$ y $\bar{\psi} \to \bar{\psi}e^{i\alpha}$, donde $\alpha$ es un parámetro infinitesimal constante.
+    \begin{enumerate}
+        \item Utilice el Primer Teorema de Noether para simetrías internas ($j^\mu = \sum \frac{\partial \mathcal{L}}{\partial(\partial_\mu\phi_i)} a_i$) para encontrar la cuadricorriente conservada $j^\mu$.
+        \item Demuestre que la densidad de carga $j^0$ se reduce a $\psi^\dagger \psi$. Concluya por qué la conservación de la carga total $Q = \int j^0 d^3x$ justifica el postulado mecánico-cuántico que interpreta a $\psi^\dagger \psi$ como una densidad de probabilidad.
+    \end{enumerate}
+
+    \item \textbf{Simetría Externa (Tensor Momento-Energía):} 
+    La invariancia del Lagrangiano bajo traslaciones espaciotemporales ($x^\mu \to x^\mu + \delta x^\mu$) define el tensor de momento-energía clásico según el Teorema de Noether:
+    \begin{equation*}
+        T^\mu_{\ \nu} = \frac{\partial \mathcal{L}}{\partial(\partial_\mu \psi)}\partial_\nu \psi - \delta^\mu_\nu \mathcal{L}
+    \end{equation*}
+    \begin{enumerate}
+        \item Utilice el resultado del inciso (a) para simplificar este tensor a su forma evaluada en las ecuaciones de movimiento (\textit{on-shell}).
+        \item Calcule la componente $T^0_{\ 0}$, que corresponde a la \textbf{densidad de energía} clásica del campo. Utilizando la ecuación de Dirac $i\partial_0 \psi = \hat{H}_D \psi$ (donde $\hat{H}_D = -i\boldsymbol{\alpha}\cdot\nabla + \beta m$ es el Hamiltoniano), demuestre que $T^0_{\ 0} = \psi^\dagger \hat{H}_D \psi$.
+        \item Calcule las componentes espaciales $T^0_{\ i}$, que corresponden a la \textbf{densidad de momentum} físico del campo. Usando el operador cuántico de momento $\mathbf{\hat{p}} = -i\nabla$, demuestre que el vector de densidad de momentum es $\mathbf{T}^0 = \psi^\dagger \mathbf{\hat{p}} \psi$.
+    \end{enumerate}
+
+    \item \textbf{El postulado de los Valores Esperados:} 
+    En los cursos introductorios de Mecánica Cuántica, se postula \textit{ad hoc} que el valor esperado (medible) de un observable $\hat{O}$ se calcula como $\langle \hat{O} \rangle = \int \psi^\dagger \hat{O} \psi \, d^3x$. 
+    
+    A partir de sus resultados en el inciso (c) para la energía total clásica $E = \int T^0_{\ 0} d^3x$ y el momentum total clásico $\mathbf{P} = \int \mathbf{T}^0 d^3x$, argumente física y ontológicamente por qué este postulado de la mecánica cuántica no es arbitrario, sino una consecuencia ineludible de la Teoría Clásica de Campos y del Teorema de Noether.
+
+\end{enumerate}
+
+
+  
 %
 %%% Local Variables: 
 %%% mode: latex
