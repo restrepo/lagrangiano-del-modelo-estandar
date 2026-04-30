@@ -1,3 +1,235 @@
+\chapter{Cargas conservadas y la interpretación del campo escalar complejo}
+\label{app:cargas_campo_escalar}
+
+En este apéndice analizaremos en detalle el campo escalar complejo con autointeracción. A través del uso de los Teoremas de Noether para simetrías espaciotemporales e internas, calcularemos sus cargas conservadas (energía, momentum y carga eléctrica). Veremos cómo la simplificación de estas cantidades utilizando las ecuaciones de movimiento (\textit{on-shell}) nos revela de manera natural la estructura matemática de la mecánica cuántica relativista: el producto interno de Klein-Gordon y la predicción teórica de la antimateria.
+
+Considere la densidad Lagrangiana invariante bajo transformaciones $U(1)$ globales:
+\begin{equation}
+    \mathcal{L} = \partial_\mu \phi^* \partial^\mu \phi - m^2\phi^* \phi - \lambda\left( \phi^* \phi\right)^2 \, .
+    \label{eq:L_escalar_complejo_app}
+\end{equation}
+
+\section{El Tensor Momento-Energía y sus cargas conservadas}
+
+Por el Primer Teorema de Noether aplicado a las traslaciones en el espacio-tiempo, el tensor de momento-energía para este sistema (tratando a $\phi$ y $\phi^*$ como variables independientes) está dado por:
+\begin{equation}
+    T^\mu_{\ \nu} = \frac{\partial \mathcal{L}}{\partial(\partial_\mu \phi)} \partial_\nu \phi + \frac{\partial \mathcal{L}}{\partial(\partial_\mu \phi^*)} \partial_\nu \phi^* - \delta^\mu_\nu \mathcal{L} \, .
+\end{equation}
+Las derivadas de la densidad Lagrangiana respecto a los gradientes de los campos son:
+\begin{equation}
+    \frac{\partial \mathcal{L}}{\partial(\partial_\mu \phi)} = \partial^\mu \phi^* \, , \quad \frac{\partial \mathcal{L}}{\partial(\partial_\mu \phi^*)} = \partial^\mu \phi \, .
+\end{equation}
+
+\subsection{Densidad de Energía ($T^0_{\ 0}$)}
+
+Evaluando la componente temporal ($\mu=0, \nu=0$), donde $\delta^0_0 = 1$ y $\partial^0 = \partial_0 = \frac{\partial}{\partial t}$, obtenemos:
+\begin{equation}
+    T^0_{\ 0} = (\partial^0 \phi^*) \partial_0 \phi + (\partial^0 \phi) \partial_0 \phi^* - \mathcal{L} = 2\dot{\phi}^*\dot{\phi} - \mathcal{L} \, .
+\end{equation}
+Separando el término cinético del Lagrangiano en su parte temporal y espacial ($\partial_\mu \phi^* \partial^\mu \phi = \dot{\phi}^*\dot{\phi} - \nabla\phi^* \cdot \nabla\phi$), sustituimos $\mathcal{L}$ en la expresión:
+\begin{equation}
+    T^0_{\ 0} = 2\dot{\phi}^*\dot{\phi} - \left[ \dot{\phi}^*\dot{\phi} - \nabla\phi^* \cdot \nabla\phi - m^2\phi^* \phi - \lambda(\phi^* \phi)^2 \right] \, .
+\end{equation}
+Simplificando, llegamos a la densidad de energía del campo:
+\begin{equation}
+    T^0_{\ 0} = \dot{\phi}^*\dot{\phi} + \nabla\phi^* \cdot \nabla\phi + m^2\phi^* \phi + \lambda(\phi^* \phi)^2 \, .
+\end{equation}
+
+La energía total conservada $E$ se obtiene integrando sobre el volumen espacial:
+\begin{equation}
+    E = \int_V T^0_{\ 0} \, d^3x = \int_V \left( |\dot{\phi}|^2 + |\nabla\phi|^2 + m^2|\phi|^2 + \lambda|\phi|^4 \right) d^3x \, .
+\end{equation}
+\textbf{Interpretación física:} Todos los términos en la densidad de energía suman y forman cantidades definidas positivas (suponiendo $\lambda > 0$ y $m^2 > 0$). El Teorema de Noether garantiza geométricamente la estabilidad del universo para este campo, asegurando que la energía esté acotada por debajo y el sistema no pueda colapsar hacia energías infinitamente negativas.
+
+\subsection{Densidad de Momentum ($T^0_{\ i}$)}
+
+Evaluando las componentes espaciales ($\mu=0, \nu=i$), el delta de Kronecker se anula ($\delta^0_i = 0$):
+\begin{equation}
+    T^0_{\ i} = (\partial^0 \phi^*) \partial_i \phi + (\partial^0 \phi) \partial_i \phi^* = \dot{\phi}^* \partial_i \phi + \dot{\phi} \partial_i \phi^* \, .
+\end{equation}
+En notación vectorial, el Momentum físico total del campo es:
+\begin{equation}
+    \mathbf{P} = \int_V \left( \dot{\phi}^* \nabla \phi + \dot{\phi} \nabla \phi^* \right) d^3x \, .
+    \label{eq:momentum_clasico}
+\end{equation}
+
+\section{Simplificación \textit{On-Shell} y Operadores Cuánticos}
+
+A diferencia de los fermiones (donde $\mathcal{L} = 0$ \textit{on-shell}), para el campo escalar las densidades locales no se simplifican directamente. Sin embargo, las integrales globales (las cargas) revelan propiedades profundas cuando asumimos que los campos satisfacen las ecuaciones de Euler-Lagrange e integramos por partes (asumiendo que los campos se anulan en el infinito).
+
+La ecuación de Euler-Lagrange para $\phi^*$ (variando el Lagrangiano respecto a $\phi^*$) es:
+\begin{equation}
+    \partial_\mu \partial^\mu \phi + m^2\phi + 2\lambda|\phi|^2\phi = 0 \quad \implies \quad \nabla^2\phi = \ddot{\phi} + m^2\phi + 2\lambda|\phi|^2\phi \, .
+\end{equation}
+
+\subsection{Reducción de la Energía y el Momentum}
+
+Para la \textbf{Energía}, aplicamos integración por partes al término espacial $\int (\nabla\phi^* \cdot \nabla\phi) d^3x = -\int (\phi^* \nabla^2\phi) d^3x$ y sustituimos la ecuación de movimiento para $\nabla^2\phi$:
+\begin{align}
+    E &= \int_V \left[ \dot{\phi}^*\dot{\phi} - \phi^*\left( \ddot{\phi} + m^2\phi + 2\lambda|\phi|^2\phi \right) + m^2|\phi|^2 + \lambda|\phi|^4 \right] d^3x \nonumber \\
+    &= \int_V \left( \dot{\phi}^*\dot{\phi} - \phi^*\ddot{\phi} - \lambda|\phi|^4 \right) d^3x \, .
+\end{align}
+¡Sorprendentemente, \textit{on-shell}, los términos de masa se cancelan exactamente!
+
+Para el \textbf{Momentum}, aplicamos integración por partes al segundo término de la Ec. \eqref{eq:momentum_clasico}, obteniendo $\int (\dot{\phi} \nabla \phi^*) d^3x = - \int (\phi^* \nabla \dot{\phi}) d^3x$. Sustituyendo, llegamos a una estructura antisimétrica:
+\begin{equation}
+    \mathbf{P} = \int_V \left( \dot{\phi}^* \nabla \phi - \phi^* \nabla \dot{\phi} \right) d^3x \, .
+    \label{eq:momentum_antisimetrico}
+\end{equation}
+
+\subsection{El producto interno de Klein-Gordon}
+
+La forma antisimétrica de la Ec. \eqref{eq:momentum_antisimetrico} no es casualidad. Es la "firma matemática" del producto interno en la mecánica cuántica relativista. Debido a que la ecuación de Klein-Gordon es de segundo orden en el tiempo, su producto interno probabilístico debe involucrar primeras derivadas temporales:
+\begin{equation}
+    \langle \phi_1 | \phi_2 \rangle_{KG} = i \int_V \left( \phi_1^* \dot{\phi}_2 - \dot{\phi}_1^* \phi_2 \right) d^3x \, .
+\end{equation}
+
+Si postulamos el operador mecánico-cuántico de momentum $\mathbf{\hat{p}} = -i\nabla$ y calculamos su valor esperado para un campo $\phi$ usando este producto interno, tenemos:
+\begin{align}
+    \langle \mathbf{\hat{p}} \rangle &= \langle \phi | -i\nabla | \phi \rangle_{KG} = i \int_V \left[ \phi^* \frac{\partial}{\partial t}(-i\nabla\phi) - \dot{\phi}^* (-i\nabla\phi) \right] d^3x \nonumber \\
+    &= \int_V \left( \phi^* \nabla \dot{\phi} - \dot{\phi}^* \nabla \phi \right) d^3x \nonumber \\
+    &= - \int_V \left( \dot{\phi}^* \nabla \phi - \phi^* \nabla \dot{\phi} \right) d^3x \, .
+\end{align}
+
+Comparando esto con la Ec. \eqref{eq:momentum_antisimetrico}, concluimos que $\mathbf{P}_{\text{Clásico}} = - \langle \mathbf{\hat{p}} \rangle_{\text{Cuánticol}}$ (el signo menos surge de la convención de la métrica relativista $P_i = -P^i$). Esta es una demostración asombrosa de cómo la Teoría Clásica de Campos ya contiene en su geometría toda la estructura necesaria para evaluar operadores en la Mecánica Cuántica Relativista.
+
+\section{Invarianza $U(1)$ Global, Carga Interna y Antimateria}
+
+El Lagrangiano \eqref{eq:L_escalar_complejo_app} posee una simetría interna global $U(1)$ bajo transformaciones de fase $\phi \to e^{i\theta}\phi$. Los coeficientes de variación son $a_1 = i\phi$ y $a_2 = -i\phi^*$.
+
+Utilizando la fórmula de Noether para simetrías internas ($j^\mu = \sum_i \frac{\partial \mathcal{L}}{\partial(\partial_\mu\phi_i)} a_i$), la cuadricorriente conservada es:
+\begin{equation}
+    j^\mu = (\partial^\mu\phi^*)(i\phi) + (\partial^\mu\phi)(-i\phi^*) = i (\phi \partial^\mu\phi^* - \phi^* \partial^\mu\phi) \, .
+\end{equation}
+La cantidad conservada globalmente es la integral de la densidad temporal $j^0$:
+\begin{equation}
+    Q = i \int_V \left( \phi \dot{\phi}^* - \phi^* \dot{\phi} \right) d^3x \, .
+    \label{eq:carga_U1_KG}
+\end{equation}
+
+\subsection{El problema de la probabilidad y la predicción de la antimateria}
+
+En la Ecuación de Schrödinger (no relativista), la densidad temporal de Noether es $j^0 = \psi^* \psi = |\psi|^2$, lo que naturalmente se interpreta como una conservación de probabilidad positiva. Sin embargo, para nuestro campo escalar relativista, $j^0 = i(\phi \dot{\phi}^* - \phi^* \dot{\phi})$. 
+
+Al ser una ecuación de segundo orden en el tiempo, $\phi$ y $\dot{\phi}$ son variables independientes, lo que implica que $\rho = j^0$ puede tomar valores \textbf{negativos}. Por lo tanto, ¡no puede interpretarse como una probabilidad!
+
+Para entender qué significa esta carga, observemos que la Ec. \eqref{eq:carga_U1_KG} es exactamente el producto interno de Klein-Gordon del campo consigo mismo, salvo por un signo: $Q = -\langle \phi | \phi \rangle_{KG}$. Evaluemos este producto para soluciones de ondas planas libres $E^2 = \mathbf{p}^2 + m^2$:
+
+\begin{itemize}
+    \item \textbf{Energía positiva:} Una solución del tipo $\phi_+(t) \propto e^{-iEt}$ tiene $\dot{\phi}_+ = -iE\phi_+$.
+    \begin{equation}
+        Q_+ = -\langle \phi_+ | \phi_+ \rangle_{KG} = -i \int_V \left[ \phi_+^* (-iE\phi_+) - (iE\phi_+^*) \phi_+ \right] d^3x = 2E \int_V |\phi_+|^2 d^3x > 0 \, .
+    \end{equation}
+    Estas soluciones corresponden a partículas con carga "norma" positiva (ej. $+1$).
+    
+    \item \textbf{Energía negativa:} Una solución del tipo $\phi_-(t) \propto e^{+iEt}$ tiene $\dot{\phi}_- = iE\phi_-$.
+    \begin{equation}
+        Q_- = -\langle \phi_- | \phi_- \rangle_{KG} = -i \int_V \left[ \phi_-^* (iE\phi_-) - (-iE\phi_-^*) \phi_- \right] d^3x = -2E \int_V |\phi_-|^2 d^3x < 0 \, .
+    \end{equation}
+    Estas soluciones corresponden a excitaciones ortogonales con "norma" negativa.
+\end{itemize}
+
+Esta aparente catástrofe probabilística se resolvió mediante un cambio de paradigma ontológico en la física: $\phi$ no es la función de onda de una partícula, es un campo clásico cuya carga conservada $Q$ representa la \textbf{Carga Eléctrica} (o carga interna). El signo negativo no es un error de probabilidad, sino la manifestación matemática de las \textbf{antipartículas}. En la Segunda Cuantización, $\hat{Q}$ se convierte en un operador que mide la diferencia estricta entre el número de partículas y antipartículas en el universo.
+
+\subsection{Conexión explícita entre el producto interno de Klein-Gordon y la carga conservada $U(1)$}
+\label{sec:conexion_KG_U1}
+
+En la mecánica cuántica tradicional (no relativista), el producto interno entre dos funciones de onda se utiliza para calcular probabilidades de transición, y la norma de un estado representa la probabilidad total. Sin embargo, para que un producto interno sea conservado en el tiempo bajo la dinámica de una ecuación de segundo orden como la de Klein-Gordon, su definición matemática formal para dos campos $\phi_1$ y $\phi_2$ debe involucrar primeras derivadas temporales, adquiriendo una estructura antisimétrica:
+\begin{equation}
+    \langle \phi_1 | \phi_2 \rangle_{KG} = i \int_V \left( \phi_1^* \dot{\phi}_2 - \dot{\phi}_1^* \phi_2 \right) d^3x \, .
+    \label{eq:producto_interno_KG}
+\end{equation}
+
+Si evaluamos la ``norma'' de un campo escalar complejo consigo mismo, es decir, hacemos $\phi_1 = \phi_2 = \phi$, el producto interno toma la forma:
+\begin{equation}
+    \langle \phi | \phi \rangle_{KG} = i \int_V \left( \phi^* \dot{\phi} - \dot{\phi}^* \phi \right) d^3x \, .
+\end{equation}
+
+Ahora, comparemos esta estructura, puramente nacida de la necesidad de tener un producto interno invariante en el tiempo en la mecánica cuántica relativista, con la carga conservada clásica $Q$ que obtuvimos del Primer Teorema de Noether debido a la invarianza de fase global $U(1)$ (Ec. \eqref{eq:carga_U1_KG}):
+\begin{equation}
+    Q = i \int_V \left( \phi \dot{\phi}^* - \phi^* \dot{\phi} \right) d^3x \, .
+\end{equation}
+
+Al observar ambas ecuaciones, es evidente que son idénticas salvo por un signo global (el cual depende únicamente de la convención elegida para la transformación de fase, es decir, usar $e^{i\theta}$ o $e^{-i\theta}$). Matemáticamente, hemos llegado a la siguiente equivalencia exacta:
+\begin{equation}
+    Q = - \langle \phi | \phi \rangle_{KG} \, .
+    \label{eq:equivalencia_Carga_Norma}
+\end{equation}
+
+\textbf{Trascendencia ontológica del resultado:} 
+Esta identidad (Ec. \eqref{eq:equivalencia_Carga_Norma}) es uno de los puentes más elegantes en la fundamentación de la Teoría Cuántica de Campos. Nos indica que la cantidad que la mecánica cuántica ingenua intentaría interpretar como una ``probabilidad total'' (la norma del estado $\langle \phi | \phi \rangle_{KG}$) es, en realidad, dictaminada por la geometría del espacio-tiempo y la simetría interna clásica como la \textbf{carga del campo}.
+
+Como el producto interno de Klein-Gordon no es definido positivo (admite resultados negativos para las soluciones que oscilan con frecuencias inversas, es decir, de ``energía negativa''), la mecánica cuántica relativista de una sola partícula parecía matemáticamente inconsistente. 
+
+Sin embargo, a través de la lente del Teorema de Noether, la paradoja desaparece por completo: las normas negativas no representan probabilidades menores que cero (lo cual sería un absurdo físico), sino que representan \textbf{cargas eléctricas opuestas}. Así, la simetría $U(1)$ del Lagrangiano y el producto interno de la ecuación de onda son dos caras de la misma moneda, codificando ambos, desde sus respectivos lenguajes, la inevitable existencia de la antimateria.
+
+
+\section{Segunda Cuantización: Demostración de la Carga Neta}
+\label{sec:segunda_cuantizacion_carga}
+
+Para demostrar que la carga conservada de Noether $Q$ representa efectivamente la carga neta del campo, debemos abandonar el dominio clásico y promover los campos a operadores cuánticos (Segunda Cuantización). 
+
+\subsection{Expansión del campo en ondas planas}
+
+Un campo escalar complejo libre puede escribirse como una superposición lineal de ondas planas que representan todos los posibles estados de momento $\mathbf{k}$ y energía $\omega_k = \sqrt{\mathbf{k}^2 + m^2}$. Promoviendo el campo a operador, introducimos dos conjuntos independientes de operadores de creación y destrucción:
+\begin{align}
+    \hat{\phi}(x) &= \int \frac{d^3k}{(2\pi)^3 \sqrt{2\omega_k}} \left( \hat{a}_\mathbf{k} e^{-ik\cdot x} + \hat{b}_\mathbf{k}^\dagger e^{ik\cdot x} \right) \, , \label{eq:phi_op} \\
+    \hat{\phi}^\dagger(x) &= \int \frac{d^3k}{(2\pi)^3 \sqrt{2\omega_k}} \left( \hat{a}_\mathbf{k}^\dagger e^{ik\cdot x} + \hat{b}_\mathbf{k} e^{-ik\cdot x} \right) \, . \label{eq:phi_dag_op}
+\end{align}
+Aquí:
+\begin{itemize}
+    \item $\hat{a}_\mathbf{k}^\dagger$ y $\hat{a}_\mathbf{k}$ crean y destruyen, respectivamente, una \textbf{partícula} de momento $\mathbf{k}$ (por ejemplo, un pión $\pi^+$).
+    \item $\hat{b}_\mathbf{k}^\dagger$ y $\hat{b}_\mathbf{k}$ crean y destruyen una \textbf{antipartícula} de momento $\mathbf{k}$ (por ejemplo, un pión $\pi^-$).
+\end{itemize}
+
+Calculamos las derivadas temporales de los operadores de campo, recordando que $\partial_0 (e^{\mp ik\cdot x}) = \mp i\omega_k e^{\mp ik\cdot x}$:
+\begin{align}
+    \dot{\hat{\phi}}(x) &= \int \frac{d^3k}{(2\pi)^3 \sqrt{2\omega_k}} (-i\omega_k) \left( \hat{a}_\mathbf{k} e^{-ik\cdot x} - \hat{b}_\mathbf{k}^\dagger e^{ik\cdot x} \right) \, , \\
+    \dot{\hat{\phi}}^\dagger(x) &= \int \frac{d^3k}{(2\pi)^3 \sqrt{2\omega_k}} (i\omega_k) \left( \hat{a}_\mathbf{k}^\dagger e^{ik\cdot x} - \hat{b}_\mathbf{k} e^{-ik\cdot x} \right) \, .
+\end{align}
+
+\subsection{El Operador de Carga}
+
+Promovemos nuestra carga clásica de Noether a un operador cuántico. En QFT, para evitar energías o cargas infinitas provenientes de las fluctuaciones del vacío, los operadores físicos se definen utilizando el \textbf{orden normal} (denotado por $:\ :$), que obliga a colocar todos los operadores de creación a la izquierda de los de destrucción.
+\begin{equation}
+    \hat{Q} = i \int_V :\left( \hat{\phi}^\dagger \dot{\hat{\phi}} - \dot{\hat{\phi}}^\dagger \hat{\phi} \right): d^3x \, .
+\end{equation}
+
+Sustituimos las expansiones en la expresión de $\hat{Q}$. Al realizar la integral espacial $\int d^3x$, obtenemos funciones delta de Dirac de la forma $(2\pi)^3 \delta^{(3)}(\mathbf{k} - \mathbf{k}')$, lo que nos permite colapsar las dobles integrales de momento en una sola. 
+
+Evaluemos el primer término $\hat{\phi}^\dagger \dot{\hat{\phi}}$ (omitiendo factores de normalización por brevedad):
+\begin{equation}
+    \hat{\phi}^\dagger \dot{\hat{\phi}} \sim (-i\omega_k) \left( \hat{a}_\mathbf{k}^\dagger \hat{a}_\mathbf{k} - \hat{a}_\mathbf{k}^\dagger \hat{b}_{-\mathbf{k}}^\dagger e^{2i\omega_k t} + \hat{b}_{-\mathbf{k}} \hat{a}_\mathbf{k} e^{-2i\omega_k t} - \hat{b}_{-\mathbf{k}}\hat{b}_{-\mathbf{k}}^\dagger \right)
+\end{equation}
+El segundo término $\dot{\hat{\phi}}^\dagger \hat{\phi}$ produce una estructura similar pero con signo opuesto en los términos cruzados:
+\begin{equation}
+    \dot{\hat{\phi}}^\dagger \hat{\phi} \sim (i\omega_k) \left( \hat{a}_\mathbf{k}^\dagger \hat{a}_\mathbf{k} + \hat{a}_\mathbf{k}^\dagger \hat{b}_{-\mathbf{k}}^\dagger e^{2i\omega_k t} - \hat{b}_{-\mathbf{k}} \hat{a}_\mathbf{k} e^{-2i\omega_k t} - \hat{b}_{-\mathbf{k}}\hat{b}_{-\mathbf{k}}^\dagger \right)
+\end{equation}
+
+Al restar ambos términos ($\hat{\phi}^\dagger \dot{\hat{\phi}} - \dot{\hat{\phi}}^\dagger \hat{\phi}$), los términos cruzados que oscilan rápidamente ($e^{\pm 2i\omega_k t}$) se cancelan exactamente. Solo sobreviven los términos diagonales. Restituyendo los factores de normalización y el factor $i$ global:
+\begin{equation}
+    \hat{Q} = \int \frac{d^3k}{(2\pi)^3} \frac{i (-2i\omega_k)}{2\omega_k} :\left( \hat{a}_\mathbf{k}^\dagger \hat{a}_\mathbf{k} - \hat{b}_\mathbf{k} \hat{b}_\mathbf{k}^\dagger \right):
+\end{equation}
+Notemos que $i(-2i) = 2$, por lo que el factor $2\omega_k$ en el numerador y denominador se cancela perfectamente.
+
+Al aplicar el orden normal al término de las antipartículas ($:\hat{b}_\mathbf{k} \hat{b}_\mathbf{k}^\dagger: = \hat{b}_\mathbf{k}^\dagger \hat{b}_\mathbf{k}$), llegamos al resultado exacto y definitivo:
+\begin{equation}
+    \hat{Q} = \int \frac{d^3k}{(2\pi)^3} \left( \hat{a}_\mathbf{k}^\dagger \hat{a}_\mathbf{k} - \hat{b}_\mathbf{k}^\dagger \hat{b}_\mathbf{k} \right) \, .
+    \label{eq:carga_operador_final}
+\end{equation}
+
+\subsection{Interpretación Física de la Carga Neta}
+
+En mecánica cuántica, reconocemos inmediatamente que $\hat{n}_+(\mathbf{k}) = \hat{a}_\mathbf{k}^\dagger \hat{a}_\mathbf{k}$ es el operador de número para las partículas, y $\hat{n}_-(\mathbf{k}) = \hat{b}_\mathbf{k}^\dagger \hat{b}_\mathbf{k}$ es el operador de número para las antipartículas. 
+
+Por lo tanto, integrando sobre todos los momentos posibles, la Ecuación \eqref{eq:carga_operador_final} se reduce a:
+\begin{equation}
+    \hat{Q} = \hat{N}_+ - \hat{N}_- \, ,
+\end{equation}
+donde $\hat{N}_+$ es el número total de partículas y $\hat{N}_-$ es el número total de antipartículas en todo el Universo. Multiplicando este operador por la carga fundamental $e$, obtenemos la carga eléctrica medible.
+
+\textbf{Conclusión:} Esta demostración resuelve definitivamente el problema interpretativo del campo escalar complejo. El Teorema de Noether no nos estaba dando una "probabilidad que podía ser negativa", sino que, al cuantizar la teoría, nos entregó un operador que cuenta sistemáticamente las partículas (con carga $+1$) y resta las antipartículas (con carga $-1$). Queda demostrado así que el producto interno de Klein-Gordon es el origen algebraico de la antimateria y la conservación de la \textbf{carga neta} del campo.
+
 \chapter{Mínima acción}
 
 
