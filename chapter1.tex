@@ -4858,9 +4858,150 @@ De modo que $T^0_i\neq T^i_0$.
     \end{equation*}
     Para el campo escalar real libre $\mathcal{L} = \frac{1}{2}\partial_\mu\phi\partial^\mu\phi - \frac{1}{2}m^2\phi^2$, encuentre la expresión explícita para la densidad de energía del sistema, dada por el componente $\mathcal{H} = T^0_{\ 0}$.
 
-
 \end{enumerate}
 
+
+\section*{Ejercicio: Dinámica y Simetrías del Lagrangiano de Schrödinger}
+\label{sec:ejercicio_schrodinger}
+
+Considere la densidad Lagrangiana no relativista que describe el comportamiento de una partícula de masa $m$ sujeta a un potencial $V(\mathbf{x})$, dada por:
+\begin{equation}
+    \mathcal{L} = \frac{1}{2m} \nabla\psi^* \cdot \nabla\psi - \frac{i}{2} \left( \psi^* \frac{\partial \psi}{\partial t} - \frac{\partial \psi^*}{\partial t} \psi \right) + \psi^* V \psi
+    \label{eq:L_schrodinger}
+\end{equation}
+donde $\psi(t, \mathbf{x})$ y $\psi^*(t, \mathbf{x})$ se tratan como campos clásicos independientes.
+
+Para el desarrollo de este ejercicio, utilice las siguientes identidades fundamentales de la Teoría Clásica de Campos:
+\begin{itemize}
+    \item \textbf{Ecuaciones de Euler-Lagrange:}
+    \begin{equation}
+        \partial_\mu \left[ \frac{\partial \mathcal{L}}{\partial(\partial_\mu\phi_i)} \right] - \frac{\partial \mathcal{L}}{\partial\phi_i} = 0
+    \end{equation}
+    \item \textbf{Corriente de Noether para simetrías internas (Ec. 1.395):}
+    Si $\delta\phi_i = a_i \theta$, la cuadricorriente es:
+    \begin{equation}
+        j^\mu = \sum_i \frac{\partial \mathcal{L}}{\partial(\partial_\mu\phi_i)} a_i
+    \end{equation}
+    \item \textbf{Tensor de Momento-Energía para simetrías externas (Ec. 1.364):}
+    \begin{equation}
+        T^\mu_{\ \nu} = \sum_i \frac{\partial \mathcal{L}}{\partial(\partial_\mu \phi_i)}\partial_\nu \phi_i - \delta^\mu_\nu \mathcal{L}
+    \end{equation}
+\end{itemize}
+
+\textbf{Responda a los siguientes incisos:}
+\begin{enumerate}
+\item  Demuestre que la densidad Lagrangiana propuesta en la Ec. \eqref{eq:L_schrodinger} es estrictamente real. 
+    \item Calcule la cuadricorriente y la carga conservada asociada a la invarianza de fase global $U(1)$ del campo ($\psi \to e^{i\theta}\psi$). Concluya qué representa esta carga en el contexto de la mecánica cuántica.
+    \item  Calcule las cargas conservadas asociadas al tensor de momento-energía, comenzando con la cantidad de movimiento (traslaciones espaciales, $\mathbf{T}^0$) para obtener el operador de momento despés de usar el teorema de Gauss al integrar las densidades de carga para obtener la carga. Continue por la energía (traslaciones temporales, $T^0_{\ 0}$) y escriba el operador Hamiltoniano resultante en términos del operador de momento en lugar de psoibles gradientes o laplacianos.
+    \item Encuentre la ecuación de Euler-Lagrange para el campo conjugado $\psi^*$ y justifique física y matemáticamente por qué el resultado se puede reescribir en la forma compacta $i\frac{\partial}{\partial t} \psi = \hat{H} \psi$ con el operador Hamiltoniano, $\hat{H}$, encontrado en el punto anterior.
+    \item  En el estudio del campo de Klein-Gordon y el campo de Dirac, el campo conjugado se interpreta como creador de antipartículas. Explique de manera conceptual por qué $\psi^*$ \textbf{no} se interpreta como una antipartícula en el marco de este Lagrangiano de Schrödinger.
+\end{enumerate}
+
+\vspace{1cm}
+\hrule
+\vspace{1cm}
+
+\section*{Solución al Ejercicio}
+
+
+\subsection*{1) Realidad del Lagrangiano}
+Evaluamos el complejo conjugado de la Ec. \eqref{eq:L_schrodinger}:
+\begin{equation}
+    \mathcal{L}^* = \frac{1}{2m} \nabla\psi \cdot \nabla\psi^* + \frac{i}{2} \left( \psi \frac{\partial \psi^*}{\partial t} - \frac{\partial \psi}{\partial t} \psi^* \right) + \psi V \psi^*
+\end{equation}
+Reordenando los factores en el paréntesis temporal:
+\begin{equation}
+    \mathcal{L}^* = \frac{1}{2m} \nabla\psi^* \cdot \nabla\psi - \frac{i}{2} \left( \psi^* \frac{\partial \psi}{\partial t} - \frac{\partial \psi^*}{\partial t} \psi \right) + \psi^* V \psi = \mathcal{L}
+\end{equation}
+Por tanto, esta forma es \textbf{estrictamente real}.
+
+Considere ahora $\mathcal{L}_{\text{simple}} = i\psi^* \frac{\partial \psi}{\partial t} - \frac{1}{2m} \nabla\psi^* \cdot \nabla\psi - \psi^* V \psi$. Su conjugado es:
+\begin{equation}
+    \mathcal{L}_{\text{simple}}^* = -i\frac{\partial \psi^*}{\partial t}\psi - \frac{1}{2m} \nabla\psi^* \cdot \nabla\psi - \psi^* V \psi
+\end{equation}
+La diferencia entre ambos es:
+\begin{equation}
+    \mathcal{L}_{\text{simple}} - \mathcal{L}_{\text{simple}}^* = i\psi^* \frac{\partial \psi}{\partial t} + i\frac{\partial \psi^*}{\partial t}\psi = i \frac{\partial}{\partial t}(\psi^*\psi)
+\end{equation}
+Por ende, $\mathcal{L}_{\text{simple}} = \mathcal{L}_{\text{simple}}^* + i \partial_t(\psi^*\psi)$. La parte imaginaria es una \textbf{derivada total temporal}. Como las derivadas totales al integrarse en la Acción se evalúan en las fronteras (cuyas variaciones se anulan), no afectan la dinámica de Euler-Lagrange, demostrando que $\mathcal{L}_{\text{simple}}$ es físicamente válido y es real hasta una derivada total.
+
+
+\subsection*{2) Invarianza $U(1)$ y conservación de la probabilidad}
+Consideramos la transformación global $\psi \to e^{i\theta}\psi \approx \psi + i\theta\psi$ y $\psi^* \to \psi^* - i\theta\psi^*$. Omitiendo $\theta$, los coeficientes de Noether son $a_1 = i\psi$ y $a_2 = -i\psi^*$.
+La componente temporal de la corriente (densidad de carga) es:
+\begin{align}
+    j^0 &= \frac{\partial \mathcal{L}}{\partial(\partial_0 \psi)} a_1 + \frac{\partial \mathcal{L}}{\partial(\partial_0 \psi^*)} a_2 \nonumber \\
+    &= \left(-\frac{i}{2}\psi^*\right)(i\psi) + \left(\frac{i}{2}\psi\right)(-i\psi^*) \nonumber \\
+    &= \frac{1}{2}\psi^*\psi + \frac{1}{2}\psi^*\psi = \psi^*\psi = |\psi|^2
+\end{align}
+La componente espacial (densidad de corriente) es:
+\begin{align}
+    j^i &= \frac{\partial \mathcal{L}}{\partial(\partial_i \psi)} a_1 + \frac{\partial \mathcal{L}}{\partial(\partial_i \psi^*)} a_2 \nonumber \\
+    &= \left(\frac{1}{2m}\partial_i\psi^*\right)(i\psi) + \left(\frac{1}{2m}\partial_i\psi\right)(-i\psi^*) \nonumber \\
+    \mathbf{j} &= \frac{i}{2m}(\psi \nabla\psi^* - \psi^* \nabla\psi)
+\end{align}
+La carga total conservada es $Q = \int \psi^*\psi \, d^3x$. Físicamente, como $|\psi|^2 \ge 0$, esta cantidad se interpreta sin ambigüedad como la \textbf{probabilidad total} de encontrar a la partícula, demostrando que la conservación de la probabilidad cuántica surge de la invarianza de fase del Lagrangiano.
+
+\subsection*{3) Tensor Momento-Energía y cargas conservadas}
+\textbf{Cantidad de movimiento (Traslación espacial, $\nu = i$):}
+\begin{align}
+    T^0_{\ i} &= \frac{\partial \mathcal{L}}{\partial(\partial_0\psi)} (\partial_i\psi) + \frac{\partial \mathcal{L}}{\partial(\partial_0\psi^*)} (\partial_i\psi^*) \nonumber \\
+    &= -\frac{i}{2}\psi^*(\partial_i\psi) + \frac{i}{2}(\partial_i\psi^*)\psi
+\end{align}
+En forma vectorial, $\mathbf{T}^0 = \frac{i}{2}(\psi\nabla\psi^* - \psi^*\nabla\psi)$. Usando la identidad $\nabla(\psi^*\psi) = (\nabla\psi^*)\psi + \psi^*(\nabla\psi)$, reescribimos:
+\begin{equation}
+    \mathbf{T}^0 = -i\psi^*\nabla\psi + \frac{i}{2}\nabla(\psi^*\psi)
+\end{equation}
+La cantidad de movimiento total es $\mathbf{P} = \int \mathbf{T}^0 d^3x$. La integral del gradiente $\frac{i}{2}\nabla(\psi^*\psi)$ se anula en el infinito por el teorema de Gauss. Sabiendo que $\mathbf{\hat{p}} = -i\nabla$:
+\begin{equation}
+    \mathbf{P} = \int \psi^* \mathbf{\hat{p}} \psi \, d^3x = \langle \mathbf{\hat{p}} \rangle
+\end{equation}
+\textbf{Energía (Traslación temporal, $\nu = 0$):}
+\begin{align}
+    T^0_{\ 0} &= \frac{\partial \mathcal{L}}{\partial(\partial_0\psi)}\partial_0\psi + \frac{\partial \mathcal{L}}{\partial(\partial_0\psi^*)}\partial_0\psi^* - \mathcal{L} \nonumber \\
+    &= \left(-\frac{i}{2}\psi^*\right)\partial_0\psi + \left(\frac{i}{2}\psi\right)\partial_0\psi^* - \mathcal{L}
+\end{align}
+Notemos que los primeros dos términos corresponden a la parte temporal de $\mathcal{L}$. Al restar $\mathcal{L}$ completo, la parte temporal se cancela y solo queda la parte espacial y el potencial con signo opuesto:
+\begin{equation}
+    T^0_{\ 0} = -\frac{1}{2m} \nabla\psi^* \cdot \nabla\psi - \psi^* V \psi
+\end{equation}
+Definiendo la densidad Hamiltoniana positiva $\mathcal{H} = -T^0_{\ 0}$ e integrando sobre el volumen:
+\begin{equation}
+    E = \int \left( \frac{1}{2m} \nabla\psi^* \cdot \nabla\psi + \psi^* V \psi \right) d^3x
+\end{equation}
+Usando $\nabla \cdot (\psi^*\nabla\psi) = \nabla\psi^* \cdot \nabla\psi + \psi^*\nabla^2\psi$ y descartando la divergencia total:
+\begin{equation}
+    E = \int \psi^* \left( -\frac{1}{2m}\nabla^2 + V \right) \psi \, d^3x = \langle \hat{H} \rangle
+\end{equation}
+
+\subsection*{4) Ecuación de Euler-Lagrange y el Operador Hamiltoniano}
+Tratando a $\psi^*$ como el campo independiente, aplicamos la ecuación de Euler-Lagrange, separando las derivadas temporales ($\partial_0 = \partial/\partial t$) y espaciales ($\partial_i \to \nabla$):
+\begin{equation}
+    \partial_0 \left[ \frac{\partial \mathcal{L}}{\partial(\partial_0\psi^*)} \right] + \partial_i \left[ \frac{\partial \mathcal{L}}{\partial(\partial_i\psi^*)} \right] - \frac{\partial \mathcal{L}}{\partial\psi^*} = 0
+\end{equation}
+Calculamos cada término de la Ecuación \eqref{eq:L_schrodinger}:
+\begin{align}
+    \frac{\partial \mathcal{L}}{\partial(\partial_0\psi^*)} &= \frac{i}{2}\psi \\
+    \frac{\partial \mathcal{L}}{\partial(\partial_i\psi^*)} &= \frac{1}{2m}\partial_i\psi \\
+    \frac{\partial \mathcal{L}}{\partial\psi^*} &= -\frac{i}{2}\partial_0\psi + V\psi
+\end{align}
+Sustituyendo estos resultados en la ecuación de movimiento:
+\begin{equation}
+    \partial_0 \left( \frac{i}{2}\psi \right) + \partial_i \left( \frac{1}{2m}\partial_i\psi \right) - \left( -\frac{i}{2}\partial_0\psi + V\psi \right) = 0
+\end{equation}
+Agrupando y usando $\partial_i\partial_i = \nabla^2$:
+\begin{equation}
+    i\frac{\partial \psi}{\partial t} + \frac{1}{2m}\nabla^2\psi - V\psi = 0 \quad \implies \quad i\frac{\partial \psi}{\partial t} = \left(-\frac{1}{2m}\nabla^2 + V\right)\psi
+\end{equation}
+\textbf{Justificación de la forma $i\partial_t \psi = \hat{H} \psi$:} 
+Como se verá en el inciso (c), al aplicar el Teorema de Noether para la invarianza temporal, la densidad de energía clásica del campo resulta ser $\mathcal{H} = \frac{1}{2m} \nabla\psi^* \cdot \nabla\psi + \psi^* V \psi$. Al integrar esto por partes para obtener la energía total $E$, obtenemos $E = \int \psi^* \left(-\frac{1}{2m}\nabla^2 + V\right) \psi \, d^3x$. Al comparar este resultado con el postulado de los valores esperados de la mecánica cuántica ($\langle \hat{H} \rangle = \int \psi^* \hat{H} \psi \, d^3x$), identificamos irremediablemente al operador $\hat{H} = -\frac{1}{2m}\nabla^2 + V$ como el operador de energía. Por lo tanto, reescribir la ecuación de Euler-Lagrange como $i\partial_t \psi = \hat{H} \psi$ es una exigencia de la consistencia matemática entre las simetrías del campo y los postulados cuánticos.
+
+
+
+\subsection*{5) Interpretación del campo conjugado ($\psi^*$)}
+A diferencia de los campos relativistas (Klein-Gordon, Dirac) que presentan segundas derivadas temporales (o relaciones de dispersión $E = \pm\sqrt{p^2+m^2}$ que habilitan energías negativas), el Lagrangiano de Schrödinger es \textbf{lineal en la primera derivada temporal}. 
+
+Como se demostró en el inciso (b), esta primera derivada provoca que la densidad de carga de Noether sea estrictamente definida positiva ($j^0 = |\psi|^2 \ge 0$). Al no admitir cargas conservadas negativas, no existe el imperativo matemático de interpretar a $\psi^*$ como una antipartícula que restaure la estabilidad del sistema. En la mecánica cuántica no relativista, $\psi^*$ actúa únicamente como el conjugado matemático indispensable para garantizar que el Lagrangiano sea real y que los observables extraídos de la Acción (energía, momentum, probabilidad) sean magnitudes físicas (reales). Las antipartículas emergen estrictamente del matrimonio entre la Mecánica Cuántica y la Relatividad Especial.
 
 
 
