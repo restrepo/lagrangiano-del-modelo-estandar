@@ -1312,7 +1312,10 @@ Definiendo el \emph{espinor de Dirac}  y su hermítico conjugado como
    \left( \xi_{\alpha} \right)^{\dagger} & \left( \eta^{\dagger\;\dot{\alpha}} \right)^{\dagger}    
   \end{pmatrix}=  \begin{pmatrix}
   \xi^{\dagger}_{\dot{\alpha}}& \eta^{\alpha}
-  \end{pmatrix}
+\end{pmatrix}
+= \begin{pmatrix}                                
+\left(e_L\right)^\dagger   & \left(e_R\right)^\dagger \\
+  \end{pmatrix}                                
 \end{align}
 y usando \eqref{eq:exxe}, tenemos en primer lugar que
 \begin{align}
@@ -1401,7 +1404,22 @@ Usando (\ref{eq:psid}), (\ref{eq:psidm}) y (\ref{eq:psidd})
 \end{align}
 Definiendo finalmente el \emph{espinor de Dirac adjunto}
 \begin{align}
-  \overline{\Psi}=\Psi^{\dagger}\gamma^{0}\,,
+  \overline{\Psi}=&\Psi^{\dagger}\gamma^{0}\\
+     =& \begin{pmatrix}
+  \xi^{\dagger}_{\dot{\alpha}}& \eta^{\alpha}
+  \end{pmatrix}
+\begin{pmatrix}
+   0           &\sigma^{\mu}_{\alpha\dot{\alpha}}\\
+    \overline{\sigma}^{\mu\;\dot{\alpha}\alpha} &0\\
+  \end{pmatrix}\\
+=& \begin{pmatrix}
+  \eta^{\alpha}\sigma^{\mu}_{\alpha\dot{\alpha}}&
+  \xi^{\dagger}_{\dot{\alpha}}\overline{\sigma}^{\mu\;\dot{\alpha}\alpha}
+\end{pmatrix}\\
+=& \begin{pmatrix}
+  \left(e_R\right)^\dagger \sigma^{\mu}&
+\left(e_R\right)^\dagger  \overline{\sigma}^{\mu}
+\end{pmatrix}
 \end{align}
 podemos escribir finalmente el Lagrangiano para espinores de Dirac  como
 \begin{align}
@@ -1417,8 +1435,6 @@ En términos de los campos de Weyl un escalar y un vector de espinores Dirac se 
   \overline{\Psi}\Psi =& \left( e_R \right)^\dagger e_L+\left( e_L \right)^{\dagger}e_R \nonumber\\
   \overline{\Psi}\gamma^{\mu}\Psi=& (e_L)^{\dagger}\overline{\sigma}^{\mu}e_L+(e_R)^{\dagger}\sigma^{\mu}e_{R}\,,
 \end{align}
-
-
 Un tratamiento de la invarianza de Lorentz para la Acción de Dirac esta dado en el Apéndice~\ref{cha:dirac-action}. 
 
 \begin{frame}[fragile,allowframebreaks]
@@ -1442,11 +1458,59 @@ donde
 \end{frame}
 Antes de intentar tomar el límite no relativista, y para ser consistentes con relatividad espacial, se debe cambiar el Lagangiano por uno que tenga la invarianza de fase local. En tal caso, el Hamiltoniano resultante se debe reducir al Hamiltoniano de  Sch\"odinger en presencia de un campo electrómagnético (ver Apéndice \ref{sec:limite-no-relat}).
 
-\textbf{Ejercicio} Calcule la corriente de carga conservada asociada la corriente $\operatorname{U}(1)$ y el tensor de energía-momentum para el Lagrangiano de Dirac.
+
+%\textbf{Ejercicio} Calcule la corriente de carga conservada asociada la corriente $\operatorname{U}(1)$ y el tensor de energía-momentum para el Lagrangiano de Dirac.
+
 
 % \begin{subappendices}
 % \end{subappendices}
 
+
+\begin{frame}[fragile,allowframebreaks]
+\section{El Campo de Dirac y el Operador de Carga Eléctrica}
+
+En contraste con el campo escalar, podemos realizar una interpretación formal directa de la corriente en el Lagrangiano de Dirac utilizando generadores de grupo. Considere el Lagrangiano libre:
+\begin{equation}
+    \mathcal{L} = \bar{\psi}(i\gamma^\mu \partial_\mu - m)\psi \, .
+\end{equation}
+
+Definamos la transformación de fase global $U(1)$ en términos de un \textbf{operador de carga eléctrica} $\hat{Q}$. La transformación sobre el espinor se escribe como:
+\begin{equation}
+    \psi \to \psi' = e^{i\theta \hat{Q}} \psi \quad \implies \quad \delta\psi = i\theta \hat{Q}\psi \, ,
+\end{equation}
+donde $\theta$ es un parámetro infinitesimal. En el formalismo de campos, exigimos que la aplicación del operador $\hat{Q}$ sobre el campo entregue su respectivo autovalor de carga. Si el campo $\psi$ describe un fermión con carga $q$, entonces:
+\begin{equation}
+    \hat{Q}\psi = q\psi \, .
+\end{equation}
+
+Para que el Lagrangiano sea invariante ($\bar{\psi}'\psi' = \bar{\psi}\psi$), el espinor adjunto debe transformarse con la fase opuesta:
+\begin{equation}
+    \bar{\psi} \to \bar{\psi}' = \bar{\psi} e^{-i\theta \hat{Q}} \quad \implies \quad \delta\bar{\psi} = -i\theta \bar{\psi} \hat{Q} \, .
+\end{equation}
+Dado que el campo adjunto $\bar{\psi}$ opera creando partículas (o aniquilando antipartículas), su comportamiento bajo el operador de carga resulta en el autovalor opuesto, garantizando el balance algebraico de la simetría.
+
+Aplicando el Teorema de Noether, la corriente conservada asociada a este generador es:
+\begin{align}
+    j^\mu &= \frac{\partial \mathcal{L}}{\partial(\partial_\mu \psi)} \frac{\delta\psi}{\theta} \nonumber \\
+    &= (i\bar{\psi}\gamma^\mu) (i\hat{Q}\psi) \nonumber \\
+    &= -\bar{\psi}\gamma^\mu \hat{Q}\psi \, .
+\end{align}
+
+Sustituyendo el autovalor del campo ($\hat{Q}\psi = q\psi$), obtenemos:
+\begin{equation}
+    j^\mu = -q \bar{\psi}\gamma^\mu \psi \, .
+\end{equation}
+Si el campo describe al electrón, su carga es $q = -e$. La cuadricorriente toma entonces su forma definitiva y célebre en la Electrodinámica Cuántica (QED):
+\begin{equation}
+    j^\mu_{EM} = e \bar{\psi}\gamma^\mu \psi \, .
+\end{equation}
+
+\subsubsection*{Interpretación Ontológica:} 
+En la mecánica cuántica no relativista, se acostumbraba a interpretar la componente $j^0 = \psi^\dagger \psi$ puramente como la probabilidad de hallar a la partícula. Sin embargo, al incorporar el operador de carga $\hat{Q}$ de forma rigurosa en el Teorema de Noether, la densidad temporal toma la forma $j^0 = \psi^\dagger \hat{Q} \psi$. 
+
+Esta formulación obliga a reinterpretar la magnitud conservada. Ya no estamos ante una corriente de probabilidad, sino ante una genuina \textbf{cuadricorriente de carga eléctrica}. Esta transición es conceptualmente obligatoria en la Teoría Cuántica de Campos, ya que en un régimen donde partículas y antipartículas pueden ser creadas y aniquiladas, el número de partículas (probabilidad) no se conserva; lo que el Universo preserva de forma estricta y fundamental a nivel local es el balance de sus cargas internas.
+
+\end{frame}
 
 \section{Problemas}
 
