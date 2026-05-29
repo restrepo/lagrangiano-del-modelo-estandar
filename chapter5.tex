@@ -612,7 +612,7 @@ Los protones, neutrones, piones, kaones y demás hadrones, son partículas compu
 donde los últimos subíndices hacen referencia a los colores red, blue, green. De este modo los Bariones y mesones están descritos por combinaciones singletes de color del tipo $q_r q_b q_g$ y $q_r\bar{q}_r$,
 \begin{equation}
 \label{eq:199qft}
-  B=\frac{1}{\sqrt{6}}\epsilon_{\alpha\beta\gamma}
+  B=\frac{1}{\sqrt{6}}\epsilon^{\alpha\beta\gamma}
   \left|q_\alpha q_\beta q_\gamma\right\rangle \qquad M=\frac{1}{\sqrt{3}}\delta^{\alpha\beta}\left|\bar{q}_{\alpha}q_\beta\right\rangle
 \end{equation}
 Estos estados son singletes de color. Algunos ejemplos de baryones y mesones formados por quarks $u$ y $d$ se muestran en la tabla~\ref{tab:baryonsmesons}
@@ -799,9 +799,10 @@ Por consiguiente
   {\mathcal{D}'}^\mu U=U\mathcal{D}^\mu
 \end{equation}
 \begin{equation}
+  \label{eq:udu}
   \mathcal{D}^\mu\to\left(
     \mathcal{D}^\mu
-  \right)'=U\mathcal{D}^\mu U^{-1}
+  \right)'=U\mathcal{D}^\mu U^{-1}\,.
 \end{equation}
 Desarrollando a ambos lados
 \begin{align}
@@ -886,149 +887,130 @@ $\alpha=\dfrac{e^2}{4\pi}\approx 1/137$ & $\alpha_s=\dfrac{g_s^2}{4\pi}>1$ & \pa
 \end{frame}
 
 
-\subsection{Tensores cromodinámicos}
-
-%Logica actual:
-% 1 G es campo de materia y requiere definir una derivada covariante
-% 2 Construya tensor con derivadas covariantes
-% 3 Encuentre como tranforma un tensor
-% 2 Demuestre que la derivada covariante de Gmunu transforma como Gmunu
-
-
-Note entonces que en el lenguage de los teoremas de Noether, el campo $G^{\mu}_{a}$ transforma como un campo de materia y un campo de radiación a la vez, es decir, su transformación depende tanto del parámetro como de la derivada del parámetro. Por consiguiente, es conveniente definir la derivada covariante del campo $G^{\nu}_{a}$. Para ello se debe introducir la representación adjunta de $\operatorname{SU}(N)$.
+\subsection{Construcción del tensor cromodinámico a partir de la derivada covariante}
+\label{sec:construccion_tensor_color}
 
 \begin{frame}[fragile,allowframebreaks]
-La representación adjunta de $\operatorname{SU}(3)$, consiste en las 8 matrices $8\times 8$
+El principio gauge local nos dictamina que para mantener la invarianza de la teoría, las derivadas parciales ordinarias deben ser promovidas a derivadas covariantes. En la Electrodinámica Cuántica (simetría abeliana $U(1)$), el tensor de campo electromagnético se construye a partir de derivadas normales:
+\begin{equation}
+    F_{\mu\nu} = \partial_\mu A_\nu - \partial_\nu A_\mu \, .
+\end{equation}
+
+Para generalizar este concepto a la Cromodinámica Cuántica (simetría no abeliana $SU(3)_c$), resulta natural agrupar los 8 campos de gluones $G^a_\mu$ en una única matriz $3 \times 3$ utilizando los generadores del grupo, $\Lambda_a$:
+\begin{equation}
+    {G}_\mu \equiv \Lambda_a G^a_\mu \, .
+\end{equation}
+
+Note entonces que en el lenguage de los teoremas de Noether, el campo $G^{\mu}_{a}$ transforma como un campo de materia y un campo de radiación a la vez, es decir, su transformación depende tanto del parámetro como de la derivada del parámetro. Por consiguiente, es conveniente definir la derivada covariante del campo $G^{\nu}_{a}$ como
 \begin{align}
-  \left[  \widetilde{\Lambda}^{a}\right]_{bc}=-i {f^{a}}_{bc}\,.
+  \mathcal{D}_\mu G_\nu  = (\mathbf{1}\partial_\mu - i g_s {G}_\mu) {G}_\nu\,.
 \end{align}
+
+Inspirados por la forma del tensor electromagnético, postulamos que la matrix de tensores cromodinámicos, ${G}_{\mu\nu}$,  debe construirse reemplazando las derivadas normales por la \textbf{derivada covariante} anterior. Aplicando esta sustitución a la definición geométrica del tensor, tenemos:
+\begin{align}
+    {G}_{\mu\nu} &\equiv \mathcal{D}_\mu {G}_\nu - \mathcal{D}_\nu {G}_\mu \nonumber \\
+    &= (\partial_\mu - i g_s {G}_\mu) {G}_\nu - (\partial_\nu - i g_s {G}_\nu) {G}_\mu \nonumber \\
+    &= \partial_\mu {G}_\nu - \partial_\nu {G}_\mu - i g_s ({G}_\mu {G}_\nu - {G}_\nu {G}_\mu) \nonumber \\
+    &= \partial_\mu {G}_\nu - \partial_\nu {G}_\mu - i g_s [{G}_\mu, {G}_\nu] \, .
+    \label{eq:tensor_matricial_qcd}
+\end{align}
+
+Para extraer las componentes de color individuales $G^a_{\mu\nu}$, expandimos la Ecuación \eqref{eq:tensor_matricial_qcd} utilizando el álgebra de los generadores $[\Lambda_b, \Lambda_c] = i f_{abc} \Lambda_a$:
+\begin{align}
+    \Lambda_a G^a_{\mu\nu} &= \Lambda_a (\partial_\mu G^a_\nu - \partial_\nu G^a_\mu) - i g_s \left[ \Lambda_b G^b_\mu, \Lambda_c G^c_\nu \right] \nonumber \\
+    &= \Lambda_a (\partial_\mu G^a_\nu - \partial_\nu G^a_\mu) - i g_s (i f_{abc} \Lambda_a) G^b_\mu G^c_\nu \, .
+\end{align}
+Factorizando $\Lambda_a$, obtenemos el tensor cromodinámico para cada componente de color:
+\begin{equation}
+    G^a_{\mu\nu} = \partial_\mu G^a_\nu - \partial_\nu G^a_\mu + g_s f^{abc} G^b_\mu G^c_\nu \, .
+\end{equation}
+Si el grupo fuera abeliano, las constantes de estructura $f^{abc}$ serían cero y recuperaríamos la forma exacta de $F_{\mu\nu}$. 
 \end{frame}
 
-\noindent
-\textbf{Ejemplo:} Definiendo $\Sigma_i$ como las matrices $3\times3$ generadores de $\operatorname{SU}(2)$ en la representaci\'on adjunta
-\begin{align}
-  (\Sigma_i)_{jk}=-i\epsilon_{ijk}\,,
-\end{align}
-hemos comprobado en la ec.~\eqref{eq:adjrepsu2} que
-\begin{align}
-  \left[{\Sigma_i},{\Sigma_j}\right]&=i\epsilon_{ijk}{\Sigma_k}\nonumber\\
-  \left[{\Sigma_i},{\Sigma_j}\right]_{lm}&=i\epsilon_{ijk}(\Sigma_k)_{lm}\,.
-\end{align}
-\noindent
-\textbf{Ejercicio:} Demostar que la representación adjunta satisface el álgebra de $\operatorname{SU}(3)$.
 
-\begin{frame}[fragile,allowframebreaks]
-La derivada covariante en la representación adjunta es
-\begin{align}
-  \mathcal{D}_{\mu}=&\mathbf{1}\partial_{\mu}-i g_s \mathbb{G}_{\mu}  \nonumber\\
-=&\mathbf{1}\partial_{\mu}-i g_s \widetilde{\Lambda}_a G_{\mu}^{a} \,,
-\end{align}
-donde
-\begin{align}
-  \mathbb{G}_{\mu}\equiv \widetilde{\Lambda}_a G_{\mu}^{a}\,,
-\end{align}
-\end{frame}
-es ahora una matriz $8\times8$ de campos de gluones en la representación adjunta. En componentes
-\begin{align}
- \left[\mathcal{D}_{\mu} \right]^b_c=&\delta^b_c\partial_{\mu}-i g_{s}\left[ \widetilde{\Lambda}_{a} G^a_{\mu} \right]^b_c \nonumber\\
-                  =&\delta^b_c\partial_{\mu}- g_{s} {f_{a}}^{bc}  G^a_{\mu} \,.
-\end{align}
-
-Esta derivada se puede aplicar a la matriz de campo de gluones:
-\begin{align}
-  \mathcal{D}_{\mu}  \mathbb{G}_{\nu}=& \left(\mathbf{1}\partial_{\mu}-i g_s \mathbb{G}_{\mu} \right)\mathbb{G}_{\nu}
-\end{align}
-o en componentes
-\begin{align}
-  \left[ \mathcal{D}_{\mu} \right]^{a}_{b} \left[ \mathbb{G}_{\nu} \right]^b_c=& \left(\delta^a_b\partial_{\mu}-i g_s \left[ \mathbb{G}_{\mu} \right]^{a}_{b} \right)\left[ \mathbb{G}_{\nu} \right]^b_c \nonumber\\
-    =& \left(\delta^a_b\partial_{\mu}-i g_s \left[  \widetilde{\Lambda}_c \right]^a_b G^c_{\mu} \right) \left[  \widetilde{\Lambda}_d \right]^b_cG_{\nu}^{d}\,.
-\end{align}
-
-Veamos como transforma la derivada covariante de la matriz de campos de gluones en la representación adjunta, donde un elemento $8\times 8$ del grupo $\operatorname{SU}(3)$ se define ahora como
-\begin{align}
-  \widetilde{U}=\exp \left[ i\theta_a(x) \widetilde{\Lambda} \right].
-\end{align}
-Entonces
+  Calculemos ahora la transformación guage de $G_{\mu\nu}$
 \begin{align}
 \label{eq:tdcg}
- \mathcal{D}_{\mu} \mathbb{G}_{\nu}\to   \left(   \mathcal{D}_{\mu} \mathbb{G}_{\nu} \right)' =&
-\left[\boldsymbol{1}\partial_{\mu}-i g_s\left(\widetilde{U} \mathbb{G}_\mu \widetilde{U}^{\dagger}-\frac{i}{g_s}\left(\partial_\mu \widetilde{U}\right)\widetilde{U}^\dagger  \right)   \right] \left(\widetilde{U} \mathbb{G}_\nu \widetilde{U}^{\dagger}-\frac{i}{g_s}\left(\partial_\nu \widetilde{U}\right)\widetilde{U}^\dagger  \right) \nonumber\\
+ \mathcal{D}_{\mu} {G}_{\nu}\to   \left(   \mathcal{D}_{\mu} {G}_{\nu} \right)' =&
+\left[\boldsymbol{1}\partial_{\mu}-i g_s\left({U} {G}_\mu {U}^{\dagger}-\frac{i}{g_s}\left(\partial_\mu {U}\right){U}^\dagger  \right)   \right] \left({U} {G}_\nu {U}^{\dagger}-\frac{i}{g_s}\left(\partial_\nu {U}\right){U}^\dagger  \right) \nonumber\\
 =&
-\left[\boldsymbol{1}\partial_{\mu}-i g_s\widetilde{U} \mathbb{G}_\mu \widetilde{U}^{\dagger}-\left(\partial_\mu \widetilde{U}\right)\widetilde{U}^\dagger   \right] \left(\widetilde{U} \mathbb{G}_\nu \widetilde{U}^{\dagger}-\frac{i}{g_s}\left(\partial_\nu \widetilde{U}\right)\widetilde{U}^\dagger  \right) \nonumber\\
+\left[\boldsymbol{1}\partial_{\mu}-i g_s{U} {G}_\mu {U}^{\dagger}-\left(\partial_\mu {U}\right){U}^\dagger   \right] \left({U} {G}_\nu {U}^{\dagger}-\frac{i}{g_s}\left(\partial_\nu {U}\right){U}^\dagger  \right) \nonumber\\
 =&
-\partial_{\mu} \left(\widetilde{U} \mathbb{G}_\nu \widetilde{U}^{\dagger}-\frac{i}{g_s}\left(\partial_\nu \widetilde{U}\right)\widetilde{U}^\dagger  \right)
--i g_s\widetilde{U} \mathbb{G}_\mu \widetilde{U}^{\dagger}\left(\widetilde{U} \mathbb{G}_\nu \widetilde{U}^{\dagger}-\frac{i}{g_s}\left(\partial_\nu \widetilde{U}\right)\widetilde{U}^\dagger  \right)
+\partial_{\mu} \left({U} {G}_\nu {U}^{\dagger}-\frac{i}{g_s}\left(\partial_\nu {U}\right){U}^\dagger  \right)
+-i g_s{U} {G}_\mu {U}^{\dagger}\left({U} {G}_\nu {U}^{\dagger}-\frac{i}{g_s}\left(\partial_\nu {U}\right){U}^\dagger  \right)
 \nonumber\\
-&-\left(\partial_\mu \widetilde{U}\right)\widetilde{U}^\dagger\left(\widetilde{U} \mathbb{G}_\nu \widetilde{U}^{\dagger}-\frac{i}{g_s}\left(\partial_\nu \widetilde{U}\right)\widetilde{U}^\dagger  \right) \nonumber\\
-  =& \cancel{\left(\partial_{\mu} \widetilde{U} \right) \mathbb{G}_\nu \widetilde{U}^{\dagger}} + \widetilde{U}
-  \left( \partial_{\mu}\mathbb{G}_\nu \right) \widetilde{U}^{\dagger} + \widetilde{U}
-  \mathbb{G}_{\nu} \partial_{\mu} \widetilde{U}^{\dagger} -\frac{i}{g_s}\partial_{\mu}
-  \left[ \left( \partial_{\nu}\widetilde{U} \right)\widetilde{U}^{\dagger} \right]
+&-\left(\partial_\mu {U}\right){U}^\dagger\left({U} {G}_\nu {U}^{\dagger}-\frac{i}{g_s}\left(\partial_\nu {U}\right){U}^\dagger  \right) \nonumber\\
+  =& \cancel{\left(\partial_{\mu} {U} \right) {G}_\nu {U}^{\dagger}} + {U}
+  \left( \partial_{\mu}{G}_\nu \right) {U}^{\dagger} + {U}
+  {G}_{\nu} \partial_{\mu} {U}^{\dagger} -\frac{i}{g_s}\partial_{\mu}
+  \left[ \left( \partial_{\nu}{U} \right){U}^{\dagger} \right]
   \nonumber\\
-  &-i g_s \widetilde{U} \mathbb{G}_{\mu}\mathbb{G}_{\nu}\widetilde{U}^{\dagger}- \widetilde{U}\mathbb{G}_{\mu} \widetilde{U}^{\dagger} \left( \partial_{\nu} \widetilde{U}\right)\widetilde{U}^{\dagger} \nonumber\\
-  &-\cancel{\left( \partial_{\mu}\widetilde{U} \right)\mathbb{G}_{\nu} \widetilde{U}^{\dagger}}
-  +\frac{i}{g_s} \left( \partial_{\mu}\widetilde{U} \right) \widetilde{U}^{\dagger} \left( \partial_{\nu}\widetilde{U} \right) \widetilde{U}^{\dagger} \nonumber\\
-  =& \widetilde{U} \left( \partial_{\mu}\mathbb{G}_\nu \right) \widetilde{U}^{\dagger} + \widetilde{U}
-  \mathbb{G}_{\nu} \partial_{\mu} \widetilde{U}^{\dagger}
-  -\cancel{\frac{i}{g_s}\partial_{\mu} \left[ \widetilde{U}
-      \widetilde{U}^{\dagger}\left( \partial_{\nu}\widetilde{U} \right)\widetilde{U}^{\dagger} \right]}
+  &-i g_s {U} {G}_{\mu}{G}_{\nu}{U}^{\dagger}- {U}{G}_{\mu} {U}^{\dagger} \left( \partial_{\nu} {U}\right){U}^{\dagger} \nonumber\\
+  &-\cancel{\left( \partial_{\mu}{U} \right){G}_{\nu} {U}^{\dagger}}
+  +\frac{i}{g_s} \left( \partial_{\mu}{U} \right) {U}^{\dagger} \left( \partial_{\nu}{U} \right) {U}^{\dagger} \nonumber\\
+  =& {U} \left( \partial_{\mu}{G}_\nu \right) {U}^{\dagger} + {U}
+  {G}_{\nu} \partial_{\mu} {U}^{\dagger}
+  -\cancel{\frac{i}{g_s}\partial_{\mu} \left[ {U}
+      {U}^{\dagger}\left( \partial_{\nu}{U} \right){U}^{\dagger} \right]}
   \nonumber\\
-  &-i g_s \widetilde{U} \mathbb{G}_{\mu}\mathbb{G}_{\nu}\widetilde{U}^{\dagger}- \widetilde{U}\mathbb{G}_{\mu}
-  \widetilde{U}^{\dagger}\cancel{ \partial_{\nu}\left( \widetilde{U}\widetilde{U}^{\dagger} \right)}+
-  \widetilde{U}\mathbb{G}_{\mu} \widetilde{U}^{\dagger} \widetilde{U}\partial_{\nu}\widetilde{U}^{\dagger}
+  &-i g_s {U} {G}_{\mu}{G}_{\nu}{U}^{\dagger}- {U}{G}_{\mu}
+  {U}^{\dagger}\cancel{ \partial_{\nu}\left( {U}{U}^{\dagger} \right)}+
+  {U}{G}_{\mu} {U}^{\dagger} {U}\partial_{\nu}{U}^{\dagger}
   \nonumber\\
-  &+\cancel{\frac{i}{g_s} \partial_{\mu} \left[ \widetilde{U} \widetilde{U}^{\dagger}
-      \left( \partial_{\nu}\widetilde{U} \right) \widetilde{U}^{\dagger}\right]}-
-  \frac{i}{g_s} \widetilde{U} \partial_{\mu} \left[ \widetilde{U}^{\dagger}
-    \left( \partial_{\nu}\widetilde{U} \right) \widetilde{U}^{\dagger}\right]
+  &+\cancel{\frac{i}{g_s} \partial_{\mu} \left[ {U} {U}^{\dagger}
+      \left( \partial_{\nu}{U} \right) {U}^{\dagger}\right]}-
+  \frac{i}{g_s} {U} \partial_{\mu} \left[ {U}^{\dagger}
+    \left( \partial_{\nu}{U} \right) {U}^{\dagger}\right]
 \end{align}
 Ya que
 \begin{align}
- \partial_{\mu} \left[ \widetilde{U}^{\dagger}
-    \left( \partial_{\nu}\widetilde{U} \right) \widetilde{U}^{\dagger}\right]=&
- \partial_{\mu} \left[ \widetilde{U}^{\dagger}
-    \cancel{\partial_{\nu}\left( \widetilde{U} \widetilde{U}^{\dagger}\right)} -\widetilde{U}^{\dagger}\widetilde{U} \partial_{\nu} \widetilde{U}^{\dagger}\right] \nonumber\\
-=&- \partial_{\mu} \left[ \widetilde{U}^{\dagger} \widetilde{U} \partial_{\nu} \widetilde{U}^{\dagger}\right] \nonumber\\
-=&- \partial_{\mu}  \partial_{\nu} \widetilde{U}^{\dagger} \,,
+ \partial_{\mu} \left[ {U}^{\dagger}
+    \left( \partial_{\nu}{U} \right) {U}^{\dagger}\right]=&
+ \partial_{\mu} \left[ {U}^{\dagger}
+    \cancel{\partial_{\nu}\left( {U} {U}^{\dagger}\right)} -{U}^{\dagger}{U} \partial_{\nu} {U}^{\dagger}\right] \nonumber\\
+=&- \partial_{\mu} \left[ {U}^{\dagger} {U} \partial_{\nu} {U}^{\dagger}\right] \nonumber\\
+=&- \partial_{\mu}  \partial_{\nu} {U}^{\dagger} \,,
 \end{align}
+\begin{frame}[fragile,allowframebreaks]
 entonces
 \begin{align}
 \label{eq:Dmup}
-\mathcal{D}_{\mu} \mathbb{G}_{\nu}\to   \left(   \mathcal{D}_{\mu} \mathbb{G}_{\nu} \right)' =& \widetilde{U} \left[ \left( \partial_{\mu}-ig_s \mathbb{G}_{\mu} \right)\mathbb{G}_\nu   \right]\widetilde{U}^{\dagger}
-    + \widetilde{U} \left[ \mathbb{G}_{\nu} \partial_{\mu}+\mathbb{G}_{\mu}\partial_{\nu}+\frac{i}{g_s} \partial_{\mu}\partial_{\nu} \right] \widetilde{U}^{\dagger} \nonumber\\
- =& \widetilde{U} \left( \mathcal{D}_{\mu}\mathbb{G}_\nu   \right)\widetilde{U}^{\dagger}
-    + \widetilde{U} \left[ \mathbb{G}_{\nu} \partial_{\mu}+\mathbb{G}_{\mu}\partial_{\nu}+\frac{i}{g_s} \partial_{\mu}\partial_{\nu} \right] \widetilde{U}^{\dagger} \,.%\nonumber\\
- %  =& \widetilde{U} \left( \mathcal{D}_{\mu}\mathbb{G}_\nu   \right)\widetilde{U}^{\dagger}
- %    + \widetilde{U}  \mathbb{G}_{\nu} \partial_{\mu}\widetilde{U}^{\dagger}-\frac{i}{g_s} \widetilde{U}\left(\partial_{\mu}+ig_s \mathbb{G}_{\mu} \right)\partial_{\nu}  \widetilde{U}^{\dagger} \nonumber\\
- % =& \widetilde{U} \left( \mathcal{D}_{\mu}\mathbb{G}_\nu   \right)\widetilde{U}^{\dagger}
- %  \right]  + \widetilde{U}  \mathbb{G}_{\nu} \partial_{\mu} \widetilde{U}^{\dagger}-\frac{i}{g_s}\widetilde{U} \mathcal{D}_{\mu}^{\dagger}\partial_{\nu} \widetilde{U}^{\dagger}  \nonumber\\
-\end{align} 
-Por consiguiente, la ``derivada covariante'' de la matriz del campo de gluones no transforma como la la matriz del campo de gluones. Una discusión al respecto se puede encontrar en~\cite{2015arXiv151203827R}.
+\mathcal{D}_{\mu} {G}_{\nu}\to   \left(   \mathcal{D}_{\mu} {G}_{\nu} \right)' =& {U} \left[ \left( \partial_{\mu}-ig_s {G}_{\mu} \right){G}_\nu   \right]{U}^{\dagger}
+    + {U} \left[ {G}_{\nu} \partial_{\mu}+{G}_{\mu}\partial_{\nu}+\frac{i}{g_s} \partial_{\mu}\partial_{\nu} \right] {U}^{\dagger} \nonumber\\
+ =& {U} \left( \mathcal{D}_{\mu}{G}_\nu   \right){U}^{\dagger}
+    + {U} \left[ {G}_{\nu} \partial_{\mu}+{G}_{\mu}\partial_{\nu}+\frac{i}{g_s} \partial_{\mu}\partial_{\nu} \right] {U}^{\dagger} \,.%\nonumber\\
+ %  =& {U} \left( \mathcal{D}_{\mu}{G}_\nu   \right){U}^{\dagger}
+ %    + {U}  {G}_{\nu} \partial_{\mu}{U}^{\dagger}-\frac{i}{g_s} {U}\left(\partial_{\mu}+ig_s {G}_{\mu} \right)\partial_{\nu}  {U}^{\dagger} \nonumber\\
+ % =& {U} \left( \mathcal{D}_{\mu}{G}_\nu   \right){U}^{\dagger}
+ %  \right]  + {U}  {G}_{\nu} \partial_{\mu} {U}^{\dagger}-\frac{i}{g_s}{U} \mathcal{D}_{\mu}^{\dagger}\partial_{\nu} {U}^{\dagger}  \nonumber\\
+\end{align}
 
-\begin{frame}[fragile,allowframebreaks]
-Note que si definimos la matriz de tensores de campos de gluones como
+
+Noteque la segunda parte de la ecuación~\eqref{eq:Dmup} es simétrica bajo el intermbio $\mu-\nu$. Entonces,  para el tensor comodinámico
 \begin{align}
   \label{eq:gmunu}
-   \mathbb{G}_{\mu\nu}\equiv & \mathcal{D}_{\mu} \mathbb{G}_{\nu}-\mathcal{D}_{\nu} \mathbb{G}_{\mu} 
+   {G}_{\mu\nu}\equiv & \mathcal{D}_{\mu} {G}_{\nu}-\mathcal{D}_{\nu} {G}_{\mu}\,,
 \end{align}
-entonces,
+al hacer la transformación gauge, 
 \begin{align}
-   \mathbb{G}_{\mu\nu}\to  \mathbb{G}'_{\mu\nu}=\left( \mathcal{D}_{\mu} \mathbb{G}_{\nu} \right)'-\left( \mathcal{D}_{\nu} \mathbb{G}_{\mu}  \right)'\,,
+   {G}_{\mu\nu}\to  {G}'_{\mu\nu}=\left( \mathcal{D}_{\mu} {G}_{\nu} \right)'-\left( \mathcal{D}_{\nu} {G}_{\mu}  \right)'\,,
 \end{align}
-y usando \eqref{eq:Dmup} da lugar a
+usando \eqref{eq:Dmup}, la parte simétrica bajo el intermbio $\mu-\nu$ se va a cancelar
 \begin{align}
 \label{eq:ugum}
-    \mathbb{G}_{\mu\nu}\to  \mathbb{G}'_{\mu\nu}=&  \widetilde{U} \left\{ \left( \mathcal{D}_{\mu}\mathbb{G}_\nu   \right)
-    +  \left[ \mathbb{G}_{\nu} \partial_{\mu}+\mathbb{G}_{\mu}\partial_{\nu}+\frac{i}{g_s} \partial_{\mu}\partial_{\nu} \right]
-  -   \left( \mathcal{D}_{\nu}\mathbb{G}_\mu   \right)
-    - \left[ \mathbb{G}_{\mu} \partial_{\nu}-\mathbb{G}_{\nu}\partial_{\mu}-\frac{i}{g_s} \partial_{\nu}\partial_{\mu} \right]  \right\} \widetilde{U}^{\dagger} \nonumber\\
-=&  \widetilde{U} \left[  \mathcal{D}_{\mu}\mathbb{G}_\nu 
-    -   \mathcal{D}_{\nu}\mathbb{G}_\mu
-  \right] \widetilde{U}^{\dagger} \nonumber\\
-=& \widetilde{U} \mathbb{G}_{\mu\nu} \widetilde{U}^{\dagger}\,.
+    {G}_{\mu\nu}\to  {G}'_{\mu\nu}=&  {U} \left\{ \left( \mathcal{D}_{\mu}{G}_\nu   \right)
+    +  \left[ {G}_{\nu} \partial_{\mu}+{G}_{\mu}\partial_{\nu}+\frac{i}{g_s} \partial_{\mu}\partial_{\nu} \right]
+  -   \left( \mathcal{D}_{\nu}{G}_\mu   \right)
+    - \left[ {G}_{\mu} \partial_{\nu}-{G}_{\nu}\partial_{\mu}-\frac{i}{g_s} \partial_{\nu}\partial_{\mu} \right]  \right\} {U}^{\dagger} \nonumber\\
+=&  {U} \left[  \mathcal{D}_{\mu}{G}_\nu 
+    -   \mathcal{D}_{\nu}{G}_\mu
+  \right] {U}^{\dagger} \nonumber\\
+=& {U} {G}_{\mu\nu} {U}^{\dagger}\,.
 \end{align}
 Esto es justo lo que se espera de la transformación de un tensor para un grupo de simetría continuo.
 \end{frame}
+
+
 
 Como hemos visto en el caso electromagnético, para demostrar la invarianza del Lagragiano electromagnético en la ec.~\eqref{eq:invlorff}, es necesario que en efecto el tensor electromagnético transforme como un tensor en el espacio de Lorentz:
 \begin{align}
@@ -1039,52 +1021,27 @@ Como hemos visto en el caso electromagnético, para demostrar la invarianza del 
 
 Sin embargo, para el tensor electromagnético la transformación bajo $\operatorname{U}(1)_Q$ es trivial.
 
-Retornado a la definición la matriz de tensores de campos gauge para una teoría no Abeliana $\operatorname{SU}(3)$,
-\begin{frame}[fragile,allowframebreaks]
-si imponemos que la derivada covariante de $\mathbb{G}_{\mu\nu}$ transforme como $\mathbb{G}_{\mu\nu}$\footnote{o asumiendo simplemente que la propiedas de la derivada covariante no dependen de la representación}
-\begin{align}
-  \mathcal{D}_{\mu}\mathbb{G}^{\mu\nu} \to \left(  \mathcal{D}_{\mu}\mathbb{G}^{\mu\nu}  \right)'=
-    \widetilde{U} \left( \mathcal{D}_{\mu}\mathbb{G}^{\mu\nu} \right)  \widetilde{U}^{\dagger}\,,
-\end{align}
-entonces
-\begin{align}
-  \mathcal{D}_{\mu}'\mathbb{G}^{\prime \mu\nu}
-  =\widetilde{U} \mathcal{D}_{\mu}\widetilde{U}^{\dagger} \widetilde{U} \mathbb{G}^{\mu\nu}  \widetilde{U}^{\dagger}\nonumber\\
-  =\widetilde{U} \left(   \mathcal{D}_{\mu}  \mathbb{G}^{\mu\nu} \right) \widetilde{U}^{\dagger}\,,
-\end{align}
-De modo que la derivada covariante de $\mathbb{G}^{\mu\nu}$ transforma como $\mathbb{G}^{\mu\nu}$ si se satisface
-\begin{align}
-{\mathcal{D}}^\mu \to   {\mathcal{D}'}^\mu =\widetilde{U} {\mathcal{D}}^\mu \widetilde{U}^{\dagger}\,.
-\end{align}
 
-Tomando $\mathbb{G}^{\mu\nu}$ como el campo fundamental, podemos concluir que con la definción~\eqref{eq:gmunu}, que al igual que con $\Psi$, la derivada covariante del campo transforma como el campo. 
-
-Como se hizo antes, de esta propiedad se puede obtener la transformación de la matriz de gluones pero ahora en la representación adjunta:
-\begin{align}
- \mathbb{G}^{\mu}\to  {\mathbb{G}'}^\mu  =&-\frac{i}{g_s}(\partial^\mu \widetilde{U})\widetilde{U}^{-1}+ \widetilde{U}{\mathbb{G}}^\mu \widetilde{U}^{-1}\,.  
-\end{align}
-De modo que es consistente asumir que la transformación de la matriz de  campo $\mathbb{G}^{\mu}$ es independiente de la representación, como se hizo explícitamente en~\eqref{eq:tdcg}.
-\end{frame}
 
 \begin{frame}[fragile,allowframebreaks]
 Tenemos entonces que %Obtener a partir del segundo teorema de Noether
 \begin{align}
-  \mathbb{G}_{\mu\nu}\equiv & \mathcal{D}_{\mu} \mathbb{G}_{\nu}-\mathcal{D}_{\nu} \mathbb{G}_{\mu} \nonumber\\
-=&\left( \mathbf{1}\partial_{\mu}-i g_s \mathbb{G}_{\mu} \right)\mathbb{G}_{\nu}-
-\left( \mathbf{1}\partial_{\nu}-i g_s \mathbb{G}_{\nu} \right)\mathbb{G}_{\mu}\nonumber\\
-=& \partial_{\mu}\mathbb{G}_{\nu}-\partial_{\nu}\mathbb{G}_{\mu}
--ig_s \left(  \mathbb{G}_{\mu}\mathbb{G}_{\nu}-\mathbb{G}_{\nu}\mathbb{G}_{\mu}  \right) \nonumber\\
-=& \partial_{\mu}\mathbb{G}_{\nu}-\partial_{\nu}\mathbb{G}_{\mu}
--ig_s \left[  \mathbb{G}_{\mu},\mathbb{G}_{\nu}  \right] .
+  {G}_{\mu\nu}\equiv & \mathcal{D}_{\mu} {G}_{\nu}-\mathcal{D}_{\nu} {G}_{\mu} \nonumber\\
+=&\left( \mathbf{1}\partial_{\mu}-i g_s {G}_{\mu} \right){G}_{\nu}-
+\left( \mathbf{1}\partial_{\nu}-i g_s {G}_{\nu} \right){G}_{\mu}\nonumber\\
+=& \partial_{\mu}{G}_{\nu}-\partial_{\nu}{G}_{\mu}
+-ig_s \left(  {G}_{\mu}{G}_{\nu}-{G}_{\nu}{G}_{\mu}  \right) \nonumber\\
+=& \partial_{\mu}{G}_{\nu}-\partial_{\nu}{G}_{\mu}
+-ig_s \left[  {G}_{\mu},{G}_{\nu}  \right] .
 \end{align}
 \end{frame}
 Note que en el caso Abeliano, la matriz del único tensor es $1\times1$ y por lo tanto el conumutador es cero, recobrando la definición usual del tensor de campo electromagnético.
 
 \begin{frame}[fragile,allowframebreaks]
-Es conveniente definir los \emph{tensores cromodinámicos}, $G^{\mu\nu}_a$, tal que su combinación lineal con los generadores de $SU(3)$ generen la matrizde tensores de campos de gluones:
+Es conveniente definir los \emph{tensores cromodinámicos}, $G^{\mu\nu}_a$, tal que su combinación lineal con los generadores de $SU(3)$ generen la matriz de tensores cromodinámicos:
 \begin{align}
 \label{eq:Gmunu}
-\mathbb{G}^{\mu\nu}=\widetilde{\Lambda}^aG^{\mu\nu}_a
+{G}^{\mu\nu}=\widetilde{\Lambda}^aG^{\mu\nu}_a
 \end{align}
 De esta manera
 \begin{align}
@@ -1111,26 +1068,26 @@ donde hemos definido la parte Abeliana de los tensores cromodinámicos como
 \end{frame}
 
 
-En conclusión, hemos visto que la matrix de tensores de gluones \eqref{eq:Gmunu} debe transformar en la representación adjunta de $\operatorname{SU}(3)$ como
+En conclusión, hemos visto que la matrix de tensor cromodinámico \eqref{eq:Gmunu} debe transformar en la representación adjunta de $\operatorname{SU}(3)$ como
 \begin{align}
 \label{eq:pGmunu}
-  \mathbb{G}^{\mu\nu}\to  {\mathbb{G}'}^{\mu\nu}=\widetilde{U}  \mathbb{G}^{\mu\nu} \widetilde{U}^{-1}
+  {G}^{\mu\nu}\to  {{G}'}^{\mu\nu}=U  {G}^{\mu\nu} U^{-1}
 \end{align}
 y que dicha transformación es consisitente con la transformación de la matriz de campos de gluones
 \begin{align}
-  \mathbb{G}^{\mu}\to {\mathbb{G}'}^{\mu}= \widetilde{U} \mathbb{G}^{\mu} \widetilde{U}^{-1}
--\frac{i}{g_s} \left( \partial_{\mu} \widetilde{U} \right) \widetilde{U}^{-1}\,.
+  {G}^{\mu}\to {{G}'}^{\mu}= U {G}^{\mu} U^{-1}
+-\frac{i}{g_s} \left( \partial_{\mu} U \right) U^{-1}\,.
 \end{align}
 
 \begin{frame}[fragile,allowframebreaks]
-Para poder obtener un invariante bajo transformaciones gauge a partir del producto $\mathbb{G}^{\mu\nu}\mathbb{G}_{\mu\nu}$, debemos utilizar la traza 
+Para poder obtener un invariante bajo transformaciones gauge a partir del producto ${G}^{\mu\nu}{G}_{\mu\nu}$, debemos utilizar la traza 
 \begin{align}
-  \operatorname{Tr}\left(\mathbb{G}^{\mu\nu}\mathbb{G}_{\mu\nu}\right)\to
-  \operatorname{Tr}\left({\mathbb{G}\,'}^{\mu\nu}{\mathbb{G}\,'}_{\mu\nu}\right)
-  =&\operatorname{Tr}\left(\widetilde{U}{{\mathbb{G}}}^{\mu\nu}\widetilde{U}^{-1}\widetilde{U}{{\mathbb{G}}}_{\mu\nu}\widetilde{U}^{-1}\right)\nonumber\\
-  =&\operatorname{Tr}\left(\widetilde{U}{{\mathbb{G}}}^{\mu\nu}{{\mathbb{G}}}_{\mu\nu}\widetilde{U}^{-1}\right)\nonumber\\
-  =&\operatorname{Tr}\left(\widetilde{U}^{-1}\widetilde{U}{{\mathbb{G}}}^{\mu\nu}{{\mathbb{G}}}_{\mu\nu}\right)\nonumber\\
-  =&\operatorname{Tr}\left({{\mathbb{G}}}^{\mu\nu}{{\mathbb{G}}}_{\mu\nu}\right)\,.
+  \operatorname{Tr}\left({G}^{\mu\nu}{G}_{\mu\nu}\right)\to
+  \operatorname{Tr}\left({{G}\,'}^{\mu\nu}{{G}\,'}_{\mu\nu}\right)
+  =&\operatorname{Tr}\left(U{{{G}}}^{\mu\nu}U^{-1}U{{{G}}}_{\mu\nu}U^{-1}\right)\nonumber\\
+  =&\operatorname{Tr}\left(U{{{G}}}^{\mu\nu}{{{G}}}_{\mu\nu}U^{-1}\right)\nonumber\\
+  =&\operatorname{Tr}\left(U^{-1}U{{{G}}}^{\mu\nu}{{{G}}}_{\mu\nu}\right)\nonumber\\
+  =&\operatorname{Tr}\left({{{G}}}^{\mu\nu}{{{G}}}_{\mu\nu}\right)\,.
 \end{align}
 \end{frame}
 
@@ -1168,6 +1125,20 @@ Haciendo explícitamente la traza tenemos (suma sobre índices $a,b,c,\cdots$ re
 \end{align}
 
 \end{frame}
+
+
+
+ La derivada covariante de ${G}_{\mu\nu}$ puede calcularse usando la ec.~(\ref{eq:udu})
+\begin{align}
+  \mathcal{D}_{\mu}{G}^{\mu\nu} \to \left(  \mathcal{D}_{\mu}{G}^{\mu\nu}  \right)'=
+  \mathcal{D}_{\mu}'{G}^{\prime \mu\nu}
+  =&U \mathcal{D}_{\mu}U^{\dagger} U {G}^{\mu\nu}  U^{\dagger}\nonumber\\
+  =&U \left(   \mathcal{D}_{\mu}  {G}^{\mu\nu} \right) U^{\dagger}\,.
+\end{align}
+De modo que la derivada covariante de ${G}^{\mu\nu}$ transforma como ${G}^{\mu\nu}$
+
+
+
 \subsection{Lagrangiano QCD}
 
 \begin{frame}[fragile,allowframebreaks]
