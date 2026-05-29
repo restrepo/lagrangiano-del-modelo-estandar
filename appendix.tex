@@ -3492,6 +3492,98 @@ $\sigma_{\mu\nu}=\frac{i}{2}\left[\gamma_\mu,\gamma_\nu\right]$&Tensor antisim\'
 %instiki:
 
 
+\chapter{Solución Exacta del Átomo de Hidrógeno en la Teoría de Dirac}
+\label{ap:hidrogeno_dirac}
+
+En este apéndice abordamos el segundo paso en la jerarquía de la Electrodinámica Cuántica (QED) para resolver el átomo de hidrógeno. En esta aproximación, el campo electromagnético no se cuantiza, sino que se trata como un campo clásico externo puramente coulombiano generado por un núcleo de carga $Ze$ infinitamente pesado. 
+
+Bajo la sustitución mínima en unidades naturales ($\hbar = c = 1$), el potencial escalar es $A^0 = V(r) = -Z\alpha/r$ (donde $\alpha = e^2/4\pi \approx 1/137$ es la constante de estructura fina) y el potencial vectorial es $\mathbf{A} = 0$. 
+
+\section{El Hamiltoniano de Dirac en un campo central}
+
+Partimos de la ecuación de Dirac para estados estacionarios $\psi(t, \mathbf{x}) = \psi(\mathbf{x})e^{-iEt}$. Según la Ec. (D.17) del Apéndice D, el Hamiltoniano de Dirac es:
+\begin{equation}
+    \hat{H} \psi = \left( \boldsymbol{\alpha} \cdot \mathbf{\hat{p}} + \beta m_e + V(r) \right) \psi = E \psi \, ,
+    \label{eq:H_dirac_hidrogeno}
+\end{equation}
+donde $\mathbf{\hat{p}} = -i\nabla$, y $\boldsymbol{\alpha}, \beta$ son las matrices de Dirac.
+
+Dado que el potencial $V(r)$ tiene simetría esférica, el momento angular orbital $\mathbf{L} = \mathbf{r} \times \mathbf{\hat{p}}$ no conmuta con el Hamiltoniano debido al término $\boldsymbol{\alpha} \cdot \mathbf{\hat{p}}$. Sin embargo, el momento angular total $\mathbf{J} = \mathbf{L} + \mathbf{S}$ (donde $\mathbf{S} = \frac{1}{2}\boldsymbol{\Sigma}$) sí es una constante de movimiento: $[\hat{H}, \mathbf{J}] = 0$.
+
+Existe además otro operador conservado, el operador de espín-órbita relativista de Dirac (o constante de movimiento $K$), definido como:
+\begin{equation}
+    \hat{K} = \beta (\boldsymbol{\Sigma} \cdot \mathbf{L} + 1) \, , \quad [\hat{H}, \hat{K}] = 0 \, .
+\end{equation}
+Los autovalores de $\hat{K}$ se denotan con el número cuántico $\kappa = \pm(j + 1/2)$, donde $j$ es el número cuántico de momento angular total ($j = 1/2, 3/2, \dots$).
+
+\section{Separación de Variables y Ecuaciones Radiales}
+
+Debido a estas simetrías, podemos separar la función de onda en una parte radial y una parte angular espinorial (armónicos esféricos espinoriales $\Omega_{\kappa, m_j}$). Escribimos el espinor de cuatro componentes en términos de dos funciones radiales $F(r)$ y $G(r)$:
+\begin{equation}
+    \psi(\mathbf{x}) = \frac{1}{r} 
+    \begin{pmatrix}
+        F(r) \Omega_{\kappa, m_j}(\theta, \phi) \\
+        i G(r) \Omega_{-\kappa, m_j}(\theta, \phi)
+    \end{pmatrix} \, .
+\end{equation}
+
+Sustituyendo este \textit{ansatz} en la ecuación \eqref{eq:H_dirac_hidrogeno} y utilizando las propiedades del operador gradiente esférico, las componentes angulares se factorizan y obtenemos un sistema de dos ecuaciones diferenciales acopladas de primer orden para las funciones radiales:
+\begin{align}
+    \frac{dF}{dr} - \frac{\kappa}{r}F - \left( E + m_e - V(r) \right)G &= 0 \label{eq:radial1} \\
+    \frac{dG}{dr} + \frac{\kappa}{r}G + \left( E - m_e - V(r) \right)F &= 0 \label{eq:radial2}
+\end{align}
+
+\section{Solución por el Método de Frobenius}
+
+Para encontrar las soluciones ligadas (donde $E < m_e$), definimos un parámetro de decaimiento $\lambda = \sqrt{m_e^2 - E^2}$ y la variable adimensional $\rho = 2\lambda r$. Las soluciones físicas deben anularse en el infinito ($r \to \infty$) y ser regulares en el origen ($r \to 0$).
+
+Extrayendo el comportamiento asintótico natural, proponemos una solución en forma de serie de potencias:
+\begin{align}
+    F(\rho) &= \sqrt{m_e + E} \, e^{-\rho/2} \rho^\gamma \sum_{s=0}^{\infty} f_s \rho^s \, , \\
+    G(\rho) &= -\sqrt{m_e - E} \, e^{-\rho/2} \rho^\gamma \sum_{s=0}^{\infty} g_s \rho^s \, .
+\end{align}
+
+Al sustituir estas series en las ecuaciones radiales y evaluar el límite cercano al origen ($\rho \to 0$), la ecuación indicial para el coeficiente líder nos da el parámetro $\gamma$:
+\begin{equation}
+    \gamma = \sqrt{\kappa^2 - (Z\alpha)^2} \, .
+\end{equation}
+Para que las soluciones no diverjan en el infinito y sean normalizables, las series de potencias deben truncarse, convirtiéndose en polinomios de algún grado $n_r = 0, 1, 2, \dots$ (el número cuántico radial). 
+
+La condición de truncamiento de la serie impone una restricción sobre la energía $E$. Definiendo el número cuántico principal clásico como $n = n_r + |\kappa| = n_r + j + 1/2$, la condición de cuantización es:
+\begin{equation}
+    \frac{Z\alpha E}{\lambda} = n_r + \gamma = n - |\kappa| + \sqrt{\kappa^2 - (Z\alpha)^2} \, .
+\end{equation}
+
+\section{Los Niveles de Energía Relativistas}
+
+Despejando la energía $E$ de la condición de cuantización, utilizando $\lambda = \sqrt{m_e^2 - E^2}$, llegamos a la famosa \textbf{Fórmula de Estructura Fina de Sommerfeld-Dirac}:
+\begin{equation}
+    E_{n,j} = m_e \left[ 1 + \left( \frac{Z\alpha}{n - (j + 1/2) + \sqrt{(j + 1/2)^2 - (Z\alpha)^2}} \right)^2 \right]^{-1/2} \, .
+    \label{eq:dirac_energy_exact}
+\end{equation}
+
+A diferencia de la teoría no relativista de Schrödinger, donde la energía depende únicamente del número cuántico principal $n$, la solución exacta de Dirac muestra que \textbf{la energía depende tanto de $n$ como del momento angular total $j$}.
+
+\paragraph{Límite no relativista y correcciones de Estructura Fina:}
+Para interpretar físicamente este resultado, es útil expandir la Ecuación \eqref{eq:dirac_energy_exact} en serie de Taylor en potencias de $(Z\alpha)^2$ (que es un número pequeño, $\approx (Z/137)^2 \ll 1$):
+\begin{equation}
+    E_{n,j} \approx m_e - \frac{m_e (Z\alpha)^2}{2n^2} - \frac{m_e (Z\alpha)^4}{2n^3} \left( \frac{1}{j + 1/2} - \frac{3}{4n} \right) + \mathcal{O}(\alpha^6) \, .
+    \label{eq:dirac_expansion}
+\end{equation}
+
+Observamos tres contribuciones físicas claras:
+\begin{enumerate}
+    \item El primer término ($m_e$) es simplemente la \textbf{energía en reposo} del electrón.
+    \item El segundo término ($-\frac{m_e Z^2\alpha^2}{2n^2}$) es exactamente el \textbf{nivel de energía clásico de Bohr-Schrödinger} ($E_n = -13.6 \text{ eV} \frac{Z^2}{n^2}$).
+    \item El tercer término representa las \textbf{correcciones de estructura fina} originadas por la relatividad. Agrupa inherentemente la corrección relativista a la energía cinética, el acoplamiento espín-órbita y el término de Darwin (zitterbewegung). 
+\end{enumerate}
+
+\section{Conclusión y el Salto a la QED}
+La Ecuación de Dirac resuelve de forma natural el espín y la estructura fina del átomo. Predice, por ejemplo, que los estados $2S_{1/2}$ ($l=0, j=1/2$) y $2P_{1/2}$ ($l=1, j=1/2$) están \textbf{completamente degenerados}, pues la Ec. \eqref{eq:dirac_energy_exact} depende solo de $n$ y $j$, pero no del momento angular orbital $l$.
+
+No obstante, como se discute en el Capítulo 5, el experimento revela que estos niveles están ligeramente desplazados (el \textit{Desplazamiento de Lamb}). Para explicar este remanente, la solución analítica aquí expuesta resulta insuficiente: es imprescindible cuantizar el campo electromagnético, abandonar la aproximación del potencial clásico externo y calcular las correcciones radiativas asociadas a los diagramas de bucles de la Electrodinámica Cuántica (Figura 5.5 y 5.6).
+
+
 
 
 \chapter{Soluciones a los problemas}
@@ -3695,7 +3787,7 @@ Teniendo en cuenta que los terminos cruzados son los \'unicos que no se cancelar
 \item[\ref{cha:modelo-estandar}.~\ref{item:chap6.1}.] 
 Haciendo un an\'alisis similar al de la secci\'on \ref{sec:invar-gauge-local-1}, tenemos de la ec.~\eqref{eq:125} que
 \begin{align}
-\mathcal{L}_{fWB}=&i\overline{L}\gamma^\mu\mathcal{D}_\mu L+i\,\overline{e_R}\gamma^\mu\mathcal{D}_\mu e_R  \nonumber\\
+ \mathcal{L}_{fWB}=&i\overline{L}\gamma^\mu\mathcal{D}_\mu L+i\,\overline{e_R}\gamma^\mu\mathcal{D}_\mu e_R  \nonumber\\
 =&\begin{pmatrix} 
   i\overline{\nu_L}\gamma^\mu& i\overline{e_L}\gamma^\mu
 \end{pmatrix}\begin{pmatrix}
