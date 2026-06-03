@@ -1041,17 +1041,17 @@ Note que en el caso Abeliano, la matriz del único tensor es $1\times1$ y por lo
 Es conveniente definir los \emph{tensores cromodinámicos}, $G^{\mu\nu}_a$, tal que su combinación lineal con los generadores de $SU(3)$ generen la matriz de tensores cromodinámicos:
 \begin{align}
 \label{eq:Gmunu}
-{G}^{\mu\nu}=\widetilde{\Lambda}^aG^{\mu\nu}_a
+{G}^{\mu\nu}={\Lambda}^aG^{\mu\nu}_a
 \end{align}
 De esta manera
 \begin{align}
-  \widetilde{\Lambda}_a G_{\mu\nu}^a=& \widetilde{\Lambda}_a
+  {\Lambda}_a G_{\mu\nu}^a=& {\Lambda}_a
 \left( \partial_{\mu}G_{\nu}^{a}-\partial_{\nu}G_{\mu}^{a}  \right)
--i g_s \left[ \widetilde{\Lambda}_b,\widetilde{\Lambda}_c \right]G_{\mu}^{b}G_{\nu}^{c} \nonumber\\
-=&\widetilde{\Lambda}_a
+-i g_s \left[ {\Lambda}_b,{\Lambda}_c \right]G_{\mu}^{b}G_{\nu}^{c} \nonumber\\
+=&{\Lambda}_a
 \left( \partial_{\mu}G_{\nu}^{a}-\partial_{\nu}G_{\mu}^{a}  \right)
--i g_s \left(i {f^{a}}_{bc} \widetilde{\Lambda}_a \right)G_{\mu}^{b}G_{\nu}^{c} \nonumber\\
-=&\widetilde{\Lambda}_a \left(  \partial_{\mu}G_{\nu}^{a}-\partial_{\nu}G_{\mu}^{a} 
+-i g_s \left(i {f^{a}}_{bc} {\Lambda}_a \right)G_{\mu}^{b}G_{\nu}^{c} \nonumber\\
+=&{\Lambda}_a \left(  \partial_{\mu}G_{\nu}^{a}-\partial_{\nu}G_{\mu}^{a} 
 +g_s  {f^{a}}_{bc} G_{\mu}^{b}G_{\nu}^{c}\right).
 \end{align}
 Entonces
@@ -1376,13 +1376,14 @@ Por lo tanto, las ecuaciones de Euler--Lagrange para $G_\nu^a$, son
 \begin{frame}[fragile,allowframebreaks]
 por lo tanto
 \begin{align}
+  \label{eq:cmxw}
   \mathcal{D}_\mu{\boldsymbol{G}}^{\mu\nu}
 =&-g_s\overline{\Psi}\gamma^\nu\boldsymbol{\Lambda}\Psi\,,
 \end{align}
 donde $\boldsymbol{G}^{\mu\nu}$ y $\boldsymbol{\Lambda}$ son vectores en el espacio $SU(3)$. 
 Además, hemos definido la derivada covariante en la representación adjunta como matrix  $8\times8$ 
 \begin{align}
-  \mathcal{D}_{\mu}=\mathbf{1}\partial_{\mu}-i g_s \widetilde{\Lambda}_a G_{\mu}^{a} 
+  \mathcal{D}_{\mu}=\mathbf{1}\partial_{\mu}-i g_s {\Lambda}_a G_{\mu}^{a} 
 \end{align}
 Tenemos entonces 4 ecuaciones tipo ecuaciones Maxwell para cada gluón, $G_{\mu}^{a}$, por lo que en total
 hay 32 ecuaciones tipo Maxwell acopladas.
@@ -1420,6 +1421,9 @@ tal que
 
 El primer término corresponde a las autointeracciones y el segundo a la corriente de color generada por los quarks.
 \end{frame}
+
+La ecuación~\eqref{eq:cmxw} puede reescribirse como una ecuación matricial en la representación adjunta. Para ello partimos de
+
 
 % De otro lado
 % \begin{align}
