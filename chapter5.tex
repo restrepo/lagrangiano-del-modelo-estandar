@@ -890,6 +890,95 @@ $\alpha=\dfrac{e^2}{4\pi}\approx 1/137$ & $\alpha_s=\dfrac{g_s^2}{4\pi}>1$ & \pa
 \subsection{Construcción del tensor cromodinámico a partir de la derivada covariante}
 \label{sec:construccion_tensor_color}
 
+
+\subsection{El Segundo Teorema de Noether y la deducción del tensor no abeliano}
+\label{sec:noether_deduccion_tensor}
+
+En el caso abeliano (QED), el Segundo Teorema de Noether aplicado a los campos vectoriales libres demostró que el tensor de intensidad de campo debía ser antisimétrico, justificando así la forma del campo electromagnético $F_{\mu\nu} = \partial_\mu A_\nu - \partial_\nu A_\mu$. Es natural preguntarse si un razonamiento similar puede deducir la forma geométrica del tensor cromodinámico en una teoría no abeliana. Veremos que el resultado es aún más restrictivo y espectacular: el teorema obliga a la existencia de las autointeracciones de los gluones.
+
+\subsubsection*{1. El fracaso del tensor electromagnético ingenuo}
+El Segundo Teorema de Noether establece que una simetría gauge local impone una identidad diferencial estricta entre las expresiones de Euler-Lagrange ($\mathcal{E}_i$) de los campos del sistema. Partiendo del enunciado:
+\begin{equation}
+    \sum_i \mathcal{E}_i a_i = \sum_i \partial_\mu (\mathcal{E}_i b^\mu_i) \, ,
+    \label{eq:noether2_formula}
+\end{equation}
+donde los coeficientes $a_i$ y $b_i^\mu$ parametrizan la transformación infinitesimal local del campo según $\delta \phi_i = a_i \theta_a(x) + b^\mu_i \partial_\mu \theta_a(x)$.
+
+Bajo una transformación gauge local $SU(3)_c$, parametrizada por $\theta_a(x)$, 
+los \textbf{campos de gluones ($G^\nu_c$)} transforman como: 
+    $\delta G^\nu_c = -g_s f_{abc} G^\nu_b \theta_a + \delta_{ac} \partial^\nu \theta_a$. \\
+    Identificamos: $a^\nu_{G, c} = -g_s f_{abc} G^\nu_b$ y $b^{\mu\nu}_{G, c} = \delta_{ac} g^{\mu\nu}$.
+
+el término del lado derecho hacia el izquierdo:
+\begin{equation}
+    \mathcal{E}_{c}^\nu a^\nu_{G, c} - \partial_\mu (\mathcal{E}_{c}^\nu b^{\mu\nu}_{G, c}) = \mathcal{E}_{c}^\nu (-g_s f_{abc} G_\nu^b) - \partial_\mu (\mathcal{E}_{c}^\nu \delta_{ac} g^{\mu\nu}) \, .
+\end{equation}
+Aplicando el delta de Kronecker y la métrica, y renombrando índices, obtenemos:
+\begin{align}
+    &= -g_s f_{abc} G^\mu_b \mathcal{E}_{c\mu} - \partial_\mu \mathcal{E}_{a}^\mu \nonumber \\
+    &= - \left( \partial_\mu \mathcal{E}_{a}^\mu + g_s f_{abc} G^\mu_b \mathcal{E}_{c\mu} \right) \, .
+\end{align}
+El término entre paréntesis es exactamente la definición de la derivada covariante en la representación adjunta $8\times 8$ de componentes (ver ec.~\eqref{eq:adjunta})
+1\begin{align}
+  \left(\widetilde{\Lambda}^a\right)_{bc} =-i f_{abc}\,.
+\end{align}
+tal que
+\begin{align}
+  \mathcal{D}_\mu = \boldsymbol{1}\partial_\mu -i g_s \widetilde{\Lambda}_a G_\mu^a  
+\end{align}
+y
+\begin{align}
+   \mathcal{D}_\mu = \delta^{ac}\partial_\mu\mathcal{E}^\mu_c \ -i g_s (\widetilde{\Lambda}_b)_{ac} G_\mu^b   \mathcal{E}^\mu_c
+\end{align}
+
+
+. Por lo tanto, el sector gauge aporta:
+\begin{equation}
+    \text{Sector Gauge} = - \mathcal{D}_\mu \mathcal{E}_{a}^\mu \, .
+    \label{eq:sector_gauge}
+\end{equation}
+
+Ya que esperamos que en las nuevas ecuaciones de Euler-Lagrange los campos de gluones la derivada normal se reemplace por la derivada covariante
+\begin{align}
+  \mathcal{E}_{a}^\mu = \mathcal{D}_\nu G^{\nu\mu}_a 
+\end{align}
+entonces, si imponemos esta estructura, el Segundo Teorema de Noether nos exige que:
+\begin{equation}
+    \mathcal{D}_\mu \mathcal{D}_\nu G^{\nu\mu}_a = 0 \, .
+\end{equation}
+A diferencia de las derivadas ordinarias, las derivadas covariantes no conmutan ($\mathcal{D}_\mu \mathcal{D}_\nu \neq \mathcal{D}_\nu \mathcal{D}_\mu$). Dado que $G^{\nu\mu}_a$ es antisimétrico, contraerlo con dos derivadas covariantes es matemáticamente equivalente a contraerlo con la mitad de su conmutador:
+\begin{equation}
+    \mathcal{D}_\mu \mathcal{D}_\nu G^{\nu\mu}_a = \frac{1}{2} [\mathcal{D}_\mu, \mathcal{D}_\nu] G^{\nu\mu}_a = 0 \, .
+    \label{eq:conmutador_noether}
+\end{equation}
+
+Aquí radica la revelación geométrica. En matemáticas, el conmutador de dos derivadas covariantes es la definición misma de la \textbf{curvatura} del espacio interno. Para que la Ecuación \eqref{eq:conmutador_noether} se anule idénticamente por razones puramente algebraicas, el término de curvatura $[\mathcal{D}_\mu, \mathcal{D}_\nu]$ y el tensor de campo $G^{\nu\mu}_a$ deben ser esencialmente el mismo objeto, ya que todo objeto matricial conmuta consigo mismo (es decir, $[G_{\mu\nu}, G^{\nu\mu}] \equiv 0$).
+
+Por lo tanto, el Teorema de Noether dicta que el tensor de campo \textbf{debe} ser proporcional al conmutador de las derivadas covariantes:
+\begin{equation}
+    \mathbb{G}_{\mu\nu} \propto [\mathcal{D}_\mu, \mathcal{D}_\nu] \, .
+\end{equation}
+
+\subsubsection*{3. Evaluando la curvatura (El Tensor Cromodinámico)}
+Procedemos a evaluar explícitamente el conmutador de las derivadas covariantes en la representación fundamental ($\mathcal{D}_\mu = \partial_\mu - i g_s \mathbb{G}_\mu$) actuando sobre un campo de prueba:
+\begin{align}
+    [\mathcal{D}_\mu, \mathcal{D}_\nu] &= (\partial_\mu - i g_s \mathbb{G}_\mu)(\partial_\nu - i g_s \mathbb{G}_\nu) - (\partial_\nu - i g_s \mathbb{G}_\nu)(\partial_\mu - i g_s \mathbb{G}_\mu) \nonumber \\
+    &= -i g_s (\partial_\mu \mathbb{G}_\nu - \partial_\nu \mathbb{G}_\mu) - g_s^2 [\mathbb{G}_\mu, \mathbb{G}_\nu] \, .
+\end{align}
+Si dividimos esta expresión geométrica por $-i g_s$ para normalizar los campos, la naturaleza nos entrega implacablemente la forma exacta e ineludible del tensor cromodinámico matricial:
+\begin{equation}
+    \mathbb{G}_{\mu\nu} \equiv \frac{i}{g_s}[\mathcal{D}_\mu, \mathcal{D}_\nu] = \partial_\mu \mathbb{G}_\nu - \partial_\nu \mathbb{G}_\mu - i g_s [\mathbb{G}_\mu, \mathbb{G}_\nu] \, .
+\end{equation}
+Expandiendo en componentes mediante $[\Lambda_b, \Lambda_c] = i f_{abc} \Lambda_a$, recuperamos el resultado bien conocido:
+\begin{equation}
+    G^a_{\mu\nu} = \partial_\mu G^a_\nu - \partial_\nu G^a_\mu + g_s f^{abc} G^b_\mu G^c_\nu \, .
+\end{equation}
+
+\subsubsection*{Conclusiones Físicas}
+Este desarrollo demuestra que en las teorías de Yang-Mills, \textbf{la geometría dicta la dinámica}. El Segundo Teorema de Noether prohíbe la existencia de una teoría gauge no abeliana construida con un tensor lineal tipo Maxwell. La identidad diferencial requerida por la simetría local expulsa un residuo que solo puede ser cancelado si se modifica la propia definición del campo añadiéndole el término cuadrático $g_s f^{abc} G_\mu^b G_\nu^c$.
+
+Es esta imposición geométrica de la simetría la que obliga a los bosones de gauge (gluones) a autointeractuar, dotando a la Cromodinámica Cuántica de sus propiedades características, como el confinamiento del color y la libertad asintótica.
+
 \begin{frame}[fragile,allowframebreaks]
 El principio gauge local nos dictamina que para mantener la invarianza de la teoría, las derivadas parciales ordinarias deben ser promovidas a derivadas covariantes. En la Electrodinámica Cuántica (simetría abeliana $U(1)$), el tensor de campo electromagnético se construye a partir de derivadas normales:
 \begin{equation}
@@ -1532,6 +1621,94 @@ establezca el segundo teorema de Noether
 \item Encuentre el Hamiltoniano para la QED
 \end{enumerate}
 
+
+\subsection{El Segundo Teorema de Noether y la Conservación de la Corriente de Color}
+\label{sec:noether_2_completo}
+
+El Segundo Teorema de Noether establece que una simetría gauge local impone una identidad diferencial estricta entre las expresiones de Euler-Lagrange ($\mathcal{E}_i$) de los campos del sistema. Partiendo del enunciado:
+\begin{equation}
+    \sum_i \mathcal{E}_i a_i = \sum_i \partial_\mu (\mathcal{E}_i b^\mu_i) \, ,
+    \label{eq:noether2_formula}
+\end{equation}
+donde los coeficientes $a_i$ y $b_i^\mu$ parametrizan la transformación infinitesimal local del campo según $\delta \phi_i = a_i \theta_a(x) + b^\mu_i \partial_\mu \theta_a(x)$.
+
+\subsubsection*{1. Parámetros de Transformación de los Campos}
+Bajo una transformación gauge local $SU(3)_c$, parametrizada por $\theta_a(x)$, los campos del Lagrangiano transforman como:
+\begin{itemize}
+    \item \textbf{Campo de gluones ($G^\nu_c$):} 
+    $\delta G^\nu_c = -g_s f_{abc} G^\nu_b \theta_a + \delta_{ac} \partial^\nu \theta_a$. \\
+    Identificamos: $a^\nu_{G, c} = -g_s f_{abc} G^\nu_b$ y $b^{\mu\nu}_{G, c} = \delta_{ac} g^{\mu\nu}$.
+    
+    \item \textbf{Campo fermiónico ($\Psi$):}
+    $\delta \Psi = i g_s \theta_a \Lambda_a \Psi$. \\
+    Identificamos: $a_{\Psi} = i g_s \Lambda_a \Psi$ y $b^\mu_{\Psi} = 0$.
+    
+    \item \textbf{Espinor adjunto ($\bar{\Psi}$):}
+    $\delta \bar{\Psi} = -i g_s \theta_a \bar{\Psi} \Lambda_a$. \\
+    Identificamos: $a_{\bar{\Psi}} = -i g_s \bar{\Psi} \Lambda_a$ y $b^\mu_{\bar{\Psi}} = 0$.
+\end{itemize}
+
+\subsubsection*{2. Evaluación del Sector Gauge}
+Aplicamos la Ecuación \eqref{eq:noether2_formula} únicamente a la parte de los gluones. Llevamos el término del lado derecho hacia el izquierdo:
+\begin{equation}
+    \mathcal{E}_{c}^\nu a^\nu_{G, c} - \partial_\mu (\mathcal{E}_{c}^\nu b^{\mu\nu}_{G, c}) = \mathcal{E}_{c}^\nu (-g_s f_{abc} G_\nu^b) - \partial_\mu (\mathcal{E}_{c}^\nu \delta_{ac} g^{\mu\nu}) \, .
+\end{equation}
+Aplicando el delta de Kronecker y la métrica, y renombrando índices, obtenemos:
+\begin{align}
+    &= -g_s f_{abc} G^\mu_b \mathcal{E}_{c\mu} - \partial_\mu \mathcal{E}_{a}^\mu \nonumber \\
+    &= - \left( \partial_\mu \mathcal{E}_{a}^\mu + g_s f_{abc} G^\mu_b \mathcal{E}_{c\mu} \right) \, .
+\end{align}
+El término entre paréntesis es exactamente la definición de la derivada covariante en la representación adjunta. Por lo tanto, el sector gauge aporta:
+\begin{equation}
+    \text{Sector Gauge} = - \mathcal{D}_\mu \mathcal{E}_{a}^\mu \, .
+    \label{eq:sector_gauge}
+\end{equation}
+
+\subsubsection*{3. Evaluación del Sector Materia (Quarks)}
+Para los quarks, como $b^\mu = 0$, solo evaluamos el lado izquierdo de la Ecuación \eqref{eq:noether2_formula}:
+\begin{equation}
+    \mathcal{E}_\Psi a_\Psi + a_{\bar{\Psi}} \mathcal{E}_{\bar{\Psi}} = \mathcal{E}_\Psi (i g_s \Lambda_a \Psi) + (-i g_s \bar{\Psi} \Lambda_a) \mathcal{E}_{\bar{\Psi}} = i g_s \left( \mathcal{E}_\Psi \Lambda_a \Psi - \bar{\Psi} \Lambda_a \mathcal{E}_{\bar{\Psi}} \right) \, .
+\end{equation}
+
+Sustituimos las expresiones de Euler-Lagrange para los quarks $\mathcal{E}_{\bar{\Psi}} = (i\gamma^\mu \partial_\mu + g_s \gamma^\mu \Lambda_b G_\mu^b - m)\Psi$ y $\mathcal{E}_\Psi = -i \partial_\mu \bar{\Psi} \gamma^\mu + g_s \bar{\Psi} \gamma^\mu \Lambda_b G_\mu^b - m \bar{\Psi}$:
+\begin{align}
+    \mathcal{E}_\Psi \Lambda_a \Psi - \bar{\Psi} \Lambda_a \mathcal{E}_{\bar{\Psi}} =& \left( -i \partial_\mu \bar{\Psi} \gamma^\mu + g_s \bar{\Psi} \gamma^\mu \Lambda_b G_\mu^b - m \bar{\Psi} \right) \Lambda_a \Psi \nonumber \\
+    &- \bar{\Psi} \Lambda_a \left( i\gamma^\mu \partial_\mu \Psi + g_s \gamma^\mu \Lambda_b G_\mu^b \Psi - m\Psi \right) \, .
+\end{align}
+Los términos de masa se cancelan exactamente. Agrupando las derivadas obtenemos $-i\partial_\mu(\bar{\Psi}\gamma^\mu\Lambda_a \Psi)$, y los términos gauge forman el conmutador $[\Lambda_b, \Lambda_a] = -i f_{abc} \Lambda_c$:
+\begin{align}
+    \mathcal{E}_\Psi \Lambda_a \Psi - \bar{\Psi} \Lambda_a \mathcal{E}_{\bar{\Psi}} &= -i \partial_\mu (\bar{\Psi} \gamma^\mu \Lambda_a \Psi) - i g_s f_{abc} G_\mu^b (\bar{\Psi} \gamma^\mu \Lambda_c \Psi) \, .
+\end{align}
+
+Definiendo la corriente de color como $J^\mu_a = g_s \bar{\Psi} \gamma^\mu \Lambda_a \Psi$, la expresión se reduce a:
+\begin{equation}
+    \mathcal{E}_\Psi \Lambda_a \Psi - \bar{\Psi} \Lambda_a \mathcal{E}_{\bar{\Psi}} = -\frac{i}{g_s} \left( \partial_\mu J^\mu_a + g_s f_{abc} G^b_\mu J^\mu_c \right) = -\frac{i}{g_s} \mathcal{D}_\mu J^\mu_a \, .
+\end{equation}
+Multiplicando por el factor $i g_s$ exterior, el sector materia aporta:
+\begin{equation}
+    \text{Sector Materia} = i g_s \left( -\frac{i}{g_s} \mathcal{D}_\mu J^\mu_a \right) = \mathcal{D}_\mu J^\mu_a \, .
+    \label{eq:sector_materia}
+\end{equation}
+
+\subsubsection*{4. La Identidad General y las Ecuaciones de Yang-Mills}
+Sumando el Sector Gauge \eqref{eq:sector_gauge} y el Sector Materia \eqref{eq:sector_materia} según dicta el Teorema de Noether:
+\begin{equation}
+    - \mathcal{D}_\mu \mathcal{E}_{a}^\mu + \mathcal{D}_\mu J^\mu_a = 0 \quad \implies \quad \mathcal{D}_\mu (\mathcal{E}_{a}^\mu - J^\mu_a) = 0 \, .
+    \label{eq:noether_casi_final}
+\end{equation}
+
+Finalmente, recordamos que la expresión de Euler-Lagrange para los gluones es $\mathcal{E}_a^\mu = -\mathcal{D}_\nu G^{\nu\mu}_a - J^\mu_a$. Sustituyendo esto en la identidad \eqref{eq:noether_casi_final}:
+\begin{align}
+    \mathcal{D}_\mu \left( -\mathcal{D}_\nu G^{\nu\mu}_a - J^\mu_a - J^\mu_a \right) &= 0 \nonumber \\
+    - \mathcal{D}_\mu \mathcal{D}_\nu G^{\nu\mu}_a - 2 \mathcal{D}_\mu J^\mu_a &= 0 \, .
+\end{align}
+
+Dado que el tensor de campo $G^{\nu\mu}_a$ es totalmente antisimétrico, su doble contracción covariante se anula por pura geometría ($\mathcal{D}_\mu \mathcal{D}_\nu G^{\nu\mu}_a \equiv 0$). El resultado ineludible es:
+\begin{equation}
+    2 \mathcal{D}_\mu J^\mu_a = 0 \quad \implies \quad \mathcal{D}_\mu J^\mu_a = 0 \, .
+\end{equation}
+
+\textbf{Conclusión:} El Segundo Teorema de Noether demuestra que la corriente de color se conserva de forma covariante de manera idéntica. Esta conservación no requiere suponer que las partículas están \textit{on-shell}; es una propiedad incrustada en la estructura geométrica impuesta por la simetría local $SU(3)_c$.
 
 
 \renewcommand{\labelenumi}{\theenumi} %noinstiki
