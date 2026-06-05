@@ -859,7 +859,9 @@ Entonces, haciendo la expansión a primer orden en $\theta_{a}(x)$ de $U$
 de donde
 \begin{align}
   \label{eq:gmutrinf}
-  G^\mu_a\to {G'}^\mu_a\approx&G^\mu_a+\frac{1}{g_s}\partial^\mu\theta_a+{f_a}^{bc}G^\mu_b\theta_c\,,
+  G^\mu_a\to {G'}^\mu_a\approx&G^\mu_a+\frac{1}{g_s}\partial^\mu\theta_a+f^{abc}G^\mu_b\theta_c\\
+  {G'}^\mu_c\approx&G^\mu_c+\frac{1}{g_s}\partial^\mu\theta_c+f^{cba}G^\mu_b\theta_a\,,\qquad (a\leftrightarrow c)\nonumber\\ 
+  {G'}^\mu_c\approx&G^\mu_c+\frac{1}{g_s}\delta_{ac}\partial^\mu\theta_a-f^{abc}G^\mu_b\theta_c\,,
 \end{align}
 que se reduce al caso Abeliano cuando las constates de estructura son cero. Como era de esperarse cada campo gauge tiene asociado un parámetro de transformación gauge $\theta_a(x)$.
 \end{frame}
@@ -887,16 +889,13 @@ $\alpha=\dfrac{e^2}{4\pi}\approx 1/137$ & $\alpha_s=\dfrac{g_s^2}{4\pi}>1$ & \pa
 \end{frame}
 
 
-\subsection{Construcción del tensor cromodinámico a partir de la derivada covariante}
-\label{sec:construccion_tensor_color}
-
 
 \subsection{El Segundo Teorema de Noether y la deducción del tensor no abeliano}
 \label{sec:noether_deduccion_tensor}
 
 En el caso abeliano (QED), el Segundo Teorema de Noether aplicado a los campos vectoriales libres demostró que el tensor de intensidad de campo debía ser antisimétrico, justificando así la forma del campo electromagnético $F_{\mu\nu} = \partial_\mu A_\nu - \partial_\nu A_\mu$. Es natural preguntarse si un razonamiento similar puede deducir la forma geométrica del tensor cromodinámico en una teoría no abeliana. Veremos que el resultado es aún más restrictivo y espectacular: el teorema obliga a la existencia de las autointeracciones de los gluones.
 
-\subsubsection*{1. El fracaso del tensor electromagnético ingenuo}
+
 El Segundo Teorema de Noether establece que una simetría gauge local impone una identidad diferencial estricta entre las expresiones de Euler-Lagrange ($\mathcal{E}_i$) de los campos del sistema. Partiendo del enunciado:
 \begin{equation}
     \sum_i \mathcal{E}_i a_i = \sum_i \partial_\mu (\mathcal{E}_i b^\mu_i) \, ,
@@ -904,10 +903,10 @@ El Segundo Teorema de Noether establece que una simetría gauge local impone una
 \end{equation}
 donde los coeficientes $a_i$ y $b_i^\mu$ parametrizan la transformación infinitesimal local del campo según $\delta \phi_i = a_i \theta_a(x) + b^\mu_i \partial_\mu \theta_a(x)$.
 
-Bajo una transformación gauge local $SU(3)_c$, parametrizada por $\theta_a(x)$, 
+Bajo una transformación gauge local $SU(3)_c$, parametrizada por $\theta_a(x)$, de la ec.~\eqref{eq:gmutrinf} 
 los \textbf{campos de gluones ($G^\nu_c$)} transforman como: 
-    $\delta G^\nu_c = -g_s f_{abc} G^\nu_b \theta_a + \delta_{ac} \partial^\nu \theta_a$. \\
-    Identificamos: $a^\nu_{G, c} = -g_s f_{abc} G^\nu_b$ y $b^{\mu\nu}_{G, c} = \delta_{ac} g^{\mu\nu}$.
+    \[g_{s}\delta G^\nu_c = -g_s f_{abc} G^\nu_b \theta_a + \delta_{ac} \partial^\nu \theta_a\,,\]
+donde el factor global $g_{s}$ no afecta la identidad~\eqref{eq:noether2_formula}. Identificamos: $a^\nu_{G, c} = -g_s f_{abc} G^\nu_b$ y $b^{\mu\nu}_{G, c} = \delta_{ac} g^{\mu\nu}$.
 
 el término del lado derecho hacia el izquierdo:
 \begin{equation}
@@ -915,11 +914,14 @@ el término del lado derecho hacia el izquierdo:
 \end{equation}
 Aplicando el delta de Kronecker y la métrica, y renombrando índices, obtenemos:
 \begin{align}
-    &= -g_s f_{abc} G^\mu_b \mathcal{E}_{c\mu} - \partial_\mu \mathcal{E}_{a}^\mu \nonumber \\
-    &= - \left( \partial_\mu \mathcal{E}_{a}^\mu + g_s f_{abc} G^\mu_b \mathcal{E}_{c\mu} \right) \, .
+  \label{eq:adjcov}
+    \mathcal{E}_{c}^\nu a^\nu_{G, c} - \partial_\mu (\mathcal{E}_{c}^\nu b^{\mu\nu}_{G, c})    &= -g_s f_{abc} G^\mu_b \mathcal{E}_{c\mu} - \partial_\mu \mathcal{E}_{a}^\mu \nonumber \\
+ &= - \left( \partial_\mu \mathcal{E}_{a}^\mu + g_s f_{abc} G^\mu_b \mathcal{E}_{c\mu} \right)\,.%\nonumber\\
+%    &= - \left( \delta_{ac}\partial_\mu \mathcal{E}_{c}^\mu + g_s f_{abc} G^\mu_b \mathcal{E}_{c\mu} \right) \, .  
 \end{align}
-El término entre paréntesis es exactamente la definición de la derivada covariante en la representación adjunta $8\times 8$ de componentes (ver ec.~\eqref{eq:adjunta})
-1\begin{align}
+El término entre paréntesis es exactamente la definición de la derivada covariante en la representación adjunta $8\times 8$, con componentes (ver ec.~\eqref{eq:adjunta})
+\begin{align}
+\label{eq:adjunta2}
   \left(\widetilde{\Lambda}^a\right)_{bc} =-i f_{abc}\,.
 \end{align}
 tal que
@@ -928,11 +930,9 @@ tal que
 \end{align}
 y
 \begin{align}
-   \mathcal{D}_\mu = \delta^{ac}\partial_\mu\mathcal{E}^\mu_c \ -i g_s (\widetilde{\Lambda}_b)_{ac} G_\mu^b   \mathcal{E}^\mu_c
+   \mathcal{D}_\mu\mathcal{E}_{a}^{\mu} = \partial_\mu\mathcal{E}^\mu_a \ -i g_s (\widetilde{\Lambda}_b)_{ac} G_\mu^b   \mathcal{E}^\mu_c\,.
 \end{align}
-
-
-. Por lo tanto, el sector gauge aporta:
+Por lo tanto, el sector gauge aporta:
 \begin{equation}
     \text{Sector Gauge} = - \mathcal{D}_\mu \mathcal{E}_{a}^\mu \, .
     \label{eq:sector_gauge}
@@ -947,23 +947,126 @@ entonces, si imponemos esta estructura, el Segundo Teorema de Noether nos exige 
     \mathcal{D}_\mu \mathcal{D}_\nu G^{\nu\mu}_a = 0 \, .
 \end{equation}
 A diferencia de las derivadas ordinarias, las derivadas covariantes no conmutan ($\mathcal{D}_\mu \mathcal{D}_\nu \neq \mathcal{D}_\nu \mathcal{D}_\mu$). Dado que $G^{\nu\mu}_a$ es antisimétrico, contraerlo con dos derivadas covariantes es matemáticamente equivalente a contraerlo con la mitad de su conmutador:
-\begin{equation}
-    \mathcal{D}_\mu \mathcal{D}_\nu G^{\nu\mu}_a = \frac{1}{2} [\mathcal{D}_\mu, \mathcal{D}_\nu] G^{\nu\mu}_a = 0 \, .
+\begin{align}
+  \mathcal{D}_\mu \mathcal{D}_\nu G^{\nu\mu}_a 
+  =& \frac{1}{2}\left(   \mathcal{D}_\mu \mathcal{D}_\nu G^{\nu\mu}_a +  \mathcal{D}_\mu \mathcal{D}_\nu G^{\nu\mu}_a\right) \nonumber\\
+  =& \frac{1}{2}\left(   \mathcal{D}_\mu \mathcal{D}_\nu G^{\nu\mu}_a +  \mathcal{D}_\nu \mathcal{D}_\mu G^{\mu\nu}_a\right) \nonumber\\
+    =& \frac{1}{2}\left(   \mathcal{D}_\mu \mathcal{D}_\nu G^{\nu\mu}_a -  \mathcal{D}_\nu \mathcal{D}_\mu G^{\nu\mu}_a\right) \nonumber\\
+=&  \frac{1}{2} [\mathcal{D}_\mu, \mathcal{D}_\nu] G^{\nu\mu}_a = 0 \, .
     \label{eq:conmutador_noether}
+\end{align}
+
+Aquí radica la revelación geométrica. En matemáticas, el conmutador de dos derivadas covariantes es la definición misma de la \textbf{curvatura} del espacio interno. 
+
+
+
+Ahora demostraremos  la identidad geométrica
+\begin{align}
+  ([\mathcal{D}_\mu, \mathcal{D}_\nu])_{ac} = g_s f_{abc} G_{\mu\nu}^b\,.
+\end{align}
+
+Debemos evaluar la acción del conmutador de derivadas covariantes sobre un campo de prueba arbitrario $\phi_c$ en la representación adjunta.
+
+La derivada covariante en componentes para la representación adjunta se define como en la ec.~\eqref{eq:adjcov}:
+\begin{equation}
+    (\mathcal{D}_\mu \phi)_a = \partial_\mu \phi_a + g_s f_{abc} G_\mu^b \phi_c \, .
+    \label{eq:derivada_adj_comp}
 \end{equation}
+
+Aplicamos una segunda derivada covariante $\mathcal{D}_\mu$ sobre el objeto resultante $(\mathcal{D}_\nu \phi)$:
+\begin{align}
+    \mathcal{D}_\mu (\mathcal{D}_\nu \phi)_a &= \partial_\mu (\mathcal{D}_\nu \phi)_a + g_s f_{ade} G_\mu^d (\mathcal{D}_\nu \phi)_e \nonumber \\
+    &= \partial_\mu \left( \partial_\nu \phi_a + g_s f_{abc} G_\nu^b \phi_c \right) + g_s f_{ade} G_\mu^d \left( \partial_\nu \phi_e + g_s f_{ebc} G_\nu^b \phi_c \right) \nonumber \\
+    &= \partial_\mu \partial_\nu \phi_a + g_s f_{abc} (\partial_\mu G_\nu^b) \phi_c + g_s f_{abc} G_\nu^b (\partial_\mu \phi_c) \nonumber \\
+    &\quad + g_s f_{ade} G_\mu^d (\partial_\nu \phi_e) + g_s^2 f_{ade} f_{ebc} G_\mu^d G_\nu^b \phi_c \, .
+\end{align}
+
+Para construir el conmutador $[\mathcal{D}_\mu, \mathcal{D}_\nu] \phi_a$, intercambiamos los índices $\mu \leftrightarrow \nu$ y restamos ambas expresiones. 
+Al hacerlo, las segundas derivadas del campo se cancelan ($\partial_\mu \partial_\nu \phi_a - \partial_\nu \partial_\mu \phi_a = 0$). Además, los términos cruzados como $g_s f_{abc} G_\nu^b (\partial_\mu \phi_c)$ se cancelan exactamente con sus contrapartes al intercambiar índices y renombrar variables mudas. 
+
+Sobreviven únicamente las derivadas del campo gauge y los términos cuadráticos:
+\begin{equation}
+    [\mathcal{D}_\mu, \mathcal{D}_\nu] \phi_a = g_s f_{abc} (\partial_\mu G_\nu^b - \partial_\nu G_\mu^b) \phi_c + g_s^2 \left( f_{ade} f_{ebc} G_\mu^d G_\nu^b - f_{ade} f_{ebc} G_\nu^d G_\mu^b \right) \phi_c \, .
+\end{equation}
+
+En el último término, intercambiamos los índices mudos $d \leftrightarrow b$ para poder factorizar los campos $G_\mu^d G_\nu^b$:
+\begin{equation}
+    g_s^2 \left( f_{ade} f_{ebc} - f_{abe} f_{edc} \right) G_\mu^d G_\nu^b \phi_c \, .
+    \label{eq:conmutador_f_f}
+\end{equation}
+
+Aquí es donde interviene la estructura profunda del álgebra de Lie. Las constantes de estructura deben satisfacer la \textbf{Identidad de Jacobi}:
+\begin{equation}
+    f_{dbe} f_{eac} + f_{bae} f_{edc} + f_{ade} f_{ebc} = 0 \, .
+\end{equation}
+Utilizando la antisimetría total de las constantes ($f_{bae} = -f_{abe}$ y $f_{eac} = -f_{aec}$), la identidad se reescribe como:
+\begin{equation}
+    -f_{dbe} f_{aec} - f_{abe} f_{edc} + f_{ade} f_{ebc} = 0 \quad \implies \quad f_{ade} f_{ebc} - f_{abe} f_{edc} = f_{aec} f_{dbe} \, .
+\end{equation}
+
+Sustituyendo esta mágica relación de vuelta en la Ecuación \eqref{eq:conmutador_f_f}:
+\begin{equation}
+    \text{Término cuadrático} = g_s^2 f_{aec} f_{dbe} G_\mu^d G_\nu^b \phi_c = g_s f_{aec} \left( g_s f_{dbe} G_\mu^d G_\nu^b \right) \phi_c \, .
+\end{equation}
+Para igualar notación con el primer término de la derivada, renombramos el índice mudo $e \to b$, y luego los índices $d, b \to d, e$. Teniendo en cuenta que $f_{abc} = f_{aec}$ (simplemente renombrando la letra $e$ por $b$), el término cuadrático se convierte en:
+\begin{equation}
+    + g_s f_{abc} \left( g_s f_{deb} G_\mu^d G_\nu^e \right) \phi_c \, .
+\end{equation}
+
+Agrupando todo, el conmutador completo queda como:
+\begin{equation}
+    [\mathcal{D}_\mu, \mathcal{D}_\nu] \phi_a = g_s f_{abc} \Big[ \partial_\mu G_\nu^b - \partial_\nu G_\mu^b + g_s f_{deb} G_\mu^d G_\nu^e \Big] \phi_c \, .
+\end{equation}
+El término entre corchetes es exactamente la definición de la componente $b$ del tensor de intensidad de campo:
+\begin{align}
+  \label{eq:gmunu}
+  G_{\mu\nu}^b\equiv \partial_\mu G_\nu^b - \partial_\nu G_\mu^b + g_s f_{deb} G_\mu^d G_\nu^e \,.
+\end{align}
+Que se reduce apropiadamente el tensor de intensidad de campo en el caso Abeliano donde las constantes de estructura sonc cero.
+
+Por lo tanto:
+\begin{equation}
+    [\mathcal{D}_\mu, \mathcal{D}_\nu] \phi_a = g_s f_{abc} G_{\mu\nu}^b \phi_c \, .
+\end{equation}
+Al ser esto válido para cualquier campo de prueba $\phi_c$, concluimos que los elementos de matriz del operador conmutador en la representación adjunta son, de manera exacta:
+\begin{equation}
+    ([\mathcal{D}_\mu, \mathcal{D}_\nu])_{ac} = g_s f_{abc} G_{\mu\nu}^b \, .
+\end{equation}
+
+De forma equivalente y rigurosa en notación de componentes, la acción del conmutador sobre el tensor adjunto $G_c^{\nu\mu}$ introduce las constantes de estructura del grupo: 
+$$ [\mathcal{D}_\mu, \mathcal{D}_\nu] G_c^{\nu\mu} = g_s f_{abc} G_{\mu\nu}^b G_c^{\nu\mu} \, . $$
+Dado que $f_{abc}$ es totalmente antisimétrico ante el intercambio de $b \leftrightarrow c$, mientras que el producto tensorial $(G_{\mu\nu}^b G_c^{\nu\mu})$ es simétrico ante el mismo intercambio, su contracción se anula de forma exacta ($0$). Por lo tanto, la ecuación geométrica exige que el tensor de campo sea su propia curvatura.
 
 Aquí radica la revelación geométrica. En matemáticas, el conmutador de dos derivadas covariantes es la definición misma de la \textbf{curvatura} del espacio interno. Para que la Ecuación \eqref{eq:conmutador_noether} se anule idénticamente por razones puramente algebraicas, el término de curvatura $[\mathcal{D}_\mu, \mathcal{D}_\nu]$ y el tensor de campo $G^{\nu\mu}_a$ deben ser esencialmente el mismo objeto, ya que todo objeto matricial conmuta consigo mismo (es decir, $[G_{\mu\nu}, G^{\nu\mu}] \equiv 0$).
 
 Por lo tanto, el Teorema de Noether dicta que el tensor de campo \textbf{debe} ser proporcional al conmutador de las derivadas covariantes:
-\begin{equation}
-    \mathbb{G}_{\mu\nu} \propto [\mathcal{D}_\mu, \mathcal{D}_\nu] \, .
-\end{equation}
-
-\subsubsection*{3. Evaluando la curvatura (El Tensor Cromodinámico)}
-Procedemos a evaluar explícitamente el conmutador de las derivadas covariantes en la representación fundamental ($\mathcal{D}_\mu = \partial_\mu - i g_s \mathbb{G}_\mu$) actuando sobre un campo de prueba:
 \begin{align}
-    [\mathcal{D}_\mu, \mathcal{D}_\nu] &= (\partial_\mu - i g_s \mathbb{G}_\mu)(\partial_\nu - i g_s \mathbb{G}_\nu) - (\partial_\nu - i g_s \mathbb{G}_\nu)(\partial_\mu - i g_s \mathbb{G}_\mu) \nonumber \\
-    &= -i g_s (\partial_\mu \mathbb{G}_\nu - \partial_\nu \mathbb{G}_\mu) - g_s^2 [\mathbb{G}_\mu, \mathbb{G}_\nu] \, .
+  \left(  \left[\mathcal{D}_\mu, \mathcal{D}_\nu\right]\right)_{ac} =& g_s f_{abc} G_{\mu\nu}^b \nonumber\\
+  =& - i^{2}g_s f_{abc} G_{\mu\nu}^b \nonumber\\
+  =& -ig_s\left(-i f_{acb} \right)G_{\mu\nu}^b \nonumber\\
+     =& -ig_s\left(\widetilde{\Lambda}_{b} \right)_{ac}G_{\mu\nu}^b \,,
+\end{align}
+Podemos definir la matrix de tensores cromodinámicos en la representación adjunta como
+\begin{align}
+  \left(\mathbb{G}^{\mu\nu}  \right)_{ac}
+   = \left(\widetilde{\Lambda}^{b} \right)_{ac}G^{\mu\nu}_{b}\,.
+\end{align}
+Reemplazando en la ecuación anterior
+\begin{equation}
+ [\mathcal{D}_\mu, \mathcal{D}_\nu] =  - i g_{s}    \mathbb{G}_{\mu\nu}\,. 
+\end{equation}
+Por consiguiente
+\begin{align}
+  \label{eq:adjgmunu}
+  \mathbb{G}_{\mu\nu} \equiv \frac{i}{g_s}[\mathcal{D}_\mu, \mathcal{D}_\nu]\,.
+\end{align}
+\subsubsection*{Evaluando la curvatura (El Tensor Cromodinámico)}
+Vamos a obtener ahora la ec.~\eqref{eq:gmunu} evaluando explícitamente el conmutador de las derivadas covariantes en la representación fundamental ($\mathcal{D}_\mu = \partial_\mu - i g_s \mathbb{G}_\mu$) actuando sobre un campo de prueba $\phi_{a}$:
+\begin{align}
+  [\mathcal{D}_\mu, \mathcal{D}_\nu]\phi &=
+    \left[(\partial_\mu - i g_s \mathbb{G}_\mu)(\partial_\nu - i g_s \mathbb{G}_\nu) - (\partial_\nu - i g_s \mathbb{G}_\nu)(\partial_\mu - i g_s \mathbb{G}_\mu) \right]\phi\nonumber \\
+                                         &= \left[-i g_s (\partial_\mu \mathbb{G}_\nu - \partial_\nu \mathbb{G}_\mu)
+                                           - g_s^2 [\mathbb{G}_\mu, \mathbb{G}_\nu]\right]\phi \, .
 \end{align}
 Si dividimos esta expresión geométrica por $-i g_s$ para normalizar los campos, la naturaleza nos entrega implacablemente la forma exacta e ineludible del tensor cromodinámico matricial:
 \begin{equation}
@@ -971,6 +1074,7 @@ Si dividimos esta expresión geométrica por $-i g_s$ para normalizar los campos
 \end{equation}
 Expandiendo en componentes mediante $[\Lambda_b, \Lambda_c] = i f_{abc} \Lambda_a$, recuperamos el resultado bien conocido:
 \begin{equation}
+  \label{eq:gmunu2}
     G^a_{\mu\nu} = \partial_\mu G^a_\nu - \partial_\nu G^a_\mu + g_s f^{abc} G^b_\mu G^c_\nu \, .
 \end{equation}
 
@@ -979,45 +1083,9 @@ Este desarrollo demuestra que en las teorías de Yang-Mills, \textbf{la geometr�
 
 Es esta imposición geométrica de la simetría la que obliga a los bosones de gauge (gluones) a autointeractuar, dotando a la Cromodinámica Cuántica de sus propiedades características, como el confinamiento del color y la libertad asintótica.
 
-\begin{frame}[fragile,allowframebreaks]
-El principio gauge local nos dictamina que para mantener la invarianza de la teoría, las derivadas parciales ordinarias deben ser promovidas a derivadas covariantes. En la Electrodinámica Cuántica (simetría abeliana $U(1)$), el tensor de campo electromagnético se construye a partir de derivadas normales:
-\begin{equation}
-    F_{\mu\nu} = \partial_\mu A_\nu - \partial_\nu A_\mu \, .
-\end{equation}
-
-Para generalizar este concepto a la Cromodinámica Cuántica (simetría no abeliana $SU(3)_c$), resulta natural agrupar los 8 campos de gluones $G^a_\mu$ en una única matriz $3 \times 3$ utilizando los generadores del grupo, $\Lambda_a$:
-\begin{equation}
-    {G}_\mu \equiv \Lambda_a G^a_\mu \, .
-\end{equation}
-
-Note entonces que en el lenguage de los teoremas de Noether, el campo $G^{\mu}_{a}$ transforma como un campo de materia y un campo de radiación a la vez, es decir, su transformación depende tanto del parámetro como de la derivada del parámetro. Por consiguiente, es conveniente definir la derivada covariante del campo $G^{\nu}_{a}$ como
-\begin{align}
-  \mathcal{D}_\mu G_\nu  = (\mathbf{1}\partial_\mu - i g_s {G}_\mu) {G}_\nu\,.
-\end{align}
-
-Inspirados por la forma del tensor electromagnético, postulamos que la matrix de tensores cromodinámicos, ${G}_{\mu\nu}$,  debe construirse reemplazando las derivadas normales por la \textbf{derivada covariante} anterior. Aplicando esta sustitución a la definición geométrica del tensor, tenemos:
-\begin{align}
-    {G}_{\mu\nu} &\equiv \mathcal{D}_\mu {G}_\nu - \mathcal{D}_\nu {G}_\mu \nonumber \\
-    &= (\partial_\mu - i g_s {G}_\mu) {G}_\nu - (\partial_\nu - i g_s {G}_\nu) {G}_\mu \nonumber \\
-    &= \partial_\mu {G}_\nu - \partial_\nu {G}_\mu - i g_s ({G}_\mu {G}_\nu - {G}_\nu {G}_\mu) \nonumber \\
-    &= \partial_\mu {G}_\nu - \partial_\nu {G}_\mu - i g_s [{G}_\mu, {G}_\nu] \, .
-    \label{eq:tensor_matricial_qcd}
-\end{align}
-
-Para extraer las componentes de color individuales $G^a_{\mu\nu}$, expandimos la Ecuación \eqref{eq:tensor_matricial_qcd} utilizando el álgebra de los generadores $[\Lambda_b, \Lambda_c] = i f_{abc} \Lambda_a$:
-\begin{align}
-    \Lambda_a G^a_{\mu\nu} &= \Lambda_a (\partial_\mu G^a_\nu - \partial_\nu G^a_\mu) - i g_s \left[ \Lambda_b G^b_\mu, \Lambda_c G^c_\nu \right] \nonumber \\
-    &= \Lambda_a (\partial_\mu G^a_\nu - \partial_\nu G^a_\mu) - i g_s (i f_{abc} \Lambda_a) G^b_\mu G^c_\nu \, .
-\end{align}
-Factorizando $\Lambda_a$, obtenemos el tensor cromodinámico para cada componente de color:
-\begin{equation}
-    G^a_{\mu\nu} = \partial_\mu G^a_\nu - \partial_\nu G^a_\mu + g_s f^{abc} G^b_\mu G^c_\nu \, .
-\end{equation}
-Si el grupo fuera abeliano, las constantes de estructura $f^{abc}$ serían cero y recuperaríamos la forma exacta de $F_{\mu\nu}$. 
-\end{frame}
 
 
-  Calculemos ahora la transformación guage de $G_{\mu\nu}$
+Calculemos ahora la transformación guage de $G_{\mu\nu}$
 \begin{align}
 \label{eq:tdcg}
  \mathcal{D}_{\mu} {G}_{\nu}\to   \left(   \mathcal{D}_{\mu} {G}_{\nu} \right)' =&
@@ -1077,8 +1145,8 @@ entonces
 
 Noteque la segunda parte de la ecuación~\eqref{eq:Dmup} es simétrica bajo el intermbio $\mu-\nu$. Entonces,  para el tensor comodinámico
 \begin{align}
-  \label{eq:gmunu}
-   {G}_{\mu\nu}\equiv & \mathcal{D}_{\mu} {G}_{\nu}-\mathcal{D}_{\nu} {G}_{\mu}\,,
+  \label{eq:gmunu3}
+   {G}_{\mu\nu}= & \mathcal{D}_{\mu} {G}_{\nu}-\mathcal{D}_{\nu} {G}_{\mu}\,,
 \end{align}
 al hacer la transformación gauge, 
 \begin{align}
@@ -1113,26 +1181,12 @@ Sin embargo, para el tensor electromagnético la transformación bajo $\operator
 
 
 \begin{frame}[fragile,allowframebreaks]
-Tenemos entonces que %Obtener a partir del segundo teorema de Noether
-\begin{align}
-  {G}_{\mu\nu}\equiv & \mathcal{D}_{\mu} {G}_{\nu}-\mathcal{D}_{\nu} {G}_{\mu} \nonumber\\
-=&\left( \mathbf{1}\partial_{\mu}-i g_s {G}_{\mu} \right){G}_{\nu}-
-\left( \mathbf{1}\partial_{\nu}-i g_s {G}_{\nu} \right){G}_{\mu}\nonumber\\
-=& \partial_{\mu}{G}_{\nu}-\partial_{\nu}{G}_{\mu}
--ig_s \left(  {G}_{\mu}{G}_{\nu}-{G}_{\nu}{G}_{\mu}  \right) \nonumber\\
-=& \partial_{\mu}{G}_{\nu}-\partial_{\nu}{G}_{\mu}
--ig_s \left[  {G}_{\mu},{G}_{\nu}  \right] .
-\end{align}
-\end{frame}
-Note que en el caso Abeliano, la matriz del único tensor es $1\times1$ y por lo tanto el conumutador es cero, recobrando la definición usual del tensor de campo electromagnético.
-
-\begin{frame}[fragile,allowframebreaks]
-Es conveniente definir los \emph{tensores cromodinámicos}, $G^{\mu\nu}_a$, tal que su combinación lineal con los generadores de $SU(3)$ generen la matriz de tensores cromodinámicos:
+Pasando a la representación fundamental, es conveniente definir los \emph{tensores cromodinámicos}, $G^{\mu\nu}_a$, tal que su combinación lineal con los generadores de $SU(3)$ generen la matriz de tensores cromodinámicos:
 \begin{align}
 \label{eq:Gmunu}
 {G}^{\mu\nu}={\Lambda}^aG^{\mu\nu}_a
 \end{align}
-De esta manera
+De esta manera, igual que antes
 \begin{align}
   {\Lambda}_a G_{\mu\nu}^a=& {\Lambda}_a
 \left( \partial_{\mu}G_{\nu}^{a}-\partial_{\nu}G_{\mu}^{a}  \right)
