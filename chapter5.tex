@@ -1055,6 +1055,8 @@ Reemplazando en la ecuación anterior
 \begin{equation}
  [\mathcal{D}_\mu, \mathcal{D}_\nu] =  - i g_{s}    \mathbb{G}_{\mu\nu}\,. 
 \end{equation}
+
+\begin{frame}[fragile,allowframebreaks]
 Por consiguiente
 \begin{align}
   \label{eq:adjgmunu}
@@ -1077,6 +1079,7 @@ Expandiendo en componentes mediante $[\Lambda_b, \Lambda_c] = i f_{abc} \Lambda_
   \label{eq:gmunu2}
     G^a_{\mu\nu} = \partial_\mu G^a_\nu - \partial_\nu G^a_\mu + g_s f^{abc} G^b_\mu G^c_\nu \, .
 \end{equation}
+\end{frame}
 
 \subsubsection*{Conclusiones Físicas}
 Este desarrollo demuestra que en las teorías de Yang-Mills, \textbf{la geometría dicta la dinámica}. El Segundo Teorema de Noether prohíbe la existencia de una teoría gauge no abeliana construida con un tensor lineal tipo Maxwell. La identidad diferencial requerida por la simetría local expulsa un residuo que solo puede ser cancelado si se modifica la propia definición del campo añadiéndole el término cuadrático $g_s f^{abc} G_\mu^b G_\nu^c$.
@@ -1084,87 +1087,40 @@ Este desarrollo demuestra que en las teorías de Yang-Mills, \textbf{la geometr�
 Es esta imposición geométrica de la simetría la que obliga a los bosones de gauge (gluones) a autointeractuar, dotando a la Cromodinámica Cuántica de sus propiedades características, como el confinamiento del color y la libertad asintótica.
 
 
-
-Calculemos ahora la transformación guage de $G_{\mu\nu}$
-\begin{align}
-\label{eq:tdcg}
- \mathcal{D}_{\mu} {G}_{\nu}\to   \left(   \mathcal{D}_{\mu} {G}_{\nu} \right)' =&
-\left[\boldsymbol{1}\partial_{\mu}-i g_s\left({U} {G}_\mu {U}^{\dagger}-\frac{i}{g_s}\left(\partial_\mu {U}\right){U}^\dagger  \right)   \right] \left({U} {G}_\nu {U}^{\dagger}-\frac{i}{g_s}\left(\partial_\nu {U}\right){U}^\dagger  \right) \nonumber\\
-=&
-\left[\boldsymbol{1}\partial_{\mu}-i g_s{U} {G}_\mu {U}^{\dagger}-\left(\partial_\mu {U}\right){U}^\dagger   \right] \left({U} {G}_\nu {U}^{\dagger}-\frac{i}{g_s}\left(\partial_\nu {U}\right){U}^\dagger  \right) \nonumber\\
-=&
-\partial_{\mu} \left({U} {G}_\nu {U}^{\dagger}-\frac{i}{g_s}\left(\partial_\nu {U}\right){U}^\dagger  \right)
--i g_s{U} {G}_\mu {U}^{\dagger}\left({U} {G}_\nu {U}^{\dagger}-\frac{i}{g_s}\left(\partial_\nu {U}\right){U}^\dagger  \right)
-\nonumber\\
-&-\left(\partial_\mu {U}\right){U}^\dagger\left({U} {G}_\nu {U}^{\dagger}-\frac{i}{g_s}\left(\partial_\nu {U}\right){U}^\dagger  \right) \nonumber\\
-  =& \cancel{\left(\partial_{\mu} {U} \right) {G}_\nu {U}^{\dagger}} + {U}
-  \left( \partial_{\mu}{G}_\nu \right) {U}^{\dagger} + {U}
-  {G}_{\nu} \partial_{\mu} {U}^{\dagger} -\frac{i}{g_s}\partial_{\mu}
-  \left[ \left( \partial_{\nu}{U} \right){U}^{\dagger} \right]
-  \nonumber\\
-  &-i g_s {U} {G}_{\mu}{G}_{\nu}{U}^{\dagger}- {U}{G}_{\mu} {U}^{\dagger} \left( \partial_{\nu} {U}\right){U}^{\dagger} \nonumber\\
-  &-\cancel{\left( \partial_{\mu}{U} \right){G}_{\nu} {U}^{\dagger}}
-  +\frac{i}{g_s} \left( \partial_{\mu}{U} \right) {U}^{\dagger} \left( \partial_{\nu}{U} \right) {U}^{\dagger} \nonumber\\
-  =& {U} \left( \partial_{\mu}{G}_\nu \right) {U}^{\dagger} + {U}
-  {G}_{\nu} \partial_{\mu} {U}^{\dagger}
-  -\cancel{\frac{i}{g_s}\partial_{\mu} \left[ {U}
-      {U}^{\dagger}\left( \partial_{\nu}{U} \right){U}^{\dagger} \right]}
-  \nonumber\\
-  &-i g_s {U} {G}_{\mu}{G}_{\nu}{U}^{\dagger}- {U}{G}_{\mu}
-  {U}^{\dagger}\cancel{ \partial_{\nu}\left( {U}{U}^{\dagger} \right)}+
-  {U}{G}_{\mu} {U}^{\dagger} {U}\partial_{\nu}{U}^{\dagger}
-  \nonumber\\
-  &+\cancel{\frac{i}{g_s} \partial_{\mu} \left[ {U} {U}^{\dagger}
-      \left( \partial_{\nu}{U} \right) {U}^{\dagger}\right]}-
-  \frac{i}{g_s} {U} \partial_{\mu} \left[ {U}^{\dagger}
-    \left( \partial_{\nu}{U} \right) {U}^{\dagger}\right]
-\end{align}
-Ya que
-\begin{align}
- \partial_{\mu} \left[ {U}^{\dagger}
-    \left( \partial_{\nu}{U} \right) {U}^{\dagger}\right]=&
- \partial_{\mu} \left[ {U}^{\dagger}
-    \cancel{\partial_{\nu}\left( {U} {U}^{\dagger}\right)} -{U}^{\dagger}{U} \partial_{\nu} {U}^{\dagger}\right] \nonumber\\
-=&- \partial_{\mu} \left[ {U}^{\dagger} {U} \partial_{\nu} {U}^{\dagger}\right] \nonumber\\
-=&- \partial_{\mu}  \partial_{\nu} {U}^{\dagger} \,,
-\end{align}
 \begin{frame}[fragile,allowframebreaks]
-entonces
+\subsection{Demostración compacta de la covarianza de $\mathbb{G}_{\mu\nu}$}
+
+Existe una vía notablemente más simple y geométrica para demostrar que $\mathbb{G}'_{\mu\nu} = U \mathbb{G}_{\mu\nu} U^{-1}$, sin necesidad de expandir las derivadas explícitas del campo $\mathbb{G}_\mu$. Este método se basa en las propiedades de transformación del operador derivada covariante $\mathcal{D}_\mu$.
+
+Por definición, el operador $\mathcal{D}_\mu$ garantiza que la derivada de un campo fundamental $\Psi$ transforme de la misma manera que el propio campo ($\Psi \to U\Psi$):
+\begin{equation}
+    \mathcal{D}'_\mu (U\Psi) = U (\mathcal{D}_\mu \Psi) \, .
+\end{equation}
+Multiplicando por la derecha por $U^{-1}$, deducimos que el operador en sí mismo transforma mediante una relación de similaridad pura:
+\begin{equation}
+    \mathcal{D}'_\mu = U \mathcal{D}_\mu U^{-1} \, .
+\end{equation}
+
+Recordando que el tensor de intensidad de campo se define geométricamente como el conmutador de las derivadas covariantes:
+\begin{equation}
+    \mathbb{G}_{\mu\nu} = \frac{i}{g_s} [\mathcal{D}_\mu, \mathcal{D}_\nu] \, ,
+\end{equation}
+evaluamos directamente la transformación del tensor sustituyendo $\mathcal{D}'_\mu$:
 \begin{align}
-\label{eq:Dmup}
-\mathcal{D}_{\mu} {G}_{\nu}\to   \left(   \mathcal{D}_{\mu} {G}_{\nu} \right)' =& {U} \left[ \left( \partial_{\mu}-ig_s {G}_{\mu} \right){G}_\nu   \right]{U}^{\dagger}
-    + {U} \left[ {G}_{\nu} \partial_{\mu}+{G}_{\mu}\partial_{\nu}+\frac{i}{g_s} \partial_{\mu}\partial_{\nu} \right] {U}^{\dagger} \nonumber\\
- =& {U} \left( \mathcal{D}_{\mu}{G}_\nu   \right){U}^{\dagger}
-    + {U} \left[ {G}_{\nu} \partial_{\mu}+{G}_{\mu}\partial_{\nu}+\frac{i}{g_s} \partial_{\mu}\partial_{\nu} \right] {U}^{\dagger} \,.%\nonumber\\
- %  =& {U} \left( \mathcal{D}_{\mu}{G}_\nu   \right){U}^{\dagger}
- %    + {U}  {G}_{\nu} \partial_{\mu}{U}^{\dagger}-\frac{i}{g_s} {U}\left(\partial_{\mu}+ig_s {G}_{\mu} \right)\partial_{\nu}  {U}^{\dagger} \nonumber\\
- % =& {U} \left( \mathcal{D}_{\mu}{G}_\nu   \right){U}^{\dagger}
- %  \right]  + {U}  {G}_{\nu} \partial_{\mu} {U}^{\dagger}-\frac{i}{g_s}{U} \mathcal{D}_{\mu}^{\dagger}\partial_{\nu} {U}^{\dagger}  \nonumber\\
+    \mathbb{G}'_{\mu\nu} &= \frac{i}{g_s} \Big[ U \mathcal{D}_\mu U^{-1} , \, U \mathcal{D}_\nu U^{-1} \Big] \nonumber \\
+    &= \frac{i}{g_s} \Big( U \mathcal{D}_\mu U^{-1} U \mathcal{D}_\nu U^{-1} - U \mathcal{D}_\nu U^{-1} U \mathcal{D}_\mu U^{-1} \Big) \, .
+\end{align}
+Dado que el producto $U^{-1}U$ en el interior de cada término es igual a la identidad ($\mathbf{1}$), la expresión se simplifica inmediatamente a:
+\begin{align}
+    \mathbb{G}'_{\mu\nu} &= \frac{i}{g_s} \Big( U \mathcal{D}_\mu \mathcal{D}_\nu U^{-1} - U \mathcal{D}_\nu \mathcal{D}_\mu U^{-1} \Big) \nonumber \\
+    &= U \left( \frac{i}{g_s} [\mathcal{D}_\mu, \mathcal{D}_\nu] \right) U^{-1} \, .
 \end{align}
 
-
-Noteque la segunda parte de la ecuación~\eqref{eq:Dmup} es simétrica bajo el intermbio $\mu-\nu$. Entonces,  para el tensor comodinámico
-\begin{align}
-  \label{eq:gmunu3}
-   {G}_{\mu\nu}= & \mathcal{D}_{\mu} {G}_{\nu}-\mathcal{D}_{\nu} {G}_{\mu}\,,
-\end{align}
-al hacer la transformación gauge, 
-\begin{align}
-   {G}_{\mu\nu}\to  {G}'_{\mu\nu}=\left( \mathcal{D}_{\mu} {G}_{\nu} \right)'-\left( \mathcal{D}_{\nu} {G}_{\mu}  \right)'\,,
-\end{align}
-usando \eqref{eq:Dmup}, la parte simétrica bajo el intermbio $\mu-\nu$ se va a cancelar
-\begin{align}
-\label{eq:ugum}
-    {G}_{\mu\nu}\to  {G}'_{\mu\nu}=&  {U} \left\{ \left( \mathcal{D}_{\mu}{G}_\nu   \right)
-    +  \left[ {G}_{\nu} \partial_{\mu}+{G}_{\mu}\partial_{\nu}+\frac{i}{g_s} \partial_{\mu}\partial_{\nu} \right]
-  -   \left( \mathcal{D}_{\nu}{G}_\mu   \right)
-    - \left[ {G}_{\mu} \partial_{\nu}-{G}_{\nu}\partial_{\mu}-\frac{i}{g_s} \partial_{\nu}\partial_{\mu} \right]  \right\} {U}^{\dagger} \nonumber\\
-=&  {U} \left[  \mathcal{D}_{\mu}{G}_\nu 
-    -   \mathcal{D}_{\nu}{G}_\mu
-  \right] {U}^{\dagger} \nonumber\\
-=& {U} {G}_{\mu\nu} {U}^{\dagger}\,.
-\end{align}
-Esto es justo lo que se espera de la transformación de un tensor para un grupo de simetría continuo.
+Sustituyendo nuevamente la definición del tensor, concluimos la demostración de forma exacta:
+\begin{equation}
+    \mathbb{G}'_{\mu\nu} = U \mathbb{G}_{\mu\nu} U^{-1} \, .
+\end{equation}
+\textit{Nota:} La elegancia de esta demostración radica en que el comportamiento inhomogéneo del campo de gluones (los términos proporcionales a $\partial_\mu U$) ya está completamente absorbido y regularizado dentro de las propiedades del operador $\mathcal{D}_\mu$.
 \end{frame}
 
 
@@ -1763,6 +1719,91 @@ Dado que el tensor de campo $G^{\nu\mu}_a$ es totalmente antisimétrico, su dobl
 \end{equation}
 
 \textbf{Conclusión:} El Segundo Teorema de Noether demuestra que la corriente de color se conserva de forma covariante de manera idéntica. Esta conservación no requiere suponer que las partículas están \textit{on-shell}; es una propiedad incrustada en la estructura geométrica impuesta por la simetría local $SU(3)_c$.
+
+\subsection{Calculemos ahora la transformación guage de $G_{\mu\nu}$}
+\begin{align}
+\label{eq:tdcg}
+ \mathcal{D}_{\mu} {G}_{\nu}\to   \left(   \mathcal{D}_{\mu} {G}_{\nu} \right)' =&
+\left[\boldsymbol{1}\partial_{\mu}-i g_s\left({U} {G}_\mu {U}^{\dagger}-\frac{i}{g_s}\left(\partial_\mu {U}\right){U}^\dagger  \right)   \right] \left({U} {G}_\nu {U}^{\dagger}-\frac{i}{g_s}\left(\partial_\nu {U}\right){U}^\dagger  \right) \nonumber\\
+=&
+\left[\boldsymbol{1}\partial_{\mu}-i g_s{U} {G}_\mu {U}^{\dagger}-\left(\partial_\mu {U}\right){U}^\dagger   \right] \left({U} {G}_\nu {U}^{\dagger}-\frac{i}{g_s}\left(\partial_\nu {U}\right){U}^\dagger  \right) \nonumber\\
+=&
+\partial_{\mu} \left({U} {G}_\nu {U}^{\dagger}-\frac{i}{g_s}\left(\partial_\nu {U}\right){U}^\dagger  \right)
+-i g_s{U} {G}_\mu {U}^{\dagger}\left({U} {G}_\nu {U}^{\dagger}-\frac{i}{g_s}\left(\partial_\nu {U}\right){U}^\dagger  \right)
+\nonumber\\
+&-\left(\partial_\mu {U}\right){U}^\dagger\left({U} {G}_\nu {U}^{\dagger}-\frac{i}{g_s}\left(\partial_\nu {U}\right){U}^\dagger  \right) \nonumber\\
+  =& \cancel{\left(\partial_{\mu} {U} \right) {G}_\nu {U}^{\dagger}} + {U}
+  \left( \partial_{\mu}{G}_\nu \right) {U}^{\dagger} + {U}
+  {G}_{\nu} \partial_{\mu} {U}^{\dagger} -\frac{i}{g_s}\partial_{\mu}
+  \left[ \left( \partial_{\nu}{U} \right){U}^{\dagger} \right]
+  \nonumber\\
+  &-i g_s {U} {G}_{\mu}{G}_{\nu}{U}^{\dagger}- {U}{G}_{\mu} {U}^{\dagger} \left( \partial_{\nu} {U}\right){U}^{\dagger} \nonumber\\
+  &-\cancel{\left( \partial_{\mu}{U} \right){G}_{\nu} {U}^{\dagger}}
+  +\frac{i}{g_s} \left( \partial_{\mu}{U} \right) {U}^{\dagger} \left( \partial_{\nu}{U} \right) {U}^{\dagger} \nonumber\\
+  =& {U} \left( \partial_{\mu}{G}_\nu \right) {U}^{\dagger} + {U}
+  {G}_{\nu} \partial_{\mu} {U}^{\dagger}
+  -\cancel{\frac{i}{g_s}\partial_{\mu} \left[ {U}
+      {U}^{\dagger}\left( \partial_{\nu}{U} \right){U}^{\dagger} \right]}
+  \nonumber\\
+  &-i g_s {U} {G}_{\mu}{G}_{\nu}{U}^{\dagger}- {U}{G}_{\mu}
+  {U}^{\dagger}\cancel{ \partial_{\nu}\left( {U}{U}^{\dagger} \right)}+
+  {U}{G}_{\mu} {U}^{\dagger} {U}\partial_{\nu}{U}^{\dagger}
+  \nonumber\\
+  &+\cancel{\frac{i}{g_s} \partial_{\mu} \left[ {U} {U}^{\dagger}
+      \left( \partial_{\nu}{U} \right) {U}^{\dagger}\right]}-
+  \frac{i}{g_s} {U} \partial_{\mu} \left[ {U}^{\dagger}
+    \left( \partial_{\nu}{U} \right) {U}^{\dagger}\right]
+\end{align}
+Ya que
+\begin{align}
+ \partial_{\mu} \left[ {U}^{\dagger}
+    \left( \partial_{\nu}{U} \right) {U}^{\dagger}\right]=&
+ \partial_{\mu} \left[ {U}^{\dagger}
+    \cancel{\partial_{\nu}\left( {U} {U}^{\dagger}\right)} -{U}^{\dagger}{U} \partial_{\nu} {U}^{\dagger}\right] \nonumber\\
+=&- \partial_{\mu} \left[ {U}^{\dagger} {U} \partial_{\nu} {U}^{\dagger}\right] \nonumber\\
+=&- \partial_{\mu}  \partial_{\nu} {U}^{\dagger} \,,
+\end{align}
+entonces
+\begin{align}
+\label{eq:Dmup}
+\mathcal{D}_{\mu} {G}_{\nu}\to   \left(   \mathcal{D}_{\mu} {G}_{\nu} \right)' =& {U} \left[ \left( \partial_{\mu}-ig_s {G}_{\mu} \right){G}_\nu   \right]{U}^{\dagger}
+    + {U} \left[ {G}_{\nu} \partial_{\mu}+{G}_{\mu}\partial_{\nu}+\frac{i}{g_s} \partial_{\mu}\partial_{\nu} \right] {U}^{\dagger} \nonumber\\
+ =& {U} \left( \mathcal{D}_{\mu}{G}_\nu   \right){U}^{\dagger}
+    + {U} \left[ {G}_{\nu} \partial_{\mu}+{G}_{\mu}\partial_{\nu}+\frac{i}{g_s} \partial_{\mu}\partial_{\nu} \right] {U}^{\dagger} \,.%\nonumber\\
+ %  =& {U} \left( \mathcal{D}_{\mu}{G}_\nu   \right){U}^{\dagger}
+ %    + {U}  {G}_{\nu} \partial_{\mu}{U}^{\dagger}-\frac{i}{g_s} {U}\left(\partial_{\mu}+ig_s {G}_{\mu} \right)\partial_{\nu}  {U}^{\dagger} \nonumber\\
+ % =& {U} \left( \mathcal{D}_{\mu}{G}_\nu   \right){U}^{\dagger}
+ %  \right]  + {U}  {G}_{\nu} \partial_{\mu} {U}^{\dagger}-\frac{i}{g_s}{U} \mathcal{D}_{\mu}^{\dagger}\partial_{\nu} {U}^{\dagger}  \nonumber\\
+\end{align}
+
+
+Noteque la segunda parte de la ecuación~\eqref{eq:Dmup} es simétrica bajo el intermbio $\mu-\nu$. Entonces,  para el tensor comodinámico
+\begin{align}
+  \label{eq:gmunu3}
+   {G}_{\mu\nu}= & \mathcal{D}_{\mu} {G}_{\nu}-\mathcal{D}_{\nu} {G}_{\mu}\,,
+\end{align}
+al hacer la transformación gauge, 
+\begin{align}
+   {G}_{\mu\nu}\to  {G}'_{\mu\nu}=\left( \mathcal{D}_{\mu} {G}_{\nu} \right)'-\left( \mathcal{D}_{\nu} {G}_{\mu}  \right)'\,,
+\end{align}
+usando \eqref{eq:Dmup}, la parte simétrica bajo el intermbio $\mu-\nu$ se va a cancelar
+\begin{align}
+\label{eq:ugum}
+    {G}_{\mu\nu}\to  {G}'_{\mu\nu}=&  {U} \left\{ \left( \mathcal{D}_{\mu}{G}_\nu   \right)
+    +  \left[ {G}_{\nu} \partial_{\mu}+{G}_{\mu}\partial_{\nu}+\frac{i}{g_s} \partial_{\mu}\partial_{\nu} \right]
+  -   \left( \mathcal{D}_{\nu}{G}_\mu   \right)
+    - \left[ {G}_{\mu} \partial_{\nu}-{G}_{\nu}\partial_{\mu}-\frac{i}{g_s} \partial_{\nu}\partial_{\mu} \right]  \right\} {U}^{\dagger} \nonumber\\
+=&  {U} \left[  \mathcal{D}_{\mu}{G}_\nu 
+    -   \mathcal{D}_{\nu}{G}_\mu
+  \right] {U}^{\dagger} \nonumber\\
+=& {U} {G}_{\mu\nu} {U}^{\dagger}\,.
+\end{align}
+Esto es justo lo que se espera de la transformación de un tensor para un grupo de simetría continuo.
+
+
+
+
+
 
 
 \renewcommand{\labelenumi}{\theenumi} %noinstiki
